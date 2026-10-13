@@ -1,0 +1,444 @@
+# CET-6 核心词库 · 第 3 批（J-P）
+# 格式: word <TAB> phonetic <TAB> translation <TAB> type(c=核心/d=派生) <TAB> derivedFrom
+jam	/dʒæm/	n. 果酱；拥挤；v. 堵塞	c	
+jealous	/ˈdʒeləs/	adj. 嫉妒的，吃醋的	d	jealousy
+jeopardy	/ˈdʒepədi/	n. 危险，危难	d	jeopardize
+jerk	/dʒɜːk/	v. 猛拉；n. 笨蛋	c	
+jog	/dʒɒɡ/	v. 慢跑，轻推	c	
+joint	/dʒɔɪnt/	n. 关节，接合处；adj. 共同的	c	
+journal	/ˈdʒɜːnl/	n. 期刊，日志	d	journalist
+judicial	/dʒuːˈdɪʃl/	adj. 司法的，法庭的	d	judge
+junction	/ˈdʒʌŋkʃn/	n. 交叉路口，接合处	d	join
+junk	/dʒʌŋk/	n. 垃圾，废物	c	
+jury	/ˈdʒʊəri/	n. 陪审团，评判委员会	c	
+justice	/ˈdʒʌstɪs/	n. 正义，司法	d	justify
+justify	/ˈdʒʌstɪfaɪ/	v. 证明正当，辩护	d	justice
+juvenile	/ˈdʒuːvənaɪl/	adj. 少年的，幼稚的	c	
+keen	/kiːn/	adj. 敏锐的，热切的	c	
+kettle	/ˈketl/	n. 水壶，锅	c	
+kidnap	/ˈkɪdnæp/	v. 绑架，劫持	d	kidnapping
+kidney	/ˈkɪdni/	n. 肾，腰子	c	
+kindle	/ˈkɪndl/	v. 点燃，激起	d	kindling
+kit	/kɪt/	n. 成套工具，装备	c	
+knot	/nɒt/	n. 结，节；v. 打结	c	
+label	/ˈleɪbl/	n. 标签；v. 贴标签	c	
+laboratory	/ləˈbɒrətri/	n. 实验室	c	
+lag	/læɡ/	v. 落后，滞后；n. 滞后	c	
+landscape	/ˈlændskeɪp/	n. 风景，景色	c	
+lane	/leɪn/	n. 小巷，车道	c	
+lapse	/læps/	n. 失误，流逝；v. 失效	c	
+lateral	/ˈlætərəl/	adj. 侧面的，横向的	c	
+latitude	/ˈlætɪtjuːd/	n. 纬度，自由度	c	
+latter	/ˈlætə/	adj. 后者的，后半的	c	
+launch	/lɔːntʃ/	v. 发射，发起；n. 发射	c	
+lavish	/ˈlævɪʃ/	adj. 奢华的，大方的	d	lavishly
+layer	/ˈleɪə/	n. 层，阶层	c	
+layout	/ˈleɪaʊt/	n. 布局，版面设计	d	lay
+leak	/liːk/	v./n. 泄漏，漏出	d	leakage
+lean	/liːn/	v. 倾斜，倚靠；adj. 瘦的	c	
+leap	/liːp/	v./n. 跳跃，跃过	c	
+lease	/liːs/	n. 租约；v. 出租	c	
+legacy	/ˈleɡəsi/	n. 遗产，遗留物	c	
+legal	/ˈliːɡl/	adj. 合法的，法律的	d	legality
+legend	/ˈledʒənd/	n. 传说，传奇	d	legendary
+legislation	/ˌledʒɪsˈleɪʃn/	n. 立法，法规	d	legislate
+legitimate	/lɪˈdʒɪtɪmət/	adj. 合法的，正当的	d	legitimacy
+leisure	/ˈleʒə/	n. 闲暇，休闲	c	
+length	/leŋθ/	n. 长度，时长	d	lengthen
+lessen	/ˈlesn/	v. 减少，减轻	d	less
+lest	/lest/	conj. 免得，以免	c	
+lever	/ˈliːvə/	n. 杠杆，控制杆	c	
+levy	/ˈlevi/	v. 征收；n. 征税	c	
+liable	/ˈlaɪəbl/	adj. 有责任的，易于…的	d	liability
+liberal	/ˈlɪbərəl/	adj. 自由的，开明的	d	liberate
+liberate	/ˈlɪbəreɪt/	v. 解放，释放	d	liberation
+liberty	/ˈlɪbəti/	n. 自由，自主	d	liberate
+license	/ˈlaɪsns/	n. 执照，许可；v. 批准	c	
+lifelong	/ˈlaɪflɒŋ/	adj. 终身的，一辈子的	d	life
+lifespan	/ˈlaɪfspæn/	n. 寿命，有效期	d	life
+lifetime	/ˈlaɪftaɪm/	n. 一生，终生	d	life
+likelihood	/ˈlaɪklihʊd/	n. 可能性，可能	d	likely
+limb	/lɪm/	n. 肢，臂；（树的）大枝	c	
+limitation	/ˌlɪmɪˈteɪʃn/	n. 限制，局限	d	limit
+linger	/ˈlɪŋɡə/	v. 逗留，徘徊	c	
+linguistic	/lɪŋˈɡwɪstɪk/	adj. 语言的，语言学的	d	linguistics
+liquid	/ˈlɪkwɪd/	n. 液体；adj. 液体的	c	
+literacy	/ˈlɪtərəsi/	n. 读写能力，识字	d	literate
+literal	/ˈlɪtərəl/	adj. 字面的，逐字的	d	literature
+literature	/ˈlɪtrətʃə/	n. 文学，文献	c	
+litter	/ˈlɪtə/	n. 垃圾；v. 乱扔	c	
+liver	/ˈlɪvə/	n. 肝脏	c	
+lobby	/ˈlɒbi/	n. 大厅，游说团体；v. 游说	c	
+locate	/ləʊˈkeɪt/	v. 定位，位于	d	location
+logical	/ˈlɒdʒɪkl/	adj. 逻辑的，合理的	d	logic
+longitude	/ˈlɒndʒɪtjuːd/	n. 经度	c	
+loop	/luːp/	n. 环，循环；v. 成环	c	
+loose	/luːs/	adj. 松的，宽松的；v. 释放	d	loosen
+loyalty	/ˈlɔɪəlti/	n. 忠诚，忠心	d	loyal
+lubricate	/ˈluːbrɪkeɪt/	v. 润滑，加润滑油	d	lubricant
+luggage	/ˈlʌɡɪdʒ/	n. 行李	c	
+lumber	/ˈlʌmbə/	n. 木材；v. 笨重地移动	c	
+lump	/lʌmp/	n. 块，瘤；v. 结块	c	
+lunar	/ˈluːnə/	adj. 月亮的，阴历的	c	
+lure	/lʊə/	v. 引诱；n. 诱惑物	c	
+lurk	/lɜːk/	v. 潜伏，埋伏	c	
+luxury	/ˈlʌkʃəri/	n. 奢侈，豪华	d	luxurious
+machinery	/məˈʃiːnəri/	n. 机械，机器	d	machine
+magnet	/ˈmæɡnət/	n. 磁铁，有吸引力的人或物	d	magnetic
+magnificent	/mæɡˈnɪfɪsnt/	adj. 壮丽的，宏伟的	d	magnificence
+magnitude	/ˈmæɡnɪtjuːd/	n. 巨大，重要性，量级	c	
+maintain	/meɪnˈteɪn/	v. 维持，保养，主张	d	maintenance
+majestic	/məˈdʒestɪk/	adj. 雄伟的，庄严的	d	majesty
+majority	/məˈdʒɒrəti/	n. 大多数，多数	d	major
+malice	/ˈmælɪs/	n. 恶意，怨恨	d	malicious
+mammal	/ˈmæml/	n. 哺乳动物	c	
+mandate	/ˈmændeɪt/	n. 授权，命令；v. 授权	c	
+manifest	/ˈmænɪfest/	v. 显示，表明；adj. 明显的	d	manifestation
+manipulate	/məˈnɪpjuleɪt/	v. 操纵，操作	d	manipulation
+mansion	/ˈmænʃn/	n. 大厦，宅邸	c	
+manual	/ˈmænjuəl/	adj. 手工的；n. 手册	c	
+manufacture	/ˌmænjuˈfæktʃə/	v. 制造；n. 制造品	d	manufacturer
+manuscript	/ˈmænjuskrɪpt/	n. 手稿，原稿	c	
+marble	/ˈmɑːbl/	n. 大理石，弹珠	c	
+march	/mɑːtʃ/	v./n. 行进，游行	c	
+margin	/ˈmɑːdʒɪn/	n. 边缘，差额，页边	d	marginal
+marine	/məˈriːn/	adj. 海洋的，海生的	c	
+masculine	/ˈmæskjəlɪn/	adj. 男性的，阳刚的	c	
+mask	/mɑːsk/	n. 面具，口罩；v. 掩饰	c	
+mass	/mæs/	n. 大量，群众；adj. 大规模的	d	massive
+massacre	/ˈmæsəkə/	n./v. 大屠杀	c	
+massive	/ˈmæsɪv/	adj. 巨大的，大量的	d	mass
+masterpiece	/ˈmɑːstəpiːs/	n. 杰作，名著	d	master
+mature	/məˈtʃʊə/	adj. 成熟的；v. 成熟	d	maturity
+maximum	/ˈmæksɪməm/	n. 最大值；adj. 最大的	c	
+mayor	/meə/	n. 市长	c	
+meadow	/ˈmedəʊ/	n. 草地，牧场	c	
+meantime	/ˈmiːntaɪm/	n. 其间，同时	c	
+mechanical	/məˈkænɪkl/	adj. 机械的，呆板的	d	mechanism
+mechanism	/ˈmekənɪzəm/	n. 机制，机械装置	c	
+mediate	/ˈmiːdieɪt/	v. 调解，居中斡旋	d	mediation
+medieval	/ˌmediˈiːvl/	adj. 中世纪的	c	
+meditate	/ˈmedɪteɪt/	v. 冥想，沉思	d	meditation
+medium	/ˈmiːdiəm/	n. 媒介，手段；adj. 中等的	c	
+melancholy	/ˈmelənkəli/	n. 忧郁；adj. 忧郁的	c	
+mellow	/ˈmeləʊ/	adj. 柔和的，老练的	c	
+melody	/ˈmelədi/	n. 旋律，曲调	d	melodious
+melt	/melt/	v. 融化，熔化	c	
+memorial	/məˈmɔːriəl/	n. 纪念碑；adj. 纪念的	d	memory
+menace	/ˈmenəs/	n./v. 威胁，危险	d	menacing
+mental	/ˈmentl/	adj. 精神的，智力的	d	mentality
+merchandise	/ˈmɜːtʃəndaɪs/	n. 商品，货物	d	merchant
+mercy	/ˈmɜːsi/	n. 仁慈，宽恕	d	merciful
+mere	/mɪə/	adj. 仅仅的，纯粹的	d	merely
+merge	/mɜːdʒ/	v. 合并，融合	d	merger
+merit	/ˈmerɪt/	n. 优点，价值；v. 值得	c	
+migrate	/maɪˈɡreɪt/	v. 迁移，移居	d	migration
+mild	/maɪld/	adj. 温和的，轻微的	c	
+military	/ˈmɪlətri/	adj. 军事的；n. 军队	c	
+mingle	/ˈmɪŋɡl/	v. 混合，交往	c	
+miniature	/ˈmɪnətʃə/	adj. 微型的；n. 缩影	c	
+minimal	/ˈmɪnɪml/	adj. 最小的，极少的	d	minimum
+ministry	/ˈmɪnɪstri/	n. 部，部门	d	minister
+minor	/ˈmaɪnə/	adj. 次要的；n. 未成年人	d	minority
+miracle	/ˈmɪrəkl/	n. 奇迹，奇事	d	miraculous
+mischief	/ˈmɪstʃɪf/	n. 恶作剧，淘气	d	mischievous
+miserable	/ˈmɪzrəbl/	adj. 痛苦的，悲惨的	d	misery
+misery	/ˈmɪzəri/	n. 痛苦，苦难	c	
+misfortune	/ˌmɪsˈfɔːtʃuːn/	n. 不幸，灾祸	d	fortune
+mislead	/ˌmɪsˈliːd/	v. 误导，使误解	d	lead
+mission	/ˈmɪʃn/	n. 任务，使命	c	
+mist	/mɪst/	n. 薄雾，迷雾	c	
+mobilize	/ˈməʊbəlaɪz/	v. 动员，调动	d	mobile
+mock	/mɒk/	v. 嘲笑；adj. 假的	d	mockery
+moderate	/ˈmɒdərət/	adj. 适度的，温和的；v. 缓和	d	moderation
+modest	/ˈmɒdɪst/	adj. 谦虚的，适度的	d	modesty
+modify	/ˈmɒdɪfaɪ/	v. 修改，调整	d	modification
+moist	/mɔɪst/	adj. 潮湿的，湿润的	d	moisture
+mold	/məʊld/	n. 模子，霉菌；v. 塑造	c	
+molecule	/ˈmɒlɪkjuːl/	n. 分子	c	
+momentum	/məˈmentəm/	n. 动量，势头	c	
+monetary	/ˈmʌnɪtri/	adj. 货币的，金融的	d	money
+monitor	/ˈmɒnɪtə/	v. 监控；n. 显示器，监督员	c	
+monopoly	/məˈnɒpəli/	n. 垄断，专卖	d	monopolize
+monotonous	/məˈnɒtənəs/	adj. 单调的，乏味的	c	
+monument	/ˈmɒnjumənt/	n. 纪念碑，遗迹	d	monumental
+moral	/ˈmɒrəl/	adj. 道德的；n. 寓意	d	morality
+moreover	/mɔːrˈəʊvə/	adv. 而且，此外	c	
+mortal	/ˈmɔːtl/	adj. 凡人的，致命的	d	mortality
+motion	/ˈməʊʃn/	n. 运动，动议	d	motionless
+motive	/ˈməʊtɪv/	n. 动机，目的	d	motivate
+mount	/maʊnt/	v. 登上，增加；n. 山峰	c	
+mourn	/mɔːn/	v. 哀悼，悼念	d	mourning
+mud	/mʌd/	n. 泥，泥浆	d	muddy
+multiply	/ˈmʌltɪplaɪ/	v. 乘，繁殖，增加	d	multiple
+murmur	/ˈmɜːmə/	v./n. 低语，咕哝	c	
+muscle	/ˈmʌsl/	n. 肌肉，力量	d	muscular
+mutual	/ˈmjuːtʃuəl/	adj. 相互的，共同的	c	
+mystery	/ˈmɪstri/	n. 神秘，谜	d	mysterious
+myth	/mɪθ/	n. 神话，错误观念	d	mythical
+naive	/naɪˈiːv/	adj. 天真的，幼稚的	d	naivety
+naked	/ˈneɪkɪd/	adj. 裸体的，无遮盖的	c	
+narrative	/ˈnærətɪv/	n. 叙述，故事；adj. 叙事的	d	narrate
+nasty	/ˈnɑːsti/	adj. 令人厌恶的，恶劣的	c	
+navigate	/ˈnævɪɡeɪt/	v. 导航，航行	d	navigation
+navy	/ˈneɪvi/	n. 海军	c	
+neat	/niːt/	adj. 整洁的，灵巧的	c	
+necessarily	/ˌnesəˈserəli/	adv. 必然地，必定	d	necessary
+neglect	/nɪˈɡlekt/	v./n. 忽视，疏忽	d	negligence
+negligible	/ˈneɡlɪdʒəbl/	adj. 微不足道的	d	neglect
+negotiate	/nɪˈɡəʊʃieɪt/	v. 谈判，协商	d	negotiation
+nerve	/nɜːv/	n. 神经，勇气	d	nervous
+neutral	/ˈnjuːtrəl/	adj. 中立的，中性的	d	neutrality
+nevertheless	/ˌnevəðəˈles/	adv. 然而，不过	c	
+niche	/niːʃ/	n. 合适的位置，缝隙市场	c	
+nightmare	/ˈnaɪtmeə/	n. 噩梦，可怕的事	d	night
+noble	/ˈnəʊbl/	adj. 高贵的，崇高的；n. 贵族	d	nobility
+nominal	/ˈnɒmɪnl/	adj. 名义上的，极小的	d	nominate
+nominate	/ˈnɒmɪneɪt/	v. 提名，任命	d	nomination
+nonetheless	/ˌnʌnðəˈles/	adv. 尽管如此，然而	c	
+norm	/nɔːm/	n. 标准，规范	d	normal
+notable	/ˈnəʊtəbl/	adj. 显著的，著名的	d	note
+notify	/ˈnəʊtɪfaɪ/	v. 通知，报告	d	notice
+notion	/ˈnəʊʃn/	n. 概念，想法	c	
+notorious	/nəʊˈtɔːriəs/	adj. 臭名昭著的	d	notoriety
+nourish	/ˈnʌrɪʃ/	v. 滋养，培育	d	nourishment
+novel	/ˈnɒvl/	n. 小说；adj. 新奇的	d	novelty
+nowhere	/ˈnəʊweə/	adv. 任何地方都不	c	
+nuclear	/ˈnjuːkliə/	adj. 核的，原子能的	c	
+nucleus	/ˈnjuːkliəs/	n. 核，核心	c	
+nuisance	/ˈnjuːsns/	n. 讨厌的人或事，麻烦	c	
+numerical	/njuːˈmerɪkl/	adj. 数字的，数值的	d	number
+numerous	/ˈnjuːmərəs/	adj. 众多的，许多的	d	number
+nurture	/ˈnɜːtʃə/	v. 养育，培养	c	
+nutrition	/njuˈtrɪʃn/	n. 营养，营养学	d	nutritious
+obedient	/əˈbiːdiənt/	adj. 服从的，顺从的	d	obey
+obesity	/əʊˈbiːsəti/	n. 肥胖，肥胖症	d	obese
+objection	/əbˈdʒekʃn/	n. 反对，异议	d	object
+obligation	/ˌɒblɪˈɡeɪʃn/	n. 义务，责任	d	oblige
+oblige	/əˈblaɪdʒ/	v. 迫使，使感激	d	obligation
+obscure	/əbˈskjʊə/	adj. 模糊的，晦涩的；v. 使模糊	d	obscurity
+observation	/ˌɒbzəˈveɪʃn/	n. 观察，评论	d	observe
+obstacle	/ˈɒbstəkl/	n. 障碍，阻碍	d	obstruct
+obstinate	/ˈɒbstɪnət/	adj. 固执的，顽固的	d	obstinacy
+obtain	/əbˈteɪn/	v. 获得，得到	d	obtainable
+obvious	/ˈɒbviəs/	adj. 明显的，显然的	d	obviously
+occasion	/əˈkeɪʒn/	n. 场合，时机	d	occasional
+occupy	/ˈɒkjupaɪ/	v. 占据，占用	d	occupation
+occur	/əˈkɜː/	v. 发生，出现	d	occurrence
+odd	/ɒd/	adj. 奇怪的，奇数的	d	oddity
+offend	/əˈfend/	v. 冒犯，触怒	d	offense
+offense	/əˈfens/	n. 冒犯，犯罪	c	
+offset	/ˈɒfset/	v. 抵消，弥补；n. 补偿	c	
+offspring	/ˈɒfsprɪŋ/	n. 后代，幼崽	c	
+omit	/əˈmɪt/	v. 省略，遗漏	d	omission
+onion	/ˈʌnjən/	n. 洋葱	c	
+opponent	/əˈpəʊnənt/	n. 对手，反对者	d	oppose
+opportunity	/ˌɒpəˈtjuːnəti/	n. 机会，时机	d	opportune
+oppose	/əˈpəʊz/	v. 反对，对抗	d	opposition
+oppress	/əˈpres/	v. 压迫，压抑	d	oppression
+optimism	/ˈɒptɪmɪzəm/	n. 乐观，乐观主义	d	optimistic
+optimistic	/ˌɒptɪˈmɪstɪk/	adj. 乐观的，抱乐观看法的	d	optimism
+option	/ˈɒpʃn/	n. 选择，选择权	d	optional
+oral	/ˈɔːrəl/	adj. 口头的，口部的	c	
+orbit	/ˈɔːbɪt/	n. 轨道；v. 环绕运行	c	
+orchestra	/ˈɔːkɪstrə/	n. 管弦乐队	c	
+ordeal	/ɔːˈdiːl/	n. 严峻考验，折磨	c	
+orderly	/ˈɔːdəli/	adj. 有秩序的，整齐的	d	order
+ordinary	/ˈɔːdnri/	adj. 普通的，平常的	c	
+organic	/ɔːˈɡænɪk/	adj. 有机的，器官的	d	organ
+orient	/ˈɔːrient/	v. 使适应，确定方向	d	orientation
+origin	/ˈɒrɪdʒɪn/	n. 起源，出身	d	original
+originate	/əˈrɪdʒɪneɪt/	v. 起源，发起	d	origin
+ornament	/ˈɔːnəmənt/	n. 装饰品；v. 装饰	d	ornamental
+orphan	/ˈɔːfn/	n. 孤儿；v. 使成孤儿	c	
+otherwise	/ˈʌðəwaɪz/	adv. 否则，另外	c	
+outbreak	/ˈaʊtbreɪk/	n. 爆发，突然发生	d	break
+outcome	/ˈaʊtkʌm/	n. 结果，成果	d	come
+outfit	/ˈaʊtfɪt/	n. 全套装备，服装	c	
+outlet	/ˈaʊtlet/	n. 出口，发泄途径	c	
+outline	/ˈaʊtlaɪn/	n. 轮廓，大纲；v. 概述	c	
+outlook	/ˈaʊtlʊk/	n. 观点，前景	d	look
+output	/ˈaʊtpʊt/	n. 产量，输出	d	put
+outrage	/ˈaʊtreɪdʒ/	n. 愤怒，暴行	d	outrageous
+outstanding	/aʊtˈstændɪŋ/	adj. 杰出的，未付的	d	stand
+overall	/ˌəʊvərˈɔːl/	adj. 总体的；adv. 总的来说	d	all
+overcome	/ˌəʊvəˈkʌm/	v. 克服，战胜	d	come
+overhead	/ˌəʊvəˈhed/	adv. 在头顶上；n. 经常性开支	d	head
+overlap	/ˌəʊvəˈlæp/	v./n. 重叠，交叠	d	lap
+overlook	/ˌəʊvəˈlʊk/	v. 忽视，俯视	d	look
+overseas	/ˌəʊvəˈsiːz/	adv. 在海外；adj. 海外的	d	sea
+oversee	/ˌəʊvəˈsiː/	v. 监督，监视	d	see
+overtake	/ˌəʊvəˈteɪk/	v. 追上，超过	d	take
+overwhelm	/ˌəʊvəˈwelm/	v. 压倒，淹没	d	whelm
+owe	/əʊ/	v. 欠，归功于	c	
+oxide	/ˈɒksaɪd/	n. 氧化物	c	
+oxygen	/ˈɒksɪdʒən/	n. 氧气	c	
+pace	/peɪs/	n. 步伐，速度；v. 踱步	c	
+pact	/pækt/	n. 协议，条约	c	
+panel	/ˈpænl/	n. 面板，专家小组	c	
+panic	/ˈpænɪk/	n./v. 恐慌，惊慌	c	
+parallel	/ˈpærəlel/	adj. 平行的，类似的；n. 相似处	c	
+parameter	/pəˈræmɪtə/	n. 参数，界限	c	
+parcel	/ˈpɑːsl/	n. 包裹，一块地	c	
+partial	/ˈpɑːʃl/	adj. 部分的，偏袒的	d	partially
+participate	/pɑːˈtɪsɪpeɪt/	v. 参与，参加	d	participation
+particle	/ˈpɑːtɪkl/	n. 微粒，粒子	d	part
+passion	/ˈpæʃn/	n. 激情，热爱	d	passionate
+passive	/ˈpæsɪv/	adj. 被动的，消极的	d	passivity
+pasture	/ˈpɑːstʃə/	n. 牧场，牧草	c	
+patch	/pætʃ/	n. 补丁，小块；v. 修补	c	
+patent	/ˈpætnt/	n. 专利；adj. 明显的	c	
+pathetic	/pəˈθetɪk/	adj. 可怜的，凄惨的	c	
+patriot	/ˈpeɪtriət/	n. 爱国者	d	patriotic
+patrol	/pəˈtrəʊl/	v./n. 巡逻，巡查	c	
+patron	/ˈpeɪtrən/	n. 赞助人，老顾客	d	patronize
+pave	/peɪv/	v. 铺路，铺设	d	pavement
+peak	/piːk/	n. 顶峰，山峰	c	
+peculiar	/pɪˈkjuːliə/	adj. 奇怪的，独特的	d	peculiarity
+pedestrian	/pəˈdestriən/	n. 行人；adj. 平淡的	c	
+peel	/piːl/	v. 剥皮；n. 果皮	c	
+peer	/pɪə/	n. 同龄人，同辈；v. 凝视	c	
+penalty	/ˈpenəlti/	n. 处罚，罚款	d	penalize
+penetrate	/ˈpenɪtreɪt/	v. 穿透，渗透	d	penetration
+pension	/ˈpenʃn/	n. 养老金，退休金	c	
+perceive	/pəˈsiːv/	v. 察觉，理解	d	perception
+perception	/pəˈsepʃn/	n. 感知，看法	c	
+peril	/ˈperəl/	n. 危险，危机	d	perilous
+permanent	/ˈpɜːmənənt/	adj. 永久的，长期的	d	permanence
+perpetual	/pəˈpetʃuəl/	adj. 永久的，不断的	d	perpetuate
+perplex	/pəˈpleks/	v. 使困惑，使迷惑	d	perplexity
+persecute	/ˈpɜːsɪkjuːt/	v. 迫害，骚扰	d	persecution
+persist	/pəˈsɪst/	v. 坚持，持续	d	persistent
+personality	/ˌpɜːsəˈnæləti/	n. 个性，人格	d	personal
+personnel	/ˌpɜːsəˈnel/	n. 全体人员，人事部门	c	
+perspective	/pəˈspektɪv/	n. 观点，透视法	c	
+persuade	/pəˈsweɪd/	v. 说服，劝服	d	persuasion
+pessimistic	/ˌpesɪˈmɪstɪk/	adj. 悲观的，厌世的	d	pessimism
+pest	/pest/	n. 害虫，讨厌的人	c	
+petition	/pəˈtɪʃn/	n. 请愿书；v. 请愿	c	
+petrol	/ˈpetrəl/	n. 汽油	c	
+phase	/feɪz/	n. 阶段，时期；v. 分阶段进行	c	
+phenomenon	/fəˈnɒmɪnən/	n. 现象，非凡的人	d	phenomenal
+philosopher	/fəˈlɒsəfə/	n. 哲学家	d	philosophy
+philosophy	/fəˈlɒsəfi/	n. 哲学，人生哲理	c	
+physician	/fɪˈzɪʃn/	n. 内科医生	c	
+physicist	/ˈfɪzɪsɪst/	n. 物理学家	d	physics
+pierce	/pɪəs/	v. 刺穿，穿透	c	
+pigeon	/ˈpɪdʒɪn/	n. 鸽子	c	
+pile	/paɪl/	n. 堆；v. 堆积	c	
+pill	/pɪl/	n. 药丸，药片	c	
+pillar	/ˈpɪlə/	n. 柱子，支柱	c	
+pinch	/pɪntʃ/	v. 捏，夹；n. 一撮	c	
+pioneer	/ˌpaɪəˈnɪə/	n. 先驱，开拓者	c	
+pipeline	/ˈpaɪplaɪn/	n. 管道，渠道	d	line
+pirate	/ˈpaɪrət/	n. 海盗；v. 盗版	d	piracy
+pit	/pɪt/	n. 坑，矿井	c	
+pitch	/pɪtʃ/	n. 音高，沥青；v. 投掷	c	
+plague	/pleɪɡ/	n. 瘟疫；v. 折磨	c	
+plantation	/plɑːnˈteɪʃn/	n. 种植园	d	plant
+plausible	/ˈplɔːzəbl/	adj. 似乎合理的，可信的	d	plausibility
+plea	/pliː/	n. 请求，抗辩	d	plead
+plead	/pliːd/	v. 恳求，辩护	d	plea
+pledge	/pledʒ/	n. 誓言；v. 保证	c	
+plot	/plɒt/	n. 情节，阴谋；v. 密谋	c	
+plunge	/plʌndʒ/	v./n. 猛跌，投入	c	
+plural	/ˈplʊərəl/	adj. 复数的；n. 复数	c	
+poetic	/pəʊˈetɪk/	adj. 诗意的，诗歌的	d	poetry
+poison	/ˈpɔɪzn/	n. 毒药；v. 毒害	d	poisonous
+polar	/ˈpəʊlə/	adj. 极地的，两极的	d	pole
+policy	/ˈpɒləsi/	n. 政策，保险单	c	
+polish	/ˈpɒlɪʃ/	v. 抛光，润色；n. 上光剂	c	
+poll	/pəʊl/	n. 民意调查，投票	c	
+pollute	/pəˈluːt/	v. 污染，玷污	d	pollution
+ponder	/ˈpɒndə/	v. 沉思，思考	c	
+popularity	/ˌpɒpjuˈlærəti/	n. 流行，受欢迎	d	popular
+porch	/pɔːtʃ/	n. 门廊，走廊	c	
+portable	/ˈpɔːtəbl/	adj. 便携的，手提式的	d	port
+portion	/ˈpɔːʃn/	n. 部分，一份	c	
+portray	/pɔːˈtreɪ/	v. 描绘，扮演	d	portrait
+pose	/pəʊz/	v. 造成，摆姿势；n. 姿势	c	
+positive	/ˈpɒzətɪv/	adj. 积极的，确定的	c	
+possess	/pəˈzes/	v. 拥有，具有	d	possession
+potential	/pəˈtenʃl/	adj. 潜在的；n. 潜力	c	
+poverty	/ˈpɒvəti/	n. 贫穷，贫困	d	poor
+practical	/ˈpræktɪkl/	adj. 实用的，实际的	d	practice
+practitioner	/prækˈtɪʃənə/	n. 从业者，开业者	d	practice
+prairie	/ˈpreəri/	n. 大草原	c	
+preach	/priːtʃ/	v. 说教，宣扬	d	preacher
+precede	/prɪˈsiːd/	v. 在…之前，先于	d	precedence
+precedent	/ˈpresɪdənt/	n. 先例，判例	d	precede
+precious	/ˈpreʃəs/	adj. 珍贵的，宝贵的	c	
+precise	/prɪˈsaɪs/	adj. 精确的，准确的	d	precision
+predator	/ˈpredətə/	n. 捕食者，掠夺者	d	prey
+predecessor	/ˈpriːdɪsesə/	n. 前任，前辈	c	
+predict	/prɪˈdɪkt/	v. 预测，预言	d	prediction
+predominant	/prɪˈdɒmɪnənt/	adj. 主要的，占优势的	d	dominate
+preface	/ˈprefəs/	n. 前言，序言	c	
+preferable	/ˈprefrəbl/	adj. 更可取的，更好的	d	prefer
+preference	/ˈprefrəns/	n. 偏爱，优先	d	prefer
+prejudice	/ˈpredʒudɪs/	n. 偏见，成见	d	prejudicial
+preliminary	/prɪˈlɪmɪnəri/	adj. 初步的，预备的	c	
+premise	/ˈpremɪs/	n. 前提，假设	c	
+premium	/ˈpriːmiəm/	n. 保险费，溢价；adj. 优质的	c	
+prescribe	/prɪˈskraɪb/	v. 开处方，规定	d	prescription
+presence	/ˈprezns/	n. 存在，出席	d	present
+preserve	/prɪˈzɜːv/	v. 保护，保存	d	preservation
+preside	/prɪˈzaɪd/	v. 主持，主管	d	president
+prestige	/preˈstiːʒ/	n. 声望，威信	d	prestigious
+presume	/prɪˈzjuːm/	v. 假定，推测	d	presumption
+pretext	/ˈpriːtekst/	n. 借口，托辞	c	
+prevail	/prɪˈveɪl/	v. 盛行，获胜	d	prevalent
+prevalent	/ˈprevələnt/	adj. 普遍的，流行的	d	prevail
+prey	/preɪ/	n. 猎物；v. 捕食	c	
+primitive	/ˈprɪmətɪv/	adj. 原始的，简陋的	c	
+principal	/ˈprɪnsəpl/	adj. 主要的；n. 校长，本金	c	
+principle	/ˈprɪnsəpl/	n. 原则，原理	c	
+priority	/praɪˈɒrəti/	n. 优先，优先事项	d	prior
+privacy	/ˈprɪvəsi/	n. 隐私，私密	d	private
+privilege	/ˈprɪvəlɪdʒ/	n. 特权，优待	d	privileged
+probe	/prəʊb/	v. 探查；n. 探测器	c	
+proceed	/prəˈsiːd/	v. 继续进行，前进	d	proceeding
+proclaim	/prəˈkleɪm/	v. 宣告，声明	d	claim
+productive	/prəˈdʌktɪv/	adj. 多产的，富有成效的	d	produce
+productivity	/ˌprɒdʌkˈtɪvəti/	n. 生产力，生产率	d	productive
+profession	/prəˈfeʃn/	n. 职业，行业	d	professional
+proficient	/prəˈfɪʃnt/	adj. 熟练的，精通的	d	proficiency
+profile	/ˈprəʊfaɪl/	n. 简介，侧面轮廓；v. 概述	c	
+profitable	/ˈprɒfɪtəbl/	adj. 有利可图的，有益的	d	profit
+profound	/prəˈfaʊnd/	adj. 深刻的，深远的	d	profundity
+prohibit	/prəˈhɪbɪt/	v. 禁止，阻止	d	prohibition
+project	/ˈprɒdʒekt/	n. 项目；v. 预计，投射	d	projection
+prolong	/prəˈlɒŋ/	v. 延长，拖延	d	long
+prominent	/ˈprɒmɪnənt/	adj. 杰出的，显著的	d	prominence
+promising	/ˈprɒmɪsɪŋ/	adj. 有前途的，有希望的	d	promise
+promote	/prəˈməʊt/	v. 促进，提升	d	promotion
+prompt	/prɒmpt/	adj. 迅速的；v. 促使；n. 提示	c	
+prone	/prəʊn/	adj. 倾向于…的，俯卧的	c	
+pronounce	/prəˈnaʊns/	v. 发音，宣布	d	pronunciation
+proof	/pruːf/	n. 证据，证明；adj. 防…的	c	
+propel	/prəˈpel/	v. 推进，驱使	d	propeller
+property	/ˈprɒpəti/	n. 财产，属性	d	proper
+prophet	/ˈprɒfɪt/	n. 先知，预言者	d	prophecy
+proportion	/prəˈpɔːʃn/	n. 比例，部分	d	proportional
+propose	/prəˈpəʊz/	v. 提议，求婚	d	proposal
+prospect	/ˈprɒspekt/	n. 前景，可能性	d	prospective
+prosper	/ˈprɒspə/	v. 繁荣，兴旺	d	prosperity
+prosperity	/prɒˈsperəti/	n. 繁荣，兴盛	c	
+protagonist	/prəˈtæɡənɪst/	n. 主角，支持者	c	
+protein	/ˈprəʊtiːn/	n. 蛋白质	c	
+protest	/prəˈtest/	v./n. 抗议，反对	c	
+protocol	/ˈprəʊtəkɒl/	n. 协议，礼仪	c	
+prototype	/ˈprəʊtətaɪp/	n. 原型，样机	c	
+province	/ˈprɒvɪns/	n. 省，领域	d	provincial
+provoke	/prəˈvəʊk/	v. 激起，挑衅	d	provocation
+proximity	/prɒkˈsɪməti/	n. 接近，邻近	d	proximate
+prudent	/ˈpruːdnt/	adj. 谨慎的，精明的	d	prudence
+psychology	/saɪˈkɒlədʒi/	n. 心理学，心理	d	psychological
+publicity	/pʌbˈlɪsəti/	n. 宣传，公众注意	d	public
+pulse	/pʌls/	n. 脉搏，脉冲；v. 搏动	c	
+pump	/pʌmp/	n. 泵；v. 抽水，打气	c	
+punctual	/ˈpʌŋktʃuəl/	adj. 准时的，守时的	d	punctuality
+purchase	/ˈpɜːtʃəs/	v./n. 购买，采购	c	
+pursue	/pəˈsjuː/	v. 追求，追赶	d	pursuit
+pursuit	/pəˈsjuːt/	n. 追求，追赶	c	
+puzzle	/ˈpʌzl/	n. 谜，难题；v. 使困惑	c	

@@ -1,0 +1,867 @@
+# CET-6 核心词库 · 补充批 C（p-z），与既有批次去重后合并
+pact	/pækt/	n. 协定，条约	c	
+pamphlet	/ˈpæmflət/	n. 小册子	c	
+panic	/ˈpænɪk/	n./v. 恐慌，惊慌	c	
+paradise	/ˈpærədaɪs/	n. 天堂，乐园	c	
+paradox	/ˈpærədɒks/	n. 悖论，自相矛盾	c	
+paralyze	/ˈpærəlaɪz/	v. 使瘫痪，使麻痹	c	
+parameter	/pəˈræmɪtə/	n. 参数，界限	c	
+parasite	/ˈpærəsaɪt/	n. 寄生虫，寄生生物	c	
+pardon	/ˈpɑːdn/	v./n. 原谅，赦免	c	
+parliament	/ˈpɑːləmənt/	n. 议会，国会	c	
+partial	/ˈpɑːʃl/	adj. 部分的，偏袒的	c	
+participant	/pɑːˈtɪsɪpənt/	n. 参与者，参加者	d	participate
+particle	/ˈpɑːtɪkl/	n. 微粒，粒子	c	
+passive	/ˈpæsɪv/	adj. 被动的，消极的	c	
+pasture	/ˈpɑːstʃə/	n. 牧场，草原	c	
+patent	/ˈpeɪtnt/	n. 专利；adj. 明显的	c	
+pathetic	/pəˈθetɪk/	adj. 可怜的，令人怜悯的	c	
+patriotic	/ˌpætriˈɒtɪk/	adj. 爱国的	d	patriot
+patrol	/pəˈtrəʊl/	v./n. 巡逻，巡查	c	
+patron	/ˈpeɪtrən/	n. 赞助人，老顾客	c	
+pave	/peɪv/	v. 铺路，为…铺平道路	c	
+peculiar	/pɪˈkjuːliə/	adj. 奇怪的，独特的	c	
+pedestrian	/pəˈdestriən/	n. 行人；adj. 徒步的	c	
+peel	/piːl/	v. 剥皮；n. 果皮	c	
+peer	/pɪə/	n. 同龄人，同行；v. 凝视	c	
+penalty	/ˈpenəlti/	n. 处罚，罚款	c	
+pending	/ˈpendɪŋ/	adj. 未决的，即将发生的	c	
+penetrate	/ˈpenɪtreɪt/	v. 穿透，渗透	c	
+pension	/ˈpenʃn/	n. 养老金，抚恤金	c	
+perceive	/pəˈsiːv/	v. 察觉，理解	c	
+perception	/pəˈsepʃn/	n. 感知，看法	d	perceive
+peril	/ˈperəl/	n. 危险，险境	c	
+periodic	/ˌpɪəriˈɒdɪk/	adj. 周期的，定期的	d	period
+perish	/ˈperɪʃ/	v. 死亡，消亡	c	
+permanent	/ˈpɜːmənənt/	adj. 永久的，长期的	c	
+permeate	/ˈpɜːmieɪt/	v. 渗透，弥漫	c	
+perpetual	/pəˈpetʃuəl/	adj. 永久的，不断的	c	
+perplex	/pəˈpleks/	v. 使困惑，使迷惑	c	
+persecute	/ˈpɜːsɪkjuːt/	v. 迫害，骚扰	c	
+persist	/pəˈsɪst/	v. 坚持，持续	c	
+personnel	/ˌpɜːsəˈnel/	n. 人员，人事部门	c	
+perspective	/pəˈspektɪv/	n. 视角，观点，透视	c	
+persuade	/pəˈsweɪd/	v. 说服，劝说	c	
+pessimistic	/ˌpesɪˈmɪstɪk/	adj. 悲观的，悲观主义的	c	
+pest	/pest/	n. 害虫，讨厌的人	c	
+petition	/pəˈtɪʃn/	n. 请愿，请愿书；v. 请愿	c	
+petroleum	/pəˈtrəʊliəm/	n. 石油	c	
+phase	/feɪz/	n. 阶段，相位	c	
+phenomenon	/fəˈnɒmɪnən/	n. 现象，非凡的人	c	
+philosophy	/fəˈlɒsəfi/	n. 哲学，人生观	c	
+physician	/fɪˈzɪʃn/	n. 内科医生，医师	c	
+physiological	/ˌfɪziəˈlɒdʒɪkl/	adj. 生理的，生理学的	c	
+pierce	/pɪəs/	v. 刺穿，穿透	c	
+pilgrim	/ˈpɪlɡrɪm/	n. 朝圣者，香客	c	
+pillar	/ˈpɪlə/	n. 柱子，支柱	c	
+pinch	/pɪntʃ/	v. 捏，夹；n. 一撮	c	
+pioneer	/ˌpaɪəˈnɪə/	n. 先驱，开拓者	c	
+pipeline	/ˈpaɪplaɪn/	n. 管道，传递途径	c	
+pirate	/ˈpaɪrət/	n. 海盗，盗版者	c	
+pit	/pɪt/	n. 坑，矿井	c	
+pitch	/pɪtʃ/	n. 音高，场地；v. 投掷	c	
+plague	/pleɪɡ/	n. 瘟疫，灾害	c	
+plausible	/ˈplɔːzəbl/	adj. 似乎合理的，可信的	c	
+plea	/pliː/	n. 请求，辩解	c	
+plead	/pliːd/	v. 恳求，辩护	c	
+pledge	/pledʒ/	n./v. 保证，誓言	c	
+plight	/plaɪt/	n. 困境，苦境	c	
+plot	/plɒt/	n. 情节，阴谋；v. 密谋	c	
+plow	/plaʊ/	n. 犁；v. 耕地	c	
+pluck	/plʌk/	v. 拔，摘，弹拨	c	
+plunge	/plʌndʒ/	v. 投入，暴跌	c	
+poetic	/pəʊˈetɪk/	adj. 诗意的，诗歌的	d	poem
+poison	/ˈpɔɪzn/	n. 毒药；v. 毒害	c	
+polar	/ˈpəʊlə/	adj. 极地的，两极的	c	
+poll	/poʊl/	n. 民意调查，投票	c	
+pollute	/pəˈluːt/	v. 污染，弄脏	c	
+ponder	/ˈpɒndə/	v. 沉思，考虑	c	
+pope	/pəʊp/	n. 教皇	c	
+porch	/pɔːtʃ/	n. 门廊，走廊	c	
+portable	/ˈpɔːtəbl/	adj. 便携的，手提的	d	port
+portion	/ˈpɔːʃn/	n. 部分，一份	c	
+portray	/pɔːˈtreɪ/	v. 描绘，扮演	c	
+pose	/pəʊz/	v. 摆姿势，造成；n. 姿势	c	
+positive	/ˈpɒzətɪv/	adj. 积极的，确定的	c	
+possess	/pəˈzes/	v. 拥有，具有	c	
+poster	/ˈpəʊstə/	n. 海报，招贴	c	
+postpone	/pəˈspəʊn/	v. 推迟，延期	c	
+posture	/ˈpɒstʃə/	n. 姿势，态度	c	
+potential	/pəˈtenʃl/	adj. 潜在的；n. 潜力	c	
+poverty	/ˈpɒvəti/	n. 贫困，贫穷	c	
+practically	/ˈpræktɪkli/	adv. 实际上，几乎	d	practical
+prairie	/ˈpreəri/	n. 大草原	c	
+preach	/priːtʃ/	v. 讲道，宣扬	c	
+precede	/prɪˈsiːd/	v. 在…之前，先于	c	
+precedent	/ˈpresɪdənt/	n. 先例，前例	d	precede
+precise	/prɪˈsaɪs/	adj. 精确的，准确的	c	
+preclude	/prɪˈkluːd/	v. 阻止，排除	c	
+predecessor	/ˈpriːdɪsesə/	n. 前任，前辈	c	
+predominant	/prɪˈdɒmɪnənt/	adj. 主要的，占优势的	d	dominant
+preface	/ˈprefəs/	n. 前言，序言	c	
+preferable	/ˈprefrəbl/	adj. 更可取的，更好的	d	prefer
+preference	/ˈprefrəns/	n. 偏爱，优先权	d	prefer
+pregnant	/ˈpreɡnənt/	adj. 怀孕的，充满的	c	
+prejudice	/ˈpredʒudɪs/	n. 偏见，成见	c	
+preliminary	/prɪˈlɪmɪnəri/	adj. 初步的，预备的	c	
+premise	/ˈpremɪs/	n. 前提，假设	c	
+premium	/ˈpriːmiəm/	n. 保险费，奖金；adj. 优质的	c	
+prescribe	/prɪˈskraɪb/	v. 开处方，规定	c	
+preside	/prɪˈzaɪd/	v. 主持，主管	c	
+prestige	/preˈstiːʒ/	n. 声望，威信	c	
+presume	/prɪˈzjuːm/	v. 假定，推测	c	
+pretext	/ˈpriːtekst/	n. 借口，托辞	c	
+prevail	/prɪˈveɪl/	v. 盛行，获胜	c	
+prevalent	/ˈprevələnt/	adj. 流行的，普遍的	d	prevail
+prey	/preɪ/	n. 猎物，受害者	c	
+priest	/priːst/	n. 神父，牧师	c	
+primarily	/praɪˈmerəli/	adv. 首先，主要地	d	primary
+primitive	/ˈprɪmətɪv/	adj. 原始的，简陋的	c	
+principal	/ˈprɪnsəpl/	adj. 主要的；n. 校长，本金	c	
+principle	/ˈprɪnsəpl/	n. 原则，原理	c	
+prior	/ˈpraɪə/	adj. 先前的，优先的	c	
+priority	/praɪˈɒrəti/	n. 优先，优先事项	d	prior
+privacy	/ˈprɪvəsi/	n. 隐私，私密	d	private
+privilege	/ˈprɪvəlɪdʒ/	n. 特权，荣幸	c	
+probe	/prəʊb/	v./n. 探究，探测	c	
+proceeding	/prəˈsiːdɪŋ/	n. 程序，诉讼	d	proceed
+proclaim	/prəˈkleɪm/	v. 宣告，声明	c	
+productive	/prəˈdʌktɪv/	adj. 多产的，富有成效的	d	produce
+profession	/prəˈfeʃn/	n. 职业，专业	c	
+proficiency	/prəˈfɪʃnsi/	n. 熟练，精通	d	proficient
+profound	/prəˈfaʊnd/	adj. 深刻的，深远的	c	
+prohibit	/prəˈhɪbɪt/	v. 禁止，阻止	c	
+projection	/prəˈdʒekʃn/	n. 预测，投影	d	project
+prolong	/prəˈlɒŋ/	v. 延长，拖长	c	
+prominent	/ˈprɒmɪnənt/	adj. 显著的，杰出的	c	
+promising	/ˈprɒmɪsɪŋ/	adj. 有前途的，有希望的	d	promise
+prompt	/prɒmpt/	adj. 迅速的；v. 促使	c	
+prone	/prəʊn/	adj. 倾向于，俯卧的	c	
+pronounced	/prəˈnaʊnst/	adj. 明显的，显著的	d	pronounce
+proof	/pruːf/	n. 证据，证明	c	
+propaganda	/ˌprɒpəˈɡændə/	n. 宣传，鼓吹	c	
+propel	/prəˈpel/	v. 推动，推进	c	
+proportion	/prəˈpɔːʃn/	n. 比例，部分	c	
+proposal	/prəˈpəʊzl/	n. 提议，求婚	d	propose
+proposition	/ˌprɒpəˈzɪʃn/	n. 主张，命题	d	propose
+proprietor	/prəˈpraɪətə/	n. 所有者，业主	c	
+prosecute	/ˈprɒsɪkjuːt/	v. 起诉，检举	c	
+prospect	/ˈprɒspekt/	n. 前景，展望	c	
+prospective	/prəˈspektɪv/	adj. 潜在的，未来的	d	prospect
+prosper	/ˈprɒspə/	v. 繁荣，兴旺	c	
+prosperity	/prɒˈsperəti/	n. 繁荣，昌盛	d	prosper
+protective	/prəˈtektɪv/	adj. 保护的，防护的	d	protect
+protein	/ˈprəʊtiːn/	n. 蛋白质	c	
+protest	/prəˈtest/	v./n. 抗议，反对	c	
+protocol	/ˈprəʊtəkɒl/	n. 协议，礼仪	c	
+province	/ˈprɒvɪns/	n. 省，领域	c	
+provision	/prəˈvɪʒn/	n. 供应，条款	d	provide
+provoke	/prəˈvəʊk/	v. 激起，挑衅	c	
+prudent	/ˈpruːdnt/	adj. 谨慎的，精明的	c	
+psychology	/saɪˈkɒlədʒi/	n. 心理学，心理	c	
+publicity	/pʌbˈlɪsəti/	n. 宣传，公众关注	d	public
+punctual	/ˈpʌŋktʃuəl/	adj. 准时的，守时的	c	
+purchase	/ˈpɜːtʃəs/	v./n. 购买	c	
+purify	/ˈpjʊərɪfaɪ/	v. 净化，提纯	d	pure
+pursuit	/pəˈsjuːt/	n. 追求，追赶	d	pursue
+puzzle	/ˈpʌzl/	n. 谜，难题；v. 使困惑	c	
+qualify	/ˈkwɒlɪfaɪ/	v. 使合格，取得资格	c	
+quantify	/ˈkwɒntɪfaɪ/	v. 量化，定量	d	quantity
+quantitative	/ˈkwɒntɪtətɪv/	adj. 定量的，数量的	d	quantity
+quarantine	/ˈkwɒrəntiːn/	n. 隔离，检疫	c	
+quarrel	/ˈkwɒrəl/	n./v. 争吵，吵架	c	
+quarterly	/ˈkwɔːtəli/	adj. 季度的；adv. 按季度	d	quarter
+quench	/kwentʃ/	v. 解渴，熄灭	c	
+query	/ˈkwɪəri/	n. 疑问，查询；v. 询问	c	
+quest	/kwest/	n. 探索，追求	c	
+questionnaire	/ˌkwestʃəˈneə/	n. 问卷，调查表	c	
+quiver	/ˈkwɪvə/	v./n. 颤抖，抖动	c	
+quota	/ˈkwəʊtə/	n. 配额，限额	c	
+quotation	/kwəʊˈteɪʃn/	n. 引文，报价	d	quote	c	
+racial	/ˈreɪʃl/	adj. 种族的，人种的	d	race
+radiant	/ˈreɪdiənt/	adj. 灿烂的，容光焕发的	c	
+radiate	/ˈreɪdieɪt/	v. 辐射，散发	c	
+radical	/ˈrædɪkl/	adj. 激进的，根本的	c	
+radius	/ˈreɪdiəs/	n. 半径，范围	c	
+rage	/reɪdʒ/	n. 愤怒，狂暴	c	
+raid	/reɪd/	n./v. 突袭，搜捕	c	
+rally	/ˈræli/	n. 集会；v. 集合，恢复	c	
+ramble	/ˈræmbl/	v. 漫步，漫谈	c	
+random	/ˈrændəm/	adj. 随机的，任意的	c	
+rap	/ræp/	v./n. 敲击，说唱	c	
+rash	/ræʃ/	adj. 轻率的；n. 皮疹	c	
+ratio	/ˈreɪʃiəʊ/	n. 比率，比例	c	
+rational	/ˈræʃnəl/	adj. 理性的，合理的	c	
+rattle	/ˈrætl/	v. 使发出咯咯声，使慌乱	c	
+ravage	/ˈrævɪdʒ/	v. 毁坏，掠夺	c	
+readily	/ˈredɪli/	adv. 乐意地，容易地	d	ready
+realm	/relm/	n. 领域，王国	c	
+reap	/riːp/	v. 收割，收获	c	
+rear	/rɪə/	n. 后部；v. 抚养，饲养	c	
+rebel	/ˈrebl/	n. 反叛者；v. 反抗	c	
+rebellion	/rɪˈbeljən/	n. 叛乱，反抗	d	rebel
+rebuke	/rɪˈbjuːk/	v./n. 斥责，指责	c	
+recede	/rɪˈsiːd/	v. 后退，减弱	c	
+recession	/rɪˈseʃn/	n. 衰退，不景气	d	recede
+recipe	/ˈresəpi/	n. 食谱，秘诀	c	
+recipient	/rɪˈsɪpiənt/	n. 接受者，受赠者	c	
+reciprocal	/rɪˈsɪprəkl/	adj. 相互的，互惠的	c	
+recital	/rɪˈsaɪtl/	n. 演奏会，朗诵	d	recite
+reckless	/ˈrekləs/	adj. 鲁莽的，不顾后果的	c	
+reckon	/ˈrekən/	v. 认为，估计	c	
+reclaim	/rɪˈkleɪm/	v. 开垦，回收	c	
+recognition	/ˌrekəɡˈnɪʃn/	n. 承认，识别	d	recognize
+recommend	/ˌrekəˈmend/	v. 推荐，建议	c	
+reconcile	/ˈrekənsaɪl/	v. 使和解，调和	c	
+recount	/rɪˈkaʊnt/	v. 叙述，重新计数	c	
+recruit	/rɪˈkruːt/	v. 招募；n. 新兵，新成员	c	
+rectify	/ˈrektɪfaɪ/	v. 纠正，矫正	c	
+recur	/rɪˈkɜː/	v. 复发，重现	c	
+redeem	/rɪˈdiːm/	v. 赎回，弥补	c	
+redundant	/rɪˈdʌndənt/	adj. 多余的，冗余的	c	
+reef	/riːf/	n. 礁，暗礁	c	
+referendum	/ˌrefəˈrendəm/	n. 公民投票	c	
+refine	/rɪˈfaɪn/	v. 提炼，改进	c	
+reflect	/rɪˈflekt/	v. 反映，反射，思考	c	
+refrain	/rɪˈfreɪn/	v. 抑制，忍住	c	
+refuge	/ˈrefjuːdʒ/	n. 避难所，庇护	c	
+refute	/rɪˈfjuːt/	v. 反驳，驳斥	c	
+regime	/reɪˈʒiːm/	n. 政权，制度	c	
+regiment	/ˈredʒɪmənt/	n. 团，一大群	c	
+register	/ˈredʒɪstə/	v. 登记，注册	c	
+regulate	/ˈreɡjuleɪt/	v. 管理，调节	c	
+rehearse	/rɪˈhɜːs/	v. 排练，预演	c	
+reign	/reɪn/	n./v. 统治，支配	c	
+rein	/reɪn/	n. 缰绳，控制	c	
+reinforce	/ˌriːɪnˈfɔːs/	v. 加强，增援	d	force
+reiterate	/riːˈɪtəreɪt/	v. 重申，反复说	c	
+rejoice	/rɪˈdʒɔɪs/	v. 高兴，欢欣	c	
+relay	/ˈriːleɪ/	v. 转播，传递	c	
+release	/rɪˈliːs/	v. 释放，发布	c	
+relevant	/ˈreləvənt/	adj. 相关的，切题的	c	
+reliable	/rɪˈlaɪəbl/	adj. 可靠的，可信赖的	d	rely
+relic	/ˈrelɪk/	n. 遗物，遗迹	c	
+relieve	/rɪˈliːv/	v. 减轻，缓解	c	
+religious	/rɪˈlɪdʒəs/	adj. 宗教的，虔诚的	d	religion
+relinquish	/rɪˈlɪŋkwɪʃ/	v. 放弃，让出	c	
+relish	/ˈrelɪʃ/	v. 享受，喜爱	c	
+reluctant	/rɪˈlʌktənt/	adj. 不情愿的，勉强的	c	
+remainder	/rɪˈmeɪndə/	n. 剩余部分，余数	d	remain
+remarkable	/rɪˈmɑːkəbl/	adj. 显著的，非凡的	d	remark
+remedy	/ˈremədi/	n. 治疗，补救；v. 补救	c	
+remnant	/ˈremnənt/	n. 残余，剩余	c	
+remote	/rɪˈməʊt/	adj. 遥远的，偏远的	c	
+render	/ˈrendə/	v. 使成为，提供	c	
+renew	/rɪˈnjuː/	v. 更新，续订	c	
+renovate	/ˈrenəveɪt/	v. 翻新，修复	c	
+renowned	/rɪˈnaʊnd/	adj. 著名的，有名望的	c	
+repay	/rɪˈpeɪ/	v. 偿还，报答	c	
+repel	/rɪˈpel/	v. 击退，排斥	c	
+repent	/rɪˈpent/	v. 后悔，忏悔	c	
+repertoire	/ˈrepətwɑː/	n. 全部节目，保留剧目	c	
+replacement	/rɪˈpleɪsmənt/	n. 替换，替代品	d	replace
+represent	/ˌreprɪˈzent/	v. 代表，表现	c	
+repress	/rɪˈpres/	v. 压制，抑制	c	
+reproach	/rɪˈprəʊtʃ/	v./n. 责备，指责	c	
+reptile	/ˈreptaɪl/	n. 爬行动物	c	
+republic	/rɪˈpʌblɪk/	n. 共和国，共和政体	c	
+repulsive	/rɪˈpʌlsɪv/	adj. 令人厌恶的，排斥的	d	repel
+reputation	/ˌrepjuˈteɪʃn/	n. 名声，声望	c	
+requisite	/ˈrekwɪzɪt/	adj. 必需的；n. 必需品	c	
+resent	/rɪˈzent/	v. 怨恨，憎恶	c	
+reservoir	/ˈrezəvwɑː/	n. 水库，储备	c	
+reside	/rɪˈzaɪd/	v. 居住，存在于	c	
+residence	/ˈrezɪdəns/	n. 住所，居住	d	reside
+residual	/rɪˈzɪdjuəl/	adj. 剩余的，残留的	c	
+resign	/rɪˈzaɪn/	v. 辞职，放弃	c	
+resilient	/rɪˈzɪliənt/	adj. 有弹性的，适应力强的	c	
+resist	/rɪˈzɪst/	v. 抵抗，抗拒	c	
+resolute	/ˈrezəluːt/	adj. 坚决的，果断的	c	
+resonance	/ˈrezənəns/	n. 共鸣，共振	d	resonate
+respective	/rɪˈspektɪv/	adj. 各自的，分别的	d	respect
+restore	/rɪˈstɔː/	v. 恢复，修复	c	
+restrain	/rɪˈstreɪn/	v. 抑制，约束	c	
+restrict	/rɪˈstrɪkt/	v. 限制，约束	c	
+resume	/rɪˈzjuːm/	v. 恢复，重新开始	c	
+retail	/ˈriːteɪl/	n. 零售；v. 零售	c	
+retain	/rɪˈteɪn/	v. 保持，保留	c	
+retort	/rɪˈtɔːt/	v./n. 反驳，回击	c	
+retreat	/rɪˈtriːt/	v./n. 撤退，退却	c	
+retrieve	/rɪˈtriːv/	v. 取回，检索	c	
+retrospect	/ˈretrəspekt/	n. 回顾，回想	c	
+reveal	/rɪˈviːl/	v. 揭示，透露	c	
+revenue	/ˈrevənjuː/	n. 收入，税收	c	
+reverse	/rɪˈvɜːs/	v. 颠倒，反转；adj. 相反的	c	
+revise	/rɪˈvaɪz/	v. 修改，复习	c	
+revive	/rɪˈvaɪv/	v. 复活，复兴	c	
+revolt	/rɪˈvəʊlt/	v./n. 反抗，起义	c	
+rhetoric	/ˈretərɪk/	n. 修辞，花言巧语	c	
+ridge	/rɪdʒ/	n. 山脊，隆起	c	
+ridicule	/ˈrɪdɪkjuːl/	v./n. 嘲笑，讥讽	c	
+ridiculous	/rɪˈdɪkjələs/	adj. 荒谬的，可笑的	d	ridicule
+rigid	/ˈrɪdʒɪd/	adj. 僵硬的，严格的	c	
+rigorous	/ˈrɪɡərəs/	adj. 严格的，严谨的	c	
+riot	/ˈraɪət/	n. 暴乱，骚乱	c	
+ripple	/ˈrɪpl/	n. 涟漪；v. 泛起涟漪	c	
+ritual	/ˈrɪtʃuəl/	n. 仪式，例行公事	c	
+rival	/ˈraɪvl/	n. 对手，竞争者	c	
+roam	/rəʊm/	v. 漫游，漫步	c	
+robust	/rəʊˈbʌst/	adj. 强健的，稳健的	c	
+rod	/rɒd/	n. 杆，棒	c	
+rot	/rɒt/	v. 腐烂，腐败	c	
+rotate	/rəʊˈteɪt/	v. 旋转，轮流	c	
+rough	/rʌf/	adj. 粗糙的，粗略的	c	
+rouse	/raʊz/	v. 唤醒，激起	c	
+route	/ruːt/	n. 路线，途径	c	
+routine	/ruːˈtiːn/	n. 常规，例行公事	c	
+row	/rəʊ/	n. 排，行；v. 划船	c	
+royal	/ˈrɔɪəl/	adj. 王室的，高贵的	c	
+rubbish	/ˈrʌbɪʃ/	n. 垃圾，废话	c	
+rugged	/ˈrʌɡɪd/	adj. 崎岖的，粗犷的	c	
+ruin	/ˈruːɪn/	v. 毁灭；n. 废墟	c	
+rumor	/ˈruːmə/	n. 谣言，传闻	c	
+rural	/ˈrʊərəl/	adj. 农村的，乡村的	c	
+rust	/rʌst/	n. 锈；v. 生锈	c	
+ruthless	/ˈruːθləs/	adj. 无情的，残忍的	c	
+sacred	/ˈseɪkrɪd/	adj. 神圣的，宗教的	c	
+sacrifice	/ˈsækrɪfaɪs/	n./v. 牺牲，献祭	c	
+saddle	/ˈsædl/	n. 马鞍；v. 使承担	c	
+sake	/seɪk/	n. 缘故，利益	c	
+salute	/səˈluːt/	v./n. 敬礼，致敬	c	
+salvation	/sælˈveɪʃn/	n. 拯救，救赎	d	save
+sanction	/ˈsæŋkʃn/	n. 制裁，批准	c	
+sanctuary	/ˈsæŋktʃuəri/	n. 避难所，保护区	c	
+sane	/seɪn/	adj. 理智的，明智的	c	
+sanitary	/ˈsænətri/	adj. 卫生的，清洁的	c	
+satisfactory	/ˌsætɪsˈfæktəri/	adj. 令人满意的	d	satisfy
+saturate	/ˈsætʃəreɪt/	v. 使饱和，浸透	c	
+savage	/ˈsævɪdʒ/	adj. 野蛮的，凶猛的	c	
+scale	/skeɪl/	n. 规模，刻度，鳞片	c	
+scan	/skæn/	v. 扫描，浏览	c	
+scandal	/ˈskændl/	n. 丑闻，流言	c	
+scarce	/skeəs/	adj. 稀少的，缺乏的	c	
+scatter	/ˈskætə/	v. 散开，撒播	c	
+scenario	/səˈnɑːriəʊ/	n. 设想，情景	c	
+scent	/sent/	n. 香味，气味	c	
+schedule	/ˈʃedjuːl/	n. 时间表；v. 安排	c	
+scheme	/skiːm/	n. 计划，方案，阴谋	c	
+scholarship	/ˈskɒləʃɪp/	n. 奖学金，学识	d	scholar
+scope	/skəʊp/	n. 范围，余地	c	
+scorn	/skɔːn/	n./v. 轻蔑，鄙视	c	
+scramble	/ˈskræmbl/	v. 争夺，攀爬	c	
+scrap	/skræp/	n. 碎片，废料；v. 废弃	c	
+scrape	/skreɪp/	v. 刮，擦	c	
+scratch	/skrætʃ/	v. 抓，划；n. 抓痕	c	
+scream	/skriːm/	v./n. 尖叫，喊叫	c	
+screw	/skruː/	n. 螺钉；v. 拧紧	c	
+scrutiny	/ˈskruːtəni/	n. 仔细审查，详细检查	c	
+sculpture	/ˈskʌlptʃə/	n. 雕塑，雕像	c	
+seal	/siːl/	n. 印章，海豹；v. 密封	c	
+seclude	/sɪˈkluːd/	v. 隔离，使隐退	c	
+sector	/ˈsektə/	n. 部门，区域	c	
+secular	/ˈsekjələ/	adj. 世俗的，非宗教的	c	
+secure	/sɪˈkjʊə/	adj. 安全的；v. 保护，获得	c	
+seduce	/sɪˈdjuːs/	v. 引诱，诱惑	c	
+seemingly	/ˈsiːmɪŋli/	adv. 表面上，似乎	d	seem
+segment	/ˈseɡmənt/	n. 部分，段	c	
+segregate	/ˈseɡrɪɡeɪt/	v. 隔离，分离	c	
+seize	/siːz/	v. 抓住，夺取	c	
+seldom	/ˈseldəm/	adv. 很少，不常	c	
+seminar	/ˈsemɪnɑː/	n. 研讨会，讨论课	c	
+senate	/ˈsenət/	n. 参议院，大学理事会	c	
+sensation	/senˈseɪʃn/	n. 感觉，轰动	d	sense
+sensible	/ˈsensəbl/	adj. 明智的，可感知的	d	sense
+sensitive	/ˈsensətɪv/	adj. 敏感的，灵敏的	d	sense
+sentiment	/ˈsentɪmənt/	n. 情绪，观点	c	
+sequence	/ˈsiːkwəns/	n. 顺序，序列	c	
+serene	/səˈriːn/	adj. 平静的，安详的	c	
+serial	/ˈsɪəriəl/	adj. 连续的，串联的；n. 连载	c	
+sermon	/ˈsɜːmən/	n. 布道，说教	c	
+session	/ˈseʃn/	n. 会议，一段时间	c	
+setback	/ˈsetbæk/	n. 挫折，倒退	c	
+severe	/sɪˈvɪə/	adj. 严重的，严厉的	c	
+shabby	/ˈʃæbi/	adj. 破旧的，卑鄙的	c	
+shatter	/ˈʃætə/	v. 粉碎，破坏	c	
+shed	/ʃed/	v. 脱落，流出；n. 棚屋	c	
+sheer	/ʃɪə/	adj. 纯粹的，陡峭的	c	
+shield	/ʃiːld/	n. 盾牌，保护；v. 保护	c	
+shift	/ʃɪft/	v. 转移，换挡；n. 转变，班次	c	
+shiver	/ˈʃɪvə/	v./n. 颤抖，发抖	c	
+shortage	/ˈʃɔːtɪdʒ/	n. 短缺，不足	d	short
+shortcoming	/ˈʃɔːtkʌmɪŋ/	n. 缺点，短处	c	
+shoulder	/ˈʃəʊldə/	n. 肩膀；v. 承担	c	
+shrewd	/ʃruːd/	adj. 精明的，敏锐的	c	
+shriek	/ʃriːk/	v./n. 尖叫	c	
+shrink	/ʃrɪŋk/	v. 收缩，退缩	c	
+shrub	/ʃrʌb/	n. 灌木	c	
+shrug	/ʃrʌɡ/	v./n. 耸肩	c	
+shudder	/ˈʃʌdə/	v./n. 战栗，发抖	c	
+shuffle	/ˈʃʌfl/	v. 洗牌，拖步走	c	
+sibling	/ˈsɪblɪŋ/	n. 兄弟姐妹	c	
+siege	/siːdʒ/	n. 围攻，封锁	c	
+signify	/ˈsɪɡnɪfaɪ/	v. 表示，意味着	d	sign
+simplicity	/sɪmˈplɪsəti/	n. 简单，朴素	d	simple
+simulate	/ˈsɪmjuleɪt/	v. 模拟，假装	c	
+simultaneous	/ˌsɪmlˈteɪniəs/	adj. 同时的，同时发生的	c	
+sin	/sɪn/	n. 罪，罪恶	c	
+sincere	/sɪnˈsɪə/	adj. 真诚的，诚挚的	c	
+singular	/ˈsɪŋɡjələ/	adj. 单数的，非凡的	c	
+sinister	/ˈsɪnɪstə/	adj. 阴险的，不祥的	c	
+siren	/ˈsaɪrən/	n. 警报器，塞壬	c	
+skeleton	/ˈskelɪtn/	n. 骨架，框架	c	
+skeptical	/ˈskeptɪkl/	adj. 怀疑的，多疑的	c	
+sketch	/sketʃ/	n. 草图，素描；v. 概述	c	
+skim	/skɪm/	v. 掠过，浏览	c	
+skip	/skɪp/	v. 跳过，略过	c	
+skull	/skʌl/	n. 头骨，颅骨	c	
+slam	/slæm/	v. 猛击，砰地关上	c	
+slap	/slæp/	v./n. 掌掴，拍击	c	
+slaughter	/ˈslɔːtə/	n./v. 屠杀，屠宰	c	
+slave	/sleɪv/	n. 奴隶；v. 苦干	c	
+sledge	/sledʒ/	n. 雪橇	c	
+sleek	/sliːk/	adj. 光滑的，时髦的	c	
+slender	/ˈslendə/	adj. 细长的，微薄的	c	
+slice	/slaɪs/	n. 片；v. 切片	c	
+slight	/slaɪt/	adj. 轻微的，纤细的	c	
+slim	/slɪm/	adj. 苗条的，微小的	c	
+slip	/slɪp/	v. 滑倒，溜走；n. 差错	c	
+slippery	/ˈslɪpəri/	adj. 滑的，棘手的	d	slip
+slogan	/ˈsləʊɡən/	n. 标语，口号	c	
+slope	/sləʊp/	n. 斜坡，坡度	c	
+slot	/slɒt/	n. 狭槽，位置	c	
+slum	/slʌm/	n. 贫民窟	c	
+slump	/slʌmp/	v. 暴跌，瘫坐	c	
+sly	/slaɪ/	adj. 狡猾的，狡黠的	c	
+smash	/smæʃ/	v. 粉碎，猛撞	c	
+smog	/smɒɡ/	n. 烟雾，雾霾	c	
+smuggle	/ˈsmʌɡl/	v. 走私，偷运	c	
+snap	/snæp/	v. 猛咬，折断；n. 快照	c	
+snatch	/snætʃ/	v. 抢夺，抓住	c	
+sober	/ˈsəʊbə/	adj. 清醒的，严肃的	c	
+sociology	/ˌsəʊsiˈɒlədʒi/	n. 社会学	d	social
+sole	/səʊl/	adj. 唯一的，单独的	c	
+solemn	/ˈsɒləm/	adj. 庄严的，严肃的	c	
+solicit	/səˈlɪsɪt/	v. 请求，征求	c	
+solidarity	/ˌsɒlɪˈdærəti/	n. 团结，一致	d	solid
+solitary	/ˈsɒlətri/	adj. 孤独的，单独的	c	
+solo	/ˈsəʊləʊ/	n. 独奏，独唱	c	
+soluble	/ˈsɒljəbl/	adj. 可溶的，可解决的	c	
+somber	/ˈsɒmbə/	adj. 阴沉的，忧郁的	c	
+soothe	/suːð/	v. 安慰，缓和	c	
+sophisticated	/səˈfɪstɪkeɪtɪd/	adj. 复杂的，老练的	c	
+sore	/sɔː/	adj. 疼痛的，恼火的	c	
+sorrow	/ˈsɒrəʊ/	n. 悲伤，悲痛	c	
+sour	/ˈsaʊə/	adj. 酸的，变质的	c	
+sovereign	/ˈsɒvrɪn/	n. 君主；adj. 主权的	c	
+spacious	/ˈspeɪʃəs/	adj. 宽敞的，广阔的	c	
+span	/spæn/	n. 跨度，期间；v. 跨越	c	
+sparkle	/ˈspɑːkl/	v./n. 闪耀，闪光	c	
+spatial	/ˈspeɪʃl/	adj. 空间的	d	space
+specialize	/ˈspeʃəlaɪz/	v. 专门研究，专攻	d	special
+species	/ˈspiːʃiːz/	n. 物种，种类	c	
+specific	/spəˈsɪfɪk/	adj. 具体的，特定的	c	
+specify	/ˈspesɪfaɪ/	v. 明确说明，指定	d	specific
+specimen	/ˈspesɪmən/	n. 样本，标本	c	
+spectacle	/ˈspektəkl/	n. 景象，奇观	c	
+spectacular	/spekˈtækjələ/	adj. 壮观的，令人惊叹的	c	
+spectator	/spekˈteɪtə/	n. 观众，旁观者	c	
+spectrum	/ˈspektrəm/	n. 光谱，范围	c	
+speculate	/ˈspekjuleɪt/	v. 推测，投机	c	
+sphere	/sfɪə/	n. 球体，领域	c	
+spine	/spaɪn/	n. 脊柱，刺	c	
+spiral	/ˈspaɪrəl/	n. 螺旋；adj. 螺旋形的	c	
+spite	/spaɪt/	n. 恶意，怨恨	c	
+splash	/splæʃ/	v. 溅，泼	c	
+splendid	/ˈsplendɪd/	adj. 壮丽的，极好的	c	
+split	/splɪt/	v. 分裂，分割	c	
+spontaneous	/spɒnˈteɪniəs/	adj. 自发的，自然的	c	
+spouse	/spaʊs/	n. 配偶	c	
+sprawl	/sprɔːl/	v. 蔓延，伸展	c	
+spring	/sprɪŋ/	n. 春天，泉水；v. 跳跃	c	
+sprout	/spraʊt/	v. 发芽；n. 嫩芽	c	
+spur	/spɜː/	v. 刺激，激励；n. 马刺	c	
+squad	/skwɒd/	n. 小队，班	c	
+squander	/ˈskwɒndə/	v. 浪费，挥霍	c	
+squeeze	/skwiːz/	v. 挤压，榨取	c	
+stability	/stəˈbɪləti/	n. 稳定性，安定	d	stable
+stabilize	/ˈsteɪbəlaɪz/	v. 使稳定，使安定	d	stable
+stack	/stæk/	n. 堆，堆栈；v. 堆积	c	
+stagger	/ˈstæɡə/	v. 蹒跚，使震惊	c	
+stagnant	/ˈstæɡnənt/	adj. 停滞的，不流动的	c	
+stain	/steɪn/	n. 污点；v. 弄脏	c	
+stake	/steɪk/	n. 桩，股份，赌注	c	
+stale	/steɪl/	adj. 陈旧的，不新鲜的	c	
+stalk	/stɔːk/	n. 茎；v. 跟踪，潜行	c	
+stall	/stɔːl/	n. 货摊；v. 拖延，熄火	c	
+stammer	/ˈstæmə/	v./n. 结巴，口吃	c	
+staple	/ˈsteɪpl/	n. 主要产品；adj. 主要的	c	
+stark	/stɑːk/	adj. 明显的，荒凉的	c	
+startle	/ˈstɑːtl/	v. 使惊吓，使吃惊	c	
+starve	/stɑːv/	v. 饿死，饥饿	c	
+static	/ˈstætɪk/	adj. 静态的，静止的	c	
+statistical	/stəˈtɪstɪkl/	adj. 统计的，统计学的	d	statistics
+stature	/ˈstætʃə/	n. 身高，声望	c	
+status	/ˈsteɪtəs/	n. 地位，状态	c	
+statute	/ˈstætʃuːt/	n. 法规，成文法	c	
+steadfast	/ˈstedfɑːst/	adj. 坚定的，不动摇的	c	
+stealth	/stelθ/	n. 秘密行动，隐蔽	d	steal
+steep	/stiːp/	adj. 陡峭的，急剧的	c	
+steer	/stɪə/	v. 驾驶，引导	c	
+stem	/stem/	n. 茎，词干；v. 起源于	c	
+stereotype	/ˈsteriətaɪp/	n. 刻板印象，陈规	c	
+sterile	/ˈsteraɪl/	adj. 不育的，无菌的	c	
+stern	/stɜːn/	adj. 严厉的，坚决的	c	
+stew	/stjuː/	v. 炖；n. 炖菜	c	
+stiff	/stɪf/	adj. 僵硬的，生硬的	c	
+stimulate	/ˈstɪmjuleɪt/	v. 刺激，激励	c	
+sting	/stɪŋ/	v./n. 刺痛，叮咬	c	
+stipulate	/ˈstɪpjuleɪt/	v. 规定，约定	c	
+stir	/stɜː/	v. 搅拌，激起	c	
+stitch	/stɪtʃ/	n. 针脚；v. 缝合	c	
+stock	/stɒk/	n. 库存，股票；v. 储备	c	
+stoop	/stuːp/	v. 弯腰，屈尊	c	
+storage	/ˈstɔːrɪdʒ/	n. 储存，仓库	d	store
+stout	/staʊt/	adj. 结实的，肥胖的	c	
+straightforward	/ˌstreɪtˈfɔːwəd/	adj. 直接的，坦率的	c	
+strain	/streɪn/	n. 压力，拉伤；v. 拉紧	c	
+strait	/streɪt/	n. 海峡，困境	c	
+strand	/strænd/	n. 股，缕；v. 使搁浅	c	
+strap	/stræp/	n. 带子；v. 捆扎	c	
+strategic	/strəˈtiːdʒɪk/	adj. 战略的，关键的	d	strategy
+streak	/striːk/	n. 条纹，一连串	c	
+stream	/striːm/	n. 溪流，流动；v. 流动	c	
+strengthen	/ˈstreŋθn/	v. 加强，巩固	d	strength
+strenuous	/ˈstrenjuəs/	adj. 费力的，紧张的	c	
+stress	/stres/	n. 压力，重音；v. 强调	c	
+stretch	/stretʃ/	v. 伸展，拉长	c	
+stride	/straɪd/	v. 大步走；n. 步伐	c	
+strife	/straɪf/	n. 冲突，争斗	c	
+strike	/straɪk/	v. 打击，罢工	c	
+striking	/ˈstraɪkɪŋ/	adj. 显著的，引人注目的	d	strike
+string	/strɪŋ/	n. 弦，一串；v. 串起	c	
+strip	/strɪp/	v. 剥去，剥夺；n. 条	c	
+strive	/straɪv/	v. 努力，奋斗	c	
+stroke	/strəʊk/	n. 中风，笔画；v. 抚摸	c	
+stroll	/strəʊl/	v./n. 散步，漫步	c	
+structural	/ˈstrʌktʃərəl/	adj. 结构的，构造的	d	structure
+stubborn	/ˈstʌbən/	adj. 固执的，顽固的	c	
+stumble	/ˈstʌmbl/	v. 绊倒，结巴	c	
+stun	/stʌn/	v. 使震惊，使昏迷	c	
+sturdy	/ˈstɜːdi/	adj. 结实的，强健的	c	
+subdue	/səbˈdjuː/	v. 征服，压制	c	
+subjective	/səbˈdʒektɪv/	adj. 主观的，个人的	d	subject
+sublime	/səˈblaɪm/	adj. 崇高的，卓越的	c	
+submerge	/səbˈmɜːdʒ/	v. 淹没，浸没	c	
+submit	/səbˈmɪt/	v. 提交，服从	c	
+subordinate	/səˈbɔːdɪnət/	adj. 下级的，次要的	c	
+subscribe	/səbˈskraɪb/	v. 订阅，赞同	c	
+subsequent	/ˈsʌbsɪkwənt/	adj. 随后的，后来的	c	
+subside	/səbˈsaɪd/	v. 平息，下沉	c	
+subsidy	/ˈsʌbsədi/	n. 补贴，津贴	c	
+substance	/ˈsʌbstəns/	n. 物质，实质	c	
+substantial	/səbˈstænʃl/	adj. 大量的，实质的	d	substance
+substitute	/ˈsʌbstɪtjuːt/	n. 替代品；v. 代替	c	
+subtle	/ˈsʌtl/	adj. 微妙的，敏锐的	c	
+subtract	/səbˈtrækt/	v. 减去，扣除	c	
+suburb	/ˈsʌbɜːb/	n. 郊区，近郊	c	
+succession	/səkˈseʃn/	n. 连续，继承	d	succeed
+successive	/səkˈsesɪv/	adj. 连续的，接连的	d	succeed
+suck	/sʌk/	v. 吸，吮	c	
+sue	/suː/	v. 起诉，控告	c	
+suffice	/səˈfaɪs/	v. 足够，满足	c	
+sufficient	/səˈfɪʃnt/	adj. 足够的，充分的	d	suffice
+suicide	/ˈsuːɪsaɪd/	n. 自杀	c	
+suite	/swiːt/	n. 套房，一套	c	
+sulfur	/ˈsʌlfə/	n. 硫，硫磺	c	
+summit	/ˈsʌmɪt/	n. 峰会，顶峰	c	
+summon	/ˈsʌmən/	v. 召唤，传唤	c	
+superb	/suːˈpɜːb/	adj. 卓越的，极好的	c	
+superficial	/ˌsuːpəˈfɪʃl/	adj. 肤浅的，表面的	c	
+superior	/suːˈpɪəriə/	adj. 优越的，上级的	c	
+supersonic	/ˌsuːpəˈsɒnɪk/	adj. 超音速的	d	sonic
+superstition	/ˌsuːpəˈstɪʃn/	n. 迷信，迷信行为	c	
+supervise	/ˈsuːpəvaɪz/	v. 监督，管理	c	
+supplement	/ˈsʌplɪment/	n. 补充，增刊；v. 补充	c	
+suppress	/səˈpres/	v. 镇压，抑制	c	
+supreme	/suːˈpriːm/	adj. 最高的，至上的	c	
+surge	/sɜːdʒ/	v./n. 激增，汹涌	c	
+surgeon	/ˈsɜːdʒən/	n. 外科医生	c	
+surpass	/səˈpɑːs/	v. 超过，胜过	c	
+surplus	/ˈsɜːpləs/	n. 盈余，剩余	c	
+surrender	/səˈrendə/	v./n. 投降，放弃	c	
+surveillance	/sɜːˈveɪləns/	n. 监视，监控	c	
+survey	/ˈsɜːveɪ/	n. 调查，勘测；v. 调查	c	
+susceptible	/səˈseptəbl/	adj. 易受影响的，敏感的	c	
+suspect	/səˈspekt/	v. 怀疑；n. 嫌疑人	c	
+suspend	/səˈspend/	v. 暂停，悬挂	c	
+suspicion	/səˈspɪʃn/	n. 怀疑，嫌疑	d	suspect
+sustain	/səˈsteɪn/	v. 维持，支撑	c	
+swallow	/ˈswɒləʊ/	v. 吞咽；n. 燕子	c	
+swamp	/swɒmp/	n. 沼泽；v. 淹没	c	
+swap	/swɒp/	v./n. 交换	c	
+swarm	/swɔːm/	n. 群，蜂群；v. 蜂拥	c	
+sway	/sweɪ/	v. 摇摆，影响	c	
+swear	/sweə/	v. 发誓，咒骂	c	
+sweep	/swiːp/	v. 打扫，扫过	c	
+swell	/swel/	v. 膨胀，肿胀	c	
+swift	/swɪft/	adj. 迅速的，敏捷的	c	
+swing	/swɪŋ/	v. 摇摆，旋转	c	
+switch	/swɪtʃ/	n. 开关，转换；v. 转换	c	
+sword	/sɔːd/	n. 剑，刀	c	
+syllable	/ˈsɪləbl/	n. 音节	c	
+symbol	/ˈsɪmbl/	n. 符号，象征	c	
+symmetry	/ˈsɪmətri/	n. 对称，均匀	c	
+sympathetic	/ˌsɪmpəˈθetɪk/	adj. 同情的，赞同的	d	sympathy
+symphony	/ˈsɪmfəni/	n. 交响乐，交响曲	c	
+symptom	/ˈsɪmptəm/	n. 症状，征兆	c	
+synthesis	/ˈsɪnθəsɪs/	n. 综合，合成	c	
+synthetic	/sɪnˈθetɪk/	adj. 合成的，人造的	d	synthesis
+systematic	/ˌsɪstəˈmætɪk/	adj. 系统的，有条理的	d	system
+tackle	/ˈtækl/	v. 处理，对付；n. 用具	c	
+tactic	/ˈtæktɪk/	n. 策略，战术	c	
+tangible	/ˈtændʒəbl/	adj. 有形的，可触摸的	c	
+tangle	/ˈtæŋɡl/	v. 缠结；n. 纠缠	c	
+tanker	/ˈtæŋkə/	n. 油轮，罐车	d	tank
+tariff	/ˈtærɪf/	n. 关税，价目表	c	
+technician	/tekˈnɪʃn/	n. 技术员，技师	d	technique
+tedious	/ˈtiːdiəs/	adj. 冗长的，乏味的	c	
+temper	/ˈtempə/	n. 脾气，心情	c	
+temperament	/ˈtemprəmənt/	n. 气质，性情	c	
+temporary	/ˈtemprəri/	adj. 临时的，暂时的	c	
+tempt	/tempt/	v. 诱惑，引诱	c	
+tenant	/ˈtenənt/	n. 房客，租户	c	
+tendency	/ˈtendənsi/	n. 趋势，倾向	d	tend
+tender	/ˈtendə/	adj. 温柔的，嫩的	c	
+tense	/tens/	adj. 紧张的；n. 时态	c	
+tentative	/ˈtentətɪv/	adj. 试探性的，暂定的	c	
+terminal	/ˈtɜːmɪnl/	n. 终点站，终端	c	
+terminate	/ˈtɜːmɪneɪt/	v. 终止，结束	d	terminal
+terrain	/təˈreɪn/	n. 地形，地势	c	
+territory	/ˈterətri/	n. 领土，范围	c	
+terror	/ˈterə/	n. 恐怖，惊骇	c	
+testify	/ˈtestɪfaɪ/	v. 作证，证明	d	test
+testimony	/ˈtestɪməni/	n. 证词，证明	d	test
+textile	/ˈtekstaɪl/	n. 纺织品，织物	c	
+texture	/ˈtekstʃə/	n. 质地，纹理	c	
+theme	/θiːm/	n. 主题，题目	c	
+theoretical	/ˌθɪəˈretɪkl/	adj. 理论的，假设的	d	theory
+therapy	/ˈθerəpi/	n. 治疗，疗法	c	
+thereby	/ˌðeəˈbaɪ/	adv. 因此，从而	c	
+thermal	/ˈθɜːml/	adj. 热的，保温的	c	
+thesis	/ˈθiːsɪs/	n. 论文，论点	c	
+thigh	/θaɪ/	n. 大腿，股	c	
+thorn	/θɔːn/	n. 刺，荆棘	c	
+thorough	/ˈθʌrə/	adj. 彻底的，全面的	c	
+thrash	/θræʃ/	v. 痛打，摆动	c	
+threaten	/ˈθretn/	v. 威胁，恐吓	d	threat
+threshold	/ˈθreʃhəʊld/	n. 门槛，临界值	c	
+thrift	/θrɪft/	n. 节俭，节约	c	
+thrill	/θrɪl/	n. 激动，兴奋；v. 使激动	c	
+thrive	/θraɪv/	v. 繁荣，茁壮成长	c	
+throng	/θrɒŋ/	n. 人群；v. 蜂拥	c	
+thrust	/θrʌst/	v. 猛推，刺	c	
+thumb	/θʌm/	n. 拇指	c	
+thunder	/ˈθʌndə/	n. 雷，雷声	c	
+tick	/tɪk/	n. 滴答声，钩号；v. 滴答响	c	
+tide	/taɪd/	n. 潮，潮汐，趋势	c	
+tidy	/ˈtaɪdi/	adj. 整洁的，整齐的	c	
+tilt	/tɪlt/	v. 倾斜，倾侧	c	
+timber	/ˈtɪmbə/	n. 木材，木料	c	
+timid	/ˈtɪmɪd/	adj. 胆小的，羞怯的	c	
+tissue	/ˈtɪʃuː/	n. 组织，纸巾	c	
+toil	/tɔɪl/	v./n. 辛苦工作，苦干	c	
+token	/ˈtəʊkən/	n. 象征，代币	c	
+tolerance	/ˈtɒlərəns/	n. 宽容，忍受力	d	tolerant
+toll	/təʊl/	n. 通行费，伤亡人数	c	
+torment	/ˈtɔːment/	n./v. 折磨，痛苦	c	
+torrent	/ˈtɒrənt/	n. 洪流，激流	c	
+torture	/ˈtɔːtʃə/	n./v. 折磨，拷问	c	
+toss	/tɒs/	v. 扔，摇摆	c	
+trace	/treɪs/	v. 追踪；n. 痕迹	c	
+tract	/trækt/	n. 地带，小册子	c	
+trademark	/ˈtreɪdmɑːk/	n. 商标，标志	c	
+trail	/treɪl/	n. 小径，踪迹；v. 拖	c	
+trait	/treɪt/	n. 特征，特点	c	
+traitor	/ˈtreɪtə/	n. 叛徒，卖国贼	c	
+tramp	/træmp/	v. 跋涉；n. 流浪汉	c	
+tranquil	/ˈtræŋkwɪl/	adj. 平静的，安宁的	c	
+transaction	/trænˈzækʃn/	n. 交易，事务	c	
+transcend	/trænˈsend/	v. 超越，胜过	c	
+transcript	/ˈtrænskrɪpt/	n. 成绩单，抄本	c	
+transfer	/trænsˈfɜː/	v. 转移，转让	c	
+transform	/trænsˈfɔːm/	v. 改变，转化	c	
+transient	/ˈtrænziənt/	adj. 短暂的，转瞬的	c	
+transit	/ˈtrænzɪt/	n. 运输，过境	c	
+transition	/trænˈzɪʃn/	n. 过渡，转变	d	transit
+transmit	/trænsˈmɪt/	v. 传输，传播	c	
+transparent	/trænsˈpærənt/	adj. 透明的，易懂的	c	
+transplant	/trænsˈplɑːnt/	v. 移植，迁移	c	
+traverse	/trəˈvɜːs/	v. 穿过，横越	c	
+tread	/tred/	v. 踩，踏	c	
+treaty	/ˈtriːti/	n. 条约，协定	c	
+tremble	/ˈtrembl/	v. 颤抖，发抖	c	
+tremendous	/trəˈmendəs/	adj. 巨大的，极好的	c	
+trench	/trentʃ/	n. 沟渠，战壕	c	
+trend	/trend/	n. 趋势，倾向	c	
+trespass	/ˈtrespəs/	v. 擅自进入，侵占	c	
+tribunal	/traɪˈbjuːnl/	n. 法庭，特别法庭	c	
+tribute	/ˈtrɪbjuːt/	n. 贡品，致敬	c	
+trickle	/ˈtrɪkl/	v. 滴流，慢慢移动	c	
+trigger	/ˈtrɪɡə/	v. 引发，触发；n. 扳机	c	
+trim	/trɪm/	v. 修剪；adj. 整洁的	c	
+triumph	/ˈtraɪʌmf/	n. 胜利，成功	c	
+trivial	/ˈtrɪviəl/	adj. 琐碎的，不重要的	c	
+trolley	/ˈtrɒli/	n. 手推车，电车	c	
+tropical	/ˈtrɒpɪkl/	adj. 热带的，炎热的	d	tropic
+trot	/trɒt/	v. 小跑，快步走	c	
+truce	/truːs/	n. 停战，休战	c	
+trunk	/trʌŋk/	n. 树干，后备箱，躯干	c	
+tuck	/tʌk/	v. 塞进，卷起	c	
+tuition	/tjuˈɪʃn/	n. 学费，教学	c	
+tumble	/ˈtʌmbl/	v. 翻滚，跌倒	c	
+tumor	/ˈtjuːmə/	n. 肿瘤，肿块	c	
+tune	/tjuːn/	n. 曲调；v. 调音，调整	c	
+tunnel	/ˈtʌnl/	n. 隧道，地道	c	
+turbulent	/ˈtɜːbjələnt/	adj. 动荡的，混乱的	c	
+turmoil	/ˈtɜːmɔɪl/	n. 混乱，动乱	c	
+tutor	/ˈtjuːtə/	n. 导师，家教	c	
+twilight	/ˈtwaɪlaɪt/	n. 黄昏，暮色	c	
+twinkle	/ˈtwɪŋkl/	v./n. 闪烁，闪耀	c	
+twist	/twɪst/	v. 扭曲，缠绕	c	
+tyranny	/ˈtɪrəni/	n. 暴政，专制	d	tyrant
+ultimate	/ˈʌltɪmət/	adj. 最终的，根本的	c	
+unanimous	/juˈnænɪməs/	adj. 一致同意的，全体一致的	c	
+uncover	/ʌnˈkʌvə/	v. 揭露，发现	c	
+undergo	/ˌʌndəˈɡəʊ/	v. 经历，遭受	c	
+undergraduate	/ˌʌndəˈɡrædʒuət/	n. 本科生，大学生	c	
+underlying	/ˌʌndəˈlaɪɪŋ/	adj. 潜在的，根本的	d	underlie
+undermine	/ˌʌndəˈmaɪn/	v. 削弱，破坏	c	
+undertake	/ˌʌndəˈteɪk/	v. 承担，着手	c	
+undo	/ʌnˈduː/	v. 撤销，解开	c	
+unemployment	/ˌʌnɪmˈplɔɪmənt/	n. 失业，失业率	d	employment
+unfold	/ʌnˈfəʊld/	v. 展开，展现	c	
+uniform	/ˈjuːnɪfɔːm/	n. 制服；adj. 统一的	c	
+unify	/ˈjuːnɪfaɪ/	v. 统一，使一致	d	unit
+union	/ˈjuːniən/	n. 联盟，工会	c	
+unique	/juˈniːk/	adj. 独特的，唯一的	c	
+unity	/ˈjuːnəti/	n. 统一，团结	c	
+universal	/ˌjuːnɪˈvɜːsl/	adj. 普遍的，通用的	d	universe
+universe	/ˈjuːnɪvɜːs/	n. 宇宙，万物	c	
+unprecedented	/ʌnˈpresɪdentɪd/	adj. 前所未有的，史无前例的	c	
+update	/ˌʌpˈdeɪt/	v. 更新；n. 最新消息	c	
+upgrade	/ˌʌpˈɡreɪd/	v. 升级，提升	c	
+uphold	/ʌpˈhəʊld/	v. 支持，维护	c	
+upright	/ˈʌpraɪt/	adj. 直立的，正直的	c	
+uproar	/ˈʌprɔː/	n. 喧闹，骚动	c	
+upset	/ˌʌpˈset/	v. 使不安，打翻	c	
+urban	/ˈɜːbən/	adj. 城市的，都市的	c	
+urge	/ɜːdʒ/	v. 催促，力劝；n. 冲动	c	
+urgent	/ˈɜːdʒənt/	adj. 紧急的，急迫的	c	
+utilize	/ˈjuːtəlaɪz/	v. 利用，使用	d	utility
+utmost	/ˈʌtməʊst/	adj. 极度的，最大的	c	
+utter	/ˈʌtə/	v. 说出；adj. 完全的	c	
+vacant	/ˈveɪkənt/	adj. 空的，空缺的	c	
+vacuum	/ˈvækjuːm/	n. 真空，真空吸尘器	c	
+vague	/veɪɡ/	adj. 模糊的，含糊的	c	
+vain	/veɪn/	adj. 徒劳的，虚荣的	c	
+valid	/ˈvælɪd/	adj. 有效的，正当的	c	
+vanish	/ˈvænɪʃ/	v. 消失，消亡	c	
+vanity	/ˈvænəti/	n. 虚荣，自负	c	
+vapor	/ˈveɪpə/	n. 蒸汽，水汽	c	
+variable	/ˈveəriəbl/	adj. 可变的；n. 变量	d	vary
+variation	/ˌveəriˈeɪʃn/	n. 变化，变异	d	vary
+vary	/ˈveəri/	v. 变化，不同	c	
+vast	/vɑːst/	adj. 巨大的，广阔的	c	
+vegetation	/ˌvedʒəˈteɪʃn/	n. 植被，植物	c	
+vehicle	/ˈviːəkl/	n. 车辆，工具	c	
+velocity	/vəˈlɒsəti/	n. 速度，速率	c	
+venture	/ˈventʃə/	n. 冒险事业；v. 冒险	c	
+verbal	/ˈvɜːbl/	adj. 言语的，口头的	d	verb
+verdict	/ˈvɜːdɪkt/	n. 裁决，判决	c	
+verge	/vɜːdʒ/	n. 边缘，濒临	c	
+verify	/ˈverɪfaɪ/	v. 核实，证实	c	
+versatile	/ˈvɜːsətaɪl/	adj. 多才多艺的，多用途的	c	
+version	/ˈvɜːʃn/	n. 版本，说法	c	
+vertical	/ˈvɜːtɪkl/	adj. 垂直的，竖直的	c	
+vessel	/ˈvesl/	n. 船，容器，血管	c	
+veteran	/ˈvetərən/	n. 老兵，老手	c	
+veto	/ˈviːtəʊ/	v./n. 否决，否决权	c	
+vibrate	/vaɪˈbreɪt/	v. 振动，颤动	c	
+vice	/vaɪs/	n. 恶习，副的	c	
+vicinity	/vəˈsɪnəti/	n. 邻近，附近	c	
+vicious	/ˈvɪʃəs/	adj. 恶毒的，凶残的	c	
+victim	/ˈvɪktɪm/	n. 受害者，牺牲品	c	
+vigor	/ˈvɪɡə/	n. 活力，精力	c	
+vigorous	/ˈvɪɡərəs/	adj. 有力的，精力充沛的	d	vigor
+violate	/ˈvaɪəleɪt/	v. 违反，侵犯	c	
+virtual	/ˈvɜːtʃuəl/	adj. 虚拟的，实际上的	c	
+virtue	/ˈvɜːtʃuː/	n. 美德，优点	c	
+visible	/ˈvɪzəbl/	adj. 可见的，明显的	c	
+visual	/ˈvɪʒuəl/	adj. 视觉的，看得见的	c	
+vital	/ˈvaɪtl/	adj. 至关重要的，生命的	c	
+vivid	/ˈvɪvɪd/	adj. 生动的，鲜艳的	c	
+vocabulary	/vəˈkæbjələri/	n. 词汇，词汇表	c	
+vocal	/ˈvəʊkl/	adj. 嗓音的，直言的	d	vocal	c	
+vocation	/vəʊˈkeɪʃn/	n. 职业，使命感	c	
+void	/vɔɪd/	adj. 无效的，空的；n. 空虚	c	
+volcano	/vɒlˈkeɪnəʊ/	n. 火山	c	
+volume	/ˈvɒljuːm/	n. 体积，卷，音量	c	
+voluntary	/ˈvɒləntri/	adj. 自愿的，志愿的	d	volunteer
+vow	/vaʊ/	n. 誓言；v. 发誓	c	
+voyage	/ˈvɔɪɪdʒ/	n. 航行，旅程	c	
+vulgar	/ˈvʌlɡə/	adj. 粗俗的，庸俗的	c	
+vulnerable	/ˈvʌlnərəbl/	adj. 易受伤害的，脆弱的	c	
+wade	/weɪd/	v. 涉水，艰难行走	c	
+wag	/wæɡ/	v. 摇摆，摇动	c	
+wail	/weɪl/	v./n. 哀号，恸哭	c	
+wander	/ˈwɒndə/	v. 漫游，走神	c	
+warehouse	/ˈweəhaʊs/	n. 仓库，货栈	c	
+warfare	/ˈwɔːfeə/	n. 战争，作战	d	war
+warrant	/ˈwɒrənt/	n. 授权令；v. 保证，使有必要	c	
+warrior	/ˈwɒriə/	n. 战士，勇士	d	war
+wax	/wæks/	n. 蜡；v. 打蜡	c	
+weary	/ˈwɪəri/	adj. 疲倦的，厌烦的	c	
+weave	/wiːv/	v. 编织，织造	c	
+weed	/wiːd/	n. 杂草；v. 除草	c	
+weird	/wɪəd/	adj. 怪异的，离奇的	c	
+welfare	/ˈwelfeə/	n. 福利，幸福	c	
+wharf	/wɔːf/	n. 码头	c	
+whereas	/ˌweərˈæz/	conj. 然而，鉴于	c	
+whilst	/waɪlst/	conj. 当…时，然而	c	
+whip	/wɪp/	n. 鞭子；v. 鞭打，搅打	c	
+whirl	/wɜːl/	v. 旋转，回旋	c	
+whisk	/wɪsk/	v. 搅拌，迅速带走	c	
+whisper	/ˈwɪspə/	v./n. 低语，耳语	c	
+wholesale	/ˈhəʊlseɪl/	n. 批发；adj. 批发的	c	
+wicked	/ˈwɪkɪd/	adj. 邪恶的，恶劣的	c	
+widespread	/ˈwaɪdspred/	adj. 普遍的，广泛的	c	
+wilderness	/ˈwɪldənəs/	n. 荒野，荒地	d	wild
+wildlife	/ˈwaɪldlaɪf/	n. 野生动物，野生生物	c	
+willful	/ˈwɪlfl/	adj. 故意的，任性的	d	will
+wink	/wɪŋk/	v./n. 眨眼，闪烁	c	
+wisdom	/ˈwɪzdəm/	n. 智慧，明智	d	wise
+wit	/wɪt/	n. 智慧，风趣	c	
+withdraw	/wɪðˈdrɔː/	v. 撤回，提款	c	
+wither	/ˈwɪðə/	v. 枯萎，衰退	c	
+withhold	/wɪðˈhəʊld/	v. 抑制，拒绝给予	c	
+withstand	/wɪðˈstænd/	v. 承受，抵抗	c	
+witness	/ˈwɪtnəs/	n. 目击者，证据；v. 目击	c	
+witty	/ˈwɪti/	adj. 机智的，诙谐的	d	wit
+woe	/wəʊ/	n. 悲伤，灾难	c	
+worship	/ˈwɜːʃɪp/	v./n. 崇拜，敬仰	c	
+worthwhile	/ˌwɜːθˈwaɪl/	adj. 值得的，有意义的	c	
+worthy	/ˈwɜːði/	adj. 值得的，可敬的	d	worth
+wreck	/rek/	n. 残骸；v. 毁坏	c	
+wrench	/rentʃ/	v. 猛拧，扭伤；n. 扳手	c	
+wrestle	/ˈresl/	v. 摔跤，搏斗	c	
+wretched	/ˈretʃɪd/	adj. 悲惨的，恶劣的	c	
+wrinkle	/ˈrɪŋkl/	n. 皱纹；v. 起皱	c	
+yacht	/jɒt/	n. 游艇，帆船	c	
+yawn	/jɔːn/	v./n. 打哈欠	c	
+yearn	/jɜːn/	v. 渴望，向往	c	
+yell	/jel/	v./n. 大叫，喊叫	c	
+yield	/jiːld/	v. 屈服，产生；n. 产量	c	
+zeal	/ziːl/	n. 热情，热心	c	
+zealous	/ˈzeləs/	adj. 热心的，狂热的	d	zeal
+zinc	/zɪŋk/	n. 锌	c	
+zoom	/zuːm/	v. 快速移动，变焦	c	

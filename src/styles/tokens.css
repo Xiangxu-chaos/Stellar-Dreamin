@@ -1,0 +1,214 @@
+/* ==========================================================================
+   tokens.css —— 设计变量基座 + 全局重置 + 质感底层
+   所有颜色均来自 themeManager 写入的 CSS 变量，换领域即换肤。
+   ========================================================================== */
+
+:root {
+  /* —— 默认（中性深色）兜底，JS 载入后会被领域主题覆盖 —— */
+  --c-bg: #0b0f14;
+  --c-bg-gradient: linear-gradient(180deg, #0b0f14 0%, #070a0e 100%);
+  --c-surface: rgba(255, 255, 255, 0.045);
+  --c-surface-strong: rgba(255, 255, 255, 0.075);
+  --c-border: rgba(255, 255, 255, 0.10);
+  --c-border-strong: rgba(255, 255, 255, 0.18);
+  --c-text: #e8eef5;
+  --c-text-soft: #9aa9b8;
+  --c-text-faint: #63717f;
+  --c-primary: #6ea8fe;
+  --c-primary-soft: rgba(110, 168, 254, 0.16);
+  --c-accent: #8fd6c0;
+  --c-accent-soft: rgba(143, 214, 192, 0.14);
+  --c-card-gradient: linear-gradient(160deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.025) 45%, rgba(255,255,255,0.045) 100%);
+  --c-card-glow: rgba(110, 168, 254, 0.30);
+  --c-card-sheen: linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.13) 48%, transparent 62%);
+  --c-success: #57d9a3;
+  --c-danger: #ff7b7b;
+
+  --c-primary-rgb: 110, 168, 254;
+  --c-accent-rgb: 143, 214, 192;
+  --c-card-glow-rgb: 110, 168, 254;
+  --c-success-rgb: 87, 217, 163;
+  --c-danger-rgb: 255, 123, 123;
+
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif;
+  --font-body: 'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+
+  --radius: 18px;
+  --radius-sm: 11px;
+  --radius-lg: 26px;
+
+  --theme-intensity: 1;
+
+  /* 尺度 */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* 阴影 */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 10px 34px -12px rgba(0, 0, 0, 0.75), 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 26px 60px -18px rgba(0, 0, 0, 0.85), 0 6px 20px rgba(0, 0, 0, 0.5);
+  --shadow-modal: 0 44px 120px -28px rgba(0, 0, 0, 0.95);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --z-base: 1;
+  --z-sticky: 40;
+  --z-modal: 100;
+  --z-toast: 200;
+}
+
+/* ==========================================================================
+   重置
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--c-text);
+  background-color: var(--c-bg);
+  background-image: var(--c-bg-gradient);
+  background-attachment: fixed;
+  font-size: 15px;
+  line-height: 1.65;
+  letter-spacing: 0.008em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out);
+}
+
+/* 主题切换时的整体过渡 */
+body.theme-transitioning,
+body.theme-transitioning * {
+  transition: background-color 0.5s var(--ease-out),
+              border-color 0.5s var(--ease-out),
+              color 0.35s var(--ease-out),
+              box-shadow 0.5s var(--ease-out) !important;
+}
+
+/* 背景的「颗粒 + 光晕」质感层：不参与交互，纯装饰 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: calc(0.05 * var(--theme-intensity));
+  background-image:
+    radial-gradient(rgba(255,255,255,0.9) 0.5px, transparent 0.5px),
+    radial-gradient(rgba(255,255,255,0.5) 0.5px, transparent 0.5px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 2px 3px;
+  mix-blend-mode: overlay;
+}
+
+/* 顶部氛围光：随主题色变化，制造纵深 */
+body::after {
+  content: '';
+  position: fixed;
+  top: -38vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130vw;
+  height: 78vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: calc(0.5 * var(--theme-intensity));
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--c-primary-rgb), 0.20) 0%,
+    rgba(var(--c-accent-rgb), 0.08) 38%,
+    transparent 68%
+  );
+  filter: blur(38px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.24;
+}
+
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+a { color: var(--c-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img, svg { display: block; max-width: 100%; }
+
+/* ==========================================================================
+   滚动条（桌面端质感细节）
+   ========================================================================== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--c-primary-rgb), 0.35) transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(var(--c-primary-rgb), 0.28);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover { background: rgba(var(--c-primary-rgb), 0.48); background-clip: content-box; }
+
+/* ==========================================================================
+   可访问性
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid rgba(var(--c-accent-rgb), 0.85);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

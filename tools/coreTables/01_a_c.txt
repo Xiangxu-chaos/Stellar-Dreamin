@@ -1,0 +1,698 @@
+# CET-6 核心词库 · 第 1 批（A-C）
+# 格式: word <TAB> phonetic <TAB> translation <TAB> type(c=核心/d=派生) <TAB> derivedFrom
+abandon	/əˈbændən/	v. 抛弃，放弃；n. 放任	 c
+abbreviate	/əˈbriːvieɪt/	v. 缩写，缩短	d	abbreviation
+abbreviation	/əˌbriːviˈeɪʃn/	n. 缩写，缩写词	c	
+abide	/əˈbaɪd/	v. 遵守；忍受；持续	c	
+ability	/əˈbɪləti/	n. 能力，本领	d	able
+abnormal	/æbˈnɔːml/	adj. 反常的，异常的	d	normal
+aboard	/əˈbɔːd/	adv./prep. 在船（车、飞机）上	c	
+abolish	/əˈbɒlɪʃ/	v. 废除，取消	c	
+abrupt	/əˈbrʌpt/	adj. 突然的；粗鲁的	c	
+absence	/ˈæbsəns/	n. 缺席；缺乏	d	absent
+absent	/ˈæbsənt/	adj. 缺席的；心不在焉的	c	
+absolute	/ˈæbsəluːt/	adj. 绝对的；完全的	c	
+absorb	/əbˈzɔːb/	v. 吸收；吸引（注意力）	c	
+abstract	/ˈæbstrækt/	adj. 抽象的；n. 摘要	c	
+absurd	/əbˈsɜːd/	adj. 荒谬的，荒唐的	c	
+abundance	/əˈbʌndəns/	n. 丰富，充裕	d	abundant
+abundant	/əˈbʌndənt/	adj. 大量的，充足的	c	
+abuse	/əˈbjuːz/	v./n. 滥用；虐待	c	
+academic	/ˌækəˈdemɪk/	adj. 学术的；n. 学者	d	academy
+accelerate	/əkˈseləreɪt/	v. 加速，促进	d	acceleration
+acceleration	/əkˌseləˈreɪʃn/	n. 加速度；加速	c	
+accent	/ˈæksent/	n. 口音；重音	c	
+accessible	/əkˈsesəbl/	adj. 可接近的；易理解的	d	access
+accessory	/əkˈsesəri/	n. 配件，附件	c	
+accident	/ˈæksɪdənt/	n. 事故；意外	c	
+accommodate	/əˈkɒmədeɪt/	v. 容纳；适应；提供住宿	d	accommodation
+accommodation	/əˌkɒməˈdeɪʃn/	n. 住处，膳宿	c	
+accompany	/əˈkʌmpəni/	v. 陪伴；伴随	c	
+accomplish	/əˈkʌmplɪʃ/	v. 完成，实现	c	
+accord	/əˈkɔːd/	n. 一致；v. 给予	c	
+accordingly	/əˈkɔːdɪŋli/	adv. 因此；相应地	d	according
+account	/əˈkaʊnt/	n. 账户；说明；v. 解释	c	
+accountant	/əˈkaʊntənt/	n. 会计，会计师	d	account
+accumulate	/əˈkjuːmjəleɪt/	v. 积累，积聚	d	accumulation
+accumulation	/əˌkjuːmjəˈleɪʃn/	n. 积累，堆积	c	
+accuracy	/ˈækjərəsi/	n. 准确性，精确度	d	accurate
+accurate	/ˈækjərət/	adj. 准确的，精确的	c	
+accuse	/əˈkjuːz/	v. 指责，控告	c	
+accustom	/əˈkʌstəm/	v. 使习惯	d	custom
+achievement	/əˈtʃiːvmənt/	n. 成就，成绩	d	achieve
+acid	/ˈæsɪd/	n. 酸；adj. 酸的	c	
+acknowledge	/əkˈnɒlɪdʒ/	v. 承认；感谢	c	
+acquaint	/əˈkweɪnt/	v. 使熟悉，使了解	d	acquaintance
+acquaintance	/əˈkweɪntəns/	n. 熟人；了解	c	
+acquire	/əˈkwaɪə/	v. 获得，取得	d	acquisition
+acquisition	/ˌækwɪˈzɪʃn/	n. 获得；收购	c	
+active	/ˈæktɪv/	adj. 积极的，活跃的	c	
+activity	/ækˈtɪvəti/	n. 活动，活跃	d	active
+acute	/əˈkjuːt/	adj. 敏锐的；急性的；剧烈的	c	
+adapt	/əˈdæpt/	v. 适应；改编	d	adaptation
+adaptation	/ˌædæpˈteɪʃn/	n. 适应；改编本	c	
+addict	/ˈædɪkt/	n. 上瘾者；v. 使上瘾	c	
+addition	/əˈdɪʃn/	n. 添加；加法	d	add
+additional	/əˈdɪʃənl/	adj. 另外的，附加的	d	addition
+address	/əˈdres/	n. 地址；v. 演说；处理	c	
+adequate	/ˈædɪkwət/	adj. 足够的，适当的	c	
+adjacent	/əˈdʒeɪsnt/	adj. 邻近的，毗连的	c	
+adjust	/əˈdʒʌst/	v. 调整；适应	d	adjustment
+adjustment	/əˈdʒʌstmənt/	n. 调整，调节	c	
+administer	/ədˈmɪnɪstə/	v. 管理；执行	d	administration
+administration	/ədˌmɪnɪˈstreɪʃn/	n. 管理；政府	c	
+admire	/ədˈmaɪə/	v. 钦佩，赞赏	d	admiration
+admission	/ədˈmɪʃn/	n. 准许进入；承认	d	admit
+adopt	/əˈdɒpt/	v. 采用；收养	d	adoption
+adoption	/əˈdɒpʃn/	n. 采用；收养	c	
+advance	/ədˈvɑːns/	v./n. 前进；进步；预付	c	
+advantage	/ədˈvɑːntɪdʒ/	n. 优势，有利条件	c	
+adventure	/ədˈventʃə/	n. 冒险，奇遇	c	
+adverse	/ˈædvɜːs/	adj. 不利的，有害的	c	
+advertise	/ˈædvətaɪz/	v. 为…做广告	d	advertisement
+advertisement	/ədˈvɜːtɪsmənt/	n. 广告	c	
+advocate	/ˈædvəkeɪt/	v. 提倡；n. 拥护者	c	
+aesthetic	/iːsˈθetɪk/	adj. 美学的，审美的	c	
+affair	/əˈfeə/	n. 事务；事件	c	
+affect	/əˈfekt/	v. 影响；感动	c	
+affection	/əˈfekʃn/	n. 喜爱，感情	d	affect
+affiliate	/əˈfɪlieɪt/	v. 使隶属；n. 附属机构	c	
+affirm	/əˈfɜːm/	v. 断言，确认	d	affirmative
+afflict	/əˈflɪkt/	v. 使痛苦，折磨	c	
+afford	/əˈfɔːd/	v. 买得起；提供	c	
+agency	/ˈeɪdʒənsi/	n. 代理机构；作用	d	agent
+agenda	/əˈdʒendə/	n. 议程，议事日程	c	
+aggravate	/ˈæɡrəveɪt/	v. 加重，恶化	c	
+aggregate	/ˈæɡrɪɡət/	n. 总计；adj. 总计的	c	
+aggressive	/əˈɡresɪv/	adj. 好斗的；有进取心的	d	aggression
+agitate	/ˈædʒɪteɪt/	v. 搅动；煽动	d	agitation
+agony	/ˈæɡəni/	n. 极度痛苦	c	
+agreeable	/əˈɡriːəbl/	adj. 令人愉快的；同意的	d	agree
+agriculture	/ˈæɡrɪkʌltʃə/	n. 农业	d	culture
+aid	/eɪd/	n./v. 帮助，援助	c	
+ailment	/ˈeɪlmənt/	n. 疾病，小病	d	ail
+aim	/eɪm/	n. 目标；v. 瞄准，旨在	c	
+aircraft	/ˈeəkrɑːft/	n. 飞机，航空器	d	craft
+airline	/ˈeəlaɪn/	n. 航空公司，航线	d	line
+alarm	/əˈlɑːm/	n. 警报；惊恐；v. 使惊恐	c	
+alcohol	/ˈælkəhɒl/	n. 酒精，含酒精饮料	c	
+alert	/əˈlɜːt/	adj. 警觉的；n. 警报	c	
+alien	/ˈeɪliən/	adj. 外国的；陌生的；n. 外星人	c	
+allege	/əˈledʒ/	v. 断言，声称	c	
+alleviate	/əˈliːvieɪt/	v. 减轻，缓和	c	
+alliance	/əˈlaɪəns/	n. 联盟，同盟	d	ally
+allocate	/ˈæləkeɪt/	v. 分配，拨给	d	allocation
+allowance	/əˈlaʊəns/	n. 津贴；允许	d	allow
+ally	/ˈælaɪ/	n. 同盟者；v. 结盟	c	
+alter	/ˈɔːltə/	v. 改变，更改	d	alteration
+alternative	/ɔːlˈtɜːnətɪv/	n. 替代方案；adj. 可供选择的	d	alter
+altitude	/ˈæltɪtjuːd/	n. 高度，海拔	c	
+amateur	/ˈæmətə/	n. 业余爱好者；adj. 业余的	c	
+ambassador	/æmˈbæsədə/	n. 大使	c	
+ambiguous	/æmˈbɪɡjuəs/	adj. 模棱两可的，含糊的	d	ambiguity
+ambition	/æmˈbɪʃn/	n. 雄心，抱负	d	ambitious
+ambitious	/æmˈbɪʃəs/	adj. 有雄心的，野心勃勃的	d	ambition
+amend	/əˈmend/	v. 修改，修订	d	amendment
+amendment	/əˈmendmənt/	n. 修正，修正案	c	
+amiable	/ˈeɪmiəbl/	adj. 和蔼可亲的	c	
+ample	/ˈæmpl/	adj. 充足的，宽敞的	c	
+amuse	/əˈmjuːz/	v. 使发笑，娱乐	d	amusement
+analogy	/əˈnælədʒi/	n. 类比，类推	d	analogous
+analyze	/ˈænəlaɪz/	v. 分析	d	analysis
+analysis	/əˈnæləsɪs/	n. 分析，分析报告	c	
+ancestor	/ˈænsestə/	n. 祖先，祖宗	c	
+anchor	/ˈæŋkə/	n. 锚；v. 抛锚；固定	c	
+ancient	/ˈeɪnʃənt/	adj. 古代的，古老的	c	
+anecdote	/ˈænɪkdəʊt/	n. 轶事，趣闻	c	
+angel	/ˈeɪndʒl/	n. 天使	c	
+anguish	/ˈæŋɡwɪʃ/	n. 极度痛苦，苦恼	c	
+animate	/ˈænɪmeɪt/	v. 使有生气；adj. 有生命的	d	animation
+anniversary	/ˌænɪˈvɜːsəri/	n. 周年纪念日	c	
+announce	/əˈnaʊns/	v. 宣布，宣告	d	announcement
+announcement	/əˈnaʊnsmənt/	n. 公告，通知	c	
+annoy	/əˈnɔɪ/	v. 使恼怒，打扰	d	annoyance
+annual	/ˈænjuəl/	adj. 每年的；n. 年刊	c	
+anonymous	/əˈnɒnɪməs/	adj. 匿名的	c	
+anticipate	/ænˈtɪsɪpeɪt/	v. 预期，预料	d	anticipation
+anxiety	/æŋˈzaɪəti/	n. 焦虑，忧虑	d	anxious
+anxious	/ˈæŋkʃəs/	adj. 焦虑的；渴望的	c	
+apart	/əˈpɑːt/	adv. 分开地；除外	c	
+apologize	/əˈpɒlədʒaɪz/	v. 道歉	d	apology
+apology	/əˈpɒlədʒi/	n. 道歉，辩解	c	
+apparatus	/ˌæpəˈreɪtəs/	n. 器械，设备	c	
+apparent	/əˈpærənt/	adj. 明显的；表面上的	d	apparently
+appeal	/əˈpiːl/	v./n. 呼吁；上诉；吸引力	c	
+appetite	/ˈæpɪtaɪt/	n. 食欲，欲望	c	
+applaud	/əˈplɔːd/	v. 鼓掌，赞赏	d	applause
+appliance	/əˈplaɪəns/	n. 器具，家用电器	d	apply
+applicable	/əˈplɪkəbl/	adj. 适用的，合适的	d	apply
+applicant	/ˈæplɪkənt/	n. 申请人	d	apply
+application	/ˌæplɪˈkeɪʃn/	n. 申请；应用；应用程序	d	apply
+appoint	/əˈpɔɪnt/	v. 任命；约定	d	appointment
+appointment	/əˈpɔɪntmənt/	n. 约会；任命	c	
+appraisal	/əˈpreɪzl/	n. 评价，估价	d	appraise
+appreciate	/əˈpriːʃieɪt/	v. 欣赏；感激；增值	d	appreciation
+apprehend	/ˌæprɪˈhend/	v. 逮捕；理解	d	apprehension
+approach	/əˈprəʊtʃ/	v. 接近；n. 方法，途径	c	
+appropriate	/əˈprəʊpriət/	adj. 合适的；v. 占用	d	appropriation
+approve	/əˈpruːv/	v. 批准，赞成	d	approval
+approximate	/əˈprɒksɪmət/	adj. 近似的；v. 近似	d	approximately
+arbitrary	/ˈɑːbɪtrəri/	adj. 任意的，武断的	c	
+architecture	/ˈɑːkɪtektʃə/	n. 建筑学，建筑风格	c	
+archive	/ˈɑːkaɪv/	n. 档案，档案馆	c	
+argue	/ˈɑːɡjuː/	v. 争论，辩论	d	argument
+arise	/əˈraɪz/	v. 出现，产生	c	
+arithmetic	/əˈrɪθmətɪk/	n. 算术，运算	c	
+armor	/ˈɑːmə/	n. 盔甲，装甲	c	
+arouse	/əˈraʊz/	v. 唤起，激起	c	
+array	/əˈreɪ/	n. 一系列；数组；v. 排列	c	
+arrogant	/ˈærəɡənt/	adj. 傲慢的，自大的	d	arrogance
+articulate	/ɑːˈtɪkjuleɪt/	adj. 表达清晰的；v. 清晰表达	d	articulation
+artificial	/ˌɑːtɪˈfɪʃl/	adj. 人造的，人工的	c	
+ascend	/əˈsend/	v. 上升，攀登	d	ascent
+ashamed	/əˈʃeɪmd/	adj. 羞愧的，难为情的	c	
+aspect	/ˈæspekt/	n. 方面；外观	c	
+aspiration	/ˌæspəˈreɪʃn/	n. 渴望，抱负	d	aspire
+assemble	/əˈsembl/	v. 集合，装配	d	assembly
+assert	/əˈsɜːt/	v. 断言，主张	d	assertion
+assess	/əˈses/	v. 评估，评定	d	assessment
+assessment	/əˈsesmənt/	n. 评估，评价	c	
+asset	/ˈæset/	n. 资产；有价值的人或物	c	
+assign	/əˈsaɪn/	v. 分配，指派	d	assignment
+assignment	/əˈsaɪnmənt/	n. 任务，作业	c	
+assist	/əˈsɪst/	v. 帮助，协助	d	assistance
+assistance	/əˈsɪstəns/	n. 帮助，援助	c	
+associate	/əˈsəʊʃieɪt/	v. 联系；n. 同事	d	association
+association	/əˌsəʊsiˈeɪʃn/	n. 协会；联想	c	
+assume	/əˈsjuːm/	v. 假定，认为；承担	d	assumption
+assumption	/əˈsʌmpʃn/	n. 假设，假定	c	
+assurance	/əˈʃʊərəns/	n. 保证，信心	d	assure
+assure	/əˈʃʊə/	v. 保证，使确信	d	assurance
+astonish	/əˈstɒnɪʃ/	v. 使惊讶	d	astonishment
+astronomy	/əˈstrɒnəmi/	n. 天文学	c	
+athlete	/ˈæθliːt/	n. 运动员	c	
+atmosphere	/ˈætməsfɪə/	n. 大气；气氛	c	
+atom	/ˈætəm/	n. 原子	c	
+attach	/əˈtætʃ/	v. 附上，贴上；重视	d	attachment
+attachment	/əˈtætʃmənt/	n. 附件；依恋	c	
+attain	/əˈteɪn/	v. 达到，获得	d	attainment
+attempt	/əˈtempt/	v./n. 尝试，试图	c	
+attend	/əˈtend/	v. 出席，参加；照料	d	attendance
+attendance	/əˈtendəns/	n. 出席，出席人数	c	
+attitude	/ˈætɪtjuːd/	n. 态度，看法	c	
+attorney	/əˈtɜːni/	n. 律师	c	
+attract	/əˈtrækt/	v. 吸引，引起	d	attraction
+attraction	/əˈtrækʃn/	n. 吸引力；景点	c	
+attribute	/əˈtrɪbjuːt/	v. 归因于；n. 属性	c	
+auction	/ˈɔːkʃn/	n./v. 拍卖	c	
+audience	/ˈɔːdiəns/	n. 观众，听众	c	
+audio	/ˈɔːdiəʊ/	adj. 音频的；n. 声音	c	
+authentic	/ɔːˈθentɪk/	adj. 真实的，正宗的	d	authenticity
+authority	/ɔːˈθɒrəti/	n. 权威；当局	c	
+authorize	/ˈɔːθəraɪz/	v. 授权，批准	d	authority
+automatic	/ˌɔːtəˈmætɪk/	adj. 自动的；n. 自动装置	d	automate
+automobile	/ˈɔːtəməbiːl/	n. 汽车	c	
+autonomy	/ɔːˈtɒnəmi/	n. 自治，自主	c	
+available	/əˈveɪləbl/	adj. 可用的，可获得的	d	avail
+avenue	/ˈævənjuː/	n. 大街，途径	c	
+aviation	/ˌeɪviˈeɪʃn/	n. 航空，航空业	c	
+avoid	/əˈvɔɪd/	v. 避免，回避	d	avoidance
+await	/əˈweɪt/	v. 等待，期待	c	
+awake	/əˈweɪk/	adj. 醒着的；v. 唤醒	c	
+award	/əˈwɔːd/	n. 奖品；v. 授予	c	
+aware	/əˈweə/	adj. 意识到的，知道的	d	awareness
+awesome	/ˈɔːsəm/	adj. 令人敬畏的，极好的	c	
+awful	/ˈɔːfl/	adj. 糟糕的，可怕的	c	
+awkward	/ˈɔːkwəd/	adj. 尴尬的，笨拙的	c	
+axis	/ˈæksɪs/	n. 轴，轴线	c	
+bachelor	/ˈbætʃələ/	n. 学士；单身汉	c	
+bacteria	/bækˈtɪəriə/	n. 细菌	c	
+badge	/bædʒ/	n. 徽章，标记	c	
+baffle	/ˈbæfl/	v. 使困惑，难住	c	
+baggage	/ˈbæɡɪdʒ/	n. 行李	c	
+bait	/beɪt/	n. 饵；v. 引诱	c	
+balance	/ˈbæləns/	n. 平衡；余额；v. 使平衡	c	
+balcony	/ˈbælkəni/	n. 阳台	c	
+ballot	/ˈbælət/	n. 投票，选票	c	
+ban	/bæn/	v./n. 禁止，禁令	c	
+bandage	/ˈbændɪdʒ/	n. 绷带	c	
+bankrupt	/ˈbæŋkrʌpt/	adj. 破产的；v. 使破产	c	
+banner	/ˈbænə/	n. 旗帜，横幅	c	
+barber	/ˈbɑːbə/	n. 理发师	c	
+bare	/beə/	adj. 赤裸的；仅有的	c	
+bargain	/ˈbɑːɡɪn/	n. 便宜货；v. 讨价还价	c	
+barrel	/ˈbærəl/	n. 桶；枪管	c	
+barren	/ˈbærən/	adj. 贫瘠的，不育的	c	
+barrier	/ˈbæriə/	n. 障碍，屏障	c	
+basement	/ˈbeɪsmənt/	n. 地下室	c	
+basin	/ˈbeɪsn/	n. 盆；流域	c	
+batch	/bætʃ/	n. 一批，一炉	c	
+bathe	/beɪð/	v. 洗澡，沐浴	c	
+battery	/ˈbætri/	n. 电池；一系列	c	
+bay	/beɪ/	n. 海湾	c	
+beam	/biːm/	n. 光束；横梁；v. 微笑；发射	c	
+bear	/beə/	v. 忍受；承担；n. 熊	c	
+beard	/bɪəd/	n. 胡须	c	
+beast	/biːst/	n. 野兽，牲畜	c	
+beckon	/ˈbekən/	v. 招手，示意	c	
+beforehand	/bɪˈfɔːhænd/	adv. 事先，预先	c	
+behalf	/bɪˈhɑːf/	n. 代表，利益	c	
+behave	/bɪˈheɪv/	v. 表现，举止	d	behavior
+behavior	/bɪˈheɪvjə/	n. 行为，举止	c	
+beloved	/bɪˈlʌvɪd/	adj. 心爱的，挚爱的	c	
+beneath	/bɪˈniːθ/	prep./adv. 在…下面	c	
+beneficial	/ˌbenɪˈfɪʃl/	adj. 有益的，有利的	d	benefit
+benefit	/ˈbenɪfɪt/	n. 好处；v. 有益于	c	
+benevolent	/bəˈnevələnt/	adj. 仁慈的，慈善的	c	
+besides	/bɪˈsaɪdz/	adv. 此外；prep. 除…之外	c	
+betray	/bɪˈtreɪ/	v. 背叛，出卖	d	betrayal
+beverage	/ˈbevərɪdʒ/	n. 饮料	c	
+bewilder	/bɪˈwɪldə/	v. 使迷惑，使不知所措	c	
+bias	/ˈbaɪəs/	n. 偏见，偏向	c	
+bid	/bɪd/	v./n. 出价，投标	c	
+bilateral	/ˌbaɪˈlætərəl/	adj. 双边的	c	
+bind	/baɪnd/	v. 捆绑；约束	d	binding
+biography	/baɪˈɒɡrəfi/	n. 传记	c	
+biology	/baɪˈɒlədʒi/	n. 生物学	c	
+blade	/bleɪd/	n. 刀刃，叶片	c	
+blame	/bleɪm/	v./n. 责备，归咎	c	
+blast	/blɑːst/	n. 爆炸；一阵强风；v. 爆破	c	
+blaze	/bleɪz/	n. 火焰；v. 燃烧	c	
+bleak	/bliːk/	adj. 阴冷的，凄凉的	c	
+blend	/blend/	v./n. 混合，掺和	c	
+bless	/bles/	v. 祝福，保佑	d	blessing
+blink	/blɪŋk/	v. 眨眼，闪烁	c	
+bloom	/bluːm/	v. 开花；n. 花朵	c	
+blossom	/ˈblɒsəm/	n. 花；v. 开花，成长	c	
+blueprint	/ˈbluːprɪnt/	n. 蓝图，计划	c	
+blunder	/ˈblʌndə/	n. 大错；v. 犯大错	c	
+blunt	/blʌnt/	adj. 钝的；直率的	c	
+blur	/blɜː/	v. 使模糊；n. 模糊	c	
+blush	/blʌʃ/	v./n. 脸红	c	
+boast	/bəʊst/	v./n. 吹牛，夸耀	c	
+bold	/bəʊld/	adj. 大胆的；粗体的	c	
+bolt	/bəʊlt/	n. 螺栓；闪电；v. 逃走	c	
+bond	/bɒnd/	n. 纽带，债券；v. 结合	c	
+bonus	/ˈbəʊnəs/	n. 奖金，额外好处	c	
+boom	/buːm/	n. 繁荣；v. 迅速发展	c	
+boost	/buːst/	v./n. 促进，提高	c	
+bore	/bɔː/	v. 使厌烦；钻孔；n. 令人厌烦的人	d	boring
+botany	/ˈbɒtəni/	n. 植物学	c	
+bough	/baʊ/	n. 大树枝	c	
+bounce	/baʊns/	v. 弹跳，反弹	c	
+bound	/baʊnd/	adj. 被束缚的；必然的；v. 跳跃	c	
+boundary	/ˈbaʊndri/	n. 边界，界限	d	bound
+bouquet	/buˈkeɪ/	n. 花束	c	
+bout	/baʊt/	n. 一阵，一场（较量）	c	
+bow	/baʊ/	v./n. 鞠躬；/bəʊ/ n. 弓	c	
+brace	/breɪs/	v. 支撑，使做好准备	c	
+brand	/brænd/	n. 品牌；v. 打烙印	c	
+brass	/brɑːs/	n. 黄铜	c	
+brave	/breɪv/	adj. 勇敢的	d	bravery
+breach	/briːtʃ/	n. 违反；缺口；v. 违反	c	
+breadth	/bredθ/	n. 宽度，广度	d	broad
+breakdown	/ˈbreɪkdaʊn/	n. 故障；崩溃；分类	d	break
+breeze	/briːz/	n. 微风	c	
+brew	/bruː/	v. 酿造，冲泡	c	
+bribe	/braɪb/	n. 贿赂；v. 行贿	d	bribery
+brick	/brɪk/	n. 砖	c	
+bride	/braɪd/	n. 新娘	c	
+brief	/briːf/	adj. 简短的；n. 摘要；v. 简要介绍	d	briefly
+brilliant	/ˈbrɪliənt/	adj. 杰出的；明亮的	d	brilliance
+brim	/brɪm/	n. 边缘，帽檐	c	
+brink	/brɪŋk/	n. 边缘	c	
+brisk	/brɪsk/	adj. 轻快的，活跃的	c	
+brittle	/ˈbrɪtl/	adj. 易碎的，脆弱的	c	
+broad	/brɔːd/	adj. 宽阔的，广泛的	d	breadth
+broadcast	/ˈbrɔːdkɑːst/	v./n. 广播，播放	c	
+brochure	/ˈbrəʊʃə/	n. 小册子	c	
+bronze	/brɒnz/	n. 青铜，铜牌	c	
+brood	/bruːd/	v. 沉思；n. 一窝	c	
+brook	/brʊk/	n. 小溪	c	
+browse	/braʊz/	v. 浏览，随便翻阅	c	
+bruise	/bruːz/	n. 瘀伤；v. 撞伤	c	
+brutal	/ˈbruːtl/	adj. 残忍的，野蛮的	d	brute
+bud	/bʌd/	n. 芽，花蕾；v. 发芽	c	
+budget	/ˈbʌdʒɪt/	n. 预算；v. 编预算	c	
+buffer	/ˈbʌfə/	n. 缓冲物；v. 缓冲	c	
+bulk	/bʌlk/	n. 大量，主体；adj. 大批的	c	
+bulletin	/ˈbʊlətɪn/	n. 公告，简报	c	
+bump	/bʌmp/	v. 碰撞；n. 肿块	c	
+bunch	/bʌntʃ/	n. 束，串，群	c	
+bundle	/ˈbʌndl/	n. 捆，包；v. 捆扎	c	
+burden	/ˈbɜːdn/	n. 负担；v. 使负担	c	
+bureau	/ˈbjʊərəʊ/	n. 局，办事处	c	
+burglar	/ˈbɜːɡlə/	n. 窃贼，破门盗贼	d	burglary
+burial	/ˈberiəl/	n. 埋葬，葬礼	d	bury
+bustle	/ˈbʌsl/	v. 忙碌；n. 喧闹	c	
+butt	/bʌt/	n. 大酒桶；枪托；臀部	c	
+bypass	/ˈbaɪpɑːs/	v. 绕过；n. 旁路	c	
+cabinet	/ˈkæbɪnət/	n. 橱柜；内阁	c	
+cable	/ˈkeɪbl/	n. 电缆，缆绳	c	
+cafe	/ˈkæfeɪ/	n. 咖啡馆	c	
+calcium	/ˈkælsiəm/	n. 钙	c	
+calculate	/ˈkælkjuleɪt/	v. 计算，估计	d	calculation
+calculation	/ˌkælkjuˈleɪʃn/	n. 计算，算计	c	
+calendar	/ˈkælɪndə/	n. 日历，日程表	c	
+caliber	/ˈkælɪbə/	n. 口径；才能，水准	c	
+campaign	/kæmˈpeɪn/	n. 运动，战役	c	
+campus	/ˈkæmpəs/	n. 校园	c	
+canal	/kəˈnæl/	n. 运河，水道	c	
+cancel	/ˈkænsl/	v. 取消，撤销	c	
+candidate	/ˈkændɪdət/	n. 候选人，考生	d	candidacy
+canvas	/ˈkænvəs/	n. 帆布，画布	c	
+capability	/ˌkeɪpəˈbɪləti/	n. 能力，才能	d	capable
+capable	/ˈkeɪpəbl/	adj. 有能力的，能干的	c	
+capacity	/kəˈpæsəti/	n. 容量，能力	c	
+cape	/keɪp/	n. 海角；披肩	c	
+capital	/ˈkæpɪtl/	n. 首都；资本；adj. 大写的	c	
+capitalism	/ˈkæpɪtəlɪzəm/	n. 资本主义	d	capital
+capsule	/ˈkæpsjuːl/	n. 胶囊，太空舱	c	
+captive	/ˈkæptɪv/	n. 俘虏；adj. 被俘的	d	capture
+capture	/ˈkæptʃə/	v./n. 捕获，俘获	c	
+carbon	/ˈkɑːbən/	n. 碳	c	
+cargo	/ˈkɑːɡəʊ/	n. 货物	c	
+carpenter	/ˈkɑːpəntə/	n. 木匠	c	
+carriage	/ˈkærɪdʒ/	n. 马车；车厢	d	carry
+carve	/kɑːv/	v. 雕刻，切开	d	carving
+cascade	/kæˈskeɪd/	n. 小瀑布；v. 倾泻	c	
+cash	/kæʃ/	n. 现金；v. 兑现	c	
+casual	/ˈkæʒuəl/	adj. 随意的；临时的	c	
+casualty	/ˈkæʒuəlti/	n. 伤亡人员	c	
+catalog	/ˈkætəlɒɡ/	n. 目录；v. 编目	c	
+category	/ˈkætəɡəri/	n. 类别，范畴	d	categorize
+cater	/ˈkeɪtə/	v. 提供饮食；迎合	c	
+cathedral	/kəˈθiːdrəl/	n. 大教堂	c	
+caution	/ˈkɔːʃn/	n. 谨慎，警告；v. 警告	d	cautious
+cautious	/ˈkɔːʃəs/	adj. 谨慎的，小心的	c	
+cease	/siːs/	v. 停止，终止	c	
+celebrate	/ˈselɪbreɪt/	v. 庆祝，颂扬	d	celebration
+celebrity	/səˈlebrəti/	n. 名人，名声	c	
+cell	/sel/	n. 细胞；牢房；电池	c	
+cellar	/ˈselə/	n. 地窖，酒窖	c	
+cement	/sɪˈment/	n. 水泥；v. 巩固	c	
+census	/ˈsensəs/	n. 人口普查	c	
+ceremony	/ˈserəməni/	n. 典礼，仪式	d	ceremonial
+certainty	/ˈsɜːtnti/	n. 确定性，必然的事	d	certain
+certificate	/səˈtɪfɪkət/	n. 证书，证明	d	certify
+challenge	/ˈtʃælɪndʒ/	n./v. 挑战，质疑	c	
+chamber	/ˈtʃeɪmbə/	n. 房间，议院	c	
+champion	/ˈtʃæmpiən/	n. 冠军，拥护者	c	
+chaos	/ˈkeɪɒs/	n. 混乱，无序	d	chaotic
+chaotic	/keɪˈɒtɪk/	adj. 混乱的，无秩序的	c	
+character	/ˈkærəktə/	n. 性格；角色；字符	d	characteristic
+characteristic	/ˌkærəktəˈrɪstɪk/	n. 特征；adj. 典型的	d	character
+characterize	/ˈkærəktəraɪz/	v. 描绘特征，以…为特征	d	character
+charity	/ˈtʃærəti/	n. 慈善，慈善机构	d	charitable
+charm	/tʃɑːm/	n. 魅力，符咒；v. 迷住	d	charming
+charter	/ˈtʃɑːtə/	n. 宪章，合同；v. 包租	c	
+chase	/tʃeɪs/	v./n. 追逐，追求	c	
+cheat	/tʃiːt/	v. 欺骗，作弊	c	
+check	/tʃek/	v. 检查，核对；n. 支票	c	
+cheerful	/ˈtʃɪəfl/	adj. 愉快的，兴高采烈的	d	cheer
+chemical	/ˈkemɪkl/	adj. 化学的；n. 化学品	d	chemistry
+cherish	/ˈtʃerɪʃ/	v. 珍爱，珍惜	c	
+chest	/tʃest/	n. 胸膛；箱子	c	
+chew	/tʃuː/	v. 咀嚼	c	
+chief	/tʃiːf/	n. 首领；adj. 主要的	c	
+chill	/tʃɪl/	n. 寒冷；v. 使变冷	d	chilly
+chip	/tʃɪp/	n. 碎片；芯片	c	
+choke	/tʃəʊk/	v. 使窒息，堵塞	c	
+chop	/tʃɒp/	v. 砍，切碎	c	
+chorus	/ˈkɔːrəs/	n. 合唱队，副歌	c	
+chronic	/ˈkrɒnɪk/	adj. 慢性的，长期的	c	
+chunk	/tʃʌŋk/	n. 大块，厚块	c	
+circuit	/ˈsɜːkɪt/	n. 电路；环行	c	
+circulate	/ˈsɜːkjəleɪt/	v. 循环，流通	d	circulation
+circulation	/ˌsɜːkjəˈleɪʃn/	n. 循环，发行量	c	
+circumstance	/ˈsɜːkəmstəns/	n. 情况，环境	c	
+cite	/saɪt/	v. 引用，举例	d	citation
+citizen	/ˈsɪtɪzn/	n. 公民，市民	d	citizenship
+civil	/ˈsɪvl/	adj. 公民的；民用的；有礼貌的	c	
+civilian	/səˈvɪliən/	n. 平民；adj. 平民的	d	civil
+civilization	/ˌsɪvəlaɪˈzeɪʃn/	n. 文明，文明社会	d	civilize
+claim	/kleɪm/	v./n. 声称；索取；索赔	c	
+clarify	/ˈklærəfaɪ/	v. 澄清，阐明	d	clarity
+clarity	/ˈklærəti/	n. 清晰，明确	d	clear
+clash	/klæʃ/	v./n. 冲突，碰撞	c	
+clasp	/klɑːsp/	v. 紧握；n. 搭扣	c	
+classic	/ˈklæsɪk/	adj. 经典的；n. 经典作品	d	classical
+classify	/ˈklæsɪfaɪ/	v. 分类，归类	d	class
+clause	/klɔːz/	n. 条款；从句	c	
+claw	/klɔː/	n. 爪；v. 抓	c	
+clay	/kleɪ/	n. 黏土	c	
+cling	/klɪŋ/	v. 紧握，粘附	c	
+clinic	/ˈklɪnɪk/	n. 诊所	c	
+clip	/klɪp/	n. 夹子；剪辑；v. 修剪	c	
+clockwise	/ˈklɒkwaɪz/	adv./adj. 顺时针方向地	c	
+closet	/ˈklɒzɪt/	n. 壁橱；adj. 隐秘的	c	
+clue	/kluː/	n. 线索，提示	c	
+clumsy	/ˈklʌmzi/	adj. 笨拙的，粗陋的	c	
+cluster	/ˈklʌstə/	n. 群，簇；v. 聚集	c	
+clutch	/klʌtʃ/	v. 抓紧；n. 离合器	c	
+coach	/kəʊtʃ/	n. 教练；长途汽车；v. 训练	c	
+coarse	/kɔːs/	adj. 粗糙的，粗俗的	c	
+coast	/kəʊst/	n. 海岸，海滨	c	
+code	/kəʊd/	n. 代码；法规；v. 编码	c	
+coherent	/kəʊˈhɪərənt/	adj. 连贯的，一致的	d	coherence
+coincide	/ˌkəʊɪnˈsaɪd/	v. 同时发生，一致	d	coincidence
+coincidence	/kəʊˈɪnsɪdəns/	n. 巧合	c	
+collaborate	/kəˈlæbəreɪt/	v. 合作，协作	d	collaboration
+collapse	/kəˈlæps/	v./n. 崩溃，倒塌	c	
+colleague	/ˈkɒliːɡ/	n. 同事	c	
+collide	/kəˈlaɪd/	v. 碰撞，冲突	d	collision
+collision	/kəˈlɪʒn/	n. 碰撞，冲突	c	
+colonial	/kəˈləʊniəl/	adj. 殖民地的	d	colony
+colony	/ˈkɒləni/	n. 殖民地；群体	c	
+column	/ˈkɒləm/	n. 圆柱；专栏	c	
+combat	/ˈkɒmbæt/	n./v. 战斗，搏斗	c	
+combine	/kəmˈbaɪn/	v. 结合，联合	d	combination
+combustion	/kəmˈbʌstʃən/	n. 燃烧	c	
+comedy	/ˈkɒmədi/	n. 喜剧	c	
+comet	/ˈkɒmɪt/	n. 彗星	c	
+comfort	/ˈkʌmfət/	n./v. 安慰，舒适	d	comfortable
+command	/kəˈmɑːnd/	v./n. 命令，指挥	c	
+commemorate	/kəˈmeməreɪt/	v. 纪念	d	commemoration
+commence	/kəˈmens/	v. 开始，着手	c	
+commend	/kəˈmend/	v. 表扬，推荐	c	
+comment	/ˈkɒment/	n./v. 评论，意见	c	
+commerce	/ˈkɒmɜːs/	n. 商业，贸易	d	commercial
+commercial	/kəˈmɜːʃl/	adj. 商业的；n. 广告	d	commerce
+commission	/kəˈmɪʃn/	n. 委员会；佣金；v. 委托	c	
+commit	/kəˈmɪt/	v. 承诺；犯罪；拨出	d	commitment
+commitment	/kəˈmɪtmənt/	n. 承诺，投入	c	
+committee	/kəˈmɪti/	n. 委员会	c	
+commodity	/kəˈmɒdəti/	n. 商品，日用品	c	
+commonplace	/ˈkɒmənpleɪs/	adj. 平凡的，普通的	d	common
+communicate	/kəˈmjuːnɪkeɪt/	v. 交流，传达	d	communication
+community	/kəˈmjuːnəti/	n. 社区，共同体	d	commune
+commute	/kəˈmjuːt/	v. 通勤，上下班往返	c	
+compact	/kəmˈpækt/	adj. 紧凑的；n. 协定	c	
+companion	/kəmˈpæniən/	n. 同伴，伴侣	d	company
+comparable	/ˈkɒmpərəbl/	adj. 可比较的，类似的	d	compare
+compassion	/kəmˈpæʃn/	n. 同情，怜悯	d	compassionate
+compatible	/kəmˈpætəbl/	adj. 兼容的，相容的	d	compatibility
+compel	/kəmˈpel/	v. 强迫，迫使	d	compulsion
+compensate	/ˈkɒmpenseɪt/	v. 补偿，弥补	d	compensation
+compensation	/ˌkɒmpenˈseɪʃn/	n. 补偿，赔偿金	c	
+compete	/kəmˈpiːt/	v. 竞争，比赛	d	competition
+competent	/ˈkɒmpɪtənt/	adj. 有能力的，胜任的	d	competence
+competition	/ˌkɒmpəˈtɪʃn/	n. 竞争，比赛	d	compete
+competitive	/kəmˈpetətɪv/	adj. 竞争的，有竞争力的	d	compete
+compile	/kəmˈpaɪl/	v. 汇编，编纂	d	compilation
+complaint	/kəmˈpleɪnt/	n. 抱怨，投诉	d	complain
+complement	/ˈkɒmplɪment/	v. 补充；n. 补足物	c	
+complex	/ˈkɒmpleks/	adj. 复杂的；n. 综合体	d	complexity
+complexity	/kəmˈpleksəti/	n. 复杂性，复杂事物	c	
+compliance	/kəmˈplaɪəns/	n. 遵守，顺从	d	comply
+complicate	/ˈkɒmplɪkeɪt/	v. 使复杂化	d	complicated
+complication	/ˌkɒmplɪˈkeɪʃn/	n. 复杂化，并发症	c	
+compliment	/ˈkɒmplɪmənt/	n./v. 赞美，恭维	c	
+comply	/kəmˈplaɪ/	v. 遵守，服从	d	compliance
+component	/kəmˈpəʊnənt/	n. 组成部分，元件	c	
+compose	/kəmˈpəʊz/	v. 组成；创作	d	composition
+composition	/ˌkɒmpəˈzɪʃn/	n. 组成；作品；作文	c	
+compound	/ˈkɒmpaʊnd/	n. 化合物；adj. 复合的	c	
+comprehend	/ˌkɒmprɪˈhend/	v. 理解，领悟	d	comprehension
+comprehensive	/ˌkɒmprɪˈhensɪv/	adj. 全面的，综合的	d	comprehend
+compress	/kəmˈpres/	v. 压缩，压紧	d	compression
+comprise	/kəmˈpraɪz/	v. 包含，由…组成	c	
+compromise	/ˈkɒmprəmaɪz/	n./v. 妥协，折中	c	
+compulsory	/kəmˈpʌlsəri/	adj. 强制的，必修的	d	compel
+conceal	/kənˈsiːl/	v. 隐藏，隐瞒	c	
+concede	/kənˈsiːd/	v. 承认，让步	c	
+conceive	/kənˈsiːv/	v. 构想，怀孕	d	concept
+concentrate	/ˈkɒnsntreɪt/	v. 集中，专心	d	concentration
+concentration	/ˌkɒnsnˈtreɪʃn/	n. 集中，浓度	c	
+concept	/ˈkɒnsept/	n. 概念，观念	d	conception
+concern	/kənˈsɜːn/	n./v. 关心，涉及	d	concerning
+concert	/ˈkɒnsət/	n. 音乐会	c	
+concession	/kənˈseʃn/	n. 让步，特许权	d	concede
+concise	/kənˈsaɪs/	adj. 简明的，简洁的	c	
+conclude	/kənˈkluːd/	v. 结束；得出结论	d	conclusion
+conclusion	/kənˈkluːʒn/	n. 结论，结束	c	
+concrete	/ˈkɒŋkriːt/	adj. 具体的；n. 混凝土	c	
+condemn	/kənˈdem/	v. 谴责，判刑	d	condemnation
+condense	/kənˈdens/	v. 凝结，浓缩	c	
+conduct	/kənˈdʌkt/	v. 进行；指挥；n. 行为	d	conductor
+confer	/kənˈfɜː/	v. 商谈；授予	d	conference
+conference	/ˈkɒnfərəns/	n. 会议，讨论会	c	
+confess	/kənˈfes/	v. 承认，坦白	d	confession
+confidence	/ˈkɒnfɪdəns/	n. 信心，信任	d	confident
+confident	/ˈkɒnfɪdənt/	adj. 自信的，确信的	c	
+confidential	/ˌkɒnfɪˈdenʃl/	adj. 机密的，保密的	d	confidence
+confine	/kənˈfaɪn/	v. 限制，禁闭	d	confinement
+confirm	/kənˈfɜːm/	v. 确认，证实	d	confirmation
+conflict	/ˈkɒnflɪkt/	n./v. 冲突，抵触	c	
+conform	/kənˈfɔːm/	v. 遵守，符合	d	conformity
+confront	/kənˈfrʌnt/	v. 面对，对抗	d	confrontation
+confuse	/kənˈfjuːz/	v. 使困惑，混淆	d	confusion
+confusion	/kənˈfjuːʒn/	n. 混乱，困惑	c	
+congratulate	/kənˈɡrætʃuleɪt/	v. 祝贺	d	congratulation
+congress	/ˈkɒŋɡres/	n. 代表大会，国会	c	
+conjunction	/kənˈdʒʌŋkʃn/	n. 连词；结合	d	conjoin
+connect	/kəˈnekt/	v. 连接，联系	d	connection
+conquer	/ˈkɒŋkə/	v. 征服，克服	d	conquest
+conscience	/ˈkɒnʃəns/	n. 良心，良知	d	conscientious
+conscious	/ˈkɒnʃəs/	adj. 有意识的，自觉的	d	consciousness
+consciousness	/ˈkɒnʃəsnəs/	n. 意识，知觉	c	
+consecutive	/kənˈsekjətɪv/	adj. 连续的，连贯的	c	
+consensus	/kənˈsensəs/	n. 共识，一致	c	
+consent	/kənˈsent/	n./v. 同意，赞成	c	
+consequence	/ˈkɒnsɪkwəns/	n. 结果，后果	d	consequent
+consequently	/ˈkɒnsɪkwəntli/	adv. 因此，所以	d	consequence
+conservation	/ˌkɒnsəˈveɪʃn/	n. 保护，保存	d	conserve
+conservative	/kənˈsɜːvətɪv/	adj. 保守的；n. 保守派	d	conserve
+considerable	/kənˈsɪdərəbl/	adj. 相当大的，重要的	d	consider
+considerate	/kənˈsɪdərət/	adj. 体贴的，考虑周到的	d	consider
+consist	/kənˈsɪst/	v. 由…组成，在于	d	consistent
+consistency	/kənˈsɪstənsi/	n. 一致性，连贯性	d	consistent
+consistent	/kənˈsɪstənt/	adj. 一致的，始终如一的	c	
+console	/kənˈsəʊl/	v. 安慰；n. 控制台	c	
+conspicuous	/kənˈspɪkjuəs/	adj. 显眼的，显著的	c	
+conspiracy	/kənˈspɪrəsi/	n. 阴谋，共谋	d	conspire
+constant	/ˈkɒnstənt/	adj. 不断的，恒定的；n. 常数	d	constancy
+constituent	/kənˈstɪtjuənt/	n. 成分，选民；adj. 构成的	d	constitute
+constitute	/ˈkɒnstɪtjuːt/	v. 构成，组成	d	constitution
+constitution	/ˌkɒnstɪˈtjuːʃn/	n. 宪法；体质；构成	c	
+constrain	/kənˈstreɪn/	v. 限制，约束	d	constraint
+constraint	/kənˈstreɪnt/	n. 限制，约束	c	
+construct	/kənˈstrʌkt/	v. 建造，构建	d	construction
+consult	/kənˈsʌlt/	v. 咨询，商议	d	consultant
+consultant	/kənˈsʌltənt/	n. 顾问	c	
+consume	/kənˈsjuːm/	v. 消耗，消费	d	consumption
+consumer	/kənˈsjuːmə/	n. 消费者	d	consume
+consumption	/kənˈsʌmpʃn/	n. 消费，消耗量	c	
+contact	/ˈkɒntækt/	n./v. 接触，联系	c	
+contain	/kənˈteɪn/	v. 包含，容纳	d	container
+contaminate	/kənˈtæmɪneɪt/	v. 污染，弄脏	d	contamination
+contemplate	/ˈkɒntəmpleɪt/	v. 沉思，考虑	d	contemplation
+contemporary	/kənˈtemprəri/	adj. 当代的；n. 同龄人	c	
+contempt	/kənˈtempt/	n. 轻视，蔑视	d	contemptuous
+contend	/kənˈtend/	v. 竞争，主张	d	contention
+content	/ˈkɒntent/	n. 内容；adj. 满足的	c	
+contest	/ˈkɒntest/	n. 竞赛；v. 争夺	c	
+context	/ˈkɒntekst/	n. 上下文，背景	d	contextual
+continent	/ˈkɒntɪnənt/	n. 大陆，洲	d	continental
+continuity	/ˌkɒntɪˈnjuːəti/	n. 连续性，持续性	d	continue
+contract	/ˈkɒntrækt/	n. 合同；v. 收缩；签订合同	d	contraction
+contradict	/ˌkɒntrəˈdɪkt/	v. 反驳，与…矛盾	d	contradiction
+contradiction	/ˌkɒntrəˈdɪkʃn/	n. 矛盾，否认	c	
+contrary	/ˈkɒntrəri/	adj. 相反的；n. 相反	c	
+contrast	/ˈkɒntrɑːst/	n./v. 对比，对照	c	
+contribute	/kənˈtrɪbjuːt/	v. 贡献，捐助	d	contribution
+contribution	/ˌkɒntrɪˈbjuːʃn/	n. 贡献，捐款	c	
+contrive	/kənˈtraɪv/	v. 设法做到，谋划	c	
+control	/kənˈtrəʊl/	v./n. 控制，管理	d	controller
+controversial	/ˌkɒntrəˈvɜːʃl/	adj. 有争议的	d	controversy
+controversy	/ˈkɒntrəvɜːsi/	n. 争论，争议	c	
+convene	/kənˈviːn/	v. 召集，召开	d	convention
+convenient	/kənˈviːniənt/	adj. 方便的，便利的	d	convenience
+convention	/kənˈvenʃn/	n. 惯例；大会；公约	d	conventional
+conventional	/kənˈvenʃənl/	adj. 传统的，惯例的	d	convention
+converge	/kənˈvɜːdʒ/	v. 汇聚，聚集	d	convergence
+conversely	/ˈkɒnvɜːsli/	adv. 相反地	d	converse
+conversion	/kənˈvɜːʃn/	n. 转化，转换	d	convert
+convert	/kənˈvɜːt/	v. 转换，改变信仰	d	conversion
+convey	/kənˈveɪ/	v. 传达，运送	c	
+convict	/kənˈvɪkt/	v. 定罪；n. 罪犯	d	conviction
+conviction	/kənˈvɪkʃn/	n. 定罪；信念	c	
+convince	/kənˈvɪns/	v. 使信服，说服	d	conviction
+cooperate	/kəʊˈɒpəreɪt/	v. 合作，协作	d	cooperation
+cooperation	/kəʊˌɒpəˈreɪʃn/	n. 合作，协作	c	
+coordinate	/kəʊˈɔːdɪneɪt/	v. 协调；n. 坐标	d	coordination
+cope	/kəʊp/	v. 应付，处理	c	
+copper	/ˈkɒpə/	n. 铜	c	
+copyright	/ˈkɒpiraɪt/	n. 版权	c	
+cordial	/ˈkɔːdiəl/	adj. 热情友好的	c	
+core	/kɔː/	n. 核心，要点	c	
+corporate	/ˈkɔːpərət/	adj. 公司的，法人的	d	corporation
+corporation	/ˌkɔːpəˈreɪʃn/	n. 公司，法人	c	
+corps	/kɔː/	n. 军团，团体	c	
+correlate	/ˈkɒrəleɪt/	v. 关联，相关	d	correlation
+correspond	/ˌkɒrəˈspɒnd/	v. 符合；通信	d	correspondence
+correspondence	/ˌkɒrəˈspɒndəns/	n. 通信，信件；一致	c	
+corridor	/ˈkɒrɪdɔː/	n. 走廊，通道	c	
+corrode	/kəˈrəʊd/	v. 腐蚀，侵蚀	d	corrosion
+corrupt	/kəˈrʌpt/	adj. 腐败的；v. 腐化	d	corruption
+corruption	/kəˈrʌpʃn/	n. 腐败，贪污	c	
+cosmic	/ˈkɒzmɪk/	adj. 宇宙的	d	cosmos
+costume	/ˈkɒstjuːm/	n. 服装，戏服	c	
+cottage	/ˈkɒtɪdʒ/	n. 小屋，村舍	c	
+council	/ˈkaʊnsl/	n. 委员会，议会	d	councillor
+counsel	/ˈkaʊnsl/	n. 建议；v. 劝告	d	counselling
+counter	/ˈkaʊntə/	n. 柜台；v. 反驳；adv. 相反地	c	
+counterpart	/ˈkaʊntəpɑːt/	n. 对应的人或物	c	
+countless	/ˈkaʊntləs/	adj. 无数的	d	count
+courage	/ˈkʌrɪdʒ/	n. 勇气，胆量	d	courageous
+course	/kɔːs/	n. 课程；过程；路线	c	
+courtesy	/ˈkɜːtəsi/	n. 礼貌，殷勤	d	courteous
+coverage	/ˈkʌvərɪdʒ/	n. 覆盖范围，报道	d	cover
+crack	/kræk/	v. 破裂；n. 裂缝	c	
+cradle	/ˈkreɪdl/	n. 摇篮；v. 抱着	c	
+craft	/krɑːft/	n. 工艺，手艺；v. 精心制作	d	craftsman
+cramp	/kræmp/	n. 痉挛；v. 限制	c	
+crane	/kreɪn/	n. 起重机；鹤	c	
+crash	/kræʃ/	v./n. 碰撞，坠毁	c	
+crawl	/krɔːl/	v. 爬行，缓慢行进	c	
+creative	/kriˈeɪtɪv/	adj. 创造性的，有创意的	d	create
+creature	/ˈkriːtʃə/	n. 生物，动物	d	create
+credible	/ˈkredəbl/	adj. 可信的，可靠的	d	credit
+credit	/ˈkredɪt/	n. 信用；学分；v. 归功于	c	
+creep	/kriːp/	v. 爬行，蔓延	d	creepy
+crew	/kruː/	n. 全体船员，工作人员	c	
+cricket	/ˈkrɪkɪt/	n. 蟋蟀；板球	c	
+cripple	/ˈkrɪpl/	v. 使残疾，严重损坏	c	
+crisis	/ˈkraɪsɪs/	n. 危机，危急时刻	c	
+criterion	/kraɪˈtɪəriən/	n. 标准，准则	c	
+critic	/ˈkrɪtɪk/	n. 批评家，评论家	d	critical
+critical	/ˈkrɪtɪkl/	adj. 批判的；关键的；危急的	d	critic
+criticism	/ˈkrɪtɪsɪzəm/	n. 批评，评论	d	critic
+criticize	/ˈkrɪtɪsaɪz/	v. 批评，评论	d	critic
+crucial	/ˈkruːʃl/	adj. 至关重要的，决定性的	c	
+crude	/kruːd/	adj. 粗糙的；未加工的	c	
+cruel	/ˈkruːəl/	adj. 残忍的，残酷的	d	cruelty
+cruise	/kruːz/	v./n. 巡航，乘船游览	c	
+crumble	/ˈkrʌmbl/	v. 崩溃，粉碎	c	
+crush	/krʌʃ/	v. 压碎，压垮	c	
+crust	/krʌst/	n. 外壳，地壳	c	
+crystal	/ˈkrɪstl/	n. 水晶，结晶	c	
+cube	/kjuːb/	n. 立方体，立方	c	
+cue	/kjuː/	n. 提示，暗示	c	
+cultivate	/ˈkʌltɪveɪt/	v. 培养，耕作	d	cultivation
+cumulative	/ˈkjuːmjələtɪv/	adj. 累积的，渐增的	d	accumulate
+cunning	/ˈkʌnɪŋ/	adj. 狡猾的；n. 狡诈	c	
+curb	/kɜːb/	v./n. 控制，抑制；路边	c	
+cure	/kjʊə/	v./n. 治愈，治疗	c	
+curiosity	/ˌkjʊəriˈɒsəti/	n. 好奇心，奇物	d	curious
+curious	/ˈkjʊəriəs/	adj. 好奇的，奇怪的	c	
+currency	/ˈkʌrənsi/	n. 货币，通货	d	current
+current	/ˈkʌrənt/	adj. 当前的；n. 水流，电流	d	currently
+curriculum	/kəˈrɪkjələm/	n. 课程，全部课程	c	
+curse	/kɜːs/	n./v. 诅咒，咒骂	c	
+curve	/kɜːv/	n. 曲线；v. 使弯曲	c	
+cushion	/ˈkʊʃn/	n. 垫子；v. 缓冲	c	
+custom	/ˈkʌstəm/	n. 习惯，风俗；海关	d	customer
+customs	/ˈkʌstəmz/	n. 海关，关税	c	
+cylinder	/ˈsɪlɪndə/	n. 圆柱，圆柱体	c	
+cynical	/ˈsɪnɪkl/	adj. 愤世嫉俗的，怀疑的	d	cynic

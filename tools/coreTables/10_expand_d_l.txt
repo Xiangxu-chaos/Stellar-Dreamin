@@ -1,0 +1,2614 @@
+# CET-6 核心词库 · 扩充批 E（d-l）
+dagger	/ˈdæɡə/	n. 匕首，短剑	c	
+dainty	/ˈdeɪnti/	adj. 精致的，挑剔的	c	
+dairymaid	/ˈdeərimeɪd/	n. 挤奶女工	d	dairy
+dally	/ˈdæli/	v. 闲混，调情	c	
+dangle	/ˈdæŋɡl/	v. 悬荡，悬垂	c	
+dank	/dæŋk/	adj. 阴湿的，湿冷的	c	
+dapper	/ˈdæpə/	adj. 整洁的，精明的	c	
+daring	/ˈdeərɪŋ/	adj. 大胆的，勇敢的	d	dare
+darn	/dɑːn/	v. 缝补	c	
+dart	/dɑːt/	v. 猛冲；n. 飞镖	c	
+daub	/dɔːb/	v. 涂抹，乱画	c	
+daunt	/dɔːnt/	v. 使胆怯，威吓	c	
+dawdle	/ˈdɔːdl/	v. 游荡，磨蹭	c	
+dazzling	/ˈdæzlɪŋ/	adj. 耀眼的，令人赞叹的	d	dazzle
+deadlock	/ˈdedlɒk/	n. 僵局	c	
+deadly	/ˈdedli/	adj. 致命的，极度的	d	dead
+dealer	/ˈdiːlə/	n. 经销商，发牌者	d	deal
+dearth	/dɜːθ/	n. 缺乏， shortage	c	
+debacle	/deɪˈbɑːkl/	n. 崩溃，惨败	c	
+debase	/dɪˈbeɪs/	v. 贬低，降低价值	c	
+debate	/dɪˈbeɪt/	n./v. 辩论，争论	c	
+debilitate	/dɪˈbɪlɪteɪt/	v. 使衰弱，使虚弱	c	
+debit	/ˈdebɪt/	n. 借方，借记	c	
+debonair	/ˌdebəˈneə/	adj. 温文尔雅的	c	
+debrief	/ˌdiːˈbriːf/	v. 汇报，听取汇报	c	
+debunk	/ˌdiːˈbʌŋk/	v. 揭穿，驳斥	c	
+debutante	/ˈdebjuːtɑːnt/	n. 初入社交界的少女	d	debut
+decadent	/ˈdekədənt/	adj. 堕落的，颓废的	c	
+decal	/ˈdiːkæl/	n. 贴花，转印图案	c	
+decamp	/dɪˈkæmp/	v. 撤营，逃走	c	
+decant	/dɪˈkænt/	v. 倒出，倾析	c	
+decapitate	/dɪˈkæpɪteɪt/	v. 斩首	c	
+deceased	/dɪˈsiːst/	adj. 已故的	d	decease
+deceit	/dɪˈsiːt/	n. 欺骗，诡计	c	
+deceitful	/dɪˈsiːtfl/	adj. 欺诈的，不诚实的	d	deceit
+decelerate	/ˌdiːˈseləreɪt/	v. 减速	d	accelerate
+decency	/ˈdiːsnsi/	n. 得体，正派	d	decent
+deception	/dɪˈsepʃn/	n. 欺骗，诡计	d	deceive
+deceptive	/dɪˈseptɪv/	adj. 欺骗性的，误导的	d	deceive
+decibel	/ˈdesɪbel/	n. 分贝	c	
+decidedly	/dɪˈsaɪdɪdli/	adv. 明确地，坚决地	d	decide
+decipher	/dɪˈsaɪfə/	v. 破译，辨认	c	
+decisive	/dɪˈsaɪsɪv/	adj. 决定性的，果断的	d	decide
+declamation	/ˌdekləˈmeɪʃn/	n. 慷慨激昂的演说	d	declare
+decompose	/ˌdiːkəmˈpəʊz/	v. 分解，腐烂	c	
+decor	/ˈdeɪkɔː/	n. 装饰，布置	c	
+decorous	/ˈdekərəs/	adj. 得体的，端庄的	c	
+decoy	/ˈdiːkɔɪ/	n. 诱饵，圈套	c	
+decree	/dɪˈkriː/	n. 法令；v. 颁布	c	
+decrepit	/dɪˈkrepɪt/	adj. 衰老的，破旧的	c	
+decry	/dɪˈkraɪ/	v. 谴责，诋毁	c	
+dedicated	/ˈdedɪkeɪtɪd/	adj. 专注的，献身的	d	dedicate
+dedication	/ˌdedɪˈkeɪʃn/	n. 奉献，献身	d	dedicate
+deductive	/dɪˈdʌktɪv/	adj. 演绎的，推断的	d	deduce
+deface	/dɪˈfeɪs/	v. 损毁外观，污损	c	
+defame	/dɪˈfeɪm/	v. 诽谤，中伤	c	
+defamation	/ˌdefəˈmeɪʃn/	n. 诽谤，中伤	d	defame
+default	/dɪˈfɔːlt/	n. 默认，违约	c	
+defection	/dɪˈfekʃn/	n. 背叛，变节	d	defect
+defer	/dɪˈfɜː/	v. 推迟，遵从	c	
+deference	/ˈdefərəns/	n. 尊重，顺从	d	defer
+defiance	/dɪˈfaɪəns/	n. 违抗，挑衅	d	defy
+defiant	/dɪˈfaɪənt/	adj. 挑衅的，违抗的	d	defy
+deficient	/dɪˈfɪʃnt/	adj. 缺乏的，不足的	d	deficiency
+defile	/dɪˈfaɪl/	v. 污损，亵渎	c	
+definitive	/dɪˈfɪnətɪv/	adj. 决定性的，权威的	d	define
+deflate	/dɪˈfleɪt/	v. 放气，使泄气	d	inflate
+deflect	/dɪˈflekt/	v. 使偏斜，转移	c	
+deform	/dɪˈfɔːm/	v. 使变形，损坏外形	c	
+deformity	/dɪˈfɔːməti/	n. 畸形，缺陷	d	deform
+defraud	/dɪˈfrɔːd/	v. 诈骗，骗取	d	fraud
+defray	/dɪˈfreɪ/	v. 支付，偿付	c	
+deft	/deft/	adj. 灵巧的，熟练的	c	
+defuse	/ˌdiːˈfjuːz/	v. 拆除引信，缓和	c	
+defy	/dɪˈfaɪ/	v. 违抗，蔑视	c	
+degenerate	/dɪˈdʒenəreɪt/	v. 退化；adj. 堕落的	c	
+degradation	/ˌdeɡrəˈdeɪʃn/	n. 降级，退化	d	degrade
+dehydrate	/ˌdiːˈhaɪdreɪt/	v. 脱水，使干燥	c	
+deify	/ˈdeɪɪfaɪ/	v. 奉为神明，崇拜	c	
+deign	/deɪn/	v. 屈尊，俯就	c	
+deity	/ˈdeɪəti/	n. 神，神性	c	
+dejected	/dɪˈdʒektɪd/	adj. 沮丧的，垂头丧气的	c	
+dejection	/dɪˈdʒekʃn/	n. 沮丧，颓丧	d	dejected
+delay	/dɪˈleɪ/	v./n. 延迟，拖延	c	
+delectable	/dɪˈlektəbl/	adj. 美味的，令人愉快的	c	
+delegate	/ˈdelɪɡət/	n. 代表；v. 委派	c	
+delegation	/ˌdelɪˈɡeɪʃn/	n. 代表团，委派	d	delegate
+deleterious	/ˌdeləˈtɪəriəs/	adj. 有害的，有毒的	c	
+deliberation	/dɪˌlɪbəˈreɪʃn/	n. 审议，从容	d	deliberate
+delicacy	/ˈdelɪkəsi/	n. 精致，美味	d	delicate
+delinquent	/dɪˈlɪŋkwənt/	adj. 有违法倾向的；n. 少年犯	c	
+delirious	/dɪˈlɪriəs/	adj. 精神错乱的，神志不清的	c	
+delirium	/dɪˈlɪriəm/	n. 谵妄，精神错乱	c	
+deliverance	/dɪˈlɪvərəns/	n. 释放，解救	d	deliver
+delude	/dɪˈluːd/	v. 欺骗，哄骗	c	
+deluge	/ˈdeljuːdʒ/	n. 洪水，大量	c	
+delusion	/dɪˈluːʒn/	n. 错觉，妄想	d	delude
+deluxe	/dɪˈlʌks/	adj. 豪华的，高级的	c	
+delve	/delv/	v. 深入研究，探究	c	
+demagogue	/ˈdeməɡɒɡ/	n. 煽动者，蛊惑人心者	c	
+demeanor	/dɪˈmiːnə/	n. 举止，风度	c	
+demeanour	/dɪˈmiːnə/	n. 举止，行为	c	
+demented	/dɪˈmentɪd/	adj. 疯狂的，精神错乱的	c	
+demise	/dɪˈmaɪz/	n. 死亡，终止	c	
+democracy	/dɪˈmɒkrəsi/	n. 民主，民主制	c	
+demolish	/dɪˈmɒlɪʃ/	v. 拆除，推翻	c	
+demon	/ˈdiːmən/	n. 恶魔，魔鬼	c	
+demonic	/dɪˈmɒnɪk/	adj. 恶魔般的，凶恶的	d	demon
+demonstrable	/dɪˈmɒnstrəbl/	adj. 可论证的，明显的	d	demonstrate
+demoralize	/dɪˈmɒrəlaɪz/	v. 使士气低落，使沮丧	c	
+denim	/ˈdenɪm/	n. 牛仔布	c	
+denomination	/dɪˌnɒmɪˈneɪʃn/	n. 面额，教派	d	denominate
+denote	/dɪˈnəʊt/	v. 表示，指示	c	
+denouement	/deɪˈnuːmɒ̃/	n. 结局，收场	c	
+denounce	/dɪˈnaʊns/	v. 谴责，告发	c	
+dent	/dent/	n. 凹痕；v. 使凹陷	c	
+dentist	/ˈdentɪst/	n. 牙医	d	dental
+denunciation	/dɪˌnʌnsiˈeɪʃn/	n. 谴责，控告	d	denounce
+deplete	/dɪˈpliːt/	v. 耗尽，使枯竭	c	
+deplorable	/dɪˈplɔːrəbl/	adj. 应受谴责的，悲惨的	d	deplore
+deplore	/dɪˈplɔː/	v. 谴责，哀叹	c	
+deploy	/dɪˈplɔɪ/	v. 部署，调度	c	
+deport	/dɪˈpɔːt/	v. 驱逐出境	c	
+deposition	/ˌdepəˈzɪʃn/	n. 证词，沉积	d	deposit
+depository	/dɪˈpɒzətri/	n. 仓库，保管处	d	deposit
+deprave	/dɪˈpreɪv/	v. 使堕落，败坏	c	
+depravity	/dɪˈprævəti/	n. 堕落，邪恶	d	deprave
+deprecate	/ˈdeprəkeɪt/	v. 反对，不赞成	c	
+depreciate	/dɪˈpriːʃieɪt/	v. 贬值，贬低	c	
+depredation	/ˌdeprəˈdeɪʃn/	n. 掠夺，破坏	c	
+depressant	/dɪˈpresnt/	n. 镇静剂；adj. 抑制的	d	depress
+depression	/dɪˈpreʃn/	n. 抑郁，萧条	d	depress
+deprivation	/ˌdeprɪˈveɪʃn/	n. 剥夺，匮乏	d	deprive
+deranged	/dɪˈreɪndʒd/	adj. 精神错乱的，疯狂的	c	
+derelict	/ˈderəlɪkt/	adj. 被遗弃的，疏忽的	c	
+deride	/dɪˈraɪd/	v. 嘲笑，嘲弄	c	
+derision	/dɪˈrɪʒn/	n. 嘲笑，嘲弄	d	deride
+derisive	/dɪˈraɪsɪv/	adj. 嘲笑的，轻蔑的	d	deride
+derivation	/ˌderɪˈveɪʃn/	n. 起源，派生	d	derive
+derivative	/dɪˈrɪvətɪv/	n. 衍生物；adj. 派生的	d	derive
+dermatology	/ˌdɜːməˈtɒlədʒi/	n. 皮肤科，皮肤病学	c	
+derogatory	/dɪˈrɒɡətri/	adj. 贬损的，轻蔑的	c	
+descendant	/dɪˈsendənt/	n. 后裔，子孙	d	descend
+descriptive	/dɪˈskrɪptɪv/	adj. 描述的，描写的	d	describe
+desecrate	/ˈdesɪkreɪt/	v. 亵渎，玷污	c	
+desegregate	/ˌdiːˈseɡrɪɡeɪt/	v. 废除种族隔离	c	
+desert	/dɪˈzɜːt/	v. 抛弃；n. 沙漠	c	
+deserter	/dɪˈzɜːtə/	n. 逃兵，背弃者	d	desert
+desertion	/dɪˈzɜːʃn/	n. 遗弃，逃亡	d	desert
+deserving	/dɪˈzɜːvɪŋ/	adj. 值得的，应得的	d	deserve
+desiccate	/ˈdesɪkeɪt/	v. 使干燥，脱水	c	
+desideratum	/dɪˌzɪdəˈrɑːtəm/	n. 迫切需要之物	c	
+designate	/ˈdezɪɡneɪt/	v. 指定，命名	c	
+designation	/ˌdezɪɡˈneɪʃn/	n. 指定，名称	d	designate
+desirability	/dɪˌzaɪərəˈbɪləti/	n. 可取之处，优点	d	desirable
+desirous	/dɪˈzaɪərəs/	adj. 渴望的，想望的	d	desire
+desktop	/ˈdesktɒp/	n. 桌面，台式电脑	c	
+desolate	/ˈdesələt/	adj. 荒凉的，孤寂的	c	
+desolation	/ˌdesəˈleɪʃn/	n. 荒凉，凄凉	d	desolate
+despair	/dɪˈspeə/	n./v. 绝望	c	
+desperado	/ˌdespəˈrɑːdəʊ/	n. 亡命之徒	c	
+desperate	/ˈdespərət/	adj. 绝望的，极度渴望的	c	
+desperation	/ˌdespəˈreɪʃn/	n. 绝望，铤而走险	d	desperate
+despicable	/dɪˈspɪkəbl/	adj. 可鄙的，卑劣的	c	
+despondent	/dɪˈspɒndənt/	adj. 沮丧的，失望的	c	
+despot	/ˈdespɒt/	n. 暴君，专制者	c	
+despotic	/deˈspɒtɪk/	adj. 专制的，暴虐的	d	despot
+dessert	/dɪˈzɜːt/	n. 甜点，餐后甜食	c	
+destined	/ˈdestɪnd/	adj. 注定的，预定的	d	destiny
+destitute	/ˈdestɪtjuːt/	adj. 贫困的，缺乏的	c	
+detachment	/dɪˈtætʃmənt/	n. 分离，超然	d	detach
+detainee	/ˌdiːteɪˈniː/	n. 被拘留者	d	detain
+detection	/dɪˈtekʃn/	n. 察觉，探测	d	detect
+detective	/dɪˈtektɪv/	n. 侦探；adj. 侦探的	d	detect
+detention	/dɪˈtenʃn/	n. 拘留，滞留	d	detain
+deter	/dɪˈtɜː/	v. 阻止，威慑	c	
+detergent	/dɪˈtɜːdʒənt/	n. 洗涤剂，去污剂	c	
+deterrent	/dɪˈterənt/	n. 威慑物；adj. 制止的	d	deter
+detest	/dɪˈtest/	v. 憎恶，厌恶	c	
+detonate	/ˈdetəneɪt/	v. 引爆，爆炸	c	
+detonation	/ˌdetəˈneɪʃn/	n. 爆炸，引爆	d	detonate
+detour	/ˈdiːtʊə/	n. 迂路，绕道	c	
+detract	/dɪˈtrækt/	v. 减损，贬低	c	
+detriment	/ˈdetrɪmənt/	n. 损害，伤害	c	
+detrimental	/ˌdetrɪˈmentl/	adj. 有害的，不利的	d	detriment
+devaluation	/ˌdiːvæljuˈeɪʃn/	n. 贬值	d	devalue
+devastating	/ˈdevəsteɪtɪŋ/	adj. 毁灭性的，令人震惊的	d	devastate
+deviant	/ˈdiːviənt/	adj. 异常的，越轨的	d	deviate
+devious	/ˈdiːviəs/	adj. 不正直的，迂回的	c	
+devise	/dɪˈvaɪz/	v. 设计，发明	c	
+devoid	/dɪˈvɔɪd/	adj. 缺乏的，全无的	c	
+devolve	/dɪˈvɒlv/	v. 移交，下放	c	
+devout	/dɪˈvaʊt/	adj. 虔诚的，忠诚的	c	
+dexterity	/dekˈsterəti/	n. 灵巧，敏捷	c	
+diabetes	/ˌdaɪəˈbiːtiːz/	n. 糖尿病	c	
+diabetic	/ˌdaɪəˈbetɪk/	adj. 糖尿病的；n. 糖尿病患者	d	diabetes
+diabolical	/ˌdaɪəˈbɒlɪkl/	adj. 恶魔般的，残忍的	c	
+diagnosis	/ˌdaɪəɡˈnəʊsɪs/	n. 诊断	d	diagnose
+diagnostic	/ˌdaɪəɡˈnɒstɪk/	adj. 诊断的	d	diagnose
+diagonal	/daɪˈæɡənl/	adj. 对角线的	c	
+dial	/ˈdaɪəl/	n. 表盘，拨号盘	c	
+diameter	/daɪˈæmɪtə/	n. 直径	c	
+diaphragm	/ˈdaɪəfræm/	n. 隔膜，膜片	c	
+diarrhea	/ˌdaɪəˈriə/	n. 腹泻	c	
+diary	/ˈdaɪəri/	n. 日记，日记簿	c	
+dice	/daɪs/	n. 骰子；v. 切丁	c	
+dictator	/dɪkˈteɪtə/	n. 独裁者，专制者	d	dictate
+dictatorship	/dɪkˈteɪtəʃɪp/	n. 独裁统治	d	dictate
+diction	/ˈdɪkʃn/	n. 措辞，发音	c	
+dictionary	/ˈdɪkʃənri/	n. 词典，字典	c	
+diehard	/ˈdaɪhɑːd/	n. 顽固分子	c	
+diesel	/ˈdiːzl/	n. 柴油，柴油机	c	
+dietary	/ˈdaɪətəri/	adj. 饮食的，膳食的	d	diet
+dietitian	/ˌdaɪəˈtɪʃn/	n. 营养师	c	
+differentiate	/ˌdɪfəˈrenʃieɪt/	v. 区分，区别	d	different
+digestion	/daɪˈdʒestʃən/	n. 消化，消化力	d	digest
+digestive	/daɪˈdʒestɪv/	adj. 消化的	d	digest
+digit	/ˈdɪdʒɪt/	n. 数字，手指	c	
+digital	/ˈdɪdʒɪtl/	adj. 数字的，数码的	d	digit
+dignify	/ˈdɪɡnɪfaɪ/	v. 使有尊严，抬举	d	dignity
+dignitary	/ˈdɪɡnɪtəri/	n. 显贵，要人	d	dignity
+digress	/daɪˈɡres/	v. 离题，扯开	c	
+dilapidated	/dɪˈlæpɪdeɪtɪd/	adj. 破旧的，倒塌的	c	
+dilate	/daɪˈleɪt/	v. 扩大，膨胀	c	
+dilatory	/ˈdɪlətəri/	adj. 拖延的，磨蹭的	c	
+dilettante	/ˌdɪləˈtænti/	n. 业余爱好者，浅尝辄止者	c	
+diligence	/ˈdɪlɪdʒəns/	n. 勤奋，勤勉	d	diligent
+dilute	/daɪˈluːt/	v. 稀释，冲淡	c	
+diminution	/ˌdɪmɪˈnjuːʃn/	n. 减少，缩小	d	diminish
+diminutive	/dɪˈmɪnjətɪv/	adj. 极小的，微小的	d	diminish
+din	/dɪn/	n. 喧闹声，嘈杂	c	
+dingy	/ˈdɪndʒi/	adj. 昏暗的，肮脏的	c	
+dinosaur	/ˈdaɪnəsɔː/	n. 恐龙	c	
+diocese	/ˈdaɪəsɪs/	n. 教区	c	
+diplomat	/ˈdɪpləmæt/	n. 外交官，外交家	d	diplomatic
+dire	/ˈdaɪə/	adj. 可怕的，极端的	c	
+disability	/ˌdɪsəˈbɪləti/	n. 残疾，无能	d	disable
+disadvantage	/ˌdɪsədˈvɑːntɪdʒ/	n. 不利条件，缺点	d	advantage
+disaffected	/ˌdɪsəˈfektɪd/	adj. 不满的，疏远的	c	
+disaffection	/ˌdɪsəˈfekʃn/	n. 不满，不忠	d	disaffected
+disagreeable	/ˌdɪsəˈɡriːəbl/	adj. 令人不快的，讨厌的	d	agree
+disappearance	/ˌdɪsəˈpɪərəns/	n. 消失，失踪	d	disappear
+disappoint	/ˌdɪsəˈpɔɪnt/	v. 使失望，辜负	c	
+disapproval	/ˌdɪsəˈpruːvl/	n. 不赞成，反对	d	approve
+disarm	/dɪsˈɑːm/	v. 解除武装，缓和	c	
+disarray	/ˌdɪsəˈreɪ/	n. 混乱，杂乱	c	
+disassemble	/ˌdɪsəˈsembl/	v. 拆卸，分解	c	
+disband	/dɪsˈbænd/	v. 解散，遣散	c	
+disbelief	/ˌdɪsbɪˈliːf/	n. 怀疑，不信	d	belief
+disburse	/dɪsˈbɜːs/	v. 支付，支出	c	
+disc	/disk/	n. 圆盘，唱片	c	
+discard	/dɪsˈkɑːd/	v. 丢弃，抛弃	c	
+discernible	/dɪˈsɜːnəbl/	adj. 可辨别的，看得清的	d	discern
+discerning	/dɪˈsɜːnɪŋ/	adj. 有眼力的，敏锐的	d	discern
+discharge	/dɪsˈtʃɑːdʒ/	v. 排放，解雇	c	
+disciple	/dɪˈsaɪpl/	n. 门徒，追随者	c	
+disclaim	/dɪsˈkleɪm/	v. 否认，放弃	c	
+disclaimer	/dɪsˈkleɪmə/	n. 免责声明，否认	d	disclaim
+discomfort	/dɪsˈkʌmfət/	n. 不适，不安	c	
+disconcert	/ˌdɪskənˈsɜːt/	v. 使不安，使窘迫	c	
+disconnect	/ˌdɪskəˈnekt/	v. 断开，切断	c	
+disconsolate	/dɪsˈkɒnsələt/	adj. 郁郁不乐的，绝望的	c	
+discontent	/ˌdɪskənˈtent/	n. 不满；adj. 不满的	c	
+discontinue	/ˌdɪskənˈtɪnjuː/	v. 停止，中断	c	
+discord	/ˈdɪskɔːd/	n. 不和，不一致	c	
+discordant	/dɪsˈkɔːdənt/	adj. 不和谐的，刺耳的	d	discord
+discotheque	/ˈdɪskətek/	n. 迪斯科舞厅	c	
+discourage	/dɪsˈkʌrɪdʒ/	v. 使气馁，劝阻	c	
+discourteous	/dɪsˈkɜːtiəs/	adj. 无礼的，失礼的	d	courteous
+discredit	/dɪsˈkredɪt/	v. 使不可信，使丢脸	c	
+discreet	/dɪˈskriːt/	adj. 谨慎的，小心的	c	
+discretion	/dɪˈskreʃn/	n. 谨慎，自行决定权	d	discreet
+discriminating	/dɪˈskrɪmɪneɪtɪŋ/	adj. 有辨别力的，区别对待的	d	discriminate
+discrimination	/dɪˌskrɪmɪˈneɪʃn/	n. 歧视，辨别力	d	discriminate
+discursive	/dɪsˈkɜːsɪv/	adj. 散漫的，离题的	d	discourse
+disdainful	/dɪsˈdeɪnfl/	adj. 轻蔑的，鄙视的	d	disdain
+disembark	/ˌdɪsɪmˈbɑːk/	v. 下船，登陆	c	
+disenchant	/ˌdɪsɪnˈtʃɑːnt/	v. 使清醒，使不再着迷	c	
+disengage	/ˌdɪsɪnˈɡeɪdʒ/	v. 脱离，解除	c	
+disfigure	/dɪsˈfɪɡə/	v. 损毁外貌，破相	c	
+disgrace	/dɪsˈɡreɪs/	n. 耻辱；v. 使丢脸	c	
+disgraceful	/dɪsˈɡreɪsfl/	adj. 可耻的，不光彩的	d	disgrace
+disgruntled	/dɪsˈɡrʌntld/	adj. 不满的，不满意的	c	
+disguise	/dɪsˈɡaɪz/	v./n. 伪装，掩饰	c	
+dishearten	/dɪsˈhɑːtn/	v. 使沮丧，使气馁	c	
+disheveled	/dɪˈʃevld/	adj. 蓬乱的，衣冠不整的	c	
+dishonest	/dɪsˈɒnɪst/	adj. 不诚实的	d	honest
+dishonor	/dɪsˈɒnə/	n. 耻辱；v. 使蒙羞	c	
+disillusion	/ˌdɪsɪˈluːʒn/	v. 使醒悟，使失望	c	
+disinfect	/ˌdɪsɪnˈfekt/	v. 消毒，杀菌	c	
+disinfectant	/ˌdɪsɪnˈfektənt/	n. 消毒剂	d	disinfect
+disinherit	/ˌdɪsɪnˈherɪt/	v. 剥夺继承权	d	inherit
+disintegrate	/dɪsˈɪntɪɡreɪt/	v. 瓦解，崩溃	c	
+disinterested	/dɪsˈɪntrəstɪd/	adj. 无私的，不感兴趣的	d	interest
+disjointed	/dɪsˈdʒɔɪntɪd/	adj. 不连贯的，脱节的	c	
+dislocate	/ˈdɪsləkeɪt/	v. 使脱臼，打乱	c	
+dislodge	/dɪsˈlɒdʒ/	v. 驱逐，移去	c	
+disloyal	/ˌdɪsˈlɔɪəl/	adj. 不忠的，背叛的	d	loyal
+dismal	/ˈdɪzməl/	adj. 阴沉的，凄凉的	c	
+dismantle	/dɪsˈmæntl/	v. 拆卸，废除	c	
+dismember	/dɪsˈmembə/	v. 肢解，分割	c	
+dismiss	/dɪsˈmɪs/	v. 解雇，驳回	c	
+dismissal	/dɪsˈmɪsl/	n. 解雇，驳回	d	dismiss
+dismount	/ˌdɪsˈmaʊnt/	v. 下马，下车	c	
+disobedience	/ˌdɪsəˈbiːdiəns/	n. 不服从，违抗	d	obey
+disorderly	/dɪsˈɔːdəli/	adj. 混乱的，无秩序的	d	order
+disorganize	/dɪsˈɔːɡənaɪz/	v. 扰乱，使混乱	d	organize
+disorient	/dɪsˈɔːrient/	v. 使迷失方向，使困惑	c	
+disown	/dɪsˈəʊn/	v. 否认，脱离关系	c	
+disparage	/dɪˈspærɪdʒ/	v. 贬低，轻视	c	
+disparate	/ˈdɪspərət/	adj. 迥然不同的，异类的	c	
+disparity	/dɪˈspærəti/	n. 差异，不平等	c	
+dispatch	/dɪˈspætʃ/	v. 派遣，发送	c	
+dispel	/dɪˈspel/	v. 驱散，消除	c	
+dispensable	/dɪˈspensəbl/	adj. 可有可无的，非必要的	d	dispense
+dispensation	/ˌdɪspenˈseɪʃn/	n. 分配，豁免	d	dispense
+disperse	/dɪˈspɜːs/	v. 驱散，散布	c	
+dispirit	/dɪˈspɪrɪt/	v. 使沮丧，使气馁	c	
+displace	/dɪsˈpleɪs/	v. 取代，取代…的位置	c	
+disposable	/dɪˈspəʊzəbl/	adj. 一次性的，可丢弃的	d	dispose
+disproportion	/ˌdɪsprəˈpɔːʃn/	n. 不成比例，不均衡	c	
+disprove	/dɪsˈpruːv/	v. 证明…有误，驳斥	d	prove
+disputation	/ˌdɪspjuˈteɪʃn/	n. 争论，辩论	d	dispute
+disqualify	/dɪsˈkwɒlɪfaɪ/	v. 取消资格，使不合格	d	qualify
+disquiet	/dɪsˈkwaɪət/	n. 不安；v. 使不安	c	
+disregard	/ˌdɪsrɪˈɡɑːd/	v./n. 忽视，漠视	c	
+disrepair	/ˌdɪsrɪˈpeə/	n. 失修，破损	c	
+disreputable	/dɪsˈrepjətəbl/	adj. 名声不好的，声名狼藉的	d	reputation
+disrespect	/ˌdɪsrɪˈspekt/	n. 不敬，无礼	c	
+disruptive	/dɪsˈrʌptɪv/	adj. 扰乱性的，破坏性的	d	disrupt
+dissatisfy	/dɪsˈsætɪsfaɪ/	v. 使不满，使失望	d	satisfy
+dissect	/dɪˈsekt/	v. 解剖，剖析	c	
+dissection	/dɪˈsekʃn/	n. 解剖，剖析	d	dissect
+dissemble	/dɪˈsembl/	v. 掩饰，假装	c	
+disseminate	/dɪˈsemɪneɪt/	v. 传播，散布	c	
+dissension	/dɪˈsenʃn/	n. 纷争，意见不合	c	
+dissent	/dɪˈsent/	v./n. 不同意，异议	c	
+dissertation	/ˌdɪsəˈteɪʃn/	n. 学位论文，专题论文	c	
+disservice	/dɪsˈsɜːvɪs/	n. 损害，帮倒忙	c	
+dissident	/ˈdɪsɪdənt/	n. 持异见者；adj. 意见不同的	c	
+dissimilar	/dɪˈsɪmɪlə/	adj. 不同的，不相似的	d	similar
+dissimulate	/dɪˈsɪmjuleɪt/	v. 掩饰，假装	c	
+dissipate	/ˈdɪsɪpeɪt/	v. 消散，挥霍	c	
+dissociate	/dɪˈsəʊʃieɪt/	v. 分离，断绝关系	c	
+dissolute	/ˈdɪsəluːt/	adj. 放荡的，无节制的	c	
+dissolution	/ˌdɪsəˈluːʃn/	n. 解散，溶解	d	dissolve
+dissonance	/ˈdɪsənəns/	n. 不和谐，不一致	c	
+dissuade	/dɪˈsweɪd/	v. 劝阻，劝止	c	
+distend	/dɪˈstend/	v. 膨胀，扩张	c	
+distill	/dɪˈstɪl/	v. 蒸馏，提炼	c	
+distinctive	/dɪˈstɪŋktɪv/	adj. 独特的，有特色的	d	distinct
+distortion	/dɪˈstɔːʃn/	n. 扭曲，歪曲	d	distort
+distracted	/dɪˈstræktɪd/	adj. 心烦意乱的，注意力分散的	d	distract
+distraction	/dɪˈstrækʃn/	n. 分心，消遣	d	distract
+distraught	/dɪˈstrɔːt/	adj. 心烦意乱的，极度不安的	c	
+distrust	/dɪsˈtrʌst/	n./v. 不信任，怀疑	c	
+disturbance	/dɪˈstɜːbəns/	n. 干扰，骚乱	d	disturb
+disunite	/ˌdɪsjuˈnaɪt/	v. 使分裂，使不团结	d	unite
+disuse	/dɪsˈjuːs/	n. 废弃，不用	c	
+ditch	/dɪtʃ/	n. 沟；v. 抛弃	c	
+dither	/ˈdɪðə/	v. 犹豫不决，慌乱	c	
+diurnal	/daɪˈɜːnl/	adj. 白天的，每日的	c	
+diverge	/daɪˈvɜːdʒ/	v. 分叉，分歧	c	
+divergent	/daɪˈvɜːdʒənt/	adj. 有分歧的，发散的	d	diverge
+diversify	/daɪˈvɜːsɪfaɪ/	v. 使多样化	d	diverse
+diversion	/daɪˈvɜːʃn/	n. 转移，消遣	d	divert
+diversity	/daɪˈvɜːsəti/	n. 多样性，差异	d	diverse
+divest	/daɪˈvest/	v. 剥夺，脱去	c	
+dividend	/ˈdɪvɪdend/	n. 股息，红利	c	
+divine	/dɪˈvaɪn/	adj. 神圣的，极好的	c	
+divinity	/dɪˈvɪnəti/	n. 神性，神学	d	divine
+divisible	/dɪˈvɪzəbl/	adj. 可分的，可除尽的	d	divide
+division	/dɪˈvɪʒn/	n. 分割，部门	d	divide
+divulge	/daɪˈvʌldʒ/	v. 泄露，透露	c	
+docile	/ˈdəʊsaɪl/	adj. 温顺的，听话的	c	
+dock	/dɒk/	n. 码头；v. 停靠，扣工资	c	
+doctorate	/ˈdɒktərət/	n. 博士学位	d	doctor
+doctrinaire	/ˌdɒktrɪˈneə/	adj. 教条主义的	d	doctrine
+documentary	/ˌdɒkjuˈmentri/	n. 纪录片；adj. 文件的	d	document
+documentation	/ˌdɒkjumenˈteɪʃn/	n. 文件，文档资料	d	document
+dodge	/dɒdʒ/	v. 躲避，闪开	c	
+dogged	/ˈdɒɡɪd/	adj. 顽强的，固执的	c	
+dogma	/ˈdɒɡmə/	n. 教条，信条	c	
+dogmatic	/dɒɡˈmætɪk/	adj. 教条的，武断的	d	dogma
+doldrums	/ˈdɒldrəmz/	n. 忧郁，停滞	c	
+doleful	/ˈdəʊlfl/	adj. 悲伤的，忧郁的	c	
+dolphin	/ˈdɒlfɪn/	n. 海豚	c	
+domain	/dəˈmeɪn/	n. 领域，范围	c	
+domicile	/ˈdɒmɪsaɪl/	n. 住所，户籍	c	
+dominance	/ˈdɒmɪnəns/	n. 支配，优势	d	dominant
+domination	/ˌdɒmɪˈneɪʃn/	n. 支配，控制	d	dominate
+domineer	/ˌdɒmɪˈnɪə/	v. 专横，作威作福	c	
+donation	/dəʊˈneɪʃn/	n. 捐赠，捐款	d	donate
+donor	/ˈdəʊnə/	n. 捐赠者，供体	c	
+doomsday	/ˈduːmzdeɪ/	n. 世界末日	c	
+dormitory	/ˈdɔːmətri/	n. 宿舍	c	
+dose	/dəʊs/	n. 剂量，一剂	c	
+dossier	/ˈdɒsieɪ/	n. 档案，卷宗	c	
+dot	/dɒt/	n. 点；v. 加点	c	
+dote	/dəʊt/	v. 溺爱，昏聩	c	
+double	/ˈdʌbl/	adj. 双的；v. 加倍	c	
+doubtful	/ˈdaʊtfl/	adj. 怀疑的，不确定的	d	doubt
+dough	/dəʊ/	n. 面团，生面团	c	
+douse	/daʊs/	v. 浇灭，浸湿	c	
+dowdy	/ˈdaʊdi/	adj. 过时的，不修饰的	c	
+downfall	/ˈdaʊnfɔːl/	n. 衰败，垮台	c	
+downplay	/ˌdaʊnˈpleɪ/	v. 轻描淡写，贬低	c	
+downright	/ˈdaʊnraɪt/	adj. 完全的，直率的	c	
+downsize	/ˈdaʊnsaɪz/	v. 裁员，缩小规模	c	
+doze	/dəʊz/	v./n. 打盹，小睡	c	
+drab	/dræb/	adj. 单调的，乏味的	c	
+draconian	/drəˈkəʊniən/	adj. 严厉的，苛刻的	c	
+draft	/drɑːft/	n. 草稿，征兵；v. 起草	c	
+drain	/dreɪn/	v. 排水，耗尽	c	
+drape	/dreɪp/	v. 悬挂，披盖	c	
+drastic	/ˈdræstɪk/	adj. 激烈的，极端的	c	
+draught	/drɑːft/	n. 气流，穿堂风	c	
+dreadful	/ˈdredfl/	adj. 可怕的，糟糕的	d	dread
+dreary	/ˈdrɪəri/	adj. 沉闷的，乏味的	c	
+dregs	/dreɡz/	n. 残渣，糟粕	c	
+drench	/drentʃ/	v. 浸透，使湿透	c	
+dribble	/ˈdrɪbl/	v. 滴下，运球	c	
+driftwood	/ˈdrɪftwʊd/	n. 浮木，漂流木	d	drift
+drill	/drɪl/	n. 钻，演习；v. 钻孔，训练	c	
+drivel	/ˈdrɪvl/	n. 胡言乱语	c	
+drizzle	/ˈdrɪzl/	n. 毛毛雨；v. 下毛毛雨	c	
+droop	/druːp/	v. 下垂，消沉	c	
+droplet	/ˈdrɒplət/	n. 小滴	d	drop
+drowsy	/ˈdraʊzi/	adj. 昏昏欲睡的，困倦的	c	
+drudgery	/ˈdrʌdʒəri/	n. 苦差事，单调乏味的工作	c	
+dub	/dʌb/	v. 配音，授予称号	c	
+dutiful	/ˈdjuːtifl/	adj. 尽职的，孝顺的	d	duty
+dwindle	/ˈdwɪndl/	v. 逐渐减少，缩小	c	
+dynasty	/ˈdɪnəsti/	n. 王朝，朝代	c	
+eavesdrop	/ˈiːvzdrɒp/	v. 偷听，窃听	c	
+ebb	/eb/	v./n. 退潮，衰退	c	
+ebony	/ˈebəni/	n. 乌木；adj. 乌黑的	c	
+eccentricity	/ˌeksenˈtrɪsəti/	n. 古怪，怪癖	d	eccentric
+ecclesiastical	/ɪˌkliːziˈæstɪkl/	adj. 教会的，教士的	c	
+eclectic	/ɪˈklektɪk/	adj. 兼收并蓄的，折中的	c	
+eclipse	/ɪˈklɪps/	n. 日食，月食	c	
+ecologist	/ɪˈkɒlədʒɪst/	n. 生态学家	d	ecology
+economist	/ɪˈkɒnəmɪst/	n. 经济学家	d	economy
+ecosystem	/ˈiːkəʊsɪstəm/	n. 生态系统	c	
+eddy	/ˈedi/	n. 漩涡，涡流	c	
+edge	/edʒ/	n. 边缘，刀刃	c	
+edgy	/ˈedʒi/	adj. 紧张的，烦躁的	d	edge
+edifice	/ˈedɪfɪs/	n. 大厦，宏伟建筑	c	
+edit	/ˈedɪt/	v. 编辑，剪辑	c	
+editorial	/ˌedɪˈtɔːriəl/	n. 社论；adj. 编辑的	d	editor
+educate	/ˈedʒukeɪt/	v. 教育，培养	c	
+eerie	/ˈɪəri/	adj. 怪异的，令人毛骨悚然的	c	
+efface	/ɪˈfeɪs/	v. 抹去，擦掉	c	
+effeminate	/ɪˈfemɪnət/	adj. 柔弱的，女人气的	c	
+effervescent	/ˌefəˈvesnt/	adj. 冒泡的，兴奋的	c	
+efficacy	/ˈefɪkəsi/	n. 功效，效力	c	
+efficient	/ɪˈfɪʃnt/	adj. 高效的，效率高的	c	
+effigy	/ˈefɪdʒi/	n. 模拟像，雕像	c	
+effluent	/ˈefluənt/	n. 废水，污水	c	
+effortless	/ˈefətləs/	adj. 毫不费力的，轻松的	d	effort
+effrontery	/ɪˈfrʌntəri/	n. 厚颜无耻	c	
+effusive	/ɪˈfjuːsɪv/	adj. 感情外露的，过分热情的	c	
+egalitarian	/ɪˌɡælɪˈteəriən/	adj. 平等主义的	c	
+ego	/ˈiːɡəʊ/	n. 自我，自负	c	
+egocentric	/ˌiːɡəʊˈsentrɪk/	adj. 以自我为中心的	c	
+egoism	/ˈiːɡəʊɪzəm/	n. 利己主义，自私	c	
+egotism	/ˈiːɡətɪzəm/	n. 自负，自大	c	
+egregious	/ɪˈɡriːdʒəs/	adj. 极坏的，恶劣的	c	
+egress	/ˈiːɡres/	n. 出口，外出	c	
+ejaculate	/ɪˈdʒækjuleɪt/	v. 突然说出，射出	c	
+eject	/ɪˈdʒekt/	v. 弹射，驱逐	c	
+elapse	/ɪˈlæps/	v. 消逝，流逝	c	
+elated	/ɪˈleɪtɪd/	adj. 兴高采烈的，得意洋洋的	c	
+elation	/ɪˈleɪʃn/	n. 兴高采烈，得意	d	elated
+electorate	/ɪˈlektərət/	n. 全体选民	d	elect
+electrician	/ɪˌlekˈtrɪʃn/	n. 电工	d	electric
+electrocute	/ɪˈlektrəkjuːt/	v. 电击，触电致死	d	electric
+electronic	/ɪˌlekˈtrɒnɪk/	adj. 电子的	d	electron
+elegy	/ˈelədʒi/	n. 挽歌，哀歌	c	
+element	/ˈelɪmənt/	n. 元素，要素	c	
+elementary	/ˌelɪˈmentri/	adj. 基本的，初级的	d	element
+elephant	/ˈelɪfənt/	n. 大象	c	
+elevation	/ˌelɪˈveɪʃn/	n. 提高，海拔	d	elevate
+elicit	/ɪˈlɪsɪt/	v. 引出，诱出	c	
+elide	/ɪˈlaɪd/	v. 省略，删去	c	
+eligible	/ˈelɪdʒəbl/	adj. 有资格的，合格的	c	
+elimination	/ɪˌlɪmɪˈneɪʃn/	n. 消除，淘汰	d	eliminate
+elongate	/ˈiːlɒŋɡeɪt/	v. 拉长，延长	c	
+elope	/ɪˈləʊp/	v. 私奔	c	
+eloquence	/ˈeləkwəns/	n. 雄辩，口才	d	eloquent
+elucidate	/ɪˈluːsɪdeɪt/	v. 阐明，解释	c	
+elude	/ɪˈluːd/	v. 躲避，使困惑	c	
+elusive	/ɪˈluːsɪv/	adj. 难以捉摸的，难找到的	d	elude
+emaciated	/ɪˈmeɪsieɪtɪd/	adj. 消瘦的，憔悴的	c	
+emanate	/ˈeməneɪt/	v. 散发，发出	c	
+emancipate	/ɪˈmænsɪpeɪt/	v. 解放，释放	c	
+embankment	/ɪmˈbæŋkmənt/	n. 堤岸，路堤	c	
+embargo	/ɪmˈbɑːɡəʊ/	n. 禁运，封港	c	
+embarkation	/ˌembɑːˈkeɪʃn/	n. 登船，启程	d	embark
+embarrassment	/ɪmˈbærəsmənt/	n. 尴尬，窘迫	d	embarrass
+embellish	/ɪmˈbelɪʃ/	v. 装饰，润色	c	
+ember	/ˈembə/	n. 余烬	c	
+embezzle	/ɪmˈbezl/	v. 盗用，挪用	c	
+emblem	/ˈembləm/	n. 象征，徽章	c	
+embodiment	/ɪmˈbɒdimənt/	n. 化身，体现	d	embody
+emboss	/ɪmˈbɒs/	v. 压花，浮雕	c	
+embrace	/ɪmˈbreɪs/	v. 拥抱，接受	c	
+embroidery	/ɪmˈbrɔɪdəri/	n. 刺绣，刺绣品	c	
+embryo	/ˈembriəʊ/	n. 胚胎，萌芽期	c	
+embryonic	/ˌembriˈɒnɪk/	adj. 胚胎的，萌芽期的	d	embryo
+emend	/ɪˈmend/	v. 修订，校订	c	
+emerald	/ˈemərəld/	n. 祖母绿，翡翠	c	
+emerge	/ɪˈmɜːdʒ/	v. 出现，浮现	c	
+emergence	/ɪˈmɜːdʒəns/	n. 出现，浮现	d	emerge
+emigrant	/ˈemɪɡrənt/	n. 移民，移居者	d	emigrate
+emigrate	/ˈemɪɡreɪt/	v. 移居国外	c	
+emigration	/ˌemɪˈɡreɪʃn/	n. 移居国外	d	emigrate
+eminence	/ˈemɪnəns/	n. 卓越，显赫	d	eminent
+emir	/eˈmɪə/	n. 埃米尔，酋长	c	
+emissary	/ˈemɪsəri/	n. 使者，密使	c	
+emission	/ɪˈmɪʃn/	n. 排放，发射	d	emit
+empathy	/ˈempəθi/	n. 共情，同理心	c	
+emperor	/ˈempərə/	n. 皇帝	c	
+emphasis	/ˈemfəsɪs/	n. 强调，重点	c	
+emphatic	/ɪmˈfætɪk/	adj. 强调的，有力的	d	emphasis
+empire	/ˈempaɪə/	n. 帝国，企业集团	c	
+empiricism	/ɪmˈpɪrɪsɪzəm/	n. 经验主义，实证论	d	empirical
+emulate	/ˈemjuleɪt/	v. 效仿，努力赶上	c	
+emulsion	/ɪˈmʌlʃn/	n. 乳剂，乳浊液	c	
+enactment	/ɪˈnæktmənt/	n. 颁布，法规	d	enact
+enamel	/ɪˈnæml/	n. 珐琅，瓷釉	c	
+encamp	/ɪnˈkæmp/	v. 扎营，露营	c	
+enchant	/ɪnˈtʃɑːnt/	v. 施魔法，使着迷	c	
+enchantment	/ɪnˈtʃɑːntmənt/	n. 魅力，着迷	d	enchant
+encircle	/ɪnˈsɜːkl/	v. 环绕，包围	d	circle
+encompass	/ɪnˈkʌmpəs/	v. 包含，环绕	c	
+encore	/ˈɒŋkɔː/	n. 加演，再来一个	c	
+encroach	/ɪnˈkrəʊtʃ/	v. 侵占，蚕食	c	
+encumber	/ɪnˈkʌmbə/	v. 阻碍，拖累	c	
+encyclopedia	/ɪnˌsaɪkləˈpiːdiə/	n. 百科全书	c	
+endanger	/ɪnˈdeɪndʒə/	v. 危及，使遭危险	d	danger
+endear	/ɪnˈdɪə/	v. 使受喜爱	c	
+endeavor	/ɪnˈdevə/	n./v. 努力，尽力	c	
+endemic	/enˈdemɪk/	adj. 地方性的，特有的	c	
+endorse	/ɪnˈdɔːs/	v. 赞同，背书	c	
+endorsement	/ɪnˈdɔːsmənt/	n. 赞同，背书	d	endorse
+endow	/ɪnˈdaʊ/	v. 赋予，捐赠	c	
+endowment	/ɪnˈdaʊmənt/	n. 捐赠，天赋	d	endow
+endure	/ɪnˈdjʊə/	v. 忍受，持续	c	
+enema	/ˈenəmə/	n. 灌肠，灌肠剂	c	
+enemy	/ˈenəmi/	n. 敌人，仇敌	c	
+energize	/ˈenədʒaɪz/	v. 激励，使有活力	d	energy
+enfold	/ɪnˈfəʊld/	v. 拥抱，包裹	c	
+engender	/ɪnˈdʒendə/	v. 产生，引起	c	
+engineer	/ˌendʒɪˈnɪə/	n. 工程师；v. 策划	c	
+engrave	/ɪnˈɡreɪv/	v. 雕刻，铭刻	c	
+engross	/ɪnˈɡrəʊs/	v. 使全神贯注，占用	c	
+engulf	/ɪnˈɡʌlf/	v. 吞没，席卷	c	
+enigma	/ɪˈnɪɡmə/	n. 谜，难以理解的事物	c	
+enigmatic	/ˌenɪɡˈmætɪk/	adj. 神秘的，费解的	d	enigma
+enjoin	/ɪnˈdʒɔɪn/	v. 命令，禁止	c	
+enlarge	/ɪnˈlɑːdʒ/	v. 扩大，放大	c	
+enlist	/ɪnˈlɪst/	v. 征募，争取	c	
+enliven	/ɪnˈlaɪvn/	v. 使有生气，使活跃	d	lively
+enmity	/ˈenməti/	n. 敌意，仇恨	c	
+ennoble	/ɪˈnəʊbl/	v. 使高贵，封爵	c	
+enormity	/ɪˈnɔːməti/	n. 巨大，滔天罪行	d	enormous
+enrage	/ɪnˈreɪdʒ/	v. 激怒，使暴怒	d	rage
+enrapture	/ɪnˈræptʃə/	v. 使狂喜，使着迷	c	
+enrichment	/ɪnˈrɪtʃmənt/	n. 丰富，浓缩	d	enrich
+enroll	/ɪnˈrəʊl/	v. 注册，登记	c	
+ensconce	/ɪnˈskɒns/	v. 安置，使安顿	c	
+ensemble	/ɒnˈsɒmbl/	n. 合奏团，全体	c	
+enshrine	/ɪnˈʃraɪn/	v. 珍藏，铭记	c	
+ensign	/ˈensaɪn/	n. 旗，军旗	c	
+enslave	/ɪnˈsleɪv/	v. 奴役，使成为奴隶	d	slave
+ensnare	/ɪnˈsneə/	v. 诱捕，使陷入	c	
+ensue	/ɪnˈsjuː/	v. 接着发生，随之而来	c	
+ensuing	/ɪnˈsjuːɪŋ/	adj. 接着的，随后的	d	ensue
+entail	/ɪnˈteɪl/	v. 需要，使必要	c	
+entangle	/ɪnˈtæŋɡl/	v. 使纠缠，使卷入	c	
+enterprising	/ˈentəpraɪzɪŋ/	adj. 有进取心的，有事业心的	d	enterprise
+entertainment	/ˌentəˈteɪnmənt/	n. 娱乐，款待	d	entertain
+enthral	/ɪnˈθrɔːl/	v. 使着迷，使迷住	c	
+enthusiast	/ɪnˈθjuːziæst/	n. 爱好者，狂热者	d	enthusiasm
+entice	/ɪnˈtaɪs/	v. 引诱，怂恿	c	
+entirety	/ɪnˈtaɪərəti/	n. 全部，整体	d	entire
+entitlement	/ɪnˈtaɪtlmənt/	n. 权利，应得的份额	d	entitle
+entity	/ˈentəti/	n. 实体，独立存在	c	
+entomology	/ˌentəˈmɒlədʒi/	n. 昆虫学	c	
+entourage	/ˈɒnturɑːʒ/	n. 随行人员，随从	c	
+entrails	/ˈentreɪlz/	n. 内脏，肠	c	
+entrance	/ˈentrəns/	n. 入口，进入	c	
+entrant	/ˈentrənt/	n. 参赛者，新成员	c	
+entreat	/ɪnˈtriːt/	v. 恳求，请求	c	
+entrench	/ɪnˈtrentʃ/	v. 使牢固确立，挖掘战壕	c	
+entrepreneurial	/ˌɒntrəprəˈnɜːriəl/	adj. 企业家的，创业的	d	entrepreneur
+entrust	/ɪnˈtrʌst/	v. 委托，托付	c	
+entwine	/ɪnˈtwaɪn/	v. 缠绕，交织	c	
+enumerate	/ɪˈnjuːməreɪt/	v. 列举，枚举	c	
+enunciate	/ɪˈnʌnsieɪt/	v. 清晰发音，阐明	c	
+envelop	/ɪnˈveləp/	v. 包住，笼罩	c	
+envisage	/ɪnˈvɪzɪdʒ/	v. 设想，展望	c	
+envoy	/ˈenvɔɪ/	n. 使者，特使	c	
+envy	/ˈenvi/	n./v. 羡慕，嫉妒	c	
+enzyme	/ˈenzaɪm/	n. 酶	c	
+ephemeral	/ɪˈfemərəl/	adj. 短暂的，朝生暮死的	c	
+epic	/ˈepɪk/	n. 史诗；adj. 史诗般的	c	
+epidemic	/ˌepɪˈdemɪk/	n. 流行病；adj. 流行的	c	
+epidermis	/ˌepɪˈdɜːmɪs/	n. 表皮，外皮	c	
+epigram	/ˈepɪɡræm/	n. 警句，讽刺短诗	c	
+epilepsy	/ˈepɪlepsi/	n. 癫痫	c	
+epilogue	/ˈepɪlɒɡ/	n. 尾声，结语	c	
+episode	/ˈepɪsəʊd/	n. 一集，插曲	c	
+epitome	/ɪˈpɪtəmi/	n. 典型，缩影	c	
+epoch	/ˈiːpɒk/	n. 时代，纪元	c	
+equable	/ˈekwəbl/	adj. 平和的，稳定的	c	
+equanimity	/ˌekwəˈnɪməti/	n. 平和，镇定	c	
+equate	/ɪˈkweɪt/	v. 等同，使相等	d	equal
+equator	/ɪˈkweɪtə/	n. 赤道	c	
+equestrian	/ɪˈkwestriən/	adj. 骑马的，马术的	c	
+equilibrium	/ˌiːkwɪˈlɪbriəm/	n. 平衡，均衡	c	
+equinox	/ˈiːkwɪnɒks/	n. 昼夜平分点，春分秋分	c	
+equitable	/ˈekwɪtəbl/	adj. 公平的，公正的	d	equity
+equity	/ˈekwəti/	n. 公平，权益	c	
+equivalent	/ɪˈkwɪvələnt/	adj. 相等的；n. 等价物	c	
+equivocal	/ɪˈkwɪvəkl/	adj. 模棱两可的，含糊的	c	
+equivocate	/ɪˈkwɪvəkeɪt/	v. 说模棱两可的话，支吾	c	
+eradicate	/ɪˈrædɪkeɪt/	v. 根除，消灭	c	
+erase	/ɪˈreɪz/	v. 擦除，抹去	c	
+erasure	/ɪˈreɪʒə/	n. 擦除，抹去	d	erase
+erect	/ɪˈrekt/	adj. 直立的；v. 建立	c	
+erection	/ɪˈrekʃn/	n. 建立，竖立	d	erect
+erode	/ɪˈrəʊd/	v. 侵蚀，腐蚀	c	
+erosion	/ɪˈrəʊʒn/	n. 侵蚀，腐蚀	d	erode
+err	/ɜː/	v. 犯错，出差错	c	
+errand	/ˈerənd/	n. 差事，跑腿	c	
+errant	/ˈerənt/	adj. 犯错的，漂泊的	d	err
+erratic	/ɪˈrætɪk/	adj. 不规律的，古怪的	c	
+erroneous	/ɪˈrəʊniəs/	adj. 错误的，不正确的	d	error
+erudite	/ˈerudaɪt/	adj. 博学的，有学问的	c	
+escalate	/ˈeskəleɪt/	v. 升级，逐步上升	c	
+escalation	/ˌeskəˈleɪʃn/	n. 升级，扩大	d	escalate
+escalator	/ˈeskəleɪtə/	n. 自动扶梯	d	escalate
+escapade	/ˈeskəpeɪd/	n. 越轨行为，冒险	c	
+escapee	/ɪˌskeɪˈpiː/	n. 逃脱者，逃亡者	d	escape
+eschew	/ɪsˈtʃuː/	v. 避免，戒绝	c	
+escort	/ˈeskɔːt/	n. 护送者；v. 护送	c	
+esoteric	/ˌesəˈterɪk/	adj. 深奥的，秘传的	c	
+espionage	/ˈespiənɑːʒ/	n. 间谍活动，侦察	c	
+espouse	/ɪˈspaʊz/	v. 支持，拥护	c	
+esquire	/ɪˈskwaɪə/	n. 先生（尊称），绅士	c	
+essay	/ˈeseɪ/	n. 散文，论文	c	
+estate	/ɪˈsteɪt/	n. 房地产，庄园	c	
+esthetic	/iːsˈθetɪk/	adj. 审美的，美学的	c	
+estimate	/ˈestɪmeɪt/	v./n. 估计，评估	c	
+estrange	/ɪˈstreɪndʒ/	v. 使疏远，离间	c	
+estrangement	/ɪˈstreɪndʒmənt/	n. 疏远，隔阂	d	estrange
+etch	/etʃ/	v. 蚀刻，铭刻	c	
+eternity	/ɪˈtɜːnəti/	n. 永恒，来世	d	eternal
+ether	/ˈiːθə/	n. 以太，醚	c	
+ethereal	/ɪˈθɪəriəl/	adj. 轻飘的，缥缈的	c	
+ethic	/ˈeθɪk/	n. 伦理，道德规范	c	
+etiquette	/ˈetɪket/	n. 礼仪，礼节	c	
+etymology	/ˌetɪˈmɒlədʒi/	n. 词源学，词源	c	
+eucalyptus	/ˌjuːkəˈlɪptəs/	n. 桉树	c	
+eulogy	/ˈjuːlədʒi/	n. 悼词，颂词	c	
+euphemism	/ˈjuːfəmɪzəm/	n. 委婉语	c	
+euphoria	/juːˈfɔːriə/	n. 欣快，极度兴奋	c	
+evacuation	/ɪˌvækjuˈeɪʃn/	n. 疏散，撤离	d	evacuate
+evade	/ɪˈveɪd/	v. 逃避，躲避	c	
+evaluate	/ɪˈvæljueɪt/	v. 评价，评估	c	
+evanescent	/ˌiːvəˈnesnt/	adj. 短暂的，易消散的	c	
+evaporate	/ɪˈvæpəreɪt/	v. 蒸发，消失	c	
+evasion	/ɪˈveɪʒn/	n. 逃避，规避	d	evade
+evasive	/ɪˈveɪsɪv/	adj. 逃避的，含糊的	d	evade
+eventful	/ɪˈventfl/	adj. 多事的，重要的	d	event
+eventual	/ɪˈventʃuəl/	adj. 最终的，最后的	d	event
+evergreen	/ˈevəɡriːn/	adj. 常青的，常绿的	c	
+everlasting	/ˌevəˈlɑːstɪŋ/	adj. 永久的，永恒的	c	
+evict	/ɪˈvɪkt/	v. 驱逐，赶出	c	
+eviction	/ɪˈvɪkʃn/	n. 驱逐，赶出	d	evict
+evidence	/ˈevɪdəns/	n. 证据，迹象	d	evident
+evil	/ˈiːvl/	adj. 邪恶的；n. 邪恶	c	
+evocative	/ɪˈvɒkətɪv/	adj. 唤起的，引起回忆的	d	evoke
+evoke	/ɪˈvəʊk/	v. 唤起，引起	c	
+ewe	/juː/	n. 母羊	c	
+exacerbate	/ɪɡˈzæsəbeɪt/	v. 加剧，恶化	c	
+exact	/ɪɡˈzækt/	adj. 精确的，确切的	c	
+exacting	/ɪɡˈzæktɪŋ/	adj. 苛求的，费力的	d	exact
+exalt	/ɪɡˈzɔːlt/	v. 赞扬，提升	c	
+exaltation	/ˌeɡzɔːlˈteɪʃn/	n. 兴奋，提升	d	exalt
+exasperate	/ɪɡˈzæspəreɪt/	v. 使恼怒，激怒	c	
+excavate	/ˈekskəveɪt/	v. 挖掘，开凿	c	
+excavation	/ˌekskəˈveɪʃn/	n. 挖掘，发掘	d	excavate
+excel	/ɪkˈsel/	v. 擅长，胜过	c	
+excellence	/ˈeksələns/	n. 优秀，卓越	d	excel
+excerpt	/ˈeksɜːpt/	n. 摘录，节选	c	
+excess	/ɪkˈses/	n. 过量，过剩	c	
+excessive	/ɪkˈsesɪv/	adj. 过度的，过分的	d	excess
+exchequer	/ɪksˈtʃekə/	n. 国库，财政部	c	
+excise	/ˈeksaɪz/	n. 消费税；v. 切除	c	
+excision	/ɪkˈsɪʒn/	n. 切除，删除	d	excise
+excitable	/ɪkˈsaɪtəbl/	adj. 易激动的，易兴奋的	d	excite
+exclaim	/ɪkˈskleɪm/	v. 呼喊，惊叫	c	
+exclamation	/ˌekskləˈmeɪʃn/	n. 感叹，惊叹	d	exclaim
+exclude	/ɪkˈskluːd/	v. 排除，排斥	c	
+exclusion	/ɪkˈskluːʒn/	n. 排除，排斥	d	exclude
+excruciating	/ɪkˈskruːʃieɪtɪŋ/	adj. 极痛苦的，剧烈的	c	
+excursion	/ɪkˈskɜːʃn/	n. 远足，短途旅行	c	
+excusable	/ɪkˈskjuːzəbl/	adj. 可原谅的，可辩解的	d	excuse
+execution	/ˌeksɪˈkjuːʃn/	n. 执行，处决	d	execute
+executive	/ɪɡˈzekjətɪv/	n. 主管；adj. 行政的	c	
+executor	/ɪɡˈzekjətə/	n. 执行者，遗嘱执行人	d	execute
+exemplary	/ɪɡˈzempləri/	adj. 典范的，惩戒性的	d	example
+exemplify	/ɪɡˈzemplɪfaɪ/	v. 例证，作为…的例子	d	example
+exemption	/ɪɡˈzempʃn/	n. 豁免，免除	d	exempt
+exertion	/ɪɡˈzɜːʃn/	n. 努力，尽力	d	exert
+exhale	/eksˈheɪl/	v. 呼气，呼出	c	
+exhaustion	/ɪɡˈzɔːstʃən/	n. 精疲力竭，耗尽	d	exhaust
+exhaustive	/ɪɡˈzɔːstɪv/	adj. 详尽的，彻底的	d	exhaust
+exhibit	/ɪɡˈzɪbɪt/	v. 展出，显示；n. 展品	c	
+exhibition	/ˌeksɪˈbɪʃn/	n. 展览，展览会	d	exhibit
+exhilarate	/ɪɡˈzɪləreɪt/	v. 使振奋，使高兴	c	
+exhort	/ɪɡˈzɔːt/	v. 劝告，力劝	c	
+exhume	/eksˈhjuːm/	v. 掘出，发掘	c	
+exigency	/ˈeksɪdʒənsi/	n. 紧急情况，苛求	c	
+exile	/ˈeksaɪl/	n./v. 流放，放逐	c	
+exodus	/ˈeksədəs/	n. 大批离去，出走	c	
+exonerate	/ɪɡˈzɒnəreɪt/	v. 免除罪责，开脱	c	
+exorbitant	/ɪɡˈzɔːbɪtənt/	adj. 过高的，过分的	c	
+exorcise	/ˈeksɔːsaɪz/	v. 驱除，驱魔	c	
+exotic	/ɪɡˈzɒtɪk/	adj. 异国的，奇异的	c	
+expand	/ɪkˈspænd/	v. 扩大，膨胀	c	
+expansion	/ɪkˈspænʃn/	n. 扩张，膨胀	d	expand
+expatriate	/eksˈpætrieɪt/	n. 侨民；v. 移居国外	c	
+expectancy	/ɪkˈspektənsi/	n. 期待，预期	d	expect
+expectation	/ˌekspekˈteɪʃn/	n. 期望，预期	d	expect
+expedient	/ɪkˈspiːdiənt/	adj. 权宜的；n. 权宜之计	c	
+expedite	/ˈekspədaɪt/	v. 加快，促进	c	
+expedition	/ˌekspəˈdɪʃn/	n. 探险，远征	c	
+expeditious	/ˌekspəˈdɪʃəs/	adj. 迅速的，高效的	d	expedite
+expel	/ɪkˈspel/	v. 驱逐，开除	c	
+expend	/ɪkˈspend/	v. 花费，消耗	c	
+expendable	/ɪkˈspendəbl/	adj. 可消耗的，可牺牲的	d	expend
+expertise	/ˌekspɜːˈtiːz/	n. 专门知识，专长	c	
+expiate	/ˈekspieɪt/	v. 赎罪，补偿	c	
+expiration	/ˌekspəˈreɪʃn/	n. 到期，期满	d	expire
+expiry	/ɪkˈspaɪəri/	n. 期满，到期	d	expire
+explanation	/ˌekspləˈneɪʃn/	n. 解释，说明	d	explain
+expletive	/ɪkˈspliːtɪv/	n. 咒骂语，感叹词	c	
+explicable	/ɪkˈsplɪkəbl/	adj. 可解释的，可说明的	d	explicit
+explode	/ɪkˈspləʊd/	v. 爆炸，激增	c	
+exploit	/ɪkˈsplɔɪt/	v. 开发，剥削	c	
+exploitation	/ˌeksplɔɪˈteɪʃn/	n. 开发，剥削	d	exploit
+exploration	/ˌekspləˈreɪʃn/	n. 探索，勘探	d	explore
+explosive	/ɪkˈspləʊsɪv/	adj. 爆炸性的；n. 炸药	d	explode
+exponent	/ɪkˈspəʊnənt/	n. 倡导者，指数	c	
+export	/ɪkˈspɔːt/	v./n. 出口，输出	c	
+exposition	/ˌekspəˈzɪʃn/	n. 阐述，展览会	d	expose
+expostulate	/ɪkˈspɒstʃuleɪt/	v. 告诫，劝诫	c	
+exposure	/ɪkˈspəʊʒə/	n. 暴露，曝光	d	expose
+expound	/ɪkˈspaʊnd/	v. 详细阐述，解释	c	
+expressly	/ɪkˈspresli/	adv. 明确地，特意地	d	express
+expropriate	/eksˈprəʊprieɪt/	v. 征用，没收	c	
+expulsion	/ɪkˈspʌlʃn/	n. 驱逐，开除	d	expel
+expunge	/ɪkˈspʌndʒ/	v. 删除，抹去	c	
+expurgate	/ˈekspəɡeɪt/	v. 删改，净化	c	
+exquisite	/ɪkˈskwɪzɪt/	adj. 精致的，细腻的	c	
+extant	/ekˈstænt/	adj. 现存的，尚存的	c	
+extemporaneous	/ɪkˌstempəˈreɪniəs/	adj. 即席的，临时的	c	
+extend	/ɪkˈstend/	v. 延伸，扩展	c	
+extension	/ɪkˈstenʃn/	n. 延长，扩展	d	extend
+extensive	/ɪkˈstensɪv/	adj. 广泛的，大量的	d	extend
+extenuate	/ɪkˈstenjueɪt/	v. 减轻，酌情减轻	c	
+exterior	/ɪkˈstɪəriə/	adj. 外部的；n. 外部	c	
+exterminate	/ɪkˈstɜːmɪneɪt/	v. 消灭，根除	c	
+external	/ɪkˈstɜːnl/	adj. 外部的，外来的	c	
+extinct	/ɪkˈstɪŋkt/	adj. 灭绝的，熄灭的	c	
+extinction	/ɪkˈstɪŋkʃn/	n. 灭绝，消亡	d	extinct
+extinguish	/ɪkˈstɪŋɡwɪʃ/	v. 熄灭，扑灭	c	
+extol	/ɪkˈstəʊl/	v. 颂扬，赞美	c	
+extort	/ɪkˈstɔːt/	v. 敲诈，勒索	c	
+extortion	/ɪkˈstɔːʃn/	n. 敲诈，勒索	d	extort
+extract	/ɪkˈstrækt/	v. 提取，摘录	c	
+extraction	/ɪkˈstrækʃn/	n. 提取，拔出	d	extract
+extracurricular	/ˌekstrəkəˈrɪkjələ/	adj. 课外的	c	
+extradite	/ˈekstrədaɪt/	v. 引渡	c	
+extraneous	/ɪkˈstreɪniəs/	adj. 无关的，外来的	c	
+extraordinarily	/ɪkˈstrɔːdnrəli/	adv. 非常，格外	d	extraordinary
+extrapolate	/ɪkˈstræpəleɪt/	v. 外推，推断	c	
+extraterrestrial	/ˌekstrətəˈrestriəl/	adj. 外星的，地外的	c	
+extravagance	/ɪkˈstrævəɡəns/	n. 奢侈，浪费	d	extravagant
+extremity	/ɪkˈstreməti/	n. 末端，极端	d	extreme
+extricate	/ˈekstrɪkeɪt/	v. 解脱，解救	c	
+extrinsic	/eksˈtrɪnsɪk/	adj. 外在的，外来的	c	
+extrovert	/ˈekstrəvɜːt/	n. 性格外向者	c	
+exuberant	/ɪɡˈzjuːbərənt/	adj. 充满活力的，茂盛的	c	
+exude	/ɪɡˈzjuːd/	v. 渗出，散发	c	
+exult	/ɪɡˈzʌlt/	v. 欢欣鼓舞，狂喜	c	
+fable	/ˈfeɪbl/	n. 寓言，神话	c	
+fabricate	/ˈfæbrɪkeɪt/	v. 制造，捏造	c	
+fabrication	/ˌfæbrɪˈkeɪʃn/	n. 制造，捏造	d	fabricate
+facet	/ˈfæsɪt/	n. 方面，刻面	c	
+facetious	/fəˈsiːʃəs/	adj. 爱开玩笑的，诙谐的	c	
+facile	/ˈfæsaɪl/	adj. 容易的，肤浅的	c	
+facilitate	/fəˈsɪlɪteɪt/	v. 促进，使便利	c	
+facility	/fəˈsɪləti/	n. 设施，能力	c	
+facsimile	/fækˈsɪməli/	n. 复制品，传真	c	
+faction	/ˈfækʃn/	n. 派系，小集团	c	
+factional	/ˈfækʃənl/	adj. 派系的，小集团的	d	faction
+factitious	/fækˈtɪʃəs/	adj. 人为的，不自然的	c	
+factual	/ˈfæktʃuəl/	adj. 事实的，真实的	d	fact
+faculty	/ˈfæklti/	n. 才能，全体教员	c	
+fad	/fæd/	n. 一时的风尚，狂热	c	
+faddish	/ˈfædɪʃ/	adj. 流行一时的	d	fad
+fading	/ˈfeɪdɪŋ/	adj. 衰退的，褪色的	d	fade
+fahrenheit	/ˈfærənhaɪt/	n. 华氏温度	c	
+fainthearted	/ˌfeɪntˈhɑːtɪd/	adj. 胆小的，怯懦的	c	
+fairway	/ˈfeəweɪ/	n. 球道，航道	c	
+fallacy	/ˈfæləsi/	n. 谬论，错误观念	c	
+fallible	/ˈfæləbl/	adj. 易犯错的，难免出错的	c	
+fallow	/ˈfæləʊ/	adj. 休耕的，闲置的	c	
+falsehood	/ˈfɔːlshʊd/	n. 谎言，虚假	d	false
+falsify	/ˈfɔːlsɪfaɪ/	v. 伪造，篡改	d	false
+falter	/ˈfɔːltə/	v. 蹒跚，动摇	c	
+famed	/feɪmd/	adj. 著名的，闻名的	d	fame
+familiarity	/fəˌmɪliˈærəti/	n. 熟悉，通晓	d	familiar
+famish	/ˈfæmɪʃ/	v. 使饥饿，使挨饿	c	
+fanatic	/fəˈnætɪk/	n. 狂热者；adj. 狂热的	c	
+fanatical	/fəˈnætɪkl/	adj. 狂热的，盲信的	d	fanatic
+fanciful	/ˈfænsɪfl/	adj. 异想天开的，奇特的	d	fancy
+fanfare	/ˈfænfeə/	n. 号角齐鸣，炫耀	c	
+fang	/fæŋ/	n. 尖牙，毒牙	c	
+fantastic	/fænˈtæstɪk/	adj. 极好的，异想天开的	c	
+fantasy	/ˈfæntəsi/	n. 幻想，想象	c	
+farce	/fɑːs/	n. 闹剧，滑稽戏	c	
+fare	/feə/	n. 车费，费用；v. 进展	c	
+far-fetched	/ˌfɑː ˈfetʃt/	adj. 牵强的，难以置信的	c	
+fascinate	/ˈfæsɪneɪt/	v. 使着迷，吸引	c	
+fascism	/ˈfæʃɪzəm/	n. 法西斯主义	c	
+fashionable	/ˈfæʃnəbl/	adj. 时髦的，流行的	d	fashion
+fasten	/ˈfɑːsn/	v. 系紧，固定	c	
+fastidious	/fæˈstɪdiəs/	adj. 挑剔的，一丝不苟的	c	
+fatalism	/ˈfeɪtəlɪzəm/	n. 宿命论	d	fatal
+fathom	/ˈfæðəm/	v. 理解，测深；n. 英寻	c	
+fatigue	/fəˈtiːɡ/	n. 疲劳，劳累	c	
+fatuous	/ˈfætʃuəs/	adj. 愚蠢的，昏庸的	c	
+faucet	/ˈfɔːsɪt/	n. 水龙头	c	
+faulty	/ˈfɔːlti/	adj. 有缺陷的，错误的	d	fault
+fauna	/ˈfɔːnə/	n. 动物群，动物志	c	
+favoritism	/ˈfeɪvərɪtɪzəm/	n. 偏袒，偏爱	d	favor
+fealty	/ˈfiːəlti/	n. 效忠，忠诚	c	
+feasible	/ˈfiːzəbl/	adj. 可行的，行得通的	c	
+febrile	/ˈfiːbraɪl/	adj. 发热的，狂热的	c	
+fecund	/ˈfiːkənd/	adj. 多产的，肥沃的	c	
+federalism	/ˈfedərəlɪzəm/	n. 联邦制	d	federal
+federation	/ˌfedəˈreɪʃn/	n. 联邦，联合会	d	federal
+feeble	/ˈfiːbl/	adj. 虚弱的，无力的	c	
+feign	/feɪn/	v. 假装，捏造	c	
+feint	/feɪnt/	n. 佯攻，假动作	c	
+felicity	/fəˈlɪsəti/	n. 幸福，恰当	c	
+felon	/ˈfelən/	n. 重罪犯	c	
+felony	/ˈfeləni/	n. 重罪	c	
+feminine	/ˈfemənɪn/	adj. 女性的，柔弱的	c	
+feminism	/ˈfemɪnɪzəm/	n. 女权主义	c	
+fen	/fen/	n. 沼泽，沼地	c	
+fence	/fens/	n. 篱笆，围栏；v. 击剑	c	
+fencing	/ˈfensɪŋ/	n. 击剑，栅栏	d	fence
+fend	/fend/	v. 抵挡，谋生	c	
+ferment	/fəˈment/	v. 发酵；n. 骚动	c	
+ferocious	/fəˈrəʊʃəs/	adj. 凶猛的，残暴的	c	
+ferocity	/fəˈrɒsəti/	n. 凶猛，残暴	d	ferocious
+ferret	/ˈferɪt/	n. 雪貂；v. 搜寻	c	
+ferry	/ˈferi/	n. 渡船；v. 摆渡	c	
+fertile	/ˈfɜːtaɪl/	adj. 肥沃的，多产的	c	
+fervent	/ˈfɜːvənt/	adj. 热情的，强烈的	c	
+fervor	/ˈfɜːvə/	n. 热情，炽热	c	
+festive	/ˈfestɪv/	adj. 节日的，喜庆的	c	
+festivity	/feˈstɪvəti/	n. 欢庆，节日	d	festive
+fetal	/ˈfiːtl/	adj. 胎儿的	c	
+fetch	/fetʃ/	v. 取来，接来	c	
+fetid	/ˈfetɪd/	adj. 恶臭的	c	
+fetish	/ˈfetɪʃ/	n. 迷恋，拜物教	c	
+fetter	/ˈfetə/	n. 脚镣；v. 束缚	c	
+feud	/fjuːd/	n. 世仇，不和	c	
+feudal	/ˈfjuːdl/	adj. 封建的，封建制度的	c	
+feverish	/ˈfiːvərɪʃ/	adj. 发烧的，狂热的	d	fever
+fiance	/fiˈɒnseɪ/	n. 未婚夫	c	
+fiasco	/fiˈæskəʊ/	n. 惨败，彻底失败	c	
+fiat	/ˈfiːæt/	n. 命令，法令	c	
+fickle	/ˈfɪkl/	adj. 易变的，反复无常的	c	
+fictitious	/fɪkˈtɪʃəs/	adj. 虚构的，假的	d	fiction
+fidelity	/fɪˈdeləti/	n. 忠诚，保真度	c	
+fidget	/ˈfɪdʒɪt/	v. 坐立不安，烦躁	c	
+fiend	/fiːnd/	n. 恶魔，魔鬼	c	
+fierce	/fɪəs/	adj. 凶猛的，激烈的	c	
+fiery	/ˈfaɪəri/	adj. 火热的，激烈的	d	fire
+fiesta	/fiˈestə/	n. 节日，宗教庆典	c	
+figment	/ˈfɪɡmənt/	n. 臆造的事物，虚构	c	
+figurative	/ˈfɪɡərətɪv/	adj. 比喻的，象征的	d	figure
+figurehead	/ˈfɪɡəhed/	n. 傀儡，名义领袖	d	figure
+filament	/ˈfɪləmənt/	n. 灯丝，细丝	c	
+filch	/fɪltʃ/	v. 偷窃，小偷小摸	c	
+file	/faɪl/	n. 文件，档案；v. 归档	c	
+filial	/ˈfɪliəl/	adj. 子女的，孝顺的	c	
+filibuster	/ˈfɪlɪbʌstə/	n. 冗长演说，阻挠议事	c	
+filigree	/ˈfɪlɪɡriː/	n. 金银丝细工，精致物品	c	
+filing	/ˈfaɪlɪŋ/	n. 归档，文件	d	file
+fillet	/ˈfɪlɪt/	n. 鱼片，肉片	c	
+filter	/ˈfɪltə/	n. 过滤器；v. 过滤	c	
+filth	/fɪlθ/	n. 污秽，肮脏	c	
+filthy	/ˈfɪlθi/	adj. 污秽的，肮脏的	d	filth
+finagle	/fɪˈneɪɡl/	v. 骗取，欺诈	c	
+finale	/fɪˈnɑːli/	n. 终场，结局	c	
+finalist	/ˈfaɪnəlɪst/	n. 决赛选手	d	final
+finance	/ˈfaɪnæns/	n. 财政，金融；v. 资助	c	
+financial	/faɪˈnænʃl/	adj. 财政的，金融的	d	finance
+finch	/fɪntʃ/	n. 雀类，鸣禽	c	
+finding	/ˈfaɪndɪŋ/	n. 发现，调查结果	d	find
+finite	/ˈfaɪnaɪt/	adj. 有限的	c	
+fir	/fɜː/	n. 冷杉，杉树	c	
+firearm	/ˈfaɪərɑːm/	n. 火器，枪炮	d	fire
+firmament	/ˈfɜːməmənt/	n. 天空，苍穹	c	
+fiscal	/ˈfɪskl/	adj. 财政的，国库的	c	
+fishery	/ˈfɪʃəri/	n. 渔业，渔场	d	fish
+fission	/ˈfɪʃn/	n. 裂变，分裂	c	
+fissure	/ˈfɪʃə/	n. 裂缝，裂隙	c	
+fitful	/ˈfɪtfl/	adj. 间歇的，不规律的	c	
+flabby	/ˈflæbi/	adj. 松弛的，软弱的	c	
+flaccid	/ˈflæsɪd/	adj. 松弛的，软弱的	c	
+flag	/flæɡ/	n. 旗帜；v. 衰退，标记	c	
+flagellate	/ˈflædʒəleɪt/	v. 鞭打，斥责	c	
+flagrant	/ˈfleɪɡrənt/	adj. 明目张胆的，公然的	c	
+flair	/fleə/	n. 天赋，才能	c	
+flamboyant	/flæmˈbɔɪənt/	adj. 华丽的，炫耀的	c	
+flammable	/ˈflæməbl/	adj. 易燃的，可燃的	d	flame
+flank	/flæŋk/	n. 侧面，侧翼；v. 位于侧面	c	
+flannel	/ˈflænl/	n. 法兰绒，绒布	c	
+flask	/flɑːsk/	n. 烧瓶，长颈瓶	c	
+flat	/flæt/	adj. 平的，平淡的；n. 公寓	c	
+flatten	/ˈflætn/	v. 使平坦，压平	d	flat
+flaunt	/flɔːnt/	v. 炫耀，张扬	c	
+flavor	/ˈfleɪvə/	n. 味道，风味	c	
+flawless	/ˈflɔːləs/	adj. 无瑕疵的，完美的	d	flaw
+flax	/flæks/	n. 亚麻，亚麻纤维	c	
+fleck	/flek/	n. 斑点，微粒	c	
+fledge	/fledʒ/	v. 长出羽毛，成熟	c	
+fleece	/fliːs/	n. 羊毛；v. 诈取	c	
+fleet	/fliːt/	n. 舰队；adj. 快速的	c	
+fleeting	/ˈfliːtɪŋ/	adj. 飞逝的，短暂的	d	fleet
+flesh	/fleʃ/	n. 肉，肉体	c	
+flex	/fleks/	v. 屈伸，弯曲	c	
+flexibility	/ˌfleksəˈbɪləti/	n. 灵活性，弹性	d	flexible
+flick	/flɪk/	n./v. 轻弹，轻拂	c	
+flicker	/ˈflɪkə/	v. 闪烁，摇曳	c	
+flimsy	/ˈflɪmzi/	adj. 脆弱的，站不住脚的	c	
+flinch	/flɪntʃ/	v. 退缩，畏缩	c	
+flint	/flɪnt/	n. 燧石，打火石	c	
+flippant	/ˈflɪpənt/	adj. 轻率的，无礼的	c	
+flirt	/flɜːt/	v. 调情，玩弄	c	
+flit	/flɪt/	v. 掠过，轻快移动	c	
+flog	/flɒɡ/	v. 鞭打，鞭笞	c	
+flood	/flʌd/	n. 洪水；v. 淹没	c	
+flooding	/ˈflʌdɪŋ/	n. 泛滥，淹没	d	flood
+floral	/ˈflɔːrəl/	adj. 花的，花卉的	d	flower
+florid	/ˈflɒrɪd/	adj. 绚丽的，红润的	c	
+florist	/ˈflɒrɪst/	n. 花商，花店	d	flower
+flounder	/ˈflaʊndə/	v. 挣扎，踌躇	c	
+flour	/ˈflaʊə/	n. 面粉，粉末	c	
+flout	/flaʊt/	v. 藐视，公然违抗	c	
+fluctuate	/ˈflʌktʃueɪt/	v. 波动，起伏	c	
+fluctuation	/ˌflʌktʃuˈeɪʃn/	n. 波动，起伏	d	fluctuate
+fluency	/ˈfluːənsi/	n. 流利，流畅	d	fluent
+fluff	/flʌf/	n. 绒毛，软毛	c	
+fluke	/fluːk/	n. 侥幸，偶然	c	
+flunk	/flʌŋk/	v. 不及格，失败	c	
+fluorescent	/ˌflʊəˈresnt/	adj. 荧光的，发光的	c	
+fluoride	/ˈflɔːraɪd/	n. 氟化物	c	
+flurry	/ˈflʌri/	n. 慌张，一阵风	c	
+fluster	/ˈflʌstə/	v. 使慌张，使慌乱	c	
+flux	/flʌks/	n. 流动，变迁	c	
+foal	/fəʊl/	n. 小马驹	c	
+foam	/fəʊm/	n. 泡沫；v. 起泡沫	c	
+foe	/fəʊ/	n. 敌人，仇敌	c	
+fog	/fɒɡ/	n. 雾，烟雾	c	
+foggy	/ˈfɒɡi/	adj. 有雾的，模糊的	d	fog
+foible	/ˈfɔɪbl/	n. 小缺点，癖好	c	
+foliage	/ˈfəʊliɪdʒ/	n. 树叶，枝叶	c	
+folio	/ˈfəʊliəʊ/	n. 对开纸，页码	c	
+folk	/fəʊk/	n. 人们，民俗	c	
+folklore	/ˈfəʊklɔː/	n. 民间传说，民俗	c	
+fondle	/ˈfɒndl/	v. 抚摸，爱抚	c	
+font	/fɒnt/	n. 字体，洗礼池	c	
+foolhardy	/ˈfuːlhɑːdi/	adj. 鲁莽的，蛮干的	c	
+foolproof	/ˈfuːlpruːf/	adj. 万无一失的，可靠的	c	
+footage	/ˈfʊtɪdʒ/	n. 镜头，英尺长度	c	
+foothold	/ˈfʊthəʊld/	n. 立足点，据点	d	foot
+footnote	/ˈfʊtnəʊt/	n. 脚注	c	
+footpath	/ˈfʊtpɑːθ/	n. 人行道，小路	d	foot
+forage	/ˈfɒrɪdʒ/	v. 觅食，搜寻；n. 饲料	c	
+foray	/ˈfɒreɪ/	n. 突袭，尝试	c	
+forbearance	/fɔːˈbeərəns/	n. 忍耐，宽容	d	forbear
+forbid	/fəˈbɪd/	v. 禁止，不许	c	
+forbidding	/fəˈbɪdɪŋ/	adj. 严峻的，令人生畏的	d	forbid
+forceful	/ˈfɔːsfl/	adj. 有力的，有说服力的	d	force
+forcible	/ˈfɔːsəbl/	adj. 强制的，有说服力的	d	force
+ford	/fɔːd/	n. 浅滩；v. 涉水而过	c	
+forebode	/fɔːˈbəʊd/	v. 预示，预兆	c	
+foreboding	/fɔːˈbəʊdɪŋ/	n. 预感，不祥之感	d	forebode
+forecast	/ˈfɔːkɑːst/	v./n. 预测，预报	c	
+forefather	/ˈfɔːfɑːðə/	n. 祖先，祖宗	c	
+forefront	/ˈfɔːfrʌnt/	n. 最前线，最重要的位置	c	
+foregoing	/ˈfɔːɡəʊɪŋ/	adj. 前述的，前面的	d	forego
+forehead	/ˈfɔːhed/	n. 额头，前额	c	
+foreigner	/ˈfɒrənə/	n. 外国人	d	foreign
+foreman	/ˈfɔːmən/	n. 工头，领班	c	
+forensic	/fəˈrensɪk/	adj. 法医的，法庭的	c	
+forerunner	/ˈfɔːrʌnə/	n. 先驱，前兆	c	
+foresee	/fɔːˈsiː/	v. 预见，预知	c	
+foreshadow	/fɔːˈʃædəʊ/	v. 预示，成为…的前兆	c	
+foresight	/ˈfɔːsaɪt/	n. 远见，预见	d	fore
+forestall	/fɔːˈstɔːl/	v. 预先阻止，先发制人	c	
+foretell	/fɔːˈtel/	v. 预言，预示	c	
+forfeit	/ˈfɔːfɪt/	v. 丧失，被罚没；n. 罚金	c	
+forgery	/ˈfɔːdʒəri/	n. 伪造，赝品	d	forge
+forgive	/fəˈɡɪv/	v. 原谅，宽恕	c	
+forgo	/fɔːˈɡəʊ/	v. 放弃，戒绝	c	
+forlorn	/fəˈlɔːn/	adj. 孤独的，凄凉的	c	
+formality	/fɔːˈmæləti/	n. 礼节，形式	d	formal
+format	/ˈfɔːmæt/	n. 格式，版式	c	
+formation	/fɔːˈmeɪʃn/	n. 形成，编队	d	form
+formative	/ˈfɔːmətɪv/	adj. 形成的，有塑造力的	d	form
+formidable	/ˈfɔːmɪdəbl/	adj. 强大的，令人生畏的	c	
+formula	/ˈfɔːmjələ/	n. 公式，配方	c	
+formulate	/ˈfɔːmjuleɪt/	v. 制定，阐述	c	
+forsake	/fəˈseɪk/	v. 抛弃，放弃	c	
+forte	/ˈfɔːteɪ/	n. 长处，特长	c	
+forthright	/ˈfɔːθraɪt/	adj. 直率的，坦白的	c	
+fortify	/ˈfɔːtɪfaɪ/	v. 加强，增强	c	
+fortitude	/ˈfɔːtɪtjuːd/	n. 坚韧，刚毅	c	
+fortress	/ˈfɔːtrəs/	n. 堡垒，要塞	c	
+fortuitous	/fɔːˈtjuːɪtəs/	adj. 偶然的，幸运的	c	
+foster	/ˈfɒstə/	v. 培养，促进，收养	c	
+foul	/faʊl/	adj. 恶臭的，邪恶的；n. 犯规	c	
+founder	/ˈfaʊndə/	n. 创始人；v. 失败，沉没	c	
+foundry	/ˈfaʊndri/	n. 铸造厂	c	
+fountain	/ˈfaʊntən/	n. 喷泉，源泉	c	
+fraction	/ˈfrækʃn/	n. 分数，一小部分	c	
+fractional	/ˈfrækʃənl/	adj. 微小的，分数的	d	fraction
+fractious	/ˈfrækʃəs/	adj. 易怒的，难驾驭的	c	
+fracture	/ˈfræktʃə/	n. 骨折，断裂	c	
+fragile	/ˈfrædʒaɪl/	adj. 脆弱的，易碎的	c	
+fragility	/frəˈdʒɪləti/	n. 脆弱，易碎	d	fragile
+fragment	/ˈfræɡmənt/	n. 碎片，片段	c	
+fragmentary	/ˈfræɡməntri/	adj. 零碎的，不完整的	d	fragment
+fragrance	/ˈfreɪɡrəns/	n. 香味，芳香	d	fragrant
+fragrant	/ˈfreɪɡrənt/	adj. 芳香的，香的	c	
+frail	/freɪl/	adj. 虚弱的，脆弱的	c	
+framed	/freɪmd/	adj. 加框的，被陷害的	d	frame
+franchise	/ˈfræntʃaɪz/	n. 特许经营权，选举权	c	
+frantic	/ˈfræntɪk/	adj. 疯狂的，狂乱的	c	
+fraternal	/frəˈtɜːnl/	adj. 兄弟的，兄弟般的	c	
+fraternity	/frəˈtɜːnəti/	n. 兄弟会，手足之情	c	
+fraudulent	/ˈfrɔːdjələnt/	adj. 欺诈的，欺骗性的	d	fraud
+fraught	/frɔːt/	adj. 充满…的，令人忧虑的	c	
+fray	/freɪ/	n. 争吵，冲突	c	
+freak	/friːk/	n. 怪人，畸形	c	
+freckle	/ˈfrekl/	n. 雀斑	c	
+freebie	/ˈfriːbi/	n. 免费赠品	c	
+freeway	/ˈfriːweɪ/	n. 高速公路	c	
+freighter	/ˈfreɪtə/	n. 货船，运输机	d	freight
+frenzy	/ˈfrenzi/	n. 狂热，疯狂	c	
+fresco	/ˈfreskəʊ/	n. 壁画	c	
+fret	/fret/	v. 烦恼，磨损	c	
+fretful	/ˈfretfl/	adj. 烦躁的，烦恼的	d	fret
+friction	/ˈfrɪkʃn/	n. 摩擦，冲突	c	
+fridge	/frɪdʒ/	n. 冰箱	c	
+frigid	/ˈfrɪdʒɪd/	adj. 严寒的，冷淡的	c	
+frill	/frɪl/	n. 褶边，装饰	c	
+fringe	/frɪndʒ/	n. 边缘，刘海	c	
+frisk	/frɪsk/	v. 搜身，欢跃	c	
+frivolous	/ˈfrɪvələs/	adj. 轻浮的，不严肃的	c	
+frock	/frɒk/	n. 连衣裙，罩袍	c	
+frog	/frɒɡ/	n. 青蛙	c	
+frolic	/ˈfrɒlɪk/	v./n. 嬉戏，欢闹	c	
+frontage	/ˈfrʌntɪdʒ/	n. 临街面，正面	d	front
+frontal	/ˈfrʌntl/	adj. 前面的，正面的	d	front
+frost	/frɒst/	n. 霜，冰冻	c	
+frosting	/ˈfrɒstɪŋ/	n. 糖霜，结霜	d	frost
+froth	/frɒθ/	n. 泡沫；v. 起泡沫	c	
+frowzy	/ˈfraʊzi/	adj. 不整洁的，有臭味的	c	
+frugal	/ˈfruːɡl/	adj. 节俭的，朴素的	c	
+frugality	/fruːˈɡæləti/	n. 节俭，朴素	d	frugal
+fruitful	/ˈfruːtfl/	adj. 富有成效的，多产的	d	fruit
+fruition	/fruˈɪʃn/	n. 实现，成果	c	
+frustrate	/frʌˈstreɪt/	v. 使沮丧，挫败	c	
+frustration	/frʌˈstreɪʃn/	n. 挫折，沮丧	d	frustrate
+fugitive	/ˈfjuːdʒətɪv/	n. 逃亡者；adj. 逃亡的	c	
+fulfill	/fʊlˈfɪl/	v. 履行，实现	c	
+fullness	/ˈfʊlnəs/	n. 充满，完全	d	full
+fulsome	/ˈfʊlsəm/	adj. 过分的，令人作呕的	c	
+fumble	/ˈfʌmbl/	v. 摸索，笨手笨脚地做	c	
+fume	/fjuːm/	n. 烟，气体；v. 冒烟	c	
+fumigate	/ˈfjuːmɪɡeɪt/	v. 熏蒸，熏香	c	
+functional	/ˈfʌŋkʃənl/	adj. 功能的，实用的	d	function
+functionary	/ˈfʌŋkʃənəri/	n. 公务员，官员	d	function
+fundamental	/ˌfʌndəˈmentl/	adj. 基本的，根本的	c	
+funeral	/ˈfjuːnərəl/	n. 葬礼，丧葬	c	
+funereal	/fjuːˈnɪəriəl/	adj. 悲哀的，葬礼的	d	funeral
+fungus	/ˈfʌŋɡəs/	n. 真菌，霉菌	c	
+funnel	/ˈfʌnl/	n. 漏斗，烟囱	c	
+furlough	/ˈfɜːləʊ/	n. 休假，暂时解雇	c	
+furnish	/ˈfɜːnɪʃ/	v. 布置，提供	c	
+furnishings	/ˈfɜːnɪʃɪŋz/	n. 家具，陈设	d	furnish
+furrow	/ˈfʌrəʊ/	n. 沟，皱纹；v. 犁地	c	
+furtive	/ˈfɜːtɪv/	adj. 鬼鬼祟祟的，偷偷摸摸的	c	
+fury	/ˈfjʊəri/	n. 狂怒，暴怒	c	
+fusion	/ˈfjuːʒn/	n. 融合，聚变	c	
+futile	/ˈfjuːtaɪl/	adj. 无效的，徒劳的	c	
+futility	/fjuːˈtɪləti/	n. 徒劳，无效	d	futile
+gaiety	/ˈɡeɪəti/	n. 欢乐，快乐	c	
+gaily	/ˈɡeɪli/	adv. 快乐地，欢快地	c	
+gainful	/ˈɡeɪnfl/	adj. 有报酬的，有利的	d	gain
+galaxy	/ˈɡæləksi/	n. 星系，银河	c	
+gale	/ɡeɪl/	n. 大风，狂风	c	
+gallant	/ˈɡælənt/	adj. 英勇的，殷勤的	c	
+gallantry	/ˈɡæləntri/	n. 英勇，殷勤	d	gallant
+gall bladder	/ˈɡɔːl blædə/	n. 胆囊	c	
+gallop	/ˈɡæləp/	v./n. 疾驰，飞奔	c	
+galore	/ɡəˈlɔː/	adj. 大量的，丰富的	c	
+galvanize	/ˈɡælvənaɪz/	v. 激励，通电镀锌	c	
+gambit	/ˈɡæmbɪt/	n. 开局策略，开场白	c	
+gamble	/ˈɡæmbl/	v./n. 赌博，冒险	c	
+gambol	/ˈɡæmbl/	v. 欢跃，嬉戏	c	
+gamut	/ˈɡæmət/	n. 全范围，全部	c	
+gangster	/ˈɡæŋstə/	n. 歹徒，匪徒	d	gang
+gape	/ɡeɪp/	v. 张口结舌，目瞪口呆	c	
+garage	/ˈɡærɑːʒ/	n. 车库，修车厂	c	
+garb	/ɡɑːb/	n. 服装，装束	c	
+garbage	/ˈɡɑːbɪdʒ/	n. 垃圾，废物	c	
+garble	/ˈɡɑːbl/	v. 篡改，混淆	c	
+gardenia	/ɡɑːˈdiːniə/	n. 栀子花	c	
+gargantuan	/ɡɑːˈɡæntʃuən/	adj. 巨大的，庞大的	c	
+gargle	/ˈɡɑːɡl/	v. 漱口	c	
+garish	/ˈɡeərɪʃ/	adj. 花哨的，俗丽的	c	
+garland	/ˈɡɑːlənd/	n. 花环，花冠	c	
+garlic	/ˈɡɑːlɪk/	n. 大蒜	c	
+garner	/ˈɡɑːnə/	v. 收集，获得	c	
+garnish	/ˈɡɑːnɪʃ/	v. 装饰，配菜	c	
+garret	/ˈɡærət/	n. 阁楼，顶楼	c	
+garrulous	/ˈɡærələs/	adj. 唠叨的，话多的	c	
+gash	/ɡæʃ/	n. 深长的伤口；v. 划伤	c	
+gastric	/ˈɡæstrɪk/	adj. 胃的，胃部的	c	
+gateway	/ˈɡeɪtweɪ/	n. 网关，门户	c	
+gather	/ˈɡæðə/	v. 聚集，收集	c	
+gathering	/ˈɡæðərɪŋ/	n. 聚会，集会	d	gather
+gaudy	/ˈɡɔːdi/	adj. 花哨的，俗气的	c	
+gauge	/ɡeɪdʒ/	n. 仪表，标准；v. 测量	c	
+gaunt	/ɡɔːnt/	adj. 憔悴的，瘦削的	c	
+gavel	/ˈɡævl/	n. 木槌	c	
+gawk	/ɡɔːk/	v. 呆看，发愣	c	
+gawky	/ˈɡɔːki/	adj. 笨拙的，腼腆的	c	
+gaze	/ɡeɪz/	v./n. 凝视，注视	c	
+gear	/ɡɪə/	n. 齿轮，装备	c	
+gem	/dʒem/	n. 宝石，珍品	c	
+genealogy	/ˌdʒiːniˈælədʒi/	n. 家谱，系谱学	c	
+generality	/ˌdʒenəˈræləti/	n. 一般性，概说	d	general
+generalization	/ˌdʒenrəlaɪˈzeɪʃn/	n. 概括，归纳	d	generalize
+generator	/ˈdʒenəreɪtə/	n. 发电机，发生器	d	generate
+generosity	/ˌdʒenəˈrɒsəti/	n. 慷慨，大方	d	generous
+genesis	/ˈdʒenəsɪs/	n. 起源，创始	c	
+genetic	/dʒəˈnetɪk/	adj. 遗传的，基因的	c	
+genial	/ˈdʒiːniəl/	adj. 亲切的，友善的	c	
+genital	/ˈdʒenɪtl/	adj. 生殖的，生殖器的	c	
+genius	/ˈdʒiːniəs/	n. 天才，天赋	c	
+genocide	/ˈdʒenəsaɪd/	n. 种族灭绝	c	
+genome	/ˈdʒiːnəʊm/	n. 基因组	c	
+genre	/ˈʒɒnrə/	n. 体裁，类型	c	
+genteel	/dʒenˈtiːl/	adj. 上流社会的，文雅的	c	
+gentile	/ˈdʒentaɪl/	n. 非犹太人，异教徒	c	
+gentry	/ˈdʒentri/	n. 绅士阶层，贵族	c	
+genuine	/ˈdʒenjuɪn/	adj. 真正的，真诚的	c	
+geology	/dʒiˈɒlədʒi/	n. 地质学	c	
+geometry	/dʒiˈɒmətri/	n. 几何学	c	
+germinate	/ˈdʒɜːmɪneɪt/	v. 发芽，萌发	d	germ
+gerund	/ˈdʒerənd/	n. 动名词	c	
+gesticulate	/dʒeˈstɪkjuleɪt/	v. 做手势，打手势	d	gesture
+gesture	/ˈdʒestʃə/	n. 手势，姿态	c	
+ghastly	/ˈɡɑːstli/	adj. 可怕的，苍白的	c	
+ghetto	/ˈɡetəʊ/	n. 贫民区，聚居区	c	
+ghost	/ɡəʊst/	n. 鬼魂，幽灵	c	
+ghostly	/ˈɡəʊstli/	adj. 幽灵般的，苍白的	d	ghost
+gibberish	/ˈdʒɪbərɪʃ/	n. 胡言乱语，废话	c	
+gibe	/dʒaɪb/	v./n. 嘲笑，讥讽	c	
+giddy	/ˈɡɪdi/	adj. 头晕的，轻浮的	c	
+gild	/ɡɪld/	v. 镀金，粉饰	c	
+gimmick	/ˈɡɪmɪk/	n. 噱头，花招	c	
+ginger	/ˈdʒɪndʒə/	n. 姜，生姜	c	
+gingerly	/ˈdʒɪndʒəli/	adv. 小心翼翼地	c	
+giraffe	/dʒəˈrɑːf/	n. 长颈鹿	c	
+gird	/ɡɜːd/	v. 束紧，准备	c	
+girder	/ˈɡɜːdə/	n. 大梁，桁架	c	
+girdle	/ˈɡɜːdl/	n. 腰带，环绕物	c	
+girth	/ɡɜːθ/	n. 周长，腰围	c	
+glacier	/ˈɡlæsiə/	n. 冰川，冰河	c	
+gladiator	/ˈɡlædieɪtə/	n. 角斗士，斗士	c	
+glamorous	/ˈɡlæmərəs/	adj. 迷人的，富有魅力的	d	glamour
+glance	/ɡlɑːns/	v./n. 一瞥，扫视	c	
+gland	/ɡlænd/	n. 腺，腺体	c	
+glare	/ɡleə/	v./n. 怒视，强光	c	
+glaring	/ˈɡleərɪŋ/	adj. 明显的，耀眼的	d	glare
+glaze	/ɡleɪz/	v. 上釉，使光滑；n. 釉	c	
+glean	/ɡliːn/	v. 收集，搜集	c	
+glee	/ɡliː/	n. 欢乐，高兴	c	
+gleeful	/ˈɡliːfl/	adj. 欢乐的，高兴的	d	glee
+glib	/ɡlɪb/	adj. 油嘴滑舌的，肤浅的	c	
+glimmer	/ˈɡlɪmə/	v./n. 微弱闪光，一丝	c	
+glimpse	/ɡlɪmps/	n./v. 一瞥，瞥见	c	
+glisten	/ˈɡlɪsn/	v. 闪光，闪亮	c	
+glitter	/ˈɡlɪtə/	v./n. 闪闪发光	c	
+gloat	/ɡləʊt/	v. 幸灾乐祸，垂涎	c	
+globe	/ɡləʊb/	n. 地球，球体	c	
+gloom	/ɡluːm/	n. 阴暗，忧郁	c	
+gloomy	/ˈɡluːmi/	adj. 阴暗的，忧郁的	d	gloom
+glorify	/ˈɡlɔːrɪfaɪ/	v. 赞美，颂扬	d	glory
+gloss	/ɡlɒs/	n. 光泽，注释；v. 使有光泽	c	
+glossary	/ˈɡlɒsəri/	n. 词汇表，术语表	c	
+glossy	/ˈɡlɒsi/	adj. 有光泽的，光滑的	d	gloss
+glove	/ɡlʌv/	n. 手套	c	
+glower	/ˈɡlaʊə/	v. 怒视，瞪眼	c	
+glowing	/ˈɡləʊɪŋ/	adj. 灼热的，热情的	d	glow
+glucose	/ˈɡluːkəʊs/	n. 葡萄糖	c	
+glut	/ɡlʌt/	n. 过量，供过于求；v. 充斥	c	
+glutton	/ˈɡlʌtn/	n. 贪食者，饕餮之徒	c	
+gnarled	/nɑːld/	adj. 多节的，粗糙的	c	
+gnash	/næʃ/	v. 咬牙切齿	c	
+gnat	/næt/	n. 小昆虫，蚊蚋	c	
+gnaw	/nɔː/	v. 啃，咬	c	
+goad	/ɡəʊd/	v. 刺激，激励；n. 激励	c	
+gobble	/ˈɡɒbl/	v. 狼吞虎咽，咯咯叫	c	
+goblet	/ˈɡɒblət/	n. 高脚杯	c	
+goblin	/ˈɡɒblɪn/	n. 小妖精，哥布林	c	
+goggle	/ˈɡɒɡl/	v. 瞪眼看；n. 护目镜	c	
+golden	/ˈɡəʊldən/	adj. 金色的，黄金的	d	gold
+golf	/ɡɒlf/	n. 高尔夫球	c	
+gong	/ɡɒŋ/	n. 锣	c	
+goodness	/ˈɡʊdnəs/	n. 善良，美德	d	good
+gorge	/ɡɔːdʒ/	n. 峡谷；v. 狼吞虎咽	c	
+gorgeous	/ˈɡɔːdʒəs/	adj. 华丽的，极好的	c	
+gospel	/ˈɡɒspl/	n. 福音，真理	c	
+gossip	/ˈɡɒsɪp/	n./v. 闲话，流言	c	
+gouge	/ɡaʊdʒ/	v. 凿，诈取	c	
+gourd	/ɡʊəd/	n. 葫芦，瓜	c	
+gourmet	/ˈɡʊəmeɪ/	n. 美食家	c	
+govern	/ˈɡʌvn/	v. 统治，管理	c	
+governance	/ˈɡʌvənəns/	n. 治理，管理	d	govern
+gown	/ɡaʊn/	n. 长袍，礼服	c	
+grab	/ɡræb/	v. 抓住，抢夺	c	
+graceful	/ˈɡreɪsfl/	adj. 优雅的，优美的	d	grace
+gracious	/ˈɡreɪʃəs/	adj. 亲切的，优雅的	d	grace
+gradation	/ɡrəˈdeɪʃn/	n. 渐变，等级	d	grade
+gradient	/ˈɡreɪdiənt/	n. 坡度，梯度	d	grade
+gradual	/ˈɡrædʒuəl/	adj. 逐渐的，渐进的	c	
+graduate	/ˈɡrædʒuət/	n. 毕业生；v. 毕业	c	
+graft	/ɡrɑːft/	n. 移植，贪污；v. 嫁接	c	
+grail	/ɡreɪl/	n. 圣杯，渴望之物	c	
+grain	/ɡreɪn/	n. 谷物，颗粒	c	
+grammar	/ˈɡræmə/	n. 语法，文法	c	
+grandeur	/ˈɡrændʒə/	n. 宏伟，壮丽	d	grand
+grandiose	/ˈɡrændiəʊs/	adj. 宏伟的，浮夸的	c	
+granite	/ˈɡrænɪt/	n. 花岗岩	c	
+grant	/ɡrɑːnt/	v. 授予，同意；n. 拨款	c	
+granular	/ˈɡrænjələ/	adj. 颗粒状的	d	grain
+granule	/ˈɡrænjuːl/	n. 小颗粒，细粒	d	grain
+grape	/ɡreɪp/	n. 葡萄	c	
+graphic	/ˈɡræfɪk/	adj. 生动的，图形的	d	graph
+graphite	/ˈɡræfaɪt/	n. 石墨	c	
+grapple	/ˈɡræpl/	v. 扭打，努力应对	c	
+grasp	/ɡrɑːsp/	v. 抓住，理解	c	
+grate	/ɡreɪt/	v. 磨碎，使人烦躁	c	
+grateful	/ˈɡreɪtfl/	adj. 感激的，感谢的	c	
+gratify	/ˈɡrætɪfaɪ/	v. 使满足，使高兴	c	
+gratification	/ˌɡrætɪfɪˈkeɪʃn/	n. 满足，喜悦	d	gratify
+gratis	/ˈɡrætɪs/	adv. 免费地	c	
+gratitude	/ˈɡrætɪtjuːd/	n. 感激，感谢	c	
+gratuitous	/ɡrəˈtjuːɪtəs/	adj. 无偿的，无缘无故的	c	
+gratuity	/ɡrəˈtjuːəti/	n. 小费，赏钱	c	
+grave	/ɡreɪv/	n. 坟墓；adj. 严重的	c	
+gravel	/ˈɡrævl/	n. 砾石，碎石	c	
+gravity	/ˈɡrævəti/	n. 重力，严重性	c	
+gravy	/ˈɡreɪvi/	n. 肉汁，肉卤	c	
+graze	/ɡreɪz/	v. 放牧，擦伤	c	
+grease	/ɡriːs/	n. 油脂，润滑油	c	
+greasy	/ˈɡriːsi/	adj. 油腻的，油滑的	d	grease
+greatness	/ˈɡreɪtnəs/	n. 伟大，崇高	d	great
+greed	/ɡriːd/	n. 贪婪，贪心	c	
+greedy	/ˈɡriːdi/	adj. 贪婪的，贪吃的	d	greed
+greenhouse	/ˈɡriːnhaʊs/	n. 温室，暖房	c	
+gregarious	/ɡrɪˈɡeəriəs/	adj. 群居的，爱交际的	c	
+grief	/ɡriːf/	n. 悲伤，悲痛	c	
+grievance	/ˈɡriːvəns/	n. 委屈，不满	d	grieve
+grieve	/ɡriːv/	v. 悲伤，使悲伤	c	
+grievous	/ˈɡriːvəs/	adj. 严重的，令人悲痛的	d	grief
+grim	/ɡrɪm/	adj. 严峻的，令人不快的	c	
+grimace	/ɡrɪˈmeɪs/	n./v. 鬼脸，做鬼脸	c	
+grime	/ɡraɪm/	n. 污垢，煤灰	c	
+grimy	/ˈɡraɪmi/	adj. 肮脏的，积垢的	d	grime
+grin	/ɡrɪn/	v./n. 咧嘴笑	c	
+grind	/ɡraɪnd/	v. 磨碎，碾	c	
+grip	/ɡrɪp/	v. 紧握，抓住	c	
+gripe	/ɡraɪp/	v. 抱怨，发牢骚	c	
+grisly	/ˈɡrɪzli/	adj. 可怕的，令人毛骨悚然的	c	
+grit	/ɡrɪt/	n. 砂砾，勇气；v. 咬紧牙关	c	
+groan	/ɡrəʊn/	v./n. 呻吟，抱怨	c	
+grocer	/ˈɡrəʊsə/	n. 杂货商	d	grocery
+grocery	/ˈɡrəʊsəri/	n. 杂货店，食品杂货	c	
+groggy	/ˈɡrɒɡi/	adj. 昏昏沉沉的，摇摇晃晃的	c	
+groin	/ɡrɔɪn/	n. 腹股沟	c	
+groom	/ɡruːm/	n. 新郎；v. 打扮，培养	c	
+groove	/ɡruːv/	n. 沟槽，纹路	c	
+grope	/ɡrəʊp/	v. 摸索，探寻	c	
+gross	/ɡrəʊs/	adj. 总的，粗俗的	c	
+grotesque	/ɡrəʊˈtesk/	adj. 怪诞的，荒唐的	c	
+grotto	/ˈɡrɒtəʊ/	n. 洞穴，岩洞	c	
+grouch	/ɡraʊtʃ/	v./n. 发牢骚，抱怨	c	
+groundless	/ˈɡraʊndləs/	adj. 无根据的，没理由的	d	ground
+grouse	/ɡraʊs/	v. 抱怨，发牢骚	c	
+grout	/ɡraʊt/	n. 薄泥浆，水泥浆	c	
+grove	/ɡrəʊv/	n. 小树林，果林	c	
+grovel	/ˈɡrɒvl/	v. 匍匐，卑躬屈膝	c	
+growl	/ɡraʊl/	v./n. 咆哮，低吼	c	
+grudge	/ɡrʌdʒ/	n. 怨恨，不满	c	
+grueling	/ˈɡruːəlɪŋ/	adj. 折磨人的，精疲力竭的	c	
+gruesome	/ˈɡruːsəm/	adj. 可怕的，令人毛骨悚然的	c	
+gruff	/ɡrʌf/	adj. 粗鲁的，生硬的	c	
+grumble	/ˈɡrʌmbl/	v. 抱怨，咕哝	c	
+grunt	/ɡrʌnt/	v./n. 咕哝，发出呼噜声	c	
+guarantee	/ˌɡærənˈtiː/	v./n. 保证，担保	c	
+guardian	/ˈɡɑːdiən/	n. 监护人，守护者	d	guard
+guerrilla	/ɡəˈrɪlə/	n. 游击队员	c	
+guidance	/ˈɡaɪdns/	n. 指导，引导	d	guide
+guild	/ɡɪld/	n. 行会，协会	c	
+guile	/ɡaɪl/	n. 诡计，狡猾	c	
+guillotine	/ˈɡɪlətiːn/	n. 断头台	c	
+guilt	/ɡɪlt/	n. 罪行，内疚	c	
+guilty	/ˈɡɪlti/	adj. 有罪的，内疚的	d	guilt
+guise	/ɡaɪz/	n. 外表，伪装	c	
+gulf	/ɡʌlf/	n. 海湾，鸿沟	c	
+gullible	/ˈɡʌləbl/	adj. 易受骗的，轻信的	c	
+gulp	/ɡʌlp/	v. 吞咽，喘气	c	
+gumbo	/ˈɡʌmbəʊ/	n. 秋葵汤，混合物	c	
+gush	/ɡʌʃ/	v. 涌出，滔滔不绝	c	
+gust	/ɡʌst/	n. 一阵狂风，爆发	c	
+gusto	/ˈɡʌstəʊ/	n. 兴致，热情	c	
+gut	/ɡʌt/	n. 内脏，勇气	c	
+gutter	/ˈɡʌtə/	n. 排水沟，贫民区	c	
+guttural	/ˈɡʌtərəl/	adj. 喉音的，粗哑的	c	
+guzzle	/ˈɡʌzl/	v. 狂饮，暴食	c	
+gyrate	/dʒaɪˈreɪt/	v. 旋转，回旋	c	
+habitat	/ˈhæbɪtæt/	n. 栖息地，产地	c	
+habitual	/həˈbɪtʃuəl/	adj. 习惯性的，惯常的	d	habit
+habituate	/həˈbɪtʃueɪt/	v. 使习惯，使适应	d	habit
+hack	/hæk/	v. 砍，非法入侵	c	
+hackneyed	/ˈhæknid/	adj. 陈腐的，老套的	c	
+haggle	/ˈhæɡl/	v. 讨价还价，争论	c	
+hail	/heɪl/	v. 欢呼，招呼；n. 冰雹	c	
+halcyon	/ˈhælsiən/	adj. 平静的，美好的	c	
+hale	/heɪl/	adj. 健壮的，矍铄的	c	
+hallmark	/ˈhɔːlmɑːk/	n. 标志，特点	c	
+hallow	/ˈhæləʊ/	v. 使神圣，尊崇	c	
+hallucination	/həˌluːsɪˈneɪʃn/	n. 幻觉，错觉	c	
+halo	/ˈheɪləʊ/	n. 光环，晕圈	c	
+halt	/hɔːlt/	v./n. 停止，暂停	c	
+halting	/ˈhɔːltɪŋ/	adj. 踌躇的，不流畅的	d	halt
+hamlet	/ˈhæmlət/	n. 小村庄	c	
+hammer	/ˈhæmə/	n. 锤子；v. 锤击	c	
+hamper	/ˈhæmpə/	v. 妨碍，阻碍	c	
+handicap	/ˈhændikæp/	n. 障碍，缺陷	c	
+handicraft	/ˈhændikrɑːft/	n. 手工艺，手工艺品	c	
+handiwork	/ˈhændiwɜːk/	n. 手工制品，作品	d	hand
+handsome	/ˈhænsəm/	adj. 英俊的，可观的	c	
+hangar	/ˈhæŋə/	n. 飞机库	c	
+hanker	/ˈhæŋkə/	v. 渴望，向往	c	
+haphazard	/ˌhæpˈhæzəd/	adj. 随意的，杂乱的	c	
+hapless	/ˈhæpləs/	adj. 倒霉的，不幸的	c	
+harangue	/həˈræŋ/	n./v. 长篇大论，训斥	c	
+harass	/ˈhærəs/	v. 骚扰，纠缠	c	
+harbinger	/ˈhɑːbɪndʒə/	n. 预兆，先驱	c	
+harbor	/ˈhɑːbə/	n. 港口；v. 怀有	c	
+hardihood	/ˈhɑːdihʊd/	n. 大胆，刚毅	d	hardy
+hardship	/ˈhɑːdʃɪp/	n. 艰难，困苦	d	hard
+hardware	/ˈhɑːdweə/	n. 硬件，五金	c	
+hardy	/ˈhɑːdi/	adj. 耐寒的，坚强的	c	
+harmonious	/hɑːˈməʊniəs/	adj. 和谐的，协调的	d	harmony
+harness	/ˈhɑːnɪs/	v. 利用，驾驭；n. 马具	c	
+harp	/hɑːp/	n. 竖琴；v. 喋喋不休	c	
+harpoon	/hɑːˈpuːn/	n. 鱼叉	c	
+harrow	/ˈhærəʊ/	n. 耙；v. 耙地，使痛苦	c	
+harrowing	/ˈhærəʊɪŋ/	adj. 令人痛心的，悲惨的	d	harrow
+harry	/ˈhæri/	v. 侵扰，掠夺	c	
+harsh	/hɑːʃ/	adj. 严厉的，粗糙的	c	
+harvest	/ˈhɑːvɪst/	n./v. 收获，收割	c	
+hassle	/ˈhæsl/	n. 麻烦，争论	c	
+hasty	/ˈheɪsti/	adj. 匆忙的，草率的	d	haste
+hatch	/hætʃ/	v. 孵化，策划	c	
+hatchet	/ˈhætʃɪt/	n. 短柄斧	c	
+hateful	/ˈheɪtfl/	adj. 可恨的，讨厌的	d	hate
+haughty	/ˈhɔːti/	adj. 傲慢的，自大的	c	
+haul	/hɔːl/	v. 拖，拉；n. 拖运	c	
+haunt	/hɔːnt/	v. 萦绕，常去	c	
+haunting	/ˈhɔːntɪŋ/	adj. 萦绕心头的，难忘的	d	haunt
+haven	/ˈheɪvn/	n. 避风港，避难所	c	
+havoc	/ˈhævək/	n. 大破坏，浩劫	c	
+hawk	/hɔːk/	n. 鹰，鹰派	c	
+hay	/heɪ/	n. 干草	c	
+hazard	/ˈhæzəd/	n. 危险，危害	c	
+hazardous	/ˈhæzədəs/	adj. 危险的，有害的	d	hazard
+haze	/heɪz/	n. 薄雾，阴霾	c	
+hazy	/ˈheɪzi/	adj. 有雾的，模糊的	d	haze
+headache	/ˈhedeɪk/	n. 头痛，令人头痛的事	c	
+headlong	/ˈhedlɒŋ/	adv. 头向前地，轻率地	c	
+headmaster	/ˌhedˈmɑːstə/	n. 校长	d	head
+headquarters	/ˌhedˈkwɔːtəz/	n. 总部，司令部	c	
+headstrong	/ˈhedstrɒŋ/	adj. 固执的，任性的	c	
+headway	/ˈhedweɪ/	n. 进展，前进	c	
+heal	/hiːl/	v. 治愈，愈合	c	
+hearsay	/ˈhɪəseɪ/	n. 传闻，道听途说	c	
+hearse	/hɜːs/	n. 灵车	c	
+heartache	/ˈhɑːteɪk/	n. 心痛，悲伤	c	
+heartfelt	/ˈhɑːtfelt/	adj. 衷心的，诚挚的	c	
+hearth	/hɑːθ/	n. 壁炉，炉边	c	
+heartily	/ˈhɑːtɪli/	adv. 衷心地，热忱地	d	hearty
+hearty	/ˈhɑːti/	adj. 衷心的，丰盛的	c	
+heathen	/ˈhiːðn/	n. 异教徒；adj. 异教的	c	
+heave	/hiːv/	v. 举起，起伏	c	
+heavenly	/ˈhevənli/	adj. 天堂般的，美好的	d	heaven
+hectare	/ˈhekteə/	n. 公顷	c	
+hectic	/ˈhektɪk/	adj. 忙乱的，兴奋的	c	
+hedge	/hedʒ/	n. 树篱，防备	c	
+hedonism	/ˈhiːdənɪzəm/	n. 享乐主义	c	
+heed	/hiːd/	v./n. 注意，留意	c	
+heedless	/ˈhiːdləs/	adj. 不注意的，粗心的	d	heed
+hefty	/ˈhefti/	adj. 沉重的，可观的	c	
+hegemony	/hɪˈɡeməni/	n. 霸权，领导权	c	
+heighten	/ˈhaɪtn/	v. 提高，加强	d	height
+heinous	/ˈheɪnəs/	adj. 极恶的，可憎的	c	
+heir	/eə/	n. 继承人	c	
+heiress	/ˈeəres/	n. 女继承人	d	heir
+heirloom	/ˈeəluːm/	n. 传家宝	c	
+helium	/ˈhiːliəm/	n. 氦	c	
+helm	/helm/	n. 舵，掌舵	c	
+helmet	/ˈhelmɪt/	n. 头盔，防护帽	c	
+helper	/ˈhelpə/	n. 助手，帮手	d	help
+herald	/ˈherəld/	v. 预示；n. 先驱	c	
+herb	/hɜːb/	n. 草药，香草	c	
+herbivore	/ˈhɜːbɪvɔː/	n. 食草动物	c	
+herd	/hɜːd/	n. 兽群，人群	c	
+hereditary	/həˈredɪtri/	adj. 遗传的，世袭的	d	heritage
+heresy	/ˈherəsi/	n. 异端，异教	c	
+heretic	/ˈherətɪk/	n. 异教徒，持异端者	d	heresy
+heritage	/ˈherɪtɪdʒ/	n. 遗产，传统	c	
+hermit	/ˈhɜːmɪt/	n. 隐士，遁世者	c	
+heroic	/həˈrəʊɪk/	adj. 英勇的，英雄的	d	hero
+heroin	/ˈherəʊɪn/	n. 海洛因	c	
+heroine	/ˈherəʊɪn/	n. 女英雄，女主角	d	hero
+heron	/ˈherən/	n. 苍鹭	c	
+hesitant	/ˈhezɪtənt/	adj. 犹豫的，踌躇的	d	hesitate
+hesitation	/ˌhezɪˈteɪʃn/	n. 犹豫，踌躇	d	hesitate
+heterogeneous	/ˌhetərəˈdʒiːniəs/	adj. 异质的，多样的	c	
+hew	/hjuː/	v. 砍，劈	c	
+heyday	/ˈheɪdeɪ/	n. 全盛期，鼎盛时期	c	
+hiatus	/haɪˈeɪtəs/	n. 空隙，中断	c	
+hibernate	/ˈhaɪbəneɪt/	v. 冬眠，蛰伏	c	
+hibernation	/ˌhaɪbəˈneɪʃn/	n. 冬眠	d	hibernate
+hiccup	/ˈhɪkʌp/	n. 打嗝；v. 打嗝	c	
+hideous	/ˈhɪdiəs/	adj. 丑陋的，可怕的	c	
+hierarchy	/ˈhaɪərɑːki/	n. 等级制度，层级	c	
+hieroglyph	/ˈhaɪərəɡlɪf/	n. 象形文字	c	
+highlight	/ˈhaɪlaɪt/	v. 突出，强调	c	
+hijack	/ˈhaɪdʒæk/	v. 劫持，劫机	c	
+hike	/haɪk/	v./n. 徒步，远足	c	
+hilarious	/hɪˈleəriəs/	adj. 欢闹的，滑稽的	c	
+hillside	/ˈhɪlsaɪd/	n. 山坡，山腰	c	
+hinder	/ˈhɪndə/	v. 阻碍，妨碍	c	
+hindrance	/ˈhɪndrəns/	n. 障碍，妨碍	d	hinder
+hinge	/hɪndʒ/	n. 铰链，关键	c	
+hint	/hɪnt/	n./v. 暗示，提示	c	
+hinterland	/ˈhɪntəlænd/	n. 内地，腹地	c	
+hip	/hɪp/	n. 臀部，髋部	c	
+hireling	/ˈhaɪəlɪŋ/	n. 雇工，佣工	d	hire
+hiss	/hɪs/	v./n. 发出嘶嘶声	c	
+historian	/hɪˈstɔːriən/	n. 历史学家	d	history
+historic	/hɪˈstɒrɪk/	adj. 历史性的，有历史意义的	d	history
+hitch	/hɪtʃ/	v. 搭便车，拴住	c	
+hitherto	/ˌhɪðəˈtuː/	adv. 迄今为止，到目前为止	c	
+hoard	/hɔːd/	v./n. 贮藏，囤积	c	
+hoarse	/hɔːs/	adj. 嘶哑的，刺耳的	c	
+hoax	/həʊks/	n./v. 骗局，欺骗	c	
+hobble	/ˈhɒbl/	v. 跛行，蹒跚	c	
+hobby	/ˈhɒbi/	n. 爱好，业余爱好	c	
+hoist	/hɔɪst/	v. 升起，吊起	c	
+holder	/ˈhəʊldə/	n. 持有者，支架	d	hold
+holocaust	/ˈhɒləkɔːst/	n. 大屠杀，浩劫	c	
+hologram	/ˈhɒləɡræm/	n. 全息图	c	
+homage	/ˈhɒmɪdʒ/	n. 敬意，尊崇	c	
+homely	/ˈhəʊmli/	adj. 朴素的，家常的	d	home
+homestead	/ˈhəʊmsted/	n. 家宅，农庄	c	
+homicide	/ˈhɒmɪsaɪd/	n. 杀人，凶杀	c	
+homogeneous	/ˌhɒməˈdʒiːniəs/	adj. 同质的，同类的	c	
+homosexual	/ˌhəʊməˈsekʃuəl/	adj. 同性恋的	c	
+honk	/hɒŋk/	v./n. 鸣喇叭	c	
+hood	/hʊd/	n. 兜帽，引擎盖	c	
+hoof	/huːf/	n. 蹄	c	
+hook	/hʊk/	n. 钩子；v. 钩住	c	
+hooligan	/ˈhuːlɪɡən/	n. 小流氓，无赖	c	
+hoop	/huːp/	n. 箍，环	c	
+horizontal	/ˌhɒrɪˈzɒntl/	adj. 水平的	d	horizon
+hormone	/ˈhɔːməʊn/	n. 荷尔蒙，激素	c	
+horn	/hɔːn/	n. 角，喇叭	c	
+horoscope	/ˈhɒrəskəʊp/	n. 星象，星座运势	c	
+horrendous	/həˈrendəs/	adj. 可怕的，骇人的	c	
+horrid	/ˈhɒrɪd/	adj. 可怕的，讨厌的	c	
+horrify	/ˈhɒrɪfaɪ/	v. 使恐惧，使震惊	d	horror
+horsepower	/ˈhɔːspaʊə/	n. 马力	c	
+horticulture	/ˈhɔːtɪkʌltʃə/	n. 园艺，园艺学	c	
+hospitable	/hɒˈspɪtəbl/	adj. 好客的，热情的	d	hospitality
+hostage	/ˈhɒstɪdʒ/	n. 人质，抵押品	c	
+hostel	/ˈhɒstl/	n. 旅舍，招待所	c	
+hostility	/hɒˈstɪləti/	n. 敌意，敌对	d	hostile
+hound	/haʊnd/	n. 猎犬；v. 追逼	c	
+household	/ˈhaʊshəʊld/	n. 家庭，一家人	c	
+housewife	/ˈhaʊswaɪf/	n. 家庭主妇	c	
+housing	/ˈhaʊzɪŋ/	n. 住房，住宅	d	house
+hovel	/ˈhɒvl/	n. 陋室，小屋	c	
+hover	/ˈhɒvə/	v. 盘旋，徘徊	c	
+howl	/haʊl/	v./n. 嚎叫，怒吼	c	
+hub	/hʌb/	n. 中心，枢纽	c	
+hubbub	/ˈhʌbʌb/	n. 嘈杂，喧闹	c	
+huddle	/ˈhʌdl/	v. 挤作一团，蜷缩	c	
+hue	/hjuː/	n. 色调，色彩	c	
+huff	/hʌf/	n. 发怒，气恼	c	
+hulk	/hʌlk/	n. 笨重的人或物，废船	c	
+hull	/hʌl/	n. 船体，外壳	c	
+hum	/hʌm/	v. 哼唱，发出嗡嗡声	c	
+humanitarian	/hjuːˌmænɪˈteəriən/	adj. 人道主义的	c	
+humane	/hjuːˈmeɪn/	adj. 人道的，仁慈的	d	human
+humanity	/hjuːˈmænəti/	n. 人类，人性	c	
+humdrum	/ˈhʌmdrʌm/	adj. 单调的，乏味的	c	
+humid	/ˈhjuːmɪd/	adj. 潮湿的，湿润的	c	
+humidity	/hjuːˈmɪdəti/	n. 湿度，潮湿	d	humid
+humiliate	/hjuːˈmɪlieɪt/	v. 使羞辱，使丢脸	c	
+humiliation	/hjuːˌmɪliˈeɪʃn/	n. 羞辱，丢脸	d	humiliate
+humility	/hjuːˈmɪləti/	n. 谦逊，谦卑	c	
+humor	/ˈhjuːmə/	n. 幽默，性情	c	
+hump	/hʌmp/	n. 隆起，驼峰	c	
+hunch	/hʌntʃ/	n. 直觉，预感；v. 弯腰	c	
+hurdle	/ˈhɜːdl/	n. 障碍，跨栏	c	
+hurl	/hɜːl/	v. 猛投，用力扔	c	
+hurricane	/ˈhʌrɪkən/	n. 飓风	c	
+hurtle	/ˈhɜːtl/	v. 猛冲，飞驰	c	
+husbandry	/ˈhʌzbəndri/	n. 农业，饲养	d	husband
+hush	/hʌʃ/	v./n. 安静，寂静	c	
+husk	/hʌsk/	n. 外壳，皮	c	
+husky	/ˈhʌski/	adj. 沙哑的，结实的	c	
+hustle	/ˈhʌsl/	v. 推挤，匆忙	c	
+hut	/hʌt/	n. 小屋，棚屋	c	
+hybrid	/ˈhaɪbrɪd/	n. 杂交品种，混合体	c	
+hydraulic	/haɪˈdrɒlɪk/	adj. 水力的，液压的	c	
+hyena	/haɪˈiːnə/	n. 鬣狗	c	
+hygiene	/ˈhaɪdʒiːn/	n. 卫生，保健	c	
+hygienic	/haɪˈdʒiːnɪk/	adj. 卫生的，清洁的	d	hygiene
+hymn	/hɪm/	n. 赞美诗，圣歌	c	
+hype	/haɪp/	n. 炒作，大肆宣传	c	
+hyperbole	/haɪˈpɜːbəli/	n. 夸张，夸张法	c	
+hypertension	/ˌhaɪpəˈtenʃn/	n. 高血压	c	
+hyphen	/ˈhaɪfn/	n. 连字符	c	
+hypnosis	/hɪpˈnəʊsɪs/	n. 催眠，催眠状态	c	
+hypocrisy	/hɪˈpɒkrəsi/	n. 伪善，虚伪	c	
+hypocrite	/ˈhɪpəkrɪt/	n. 伪君子，虚伪者	d	hypocrisy
+hypocritical	/ˌhɪpəˈkrɪtɪkl/	adj. 虚伪的，伪善的	d	hypocrisy
+hypodermic	/ˌhaɪpəˈdɜːmɪk/	adj. 皮下的	c	
+hypotenuse	/haɪˈpɒtənjuːz/	n. 斜边	c	
+hysteria	/hɪˈstɪəriə/	n. 歇斯底里，情绪失控	c	
+iceberg	/ˈaɪsbɜːɡ/	n. 冰山	c	
+icon	/ˈaɪkɒn/	n. 图标，偶像	c	
+iconoclast	/aɪˈkɒnəklæst/	n. 打破传统者，偶像破坏者	c	
+idealism	/aɪˈdɪəlɪzəm/	n. 理想主义	d	ideal
+identical	/aɪˈdentɪkl/	adj. 完全相同的	c	
+identification	/aɪˌdentɪfɪˈkeɪʃn/	n. 识别，身份证明	d	identify
+identity	/aɪˈdentəti/	n. 身份，认同	d	identify
+ideology	/ˌaɪdiˈɒlədʒi/	n. 意识形态，思想体系	c	
+idiom	/ˈɪdiəm/	n. 习语，成语	c	
+idiosyncrasy	/ˌɪdiəˈsɪŋkrəsi/	n. 特质，个人癖好	c	
+idiot	/ˈɪdiət/	n. 白痴，傻瓜	c	
+idiotic	/ˌɪdiˈɒtɪk/	adj. 愚蠢的，白痴的	d	idiot
+idle	/ˈaɪdl/	adj. 空闲的，懒散的	c	
+idol	/ˈaɪdl/	n. 偶像，崇拜对象	c	
+idolatry	/aɪˈdɒlətri/	n. 偶像崇拜	c	
+idyll	/ˈɪdɪl/	n. 田园诗，田园生活	c	
+ignite	/ɪɡˈnaɪt/	v. 点燃，引发	c	
+ignition	/ɪɡˈnɪʃn/	n. 点火，点燃	d	ignite
+ignoble	/ɪɡˈnəʊbl/	adj. 卑鄙的，不光彩的	c	
+ignominious	/ˌɪɡnəˈmɪniəs/	adj. 可耻的，不光彩的	c	
+ignominy	/ˈɪɡnəmɪni/	n. 耻辱，不名誉	c	
+ignorance	/ˈɪɡnərəns/	n. 无知，愚昧	d	ignore
+ignorant	/ˈɪɡnərənt/	adj. 无知的，愚昧的	d	ignore
+illegible	/ɪˈledʒəbl/	adj. 难以辨认的，字迹模糊的	d	legible
+illegitimate	/ˌɪlɪˈdʒɪtɪmət/	adj. 非法的，私生的	d	legitimate
+illicit	/ɪˈlɪsɪt/	adj. 非法的，违禁的	c	
+illiterate	/ɪˈlɪtərət/	adj. 文盲的，不识字的	d	literate
+illness	/ˈɪlnəs/	n. 疾病，病痛	d	ill
+illogical	/ɪˈlɒdʒɪkl/	adj. 不合逻辑的	d	logical
+illuminate	/ɪˈluːmɪneɪt/	v. 照亮，阐明	c	
+illumination	/ɪˌluːmɪˈneɪʃn/	n. 照明，启发	d	illuminate
+illusive	/ɪˈluːsɪv/	adj. 虚幻的，迷惑人的	d	illusion
+illusory	/ɪˈluːsəri/	adj. 虚幻的，错觉的	d	illusion
+illustration	/ˌɪləˈstreɪʃn/	n. 插图，例证	d	illustrate
+illustrious	/ɪˈlʌstriəs/	adj. 杰出的，著名的	c	
+imagery	/ˈɪmɪdʒəri/	n. 意象，比喻	d	image
+imaginary	/ɪˈmædʒɪnəri/	adj. 想象的，虚构的	d	imagine
+imaginative	/ɪˈmædʒɪnətɪv/	adj. 富有想象力的	d	imagine
+imbecile	/ˈɪmbəsiːl/	n. 低能者，蠢人	c	
+imbibe	/ɪmˈbaɪb/	v. 喝，吸收	c	
+imbue	/ɪmˈbjuː/	v. 灌输，使充满	c	
+imitate	/ˈɪmɪteɪt/	v. 模仿，仿效	c	
+imitation	/ˌɪmɪˈteɪʃn/	n. 模仿，仿制品	d	imitate
+immaculate	/ɪˈmækjələt/	adj. 完美的，无瑕疵的	c	
+immaterial	/ˌɪməˈtɪəriəl/	adj. 无形的，不重要的	d	material
+immature	/ˌɪməˈtʃʊə/	adj. 不成熟的，幼稚的	d	mature
+immeasurable	/ɪˈmeʒərəbl/	adj. 无法估量的，无限的	d	measure
+immense	/ɪˈmens/	adj. 巨大的，广阔的	c	
+immensity	/ɪˈmensəti/	n. 巨大，无限	d	immense
+immerse	/ɪˈmɜːs/	v. 使沉浸，浸没	c	
+immersion	/ɪˈmɜːʃn/	n. 沉浸，浸没	d	immerse
+immigrant	/ˈɪmɪɡrənt/	n. 移民，移入者	d	immigrate
+immigrate	/ˈɪmɪɡreɪt/	v. 移入，迁入	c	
+imminent	/ˈɪmɪnənt/	adj. 即将发生的，逼近的	c	
+immobile	/ɪˈməʊbaɪl/	adj. 不动的，固定的	d	mobile
+immoderate	/ɪˈmɒdərət/	adj. 无节制的，过度的	d	moderate
+immodest	/ɪˈmɒdɪst/	adj. 不谦虚的，无礼的	d	modest
+immoral	/ɪˈmɒrəl/	adj. 不道德的，邪恶的	d	moral
+immortal	/ɪˈmɔːtl/	adj. 不朽的，永生的	d	mortal
+immortality	/ˌɪmɔːˈtæləti/	n. 不朽，永生	d	mortal
+immune	/ɪˈmjuːn/	adj. 免疫的，免除的	c	
+immunity	/ɪˈmjuːnəti/	n. 免疫，豁免	d	immune
+immutable	/ɪˈmjuːtəbl/	adj. 不可改变的，永恒的	c	
+impair	/ɪmˈpeə/	v. 损害，削弱	c	
+impart	/ɪmˈpɑːt/	v. 传授，告知	c	
+impartial	/ɪmˈpɑːʃl/	adj. 公正的，不偏不倚的	d	partial
+impasse	/ˈɪmpæs/	n. 僵局，死路	c	
+impassioned	/ɪmˈpæʃnd/	adj. 充满激情的，热烈的	d	passion
+impassive	/ɪmˈpæsɪv/	adj. 无动于衷的，冷漠的	d	passive
+impatient	/ɪmˈpeɪʃnt/	adj. 不耐烦的，急躁的	d	patient
+impeach	/ɪmˈpiːtʃ/	v. 弹劾，控告	c	
+impeccable	/ɪmˈpekəbl/	adj. 完美的，无瑕的	c	
+impede	/ɪmˈpiːd/	v. 阻碍，妨碍	c	
+impediment	/ɪmˈpedɪmənt/	n. 障碍，妨碍	d	impede
+impel	/ɪmˈpel/	v. 驱使，推动	c	
+impending	/ɪmˈpendɪŋ/	adj. 即将发生的，逼近的	d	impend
+imperative	/ɪmˈperətɪv/	adj. 必要的，命令的	c	
+imperceptible	/ˌɪmpəˈseptəbl/	adj. 觉察不到的，细微的	d	perceive
+imperfect	/ɪmˈpɜːfɪkt/	adj. 不完美的，有缺陷的	d	perfect
+imperial	/ɪmˈpɪəriəl/	adj. 帝国的，皇帝的	c	
+imperil	/ɪmˈperəl/	v. 危及，使陷危险	d	peril
+imperious	/ɪmˈpɪəriəs/	adj. 专横的，傲慢的	c	
+impersonal	/ɪmˈpɜːsənl/	adj. 客观的，非个人的	d	personal
+impersonate	/ɪmˈpɜːsəneɪt/	v. 冒充，扮演	d	person
+impertinent	/ɪmˈpɜːtɪnənt/	adj. 无礼的，不恰当的	c	
+impervious	/ɪmˈpɜːviəs/	adj. 不受影响的，不透水的	c	
+impetuous	/ɪmˈpetʃuəs/	adj. 冲动的，急躁的	c	
+impetus	/ˈɪmpɪtəs/	n. 推动力，促进	c	
+implacable	/ɪmˈplækəbl/	adj. 难以平息的，不宽容的	c	
+implant	/ɪmˈplɑːnt/	v. 植入，灌输	c	
+implausible	/ɪmˈplɔːzəbl/	adj. 难以置信的，不像真的	d	plausible
+implement	/ˈɪmplɪment/	v. 实施，执行	c	
+implementation	/ˌɪmplɪmenˈteɪʃn/	n. 实施，执行	d	implement
+implicate	/ˈɪmplɪkeɪt/	v. 牵连，涉及	d	imply
+implication	/ˌɪmplɪˈkeɪʃn/	n. 含义，暗示	d	imply
+implicit	/ɪmˈplɪsɪt/	adj. 含蓄的，内含的	c	
+implore	/ɪmˈplɔː/	v. 恳求，哀求	c	
+imply	/ɪmˈplaɪ/	v. 暗示，意味着	c	
+impolite	/ˌɪmpəˈlaɪt/	adj. 无礼的，粗鲁的	d	polite
+impolitic	/ɪmˈpɒlətɪk/	adj. 不明智的，失策的	c	
+imponderable	/ɪmˈpɒndərəbl/	adj. 无法估量的	d	ponder
+import	/ɪmˈpɔːt/	v. 进口；n. 进口	c	
+importunate	/ɪmˈpɔːtʃənət/	adj. 强求的，纠缠不休的	c	
+importune	/ˌɪmpɔːˈtjuːn/	v. 强求，纠缠	c	
+impose	/ɪmˈpəʊz/	v. 强加，征税	c	
+imposing	/ɪmˈpəʊzɪŋ/	adj. 壮观的，给人以深刻印象的	d	impose
+imposition	/ˌɪmpəˈzɪʃn/	n. 强加，征收	d	impose
+impossible	/ɪmˈpɒsəbl/	adj. 不可能的，难以忍受的	d	possible
+impostor	/ɪmˈpɒstə/	n. 骗子，冒充者	c	
+impotent	/ˈɪmpətənt/	adj. 无力的，无能为力的	d	potent
+impoverish	/ɪmˈpɒvərɪʃ/	v. 使贫穷，使贫瘠	c	
+impracticable	/ɪmˈpræktɪkəbl/	adj. 不可行的，不切实际的	d	practical
+imprecation	/ˌɪmprɪˈkeɪʃn/	n. 诅咒，咒骂	c	
+impregnable	/ɪmˈpreɡnəbl/	adj. 坚不可摧的，难以攻破的	c	
+impress	/ɪmˈpres/	v. 使印象深刻	c	
+impression	/ɪmˈpreʃn/	n. 印象，感觉	d	impress
+impressionable	/ɪmˈpreʃənəbl/	adj. 易受影响的，敏感的	d	impress
+impressive	/ɪmˈpresɪv/	adj. 令人印象深刻的	d	impress
+imprint	/ɪmˈprɪnt/	v. 印刻，铭记	c	
+imprison	/ɪmˈprɪzn/	v. 监禁，关押	d	prison
+imprisonment	/ɪmˈprɪznmənt/	n. 监禁，关押	d	prison
+improbable	/ɪmˈprɒbəbl/	adj. 不大可能的，未必的	d	probable
+impromptu	/ɪmˈprɒmptjuː/	adj. 即兴的，临时的	c	
+improper	/ɪmˈprɒpə/	adj. 不恰当的，不合适的	d	proper
+improvise	/ˈɪmprəvaɪz/	v. 即兴创作，临时凑成	c	
+imprudent	/ɪmˈpruːdnt/	adj. 轻率的，不明智的	d	prudent
+impudent	/ˈɪmpjədənt/	adj. 无礼的，厚颜无耻的	c	
+impugn	/ɪmˈpjuːn/	v. 质疑，抨击	c	
+impulse	/ˈɪmpʌls/	n. 冲动，脉冲	c	
+impulsive	/ɪmˈpʌlsɪv/	adj. 冲动的，任性的	d	impulse
+impunity	/ɪmˈpjuːnəti/	n. 免罚，不受惩罚	c	
+impure	/ɪmˈpjʊə/	adj. 不纯的，掺杂的	d	pure
+impurity	/ɪmˈpjʊərəti/	n. 杂质，不纯	d	pure
+impute	/ɪmˈpjuːt/	v. 归咎于，归因于	c	
+inability	/ˌɪnəˈbɪləti/	n. 无能，无力	d	ability
+inaccessible	/ˌɪnəkˈsesəbl/	adj. 难以接近的，不可得的	d	accessible
+inaccurate	/ɪnˈækjərət/	adj. 不准确的，错误的	d	accurate
+inaction	/ɪnˈækʃn/	n. 无行动，不作为	d	action
+inactive	/ɪnˈæktɪv/	adj. 不活跃的，静止的	d	active
+inadequate	/ɪnˈædɪkwət/	adj. 不充分的，不胜任的	d	adequate
+inadvertent	/ˌɪnədˈvɜːtnt/	adj. 无意的，疏忽的	c	
+inadvisable	/ˌɪnədˈvaɪzəbl/	adj. 不明智的，不可取的	d	advise
+inalienable	/ɪnˈeɪliənəbl/	adj. 不可剥夺的，不能让与的	c	
+inane	/ɪˈneɪn/	adj. 空洞的，愚蠢的	c	
+inanimate	/ɪnˈænɪmət/	adj. 无生命的，无生气的	d	animate
+inappropriate	/ˌɪnəˈprəʊpriət/	adj. 不恰当的，不合适的	d	appropriate
+inarticulate	/ˌɪnɑːˈtɪkjələt/	adj. 口齿不清的，不善表达的	d	articulate
+inasmuch	/ˌɪnəzˈmʌtʃ/	adv. 因为，由于	c	
+inaugurate	/ɪˈnɔːɡjəreɪt/	v. 举行就职典礼，开创	c	
+inauguration	/ɪˌnɔːɡjəˈreɪʃn/	n. 就职典礼，开创	d	inaugurate
+incalculable	/ɪnˈkælkjələbl/	adj. 无法计算的，无数的	d	calculate
+incandescent	/ˌɪnkænˈdesnt/	adj. 白热的，发光的	c	
+incapable	/ɪnˈkeɪpəbl/	adj. 无能力的，不能的	d	capable
+incapacitate	/ˌɪnkəˈpæsɪteɪt/	v. 使失去能力，使无资格	d	capacity
+incarcerate	/ɪnˈkɑːsəreɪt/	v. 监禁，关押	c	
+incarnation	/ˌɪnkɑːˈneɪʃn/	n. 化身，具体化	c	
+incendiary	/ɪnˈsendiəri/	adj. 纵火的，煽动的；n. 燃烧弹	c	
+incense	/ˈɪnsens/	n. 香；v. 激怒	c	
+incentive	/ɪnˈsentɪv/	n. 激励，动机	c	
+inception	/ɪnˈsepʃn/	n. 开端，开始	c	
+incessant	/ɪnˈsesnt/	adj. 不断的，不停的	c	
+incidence	/ˈɪnsɪdəns/	n. 发生率，发病率	d	incident
+incident	/ˈɪnsɪdənt/	n. 事件，事变	c	
+incidental	/ˌɪnsɪˈdentl/	adj. 附带的，偶然的	d	incident
+incinerate	/ɪnˈsɪnəreɪt/	v. 焚化，烧成灰	c	
+incipient	/ɪnˈsɪpiənt/	adj. 初期的，刚出现的	c	
+incision	/ɪnˈsɪʒn/	n. 切口，切开	c	
+incisive	/ɪnˈsaɪsɪv/	adj. 敏锐的，锋利的	c	
+incite	/ɪnˈsaɪt/	v. 煽动，激起	c	
+inclement	/ɪnˈklemənt/	adj. 恶劣的，严酷的	c	
+incline	/ɪnˈklaɪn/	v. 倾向，倾斜	c	
+inclination	/ˌɪnklɪˈneɪʃn/	n. 倾向，爱好	d	incline
+inclosure	/ɪnˈkləʊʒə/	n. 围场，附件	d	enclose
+include	/ɪnˈkluːd/	v. 包括，包含	c	
+inclusive	/ɪnˈkluːsɪv/	adj. 包括的，包容的	d	include
+incognito	/ˌɪnkɒɡˈniːtəʊ/	adv. 隐姓埋名地	c	
+incoherent	/ˌɪnkəʊˈhɪərənt/	adj. 不连贯的，语无伦次的	d	coherent
+incombustible	/ˌɪnkəmˈbʌstəbl/	adj. 不燃的	d	combustion
+income	/ˈɪnkʌm/	n. 收入，所得	c	
+incoming	/ˈɪnkʌmɪŋ/	adj. 进来的，即将就任的	d	come
+incommode	/ˌɪnkəˈməʊd/	v. 使不便，打扰	c	
+incommodious	/ˌɪnkəˈməʊdiəs/	adj. 不便的，狭窄的	c	
+incomparable	/ɪnˈkɒmpərəbl/	adj. 无与伦比的，不可比的	d	comparable
+incompatible	/ˌɪnkəmˈpætəbl/	adj. 不相容的，矛盾的	d	compatible
+incompetent	/ɪnˈkɒmpɪtənt/	adj. 无能的，不称职的	d	competent
+incomplete	/ˌɪnkəmˈpliːt/	adj. 不完整的，未完成的	d	complete
+incomprehensible	/ɪnˌkɒmprɪˈhensəbl/	adj. 无法理解的，费解的	d	comprehend
+inconceivable	/ˌɪnkənˈsiːvəbl/	adj. 不可思议的，难以置信的	d	conceive
+inconclusive	/ˌɪnkənˈkluːsɪv/	adj. 无定论的，不确定的	d	conclusive
+incongruous	/ɪnˈkɒŋɡruəs/	adj. 不协调的，不一致的	c	
+inconsequential	/ɪnˌkɒnsɪˈkwenʃl/	adj. 不重要的，微不足道的	d	consequence
+inconsiderate	/ˌɪnkənˈsɪdərət/	adj. 不体谅的，考虑不周的	d	considerate
+inconsistent	/ˌɪnkənˈsɪstənt/	adj. 不一致的，矛盾的	d	consistent
+inconsolable	/ˌɪnkənˈsəʊləbl/	adj. 无法安慰的，极度悲伤的	d	console
+inconspicuous	/ˌɪnkənˈspɪkjuəs/	adj. 不显眼的，不引人注目的	d	conspicuous
+inconstant	/ɪnˈkɒnstənt/	adj. 多变的，不忠实的	d	constant
+incontestable	/ˌɪnkənˈtestəbl/	adj. 无可争辩的，不容置疑的	d	contest
+incontrovertible	/ˌɪnkɒntrəˈvɜːtəbl/	adj. 无可辩驳的，确凿的	d	controversial
+inconvenience	/ˌɪnkənˈviːniəns/	n. 不便，麻烦	d	convenient
+inconvenient	/ˌɪnkənˈviːniənt/	adj. 不便的，麻烦的	d	convenient
+incorporate	/ɪnˈkɔːpəreɪt/	v. 合并，纳入	c	
+incorporation	/ɪnˌkɔːpəˈreɪʃn/	n. 合并，公司	d	incorporate
+incorrect	/ˌɪnkəˈrekt/	adj. 不正确的，错误的	d	correct
+incorrigible	/ɪnˈkɒrɪdʒəbl/	adj. 屡教不改的，不可救药的	c	
+incorruptible	/ˌɪnkəˈrʌptəbl/	adj. 廉洁的，不可腐蚀的	d	corrupt
+increase	/ɪnˈkriːs/	v./n. 增加，增长	c	
+increasingly	/ɪnˈkriːsɪŋli/	adv. 越来越多地，日益	d	increase
+incredible	/ɪnˈkredəbl/	adj. 难以置信的，极好的	d	credit
+incredulous	/ɪnˈkredjələs/	adj. 怀疑的，不轻信的	d	credit
+increment	/ˈɪŋkrəmənt/	n. 增加，增量	c	
+incriminate	/ɪnˈkrɪmɪneɪt/	v. 控告，归罪于	c	
+incrustation	/ˌɪnkrʌˈsteɪʃn/	n. 结壳，硬壳	c	
+incubate	/ˈɪŋkjubeɪt/	v. 孵化，培养	c	
+incubation	/ˌɪŋkjuˈbeɪʃn/	n. 孵化，潜伏期	d	incubate
+incubator	/ˈɪŋkjubeɪtə/	n. 孵化器，恒温箱	d	incubate
+incumbent	/ɪnˈkʌmbənt/	adj. 现任的，有责任的	c	
+incur	/ɪnˈkɜː/	v. 招致，蒙受	c	
+incurable	/ɪnˈkjʊərəbl/	adj. 无法治愈的，不可救药的	d	cure
+incursion	/ɪnˈkɜːʃn/	n. 入侵，侵犯	c	
+indebted	/ɪnˈdetɪd/	adj. 负债的，感激的	c	
+indecent	/ɪnˈdiːsnt/	adj. 不体面的，下流的	d	decent
+indecision	/ˌɪndɪˈsɪʒn/	n. 犹豫不决，优柔寡断	d	decision
+indecisive	/ˌɪndɪˈsaɪsɪv/	adj. 犹豫不决的，非决定性的	d	decisive
+indecorous	/ɪnˈdekərəs/	adj. 不得体的，不雅的	d	decorous
+indeed	/ɪnˈdiːd/	adv. 确实，的确	c	
+indefatigable	/ˌɪndɪˈfætɪɡəbl/	adj. 不知疲倦的，不屈不挠的	c	
+indefensible	/ˌɪndɪˈfensəbl/	adj. 无法辩护的，站不住脚的	d	defend
+indefinable	/ˌɪndɪˈfaɪnəbl/	adj. 难以界定的，模糊的	d	define
+indefinite	/ɪnˈdefɪnət/	adj. 不确定的，无限期的	d	definite
+indelible	/ɪnˈdeləbl/	adj. 不可磨灭的，洗不掉的	c	
+indelicate	/ɪnˈdelɪkət/	adj. 粗俗的，不得体的	d	delicate
+indemnify	/ɪnˈdemnɪfaɪ/	v. 赔偿，保障	c	
+indemnity	/ɪnˈdemnəti/	n. 赔偿，保障	c	
+indent	/ɪnˈdent/	v. 缩进，使凹陷	c	
+indentation	/ˌɪndenˈteɪʃn/	n. 缩进，凹陷	d	indent
+independence	/ˌɪndɪˈpendəns/	n. 独立，自主	d	dependent
+independent	/ˌɪndɪˈpendənt/	adj. 独立的，自主的	d	dependent
+indescribable	/ˌɪndɪˈskraɪbəbl/	adj. 难以形容的，无法描述的	d	describe
+indestructible	/ˌɪndɪˈstrʌktəbl/	adj. 不可摧毁的，坚不可摧的	d	destroy
+indeterminate	/ˌɪndɪˈtɜːmɪnət/	adj. 不确定的，模糊的	d	determine
+index	/ˈɪndeks/	n. 索引，指数	c	
+indicate	/ˈɪndɪkeɪt/	v. 表明，指示	c	
+indication	/ˌɪndɪˈkeɪʃn/	n. 指示，迹象	d	indicate
+indicative	/ɪnˈdɪkətɪv/	adj. 指示的，象征的	d	indicate
+indict	/ɪnˈdaɪt/	v. 起诉，控告	c	
+indictment	/ɪnˈdaɪtmənt/	n. 起诉，控告	d	indict
+indifference	/ɪnˈdɪfrəns/	n. 冷漠，不关心	d	indifferent
+indifferent	/ɪnˈdɪfrənt/	adj. 冷漠的，不关心的	c	
+indigenous	/ɪnˈdɪdʒənəs/	adj. 本土的，土生的	c	
+indigent	/ˈɪndɪdʒənt/	adj. 贫困的，贫穷的	c	
+indigestion	/ˌɪndɪˈdʒestʃən/	n. 消化不良	d	digestion
+indignant	/ɪnˈdɪɡnənt/	adj. 愤慨的，愤怒的	c	
+indignation	/ˌɪndɪɡˈneɪʃn/	n. 愤慨，愤怒	d	indignant
+indignity	/ɪnˈdɪɡnəti/	n. 侮辱，轻蔑	c	
+indigo	/ˈɪndɪɡəʊ/	n. 靛蓝，靛蓝色	c	
+indirect	/ˌɪndəˈrekt/	adj. 间接的，迂回的	d	direct
+indiscernible	/ˌɪndɪˈsɜːnəbl/	adj. 难以辨认的	d	discern
+indiscreet	/ˌɪndɪˈskriːt/	adj. 轻率的，不慎重的	d	discreet
+indiscretion	/ˌɪndɪˈskreʃn/	n. 轻率，失检	d	discreet
+indiscriminate	/ˌɪndɪˈskrɪmɪnət/	adj. 不加区别的，随意的	d	discriminate
+indispensable	/ˌɪndɪˈspensəbl/	adj. 不可或缺的，必需的	c	
+indisposed	/ˌɪndɪˈspəʊzd/	adj. 身体不适的，不愿意的	d	dispose
+indisputable	/ˌɪndɪˈspjuːtəbl/	adj. 无可争辩的，不容置疑的	d	dispute
+indissoluble	/ˌɪndɪˈsɒljəbl/	adj. 不可溶解的，牢不可破的	d	dissolve
+indistinct	/ˌɪndɪˈstɪŋkt/	adj. 模糊的，不清楚的	d	distinct
+indistinguishable	/ˌɪndɪˈstɪŋɡwɪʃəbl/	adj. 难以区分的，难以辨别的	d	distinguish
+individual	/ˌɪndɪˈvɪdʒuəl/	adj. 个人的；n. 个体	c	
+individuality	/ˌɪndɪˌvɪdʒuˈæləti/	n. 个性，个人特征	d	individual
+indivisible	/ˌɪndɪˈvɪzəbl/	adj. 不可分割的	d	divide
+indolent	/ˈɪndələnt/	adj. 懒惰的，懒散的	c	
+indomitable	/ɪnˈdɒmɪtəbl/	adj. 不屈不挠的，不服输的	c	
+indoor	/ˈɪndɔː/	adj. 室内的，户内的	c	
+indubitable	/ɪnˈdjuːbɪtəbl/	adj. 不容置疑的，明确的	c	
+induce	/ɪnˈdjuːs/	v. 引起，诱导	c	
+inducement	/ɪnˈdjuːsmənt/	n. 诱因，动机	d	induce
+induct	/ɪnˈdʌkt/	v. 使就职，引导	c	
+induction	/ɪnˈdʌkʃn/	n. 归纳，就职	d	induct
+indulge	/ɪnˈdʌldʒ/	v. 沉溺，放纵	c	
+indulgence	/ɪnˈdʌldʒəns/	n. 放纵，沉溺	d	indulge
+indulgent	/ɪnˈdʌldʒənt/	adj. 纵容的，放纵的	d	indulge
+industrious	/ɪnˈdʌstriəs/	adj. 勤劳的，勤奋的	d	industry
+industry	/ˈɪndəstri/	n. 工业，行业	c	
+inebriate	/ɪˈniːbrieɪt/	v. 使醉；n. 酒鬼	c	
+inedible	/ɪnˈedəbl/	adj. 不可食用的	d	edible
+ineffable	/ɪnˈefəbl/	adj. 难以形容的，不可言喻的	c	
+ineffective	/ˌɪnɪˈfektɪv/	adj. 无效的，不起作用的	d	effective
+ineffectual	/ˌɪnɪˈfektʃuəl/	adj. 无效的，徒劳的	d	effective
+inefficient	/ˌɪnɪˈfɪʃnt/	adj. 效率低的，无能的	d	efficient
+ineligible	/ɪnˈelɪdʒəbl/	adj. 不合格的，无资格的	d	eligible
+ineluctable	/ˌɪnɪˈlʌktəbl/	adj. 不可避免的，无法逃避的	c	
+inept	/ɪˈnept/	adj. 无能的，不称职的	c	
+inequality	/ˌɪnɪˈkwɒləti/	n. 不平等，不均等	d	equality
+inequitable	/ɪnˈekwɪtəbl/	adj. 不公平的，不公正的	d	equitable
+inequity	/ɪnˈekwəti/	n. 不公平，不公正	d	equity
+ineradicable	/ˌɪnɪˈrædɪkəbl/	adj. 无法根除的	d	eradicate
+inert	/ɪˈnɜːt/	adj. 惰性的，无生气的	c	
+inertia	/ɪˈnɜːʃə/	n. 惯性，惰性	c	
+inescapable	/ˌɪnɪˈskeɪpəbl/	adj. 不可避免的，逃避不了的	d	escape
+inestimable	/ɪnˈestɪməbl/	adj. 无法估量的，极宝贵的	d	estimate
+inevitable	/ɪnˈevɪtəbl/	adj. 不可避免的，必然的	c	
+inexcusable	/ˌɪnɪkˈskjuːzəbl/	adj. 不可原谅的，不可宽恕的	d	excuse
+inexhaustible	/ˌɪnɪɡˈzɔːstəbl/	adj. 取之不尽的，无穷的	d	exhaust
+inexorable	/ɪnˈeksərəbl/	adj. 不可阻挡的，无情的	c	
+inexpedient	/ˌɪnɪkˈspiːdiənt/	adj. 不明智的，失策的	d	expedient
+inexpensive	/ˌɪnɪkˈspensɪv/	adj. 便宜的，不贵的	d	expensive
+inexperience	/ˌɪnɪkˈspɪəriəns/	n. 缺乏经验，无经验	d	experience
+inexpert	/ɪnˈekspɜːt/	adj. 不熟练的，外行的	d	expert
+inexplicable	/ˌɪnɪkˈsplɪkəbl/	adj. 无法解释的，费解的	d	explicable
+inexpressible	/ˌɪnɪkˈspresəbl/	adj. 难以表达的，无法形容的	d	express
+inextinguishable	/ˌɪnɪkˈstɪŋɡwɪʃəbl/	adj. 无法扑灭的，不可遏制的	d	extinguish
+inextricable	/ɪnˈekstrɪkəbl/	adj. 无法摆脱的，解不开的	d	extricate
+infallible	/ɪnˈfæləbl/	adj. 绝无错误的，绝对可靠的	c	
+infamous	/ˈɪnfəməs/	adj. 臭名昭著的，声名狼藉的	d	fame
+infamy	/ˈɪnfəmi/	n. 臭名，恶名	d	fame
+infancy	/ˈɪnfənsi/	n. 婴儿期，初期	d	infant
+infant	/ˈɪnfənt/	n. 婴儿；adj. 婴儿的	c	
+infanticide	/ɪnˈfæntɪsaɪd/	n. 杀婴，杀婴罪	d	infant
+infantile	/ˈɪnfəntaɪl/	adj. 婴儿的，幼稚的	d	infant
+infantry	/ˈɪnfəntri/	n. 步兵，步兵部队	c	
+infatuate	/ɪnˈfætʃueɪt/	v. 使迷恋，使冲昏头脑	c	
+infatuation	/ɪnˌfætʃuˈeɪʃn/	n. 迷恋，痴迷	d	infatuate
+infect	/ɪnˈfekt/	v. 感染，传染	c	
+infection	/ɪnˈfekʃn/	n. 感染，传染	d	infect
+infectious	/ɪnˈfekʃəs/	adj. 传染性的，有感染力的	d	infect
+infelicitous	/ˌɪnfəˈlɪsɪtəs/	adj. 不恰当的，不幸的	d	felicity
+infer	/ɪnˈfɜː/	v. 推断，推论	c	
+inference	/ˈɪnfərəns/	n. 推断，推论	d	infer
+inferential	/ˌɪnfəˈrenʃl/	adj. 推断的，推理的	d	infer
+inferior	/ɪnˈfɪəriə/	adj. 较差的，下级的	c	
+inferiority	/ɪnˌfɪəriˈɒrəti/	n. 劣势，自卑	d	inferior
+infernal	/ɪnˈfɜːnl/	adj. 地狱般的，可恶的	c	
+inferno	/ɪnˈfɜːnəʊ/	n. 地狱，火海	c	
+infest	/ɪnˈfest/	v. 侵扰，大批出没	c	
+infidel	/ˈɪnfɪdl/	n. 不信教者，异教徒	c	
+infidelity	/ˌɪnfɪˈdeləti/	n. 不忠，背信	d	fidelity
+infiltrate	/ˈɪnfɪltreɪt/	v. 渗透，潜入	c	
+infinite	/ˈɪnfɪnət/	adj. 无限的，无穷的	d	finite
+infinitesimal	/ˌɪnfɪnɪˈtesɪml/	adj. 极微小的，无限小的	d	finite
+infinity	/ɪnˈfɪnəti/	n. 无限，无穷	d	finite
+infirm	/ɪnˈfɜːm/	adj. 虚弱的，体弱的	c	
+infirmary	/ɪnˈfɜːməri/	n. 医务室，医院	d	infirm
+infirmity	/ɪnˈfɜːməti/	n. 虚弱，疾病	d	infirm
+inflame	/ɪnˈfleɪm/	v. 使发炎，激怒	d	flame
+inflammable	/ɪnˈflæməbl/	adj. 易燃的，易激动的	d	flame
+inflammation	/ˌɪnfləˈmeɪʃn/	n. 炎症，发炎	d	inflame
+inflammatory	/ɪnˈflæmətri/	adj. 煽动性的，发炎的	d	inflame
+inflate	/ɪnˈfleɪt/	v. 使膨胀，使充气	c	
+inflation	/ɪnˈfleɪʃn/	n. 通货膨胀，膨胀	d	inflate
+inflection	/ɪnˈflekʃn/	n. 屈折变化，变音	d	inflect
+inflexible	/ɪnˈfleksəbl/	adj. 不灵活的，僵硬的	d	flexible
+inflict	/ɪnˈflɪkt/	v. 使遭受，施加	c	
+infliction	/ɪnˈflɪkʃn/	n. 施加，痛苦	d	inflict
+inflow	/ˈɪnfləʊ/	n. 流入，流入量	d	flow
+influence	/ˈɪnfluəns/	n./v. 影响，感化	c	
+influential	/ˌɪnfluˈenʃl/	adj. 有影响力的	d	influence
+influenza	/ˌɪnfluˈenzə/	n. 流行性感冒	c	
+influx	/ˈɪnflʌks/	n. 涌入，流入	c	
+inform	/ɪnˈfɔːm/	v. 通知，告知	c	
+informal	/ɪnˈfɔːml/	adj. 非正式的，随便的	d	formal
+informant	/ɪnˈfɔːmənt/	n. 告密者，线人	d	inform
+information	/ˌɪnfəˈmeɪʃn/	n. 信息，情报	d	inform
+informative	/ɪnˈfɔːmətɪv/	adj. 提供信息的，有教益的	d	inform
+informed	/ɪnˈfɔːmd/	adj. 有见识的，消息灵通的	d	inform
+infraction	/ɪnˈfrækʃn/	n. 违反，违法	c	
+infrared	/ˌɪnfrəˈred/	adj. 红外的，红外线的	c	
+infrastructure	/ˈɪnfrəstrʌktʃə/	n. 基础设施	c	
+infrequent	/ɪnˈfriːkwənt/	adj. 罕见的，不频繁的	d	frequent
+infringe	/ɪnˈfrɪndʒ/	v. 侵犯，违反	c	
+infringement	/ɪnˈfrɪndʒmənt/	n. 侵犯，违反	d	infringe
+infuriate	/ɪnˈfjʊərieɪt/	v. 激怒，使大怒	c	
+infuse	/ɪnˈfjuːz/	v. 注入，泡制	c	
+infusion	/ɪnˈfjuːʒn/	n. 注入，浸渍	d	infuse
+ingenious	/ɪnˈdʒiːniəs/	adj. 巧妙的，有独创性的	c	
+ingenuity	/ˌɪndʒəˈnjuːəti/	n. 独创性，巧妙	d	ingenious
+ingenuous	/ɪnˈdʒenjuəs/	adj. 天真的，坦率的	c	
+ingest	/ɪnˈdʒest/	v. 摄取，吞下	c	
+ingestion	/ɪnˈdʒestʃən/	n. 摄取，吞食	d	ingest
+inglorious	/ɪnˈɡlɔːriəs/	adj. 不光彩的，可耻的	d	glory
+ingrained	/ɪnˈɡreɪnd/	adj. 根深蒂固的，深植的	c	
+ingratiate	/ɪnˈɡreɪʃieɪt/	v. 讨好，逢迎	c	
+ingratitude	/ɪnˈɡrætɪtjuːd/	n. 忘恩负义	d	gratitude
+ingredient	/ɪnˈɡriːdiənt/	n. 成分，原料	c	
+ingress	/ˈɪnɡres/	n. 进入，入口	c	
+inhabit	/ɪnˈhæbɪt/	v. 居住于，栖息	c	
+inhabitant	/ɪnˈhæbɪtənt/	n. 居民，住户	d	inhabit
+inhale	/ɪnˈheɪl/	v. 吸入，吸气	c	
+inherent	/ɪnˈhɪərənt/	adj. 固有的，内在的	c	
+inherit	/ɪnˈherɪt/	v. 继承，遗传	c	
+inheritance	/ɪnˈherɪtəns/	n. 继承，遗产	d	inherit
+inhibit	/ɪnˈhɪbɪt/	v. 抑制，阻止	c	
+inhibited	/ɪnˈhɪbɪtɪd/	adj. 拘谨的，抑制的	d	inhibit
+inhibition	/ˌɪnhɪˈbɪʃn/	n. 抑制，禁忌	d	inhibit
+inhospitable	/ˌɪnhɒˈspɪtəbl/	adj. 不好客的，荒凉的	d	hospitable
+inhuman	/ɪnˈhjuːmən/	adj. 残忍的，非人的	d	human
+inhumane	/ˌɪnhjuːˈmeɪn/	adj. 不人道的，残忍的	d	humane
+inimical	/ɪˈnɪmɪkl/	adj. 有害的，敌意的	c	
+inimitable	/ɪˈnɪmɪtəbl/	adj. 无与伦比的，无法模仿的	c	
+iniquity	/ɪˈnɪkwəti/	n. 邪恶，不公正	c	
+initial	/ɪˈnɪʃl/	adj. 最初的，开头的	c	
+initially	/ɪˈnɪʃəli/	adv. 最初，起初	d	initial
+initiate	/ɪˈnɪʃieɪt/	v. 开始，发起	c	
+initiative	/ɪˈnɪʃətɪv/	n. 主动性，倡议	d	initiate
+inject	/ɪnˈdʒekt/	v. 注射，注入	c	
+injection	/ɪnˈdʒekʃn/	n. 注射，注入	d	inject
+injudicious	/ˌɪndʒuˈdɪʃəs/	adj. 不明智的，欠考虑的	d	judicial
+injunction	/ɪnˈdʒʌŋkʃn/	n. 禁令，命令	c	
+injure	/ˈɪndʒə/	v. 伤害，损害	c	
+injurious	/ɪnˈdʒʊəriəs/	adj. 有害的，诽谤的	d	injury
+injury	/ˈɪndʒəri/	n. 伤害，损伤	c	
+injustice	/ɪnˈdʒʌstɪs/	n. 不公正，非正义	d	justice
+inkling	/ˈɪŋklɪŋ/	n. 略知，暗示	c	
+inland	/ˈɪnlænd/	adj. 内陆的，内地的	c	
+inlet	/ˈɪnlet/	n. 小湾，入口	c	
+inmate	/ˈɪnmeɪt/	n. 同住者，囚犯	c	
+innate	/ɪˈneɪt/	adj. 天生的，固有的	c	
+inner	/ˈɪnə/	adj. 内部的，内心的	c	
+innocence	/ˈɪnəsns/	n. 无辜，天真	d	innocent
+innocent	/ˈɪnəsnt/	adj. 无辜的，天真的	c	
+innocuous	/ɪˈnɒkjuəs/	adj. 无害的，无恶意的	c	
+innovation	/ˌɪnəˈveɪʃn/	n. 创新，革新	d	innovate
+innovative	/ˈɪnəveɪtɪv/	adj. 创新的，革新的	d	innovate
+innuendo	/ˌɪnjuˈendəʊ/	n. 影射，暗讽	c	
+innumerable	/ɪˈnjuːmərəbl/	adj. 数不清的，无数的	c	
+inoculate	/ɪˈnɒkjuleɪt/	v. 接种，预防注射	c	
+inoculation	/ɪˌnɒkjuˈleɪʃn/	n. 接种，预防注射	d	inoculate
+inoffensive	/ˌɪnəˈfensɪv/	adj. 无恶意的，不惹人厌的	d	offend
+inoperable	/ɪnˈɒpərəbl/	adj. 无法手术的，不能实行的	d	operate
+inopportune	/ɪnˈɒpətjuːn/	adj. 不合时宜的，不凑巧的	c	
+inordinate	/ɪnˈɔːdɪnət/	adj. 过度的，无节制的	c	
+inorganic	/ˌɪnɔːˈɡænɪk/	adj. 无机的，非有机的	d	organic
+inquest	/ˈɪnkwest/	n. 审讯，调查	c	
+inquire	/ɪnˈkwaɪə/	v. 询问，打听	c	
+inquiry	/ɪnˈkwaɪəri/	n. 询问，调查	d	inquire
+inquisition	/ˌɪnkwɪˈzɪʃn/	n. 调查，审讯	d	inquire
+inquisitive	/ɪnˈkwɪzətɪv/	adj. 好奇的，爱打听的	d	inquire
+insane	/ɪnˈseɪn/	adj. 疯狂的，精神失常的	d	sane
+insanity	/ɪnˈsænəti/	n. 疯狂，精神失常	d	sane
+insatiable	/ɪnˈseɪʃəbl/	adj. 贪得无厌的，无法满足的	c	
+inscribe	/ɪnˈskraɪb/	v. 题写，铭刻	c	
+inscription	/ɪnˈskrɪpʃn/	n. 铭文，题字	d	inscribe
+inscrutable	/ɪnˈskruːtəbl/	adj. 难以捉摸的，高深莫测的	c	
+insecticide	/ɪnˈsektɪsaɪd/	n. 杀虫剂	c	
+insecure	/ˌɪnsɪˈkjʊə/	adj. 不安全的，缺乏自信的	d	secure
+inseminate	/ɪnˈsemɪneɪt/	v. 播种，使受孕	c	
+insensible	/ɪnˈsensəbl/	adj. 无感觉的，麻木的	d	sensible
+insensitive	/ɪnˈsensətɪv/	adj. 不敏感的，麻木的	d	sensitive
+inseparable	/ɪnˈseprəbl/	adj. 不可分割的，形影不离的	d	separate
+insert	/ɪnˈsɜːt/	v. 插入，嵌入	c	
+insertion	/ɪnˈsɜːʃn/	n. 插入，插入物	d	insert
+inshore	/ˌɪnˈʃɔː/	adj. 近海的，沿岸的	d	shore
+inside	/ˌɪnˈsaɪd/	n. 内部；adj. 内部的	c	
+insidious	/ɪnˈsɪdiəs/	adj. 阴险的，潜伏的	c	
+insight	/ˈɪnsaɪt/	n. 洞察力，见解	c	
+insightful	/ˈɪnsaɪtfl/	adj. 富有洞察力的	d	insight
+insignia	/ɪnˈsɪɡniə/	n. 徽章，标记	c	
+insignificant	/ˌɪnsɪɡˈnɪfɪkənt/	adj. 无关紧要的，微不足道的	d	significant
+insincere	/ˌɪnsɪnˈsɪə/	adj. 不真诚的，虚伪的	d	sincere
+insinuate	/ɪnˈsɪnjueɪt/	v. 暗示，含沙射影	c	
+insinuation	/ɪnˌsɪnjuˈeɪʃn/	n. 暗示，影射	d	insinuate
+insipid	/ɪnˈsɪpɪd/	adj. 乏味的，无趣的	c	
+insist	/ɪnˈsɪst/	v. 坚持，坚决要求	c	
+insistence	/ɪnˈsɪstəns/	n. 坚持，坚决主张	d	insist
+insistent	/ɪnˈsɪstənt/	adj. 坚持的，迫切的	d	insist
+insole	/ˈɪnsəʊl/	n. 鞋垫	c	
+insolent	/ˈɪnsələnt/	adj. 傲慢的，无礼的	c	
+insoluble	/ɪnˈsɒljəbl/	adj. 不可溶的，无法解决的	d	soluble
+insolvent	/ɪnˈsɒlvənt/	adj. 破产的，无力偿还的	d	solvent
+insomnia	/ɪnˈsɒmniə/	n. 失眠，失眠症	c	
+insomuch	/ˌɪnsəʊˈmʌtʃ/	adv. 因为，由于	c	
+inspect	/ɪnˈspekt/	v. 检查，视察	c	
+inspection	/ɪnˈspekʃn/	n. 检查，视察	d	inspect
+inspector	/ɪnˈspektə/	n. 检查员，巡视员	d	inspect
+inspiration	/ˌɪnspəˈreɪʃn/	n. 灵感，鼓舞	d	inspire
+inspire	/ɪnˈspaɪə/	v. 激励，启发	c	
+inspiring	/ɪnˈspaɪərɪŋ/	adj. 鼓舞人心的，激励的	d	inspire
+instability	/ˌɪnstəˈbɪləti/	n. 不稳定，动荡	d	stability
+install	/ɪnˈstɔːl/	v. 安装，任命	c	
+installation	/ˌɪnstəˈleɪʃn/	n. 安装，装置	d	install
+installment	/ɪnˈstɔːlmənt/	n. 分期付款，一期	d	install
+instance	/ˈɪnstəns/	n. 例子，实例	c	
+instant	/ˈɪnstənt/	adj. 立即的；n. 瞬间	c	
+instantaneous	/ˌɪnstənˈteɪniəs/	adj. 瞬间的，即刻的	d	instant
+instigate	/ˈɪnstɪɡeɪt/	v. 煽动，怂恿	c	
+instigation	/ˌɪnstɪˈɡeɪʃn/	n. 煽动，教唆	d	instigate
+instil	/ɪnˈstɪl/	v. 逐渐灌输，滴注	c	
+instinct	/ˈɪnstɪŋkt/	n. 本能，直觉	c	
+instinctive	/ɪnˈstɪŋktɪv/	adj. 本能的，直觉的	d	instinct
+institute	/ˈɪnstɪtjuːt/	n. 学院，研究所	c	
+institution	/ˌɪnstɪˈtjuːʃn/	n. 机构，制度	d	institute
+institutional	/ˌɪnstɪˈtjuːʃənl/	adj. 机构的，制度的	d	institute
+instruct	/ɪnˈstrʌkt/	v. 指导，命令	c	
+instruction	/ɪnˈstrʌkʃn/	n. 指导，说明	d	instruct
+instructive	/ɪnˈstrʌktɪv/	adj. 有教益的，指导性的	d	instruct
+instructor	/ɪnˈstrʌktə/	n. 教练，讲师	d	instruct
+instrument	/ˈɪnstrəmənt/	n. 仪器，工具	c	
+instrumental	/ˌɪnstrəˈmentl/	adj. 有帮助的，乐器的	d	instrument
+insubordinate	/ˌɪnsəˈbɔːdɪnət/	adj. 不服从的，反抗的	d	subordinate
+insufferable	/ɪnˈsʌfrəbl/	adj. 难以忍受的，令人无法容忍的	d	suffer
+insufficient	/ˌɪnsəˈfɪʃnt/	adj. 不足的，不够的	d	sufficient
+insular	/ˈɪnsjələ/	adj. 孤立的，狭隘的	c	
+insulate	/ˈɪnsjuleɪt/	v. 隔离，绝缘	c	
+insulation	/ˌɪnsjuˈleɪʃn/	n. 绝缘，隔离	d	insulate
+insulin	/ˈɪnsjəlɪn/	n. 胰岛素	c	
+insult	/ɪnˈsʌlt/	v./n. 侮辱，辱骂	c	
+insuperable	/ɪnˈsuːpərəbl/	adj. 无法克服的，难以逾越的	d	super
+insupportable	/ˌɪnsəˈpɔːtəbl/	adj. 难以忍受的，无法支持的	d	support
+insurance	/ɪnˈʃʊərəns/	n. 保险，保险费	d	insure
+insurgent	/ɪnˈsɜːdʒənt/	n. 叛乱者；adj. 叛乱的	c	
+insurmountable	/ˌɪnsəˈmaʊntəbl/	adj. 无法克服的，难以逾越的	d	surmount
+insurrection	/ˌɪnsəˈrekʃn/	n. 起义，暴动	c	
+intact	/ɪnˈtækt/	adj. 完整无损的，未受损的	c	
+intake	/ˈɪnteɪk/	n. 摄取，吸入量	c	
+intangible	/ɪnˈtændʒəbl/	adj. 无形的，难以捉摸的	d	tangible
+integer	/ˈɪntɪdʒə/	n. 整数	c	
+integral	/ˈɪntɪɡrəl/	adj. 必需的，完整的	c	
+integrate	/ˈɪntɪɡreɪt/	v. 整合，使一体化	c	
+integration	/ˌɪntɪˈɡreɪʃn/	n. 整合，一体化	d	integrate
+integrity	/ɪnˈteɡrəti/	n. 正直，完整	c	
+intellect	/ˈɪntəlekt/	n. 智力，才智	c	
+intellectual	/ˌɪntəˈlektʃuəl/	adj. 智力的；n. 知识分子	d	intellect
+intelligence	/ɪnˈtelɪdʒəns/	n. 智力，情报	d	intelligent
+intelligent	/ɪnˈtelɪdʒənt/	adj. 聪明的，智能的	c	
+intelligible	/ɪnˈtelɪdʒəbl/	adj. 可理解的，易懂的	d	intelligent
+intemperate	/ɪnˈtempərət/	adj. 无节制的，放纵的	d	temperate
+intend	/ɪnˈtend/	v. 打算，意图	c	
+intense	/ɪnˈtens/	adj. 强烈的，紧张的	c	
+intensify	/ɪnˈtensɪfaɪ/	v. 加强，加剧	d	intense
+intensity	/ɪnˈtensəti/	n. 强度，强烈	d	intense
+intensive	/ɪnˈtensɪv/	adj. 密集的，加强的	d	intense
+intent	/ɪnˈtent/	n. 意图；adj. 专注的	c	
+intention	/ɪnˈtenʃn/	n. 意图，目的	d	intend
+intentional	/ɪnˈtenʃənl/	adj. 故意的，有意的	d	intend
+inter	/ɪnˈtɜː/	v. 埋葬	c	
+interact	/ˌɪntərˈækt/	v. 互动，相互作用	c	
+interaction	/ˌɪntərˈækʃn/	n. 互动，交互	d	interact
+intercede	/ˌɪntəˈsiːd/	v. 调解，说情	c	
+intercept	/ˌɪntəˈsept/	v. 拦截，截取	c	
+interception	/ˌɪntəˈsepʃn/	n. 拦截，截取	d	intercept
+intercession	/ˌɪntəˈseʃn/	n. 调解，说情	d	intercede
+interchange	/ˈɪntətʃeɪndʒ/	v./n. 交换，互换	c	
+interchangeable	/ˌɪntəˈtʃeɪndʒəbl/	adj. 可互换的，通用的	d	interchange
+intercollegiate	/ˌɪntəkəˈliːdʒiət/	adj. 大学间的，校际的	d	college
+intercom	/ˈɪntəkɒm/	n. 内部通话系统	c	
+interconnect	/ˌɪntəkəˈnekt/	v. 互相连接	d	connect
+intercourse	/ˈɪntəkɔːs/	n. 交流，交往	c	
+interdependent	/ˌɪntədɪˈpendənt/	adj. 相互依赖的	d	dependent
+interdict	/ˈɪntədɪkt/	v. 禁止，阻断	c	
+interest	/ˈɪntrəst/	n. 兴趣，利息	c	
+interested	/ˈɪntrəstɪd/	adj. 感兴趣的，有利害关系的	d	interest
+interesting	/ˈɪntrəstɪŋ/	adj. 有趣的，引人入胜的	d	interest
+interface	/ˈɪntəfeɪs/	n. 界面，接口	c	
+interfere	/ˌɪntəˈfɪə/	v. 干涉，妨碍	c	
+interference	/ˌɪntəˈfɪərəns/	n. 干涉，干扰	d	interfere
+interim	/ˈɪntərɪm/	adj. 临时的，过渡的	c	
+interior	/ɪnˈtɪəriə/	adj. 内部的；n. 内部	c	
+interject	/ˌɪntəˈdʒekt/	v. 突然插入，插话	c	
+interlock	/ˌɪntəˈlɒk/	v. 互锁，联结	c	
+interlocutor	/ˌɪntəˈlɒkjətə/	n. 对话者，交谈对象	c	
+interloper	/ɪnˈtɜːləpə/	n. 闯入者，干涉他人事务者	c	
+interlude	/ˈɪntəluːd/	n. 间歇，插曲	c	
+intermediary	/ˌɪntəˈmiːdiəri/	n. 中间人，调解人	d	intermediate
+intermediate	/ˌɪntəˈmiːdiət/	adj. 中间的，中级的	c	
+interment	/ɪnˈtɜːmənt/	n. 埋葬，葬礼	d	inter
+interminable	/ɪnˈtɜːmɪnəbl/	adj. 冗长的，无止境的	c	
+intermingle	/ˌɪntəˈmɪŋɡl/	v. 混合，掺杂	c	
+intermission	/ˌɪntəˈmɪʃn/	n. 间歇，幕间休息	d	intermit
+intermittent	/ˌɪntəˈmɪtənt/	adj. 间歇的，断断续续的	c	
+intern	/ɪnˈtɜːn/	n. 实习生；v. 拘留	c	
+internal	/ɪnˈtɜːnl/	adj. 内部的，国内的	c	
+international	/ˌɪntəˈnæʃnəl/	adj. 国际的，世界的	d	nation
+interpersonal	/ˌɪntəˈpɜːsənl/	adj. 人际的，人与人之间的	d	person
+interplanetary	/ˌɪntəˈplænətri/	adj. 行星间的	d	planet
+interplay	/ˈɪntəpleɪ/	n. 相互作用，相互影响	c	
+interpolate	/ɪnˈtɜːpəleɪt/	v. 插入，篡改	c	
+interpose	/ˌɪntəˈpəʊz/	v. 插入，干预	c	
+interpret	/ɪnˈtɜːprɪt/	v. 解释，翻译	c	
+interpretation	/ɪnˌtɜːprɪˈteɪʃn/	n. 解释，演绎	d	interpret
+interpreter	/ɪnˈtɜːprɪtə/	n. 口译员，解释者	d	interpret
+interregnum	/ˌɪntəˈreɡnəm/	n. 空位期，过渡期	c	
+interrogate	/ɪnˈterəɡeɪt/	v. 审问，盘问	c	
+interrogation	/ɪnˌterəˈɡeɪʃn/	n. 审问，盘问	d	interrogate
+interrupt	/ˌɪntəˈrʌpt/	v. 打断，中断	c	
+interruption	/ˌɪntəˈrʌpʃn/	n. 打断，中断	d	interrupt
+intersect	/ˌɪntəˈsekt/	v. 相交，交叉	c	
+intersection	/ˌɪntəˈsekʃn/	n. 交叉路口，交集	d	intersect
+intersperse	/ˌɪntəˈspɜːs/	v. 散布，点缀	c	
+interstate	/ˈɪntəsteɪt/	adj. 州际的	c	
+intertwine	/ˌɪntəˈtwaɪn/	v. 纠缠，交织	c	
+interval	/ˈɪntəvl/	n. 间隔，幕间休息	c	
+intervene	/ˌɪntəˈviːn/	v. 干预，介入	c	
+intervention	/ˌɪntəˈvenʃn/	n. 干预，介入	d	intervene
+interview	/ˈɪntəvjuː/	n./v. 面试，采访	c	
+interweave	/ˌɪntəˈwiːv/	v. 交织，编织	c	
+intestate	/ɪnˈtesteɪt/	adj. 未留遗嘱的	d	testament
+intestinal	/ɪnˈtestɪnl/	adj. 肠的，肠道的	d	intestine
+intestine	/ɪnˈtestɪn/	n. 肠	c	
+intimacy	/ˈɪntɪməsi/	n. 亲密，密切	d	intimate
+intimate	/ˈɪntɪmət/	adj. 亲密的，私人的	c	
+intimidate	/ɪnˈtɪmɪdeɪt/	v. 恐吓，威胁	c	
+intimidation	/ɪnˌtɪmɪˈdeɪʃn/	n. 恐吓，威胁	d	intimidate
+intolerable	/ɪnˈtɒlərəbl/	adj. 无法忍受的，难以容忍的	d	tolerable
+intolerant	/ɪnˈtɒlərənt/	adj. 不宽容的，偏狭的	d	tolerant
+intonation	/ˌɪntəˈneɪʃn/	n. 语调，声调	c	
+intoxicate	/ɪnˈtɒksɪkeɪt/	v. 使醉，使陶醉	d	toxic
+intractable	/ɪnˈtræktəbl/	adj. 难处理的，倔强的	d	tractable
+intransigent	/ɪnˈtrænzɪdʒənt/	adj. 不妥协的，固执的	c	
+intrepid	/ɪnˈtrepɪd/	adj. 无畏的，勇敢的	c	
+intricacy	/ˈɪntrɪkəsi/	n. 错综复杂，复杂	d	intricate
+intricate	/ˈɪntrɪkət/	adj. 复杂的，错综的	c	
+intrigue	/ɪnˈtriːɡ/	v. 激起兴趣；n. 阴谋	c	
+intriguing	/ɪnˈtriːɡɪŋ/	adj. 引人入胜的，有趣的	d	intrigue
+intrinsic	/ɪnˈtrɪnzɪk/	adj. 固有的，内在的	c	
+introduce	/ˌɪntrəˈdjuːs/	v. 介绍，引入	c	
+introduction	/ˌɪntrəˈdʌkʃn/	n. 介绍，导言	d	introduce
+introductory	/ˌɪntrəˈdʌktəri/	adj. 介绍的，入门的	d	introduce
+introspection	/ˌɪntrəˈspekʃn/	n. 内省，自我反省	c	
+introvert	/ˈɪntrəvɜːt/	n. 性格内向者	c	
+intrude	/ɪnˈtruːd/	v. 侵入，打扰	c	
+intruder	/ɪnˈtruːdə/	n. 闯入者，入侵者	d	intrude
+intrusion	/ɪnˈtruːʒn/	n. 侵入，打扰	d	intrude
+intrusive	/ɪnˈtruːsɪv/	adj. 侵入的，打扰的	d	intrude
+intuition	/ˌɪntjuˈɪʃn/	n. 直觉，直观	c	
+intuitive	/ɪnˈtjuːɪtɪv/	adj. 直觉的，直观的	d	intuition
+inundate	/ˈɪnʌndeɪt/	v. 淹没，泛滥	c	
+invade	/ɪnˈveɪd/	v. 入侵，侵犯	c	
+invader	/ɪnˈveɪdə/	n. 入侵者，侵略者	d	invade
+invalid	/ɪnˈvælɪd/	adj. 无效的，病弱的	c	
+invaluable	/ɪnˈvæljuəbl/	adj. 无价的，极宝贵的	d	value
+invariable	/ɪnˈveəriəbl/	adj. 不变的，恒定的	d	variable
+invariably	/ɪnˈveəriəbli/	adv. 总是，不变地	d	variable
+invasion	/ɪnˈveɪʒn/	n. 入侵，侵犯	d	invade
+invective	/ɪnˈvektɪv/	n. 谩骂，痛斥	c	
+inveigh	/ɪnˈveɪ/	v. 猛烈抨击，痛斥	c	
+inveigle	/ɪnˈveɪɡl/	v. 诱骗，诱惑	c	
+invent	/ɪnˈvent/	v. 发明，捏造	c	
+invention	/ɪnˈvenʃn/	n. 发明，虚构	d	invent
+inventive	/ɪnˈventɪv/	adj. 有创造力的，善于发明的	d	invent
+inventory	/ˈɪnvəntri/	n. 库存，清单	c	
+inverse	/ˌɪnˈvɜːs/	adj. 相反的，倒转的	c	
+invert	/ɪnˈvɜːt/	v. 倒置，颠倒	c	
+invest	/ɪnˈvest/	v. 投资，投入	c	
+investigate	/ɪnˈvestɪɡeɪt/	v. 调查，研究	c	
+investigation	/ɪnˌvestɪˈɡeɪʃn/	n. 调查，研究	d	investigate
+investigator	/ɪnˈvestɪɡeɪtə/	n. 调查员，研究者	d	investigate
+investment	/ɪnˈvestmənt/	n. 投资，投入	d	invest
+investor	/ɪnˈvestə/	n. 投资者，投资人	d	invest
+inveterate	/ɪnˈvetərət/	adj. 根深蒂固的，积习难改的	c	
+invidious	/ɪnˈvɪdiəs/	adj. 引起反感的，不公平的	c	
+invigorate	/ɪnˈvɪɡəreɪt/	v. 使精力充沛，使振奋	d	vigor
+invincible	/ɪnˈvɪnsəbl/	adj. 无敌的，不可战胜的	c	
+inviolable	/ɪnˈvaɪələbl/	adj. 不可侵犯的，神圣的	c	
+invisible	/ɪnˈvɪzəbl/	adj. 看不见的，无形的	d	visible
+invitation	/ˌɪnvɪˈteɪʃn/	n. 邀请，请帖	d	invite
+inviting	/ɪnˈvaɪtɪŋ/	adj. 诱人的，吸引人的	d	invite
+invocation	/ˌɪnvəˈkeɪʃn/	n. 祈求，祈祷	d	invoke
+invoice	/ˈɪnvɔɪs/	n. 发票，账单	c	
+invoke	/ɪnˈvəʊk/	v. 援引，恳求	c	
+involuntary	/ɪnˈvɒləntri/	adj. 无意识的，不由自主的	d	voluntary
+involve	/ɪnˈvɒlv/	v. 涉及，使参与	c	
+involved	/ɪnˈvɒlvd/	adj. 参与的，复杂的	d	involve
+involvement	/ɪnˈvɒlvmənt/	n. 参与，卷入	d	involve
+invulnerable	/ɪnˈvʌlnərəbl/	adj. 无法伤害的，无懈可击的	d	vulnerable
+inward	/ˈɪnwəd/	adj. 向内的，内心的	c	
+iodine	/ˈaɪədiːn/	n. 碘	c	
+ion	/ˈaɪən/	n. 离子	c	
+irascible	/ɪˈræsəbl/	adj. 易怒的，脾气暴躁的	c	
+irate	/aɪˈreɪt/	adj. 愤怒的，发怒的	c	
+ire	/ˈaɪə/	n. 愤怒，怒火	c	
+iridescent	/ˌɪrɪˈdesnt/	adj. 彩虹色的，变幻光泽的	c	
+irksome	/ˈɜːksəm/	adj. 令人厌烦的，恼人的	c	
+ironic	/aɪˈrɒnɪk/	adj. 讽刺的，冷嘲的	d	irony
+ironical	/aɪˈrɒnɪkl/	adj. 讽刺的，挖苦的	d	irony
+irony	/ˈaɪrəni/	n. 讽刺，反语	c	
+irradiate	/ɪˈreɪdieɪt/	v. 照射，使发光	c	
+irrational	/ɪˈræʃənl/	adj. 不合理的，无理性的	d	rational
+irreconcilable	/ɪˈrekənsaɪləbl/	adj. 不可调和的，对立的	d	reconcile
+irrecoverable	/ˌɪrɪˈkʌvərəbl/	adj. 无法挽回的，不能恢复的	d	recover
+irrefutable	/ɪˈrefjətəbl/	adj. 无可辩驳的，驳不倒的	d	refute
+irregular	/ɪˈreɡjələ/	adj. 不规则的，不规律的	d	regular
+irrelevant	/ɪˈreləvənt/	adj. 无关的，不切题的	d	relevant
+irreparable	/ɪˈrepərəbl/	adj. 无法弥补的，不可修复的	d	repair
+irreplaceable	/ˌɪrɪˈpleɪsəbl/	adj. 不可替代的，无法取代的	d	replace
+irrepressible	/ˌɪrɪˈpresəbl/	adj. 无法抑制的，压抑不住的	d	repress
+irreproachable	/ˌɪrɪˈprəʊtʃəbl/	adj. 无可指责的，无瑕疵的	d	reproach
+irresistible	/ˌɪrɪˈzɪstəbl/	adj. 不可抗拒的，极诱人的	d	resist
+irresolute	/ɪˈrezəluːt/	adj. 犹豫不决的，优柔寡断的	d	resolute
+irrespective	/ˌɪrɪˈspektɪv/	adj. 不顾的，不论的	d	respect
+irresponsible	/ˌɪrɪˈspɒnsəbl/	adj. 不负责任的，不承担责任的	d	responsible
+irretrievable	/ˌɪrɪˈtriːvəbl/	adj. 无法挽回的，不能恢复的	d	retrieve
+irreverent	/ɪˈrevərənt/	adj. 不敬的，无礼的	d	reverent
+irreversible	/ˌɪrɪˈvɜːsəbl/	adj. 不可逆的，不可逆转的	d	reverse
+irrevocable	/ɪˈrevəkəbl/	adj. 不可撤销的，无法挽回的	d	revoke
+irrigate	/ˈɪrɪɡeɪt/	v. 灌溉，冲洗	c	
+irrigation	/ˌɪrɪˈɡeɪʃn/	n. 灌溉，水利	d	irrigate
+irritable	/ˈɪrɪtəbl/	adj. 易怒的，急躁的	d	irritate
+irritate	/ˈɪrɪteɪt/	v. 使恼怒，刺激	c	
+irritation	/ˌɪrɪˈteɪʃn/	n. 恼怒，刺激	d	irritate
+isolation	/ˌaɪsəˈleɪʃn/	n. 隔离，孤立	d	isolate
+itinerary	/aɪˈtɪnərəri/	n. 行程，旅行路线	c	
+jab	/dʒæb/	v./n. 刺，戳	c	
+jagged	/ˈdʒæɡɪd/	adj. 锯齿状的，参差不齐的	c	
+jail	/dʒeɪl/	n. 监狱；v. 监禁	c	
+jargon	/ˈdʒɑːɡən/	n. 行话，术语	c	
+jaundice	/ˈdʒɔːndɪs/	n. 黄疸	c	
+jaunt	/dʒɔːnt/	n. 短途旅行，远足	c	
+jaunty	/ˈdʒɔːnti/	adj. 轻松愉快的，时髦的	c	
+jealous	/ˈdʒeləs/	adj. 嫉妒的，吃醋的	c	
+jealousy	/ˈdʒeləsi/	n. 嫉妒，妒忌	d	jealous
+jeer	/dʒɪə/	v./n. 嘲笑，讥讽	c	
+jeopardize	/ˈdʒepədaɪz/	v. 危及，损害	c	
+jeopardy	/ˈdʒepədi/	n. 危险，危难	c	
+jerk	/dʒɜːk/	v./n. 猛拉，急推	c	
+jest	/dʒest/	n./v. 玩笑，说笑	c	
+jettison	/ˈdʒetɪsn/	v. 抛弃，投弃	c	
+jetty	/ˈdʒeti/	n. 防波堤，码头	c	
+jewel	/ˈdʒuːəl/	n. 宝石，珠宝	c	
+jeweler	/ˈdʒuːələ/	n. 珠宝商	d	jewel
+jibe	/dʒaɪb/	v. 一致，嘲笑	c	
+jigsaw	/ˈdʒɪɡsɔː/	n. 拼图，线锯	c	
+jingle	/ˈdʒɪŋɡl/	v./n. 叮当作响	c	
+jog	/dʒɒɡ/	v. 慢跑，轻推	c	
+joint	/dʒɔɪnt/	adj. 联合的；n. 关节	c	
+jointly	/ˈdʒɔɪntli/	adv. 联合地，共同地	d	joint
+jolt	/dʒəʊlt/	v. 震动，使震惊	c	
+jostle	/ˈdʒɒsl/	v. 推挤，争夺	c	
+jot	/dʒɒt/	v. 草草记下；n. 少量	c	
+journal	/ˈdʒɜːnl/	n. 期刊，日志	c	
+journalism	/ˈdʒɜːnəlɪzəm/	n. 新闻业，新闻工作	d	journal
+journalist	/ˈdʒɜːnəlɪst/	n. 记者，新闻工作者	d	journal
+jovial	/ˈdʒəʊviəl/	adj. 快乐的，愉快的	c	
+joyous	/ˈdʒɔɪəs/	adj. 快乐的，高兴的	d	joy
+jubilant	/ˈdʒuːbɪlənt/	adj. 欢欣鼓舞的	c	
+jubilation	/ˌdʒuːbɪˈleɪʃn/	n. 欢欣，庆祝	d	jubilant
+jubilee	/ˈdʒuːbɪliː/	n. 周年纪念， jubilee	c	
+judicial	/dʒuːˈdɪʃl/	adj. 司法的，法庭的	c	
+judicious	/dʒuːˈdɪʃəs/	adj. 明智的，审慎的	c	
+jug	/dʒʌɡ/	n. 壶，罐	c	
+juggle	/ˈdʒʌɡl/	v. 玩杂耍，篡改	c	
+jumble	/ˈdʒʌmbl/	v. 混杂；n. 混乱	c	
+jumbo	/ˈdʒʌmbəʊ/	adj. 巨大的，特大的	c	
+jump	/dʒʌmp/	v. 跳跃，猛增	c	
+junction	/ˈdʒʌŋkʃn/	n. 交叉口，连接处	c	
+juncture	/ˈdʒʌŋktʃə/	n. 时刻，关节	c	
+jungle	/ˈdʒʌŋɡl/	n. 丛林，密林	c	
+junior	/ˈdʒuːniə/	adj. 年少的，初级的	c	
+junk	/dʒʌŋk/	n. 垃圾，废旧物品	c	
+jurisdiction	/ˌdʒʊərɪsˈdɪkʃn/	n. 司法权，管辖范围	c	
+juror	/ˈdʒʊərə/	n. 陪审员	d	jury
+jury	/ˈdʒʊəri/	n. 陪审团	c	
+justifiable	/ˈdʒʌstɪfaɪəbl/	adj. 有理由的，可辩解的	d	justify
+justification	/ˌdʒʌstɪfɪˈkeɪʃn/	n. 正当理由，辩护	d	justify
+justify	/ˈdʒʌstɪfaɪ/	v. 证明…正当，为…辩护	d	just
+juvenile	/ˈdʒuːvənaɪl/	adj. 少年的，幼稚的	c	
+juxtapose	/ˌdʒʌkstəˈpəʊz/	v. 并置，并列	c	
+keel	/kiːl/	n. 龙骨；v. 倾覆	c	
+keen	/kiːn/	adj. 敏锐的，热切的	c	
+ken	/ken/	n. 知识范围，视野	c	
+kernel	/ˈkɜːnl/	n. 核心，果仁	c	
+kerosene	/ˈkerəsiːn/	n. 煤油	c	
+kettle	/ˈketl/	n. 水壶，壶	c	
+keynote	/ˈkiːnəʊt/	n. 主旨，主题	c	
+keystone	/ˈkiːstəʊn/	n. 基石，关键	c	
+kickback	/ˈkɪkbæk/	n. 回扣，佣金	c	
+kidnap	/ˈkɪdnæp/	v. 绑架，诱拐	c	
+kidney	/ˈkɪdni/	n. 肾，肾脏	c	
+kiln	/kɪln/	n. 窑，炉	c	
+kilometer	/ˈkɪləmiːtə/	n. 千米，公里	c	
+kin	/kɪn/	n. 亲属，家族	c	
+kindle	/ˈkɪndl/	v. 点燃，激起	c	
+kindred	/ˈkɪndrəd/	adj. 同类的，有亲缘的	c	
+kinetic	/kɪˈnetɪk/	adj. 运动的，动力的	c	
+kinship	/ˈkɪnʃɪp/	n. 亲属关系，血缘	d	kin
+kiosk	/ˈkiːɒsk/	n. 亭子，售货亭	c	
+kitten	/ˈkɪtn/	n. 小猫	c	
+knack	/næk/	n. 诀窍，技能	c	
+knapsack	/ˈnæpsæk/	n. 背包	c	
+knead	/niːd/	v. 揉捏，按摩	c	
+knit	/nɪt/	v. 编织，使结合	c	
+knob	/nɒb/	n. 门把手，旋钮	c	
+knoll	/nəʊl/	n. 小丘，圆丘	c	
+knot	/nɒt/	n. 结，难题	c	
+knuckle	/ˈnʌkl/	n. 指关节	c	
+laboratory	/ləˈbɒrətri/	n. 实验室	c	
+laborious	/ləˈbɔːriəs/	adj. 艰苦的，费力的	d	labor
+labyrinth	/ˈlæbərɪnθ/	n. 迷宫，错综复杂	c	
+lacerate	/ˈlæsəreɪt/	v. 撕裂，划破	c	
+lackadaisical	/ˌlækəˈdeɪzɪkl/	adj. 无精打采的，懒散的	c	
+lackey	/ˈlæki/	n. 走狗，仆人	c	
+lackluster	/ˈlæklʌstə/	adj. 无光泽的，平淡的	c	
+laconic	/ləˈkɒnɪk/	adj. 简洁的，言简意赅的	c	
+lactic	/ˈlæktɪk/	adj. 乳的，乳汁的	c	
+laden	/ˈleɪdn/	adj. 装满的，负载的	c	
+ladle	/ˈleɪdl/	n. 长柄勺	c	
+lag	/læɡ/	v./n. 落后，滞后	c	
+lagoon	/ləˈɡuːn/	n. 泻湖，礁湖	c	
+lair	/leə/	n. 兽穴，巢穴	c	
+laissez-faire	/ˌleseɪ ˈfeə/	n. 自由放任政策	c	
+lament	/ləˈment/	v. 哀悼，悲叹	c	
+lamentable	/ˈlæməntəbl/	adj. 可悲的，令人惋惜的	d	lament
+lamentation	/ˌlæmənˈteɪʃn/	n. 哀悼，悲叹	d	lament
+laminate	/ˈlæmɪneɪt/	v. 压成薄片，层压	c	
+lampoon	/læmˈpuːn/	v./n. 讽刺，嘲讽	c	
+lance	/lɑːns/	n. 长矛；v. 用柳叶刀切开	c	
+lancet	/ˈlɑːnsɪt/	n. 柳叶刀，刺血针	c	
+languid	/ˈlæŋɡwɪd/	adj. 倦怠的，无精打采的	c	
+languish	/ˈlæŋɡwɪʃ/	v. 衰弱，憔悴	c	
+languor	/ˈlæŋɡə/	n. 倦怠，慵懒	c	
+lanky	/ˈlæŋki/	adj. 瘦长的，细长的	c	
+lantern	/ˈlæntən/	n. 灯笼，提灯	c	
+lapse	/læps/	n. 失误，流逝；v. 失效	c	
+larceny	/ˈlɑːsəni/	n. 盗窃罪	c	
+lard	/lɑːd/	n. 猪油	c	
+largess	/ˈlɑːdʒes/	n. 慷慨赠予，赏赐	c	
+lark	/lɑːk/	n. 云雀，嬉戏	c	
+lascivious	/ləˈsɪviəs/	adj. 淫荡的，好色的	c	
+lash	/læʃ/	v. 鞭打，猛烈冲击	c	
+lassitude	/ˈlæsɪtjuːd/	n. 疲乏，倦怠	c	
+latch	/lætʃ/	n. 门闩；v. 闩上	c	
+latent	/ˈleɪtnt/	adj. 潜在的，潜伏的	c	
+lateral	/ˈlætərəl/	adj. 侧面的，横向的	c	
+latitude	/ˈlætɪtjuːd/	n. 纬度，自由度	c	
+lattice	/ˈlætɪs/	n. 格子，晶格	c	
+laud	/lɔːd/	v. 赞美，称赞	c	
+laudable	/ˈlɔːdəbl/	adj. 值得赞美的，可嘉的	d	laud
+laudatory	/ˈlɔːdətri/	adj. 赞美的，褒扬的	d	laud
+lava	/ˈlɑːvə/	n. 熔岩，火山岩	c	
+lavender	/ˈlævəndə/	n. 薰衣草；adj. 淡紫色的	c	
+lavish	/ˈlævɪʃ/	adj. 奢侈的，慷慨的	c	
+lawful	/ˈlɔːfl/	adj. 合法的，法定的	d	law
+lawless	/ˈlɔːləs/	adj. 无法无天的，违法的	d	law
+lawsuit	/ˈlɔːsuːt/	n. 诉讼，官司	c	
+lawyer	/ˈlɔːjə/	n. 律师	c	
+lax	/læks/	adj. 松懈的，不严格的	c	
+laxative	/ˈlæksətɪv/	n. 泻药	c	
+layman	/ˈleɪmən/	n. 外行，门外汉	c	
+layoff	/ˈleɪɒf/	n. 裁员，下岗	c	
+layout	/ˈleɪaʊt/	n. 布局，版面设计	c	
+lea	/liː/	n. 草地，牧场	c	
+leach	/liːtʃ/	v. 沥滤，渗漏	c	
+leaflet	/ˈliːflət/	n. 传单，小册子	d	leaf
+leakage	/ˈliːkɪdʒ/	n. 泄漏，漏出	d	leak
+lean	/liːn/	v. 倾斜，倚靠；adj. 瘦的	c	
+leap	/liːp/	v./n. 跳跃，飞跃	c	
+lease	/liːs/	n. 租约；v. 出租	c	
+leash	/liːʃ/	n. 皮带，束缚	c	
+leather	/ˈleðə/	n. 皮革	c	
+lecture	/ˈlektʃə/	n. 讲座，演讲	c	
+ledge	/ledʒ/	n. 壁架，突出部分	c	
+ledger	/ˈledʒə/	n. 账簿，总账	c	
+leech	/liːtʃ/	n. 水蛭，蚂蟥	c	
+leer	/lɪə/	v./n. 斜眼看，色迷迷地看	c	
+leeway	/ˈliːweɪ/	n. 余地，自由空间	c	
+legacy	/ˈleɡəsi/	n. 遗产，遗留物	c	
+legal	/ˈliːɡl/	adj. 合法的，法律的	c	
+legate	/ˈleɡət/	n. 使者，使节	c	
+legend	/ˈledʒənd/	n. 传说，图例	c	
+legendary	/ˈledʒəndri/	adj. 传说的，极著名的	d	legend
+legerdemain	/ˌledʒədəˈmeɪn/	n. 戏法，狡辩	c	
+legible	/ˈledʒəbl/	adj. 清晰易读的，字迹清楚的	c	
+legion	/ˈliːdʒən/	n. 军团，众多	c	
+legislate	/ˈledʒɪsleɪt/	v. 立法，制定法律	c	
+legislation	/ˌledʒɪsˈleɪʃn/	n. 立法，法规	c	
+legislative	/ˈledʒɪslətɪv/	adj. 立法的，立法机关的	d	legislate
+legislature	/ˈledʒɪsleɪtʃə/	n. 立法机关，议会	d	legislate
+legitimate	/lɪˈdʒɪtɪmət/	adj. 合法的，合理的	c	
+legitimize	/lɪˈdʒɪtɪmaɪz/	v. 使合法，使正当	d	legitimate
+leisure	/ˈleʒə/	n. 闲暇，休闲	c	
+leisurely	/ˈleʒəli/	adj. 悠闲的，从容的	d	leisure
+lenient	/ˈliːniənt/	adj. 宽容的，仁慈的	c	
+lens	/lenz/	n. 透镜，镜片	c	
+leprosy	/ˈleprəsi/	n. 麻风病	c	
+lesion	/ˈliːʒn/	n. 损害，病变	c	
+lessee	/leˈsiː/	n. 承租人，租户	d	lease
+lessen	/ˈlesn/	v. 减少，减轻	d	less
+lesser	/ˈlesə/	adj. 较小的，次要的	d	less
+lesson	/ˈlesn/	n. 课程，教训	c	
+lethal	/ˈliːθl/	adj. 致命的，致死的	c	
+lethargy	/ˈleθədʒi/	n. 昏睡，无生气	c	
+levy	/ˈlevi/	v. 征收；n. 征税	c	
+lexicon	/ˈleksɪkən/	n. 词典，词汇	c	
+liability	/ˌlaɪəˈbɪləti/	n. 责任，负债	d	liable
+liable	/ˈlaɪəbl/	adj. 有责任的，易于…的	c	
+liaison	/liˈeɪzn/	n. 联络，联络人	c	
+libel	/ˈlaɪbl/	n. 诽谤，中伤	c	
+liberal	/ˈlɪbərəl/	adj. 自由的，开明的	c	
+liberate	/ˈlɪbəreɪt/	v. 解放，释放	d	liberty
+liberation	/ˌlɪbəˈreɪʃn/	n. 解放，释放	d	liberty
+libertine	/ˈlɪbətiːn/	n. 放荡者，浪子	c	
+liberty	/ˈlɪbəti/	n. 自由，自主	c	
+libido	/lɪˈbiːdəʊ/	n. 性欲，里比多	c	
+librarian	/laɪˈbreəriən/	n. 图书管理员	d	library
+license	/ˈlaɪsns/	n. 执照，许可证	c	
+licentious	/laɪˈsenʃəs/	adj. 放荡的，淫乱的	c	
+lichen	/ˈlaɪkən/	n. 地衣，青苔	c	
+lieu	/luː/	n. 代替，场所	c	
+lifelong	/ˈlaɪflɒŋ/	adj. 终身的，一辈子的	c	
+lifespan	/ˈlaɪfspæn/	n. 寿命，使用期	c	
+lifetime	/ˈlaɪftaɪm/	n. 一生，终生	c	
+ligament	/ˈlɪɡəmənt/	n. 韧带	c	
+likelihood	/ˈlaɪklihʊd/	n. 可能性，概率	d	likely
+liken	/ˈlaɪkən/	v. 把…比作	d	like
+limb	/lɪm/	n. 肢，臂，翼	c	
+limber	/ˈlɪmbə/	adj. 柔软的，灵活的	c	
+limbo	/ˈlɪmbəʊ/	n. 不确定状态，地狱边缘	c	
+lime	/laɪm/	n. 石灰，酸橙	c	
+limelight	/ˈlaɪmlaɪt/	n. 聚光灯，众人瞩目	c	
+limerick	/ˈlɪmərɪk/	n. 五行打油诗	c	
+limitation	/ˌlɪmɪˈteɪʃn/	n. 限制，局限	d	limit
+limited	/ˈlɪmɪtɪd/	adj. 有限的，受限制的	d	limit
+limitless	/ˈlɪmɪtləs/	adj. 无限的，无边界的	d	limit
+limp	/lɪmp/	v. 跛行；adj. 柔软的	c	
+limpid	/ˈlɪmpɪd/	adj. 清澈的，清晰的	c	
+lineage	/ˈlɪniɪdʒ/	n. 血统，世系	d	line
+linear	/ˈlɪniə/	adj. 线性的，直线的	c	
+linen	/ˈlɪnɪn/	n. 亚麻布，亚麻制品	c	
+liner	/ˈlaɪnə/	n. 班轮，衬垫	d	line
+linger	/ˈlɪŋɡə/	v. 逗留，徘徊	c	
+lingering	/ˈlɪŋɡərɪŋ/	adj. 缠绵的，拖延的	d	linger
+linguistic	/lɪŋˈɡwɪstɪk/	adj. 语言的，语言学的	c	
+lining	/ˈlaɪnɪŋ/	n. 衬里，内层	d	line
+link	/lɪŋk/	n. 链接，联系；v. 连接	c	
+linkage	/ˈlɪŋkɪdʒ/	n. 连接，联动	d	link
+lint	/lɪnt/	n. 棉绒，绒布	c	
+lion	/ˈlaɪən/	n. 狮子	c	
+lionize	/ˈlaɪənaɪz/	v. 崇拜，捧为名人	d	lion
+liquefy	/ˈlɪkwɪfaɪ/	v. 液化，溶解	d	liquid
+liquidate	/ˈlɪkwɪdeɪt/	v. 清算，清偿	d	liquid
+liquor	/ˈlɪkə/	n. 烈酒，酒精饮料	c	
+listless	/ˈlɪstləs/	adj. 无精打采的，倦怠的	c	
+literacy	/ˈlɪtərəsi/	n. 读写能力，识字	d	literal
+literal	/ˈlɪtərəl/	adj. 字面的，逐字的	c	
+literally	/ˈlɪtərəli/	adv. 逐字地，确实地	d	literal
+literary	/ˈlɪtərəri/	adj. 文学的，书面的	d	literature
+literate	/ˈlɪtərət/	adj. 识字的，有文化的	c	
+literature	/ˈlɪtrətʃə/	n. 文学，文献	c	
+lithe	/laɪð/	adj. 柔软的，轻盈的	c	
+litigant	/ˈlɪtɪɡənt/	n. 诉讼当事人	d	litigate
+litigation	/ˌlɪtɪˈɡeɪʃn/	n. 诉讼，打官司	c	
+litmus	/ˈlɪtməs/	n. 石蕊	c	
+litter	/ˈlɪtə/	n. 垃圾；v. 乱扔	c	
+livelihood	/ˈlaɪvlihʊd/	n. 生计，谋生手段	d	lively
+livelong	/ˈlɪvlɒŋ/	adj. 漫长的，整个的	c	
+lively	/ˈlaɪvli/	adj. 活泼的，生动的	d	live
+liven	/ˈlaɪvn/	v. 使有生气，活跃起来	d	live
+liver	/ˈlɪvə/	n. 肝脏	c	
+livestock	/ˈlaɪvstɒk/	n. 家畜，牲畜	c	
+livid	/ˈlɪvɪd/	adj. 铁青的，暴怒的	c	
+loaf	/ləʊf/	n. 一条面包；v. 游荡	c	
+loafer	/ˈləʊfə/	n. 游手好闲者，乐福鞋	d	loaf
+loath	/ləʊθ/	adj. 不愿意的，勉强的	c	
+loathe	/ləʊð/	v. 厌恶，憎恨	c	
+lobby	/ˈlɒbi/	n. 大厅，游说集团	c	
+lobe	/ləʊb/	n. 叶，耳垂	c	
+lobster	/ˈlɒbstə/	n. 龙虾	c	
+locale	/ləʊˈkɑːl/	n. 地点，现场	d	local
+locality	/ləʊˈkæləti/	n. 地区，位置	d	local
+locate	/ləʊˈkeɪt/	v. 定位，位于	c	
+location	/ləʊˈkeɪʃn/	n. 地点，位置	d	locate
+locker	/ˈlɒkə/	n. 储物柜，更衣柜	d	lock
+locomotive	/ˌləʊkəˈməʊtɪv/	n. 机车，火车头	c	
+locus	/ˈləʊkəs/	n. 位置，中心	c	
+locust	/ˈləʊkəst/	n. 蝗虫	c	
+lodge	/lɒdʒ/	v. 寄宿，提出；n. 小屋	c	
+lodging	/ˈlɒdʒɪŋ/	n. 住宿，寄宿	d	lodge
+lofty	/ˈlɒfti/	adj. 高耸的，崇高的	c	
+log	/lɒɡ/	n. 原木，日志；v. 记录	c	
+logical	/ˈlɒdʒɪkl/	adj. 逻辑的，合理的	d	logic
+logistics	/ləˈdʒɪstɪks/	n. 物流，后勤	c	
+logo	/ˈləʊɡəʊ/	n. 标识，徽标	c	
+loiter	/ˈlɔɪtə/	v. 闲逛，徘徊	c	
+loll	/lɒl/	v. 懒洋洋地倚靠，闲荡	c	
+lonely	/ˈləʊnli/	adj. 孤独的，寂寞的	d	lone
+longevity	/lɒnˈdʒevəti/	n. 长寿，寿命	c	
+longing	/ˈlɒŋɪŋ/	n. 渴望，憧憬	d	long
+longitude	/ˈlɒŋɡɪtjuːd/	n. 经度，经线	c	
+longitudinal	/ˌlɒŋɡɪˈtjuːdɪnl/	adj. 纵向的，经度的	d	longitude
+loom	/luːm/	v. 隐现，逼近；n. 织布机	c	
+loop	/luːp/	n. 环，循环；v. 成环	c	
+loophole	/ˈluːphəʊl/	n. 漏洞，空子	c	
+loose	/luːs/	adj. 松的，宽松的	c	
+loosen	/ˈluːsn/	v. 放松，松开	d	loose
+loot	/luːt/	n. 战利品；v. 抢劫	c	
+lope	/ləʊp/	v. 大步慢跑	c	
+lop-sided	/ˌlɒp ˈsaɪdɪd/	adj. 不平衡的，歪斜的	c	
+loquacious	/ləˈkweɪʃəs/	adj. 健谈的，多话的	c	
+lore	/lɔː/	n. 学问，传说	c	
+lose	/luːz/	v. 失去，输掉	c	
+lotion	/ˈləʊʃn/	n. 洗液，乳液	c	
+lottery	/ˈlɒtəri/	n. 彩票，抽奖	c	
+loudspeaker	/ˌlaʊdˈspiːkə/	n. 扬声器，喇叭	c	
+lounge	/laʊndʒ/	n. 休息室；v. 闲逛	c	
+lousy	/ˈlaʊzi/	adj. 糟糕的，差劲的	c	
+lout	/laʊt/	n. 粗人，无礼的人	c	
+lovable	/ˈlʌvəbl/	adj. 可爱的，讨人喜欢的	d	love
+loyal	/ˈlɔɪəl/	adj. 忠诚的，忠实的	c	
+loyalty	/ˈlɔɪəlti/	n. 忠诚，忠实	d	loyal
+lozenge	/ˈlɒzɪndʒ/	n. 菱形，含片	c	
+lubricant	/ˈluːbrɪkənt/	n. 润滑剂	d	lubricate
+lubricate	/ˈluːbrɪkeɪt/	v. 润滑，加润滑油	c	
+lucid	/ˈluːsɪd/	adj. 清晰的，清醒的	c	
+lucrative	/ˈluːkrətɪv/	adj. 有利可图的，赚钱的	c	
+ludicrous	/ˈluːdɪkrəs/	adj. 荒唐的，可笑的	c	
+lug	/lʌɡ/	v. 用力拖，拖拉	c	
+luggage	/ˈlʌɡɪdʒ/	n. 行李	c	
+lugubrious	/ləˈɡuːbriəs/	adj. 悲伤的，阴郁的	c	
+lukewarm	/ˌluːkˈwɔːm/	adj. 微温的，不热心的	c	
+lull	/lʌl/	v. 使安静，催眠；n. 间歇	c	
+lullaby	/ˈlʌləbaɪ/	n. 摇篮曲，催眠曲	c	
+lumber	/ˈlʌmbə/	n. 木材；v. 笨重地移动	c	
+luminary	/ˈluːmɪnəri/	n. 名人，发光体	d	luminous
+luminous	/ˈluːmɪnəs/	adj. 发光的，明亮的	c	
+lump	/lʌmp/	n. 块，肿块	c	
+lunar	/ˈluːnə/	adj. 月亮的，阴历的	c	
+lunatic	/ˈluːnətɪk/	n. 疯子；adj. 疯狂的	c	
+lunge	/lʌndʒ/	v./n. 猛冲，扑	c	
+lurch	/lɜːtʃ/	v./n. 突然倾斜，蹒跚	c	
+lure	/lʊə/	v. 诱惑；n. 诱饵	c	
+lurid	/ˈlʊərɪd/	adj. 骇人的，艳丽的	c	
+lurk	/lɜːk/	v. 潜伏，埋伏	c	
+luscious	/ˈlʌʃəs/	adj. 美味的，诱人的	c	
+lush	/lʌʃ/	adj. 茂盛的，豪华的	c	
+lust	/lʌst/	n. 欲望，强烈渴望	c	
+luster	/ˈlʌstə/	n. 光泽，光彩	c	
+lustrous	/ˈlʌstrəs/	adj. 有光泽的，光辉的	d	luster
+luxuriant	/lʌɡˈʒʊəriənt/	adj. 茂盛的，华丽的	d	luxury
+luxurious	/lʌɡˈʒʊəriəs/	adj. 奢华的，豪华的	d	luxury
+luxury	/ˈlʌkʃəri/	n. 奢侈品，奢华	c	
+lyric	/ˈlɪrɪk/	n. 歌词；adj. 抒情的	c	
+lyrical	/ˈlɪrɪkl/	adj. 抒情的，诗意的	d	lyric

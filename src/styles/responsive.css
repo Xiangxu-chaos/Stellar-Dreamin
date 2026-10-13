@@ -1,0 +1,166 @@
+/* ==========================================================================
+   responsive.css —— 移动端与自适应
+   断点：1100px（窄桌面）/ 860px（平板）/ 600px（手机）/ 400px（小屏）
+   ========================================================================== */
+
+/* —— 窄桌面 —— */
+@media (max-width: 1100px) {
+  .app__main { padding: var(--sp-5) var(--sp-4) var(--sp-7); }
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+}
+
+/* —— 平板 —— */
+@media (max-width: 860px) {
+  body { font-size: 14.5px; }
+
+  .topbar__inner { padding: var(--sp-3) var(--sp-4); gap: var(--sp-3); }
+  .brand__title { font-size: 15.5px; }
+  .topbar__stats { font-size: 11.5px; gap: var(--sp-3); }
+
+  /* 工具栏不再吸顶（避免占满小屏），改为普通块 */
+  .toolbar {
+    position: static;
+    padding: var(--sp-3);
+    gap: var(--sp-2);
+  }
+
+  .domain-grid { grid-template-columns: 1fr; }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--sp-3);
+  }
+
+  .flip { height: 288px; }
+  .flip__face { padding: var(--sp-4); }
+  .flip__backscroll { padding: var(--sp-4); }
+
+  .modal { padding: var(--sp-3); }
+  .modal__panel { max-height: 92vh; border-radius: var(--radius); }
+  .modal__head { padding: var(--sp-4); }
+  .modal__body { padding: var(--sp-4); }
+  .modal__foot { padding: var(--sp-3) var(--sp-4); flex-wrap: wrap; }
+
+  .toolbar__divider { display: none; }
+}
+
+/* —— 手机 —— */
+@media (max-width: 600px) {
+  body { font-size: 14px; line-height: 1.6; }
+
+  .app__main { padding: var(--sp-4) var(--sp-3) var(--sp-6); }
+
+  .topbar__inner {
+    padding: var(--sp-2) var(--sp-3);
+    gap: var(--sp-2);
+  }
+  .brand__mark { width: 34px; height: 34px; border-radius: 10px; }
+  .brand__mark svg { width: 19px; height: 19px; }
+  .brand__sub { display: none; }
+  .brand__title { font-size: 14.5px; }
+
+  /* 手机上统计信息折叠为一行小字 */
+  .topbar__stats { order: 3; width: 100%; justify-content: space-between; padding-top: 2px; }
+
+  .hero__title { font-size: 24px; }
+  .hero__desc { font-size: 13px; }
+
+  .domain-card { padding: var(--sp-4); }
+  .domain-card__desc { min-height: auto; }
+  .domain-card__icon { width: 46px; height: 46px; }
+  .domain-card__icon svg { width: 24px; height: 24px; }
+
+  /* 工具栏纵向堆叠，输入框占满 */
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .toolbar > * { width: 100%; }
+  .field { width: 100%; }
+  .field input[type="search"] { min-width: 0; }
+  .field select { flex: 1; }
+  .seg { width: 100%; }
+  .seg__btn { flex: 1; justify-content: center; }
+
+  /* 卡片改单列大卡，便于拇指操作和阅读 */
+  .card-grid { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .flip { height: 272px; }
+
+  /* 列表视图隐藏音标列 */
+  .row { flex-wrap: wrap; gap: var(--sp-2); padding: var(--sp-3); }
+  .row__word { min-width: 0; flex: 1 0 auto; font-size: 15.5px; }
+  .row__ph { display: none; }
+  .row__tr { flex: 1 0 100%; font-size: 12.5px; }
+
+  .modal { padding: 0; align-items: flex-end; }
+  .modal__panel {
+    max-height: 94vh;
+    border-radius: var(--radius) var(--radius) 0 0;
+    animation: sheet-in 0.4s var(--ease-spring) both;
+  }
+  @keyframes sheet-in {
+    from { opacity: 0; transform: translateY(100%); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .modal__title { font-size: 18px; }
+  .modal__foot { position: sticky; bottom: 0; background: rgba(10,13,18,0.96); }
+  .modal__foot .btn { flex: 1; }
+
+  .detail__hero { align-items: flex-start; }
+  .detail__word { font-size: 30px; }
+
+  .quiz { padding: var(--sp-5) var(--sp-4); }
+  .quiz__form { flex-direction: column; }
+  .quiz__form .btn { width: 100%; padding: 12px; }
+  .quiz__input { padding: 12px 14px; font-size: 15px; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .toast-stack {
+    left: var(--sp-3);
+    right: var(--sp-3);
+    bottom: var(--sp-3);
+    max-width: none;
+  }
+
+  .history-item__word { min-width: 88px; }
+}
+
+/* —— 小屏 —— */
+@media (max-width: 400px) {
+  .flip { height: 258px; }
+  .flip__word { font-size: 23px; }
+  .detail__word { font-size: 26px; }
+  .quiz__word { font-size: 28px; }
+  .hero__title { font-size: 21px; }
+  .stats-grid { grid-template-columns: 1fr; }
+}
+
+/* —— 触摸设备：去掉悬停位移，避免"粘住" —— */
+@media (hover: none) {
+  .flip:hover .flip__inner { transform: none; }
+  .flip.is-flipped:hover .flip__inner { transform: rotateY(180deg); }
+  .flip:hover .flip__face { box-shadow: var(--shadow-card); border-color: var(--c-border); }
+  .flip:hover .flip__face::after { opacity: 0; }
+  .row:hover { transform: none; }
+  .domain-card:hover { transform: none; }
+  .btn:hover { transform: none; }
+}
+
+/* —— 横屏矮屏：卡片压缩高度 —— */
+@media (max-height: 560px) and (orientation: landscape) {
+  .flip { height: 240px; }
+}
+
+/* —— 大屏增强 —— */
+@media (min-width: 1500px) {
+  .app__main { max-width: 1560px; }
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(252px, 1fr)); }
+}
+
+/* —— 打印（导出卡片内容） —— */
+@media print {
+  body::before, body::after, .topbar, .toolbar, .footer, .toast-stack { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .flip, .modal__panel { box-shadow: none !important; border-color: #ccc !important; }
+}
