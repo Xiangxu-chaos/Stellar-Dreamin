@@ -10,8 +10,8 @@
  *   后续任何视觉改动都要改三处。拆成组件后只有这一个数据源。
  *
  * 本轮变更：
- *   - 配图：正面（紧凑缩略）+ 背面（完整）。有图显示图，没图显示占位图，
- *     加载失败自动回退占位图，绝不显示裂图。
+ *   - 配图：图片功能已彻底移除。卡片统一渲染固定 16/9 的「暂无配图」占位块，
+ *     不加载任何外部图片链接，不存在随机图库 / 图片抓取逻辑。
  *   - 领域标签：**只渲染当前上下文所属的那一个领域**（修复问题一）。
  *     `word.domains` 数组在数据结构上保留（内部逻辑仍用），但渲染层不消费，
  *     避免一个跨多个领域的词在正面堆出多个标签把布局撑爆。
@@ -32,7 +32,6 @@ import { iconPath } from '../core/icons.js';
  * @param {object} props
  * @param {object} props.word        词条（word/phonetic/translation/root/type，可含 domains）
  * @param {object|null} props.material 预生成记忆材料（静态）
- * @param {string} props.image       最终展示图 URL（已由 service 计算好：用户覆盖 > 预置）
  * @param {object} props.domain      当前上下文领域配置（含 name/theme/icon）—— 卡片只渲染这一个
  * @param {Array}  props.domains     该词所属的全部领域（仅用于生成悬停提示里的「其他 N 个领域」，不渲染成标签）
  * @param {object|null} props.relevance 关联信息
@@ -45,14 +44,13 @@ import { iconPath } from '../core/icons.js';
  * @param {Function} props.onFlip          翻转回调
  * @param {Function} props.onToggleFavorite(word, next)  切换收藏（落库由父层负责）
  * @param {Function} props.onToggleSelect  (word)
- * @param {Function} props.onImageError    图片加载失败回调（可选）
  */
 export function createWordCard(props) {
   const {
-    word, material, image, domain, relevance, index = 0,
+    word, material, domain, relevance, index = 0,
     favorite = false, selected = false, expanded = false, compact = false,
     mastered = false,
-    onExpand, onFlip, onToggleFavorite, onToggleSelect, onToggleMastered, onImageError,
+    onExpand, onFlip, onToggleFavorite, onToggleSelect, onToggleMastered,
   } = props;
 
   const domainTags = props.domains || word.domains || [];
@@ -103,33 +101,19 @@ export function createWordCard(props) {
   }
 
   /* -------------------------------------------------------------------------
-   * 配图区域：有图显示图，无图/失败显示占位图
+   * 配图区域：图片功能已彻底移除。
+   *
+   * 现在卡片上只保留一个固定宽高比（16/9）的占位块，统一显示「暂无配图」，
+   * 保证「有图 / 无图」时卡片布局始终一致、绝对不被撑破。
+   * 不加载任何外部图片链接，也不存在任何图片抓取逻辑。
    * ---------------------------------------------------------------------- */
   function buildFigure(variant) {
     const host = h('div', {
-      class: variant === 'front' ? 'wordcard__figure' : 'wordcard__figure wordcard__figure--back',
+      class: variant === 'front'
+        ? 'wordcard__figure is-placeholder'
+        : 'wordcard__figure wordcard__figure--back is-placeholder',
     });
-
-    if (image) {
-      const img = h('img.wordcard__img', {
-        src: image,
-        alt: `${word.word} 配图`,
-        loading: 'lazy',
-        referrerPolicy: 'no-referrer',
-        onError: () => {
-          // 加载失败 → 换占位图，绝不显示裂图
-          host.replaceChildren(buildPlaceholder());
-          host.classList.add('is-placeholder');
-          onImageError?.(word, image);
-        },
-      });
-      host.appendChild(img);
-      // 图片版权提示（仅鼠标悬停可见，不打扰阅读）
-      host.setAttribute('title', '图片版权归原方所有，仅作个人学习用途');
-    } else {
-      host.classList.add('is-placeholder');
-      host.appendChild(buildPlaceholder());
-    }
+    host.appendChild(buildPlaceholder());
     return host;
   }
 
@@ -158,26 +142,23 @@ export function createWordCard(props) {
   function buildDomainBadges() {
     if (!domain) return [];
 
-    // 当前领域下的术语级信息（用于把官方译名带出来，仍只有一个标签）
-    const selfTag = domainTags.find((t) => t.id === domain.id || t.domainId === domain.id);
-    const isTerm = selfTag?.level === 'exact'
-      || relevance?.level === 'exact';
-    const termZh = selfTag?.domainTermZh || relevance?.domainTermZh || '';
-    const otherCount = Math.max(0, domainTags.filter((t) => t.id !== domain.id && t.domainId !== domain.id).length);
+    // ⚠️ 精简（任务一）：正面领域标签**只显示领域名**。
+    //   不再拼接「· 官方译名」、不再拼接「该词也出现在其他 N 个兴趣库中」等
+    //   长文本 —— 那些信息只保留在悬停提示（title）里，不占版面。
+    const otherCount = Math.max(0, domainTags.filter(
+      (t) => t.id !== domain.id && t.domainId !== domain.id,
+    ).length);
 
     const titleParts = [`${domain.name} 领域`];
     if (otherCount > 0) titleParts.push(`该词也出现在其他 ${otherCount} 个兴趣库中`);
-    if (isTerm && termZh) titleParts.push(`官方译名：${termZh}`);
-    else if (isTerm) titleParts.push('专有术语（译名待确认）');
 
     return [h('span.chip', {
-      class: isTerm ? 'chip--domain chip--domain-exact' : 'chip--domain',
+      class: 'chip--domain',
       title: titleParts.join(' · '),
       style: domain.theme?.primary ? { '--chip-domain': domain.theme.primary } : {},
     }, [
       svgIcon(iconPath(domain.icon || 'domain'), { size: 11 }),
       domain.name,
-      isTerm && termZh ? h('b', { text: `· ${termZh}` }) : null,
     ])];
   }
 
@@ -203,20 +184,31 @@ export function createWordCard(props) {
    * 正面
    * ---------------------------------------------------------------------- */
   function buildFront() {
+    /* ⚠️ 精简铁律（任务一）：正面**只允许三类标签**，顺序固定、样式统一：
+     *   ① 领域标签（buildDomainBadges）—— 只显示领域名
+     *   ② 认证标签 —— 仅当 relevance.level === 'exact' 时显示「官方认证」，
+     *                 普通词汇**什么都不加**
+     *   ③ 词性标签 —— 「核心词」/「派生词」
+     * 严禁在正面出现来源网址、完整 source 文本、「译名待确认」等啰嗦内容
+     * （buildSourceChip 只允许出现在背面）。 */
     const badges = [];
     badges.push(...buildDomainBadges());
+
+    // ② 认证标签：官方认证术语才显示，且文案必须短
     if (relevance?.level === 'exact') {
-      badges.push(h('span.chip.chip--term', { title: relevance.evidence || '' }, [
-        svgIcon(iconPath('target'), { size: 11 }),
-        relevance.domainTermZh || '专有术语',
+      badges.push(h('span.chip.chip--term', {
+        title: relevance.evidence || '该词对应当前领域的官方术语',
+      }, [
+        svgIcon(iconPath('verified'), { size: 11 }),
+        '官方认证',
       ]));
     }
+
+    // ③ 词性标签
     badges.push(h('span.chip', {
       class: word.type === 'derived' ? 'chip--derived' : 'chip--core',
       text: word.type === 'derived' ? '派生词' : '核心词',
     }));
-    const srcChip = buildSourceChip();
-    if (srcChip) badges.push(srcChip);
 
     return h('div.wordcard__face.wordcard__face--front', {}, [
       h('div.wordcard__rule'),

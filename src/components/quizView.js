@@ -36,6 +36,8 @@ const OPTION_KEYS = ['A', 'B', 'C', 'D', 'E', 'F'];
  * @param {Function} props.onExit
  * @param {Function} props.onRoundEnd (answers) 整轮结束回调（功能二：分组复习落库用）
  * @param {Function} props.onToggleFavorite (word, next, domainId)
+ * @param {Function} props.onMoveToMastered (word, domainId, next) 标记熟词 + 从收藏夹移除
+ * @param {Function} props.isMastered (word, domainId) => boolean 查询是否已是熟词
  */
 export function createQuizView(props) {
   const {
@@ -43,6 +45,7 @@ export function createQuizView(props) {
     count = 10, words = [], domainMap = {}, showHistory = false,
     showSummary = true,
     onExit, onToggleFavorite, onRoundEnd,
+    onMoveToMastered, isMastered,
   } = props;
 
   const root = h('div.quiz-view');
@@ -140,6 +143,7 @@ export function createQuizView(props) {
 
     const q = questions[index];
     let answered = false;
+    let actionButtons = null;   // 「下一题」按钮引用（移入熟词库后自动滚动到它）
 
     const optionButtons = [];
     const revealHost = h('div.quiz-reveal');
@@ -210,12 +214,11 @@ export function createQuizView(props) {
         isCorrect ? '回答正确' : `回答错误 · 正确答案：${correctOpt?.text || '—'}`,
       ]);
 
-      // 展开完整卡片（正面 + 背面材料 + 配图）
+      // 展开完整卡片（正面 + 背面材料）
       const cardDomain = domainMap[q.domainId] || domain || null;
       const expandedCard = createWordCard({
         word: { ...(q.wordInfo || {}), word: q.word, phonetic: q.phonetic, translation: q.translation },
         material: q.material,
-        image: q.wordInfo?.image || q.material?.imageUrl || '',
         domain: cardDomain,
         domains: q.domains,
         relevance: q.relevance,
@@ -254,15 +257,60 @@ export function createQuizView(props) {
         if (histBlock) revealNodes.push(histBlock);
       }
 
+      const nextBtn = h('button.btn.btn--primary', {
+        type: 'button',
+        onClick: () => { index += 1; renderCurrent(); },
+      }, isLast
+        ? [svgIcon(iconPath('trophy'), { size: 14, cls: 'btn__icon' }), '查看成绩']
+        : [svgIcon(iconPath('arrowRight'), { size: 14, cls: 'btn__icon' }), '下一题']);
+      actionButtons = nextBtn;
+
+      /* ---- 「移入熟词库」按钮（任务二） ----
+       * 语义：把该词标记为熟词 → 自动从收藏夹移除（离开收藏夹、进入熟词库）。
+       * 已经是熟词时直接把按钮置为「已在熟词库」并禁用，不重复写入。 */
+      const already = typeof isMastered === 'function'
+        ? Boolean(isMastered(q.word, q.domainId))
+        : false;
+
+      const moveBtn = h('button.btn.btn--ghost', {
+        type: 'button',
+        disabled: already,
+        title: already ? '该词已在熟词库中' : '标记为熟词，并从收藏夹移除',
+        onClick: async () => {
+          if (moveBtn.disabled) return;
+          moveBtn.disabled = true;
+          try {
+            if (typeof onMoveToMastered === 'function') {
+              await onMoveToMastered(q.word, q.domainId, true);
+            }
+            setMoved();
+            showToast(`已移入熟词库「${q.word}」`, { type: 'ok', duration: 1800 });
+            // 自动滚动到「下一题」，让用户顺畅继续复习
+            if (actionButtons) actionButtons.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } catch (e) {
+            moveBtn.disabled = false;
+            showToast('移入失败', { desc: e?.message || String(e), type: 'err' });
+          }
+        },
+      }, already
+        ? [svgIcon(iconPath('checkCircle'), { size: 14, cls: 'btn__icon' }), '已在熟词库']
+        : [svgIcon(iconPath('brain'), { size: 14, cls: 'btn__icon' }), '移入熟词库']);
+
+      /** 点击成功后把按钮固定为「已在熟词库」态 */
+      function setMoved() {
+        moveBtn.disabled = true;
+        moveBtn.classList.add('is-on');
+        moveBtn.replaceChildren(
+          svgIcon(iconPath('checkCircle'), { size: 14, cls: 'btn__icon' }),
+          document.createTextNode('已在熟词库'),
+        );
+      }
+
       revealNodes.push(h('div', {
         style: { display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '22px', flexWrap: 'wrap' },
       }, [
-        h('button.btn.btn--primary', {
-          type: 'button',
-          onClick: () => { index += 1; renderCurrent(); },
-        }, isLast
-          ? [svgIcon(iconPath('trophy'), { size: 14, cls: 'btn__icon' }), '查看成绩']
-          : [svgIcon(iconPath('arrowRight'), { size: 14, cls: 'btn__icon' }), '下一题']),
+        nextBtn,
+        moveBtn,
         !isLast
           ? h('button.btn.btn--ghost', {
               type: 'button',

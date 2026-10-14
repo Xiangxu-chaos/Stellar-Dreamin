@@ -39,6 +39,8 @@ const DEFAULT_SIZE = studyService.DEFAULT_REVIEW_GROUP_SIZE || 20;
  * @param {object} options.domainMap         domainId → domain（卡片标签用）
  * @param {Function} options.onExit          退出复习（回收藏夹/主界面）
  * @param {Function} [options.onToggleFavorite]
+ * @param {Function} [options.onMoveToMastered] (word, domainId, next) 移入熟词库（功能：复习流转）
+ * @param {Function} [options.isMastered]      (word, domainId) => boolean
  * @param {(state:object)=>void} [options.onProgress] 进度回调（供父层展示）
  */
 export function createReviewGroupView(options = {}) {
@@ -48,6 +50,8 @@ export function createReviewGroupView(options = {}) {
     domainMap = {},
     onExit,
     onToggleFavorite,
+    onMoveToMastered,
+    isMastered,
     onProgress,
   } = options;
 
@@ -292,6 +296,8 @@ export function createReviewGroupView(options = {}) {
       showSummary: false,          // 关键：关掉自带总结页，交给组间小结
       onExit: () => renderGroupSummary(idx, null, true),
       onToggleFavorite,
+      onMoveToMastered,
+      isMastered,
       onRoundEnd: (answers) => handleGroupFinished(idx, answers),
     });
 

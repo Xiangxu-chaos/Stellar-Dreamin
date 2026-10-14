@@ -7,7 +7,7 @@
  *     「未来批量生成用」—— 仅在你要为【新领域】批量预生成材料时才需要，
  *     当前版本不参与任何运行时逻辑，留空也不影响使用。
  *
- *   数据管理新增：收藏夹、配图覆盖、做题统计的清理入口。
+ *   数据管理新增：收藏夹、做题统计、答题历史的清理入口。
  *
  * 所有读写经由 dataService / aiService，本组件不直接触碰 localStorage 或 fetch。
  * ============================================================================
@@ -271,27 +271,6 @@ export async function openSettingsModal() {
     },
   }, [svgIcon(iconPath('star'), { size: 12, cls: 'btn__icon' }), '清空收藏夹']);
 
-  const clearImagesBtn = h('button.btn.btn--sm', {
-    type: 'button',
-    onClick: async () => {
-      const ok = await confirmDialog({
-        title: '清除全部自定义配图？',
-        message: '将删除你手动填写的图片 URL，卡片会回退到预置图或占位图。词库与记忆材料不受影响。',
-        confirmText: '清除配图',
-        danger: true,
-      });
-      if (!ok) return;
-      await dataService.setImageOverride('', '', '');
-      // 逐领域清除（结构上是 domainId::word 扁平表，按前缀清空最稳妥）
-      const all = await dataService.getAllImageOverrides();
-      for (const key of Object.keys(all)) {
-        const idx = key.indexOf('::');
-        if (idx > 0) await dataService.setImageOverride(key.slice(0, idx), key.slice(idx + 2), '');
-      }
-      showToast('已清除自定义配图', { type: 'ok' });
-    },
-  }, [svgIcon(iconPath('imageOff'), { size: 12, cls: 'btn__icon' }), '清除配图覆盖']);
-
   const clearQuizBtn = h('button.btn.btn--sm', {
     type: 'button',
     onClick: async () => {
@@ -328,7 +307,7 @@ export async function openSettingsModal() {
     onClick: async () => {
       const ok = await confirmDialog({
         title: '重置全部本地数据？',
-        message: '将删除设置、收藏、配图覆盖、勾选记录、答题历史与界面偏好。内置的记忆材料与词库文件不受影响。此操作不可撤销。',
+        message: '将删除设置、收藏、勾选记录、答题历史与界面偏好。内置的记忆材料与词库文件不受影响。此操作不可撤销。',
         confirmText: '全部重置',
         danger: true,
       });
@@ -349,7 +328,7 @@ export async function openSettingsModal() {
       exportBtn, importBtn, fileInput,
     ]),
     h('div', { style: { display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '10px' } }, [
-      clearFavBtn, clearImagesBtn, clearQuizBtn, clearHistoryBtn, clearAllBtn,
+      clearFavBtn, clearQuizBtn, clearHistoryBtn, clearAllBtn,
     ]),
     h('div.notice', { style: { marginTop: '4px', marginBottom: '0' } }, [
       svgIcon(iconPath('info'), { size: 16, cls: 'notice__icon' }),

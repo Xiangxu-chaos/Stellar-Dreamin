@@ -29,13 +29,31 @@
  *
  * 对外接口：
  *   - getMaterial(domainId, word)          单条材料（不含用户图片覆盖）
- *   - getMaterialWithImage(domainId, word) 单条材料 + 用户图片覆盖
+ *   - getMaterialWithImage(domainId, word) 单条材料 + 图片解析（当前恒为空串）
  *   - getMaterials(domainId)               该领域全部材料
  *   - hasMaterial(domainId, word)
- *   - resolveImage(domainId, word, mat)    计算最终展示图（覆盖 > 预置 > ''）
+ *   - resolveImage(domainId, word, mat)    计算最终展示图（二级优先级，无随机图）
  *   - getMaterialStats(domainId)           覆盖率统计
  *   - auditExamples([domainId])            审计：逐条检查是否带 example
  *   - preload(domainId) / preloadAll()     预热（载入时自动校验 example）
+ *
+ * ============================================================================
+ * ★ 配图状态说明（图片功能已移除）★
+ * ============================================================================
+ *
+ * 【一、数据层面】
+ *   data/domainMaterials/*.json 每条词条仍保留 imageUrl 字段（统一为 ""），
+ *   作为占位保留。以后若要重新启用配图，只需往 JSON 里填链接即可，无需改结构。
+ *   落点：normalizeMaterial() 已做兜底（缺字段 → ''），组件不需要判空。
+ *
+ * 【二、渲染层面 —— 统一占位块】
+ *   当前所有卡片统一渲染固定 16/9 的「暂无配图」占位块，不加载任何外部图片。
+ *   resolveImage() 作为数据层工具保留（历史兼容），真实数据里已无图可解析，
+ *   因此解析结果恒为 ''。
+ *
+ * 【三、布局铁律】
+ *   图片容器固定 aspect-ratio: 16/9 + max-height + overflow: hidden；
+ *   占位块灰色背景、内容居中。无论何时，卡片布局绝不变化。
  * ============================================================================
  */
 
@@ -240,11 +258,47 @@ export async function getMaterialWithImage(domainId, word) {
   return { material, image, hasImage: Boolean(image) };
 }
 
-/** 计算最终展示图：用户覆盖 > 材料预置 > 空 */
+/**
+ * 计算最终展示图的解析结果 —— 数据层兼容工具（图片功能已移除）。
+ *
+ * 优先级（从高到低）：
+ *   0. 用户手填 URL 覆盖   dataService.getImageOverride()  （旧数据兼容，保留）
+ *   1. 用户上传图 Base64   dataService.getUserImage()      （localStorage userImages）
+ *   2. 材料预置图          material.imageUrl               （当前统一为 ""）
+ *   3. 空串 → 组件渲染统一占位块
+ *
+ * 当前所有材料的 imageUrl 均为 ""，因此正常情况下返回空串，卡片显示占位块。
+ *
+ * @param {string} domainId
+ * @param {string} word
+ * @param {object|null} material
+ * @returns {Promise<string>} 图片地址 / Base64 dataURL，无图时返回 ''
+ */
 export async function resolveImage(domainId, word, material) {
+  // 0. 用户手填 URL（旧数据兼容）
   const override = await dataService.getImageOverride(domainId, word);
   if (override) return override;
+
+  // 1. 用户上传图（Base64）—— 只影响本机当前用户
+  const uploaded = await dataService.getUserImage(domainId, word);
+  if (uploaded) return uploaded;
+
+  // 2. 材料预置图（JSON 里人工填写的准确链接）
+  // 3. 都没有 → 空串，组件渲染占位块
   return material?.imageUrl || '';
+}
+
+/**
+ * 同步版优先级解析（供已知两份数据时使用，避免重复 await）。
+ * 顺序与 resolveImage 完全一致，只是把「读数据」这一步交给调用方。
+ * @param {object} src
+ * @param {string} [src.override]   用户手填 URL
+ * @param {string} [src.uploaded]   用户上传 Base64
+ * @param {object|null} [src.material]
+ * @returns {string}
+ */
+export function pickImage({ override, uploaded, material } = {}) {
+  return override || uploaded || (material && material.imageUrl) || '';
 }
 
 /** 该领域全部材料（Map 的普通对象形态） */
@@ -260,29 +314,41 @@ export async function hasMaterial(domainId, word) {
 }
 
 /**
- * 批量判断：给一批词打上 material 字段
+ * 批量判断：给一批词打上 material / image 字段
  * 替代旧版 studyService.hydrateCards 里「读 localStorage 缓存」的逻辑。
+ *
+ * 图片按 resolveImage() 的同一套优先级解析（顺序完全一致，只是这里一次性
+ * 把两张表都读出来，避免对每个词各 await 两次）：
+ *   手填URL > 上传图 > 材料预置图 > ''（占位块）
+ * 当前所有材料 imageUrl 均为 ""，因此 results 里 image 基本都是 ''。
+ *
+ * ⚠️ 不查任何外部图库。没有图就老老实实返回 ''，由组件渲染占位块。
+ *
  * @param {string} domainId
  * @param {Array} words
- * @returns {Promise<Array>} 原数组（原地写入 material / hasMaterial）
+ * @returns {Promise<Array>} 原数组（原地写入 material / hasMaterial / image）
  */
 export async function attachMaterials(domainId, words) {
   const map = await ensure(domainId);
-  const overrides = await dataService.getAllImageOverrides(domainId);
+  // 两张表一次性读取（顺序与 resolveImage 严格一致）
+  const overrides = await dataService.getAllImageOverrides(domainId);   // { word: url }
+  const uploads = await dataService.getAllUserImages(domainId);         // { word: dataURL }
+
   for (const w of words || []) {
     if (!w || !w.word) continue;
-    const hit = map.get(String(w.word).toLowerCase()) || null;
+    const word = String(w.word).toLowerCase();
+    const hit = map.get(word) || null;
     w.material = hit;
     w.hasMaterial = Boolean(hit);
-    // 展示图：用户覆盖 > 材料预置
-    const key = String(w.word).toLowerCase();
-    w.image = overrides[key] || hit?.imageUrl || '';
+    // 展示图：手填URL > 上传图 > 材料预置图（无图则为 ''，渲染占位块）
+    w.image = pickImage({ override: overrides[word], uploaded: uploads[word], material: hit });
   }
   return words;
 }
 
 /**
  * 领域元信息（供 UI 展示「已覆盖 N 个词」）
+ * withImage 统计「材料里预置了 imageUrl 的条数」（不含用户上传 / 测试图）。
  */
 export async function getMaterialStats(domainId) {
   const map = await ensure(domainId);
@@ -299,6 +365,27 @@ export async function getMaterialStats(domainId) {
 }
 
 /**
+ * 配图来源统计（运维视角）：有多少词最终能显示图片、各来自哪一级。
+ * 用于排查「为什么这个词没图」。
+ */
+export async function getImageSourceStats(domainId) {
+  const map = await ensure(domainId);
+  const words = [...map.keys()];
+  const overrides = await dataService.getAllImageOverrides(domainId);
+  const uploads = await dataService.getAllUserImages(domainId);
+
+  const stats = { total: words.length, fromOverride: 0, fromUpload: 0, fromMaterial: 0, none: 0 };
+  for (const word of words) {
+    const material = map.get(word);
+    if (overrides[word]) stats.fromOverride += 1;
+    else if (uploads[word]) stats.fromUpload += 1;
+    else if (material && material.imageUrl) stats.fromMaterial += 1;
+    else stats.none += 1;
+  }
+  return stats;
+}
+
+/**
  * 图片可用的域名白名单（仅用于给用户提示，不做强制拦截）
  * 说明：图片版权归原方所有，本项目仅做个人学习用途。
  */
@@ -311,10 +398,12 @@ export default {
   getMaterial,
   getMaterialWithImage,
   resolveImage,
+  pickImage,
   getMaterials,
   hasMaterial,
   attachMaterials,
   getMaterialStats,
+  getImageSourceStats,
   auditExamples,
   IMAGE_COPYRIGHT_NOTICE,
 };

@@ -34,7 +34,8 @@ const KEYS = {
   ui: `${NS}:ui`,
   // ---- 新增（本轮增量）----
   favorites: `${NS}:favorites`,       // 收藏：{ [domainId::word]: {domainId, word, at} } —— 结构化，便于收藏夹跨领域渲染
-  images: `${NS}:images`,             // 图片覆盖：{ [domainId::word]: imageUrl }（用户手动填写/替换）
+  images: `${NS}:images`,             // 图片覆盖（URL）：{ [domainId::word]: "https://..." }（用户手动填写/替换）
+  userImages: `${NS}:userImages`,     // 用户上传图（Base64）：{ [domainId::word]: "data:image/png;base64,..." }
   quizStats: `${NS}:quizStats`,       // 做题统计：{ [domainId]: {total, correct, byWord:{}} }
   // ---- 新增（功能一 / 功能二 / 功能三 / 功能四）----
   userDomains: `${NS}:userDomains`,   // 我的库：['hok', 'slay', ...]（用户订阅的领域 id 列表）
@@ -468,6 +469,99 @@ export async function setImageOverride(domainId, word, imageUrl) {
     return all;
   });
   return result;
+}
+
+/* ---------------------------------------------------------------------------
+ * 用户上传配图（Base64）—— 与上面的「URL 覆盖」分表存放
+ *
+ * 为什么不复用 KEYS.images：
+ *   images 存的是「短 URL」，userImages 存的是「Base64 长字符串」（单张可达数百 KB）。
+ *   两者体积差 3~4 个数量级，混在一起会让 exportAll() 的备份文件、估算用量、
+ *   以及任何一次读写整个表都变得昂贵。分表后：
+ *     - 读取 URL 覆盖依然只读一张很小的表；
+ *     - 用户上传的图可以单独清理（clearUserImages）而不影响用户手填的 URL。
+ *
+ * 存储结构：{ [domainId::word]: "data:image/png;base64,...." }
+ * 键与收藏 / 熟词库 / 错题本共用同一套 cardKey 约定，可直接对齐。
+ *
+ * ⚠️ 读函数不含任何写操作（遵守「读路径零写入」铁律）。
+ * ------------------------------------------------------------------------ */
+
+/** 取某词的用户上传图（无则返回空串） */
+export async function getUserImage(domainId, word) {
+  const all = (await readRaw(KEYS.userImages)) || {};
+  return all[cardKey(domainId, word)] || '';
+}
+
+/** 取某领域全部用户上传图：{ [word]: dataUrl } */
+export async function getAllUserImages(domainId) {
+  const all = (await readRaw(KEYS.userImages)) || {};
+  if (!domainId) return all;
+  const prefix = `${domainId}::`;
+  const out = {};
+  for (const [k, v] of Object.entries(all)) {
+    if (k.startsWith(prefix)) out[k.slice(prefix.length)] = v;
+  }
+  return out;
+}
+
+/** 该领域用户上传图数量 */
+export async function getUserImageCount(domainId) {
+  const all = await getAllUserImages(domainId);
+  return Object.keys(all).length;
+}
+
+/**
+ * 写入用户上传图。传空字符串 = 删除该词的上传图（回到 JSON 预置图）。
+ * @param {string} domainId
+ * @param {string} word
+ * @param {string} dataUrl 形如 "data:image/png;base64,..."
+ * @returns {Promise<boolean>} 是否写入成功（超出 localStorage 配额会返回 false）
+ */
+export async function setUserImage(domainId, word, dataUrl) {
+  const k = cardKey(domainId, word);
+  if (!k || k === '::') return false;
+  if (!dataUrl) return removeUserImage(domainId, word);
+
+  await updateRaw(KEYS.userImages, (cur) => {
+    const all = cur && typeof cur === 'object' ? { ...cur } : {};
+    all[k] = String(dataUrl);
+    return all;
+  });
+  // updateRaw 内部吞掉了 writeRaw 的失败，这里回读一次确认真的落盘了
+  const check = await getUserImage(domainId, word);
+  return Boolean(check);
+}
+
+/** 删除某词的上传图 */
+export async function removeUserImage(domainId, word) {
+  const k = cardKey(domainId, word);
+  await updateRaw(KEYS.userImages, (cur) => {
+    const all = cur && typeof cur === 'object' ? { ...cur } : {};
+    delete all[k];
+    return all;
+  });
+  return true;
+}
+
+/** 清空上传图（传 domainId 只清该领域） */
+export async function clearUserImages(domainId) {
+  if (!domainId) return updateRaw(KEYS.userImages, () => ({}));
+  const prefix = `${domainId}::`;
+  await updateRaw(KEYS.userImages, (cur) => {
+    const all = cur && typeof cur === 'object' ? { ...cur } : {};
+    for (const k of Object.keys(all)) if (k.startsWith(prefix)) delete all[k];
+    return all;
+  });
+  return true;
+}
+
+/** 上传图总体积（字节估算，供 UI 提示） */
+export async function getUserImagesSize() {
+  const all = (await readRaw(KEYS.userImages)) || {};
+  let chars = 0;
+  for (const v of Object.values(all)) chars += String(v || '').length;
+  return { count: Object.keys(all).length, bytes: chars * 2 };
 }
 
 /* ---------------------------------------------------------------------------
@@ -1091,6 +1185,7 @@ export async function exportAll() {
     // ---- 本轮新增 ----
     favorites: await readRaw(KEYS.favorites) || {},
     images: await readRaw(KEYS.images) || {},
+    userImages: await readRaw(KEYS.userImages) || {},
     quizStats: await readRaw(KEYS.quizStats) || {},
     // ---- 新增（功能一 / 二 / 三 / 四）----
     userDomains: await readRaw(KEYS.userDomains) || [],
@@ -1111,6 +1206,7 @@ export async function importAll(payload) {
   // ---- 本轮新增（旧备份没有这些字段，跳过即可，保持向后兼容）----
   if (payload.favorites) await writeRaw(KEYS.favorites, payload.favorites);
   if (payload.images) await writeRaw(KEYS.images, payload.images);
+  if (payload.userImages) await writeRaw(KEYS.userImages, payload.userImages);
   if (payload.quizStats) await writeRaw(KEYS.quizStats, payload.quizStats);
   // ---- 新增（功能一 / 二 / 三 / 四）----
   if (payload.userDomains) await writeRaw(KEYS.userDomains, payload.userDomains);
@@ -1160,6 +1256,9 @@ export default {
   toggleFavorite, setFavorite, clearFavorites,
   // 配图覆盖（模块三）
   getImageOverride, getAllImageOverrides, setImageOverride,
+  // 用户上传配图 Base64（本轮：卡片配图标准）
+  getUserImage, getAllUserImages, getUserImageCount,
+  setUserImage, removeUserImage, clearUserImages, getUserImagesSize,
   // 做题统计（模块五）
   getQuizStats, recordQuizResult, clearQuizStats,
   // 我的库 / 兴趣领域订阅（功能一）

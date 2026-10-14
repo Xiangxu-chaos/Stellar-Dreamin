@@ -886,7 +886,6 @@ export async function createHomePage() {
     return {
       word: w,
       material: w.material,
-      image: w.image || '',
       domain: state.domainMap[domainId] || state.domain,
       domains: w.domains || [],
       relevance: w.relevance,
@@ -899,7 +898,6 @@ export async function createHomePage() {
       onToggleFavorite: (word, next) => handleToggleFavorite(word, next, domainId),
       onToggleMastered: (word, next) => handleToggleMastered(word, next, domainId),
       onToggleSelect: (word, next) => toggleSelect(word, next),
-      onImageError: () => { /* 组件内部已回退占位图，这里仅作埋点预留 */ },
     };
   }
 
@@ -1092,6 +1090,8 @@ export async function createHomePage() {
       onToggleFavorite: async (w, next, dId) => {
         await handleToggleFavorite(w, next, dId || w.domainId || state.domainId);
       },
+      onMoveToMastered: (w, dId) => handleMoveToMastered(w, dId || w?.domainId),
+      isMastered: (w, dId) => isMastered(dId || w?.domainId || state.domainId, w),
     });
     contentHost.appendChild(view);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1164,28 +1164,22 @@ export async function createHomePage() {
   /* =======================================================================
      详情
      ==================================================================== */
+
   async function openDetail(word) {
     const domainId = word.domainId || state.domainId;
     const domain = state.domainMap[domainId] || state.domain;
-    // 按需补全材料 / 配图 / 领域标签（详情页要展示最完整信息）
-    const { material, image } = await studyService.getMaterialFor(domainId, word.word);
+    // 按需补全材料 / 领域标签（详情页要展示最完整信息）
+    const { material } = await studyService.getMaterialFor(domainId, word.word);
     const domains = word.domains?.length ? word.domains : wordBankService.getDomainTags(word.word);
 
     showDetailModal({
       word,
       material,
-      image,
       domain,
       domains,
       relevance: word.relevance,
       favorite: isFav(domainId, word.word),
       mastered: isMastered(domainId, word.word),
-      onSaveImage: async (w, url) => {
-        await dataService.setImageOverride(domainId, w.word, url);
-        const hit = state.words.find((x) => x.word === w.word);
-        if (hit) hit.image = url;
-        renderContent();
-      },
       onToggleFavorite: async (w, next) => {
         await handleToggleFavorite(w, next, domainId);
       },
@@ -1228,9 +1222,66 @@ export async function createHomePage() {
       onToggleFavorite: async (w, next, dId) => {
         await handleToggleFavorite(w, next, dId || state.domainId);
       },
+      onMoveToMastered: (w, dId) => handleMoveToMastered(w, dId),
+      isMastered: (w, dId) => isMastered(dId || state.domainId, w),
     });
     contentHost.appendChild(view);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /**
+   * 复习模式流转：把词「移入熟词库」。
+   *
+   * 语义（用户需求）：标记为熟词 + 从收藏夹移除 —— 离开收藏夹、进入熟词库。
+   * 两步都走 service 层，落库后统一刷新 UI（顶部数字 / 内存 Set / 已挂载卡片）。
+   *
+   * @param {object} word
+   * @param {string} [domainId]
+   */
+  async function handleMoveToMastered(word, domainId) {
+    const dId = domainId || word?.domainId || state.domainId;
+    if (!dId) {
+      showToast('无法确定该词所属领域', { type: 'err' });
+      return;
+    }
+    const w = word?.word || word;
+    try {
+      // ① 写入熟词库
+      await studyService.setMastered(dId, w, true);
+      state.masteredKeys.add(`${dId}::${String(w).toLowerCase()}`);
+
+      // ② 从收藏夹移除（同一词在其它领域若也收藏，保持不动）
+      await dataService.setFavorite(dId, w, false);
+      state.favoriteKeys.delete(`${dId}::${String(w).toLowerCase()}`);
+
+      // ③ 内存对象同步
+      const hit = state.words.find(
+        (x) => x.word === w && (x.domainId || state.domainId) === dId,
+      );
+      if (hit) { hit.mastered = true; hit.favorite = false; }
+
+      // ④ 已挂载卡片回写权威状态
+      for (const card of mountedCards) {
+        if (!card?.querySelector) continue;
+        const wEl = card.querySelector('.wordcard__word');
+        if (wEl && wEl.textContent === w) {
+          if (typeof card.__setMastered === 'function') card.__setMastered(true);
+          if (typeof card.__setFavorite === 'function') card.__setFavorite(false);
+        }
+      }
+
+      // ⑤ 刷新顶部数字与掌握进度
+      statFav.textContent = String(state.favoriteKeys.size);
+      tabFavCount.textContent = String(state.favoriteKeys.size);
+      await reloadMastered();
+
+      showToast(`已移入熟词库「${w}」`, {
+        desc: '已从收藏夹移除，可在「熟词库」中查看。',
+        type: 'ok', duration: 2000,
+      });
+    } catch (e) {
+      showToast('移入熟词库失败', { desc: e.message, type: 'err' });
+    }
   }
 
   /* =======================================================================
@@ -1269,6 +1320,8 @@ export async function createHomePage() {
       onToggleFavorite: async (w, next, dId) => {
         await handleToggleFavorite(w, next, dId || state.domainId);
       },
+      onMoveToMastered: (w, dId) => handleMoveToMastered(w, dId),
+      isMastered: (w, dId) => isMastered(dId || state.domainId, w),
     });
     contentHost.appendChild(view);
     window.scrollTo({ top: 0, behavior: 'smooth' });

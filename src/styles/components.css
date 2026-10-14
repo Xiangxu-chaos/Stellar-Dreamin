@@ -1432,9 +1432,14 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
    与旧 .flip 并存：.flip 保留给旧引用，新代码统一用 .wordcard。
    命名前缀 wordcard__ 便于后续单独替换该组件而不影响其他样式。
    ========================================================================== */
+/* 卡片尺寸铁律：只给 min-height，**不写死 height**。
+ *   - min-height: 336px 让所有卡片视觉等高（网格内整齐）；
+ *   - 但高度可被内容自然撑高：标签换行时卡片会长高，绝不压缩单词。
+ *   正面内部用 flex 纵向布局自适应分配空间（见 .wordcard__face / __badges /
+ *   __wordwrap / __foot），因此内容多少都不会撑破或重叠。 */
 .wordcard {
   position: relative;
-  height: 336px;
+  min-height: 336px;
   perspective: 1500px;
   cursor: pointer;
   animation: card-in 0.5s var(--ease-out) both;
@@ -1504,36 +1509,35 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
 .wordcard__corner--tl { top: 9px; left: 9px; border-right: none; border-bottom: none; border-radius: var(--radius-sm) 0 0 0; }
 .wordcard__corner--br { bottom: 9px; right: 9px; border-left: none; border-top: none; border-radius: 0 0 var(--radius-sm) 0; }
 
-/* ---- 配图区 ---- */
+/* ---- 配图占位区（图片功能已移除，统一为「暂无配图」占位块）----
+ *
+ * 布局铁律：
+ *   1. 固定宽高比 16/9 + max-height，任何列宽下形状一致；
+ *   2. overflow: hidden，占位块绝不撑破卡片；
+ *   3. 灰色背景 + 居中「暂无配图」，所有卡片高度分毫不差；
+ *   4. flex: 0 1 auto + min-height: 0 —— 允许在内容（长标签换行）较多时
+ *      自动收缩，把空间让给单词区，绝不与「领域标签」重叠。
+ */
 .wordcard__figure {
   position: relative;
   width: 100%;
-  height: 96px;
-  flex: none;
+  aspect-ratio: 16 / 9;      /* 固定宽高比（铁律） */
+  max-height: 118px;         /* 固定最大高度（铁律） */
+  flex: 0 1 auto;            /* 可收缩：内容多时让位给单词区 */
+  min-height: 0;
   margin-bottom: 10px;
   border-radius: var(--radius-sm);
-  overflow: hidden;
-  background: linear-gradient(150deg, rgba(var(--c-primary-rgb), 0.10), rgba(var(--c-accent-rgb), 0.05));
+  overflow: hidden;          /* 铁律：绝不撑破卡片 */
+  background: rgba(128, 132, 148, 0.10);   /* 灰色占位背景 */
   border: 1px solid var(--c-border);
   display: grid;
   place-items: center;
 }
 
-.wordcard__figure--back { height: 116px; margin-bottom: 12px; }
+/* 背面占位区：同样遵守 16/9 + max-height，只把上限调高一点以适配背面信息密度。 */
+.wordcard__figure--back { aspect-ratio: 16 / 9; max-height: 132px; margin-bottom: 12px; }
 
-.wordcard__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s var(--ease-out), filter 0.3s var(--ease-out);
-  filter: saturate(0.92) contrast(1.02);
-}
-
-.wordcard:hover .wordcard__img { transform: scale(1.045); filter: saturate(1) contrast(1.05); }
-
-.wordcard__figure.is-placeholder { border-style: dashed; }
-
+/* 占位块：铺满整个 .wordcard__figure，内容居中显示「暂无配图」。 */
 .wordcard__ph-figure {
   display: flex;
   flex-direction: column;
@@ -1542,20 +1546,36 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   gap: 6px;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   color: var(--c-text-faint);
   font-size: 10.5px;
   letter-spacing: 0.06em;
 }
 .wordcard__ph-figure svg { width: 22px; height: 22px; opacity: 0.5; }
 
-/* ---- 徽标区 ---- */
+/* ---- 徽标区 ----
+ * 铁律：徽标行不参与 flex 伸缩（flex: none），永远完整显示、允许换行；
+ *       长标签不会盖住下方单词（下方单词区独立占据剩余空间）。
+ */
 .wordcard__badges {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin-bottom: 10px;
+  flex: none;
   position: relative;
   z-index: 1;
+  min-height: 0;
+}
+
+/* 领域标签（可能较长，例如「王者荣耀 领域 · 官方译名」）：
+ *   在卡片徽标行内允许换行（不再强制 nowrap），过长时可占两行，
+ *   但绝不横向溢出、也绝不盖住下方单词。 */
+.wordcard__badges .chip--domain {
+  white-space: normal;      /* 允许换行，避免长标签横向溢出 */
+  max-width: 100%;
+  line-height: 1.35;
+  text-align: left;
 }
 
 .chip--domain-exact {
@@ -1577,10 +1597,16 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   background: rgba(255, 196, 92, 0.08);
 }
 
-/* ---- 单词区 ---- */
+/* ---- 单词区 ----
+ * 铁律（修复「领域标签盖住单词」）：
+ *   - flex: 1 1 auto + min-height: 0：占据徽标行与底部之间的剩余空间；
+ *   - overflow: hidden：即使空间不足也只在自身范围内裁切，
+ *     绝不向上溢出与徽标行（领域标签）重叠；
+ *   - 内容垂直居中、留出 gap，单词与标签永远各自成行。 */
 .wordcard__wordwrap {
-  flex: 1;
+  flex: 1 1 auto;
   min-height: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1609,6 +1635,9 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   line-height: 1.12;
   color: var(--c-text);
   word-break: break-word;
+  /* ⚠️ 铁律（任务一）：单词**绝不参与压缩**。
+   *   标签换行时由卡片自然长高来让位，而不是把单词挤扁（曾出现 chamber → cnamber）。 */
+  flex-shrink: 0;
 }
 
 .wordcard__phonetic { font-size: 12.5px; color: var(--c-text-faint); letter-spacing: 0.03em; }
@@ -1629,6 +1658,7 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid var(--c-border);
+  flex: none;               /* 底部固定，不参与伸缩 */
   position: relative;
   z-index: 1;
 }
@@ -1748,10 +1778,11 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
 }
 
 /* ---- 紧凑模式（收藏夹 / 做题结果页） ---- */
-.wordcard--compact { height: 300px; }
+.wordcard--compact { min-height: 300px; }
 .wordcard--compact .wordcard__word { font-size: 23px; }
-.wordcard--compact .wordcard__figure { height: 82px; }
-.wordcard--compact .wordcard__figure--back { height: 100px; }
+/* 紧凑模式只收紧高度上限，仍然保留 16/9 固定比例，布局规则不变 */
+.wordcard--compact .wordcard__figure { max-height: 86px; }
+.wordcard--compact .wordcard__figure--back { max-height: 104px; }
 
 /* ==========================================================================
    18. 顶部导航标签（收藏夹入口 / 卡片库）
@@ -1934,22 +1965,23 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
 .fav-stats { display: flex; gap: 8px; flex-wrap: wrap; }
 
 /* ==========================================================================
-   21. 卡片详情页的配图编辑
+   21. 卡片详情页的配图占位区（图片功能已移除）
    ========================================================================== */
+/* 详情页占位区同样遵守「固定宽高比 16/9 + overflow: hidden」铁律：
+   占位块绝不撑破卡片，高度恒定，下方内容不会跳动。 */
 .detail__figure {
-  position: relative; width: 100%; height: 210px; border-radius: var(--radius-sm);
+  position: relative; width: 100%;
+  aspect-ratio: 16 / 9; max-height: 240px;
+  border-radius: var(--radius-sm);
   overflow: hidden; border: 1px solid var(--c-border);
-  background: linear-gradient(150deg, rgba(var(--c-primary-rgb), 0.10), rgba(var(--c-accent-rgb), 0.05));
+  background: rgba(128, 132, 148, 0.10);   /* 灰色占位背景 */
   display: grid; place-items: center; margin-bottom: 18px;
 }
-.detail__figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-.detail__figure-empty { display: flex; flex-direction: column; align-items: center; gap: 8px;
+/* 占位块铺满整个 .detail__figure */
+.detail__figure-empty { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; height: 100%; overflow: hidden;
   color: var(--c-text-faint); font-size: 12px; }
-
-.image-editor { display: flex; flex-direction: column; gap: 8px; }
-.image-editor__row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.image-editor__row .input { flex: 1; min-width: 200px; }
 
 /* ==========================================================================
    22. 功能一：我的库 / 兴趣领域选择面板（domainPicker）

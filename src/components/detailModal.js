@@ -3,10 +3,9 @@
  * ============================================================================
  * 与 WordCard 共享同一份数据模型，但呈现更完整的排版（适合阅读与复习回顾）。
  *
- * 本轮新增：
- *   - 配图区（顶部大图）：有图显示图，无图显示占位图，加载失败回退占位图
- *   - 配图编辑：用户可手动填入 / 替换图片 URL（存 localStorage，经 dataService）
- *     预留图片上传扩展点（见 image-editor 区域注释）
+ * 本轮变更：
+ *   - 配图区：图片功能已彻底移除。顶部只保留一个固定 16/9 的「暂无配图」占位块，
+ *     不加载任何外部图片链接，不存在图片 URL 编辑 / 本地上传 / 随机图库相关逻辑。
  *   - 术语来源与严谨性：source 徽标 + unverified → 【译名待确认】
  *   - 多领域标签：显示该词所属的全部兴趣领域
  *
@@ -16,29 +15,27 @@
 
 import { h, svgIcon } from '../core/dom.js';
 import { iconPath } from '../core/icons.js';
-import { openModal, confirmDialog } from './modal.js';
-import { showToast } from './toast.js';
+import { openModal } from './modal.js';
 
 /**
  * @param {object} props
  * @param {object} props.word
  * @param {object|null} props.material   预生成材料（静态）
- * @param {string} props.image           当前展示图 URL
  * @param {object} props.domain
  * @param {Array}  props.domains         该词所属全部领域标签
  * @param {object|null} props.relevance
- * @param {Function} props.onSaveImage   (word, imageUrl) => Promise   保存图片覆盖
  * @param {Function} props.onToggleFavorite (word, next) => Promise
+ * @param {Function} props.onToggleMastered (word, next) => Promise
  * @param {boolean} props.favorite
+ * @param {boolean} props.mastered
  */
 export function showDetailModal(props) {
   const {
     word, material, domain, relevance, domains = [], favorite = false,
     mastered = false,
-    onSaveImage, onToggleFavorite, onToggleMastered,
+    onToggleFavorite, onToggleMastered,
   } = props;
 
-  let currentImage = props.image || '';
   const body = h('div');
 
   function render() {
@@ -149,75 +146,14 @@ export function showDetailModal(props) {
   }
 
   /* ---------------------------------------------------------------- */
-  /* 配图区 + 图片 URL 编辑                                            */
+  /* 配图区：图片功能已彻底移除，仅保留固定 16/9 的「暂无配图」占位块。   */
   /* ---------------------------------------------------------------- */
   function imageSection() {
     const fig = h('div.detail__figure');
-
-    function paint() {
-      fig.replaceChildren();
-      if (currentImage) {
-        fig.appendChild(h('img', {
-          src: currentImage,
-          alt: `${word.word} 配图`,
-          referrerPolicy: 'no-referrer',
-          onError: () => {
-            fig.replaceChildren(buildFigureEmpty('图片加载失败，已回退到占位图'));
-          },
-        }));
-      } else {
-        fig.appendChild(buildFigureEmpty('暂无配图'));
-      }
-    }
-    paint();
-
-    const input = h('input.input', {
-      type: 'text',
-      value: currentImage,
-      placeholder: '粘贴图片 URL（游戏卡面 / 遗物图标 / 角色立绘 / 场景截图）',
-      spellcheck: 'false',
-    });
-
-    const saveBtn = h('button.btn.btn--sm', { type: 'button' }, [
-      svgIcon(iconPath('check'), { size: 12, cls: 'btn__icon' }), '保存图片',
-    ]);
-    saveBtn.addEventListener('click', async () => {
-      const url = input.value.trim();
-      await onSaveImage?.(word, url);
-      currentImage = url;
-      paint();
-      showToast(url ? '已更新配图' : '已清除配图', { type: 'ok' });
-    });
-
-    const clearBtn = h('button.btn.btn--ghost.btn--sm', {
-      type: 'button',
-      onClick: async () => {
-        input.value = '';
-        await onSaveImage?.(word, '');
-        currentImage = '';
-        paint();
-        showToast('已恢复为预置图', { type: 'info' });
-      },
-    }, [svgIcon(iconPath('refresh'), { size: 12, cls: 'btn__icon' }), '恢复预置']);
-
-    // 预留：图片上传扩展点。
-    // 未来接入时，把 input[type=file] 选中的文件交给 storage 服务（如云存储），
-    // 拿回 URL 后复用 setImageOverride(domainId, word, url)，数据结构无需变更。
-    const uploadBtn = h('button.btn.btn--ghost.btn--sm', {
-      type: 'button',
-      disabled: true,
-      title: '图片上传将在后续版本开放（数据结构已预留）',
-    }, [svgIcon(iconPath('upload'), { size: 12, cls: 'btn__icon' }), '上传图片（待开放）']);
-
+    fig.appendChild(buildFigureEmpty('暂无配图'));
     return h('div.detail__section', {}, [
       h('div.detail__section-title', {}, [svgIcon(iconPath('image'), { size: 13 }), '卡片配图']),
       fig,
-      h('div.image-editor', {}, [
-        h('div.image-editor__row', {}, [input, saveBtn, clearBtn, uploadBtn]),
-        h('div.form-hint', {
-          text: '图片版权归游戏开发商 / 原发布方及原作者所有，此处仅作个人学习用途展示，不用于任何商业场景。',
-        }),
-      ]),
     ]);
   }
 
