@@ -53,7 +53,13 @@ import domainMaterialService from '../services/domainMaterialService.js';
 import quizService from '../services/quizService.js';
 import studyService from '../services/studyService.js';
 
-export async function createHomePage() {
+export async function createHomePage(options = {}) {
+  /* 认证信息由 main.js（入口层）注入 —— 本页不 import cloudbaseClient，
+   * 以便在 Node 测试环境（无 CDN / 无网络）下也能独立挂载。
+   *   user      —— 匿名登录得到的用户对象（登录成功时非空）
+   *   authError —— 认证失败原因（失败时非空，用于顶栏「离线」状态） */
+  const { user = null, authError = '' } = options || {};
+
   /* =======================================================================
      状态
      ==================================================================== */
@@ -96,6 +102,25 @@ export async function createHomePage() {
     'aria-label': '打开设置',
     onClick: () => openSettingsModal(),
   }, [svgIcon(iconPath('settings'), { size: 17 })]);
+
+  /* ---- 当前用户状态（本轮改造，由 main.js 注入）----
+   * 匿名登录 → 「游客」；认证不可用 → 「离线」（并在 title 里带上失败原因）。
+   * 未注入任何认证信息时不渲染（保持 Node 测试环境下的旧 DOM 结构一致）。 */
+  const isOffline = !user;
+  const userBox = (user || authError)
+    ? h(
+        isOffline ? 'div.topbar__user.topbar__user--offline' : 'div.topbar__user',
+        {
+          title: isOffline
+            ? `未连接云服务：${authError || '原因未知'}`
+            : `匿名用户 ID：${user.uid || '未知'}`,
+        },
+        [
+          svgIcon(iconPath(isOffline ? 'alert' : 'user'), { size: 13 }),
+          h('span.topbar__user-mail', { text: isOffline ? '离线' : '游客' }),
+        ],
+      )
+    : null;
 
   /* ---- 顶部标签页：卡片库 / 收藏夹 / 错题本 / 我的库（功能一 / 四）---- */
   const tabLibraryCount = h('span.navtab__count', { text: '0' });
@@ -158,6 +183,7 @@ export async function createHomePage() {
         h('span.stat-chip', {}, ['收藏 ', h('b', {}, [statFav])]),
       ]),
       masteryBar,
+      userBox,
       settingsBtn,
     ]),
   ]);

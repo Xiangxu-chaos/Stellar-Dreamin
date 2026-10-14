@@ -9,58 +9,16 @@
   "slay_the_spire": {
     "file": "slayTheSpire",
     "total": 244,
-    "have": 245,
-    "missingCount": 1,
-    "missing": [
-      {
-        "word": "annihilate",
-        "translation": "v. 歼灭，彻底摧毁",
-        "phonetic": "/əˈnaɪəleɪt/",
-        "root": "核心词",
-        "level": "vocab",
-        "domainTermZh": ""
-      }
-    ]
+    "have": 246,
+    "missingCount": 0,
+    "missing": []
   },
   "hollow_knight": {
     "file": "hollowKnight",
     "total": 893,
-    "have": 891,
-    "missingCount": 4,
-    "missing": [
-      {
-        "word": "amplify",
-        "translation": "v. 放大，扩大",
-        "phonetic": "/ˈæmplɪfaɪ/",
-        "root": "派生自 ample（adj. 充足的）；-ify 使…（动词后缀）",
-        "level": "vocab",
-        "domainTermZh": ""
-      },
-      {
-        "word": "articulate",
-        "translation": "adj. 表达清晰的；v. 清晰表达",
-        "phonetic": "/ɑːˈtɪkjuleɪt/",
-        "root": "派生自 articulation；-ate 使…（动词后缀）",
-        "level": "vocab",
-        "domainTermZh": ""
-      },
-      {
-        "word": "communicate",
-        "translation": "v. 交流，传达",
-        "phonetic": "/kəˈmjuːnɪkeɪt/",
-        "root": "派生自 communication；com- 共同，一起；-ate 使…（动词后缀）",
-        "level": "vocab",
-        "domainTermZh": ""
-      },
-      {
-        "word": "magnify",
-        "translation": "v. 放大，夸大",
-        "phonetic": "/ˈmæɡnɪfaɪ/",
-        "root": "核心词",
-        "level": "vocab",
-        "domainTermZh": ""
-      }
-    ]
+    "have": 895,
+    "missingCount": 0,
+    "missing": []
   },
   "valorant": {
     "file": "valorant",

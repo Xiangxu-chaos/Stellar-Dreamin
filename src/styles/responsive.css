@@ -62,6 +62,9 @@
   /* 手机上统计信息折叠为一行小字 */
   .topbar__stats { order: 3; width: 100%; justify-content: space-between; padding-top: 2px; }
 
+  /* 顶栏用户区（游客 / 离线）：保留文字，它是状态信号，不能在小屏被藏掉 */
+  .topbar__user { padding: 4px 9px; max-width: none; }
+
   .hero__title { font-size: 24px; }
   .hero__desc { font-size: 13px; }
 

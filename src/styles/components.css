@@ -420,13 +420,16 @@
 .field__icon { width: 15px; height: 15px; color: var(--c-text-faint); flex: none; }
 
 .field input[type="search"],
-.field input[type="text"] {
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
   background: none;
   border: none;
   outline: none;
   width: 100%;
   min-width: 160px;
   font-size: 13.5px;
+  font-family: inherit;
 }
 .field input::placeholder { color: var(--c-text-faint); }
 
@@ -2180,3 +2183,37 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
 .check-line__text { display: flex; flex-direction: column; gap: 3px; }
 .check-line__title { font-size: 13px; color: var(--c-text); }
 .check-line__hint { font-size: 11.5px; color: var(--c-text-faint); }
+
+/* ==========================================================================
+   19. 顶栏用户状态（匿名登录 → 「游客」；认证不可用 → 「离线」）
+   ========================================================================== */
+.topbar__user {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--c-border);
+  background: var(--c-surface);
+  color: var(--c-text-soft);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  max-width: 200px;
+  user-select: none;
+}
+
+.topbar__user-mail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 离线态：用警示色把「云服务没连上」显性化，
+ * 因为此时应用仍可正常使用（数据全在本地），不能让它静默通过。 */
+.topbar__user--offline {
+  color: #ffb4b4;
+  border-color: rgba(var(--c-danger-rgb), 0.42);
+  background: rgba(var(--c-danger-rgb), 0.1);
+}
+

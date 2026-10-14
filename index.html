@@ -74,6 +74,12 @@
     100% { transform: translateX(280%); }
   }
 </style>
+
+<!-- 腾讯云 CloudBase SDK（国内节点，无需代理/打包器）
+     · UMD 全量包，执行后把 SDK 挂到 window.cloudbase
+     · 加 defer：不阻塞首屏渲染；且 defer 脚本按文档顺序先于下方的 module 执行
+     · 取用与就绪等待见 src/core/cloudbaseClient.js -->
+<script defer src="https://static.cloudbase.net/cloudbase-js-sdk/latest/cloudbase.full.js"></script>
 </head>
 <body>
   <div id="app"></div>

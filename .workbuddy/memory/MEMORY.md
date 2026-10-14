@@ -94,6 +94,45 @@
     `dataService.setFavorite(dId, w, false)`，再同步 `state.masteredKeys` /
     `state.favoriteKeys` / `state.words` / 已挂载卡片 / 顶部数字 / `reloadMastered()`。
 
+12. **后端方案最终定为腾讯云 CloudBase**（Supabase 方案已废弃并完全移除）。
+    ⚠️ 已删除：`src/core/supabaseClient.js`、`src/views/loginView.js`、
+    `sql/01_init_schema.sql`（Supabase 专用）。`src/views/` 目录已不存在。
+    ✅ 唯一接触 CloudBase 的地方是 `src/core/cloudbaseClient.js`。
+    环境 ID：`stellar-dreamin-d2f2vgn912ba7454`（**不是密钥，可公开**）。
+
+    **SDK 引入方式**：`index.html` 里用**传统 `<script defer>`** 引入 UMD 全量包
+    `https://static.cloudbase.net/cloudbase-js-sdk/latest/cloudbase.full.js`
+    （官方静态 CDN，实测 200 / 970KB；⚠️ 用户最初给的
+    `imgcache.qq.com/qcloud/cloudbase-js-sdk/latest/...` 实测 **404**，不可用）。
+    它把 SDK 挂到 `window.cloudbase`，client 从全局取用，**不做 import**
+    （defer 脚本按文档顺序先于 module 执行，时序确定；也不再依赖 esm.sh）。
+    `waitForSdk(timeout)` 轮询兜底并导出（测试传极小超时）。
+
+    **认证方式：匿名登录**（无登录页，打开即用）。
+    `ensureSignedIn()`：先 `auth.getLoginState()` 复用本地登录态（避免刷新时
+    重复创建匿名用户），否则 `auth.signInAnonymously()`；`auth({persistence:'local'})`
+    保证刷新免登录；`signInPromise` 缓存保证幂等，失败后清空以允许重试。
+    `translateAuthError()` 覆盖 PROVIDER_NOT_ENABLED（未开匿名登录 → 提示去
+    控制台「登录授权」开启）、网络失败、配额、环境无效等。
+
+    **路由**：`src/main.js` 无登录页。启动 → 匿名登录 → 渲染 homePage。
+    ⚠️ **认证失败降级不阻断**：当前学习数据仍全在本地，云同步是下一阶段；
+    失败时照常渲染主界面 + 顶栏显示「离线」（`.topbar__user--offline` 警示色）
+    + `showToast` + console.error，保证故障可见而非静默。
+    `homePage` 只经 props 收 `{ user, authError }`，**绝不 import cloudbaseClient**；
+    顶栏为「游客」（title 带匿名 uid）/「离线」，**已无退出登录按钮**（`onSignOut` 已移除）。
+
+    **CloudBase 控制台待确认项**（2026-10-14 实测）：
+    - 环境 ID 真实存在（`{env}.api.tcloudbasegateway.com` 解析并返回 401，
+      `{env}.service.tcloudbase.com` 返回 404，均非 DNS 失败）。
+    - 但其网关对无凭据请求返回 `MISSING_CREDENTIALS`（裸 curl 带 Origin 也一样），
+      **匿名登录是否真的可用、Web 安全域名是否配置，只能在真实浏览器里最终确认**。
+    - 待办：控制台 → 环境 → 登录授权 开启「匿名登录」；
+      安全配置 → WEB 安全域名 加入线上域名（localhost 可能不被允许，需实测）。
+    - ⚠️ 数据迁移（localStorage → CloudBase）**尚未做**，是下一阶段任务。
+      四张表/集合设计沿用：`favorites` / `wrong_words` / `mastered_words` /
+      `user_domains`（`user_domains` 是领域订阅，**天然没有 word 字段**）。
+
 
 （历史）8. 合法图源白名单（仅在对未来恢复配图时有参考价值）：
    `steamcdn-a.akamaihd.net`、`media.valorant-api.com`、`game.gtimg.cn`。
@@ -104,18 +143,32 @@
 ## 测试
 
 `tools/` 下全部为 Node 环境（自建 DOM/BOM shim），无需浏览器。
-改动前全跑、提交前全跑（15 个脚本 / 0 失败期望）：
-`verifyIncrement` / `verifyFeatures4` / `verifyImageStandard` / `verifyCardLayout` / `verifyWiring` /
-`smokeDom` / `verifyFavorites` / `verifyNoWriteOnRead` / `verifyFix3FavoriteConsistency` /
-`verifyTasksII_III` / `verifyWordCase` / `verifyExampleCoverage` / `verifyExampleRender` /
-`verifyFillLogic` / `verifyMaterialResilience`。
+改动前全跑、提交前全跑（16 个脚本 / 0 失败期望）：
+`verifyIncrement` / `verifyFeatures4` / `verifyImageStandard` / `verifyCardLayout` /
+`verifyWiring` / `verifyAuth` / `smokeDom` / `verifyFavorites` / `verifyNoWriteOnRead` /
+`verifyFix3FavoriteConsistency` / `verifyTasksII_III` / `verifyWordCase` /
+`verifyExampleCoverage` / `verifyExampleRender` / `verifyFillLogic` / `verifyMaterialResilience`。
 
 改卡片布局相关代码后**至少要跑** `verifyCardLayout` + `verifyImageStandard` + `smokeDom`。
+改认证 / 路由相关代码后**至少要跑** `verifyAuth` + `smokeDom` + `verifyWiring`。
 `verifyImageStandard.mjs` 现验证「图片功能已下线」：imageUrl 全空、无 `<img>` 逻辑、
 无 FileReader、16/9 + overflow:hidden + 灰底、无随机图库、分层边界（47 断言）。
 `verifyCardLayout.mjs`（66 断言）锁死：卡片只用 min-height、单词 `flex-shrink: 0`、
 正面徽标 ≤3 个且只能是「领域名 / 官方认证 / 核心词|派生词」、正面无 source/warn 徽标、
 背面保留来源徽标与例句区。
+`verifyAuth.mjs`（88 断言）锁死：CloudBase 环境 ID 与 SDK 取用方式
+（window.cloudbase 全局 + static.cloudbase.net + defer）、init/auth 参数、
+匿名登录调用与幂等、中文错误文案（含 PROVIDER_NOT_ENABLED）、本阶段不碰
+`.collection()`、main.js 无登录页且降级不白屏、homePage 三态顶栏
+（不注入→无用户区 / user→「游客」无按钮 / authError→「离线」，`.navtab` 恒为 4）、
+Supabase 残留归零（文件已删 + src/ 全文无 supabase）。
+动态部分用**假 window.cloudbase** 跑通 5 条认证路径 + SDK 未加载路径，不联网。
 
-词义人工抽查：`node tools/exportDomainWordsCsv.mjs` → `tools/domain_words_review.csv`
-（UTF-8 BOM，1340 行，列：单词,通用释义,领域释义,领域,来源,待确认）。
+⚠️ 易踩的坑：断言若直接匹配**文件原文**，注释里的字样会污染结果。
+已有两次教训（旧域名留在注释里导致「假通过」；注释写「不 import xxx」导致假失败）。
+凡涉及「不得出现某字符串」的断言，一律先剥注释再匹配。
+
+本地预览：`启动本地预览.bat`（端口 8099）。
+沙箱**有外网**（baidu / esm.sh / cloudflare / github / static.cloudbase.net 实测均通），
+但走的是 `https_proxy` 网关，**访问本地 8099 要加 `--noproxy '*'`**，否则会得到 502。
+CloudBase 匿名登录能否跑通仍**只能在真实浏览器里**最终确认。
