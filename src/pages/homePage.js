@@ -52,13 +52,15 @@ import dataService from '../services/dataService.js';
 import domainMaterialService from '../services/domainMaterialService.js';
 import quizService from '../services/quizService.js';
 import studyService from '../services/studyService.js';
+import * as authService from '../core/authService.js';   // 仅用于行为上报（旁路，失败不影响本地）
 
 export async function createHomePage(options = {}) {
-  /* 认证信息由 main.js（入口层）注入 —— 本页不 import cloudbaseClient，
-   * 以便在 Node 测试环境（无 CDN / 无网络）下也能独立挂载。
-   *   user      —— 匿名登录得到的用户对象（登录成功时非空）
-   *   authError —— 认证失败原因（失败时非空，用于顶栏「离线」状态） */
-  const { user = null, authError = '' } = options || {};
+  /* 认证信息由 main.js（入口层）注入 —— 本页不自己判断登录态，
+   * 以便在 Node 测试环境（无网络）下也能独立挂载。
+   *   userId    —— 已登录用户的 id（登录成功时非空，顶栏显示「当前用户：xxx」）
+   *   username  —— 用户名（仅用于提示文案，可空）
+   *   onSignOut —— 退出登录回调（由 main.js 注入，本页只负责触发） */
+  const { userId = '', username = '', onSignOut } = options || {};
 
   /* =======================================================================
      状态
@@ -103,23 +105,22 @@ export async function createHomePage(options = {}) {
     onClick: () => openSettingsModal(),
   }, [svgIcon(iconPath('settings'), { size: 17 })]);
 
-  /* ---- 当前用户状态（本轮改造，由 main.js 注入）----
-   * 匿名登录 → 「游客」；认证不可用 → 「离线」（并在 title 里带上失败原因）。
-   * 未注入任何认证信息时不渲染（保持 Node 测试环境下的旧 DOM 结构一致）。 */
-  const isOffline = !user;
-  const userBox = (user || authError)
-    ? h(
-        isOffline ? 'div.topbar__user.topbar__user--offline' : 'div.topbar__user',
-        {
-          title: isOffline
-            ? `未连接云服务：${authError || '原因未知'}`
-            : `匿名用户 ID：${user.uid || '未知'}`,
-        },
-        [
-          svgIcon(iconPath(isOffline ? 'alert' : 'user'), { size: 13 }),
-          h('span.topbar__user-mail', { text: isOffline ? '离线' : '游客' }),
-        ],
-      )
+  /* ---- 当前用户 + 退出登录（本轮改造，由 main.js 注入）----
+   * 文案固定为「当前用户：{userId}」。未注入 userId 时不渲染，保持
+   * Node 测试环境下的旧 DOM 结构与既有断言不变。 */
+  const userBox = userId
+    ? h('div.topbar__user', {
+        title: username ? `当前用户：${userId}（${username}）` : `当前用户：${userId}`,
+      }, [
+        svgIcon(iconPath('user'), { size: 13 }),
+        h('span.topbar__user-name', { text: `当前用户：${userId}` }),
+        h('button.btn.btn--ghost.btn--icon.topbar__user-out', {
+          type: 'button',
+          title: '退出登录',
+          'aria-label': '退出登录',
+          onClick: () => { if (typeof onSignOut === 'function') onSignOut(); },
+        }, [svgIcon(iconPath('logout'), { size: 15 })]),
+      ])
     : null;
 
   /* ---- 顶部标签页：卡片库 / 收藏夹 / 错题本 / 我的库（功能一 / 四）---- */
@@ -1008,6 +1009,18 @@ export async function createHomePage(options = {}) {
   }
 
   /* =======================================================================
+     行为上报（旁路统计 —— 本轮新增）
+     ====================================================================
+     * 触发时机：收藏、答错、标记熟词（用户需求明确的三类行为）。
+     * 语义：只上报、不回写、不参与渲染；失败静默（authService 内部吞错），
+     *       绝不能让后端抖动影响用户手上的收藏 / 复习操作。
+     * 未登录（无 userId）时自动跳过。 */
+  function report(type, word, domainId) {
+    if (!userId) return;
+    authService.reportRecord({ type, word, domainId: domainId || state.domainId || '' });
+  }
+
+  /* =======================================================================
      功能三：熟词标记读写（与收藏同构，同样不直接碰存储）
      ==================================================================== */
   function isMastered(domainId, word) {
@@ -1032,6 +1045,9 @@ export async function createHomePage(options = {}) {
       const key = `${dId}::${String(word.word).toLowerCase()}`;
       if (actual) state.masteredKeys.add(key);
       else state.masteredKeys.delete(key);
+
+      // 行为上报：仅在「标记为熟词」时上报（取消标记不算一次标记行为）
+      if (actual) report(authService.RECORD_TYPES.MASTERED, word.word, dId);
 
       // 同步内存对象 + 把权威状态回写到卡片，保证 UI 与存储一致
       const hit = state.words.find((w) => w.word === word.word && (w.domainId || state.domainId) === dId);
@@ -1150,6 +1166,9 @@ export async function createHomePage(options = {}) {
       const key = `${dId}::${String(word.word).toLowerCase()}`;
       if (actual) state.favoriteKeys.add(key);
       else state.favoriteKeys.delete(key);
+
+      // 行为上报：仅在「收藏」时上报（取消收藏不算一次收藏行为）
+      if (actual) report(authService.RECORD_TYPES.FAVORITE, word.word, dId);
 
       // 顶栏与标签页角标
       statFav.textContent = String(state.favoriteKeys.size);
@@ -1275,6 +1294,9 @@ export async function createHomePage(options = {}) {
       // ① 写入熟词库
       await studyService.setMastered(dId, w, true);
       state.masteredKeys.add(`${dId}::${String(w).toLowerCase()}`);
+
+      // 行为上报：这也是一次「标记熟词」
+      report(authService.RECORD_TYPES.MASTERED, w, dId);
 
       // ② 从收藏夹移除（同一词在其它领域若也收藏，保持不动）
       await dataService.setFavorite(dId, w, false);

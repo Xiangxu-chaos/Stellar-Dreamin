@@ -1,219 +1,228 @@
 /**
- * loginView.js —— 登录 / 注册页面（本轮新增）
+ * loginView.js —— 登录 / 注册页（自建后端：Cloudflare Worker + D1）
  * ============================================================================
- * 纯视图组件：只负责渲染表单、做本地校验、把提交结果交给 core/supabaseClient。
- * 不做路由决策（路由在 main.js：未登录渲染本页，登录成功切到 homePage）。
+ * 路由：由 src/main.js 决定 —— 本地没有 userId 时渲染本页，有则直接进主界面。
  *
- * 数据流：
- *   loginView → supabaseClient.signInWithEmail / signUpWithEmail → Supabase Auth
- *   Auth 成功 → props.onAuthed(session) → main.js 挂载主界面
+ * 结构：
+ *   品牌头 → 「登录 / 注册」双标签 → 用户名 + 密码 → 提交按钮 → 提示区
  *
- * 与既有分层约定一致：组件不直接碰 localStorage / 不直接 fetch；
- * 所有网络与持久化都收在 core/supabaseClient.js 里。
+ * 职责边界：
+ *   ✅ 只负责收集输入与调用 core/authService.js，成功后通过 onSuccess 回调交还控制权。
+ *   ❌ 不直接碰 localStorage、不直接 fetch（分层铁律）。
+ *
+ * 关于事件绑定（重要）：
+ *   同时给 <form> 绑 submit、给提交按钮绑 click，并用 busy 标志去重。
+ *   这样「浏览器里点按钮 / 按回车」与「Node 测试环境里直接触发 click」三条路径
+ *   都能走通，且不会重复提交。
  * ============================================================================
  */
 
 import { h, svgIcon } from '../core/dom.js';
 import { iconPath } from '../core/icons.js';
-import { signInWithEmail, signUpWithEmail } from '../core/supabaseClient.js';
+import * as authService from '../core/authService.js';
+
+/** 两种模式对应的文案 */
+const MODES = {
+  signin: {
+    heading: '欢迎回来',
+    sub: '登录后即可同步你的学习进度与行为记录。',
+    submit: '登录',
+    submitBusy: '登录中…',
+    passwordAuto: 'current-password',
+    tip: '还没有账号？点上方「注册」创建一个。',
+  },
+  signup: {
+    heading: '创建账号',
+    sub: '注册即开始记录你的收藏、错题与熟词行为。',
+    submit: '注册并登录',
+    submitBusy: '注册中…',
+    passwordAuto: 'new-password',
+    tip: '已有账号？点上方「登录」直接进入。',
+  },
+};
 
 /**
- * @param {object} [props]
- * @param {(session:object) => void} [props.onAuthed]      认证成功回调（拿到 session）
- * @param {string} [props.initialError]                    进入页面时的初始错误（如 SDK 加载失败）
- * @param {string} [props.notice]                          顶部提示（如「已退出登录」）
+ * @param {object} [options]
+ * @param {string} [options.initialMode] 'signin' | 'signup'
+ * @param {(session: {userId: string, username: string}) => void} [options.onSuccess]
+ *        登录 / 注册成功后的回调（此时会话已写入 localStorage）
  * @returns {HTMLElement}
  */
-export function createLoginView(props = {}) {
-  const { onAuthed, initialError = '', notice = '' } = props;
+export function createLoginView(options = {}) {
+  const { initialMode = 'signin', onSuccess } = options || {};
 
-  let mode = 'signin';       // signin | signup
+  let mode = MODES[initialMode] ? initialMode : 'signin';
   let busy = false;
 
-  /* ---- 输入元素 ---- */
-  const emailInput = h('input', {
-    type: 'email',
-    name: 'email',
-    placeholder: 'you@example.com',
-    autocomplete: 'email',
-    required: true,
+  /* ---- 输入区 ---- */
+  const usernameInput = h('input', {
+    type: 'text',
+    name: 'username',
+    placeholder: '请输入用户名',
+    autocomplete: 'username',
     spellcheck: 'false',
+    'aria-label': '用户名',
   });
 
-  const passInput = h('input', {
+  const passwordInput = h('input', {
     type: 'password',
     name: 'password',
-    placeholder: '至少 6 位',
-    autocomplete: 'current-password',
-    required: true,
+    placeholder: '请输入密码',
+    autocomplete: MODES[mode].passwordAuto,
+    'aria-label': '密码',
   });
 
-  const passToggle = h('button.field__icon.auth__eye', {
+  const eyeBtn = h('button.auth__eye', {
     type: 'button',
     title: '显示密码',
     'aria-label': '显示 / 隐藏密码',
     onClick: () => {
-      const show = passInput.type === 'password';
-      passInput.type = show ? 'text' : 'password';
-      passToggle.replaceChildren(svgIcon(iconPath(show ? 'eyeOff' : 'eye'), { size: 15 }));
-      passToggle.setAttribute('title', show ? '隐藏密码' : '显示密码');
+      const show = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', show ? 'text' : 'password');
+      eyeBtn.replaceChildren(svgIcon(iconPath(show ? 'eyeOff' : 'eye'), { size: 15 }));
+      eyeBtn.setAttribute('title', show ? '隐藏密码' : '显示密码');
     },
   }, [svgIcon(iconPath('eye'), { size: 15 })]);
 
-  const submitBtn = h('button.btn.btn--accent.auth__submit', {
-    type: 'button',
-    onClick: () => submit(),
-  }, [svgIcon(iconPath('arrowRight'), { size: 15, cls: 'btn__icon' }), '登录']);
+  /* ---- 文案节点（随模式切换）---- */
+  const heading = h('h2.auth__heading', { text: MODES[mode].heading });
+  const sub = h('p.auth__sub', { text: MODES[mode].sub });
+  const tip = h('div.auth__foot', { text: MODES[mode].tip });
+  const msg = h('div.auth__msg', { role: 'status', 'aria-live': 'polite' });
 
-  const msgBox = h('div.auth__msg', { role: 'status', 'aria-live': 'polite' });
+  const submitBtn = h('button.btn.btn--primary.auth__submit', {
+    type: 'submit',
+    onClick: (e) => attempt(e),
+  }, MODES[mode].submit);
 
   /* ---- 标签页 ---- */
   const tabSignin = h('button.auth-tab', {
     type: 'button',
-    class: 'is-active',
     onClick: () => setMode('signin'),
   }, '登录');
-
   const tabSignup = h('button.auth-tab', {
     type: 'button',
     onClick: () => setMode('signup'),
   }, '注册');
-
-  const tabs = h('div.auth__tabs', {}, [tabSignin, tabSignup]);
-  const titleEl = h('div.auth__heading', { text: '欢迎回来' });
-  const subEl = h('div.auth__sub', { text: '登录后即可跨设备同步你的收藏、错题与熟词库。' });
+  const tabs = h('div.auth__tabs', { role: 'tablist' }, [tabSignin, tabSignup]);
 
   /* ---- 表单 ---- */
   const form = h('form.auth__form', {
-    onSubmit: (e) => { e.preventDefault(); submit(); },
+    onSubmit: (e) => attempt(e),
+    novalidate: true,
   }, [
-    h('div.auth__fieldset', {}, [
-      h('label.auth__label', { for: 'auth-email', text: '邮箱' }),
-      h('div.field.auth__field', {}, [svgIcon(iconPath('user'), { size: 15, cls: 'field__icon' }), emailInput]),
+    h('label.auth__fieldset', {}, [
+      h('span.auth__label', { text: '用户名' }),
+      h('div.auth__field.field', {}, [
+        svgIcon(iconPath('user'), { size: 15, cls: 'field__icon' }),
+        usernameInput,
+      ]),
     ]),
-    h('div.auth__fieldset', {}, [
-      h('label.auth__label', { for: 'auth-pass', text: '密码' }),
-      h('div.field.auth__field', {}, [svgIcon(iconPath('key'), { size: 15, cls: 'field__icon' }), passInput, passToggle]),
+    h('label.auth__fieldset', {}, [
+      h('span.auth__label', { text: '密码' }),
+      h('div.auth__field.field', {}, [
+        svgIcon(iconPath('key'), { size: 15, cls: 'field__icon' }),
+        passwordInput,
+        eyeBtn,
+      ]),
     ]),
-    msgBox,
     submitBtn,
-    h('div.auth__foot', {}, [
-      h('span', { text: '继续即表示你同意仅将数据用于本应用的学习记录同步。' }),
-    ]),
   ]);
-
-  emailInput.id = 'auth-email';
-  passInput.id = 'auth-pass';
 
   const card = h('div.auth__card', {}, [
     h('div.auth__brand', {}, [
-      h('div.brand__mark', {}, [svgIcon(iconPath('sparkles'), { size: 24 })]),
-      h('div', {}, [
+      h('div.brand__mark', {}, [svgIcon(iconPath('sparkles'), { size: 20 })]),
+      h('div.brand__text', {}, [
         h('div.brand__title', { text: '六级单词 · 兴趣化记忆卡片' }),
         h('div.brand__sub', { text: 'Interest-Driven Vocabulary Cards' }),
       ]),
     ]),
     tabs,
-    titleEl,
-    subEl,
+    heading,
+    sub,
     form,
+    msg,
+    tip,
   ]);
 
   const root = h('div.auth', {}, [card]);
 
-  setMode('signin', { silent: true });
-  if (notice) setMsg(notice, 'ok');
-  if (initialError) setMsg(initialError, 'err');
+  /** 输入框回车 → 提交（浏览器里 form 会隐式提交，这里兜住不支持的场景） */
+  const onEnter = (e) => {
+    if (e?.key === 'Enter') attempt(e);
+  };
+  usernameInput.addEventListener('keydown', onEnter);
+  passwordInput.addEventListener('keydown', onEnter);
 
-  /* ------------------------------------------------------------------ */
-  function setMode(next, { silent = false } = {}) {
+  /* -----------------------------------------------------------------------
+   * 内部逻辑
+   * -------------------------------------------------------------------- */
+
+  /** 切换登录 / 注册 */
+  function setMode(next, { keepMessage = false } = {}) {
+    if (!MODES[next]) return;
     mode = next;
-    tabSignin.classList.toggle('is-active', mode === 'signin');
-    tabSignup.classList.toggle('is-active', mode === 'signup');
-    if (mode === 'signin') {
-      titleEl.textContent = '欢迎回来';
-      subEl.textContent = '登录后即可跨设备同步你的收藏、错题与熟词库。';
-      passInput.setAttribute('autocomplete', 'current-password');
-      setBtnLabel('登录');
-    } else {
-      titleEl.textContent = '创建账号';
-      subEl.textContent = '用邮箱注册，学习记录将自动同步到云端。';
-      passInput.setAttribute('autocomplete', 'new-password');
-      setBtnLabel('注册');
-    }
-    if (!silent) setMsg('', null);
-    emailInput.focus?.();
+    const cfg = MODES[next];
+
+    tabSignin.classList.toggle('is-active', next === 'signin');
+    tabSignup.classList.toggle('is-active', next === 'signup');
+    heading.textContent = cfg.heading;
+    sub.textContent = cfg.sub;
+    tip.textContent = cfg.tip;
+    submitBtn.textContent = busy ? cfg.submitBusy : cfg.submit;
+    passwordInput.setAttribute('autocomplete', cfg.passwordAuto);
+    if (!keepMessage) setMsg('');
+
+    // 切换模式时把焦点放到第一个空输入框，键盘用户少点一次
+    const target = usernameInput.value ? passwordInput : usernameInput;
+    if (typeof target.focus === 'function') target.focus();
   }
 
-  function setBtnLabel(text) {
-    submitBtn.replaceChildren(
-      svgIcon(iconPath(mode === 'signin' ? 'arrowRight' : 'plus'), { size: 15, cls: 'btn__icon' }),
-      document.createTextNode(text),
-    );
+  /** 设置提示文案；level: '' | 'err' | 'ok' */
+  function setMsg(text, level = '') {
+    msg.className = 'auth__msg';
+    if (level) msg.classList.add(level === 'ok' ? 'auth__msg--ok' : 'auth__msg--err');
+    msg.textContent = text || '';
   }
 
-  function setMsg(text, kind) {
-    msgBox.textContent = text || '';
-    msgBox.className = `auth__msg${kind ? ` auth__msg--${kind}` : ''}`;
-  }
-
+  /** 忙碌态：按钮禁用并把文案改成「登录中…」 */
   function setBusy(on) {
     busy = on;
     submitBtn.disabled = on;
-    emailInput.disabled = on;
-    passInput.disabled = on;
+    usernameInput.disabled = on;
+    passwordInput.disabled = on;
+    const cfg = MODES[mode];
+    submitBtn.textContent = on ? cfg.submitBusy : cfg.submit;
   }
 
-  async function submit() {
-    if (busy) return;
-    const email = String(emailInput.value || '').trim();
-    const password = String(passInput.value || '');
-
-    if (!isValidEmail(email)) { setMsg('请输入正确的邮箱地址。', 'err'); emailInput.focus?.(); return; }
-    if (password.length < 6) { setMsg('密码至少 6 位。', 'err'); passInput.focus?.(); return; }
+  /** 提交：登录 / 注册 */
+  async function attempt(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    if (busy) return;             // 防止 click + submit 双触发
 
     setBusy(true);
-    setMsg(mode === 'signin' ? '正在登录…' : '正在注册…', null);
+    setMsg(mode === 'signin' ? '正在登录…' : '正在注册…');
+
+    const username = usernameInput.value;
+    const password = passwordInput.value;
 
     try {
-      if (mode === 'signin') {
-        const { session } = await signInWithEmail(email, password);
-        if (!session) throw new Error('登录成功但未取得会话，请重试。');
-        setMsg('登录成功，正在进入…', 'ok');
-        onAuthed?.(session);
-      } else {
-        const { session, needsConfirm } = await signUpWithEmail(email, password);
-        if (session) {
-          setMsg('注册成功，正在进入…', 'ok');
-          onAuthed?.(session);
-        } else {
-          // 项目开启了「邮箱确认」：必须先点邮件里的链接
-          setMode('signin', { silent: true });
-          setMsg(
-            needsConfirm
-              ? '注册成功！我们已发送确认邮件，请到邮箱点击链接后再登录。'
-              : '注册成功，请返回登录页登录。',
-            'ok',
-          );
-        }
-      }
-    } catch (e) {
-      setMsg(e?.message || '操作失败，请稍后重试。', 'err');
-    } finally {
+      const session = mode === 'signin'
+        ? await authService.loginAndSignIn(username, password)
+        : await authService.registerAndSignIn(username, password);
+
+      setMsg(mode === 'signin' ? '登录成功，正在进入…' : '注册成功，正在进入…', 'ok');
       setBusy(false);
+      if (typeof onSuccess === 'function') onSuccess(session);
+    } catch (err) {
+      setBusy(false);
+      setMsg(authService.translateAuthError(err), 'err');
+      if (typeof passwordInput.focus === 'function') passwordInput.focus();
     }
   }
 
-  /** 对外暴露：允许路由层清空错误后重挂 */
-  root.__setMsg = setMsg;
-  root.__mode = () => mode;
-
+  setMode(mode, { keepMessage: true });
   return root;
 }
 
-/** 轻量邮箱校验（够用即可，真正的校验交给 Supabase） */
-function isValidEmail(s) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(s || ''));
-}
-
-export default createLoginView;
+export default { createLoginView };

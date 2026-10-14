@@ -94,44 +94,56 @@
     `dataService.setFavorite(dId, w, false)`，再同步 `state.masteredKeys` /
     `state.favoriteKeys` / `state.words` / 已挂载卡片 / 顶部数字 / `reloadMastered()`。
 
-12. **后端方案最终定为腾讯云 CloudBase**（Supabase 方案已废弃并完全移除）。
-    ⚠️ 已删除：`src/core/supabaseClient.js`、`src/views/loginView.js`、
-    `sql/01_init_schema.sql`（Supabase 专用）。`src/views/` 目录已不存在。
-    ✅ 唯一接触 CloudBase 的地方是 `src/core/cloudbaseClient.js`。
-    环境 ID：`stellar-dreamin-d2f2vgn912ba7454`（**不是密钥，可公开**）。
+12. **后端最终方案：自建免备案 API（Cloudflare Worker + D1）**。
+    Supabase（国内被墙 + 代理域名始终 NXDOMAIN）与腾讯云 CloudBase 两套方案
+    **已全部废弃并彻底移除**。
+    ⚠️ 已删除：`src/core/supabaseClient.js`、`src/core/cloudbaseClient.js`、
+    `sql/01_init_schema.sql`。`index.html` **不再引入任何第三方 SDK**
+    （唯一外链只剩 Google Fonts），注册/登录/上报全部走原生 `fetch`。
 
-    **SDK 引入方式**：`index.html` 里用**传统 `<script defer>`** 引入 UMD 全量包
-    `https://static.cloudbase.net/cloudbase-js-sdk/latest/cloudbase.full.js`
-    （官方静态 CDN，实测 200 / 970KB；⚠️ 用户最初给的
-    `imgcache.qq.com/qcloud/cloudbase-js-sdk/latest/...` 实测 **404**，不可用）。
-    它把 SDK 挂到 `window.cloudbase`，client 从全局取用，**不做 import**
-    （defer 脚本按文档顺序先于 module 执行，时序确定；也不再依赖 esm.sh）。
-    `waitForSdk(timeout)` 轮询兜底并导出（测试传极小超时）。
+    **接口（全部 POST + JSON，Base = `https://api.stellar-dreamin.site`）**
+    - `POST /api/register` `{username, password}` → `{success:true, userId}`
+    - `POST /api/login`    `{username, password}` → `{success:true, userId}`
+    - `POST /api/record`   `{userId, type, word, domainId}` → `{success:true}`
+    （2026-10-14 实测：CORS `Access-Control-Allow-Origin: *`，允许 POST/OPTIONS，
+    `Content-Type` 可带；错误体字段是 **`error`** 不是 `message`：
+    登录失败 `401 {"error":"用户名或密码错误"}`，重名注册 `400 {"error":"用户名已存在"}`。
+    ⚠️ 后端对**缺 password** 的注册请求不校验，会直接建号，客户端已自行拦截空密码。）
 
-    **认证方式：匿名登录**（无登录页，打开即用）。
-    `ensureSignedIn()`：先 `auth.getLoginState()` 复用本地登录态（避免刷新时
-    重复创建匿名用户），否则 `auth.signInAnonymously()`；`auth({persistence:'local'})`
-    保证刷新免登录；`signInPromise` 缓存保证幂等，失败后清空以允许重试。
-    `translateAuthError()` 覆盖 PROVIDER_NOT_ENABLED（未开匿名登录 → 提示去
-    控制台「登录授权」开启）、网络失败、配额、环境无效等。
+    ✅ **唯一接触后端的模块 = `src/core/authService.js`**（唯一出现 `fetch` 的
+    认证/上报代码）。导出：`API_BASE` / `SESSION_KEY='wb:cet6:auth'` /
+    `RECORD_TYPES{favorite,wrong,mastered}` / `loadSession` / `saveSession` /
+    `clearSession` / `getUserId` / `isSignedIn` / `register` / `login` /
+    `registerAndSignIn` / `loginAndSignIn` / `logout` / `reportRecord` /
+    `translateAuthError`。
+    `loadSession()` 兼容两种历史形态：纯 userId 字符串、`{userId,username}` JSON；
+    存储访问全部 try/catch，损坏时按未登录处理。
+    `postJSON` 带 `AbortController` 超时（12s），错误带 `code`
+    （`input|timeout|network|http|bad-json|api`）再交给 `translateAuthError` 出中文。
 
-    **路由**：`src/main.js` 无登录页。启动 → 匿名登录 → 渲染 homePage。
-    ⚠️ **认证失败降级不阻断**：当前学习数据仍全在本地，云同步是下一阶段；
-    失败时照常渲染主界面 + 顶栏显示「离线」（`.topbar__user--offline` 警示色）
-    + `showToast` + console.error，保证故障可见而非静默。
-    `homePage` 只经 props 收 `{ user, authError }`，**绝不 import cloudbaseClient**；
-    顶栏为「游客」（title 带匿名 uid）/「离线」，**已无退出登录按钮**（`onSignOut` 已移除）。
+    **路由（`src/main.js`）**：读 `authService.loadSession()` ——
+    有会话 → `createHomePage({userId, username, onSignOut})`；
+    无会话 → `createLoginView({onSuccess})`。
+    `onSuccess` 里 `saveSession` 已由 `loginAndSignIn`/`registerAndSignIn` 完成，
+    main 只负责切视图（**没有用整页 reload**，效果等价且不闪屏）。
+    退出登录走 `confirmDialog`（`components/modal.js`）确认 → `authService.logout()`
+    → 回登录页。`currentView` 状态位（'app'|'login'）防重复挂载。
+    `homePage` 只经 props 收 `{userId, username, onSignOut}`，顶栏为
+    `.topbar__user` = `当前用户：{userId}` + `.topbar__user-out` 退出按钮；
+    **未注入 userId 时不渲染**（保持 Node 测试的旧 DOM 结构）。
 
-    **CloudBase 控制台待确认项**（2026-10-14 实测）：
-    - 环境 ID 真实存在（`{env}.api.tcloudbasegateway.com` 解析并返回 401，
-      `{env}.service.tcloudbase.com` 返回 404，均非 DNS 失败）。
-    - 但其网关对无凭据请求返回 `MISSING_CREDENTIALS`（裸 curl 带 Origin 也一样），
-      **匿名登录是否真的可用、Web 安全域名是否配置，只能在真实浏览器里最终确认**。
-    - 待办：控制台 → 环境 → 登录授权 开启「匿名登录」；
-      安全配置 → WEB 安全域名 加入线上域名（localhost 可能不被允许，需实测）。
-    - ⚠️ 数据迁移（localStorage → CloudBase）**尚未做**，是下一阶段任务。
-      四张表/集合设计沿用：`favorites` / `wrong_words` / `mastered_words` /
-      `user_domains`（`user_domains` 是领域订阅，**天然没有 word 字段**）。
+    **行为上报（旁路统计，失败静默、绝不影响本地功能）**
+    - 收藏 → `homePage.handleToggleFavorite` 里 `if (actual) report(FAVORITE,...)`
+    - 标记熟词 → `handleToggleMastered` / `handleMoveToMastered` → `report(MASTERED,...)`
+    - 答错 → **`quizService.submitQuizAnswer`** 内 `if (!correct) reportRecord(WRONG)`
+      （单点触发：所有做题入口都经过它，保证「一次作答只上报一次」且不会漏）
+    `reportRecord` 是 fire-and-forget，未登录直接 `Promise.resolve(null)`，
+    内部 `.catch` 吞错。
+
+    ⚠️ **本阶段不做数据隔离**：收藏/错题/熟词仍全部走本地 localStorage，
+    `/api/record` 只上报、不回写、不参与渲染。数据迁移是下一阶段任务。
+    四张表的字段设计仍沿用：`favorites` / `wrong_words` / `mastered_words` /
+    `user_domains`（`user_domains` 是领域订阅，**天然没有 word 字段**）。
 
 
 （历史）8. 合法图源白名单（仅在对未来恢复配图时有参考价值）：
@@ -156,19 +168,26 @@
 `verifyCardLayout.mjs`（66 断言）锁死：卡片只用 min-height、单词 `flex-shrink: 0`、
 正面徽标 ≤3 个且只能是「领域名 / 官方认证 / 核心词|派生词」、正面无 source/warn 徽标、
 背面保留来源徽标与例句区。
-`verifyAuth.mjs`（88 断言）锁死：CloudBase 环境 ID 与 SDK 取用方式
-（window.cloudbase 全局 + static.cloudbase.net + defer）、init/auth 参数、
-匿名登录调用与幂等、中文错误文案（含 PROVIDER_NOT_ENABLED）、本阶段不碰
-`.collection()`、main.js 无登录页且降级不白屏、homePage 三态顶栏
-（不注入→无用户区 / user→「游客」无按钮 / authError→「离线」，`.navtab` 恒为 4）、
-Supabase 残留归零（文件已删 + src/ 全文无 supabase）。
-动态部分用**假 window.cloudbase** 跑通 5 条认证路径 + SDK 未加载路径，不联网。
+`verifyAuth.mjs`（152 断言）锁死：authService 的三个接口路径 / POST+JSON / 超时 /
+会话键 `wb:cet6:auth` / 上报体严格等于 `{userId,type,word,domainId}` /
+fire-and-forget / 未登录不上报 / 中文错误文案（含 401、409、超时、非 JSON、
+`{success:false}`）；index.html 不再有第三方 SDK；main.js 路由守卫与退出登录；
+homePage 顶栏「当前用户：{userId}」+ 三处上报 + 分层边界（不碰 localStorage/fetch）；
+quizService 答错单点上报；loginView 双标签/输入框/成功回调/失败提示 + 分层边界；
+CSS 的 `.auth*` 与 `.topbar__user*`；旧方案文件已删。
+动态部分用**假 fetch** 跑通注册/登录/超时/网络失败/409/401/非 JSON/缺 userId
+共 9 条错误路径 + 上报 payload + 未登录跳过，再渲染 loginView（登录态/注册态/
+成功/失败）与 homePage 顶栏，**全程不联网**。
 
-⚠️ 易踩的坑：断言若直接匹配**文件原文**，注释里的字样会污染结果。
-已有两次教训（旧域名留在注释里导致「假通过」；注释写「不 import xxx」导致假失败）。
-凡涉及「不得出现某字符串」的断言，一律先剥注释再匹配。
+⚠️ 易踩的坑：
+1. 断言若直接匹配**文件原文**，注释里的字样会污染结果。
+   已有两次教训（旧域名留在注释里导致「假通过」；注释写「不 import xxx」导致假失败）。
+   凡涉及「不得出现某字符串」的断言，一律先剥注释再匹配。
+2. shim 的 `querySelector` **只搜后代、不搜自身**，也不支持后代组合器
+   （`.a b` 会被当成一个类名）。根节点要用 `_cls.has()` 判断。
+3. shim 的 `style` 必须是带 `setProperty` 的对象（`themeManager` 会调它）。
 
 本地预览：`启动本地预览.bat`（端口 8099）。
-沙箱**有外网**（baidu / esm.sh / cloudflare / github / static.cloudbase.net 实测均通），
+沙箱**有外网**（baidu / cloudflare / github / `api.stellar-dreamin.site` 实测均通），
 但走的是 `https_proxy` 网关，**访问本地 8099 要加 `--noproxy '*'`**，否则会得到 502。
-CloudBase 匿名登录能否跑通仍**只能在真实浏览器里**最终确认。
+自建后端已实测可用，**登录闭环可在浏览器里真正跑通**（不再有「只能在浏览器确认」的悬案）。

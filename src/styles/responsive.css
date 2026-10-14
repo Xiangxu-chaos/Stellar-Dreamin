@@ -62,8 +62,12 @@
   /* 手机上统计信息折叠为一行小字 */
   .topbar__stats { order: 3; width: 100%; justify-content: space-between; padding-top: 2px; }
 
-  /* 顶栏用户区（游客 / 离线）：保留文字，它是状态信号，不能在小屏被藏掉 */
-  .topbar__user { padding: 4px 9px; max-width: none; }
+  /* 顶栏用户区：小屏压缩宽度，用户名自动省略号截断，退出按钮始终可见 */
+  .topbar__user { padding: 3px 3px 3px 9px; max-width: 150px; }
+
+  /* 登录卡片在小屏收紧内边距 */
+  .auth { padding: var(--sp-4) var(--sp-3); }
+  .auth__card { padding: var(--sp-5) var(--sp-4); }
 
   .hero__title { font-size: 24px; }
   .hero__desc { font-size: 13px; }

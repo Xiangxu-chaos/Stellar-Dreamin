@@ -1,24 +1,25 @@
 /**
- * main.js —— 应用入口 + 自动登录
+ * main.js —— 应用入口 + 路由守卫（登录 / 主界面）
  * ============================================================================
  * 职责：
  *   1. 初始化主题（先用默认主题渲染，避免首屏闪烁）
- *   2. **匿名自动登录**：调用 CloudBase 的 signInAnonymously()，成功后直接渲染主界面
+ *   2. **路由守卫**：读本地会话（localStorage 里的 userId）
+ *        · 有 userId → 直接渲染主界面 pages/homePage.js
+ *        · 无 userId → 渲染登录页 views/loginView.js
  *   3. 全局错误兜底 + 快捷键
  *
- * 路由表（已无登录页）：
- *   always → createHomePage（pages/homePage.js）
- *   匿名登录是一次性的前置动作，不参与路由分支。
+ * 路由表：
+ *   session 存在 → createHomePage({ userId, username, onSignOut })
+ *   session 缺失 → createLoginView({ onSuccess })   ← 成功后在主界面与登录页之间切换
  *
- * 为什么要「匿名登录失败也照常进主界面」：
- *   当前所有学习数据仍完全走本地（词库 JSON + localStorage），
- *   云同步是**下一步**才做的事。若因为认证服务不可达就把整个应用挡在门外，
- *   等于用「还没接入的功能」换掉了「已经能用的功能」。
- *   所以这里选择**降级而非阻断**：照常渲染主界面，同时在顶栏显示「离线」状态
- *   + 弹一次提示 + 控制台打印完整错误，保证故障是**可见**而不是静默的。
+ * 后端：自建 Cloudflare Worker + D1（见 core/authService.js）。
+ *   · 登录 / 注册 / 上报全部在 authService 内完成（唯一出现 fetch 的模块）。
+ *   · homePage 只通过 props 拿 userId，**不 import authService 之外的任何网络模块**；
+ *     行为上报（收藏 / 答错 / 熟词）由 homePage / quizService 调 authService.reportRecord，
+ *     属于「旁路统计」——失败不影响任何本地功能。
  *
- * 认证逻辑全部在 core/cloudbaseClient.js（唯一接触 CloudBase 的地方）；
- * homePage 只通过 props 接收用户信息，保持与 Node 测试环境解耦。
+ * 本阶段**不做数据隔离**：收藏 / 错题 / 熟词仍全部走本地 localStorage，
+ * 登录只是闭环（userId 落库 + 行为上报），不参与数据读写分支。
  * ============================================================================
  */
 
@@ -26,12 +27,14 @@ import { h, svgIcon } from './core/dom.js';
 import { iconPath } from './core/icons.js';
 import * as themeManager from './core/themeManager.js';
 import { createHomePage } from './pages/homePage.js';
+import { createLoginView } from './views/loginView.js';
+import { confirmDialog } from './components/modal.js';
 import { showToast } from './components/toast.js';
 import dataService from './services/dataService.js';
-import { ensureSignedIn, translateAuthError } from './core/cloudbaseClient.js';
+import * as authService from './core/authService.js';
 
 let mount = null;
-let currentView = null;   // 'app' | null
+let currentView = null;   // 'app' | 'login' | null
 let booted = false;
 
 async function bootstrap() {
@@ -48,42 +51,17 @@ async function bootstrap() {
     if (typeof ui.themeIntensity === 'number') themeManager.setIntensity(ui.themeIntensity);
   } catch (e) { /* 首次运行无数据，忽略 */ }
 
-  // 3. 匿名自动登录（失败不阻断，见文件头说明）
-  const { user, authError } = await signInAnonymously();
-
-  // 4. 渲染主界面
-  await showApp({ user, authError });
-
-  if (authError) {
-    showToast('云服务未连接，已进入离线模式', {
-      desc: authError,
-      type: 'err',
-      duration: 7000,
-    });
+  // 3. 路由守卫：本地有 userId 就直接进主界面，否则去登录页
+  const session = authService.loadSession();
+  if (session) {
+    console.info('[app] 检测到本地登录态，直接进入主界面', session.userId);
+    await showApp(session);
+  } else {
+    showLogin();
   }
 
   removeSplash();
   booted = true;
-}
-
-/* ---------------------------------------------------------------------------
- * 认证
- * ------------------------------------------------------------------------ */
-
-/**
- * 执行匿名登录，永不抛错。
- * @returns {Promise<{user: object|null, authError: string}>} authError 为空串表示成功
- */
-async function signInAnonymously() {
-  try {
-    const { user, isNew } = await ensureSignedIn();
-    console.info(`[app] ${isNew ? '已创建匿名用户' : '复用已有登录态'}`, user?.uid || '');
-    return { user: user || null, authError: '' };
-  } catch (e) {
-    const authError = translateAuthError(e);
-    console.error('[app] 匿名登录失败：', authError, e);
-    return { user: null, authError };
-  }
 }
 
 /* ---------------------------------------------------------------------------
@@ -95,16 +73,52 @@ function removeSplash() {
   document.body.classList.add('is-ready');
 }
 
-async function showApp({ user = null, authError = '' } = {}) {
+/** 渲染登录页 */
+function showLogin() {
+  currentView = 'login';
+  const view = createLoginView({
+    onSuccess: (session) => {
+      showToast(`欢迎，${session.username || session.userId}`, { type: 'ok', duration: 1800 });
+      showApp(session);
+    },
+  });
+  if (currentView !== 'login') return;
+  mount.replaceChildren(view);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/** 渲染主界面（登录成功 / 已有会话 / 退出后重新登录都走这里） */
+async function showApp(session) {
+  const { userId = '', username = '' } = session || {};
   currentView = 'app';
   try {
-    const page = await createHomePage({ user, authError });
-    if (currentView !== 'app') return;   // 挂载期间状态被改（例如重试）→ 放弃这次结果
+    const page = await createHomePage({
+      userId,
+      username,
+      onSignOut: handleSignOut,
+    });
+    if (currentView !== 'app') return;   // 挂载期间状态被改（例如已退出）→ 放弃这次结果
     mount.replaceChildren(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   } catch (e) {
     currentView = null;
     renderFatal('加载主界面失败', String(e?.message || e));
   }
+}
+
+/** 退出登录：确认 → 清本地会话 → 回登录页 */
+async function handleSignOut() {
+  const okToLeave = await confirmDialog({
+    title: '退出登录',
+    message: '退出后需要重新登录才能进入。你的收藏、错题与熟词仍保存在本机，不会被删除。',
+    confirmText: '退出登录',
+    danger: true,
+  });
+  if (!okToLeave) return;
+
+  authService.logout();
+  showLogin();
+  showToast('已退出登录', { type: 'ok', duration: 1600 });
 }
 
 /* ---------------------------------------------------------------------------

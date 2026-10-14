@@ -19,6 +19,7 @@
 import wordBankService from './wordBankService.js';
 import domainMaterialService from './domainMaterialService.js';
 import dataService from './dataService.js';
+import * as authService from '../core/authService.js';
 
 /* ---------------------------------------------------------------------------
  * 可配置项
@@ -351,6 +352,19 @@ export async function submitQuizAnswer(question, optionText) {
   // 功能四：错题本与错误统计 —— 每次作答（对/错）都记录，
   // 答错自动进入错题本，连续答对 3 次自动移出。
   await dataService.recordAnswer(domainId, question.word, correct);
+
+  /* 行为上报（旁路统计）：答错一次上报一次。
+   * 放在这里是因为**所有**做题入口（收藏夹复习 / 错题复习 / 分组复习 / 领域测验）
+   * 都会经过 submitQuizAnswer —— 单点触发可以保证「一次作答只上报一次」，
+   * 也不会因为将来新增入口而漏报。
+   * fire-and-forget：reportRecord 永不抛错，后端不可用时不影响答题。 */
+  if (!correct) {
+    authService.reportRecord({
+      type: authService.RECORD_TYPES.WRONG,
+      word: question.word,
+      domainId,
+    });
+  }
 
   return { correct, expected: correctOption?.text || '' };
 }
