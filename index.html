@@ -73,6 +73,60 @@
     0% { transform: translateX(-110%); }
     100% { transform: translateX(280%); }
   }
+
+  /* ---- 启动骨架屏（首屏立刻可见，不依赖任何 JS / 网络） ---- */
+  #boot-splash .splash-title {
+    color: #dbe6f2;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    font-weight: 600;
+  }
+  #boot-splash .splash-hint {
+    margin-top: -8px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: #7d8b9c;
+    text-transform: none;
+  }
+  #boot-splash .splash-skeleton {
+    display: grid;
+    grid-template-columns: repeat(3, 92px);
+    gap: 12px;
+    margin-top: 6px;
+  }
+  #boot-splash .sk-card {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 74px;
+    border-radius: 11px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(128,132,148,0.10);
+  }
+  #boot-splash .sk-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, transparent 20%, rgba(143,214,192,0.16) 50%, transparent 80%);
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  }
+  @keyframes skeleton-shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  #boot-splash .splash-retry {
+    margin-top: 4px;
+    padding: 8px 18px;
+    border-radius: 99px;
+    border: 1px solid rgba(143,214,192,0.4);
+    background: rgba(143,214,192,0.12);
+    color: #8fd6c0;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  #boot-splash.is-fading { opacity: 0; pointer-events: none; }
 </style>
 
 <!-- 后端：自建 Cloudflare Worker + D1（https://api.stellar-dreamin.site）
@@ -82,6 +136,9 @@
 <body>
   <div id="app"></div>
 
+  <!-- 启动骨架屏：纯静态 HTML + CSS，页面一解析完就立刻可见（不依赖 JS / 网络）。
+       主脚本（src/main.js）会在挂载登录页或主界面后立刻移除它；
+       万一模块脚本加载失败，下方的内联兜底脚本会在 3.5s 后给出重试入口。 -->
   <div id="boot-splash" aria-hidden="true">
     <div class="splash-inner">
       <div class="splash-mark">
@@ -90,8 +147,12 @@
           <path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>
         </svg>
       </div>
+      <div class="splash-title">六级单词 · 兴趣化记忆卡片</div>
       <div class="splash-bar"><i></i></div>
-      <div>Loading Word Bank</div>
+      <div class="splash-hint" id="boot-hint">加载中…</div>
+      <div class="splash-skeleton">
+        <span class="sk-card"></span><span class="sk-card"></span><span class="sk-card"></span>
+      </div>
     </div>
   </div>
 
@@ -102,5 +163,30 @@
   </noscript>
 
   <script type="module" src="./src/main.js"></script>
+
+  <!-- 启动兜底：主脚本自身带 3s 超时；这里再兜一层 —— 若 3.5s 后骨架屏
+       仍未被移除（通常意味着模块脚本没加载成功），给出可见的重试入口。
+       绝不使用外部资源，纯内联。 -->
+  <script>
+  (function () {
+    var FAILSAFE_MS = 3500;
+    window.__bootSplashTimer = setTimeout(function () {
+      var splash = document.getElementById('boot-splash');
+      if (!splash) return;
+      var hint = document.getElementById('boot-hint');
+      if (hint) hint.textContent = '启动较慢或加载失败';
+      if (document.getElementById('boot-retry')) return;
+      var inner = splash.querySelector('.splash-inner');
+      if (!inner) return;
+      var btn = document.createElement('button');
+      btn.id = 'boot-retry';
+      btn.className = 'splash-retry';
+      btn.type = 'button';
+      btn.textContent = '重新载入';
+      btn.addEventListener('click', function () { window.location.reload(); });
+      inner.appendChild(btn);
+    }, FAILSAFE_MS);
+  })();
+  </script>
 </body>
 </html>

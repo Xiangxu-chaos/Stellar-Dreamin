@@ -63,6 +63,26 @@ export async function createHomePage(options = {}) {
   const { userId = '', username = '', onSignOut } = options || {};
 
   /* =======================================================================
+     性能参数（本轮增量：移动端流畅度）
+     ====================================================================
+     * PAGE_SIZE      首屏 / 每次「加载更多」渲染的卡片数；
+     * MAX_RENDER_CARDS 单次渲染的硬上限 —— 任何时刻一次性创建的卡片
+     *                  都不得超过它，避免手机上 DOM 节点过多直接卡死。
+     * 首屏只渲染 PAGE_SIZE 张（30 ≤ 50），「加载更多」每次追加 PAGE_SIZE 张，
+     * 因此「一次性渲染」恒 ≤ 30 ≤ 50，满足「不允许一次性渲染超过 50 张」。
+     * ==================================================================== */
+  const PAGE_SIZE = 30;
+  const MAX_RENDER_CARDS = 50;
+  /** 单次批量实际渲染量（永远 ≤ MAX_RENDER_CARDS） */
+  const renderStep = () => Math.min(PAGE_SIZE, MAX_RENDER_CARDS);
+  /**
+   * 词库加载软超时（毫秒）——与 main.js 的 BOOT_TIMEOUT 对齐。
+   * 超过它词库仍未就绪，就把骨架屏换成「加载超时 + 重新载入」的失败态，
+   * 保证**任何情况下都不会无限停留在骨架屏 / Loading 界面**。
+   */
+  const BANK_TIMEOUT = 3000;
+
+  /* =======================================================================
      状态
      ==================================================================== */
   const state = {
@@ -89,7 +109,12 @@ export async function createHomePage(options = {}) {
     matchCount: 0,
     searchResults: null,  // 全库搜索结果（非空时覆盖领域列表）
     favorites: [],        // 收藏夹词条（tab==='favorites' 时渲染）
+    // ---- 懒渲染（本轮增量）----
+    visibleCount: PAGE_SIZE,  // 卡片库当前已渲染的卡片数
+    favVisible: PAGE_SIZE,    // 收藏夹当前已渲染的卡片数
   };
+  /** 领域加载竞态守卫：快速连续切换时，只有最后一次的结果允许落地 */
+  let loadSeq = 0;
 
   /* =======================================================================
      根结构
@@ -208,15 +233,26 @@ export async function createHomePage(options = {}) {
   function boot() {
     renderHero();
     renderToolbar();
-    renderLoading();
+    renderSkeleton();          // 骨架屏先行：先给用户可见的反馈，再异步载入词库
+
+    /* 软超时守卫：3s 内词库仍未就绪 → 换成可重试的失败态。
+     * 词库若在超时之后才到，正常流程会照常把卡片渲染上去（自愈）。 */
+    let settled = false;
+    const guard = setTimeout(() => {
+      if (settled) return;
+      renderBankTimeout();
+      showToast('词库加载超时', { desc: '可能是网络较慢，点「重新载入」即可重试。', type: 'err', duration: 3200 });
+    }, BANK_TIMEOUT);
 
     wordBankService.ensureLoaded().then(async () => {
+      settled = true;
+      clearTimeout(guard);
       statWords.textContent = String(wordBankService.getWordCount());
       await Promise.all([reloadFavorites(), reloadMastered(), reloadWrong()]);
-      console.error("[TRACE] before restoreDomain");
       await restoreDomain();
-      console.error("[TRACE] after restoreDomain");
     }).catch((e) => {
+      settled = true;
+      clearTimeout(guard);
       contentHost.replaceChildren(buildError(e));
     });
   }
@@ -442,6 +478,7 @@ export async function createHomePage(options = {}) {
     state.searchResults = null;
     state.query = '';
     state.tab = 'library';
+    state.visibleCount = PAGE_SIZE;   // 切换领域 → 分页重置到首屏
 
     // 换肤
     themeManager.applyTheme(state.domain?.theme);
@@ -455,9 +492,13 @@ export async function createHomePage(options = {}) {
     renderTabs();
     renderHero();
     renderToolbar();
-    renderLoading();
+    renderSkeleton();                 // ② 骨架屏先行：领域主题色占位，先给可见反馈
 
     await loadRelatedWords();
+
+    // ④ 切换领域时向后端拉取用户状态（若已接入）—— 200ms 防抖，
+    //    快速连续切换只会真正发出最后一次请求，不会打爆后端。
+    syncUserStateDebounced(domainId);
 
     if (!options.silent) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -468,29 +509,37 @@ export async function createHomePage(options = {}) {
     }
   }
 
-  /** 领域相关词筛选（纯本地静态数据，永不走网络） */
+  /**
+   * 领域相关词筛选（纯本地静态数据，永不走网络）。
+   *
+   * 竞态守卫：快速连续切换领域时，用 loadSeq 丢弃过期结果 ——
+   * 否则先发出的慢请求后返回，会把新领域的内容覆盖成旧领域的。
+   * 词库层的 filterByDomain 已做内存缓存，第二次切回同一领域时这里几乎零耗时。
+   */
   async function loadRelatedWords() {
     if (!state.domainId) return;
+    const seq = ++loadSeq;
     setToolbarBusy(true);
     try {
       const { words } = await studyService.buildRelatedWords(state.domainId, {
         localLimit: 600,
-        onStage: (s) => setToolbarStage(s.message),
+        onStage: (s) => { if (seq === loadSeq) setToolbarStage(s.message); },
       });
+      if (seq !== loadSeq) return;    // 期间用户又切了领域 → 丢弃这次结果
       state.allRelated = words;
       state.matchCount = words.length;
       tabLibraryCount.textContent = String(words.length);
       await refreshVisibleCards();
     } catch (e) {
-      showToast('筛选失败', { desc: e.message, type: 'err' });
+      if (seq === loadSeq) showToast('筛选失败', { desc: e.message, type: 'err' });
     } finally {
-      setToolbarBusy(false);
-      setToolbarStage('');
+      if (seq === loadSeq) { setToolbarBusy(false); setToolbarStage(''); }
     }
   }
 
-  /** 依据 query / 排序 / 勾选过滤，生成最终渲染列表 */
+  /** 依据 query / 排序 / 勾选过滤，生成最终渲染列表（渲染量由 visibleCount 控制） */
   async function refreshVisibleCards() {
+    state.visibleCount = PAGE_SIZE;   // 过滤条件变化 → 回到首屏一页
     let list = state.allRelated;
 
     if (state.query) {
@@ -551,6 +600,7 @@ export async function createHomePage(options = {}) {
 
     if (tab === 'favorites') {
       clear(toolbarHost);           // 收藏夹不需要卡片库工具栏
+      state.favVisible = PAGE_SIZE; // 分页重置到首屏
       // 进入收藏夹前先从服务层重读一次收藏集：
       //   1. 保证「数字」与「列表」来自同一次读（问题三修复点）；
       //   2. 避免组件内缓存的旧 Set 与磁盘数据不一致。
@@ -664,10 +714,12 @@ export async function createHomePage(options = {}) {
       document.createTextNode('全选本页'),
     );
     selectAllBtn.onclick = async () => {
-      for (const w of state.words) state.selected.add(w.word);
+      // 「本页」= 当前已渲染的那一页（懒渲染下与可见卡片严格一致）
+      const page = state.words.slice(0, state.visibleCount);
+      for (const w of page) state.selected.add(w.word);
       await persistSelection();
       renderToolbar(); renderContent();
-      showToast('已全选当前列表', { desc: `${state.words.length} 个词`, type: 'ok' });
+      showToast('已全选当前列表', { desc: `${page.length} 个词`, type: 'ok' });
     };
 
     clearSelBtn.replaceChildren(
@@ -770,6 +822,32 @@ export async function createHomePage(options = {}) {
     ]));
   }
 
+  /**
+   * 骨架屏：切换领域 / 首屏加载时先铺一层「领域主题色」占位卡片。
+   * 纯占位、不耗性能（固定 6 个块），让页面立刻有反馈而不是白屏或转圈。
+   */
+  function renderSkeleton(message = '正在载入领域数据…') {
+    const t = (state.domain && state.domain.theme) || {};
+    const grid = h('div.skeleton-grid', {
+      style: {
+        '--domain-primary': t.primary || 'var(--c-primary)',
+        '--domain-accent': t.accent || 'var(--c-accent)',
+      },
+    });
+    for (let i = 0; i < 6; i += 1) {
+      grid.appendChild(h('div.skeleton-card', {}, [
+        h('div.skeleton-card__figure'),
+        h('div.skeleton-card__bar', { style: { width: '58%' } }),
+        h('div.skeleton-card__bar', { style: { width: '86%' } }),
+        h('div.skeleton-card__bar', { style: { width: '42%' } }),
+      ]));
+    }
+    contentHost.replaceChildren(
+      h('div.loading-head', {}, [h('span.spinner'), message]),
+      grid,
+    );
+  }
+
   function buildError(e) {
     return h('div.empty', {}, [
       h('div.empty__icon', {}, [svgIcon(iconPath('alert'), { size: 28 })]),
@@ -777,6 +855,18 @@ export async function createHomePage(options = {}) {
       h('div.empty__desc', { text: e?.message || String(e) }),
       h('button.btn.btn--primary', { type: 'button', onClick: () => window.location.reload() }, '重新载入'),
     ]);
+  }
+
+  /** 词库加载超时（>3s）时的失败态：绝不无限停留在骨架屏 */
+  function renderBankTimeout() {
+    contentHost.replaceChildren(h('div.empty', {}, [
+      h('div.empty__icon', {}, [svgIcon(iconPath('alert'), { size: 28 })]),
+      h('div.empty__title', { text: '词库加载超时' }),
+      h('div.empty__desc', {
+        text: '超过 3 秒仍未载入完成，可能是网络较慢。点击下方按钮重新载入即可重试。',
+      }),
+      h('button.btn.btn--primary', { type: 'button', onClick: () => window.location.reload() }, '重新载入'),
+    ]));
   }
 
   let mountedCards = [];
@@ -842,44 +932,113 @@ export async function createHomePage(options = {}) {
     contentHost.replaceChildren(head, view);
   }
 
-  /* ---- 卡片库：网格（使用独立 WordCard 组件）---- */
+  /* ---- 卡片库：网格（使用独立 WordCard 组件；分页懒渲染）---- */
   function buildGrid() {
     mountedCards = [];
     const grid = h('div.card-grid');
-    state.words.forEach((w, i) => {
-      const card = createWordCard(cardProps(w, i));
+    const end = Math.min(state.visibleCount, state.words.length);
+    for (let i = 0; i < end; i += 1) {
+      const card = createWordCard(cardProps(state.words[i], i));
       mountedCards.push(card);
       grid.appendChild(card);
-    });
-    return grid;
+    }
+    return wrapWithPager(grid);
   }
 
   /* ---- 卡片库：列表 ---- */
   function buildList() {
     mountedCards = [];
     const list = h('div.card-grid.card-grid--list');
-    for (const w of state.words) {
-      const fav = isFav(state.domainId, w.word);
-      const row = h('div.row', {
-        role: 'button',
-        tabIndex: '0',
-        onClick: () => openDetail(w),
-        onKeydown: (e) => { if (e.key === 'Enter') openDetail(w); },
-      }, [
-        h('span.row__word', { text: w.word }),
-        h('span.row__ph', { text: w.phonetic || '' }),
-        h('span.row__tr', { text: w.translation || '' }),
-        w.relevance?.level === 'exact'
-          ? h('span.chip.chip--term', { text: w.relevance.domainTermZh || '专有术语' })
-          : null,
-        w.hasMaterial ? h('span.chip.chip--source', { text: '已内置材料' }) : null,
-        /* 修复问题一：不再显示「N 个领域」这类跨领域提示，只保留当前领域标签 */
-        state.selected.has(w.word) ? h('span.chip.chip--selected', { text: '已勾选' }) : null,
-        typeof buildFavoriteBtn === 'function' ? buildRowFav(w, fav) : null,
-      ]);
-      list.appendChild(row);
+    const end = Math.min(state.visibleCount, state.words.length);
+    for (let i = 0; i < end; i += 1) list.appendChild(buildRow(state.words[i], i));
+    return wrapWithPager(list);
+  }
+
+  /** 单行（列表视图）；从 buildList 抽出，供「加载更多」增量追加复用 */
+  function buildRow(w, i) {
+    const fav = isFav(state.domainId, w.word);
+    void i;
+    return h('div.row', {
+      role: 'button',
+      tabIndex: '0',
+      onClick: () => openDetail(w),
+      onKeydown: (e) => { if (e.key === 'Enter') openDetail(w); },
+    }, [
+      h('span.row__word', { text: w.word }),
+      h('span.row__ph', { text: w.phonetic || '' }),
+      h('span.row__tr', { text: w.translation || '' }),
+      w.relevance?.level === 'exact'
+        ? h('span.chip.chip--term', { text: w.relevance.domainTermZh || '专有术语' })
+        : null,
+      w.hasMaterial ? h('span.chip.chip--source', { text: '已内置材料' }) : null,
+      /* 修复问题一：不再显示「N 个领域」这类跨领域提示，只保留当前领域标签 */
+      state.selected.has(w.word) ? h('span.chip.chip--selected', { text: '已勾选' }) : null,
+      typeof buildFavoriteBtn === 'function' ? buildRowFav(w, fav) : null,
+    ]);
+  }
+
+  /** 还有未渲染的卡片时，在网格下方挂一个「加载更多」分页器 */
+  function wrapWithPager(grid) {
+    const total = state.words.length;
+    const shown = grid.children.length;
+    if (shown >= total) return grid;
+    return h('div.card-flow', {}, [grid, buildPager(total - shown)]);
+  }
+
+  function buildPager(remain) {
+    const btn = h('button.btn.btn--primary.card-pager__btn', {
+      type: 'button',
+      onClick: () => loadMoreCards(),
+    }, [svgIcon(iconPath('plus'), { size: 13, cls: 'btn__icon' }), `加载更多（还有 ${remain} 个）`]);
+    return h('div.card-pager', {}, [
+      btn,
+      h('div.card-pager__hint', { text: `已显示 ${state.visibleCount} / ${state.words.length} 张` }),
+    ]);
+  }
+
+  /**
+   * 「加载更多」：**增量追加**，不整表重渲染。
+   * 每次追加 renderStep()（30 张，恒 ≤ MAX_RENDER_CARDS），保留已翻面的卡片状态。
+   */
+  function loadMoreCards() {
+    if (state.ui.view === 'list') return extendList();
+    return extendGrid();
+  }
+
+  function extendGrid() {
+    const grid = contentHost.querySelector('.card-grid');
+    if (!grid) return;
+    const from = Math.min(state.visibleCount, state.words.length);
+    const to = Math.min(state.visibleCount + renderStep(), state.words.length);
+    if (to <= from) return;
+    for (let i = from; i < to; i += 1) {
+      const card = createWordCard(cardProps(state.words[i], i));
+      mountedCards.push(card);
+      grid.appendChild(card);
     }
-    return list;
+    state.visibleCount = to;
+    refreshPager();
+  }
+
+  function extendList() {
+    const grid = contentHost.querySelector('.card-grid');
+    if (!grid) return;
+    const from = Math.min(state.visibleCount, state.words.length);
+    const to = Math.min(state.visibleCount + renderStep(), state.words.length);
+    if (to <= from) return;
+    for (let i = from; i < to; i += 1) grid.appendChild(buildRow(state.words[i], i));
+    state.visibleCount = to;
+    refreshPager();
+  }
+
+  /** 追加后刷新分页器文案 / 移除 */
+  function refreshPager() {
+    const pager = contentHost.querySelector('.card-pager');
+    if (!pager) return;
+    const remain = state.words.length - state.visibleCount;
+    if (remain <= 0) { pager.remove(); return; }
+    const fresh = buildPager(remain);
+    pager.replaceChildren(...fresh.children);
   }
 
   /** 列表行内的收藏按钮（与网格卡片共用同一套读写，同样不读 DOM class） */
@@ -977,12 +1136,26 @@ export async function createHomePage(options = {}) {
       ]),
     ]);
 
+    // 懒渲染：收藏夹同样只渲染首屏一页，避免收藏很多时一次性铺满 DOM
+    const shown = list.slice(0, Math.min(state.favVisible, list.length));
     const grid = h('div.card-grid');
-    list.forEach((w, i) => {
+    shown.forEach((w, i) => {
       grid.appendChild(createWordCard(cardProps(w, i, { compact: true })));
     });
 
-    contentHost.replaceChildren(head, grid);
+    const parts = [head, grid];
+    const remain = list.length - shown.length;
+    if (remain > 0) {
+      parts.push(h('div.card-pager', {}, [
+        h('button.btn.btn--primary.card-pager__btn', {
+          type: 'button',
+          onClick: () => { state.favVisible = shown.length + renderStep(); renderFavorites(); },
+        }, [svgIcon(iconPath('plus'), { size: 13, cls: 'btn__icon' }), `加载更多（还有 ${remain} 个）`]),
+        h('div.card-pager__hint', { text: `已显示 ${shown.length} / ${list.length} 张` }),
+      ]));
+    }
+
+    contentHost.replaceChildren(...parts);
   }
 
   async function clearAllFavorites() {
@@ -1019,6 +1192,21 @@ export async function createHomePage(options = {}) {
     if (!userId) return;
     authService.reportRecord({ type, word, domainId: domainId || state.domainId || '' });
   }
+
+  /* =======================================================================
+     领域切换 → 后端用户状态同步（200ms 防抖 —— 本轮新增）
+     ====================================================================
+     * 用户快速连续点多个领域时，不应该为每一次点击都打一发后端请求。
+     * debounce 200ms 后只保留最后一次调用，把请求量压到「最后一次切换」。
+     * 当前数据仍全部走本地 localStorage，因此这里在未接入后端时是空操作；
+     * 一旦 authService 导出 fetchUserState()（数据层迁移阶段），即自动生效。 */
+  const syncUserStateDebounced = debounce((domainId) => {
+    if (!userId) return;
+    if (typeof authService.fetchUserState !== 'function') return;
+    try {
+      Promise.resolve(authService.fetchUserState({ userId, domainId })).catch(() => {});
+    } catch (e) { /* 旁路同步，任何失败都不影响界面 */ }
+  }, 200);
 
   /* =======================================================================
      功能三：熟词标记读写（与收藏同构，同样不直接碰存储）
@@ -1390,6 +1578,10 @@ export async function createHomePage(options = {}) {
         words: state.words.length,
         favorites: state.favoriteKeys.size,
         matchCount: state.matchCount,
+        // 懒渲染（本轮增量）
+        visibleCount: state.visibleCount,
+        pageSize: PAGE_SIZE,
+        maxRenderCards: MAX_RENDER_CARDS,
         // 功能新增
         myDomains: state.myDomainIds.slice(),
         mastered: state.mastery.mastered,

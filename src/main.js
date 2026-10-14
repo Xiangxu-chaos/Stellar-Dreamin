@@ -3,14 +3,26 @@
  * ============================================================================
  * 职责：
  *   1. 初始化主题（先用默认主题渲染，避免首屏闪烁）
- *   2. **路由守卫**：读本地会话（localStorage 里的 userId）
- *        · 有 userId → 直接渲染主界面 pages/homePage.js
+ *   2. **非阻塞启动**：页面一加载就保留「启动骨架屏」，随后在后台并行执行
+ *        · 会话校验（读 localStorage 里的 userId，必要时向后端验证）
+ *        · 词库加载（wordBankService.ensureLoaded）
+ *      两者各带 3 秒硬超时。超时绝不空等 —— 会话超时按「未登录」处理并提示重试，
+ *      词库超时给出可重试的错误提示。**任何情况下都不允许一直卡在 Loading 界面。**
+ *   3. **路由守卫**：
+ *        · 有 userId → 渲染主界面 pages/homePage.js
  *        · 无 userId → 渲染登录页 views/loginView.js
- *   3. 全局错误兜底 + 快捷键
+ *   4. 全局错误兜底 + 快捷键
  *
  * 路由表：
  *   session 存在 → createHomePage({ userId, username, onSignOut })
  *   session 缺失 → createLoginView({ onSuccess })   ← 成功后在主界面与登录页之间切换
+ *
+ * ---------------------------------------------------------------------------
+ * 性能约定（本轮增量）
+ *   · BOOT_TIMEOUT = 3000 —— 登录验证 / 词库加载的硬超时（毫秒）
+ *   · 骨架屏由 index.html 内联渲染（0 依赖、0 网络），本文件负责在视图就绪后移除
+ *   · 词库加载与路由决策**并行**，互不阻塞；词库慢不会挡住登录页/主界面的出现
+ * ---------------------------------------------------------------------------
  *
  * 后端：自建 Cloudflare Worker + D1（见 core/authService.js）。
  *   · 登录 / 注册 / 上报全部在 authService 内完成（唯一出现 fetch 的模块）。
@@ -31,12 +43,54 @@ import { createLoginView } from './views/loginView.js';
 import { confirmDialog } from './components/modal.js';
 import { showToast } from './components/toast.js';
 import dataService from './services/dataService.js';
+import wordBankService from './services/wordBankService.js';
 import * as authService from './core/authService.js';
+
+/** 启动硬超时（毫秒）：登录验证与词库加载都不允许超过这个时间 */
+export const BOOT_TIMEOUT = 3000;
 
 let mount = null;
 let currentView = null;   // 'app' | 'login' | null
 let booted = false;
+/** 启动阶段的提示（例如「登录验证超时，请重试」），在渲染登录页后弹出一次 */
+let bootNotice = '';
 
+/* ---------------------------------------------------------------------------
+ * 限时工具
+ * ---------------------------------------------------------------------------
+ * 把任意 Promise 包成「限时」形式：超时不 reject、不抛错，而是返回一个
+ * 结构化结果 { timedOut, ok, value, error }。
+ * 这样调用方永远能在 BOOT_TIMEOUT 内拿到结果并继续走流程 —— 这是
+ * 「绝不卡在 Loading」的机械保证。
+ * ------------------------------------------------------------------------ */
+function withTimeout(promise, ms, fallback = null) {
+  return new Promise((resolve) => {
+    let settled = false;
+    const timer = setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      resolve({ timedOut: true, ok: false, value: fallback, error: null });
+    }, ms);
+    Promise.resolve(promise).then(
+      (value) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        resolve({ timedOut: false, ok: true, value, error: null });
+      },
+      (error) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        resolve({ timedOut: false, ok: false, value: fallback, error });
+      },
+    );
+  });
+}
+
+/* ---------------------------------------------------------------------------
+ * 启动
+ * ------------------------------------------------------------------------ */
 async function bootstrap() {
   mount = document.getElementById('app');
   if (!mount) throw new Error('缺少 #app 挂载点');
@@ -45,30 +99,89 @@ async function bootstrap() {
   themeManager.applyTheme(null, { animate: false });
   themeManager.setColorScheme('dark');
 
-  // 2. 尽早应用主题强度偏好，减少观感跳变
-  try {
-    const ui = await dataService.getUI();
-    if (typeof ui.themeIntensity === 'number') themeManager.setIntensity(ui.themeIntensity);
-  } catch (e) { /* 首次运行无数据，忽略 */ }
+  // 2. 骨架屏已经由 index.html 内联渲染（页面一解析完就可见）。
+  //    这里只确保它处于「可见」状态 —— 首屏绝不空白。
+  showSkeleton();
 
-  // 3. 路由守卫：本地有 userId 就直接进主界面，否则去登录页
-  const session = authService.loadSession();
+  // 3. 后台并行启动词库加载：**不阻塞** 路由决策，稍后按需消费结果。
+  const bankTask = withTimeout(wordBankService.ensureLoaded(), BOOT_TIMEOUT, 'timeout');
+
+  // 4. 主题强度偏好异步补上（失败不影响启动）
+  dataService.getUI()
+    .then((ui) => {
+      if (ui && typeof ui.themeIntensity === 'number') themeManager.setIntensity(ui.themeIntensity);
+    })
+    .catch(() => { /* 首次运行无数据，忽略 */ });
+
+  // 5. 会话校验：3 秒硬超时；超时视为「未登录」并提示重试
+  const sessionResult = await withTimeout(resolveSession(), BOOT_TIMEOUT, null);
+  const session = sessionResult.value;
+  if (sessionResult.timedOut) {
+    console.warn('[app] 登录验证超时（>3s），按未登录处理');
+    bootNotice = '登录验证超时，请重试';
+  }
+
+  // 6. 依据会话决定视图
   if (session) {
-    console.info('[app] 检测到本地登录态，直接进入主界面', session.userId);
     await showApp(session);
   } else {
     showLogin();
   }
 
+  // 7. 视图已就绪 → 立刻移除骨架屏（这一步绝不等待词库）
   removeSplash();
   booted = true;
+
+  // 8. 词库结果稍后消费：超时 / 失败 → 给可重试提示（不阻塞、不影响已渲染界面）
+  bankTask.then((r) => {
+    if (r.timedOut) {
+      showToast('词库加载较慢', {
+        desc: '已转入后台继续加载，可正常操作；若长时间无内容请点「重新载入」。',
+        type: 'warn',
+        duration: 3200,
+      });
+    } else if (!r.ok) {
+      showToast('词库加载失败', {
+        desc: '可点击页面上的「重新载入」按钮重试。',
+        type: 'err',
+        duration: 3200,
+      });
+    }
+  });
+}
+
+/**
+ * 解析本地会话（含可选的 3s 后端校验）。
+ * 当前实现只读 localStorage（毫秒级）；数据层迁移后若需要向后端校验，
+ * authService 只要导出 verifySession(userId) 即会被自动接入（仍在 3s 超时内）。
+ * @returns {Promise<{userId:string, username:string}|null>}
+ */
+async function resolveSession() {
+  const session = authService.loadSession();
+  if (!session || !session.userId) return null;
+  if (typeof authService.verifySession === 'function') {
+    const valid = await authService.verifySession(session.userId);
+    if (valid === false) return null;
+  }
+  return session;
 }
 
 /* ---------------------------------------------------------------------------
  * 视图
  * ------------------------------------------------------------------------ */
 
+/** 确保启动骨架屏可见（index.html 已内联，缺失时也无副作用） */
+function showSkeleton() {
+  const splash = document.getElementById('boot-splash');
+  if (splash) splash.classList.remove('is-fading');
+  document.body.classList.remove('is-ready');
+}
+
 function removeSplash() {
+  if (typeof window !== 'undefined' && window.__bootSplashTimer) {
+    clearTimeout(window.__bootSplashTimer);
+    window.__bootSplashTimer = null;
+  }
   document.getElementById('boot-splash')?.remove();
   document.body.classList.add('is-ready');
 }
@@ -85,6 +198,12 @@ function showLogin() {
   if (currentView !== 'login') return;
   mount.replaceChildren(view);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // 启动阶段若发生过超时（例如登录验证超时），登录页渲染后提示一次重试
+  if (bootNotice) {
+    showToast(bootNotice, { desc: '请重新登录。', type: 'err', duration: 3200 });
+    bootNotice = '';
+  }
 }
 
 /** 渲染主界面（登录成功 / 已有会话 / 退出后重新登录都走这里） */
@@ -129,6 +248,7 @@ async function handleSignOut() {
 function renderFatal(title, detail) {
   const el = mount || document.getElementById('app');
   if (!el) return;
+  removeSplash();
   el.replaceChildren(
     h('div.empty', {}, [
       h('div.empty__icon', {}, [svgIcon(iconPath('alert'), { size: 28 })]),

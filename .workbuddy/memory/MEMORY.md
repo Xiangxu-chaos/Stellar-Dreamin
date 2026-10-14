@@ -145,6 +145,45 @@
     四张表的字段设计仍沿用：`favorites` / `wrong_words` / `mastered_words` /
     `user_domains`（`user_domains` 是领域订阅，**天然没有 word 字段**）。
 
+13. **性能铁律（2026-10-14 定稿，改动前务必先读）**
+    - **启动非阻塞**：`index.html` 的 `#boot-splash` 是**启动骨架屏**
+      （内联 HTML/CSS + 3 个 `.sk-card`，0 依赖 0 网络 → 解析完即可见），
+      文案是「加载中…」，**不得再写回 `Loading Word Bank`**。
+      另有内联兜底脚本：3.5s 后仍存在则显示 `#boot-retry` 重试按钮。
+    - `main.js` 有 `export const BOOT_TIMEOUT = 3000` + `withTimeout(promise, ms, fallback)`
+      （**超时不 reject**，返回 `{timedOut, ok, value, error}`）。
+      词库 `ensureLoaded()` 与 `resolveSession()` **各带 3s 超时**，
+      且词库加载**不阻塞**路由决策（先拿 `bankTask` 再判会话）。
+      会话超时 → 视为未登录 + 「登录验证超时，请重试」。挂载视图后立刻
+      `removeSplash()`（不等词库），并清 `window.__bootSplashTimer`。
+    - `homePage` 有 `BANK_TIMEOUT = 3000` 软超时守卫：超时 → `renderBankTimeout()`
+      （「词库加载超时 + 重新载入」），词库晚到则正常渲染（自愈）。
+      **任何路径都不允许无限停留在骨架屏。**
+    - **懒渲染铁律**：`PAGE_SIZE = 30`、`MAX_RENDER_CARDS = 50`、
+      `renderStep() = Math.min(PAGE_SIZE, MAX_RENDER_CARDS)`。
+      首屏只渲染 `state.words.slice(0, state.visibleCount)`；
+      「加载更多」必须走 `extendGrid()` / `extendList()` **增量追加**
+      （禁止整表重渲染，否则丢失翻面状态 + 卡顿），单批增量恒 ≤ 30 ≤ 50。
+      收藏夹用 `state.favVisible` 分页（重渲染式）。
+      `selectDomain` / `refreshVisibleCards` / `switchTab('favorites')` 都要重置分页。
+    - **领域切换有竞态守卫** `loadSeq`（`const seq = ++loadSeq`，回来时
+      `seq !== loadSeq` 丢弃）——快速连点领域不会被慢请求覆盖。
+      另外 `syncUserStateDebounced = debounce(…, 200)` 在 `selectDomain` 末尾调用，
+      为将来「向后端拉用户状态」预留 200ms 防抖（当前 `authService.fetchUserState`
+      未导出 → 空操作，**没有新增任何后端请求**）。
+    - **内存缓存（第二次切回同领域秒开的来源）**：
+      · `wordBankService.domainWordsCache`（键 `domainId|词库集合`）缓存
+        `computeDomainWords()` 的全量匹配+排序结果；命中直接返回**同一数组本体**，
+        `limit`/`minScore` 只在缓存上切片/过滤。切词库/注册自定义词库会失效缓存。
+      · `domainMaterialService.ensure()` 命中 `materialCache` 直接同步返回；
+        导出 `isLoaded` / `peekMaterials` / `peekMaterial` / `clearCache`。
+    - 卡片 DOM 只在 `homePage.buildGrid/buildList` 生成，**新增渲染入口必须同样分页**。
+
+14. **启动骨架屏 / 分页器样式落点**（`components.css` 第 20 节）：
+    `.loading-head` / `.skeleton-grid` / `.skeleton-card`(+`__figure`/`__bar`) /
+    `@keyframes skeleton-shimmer` / `.card-flow` / `.card-pager` / `.card-pager__btn` /
+    `.card-pager__hint`；`responsive.css` 小屏 `.skeleton-grid` 两列 + 分页按钮占满宽。
+
 
 （历史）8. 合法图源白名单（仅在对未来恢复配图时有参考价值）：
    `steamcdn-a.akamaihd.net`、`media.valorant-api.com`、`game.gtimg.cn`。
@@ -155,14 +194,24 @@
 ## 测试
 
 `tools/` 下全部为 Node 环境（自建 DOM/BOM shim），无需浏览器。
-改动前全跑、提交前全跑（16 个脚本 / 0 失败期望）：
+改动前全跑、提交前全跑（**17 个脚本** / 0 失败期望）：
 `verifyIncrement` / `verifyFeatures4` / `verifyImageStandard` / `verifyCardLayout` /
 `verifyWiring` / `verifyAuth` / `smokeDom` / `verifyFavorites` / `verifyNoWriteOnRead` /
 `verifyFix3FavoriteConsistency` / `verifyTasksII_III` / `verifyWordCase` /
-`verifyExampleCoverage` / `verifyExampleRender` / `verifyFillLogic` / `verifyMaterialResilience`。
+`verifyExampleCoverage` / `verifyExampleRender` / `verifyFillLogic` /
+`verifyMaterialResilience` / **`verifyPerformance`**。
 
 改卡片布局相关代码后**至少要跑** `verifyCardLayout` + `verifyImageStandard` + `smokeDom`。
 改认证 / 路由相关代码后**至少要跑** `verifyAuth` + `smokeDom` + `verifyWiring`。
+改启动流程 / 领域切换 / 渲染量相关代码后**至少要跑** `verifyPerformance` + `smokeDom`。
+
+`verifyPerformance.mjs`（89 断言）锁死性能契约：index.html 启动骨架屏与内联兜底脚本
+（且不得出现 `Loading Word Bank`）、main.js 的 `BOOT_TIMEOUT=3000`/`withTimeout`/
+两个 3s 超时/骨架屏移除时机、homePage 的 `PAGE_SIZE=30`/`MAX_RENDER_CARDS=50`/
+`renderStep`/增量追加/`loadSeq`/200ms 防抖/`BANK_TIMEOUT`、
+两个 service 的缓存 API 与缓存键、CSS 骨架屏与分页器；
+动态部分验证「第二次调用返回同一数组且零新增请求」「材料二次读取零新增 fetch」
+「首屏 30 张、加载更多 +30、切换领域回 30、列表 ≤50 行」「无未捕获 rejection」。
 `verifyImageStandard.mjs` 现验证「图片功能已下线」：imageUrl 全空、无 `<img>` 逻辑、
 无 FileReader、16/9 + overflow:hidden + 灰底、无随机图库、分层边界（47 断言）。
 `verifyCardLayout.mjs`（66 断言）锁死：卡片只用 min-height、单词 `flex-shrink: 0`、
@@ -185,7 +234,11 @@ CSS 的 `.auth*` 与 `.topbar__user*`；旧方案文件已删。
    凡涉及「不得出现某字符串」的断言，一律先剥注释再匹配。
 2. shim 的 `querySelector` **只搜后代、不搜自身**，也不支持后代组合器
    （`.a b` 会被当成一个类名）。根节点要用 `_cls.has()` 判断。
-3. shim 的 `style` 必须是带 `setProperty` 的对象（`themeManager` 会调它）。
+3. shim 的 `style` 必须是带 `setProperty` 的对象（`themeManager` 会调它）；
+   shim 的 `window` 还必须提供 **`setTimeout` / `clearTimeout`**
+   （`themeManager.applyTheme` 换肤动画会调 `window.setTimeout`）。
+   ⚠️ 只切一次领域不会触发它（`currentThemeId` 首轮为空），**连切两次才暴露** —— 
+   写涉及「多次切换领域」的测试时务必先补上。
 
 本地预览：`启动本地预览.bat`（端口 8099）。
 沙箱**有外网**（baidu / cloudflare / github / `api.stellar-dreamin.site` 实测均通），

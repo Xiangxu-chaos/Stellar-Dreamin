@@ -171,3 +171,17 @@
   body { background: #fff !important; color: #000 !important; }
   .flip, .modal__panel { box-shadow: none !important; border-color: #ccc !important; }
 }
+
+/* —— 小屏：骨架屏改两列、分页按钮占满宽度（本轮增量：性能优化） —— */
+@media (max-width: 600px) {
+  .skeleton-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-3);
+  }
+  .skeleton-card { padding: 11px; }
+  .skeleton-card__figure { max-height: 78px; margin-bottom: 9px; }
+  .skeleton-card__bar { height: 9px; margin-bottom: 7px; }
+
+  .card-pager { margin-top: var(--sp-5); }
+  .card-pager__btn { width: 100%; min-width: 0; }
+}

@@ -62,10 +62,56 @@ import dataService from './dataService.js';
 
 /* ---------------------------------------------------------------------------
  * 内部缓存：domainId -> Map<word(lower), material>
+ * ---------------------------------------------------------------------------
+ * 【内存缓存策略（本轮性能优化）】
+ *   领域材料文件（50KB ~ 520KB）一旦载入就常驻内存，后续所有查询走 Map：
+ *     materialCache  domainId -> Map<word, material>   ← 归一化后的材料
+ *     rawCache       domainId -> 原始文件对象          ← 供统计取 domainName
+ *     loadPromises   domainId -> Promise               ← 并发去重
+ *
+ *   行为保证：
+ *     · 同一个领域重复调用只 fetch / JSON.parse 一次（loadPromises 去重）
+ *     · 第二次切回同一领域时 ensure() 直接命中 materialCache **同步返回**，
+ *       不再发起任何请求、不再重复解析 —— 这就是「切回同一领域秒开」的来源
+ *     · peekMaterials() / isLoaded() 提供同步查询，页面可据此跳过骨架屏
+ *     · clearCache() 供测试或手动释放
  * ------------------------------------------------------------------------ */
 const materialCache = new Map();  // domainId -> Map
 const rawCache = new Map();       // domainId -> 原始文件对象
 const loadPromises = new Map();   // domainId -> Promise（并发去重）
+
+/** 【同步】该领域材料是否已驻留内存（true = 无需再请求/解析） */
+export function isLoaded(domainId) {
+  return materialCache.has(domainId);
+}
+
+/** 【同步】取已缓存的材料 Map；未载入返回 null（不触发任何 IO） */
+export function peekMaterials(domainId) {
+  return materialCache.get(domainId) || null;
+}
+
+/**
+ * 【同步】取已缓存的单条材料；未载入或未命中返回 null。
+ * 用于「已知该领域已预热」的热路径，避免 async 开销。
+ */
+export function peekMaterial(domainId, word) {
+  const map = materialCache.get(domainId);
+  if (!map) return null;
+  return map.get(String(word || '').toLowerCase()) || null;
+}
+
+/** 清空内存缓存（传 domainId 只清该领域）；仅供测试 / 手动释放 */
+export function clearCache(domainId) {
+  if (domainId) {
+    materialCache.delete(domainId);
+    rawCache.delete(domainId);
+    loadPromises.delete(domainId);
+  } else {
+    materialCache.clear();
+    rawCache.clear();
+    loadPromises.clear();
+  }
+}
 
 /** 从 dataUrl 读取领域材料文件（换后端时只改这里） */
 async function loadDomainFile(domainId) {
@@ -231,7 +277,11 @@ export async function preloadAll() {
 }
 
 async function ensure(domainId) {
-  if (!materialCache.has(domainId)) await preload(domainId);
+  // ① 内存缓存命中 → 直接同步返回，不 fetch、不 parse（第二次切回同领域秒开的保证）
+  const cached = materialCache.get(domainId);
+  if (cached) return cached;
+  // ② 未命中 → 载入一次；loadPromises 保证并发只发一次请求
+  await preload(domainId);
   return materialCache.get(domainId) || new Map();
 }
 
@@ -395,6 +445,11 @@ export const IMAGE_COPYRIGHT_NOTICE =
 export default {
   preload,
   preloadAll,
+  // 内存缓存查询（同步）
+  isLoaded,
+  peekMaterials,
+  peekMaterial,
+  clearCache,
   getMaterial,
   getMaterialWithImage,
   resolveImage,

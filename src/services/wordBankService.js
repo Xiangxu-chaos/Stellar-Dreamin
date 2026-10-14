@@ -92,6 +92,30 @@ let loadPromise = null;
 const domainIndexCache = new Map();
 
 /* ---------------------------------------------------------------------------
+ * 领域相关词内存缓存（本轮性能优化）
+ * ---------------------------------------------------------------------------
+ * filterByDomain() 需要对全量词库（约 6000 词）逐词做变形、术语匹配与排序，
+ * 单次耗时在移动端相当可观。而同一领域 + 同一激活词库的结果是**确定性**的，
+ * 因此把「已排序的全量结果」缓存下来：
+ *   · 用户第二次切回同一领域 → 直接返回缓存数组，0 重算 → 秒开
+ *   · limit / minScore 只在缓存结果上做切片 / 过滤，不重新匹配
+ * 缓存键 = `${domainId}|${激活词库 id 列表}`，因此切换词库不会命中脏缓存。
+ * 内存占用：每个领域约 600 个词条对象引用（非深拷贝），可忽略。
+ * ------------------------------------------------------------------------ */
+const domainWordsCache = new Map();
+/** 相关词缓存是否已就绪（页面可据此决定是否展示骨架屏） */
+export function hasDomainWordsCache(domainId) {
+  for (const key of domainWordsCache.keys()) {
+    if (key === String(domainId) || key.startsWith(`${domainId}|`)) return true;
+  }
+  return false;
+}
+/** 清空相关词缓存（切换词库 / 测试时使用） */
+export function clearDomainWordsCache() {
+  domainWordsCache.clear();
+}
+
+/* ---------------------------------------------------------------------------
  * 归一化：把任意数据源的记录统一成标准 Word 结构。
  * 最终版从后端返回的数据可能字段不同，只在这里做一次映射即可。
  * ------------------------------------------------------------------------ */
@@ -147,6 +171,8 @@ export function registerCustomBank(meta, words) {
   if (!meta || !meta.id) throw new Error('[wordBankService] 自定义词库必须提供 id');
   BANK_REGISTRY[meta.id] = { ...meta, builtin: false, customData: words };
   bankCache.set(meta.id, (words || []).map((r) => normalizeWord(r, meta.id)).filter(Boolean));
+  // 词库集合变了 → 相关词缓存必须失效，避免命中旧结果
+  clearDomainWordsCache();
   return meta.id;
 }
 
@@ -154,6 +180,8 @@ export function registerCustomBank(meta, words) {
 export function setActiveBanks(ids) {
   const valid = (Array.isArray(ids) ? ids : [ids]).filter((id) => BANK_REGISTRY[id]);
   activeBanks = valid.length ? valid : [...DEFAULT_ACTIVE];
+  // 缓存键含词库列表，理论上不会串；仍显式清一次，保证语义简单可预期
+  clearDomainWordsCache();
   return activeBanks;
 }
 
@@ -296,7 +324,11 @@ function variantsOf(word) {
 }
 
 /**
- * 从全量词库中筛选与指定兴趣领域相关的词。
+ * 领域相关词筛选（带内存缓存）。
+ *
+ * 首次调用：全量匹配 + 排序 → 写入 domainWordsCache。
+ * 之后调用：直接复用缓存数组（同一领域秒开），只做 minScore 过滤与 limit 切片。
+ *
  * @param {string} domainId
  * @param {{limit?: number, minScore?: number, banks?: string[]}} [options]
  * @returns {Promise<Array<Word & {relevance: {score:number, level:string, evidence:string, domainTermZh:string}}>>}
@@ -304,8 +336,25 @@ function variantsOf(word) {
 export async function filterByDomain(domainId, options = {}) {
   const domain = INTEREST_DOMAINS[domainId];
   if (!domain) return [];
+
+  const banks = options.banks && options.banks.length ? options.banks : activeBanks;
+  const cacheKey = `${domainId}|${banks.join(',')}`;
+
+  let results = domainWordsCache.get(cacheKey);
+  if (!results) {
+    results = await computeDomainWords(domainId, domain, banks);
+    domainWordsCache.set(cacheKey, results);
+  }
+
+  const minScore = options.minScore ?? 1;
+  const filtered = minScore <= 1 ? results : results.filter((r) => r.relevance.score >= minScore);
+  return typeof options.limit === 'number' ? filtered.slice(0, options.limit) : filtered;
+}
+
+/** 真正的全量匹配 + 排序（只在缓存未命中时执行一次） */
+async function computeDomainWords(domainId, domain, banks) {
   const index = getDomainIndex(domainId);
-  const all = await getAllWords({ banks: options.banks });
+  const all = await getAllWords({ banks });
   const termZhList = [...new Set(Object.values(domain.domainTerms || {}))];
 
   const results = [];
@@ -388,9 +437,7 @@ export async function filterByDomain(domainId, options = {}) {
     return a.word.toLowerCase().localeCompare(b.word.toLowerCase());
   });
 
-  const minScore = options.minScore ?? 1;
-  const filtered = results.filter((r) => r.relevance.score >= minScore);
-  return typeof options.limit === 'number' ? filtered.slice(0, options.limit) : filtered;
+  return results;
 }
 
 /** 同步版本：基于已缓存词条做领域筛选（供首屏无阻塞渲染） */
@@ -598,6 +645,8 @@ export default {
   searchWords,
   filterByDomain,
   filterByDomainSync,
+  hasDomainWordsCache,
+  clearDomainWordsCache,
   lookupDomainTerm,
   getDomains,
   getDomainDetail,

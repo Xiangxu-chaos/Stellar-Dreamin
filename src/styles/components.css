@@ -2328,3 +2328,91 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
 .topbar__user-out { flex: none; }
 .topbar__user-out:hover { color: #ffb4b4; }
 
+
+/* ==========================================================================
+   20. 性能优化：骨架屏 + 懒渲染分页器（本轮增量）
+   ==========================================================================
+   * 骨架屏：切换领域时先铺领域主题色占位，避免白屏 / 转圈空等
+   * 分页器：配合 homePage 的懒渲染（首屏 30 张 + 「加载更多」增量追加）
+   ========================================================================== */
+
+/* ---- 20.1 载入中标题行 ---- */
+.loading-head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin: 2px 0 0;
+  color: var(--c-text-soft);
+  font-size: 13px;
+}
+.loading-head .spinner { flex: none; }
+
+/* ---- 20.2 骨架占位卡片（领域主题色） ---- */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--sp-4);
+  margin-top: var(--sp-4);
+}
+.skeleton-card {
+  position: relative;
+  overflow: hidden;
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+/* 领域主题色极淡铺底：切到哪个领域，骨架就是那个领域的色调 */
+.skeleton-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--domain-primary, var(--c-primary));
+  opacity: 0.07;
+  pointer-events: none;
+}
+/* 流光扫过，暗示「正在加载」 */
+.skeleton-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, 0.07) 50%, transparent 80%);
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes skeleton-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.skeleton-card__figure {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-height: 120px;
+  border-radius: var(--radius-sm);
+  background: rgba(128, 132, 148, 0.12);
+  margin-bottom: 12px;
+}
+.skeleton-card__bar {
+  position: relative;
+  height: 11px;
+  border-radius: 99px;
+  background: rgba(128, 132, 148, 0.16);
+  margin-bottom: 9px;
+}
+.skeleton-card__bar:last-child { margin-bottom: 0; }
+
+/* ---- 20.3 懒渲染分页器 ---- */
+.card-flow { display: block; }
+.card-pager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  margin: var(--sp-6) 0 var(--sp-2);
+}
+.card-pager__btn { min-width: 190px; justify-content: center; }
+.card-pager__hint {
+  color: var(--c-text-faint);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
