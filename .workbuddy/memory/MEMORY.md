@@ -191,19 +191,76 @@
    `200 + image/* + 实际字节 >1KB`，不通过就留空。
    ⚠️ 不用 Fandom（`static.wikia.nocookie.net` 实测 404 + referer 校验）。
 
+## 领域勾选卡片的视觉状态（2026-10-14 新增，勿回退）
+
+`components/domainPicker.js` 的 `.dp-card` 三态视觉由 `components.css` 第 22 节锁死：
+
+- **未选中（默认）**：`filter: saturate(0.25)` + `opacity: 0.68` + `border: 1px solid var(--c-border)`。
+  **禁止**去掉 filter/opacity —— 这是「一眼分清选没选」的对比基准。
+- **悬停**：`translateY(-3px)` + `border-color: var(--c-border-strong)`（只对未选中生效，
+  选中态另有 `.dp-card.is-on:hover`）。触摸设备在 `responsive.css` 的 `@media (hover:none)`
+  里把 `.dp-card:hover { transform: none }` 关掉。
+- **选中**：`.dp-card.is-on` ——
+  · `background` = 主题色渐变（`color-mix(in srgb, var(--domain-primary) 42%/18%/30%, transparent)`
+    叠 `--c-surface-strong`），先写一行 `var(--dp-soft)` 作不支持 color-mix 的兜底；
+  · `border-color: var(--domain-primary)` + `box-shadow: 0 0 0 2px var(--domain-primary)`
+    （1px 边框 + 2px 同色外环 = 视觉 3px 加粗，**不引起栅格重排**，别改成真的 2px border）；
+  · 右上角 `.dp-card__check` 变实心主题色圆底 + 白勾（`color:#fff`），`scale(1)`；
+  · 图标 `.dp-card__icon` 反相（实心主题色底 + 白图标）。
+- **命名映射铁律**：`.dp-card` 内 `--domain-primary: var(--dp-primary)`。
+  组件传的是 `--dp-primary`（每卡一个），CSS 里一律用 `--domain-primary`，
+  与 `homePage` 领域卡的命名保持一致。
+- **过渡统一 0.2s**（`0.2s var(--ease-out)`），**不得**出现 `0.22s` 等旧值。
+- 勾选图标 `iconPath('check')` 尺寸 **14**，带 `cls: 'dp-card__tick'`；
+  CSS `.dp-card__check svg` 描边 `stroke-width: 2.8`。
+- 卡片带 `aria-pressed` 与 `aria-label="名称（已勾选 / 未勾选）"`，点击时同步更新。
+
+## 例句出处字段 exampleSource（2026-10-14 新增）
+
+- `src/data/domainMaterials/hollowKnight.json` 的 **895 条**材料全部带 `exampleSource`，
+  取值只有四类：`Fandom Wiki`(3) / `AI重写`(87) / `游戏内文本`(28) / `AI 生成`(777)。
+- 生成/维护脚本：`tools/addExampleSource.mjs`（**幂等**，`--dry` 可干跑）。
+  同时导出 `HK_PROPER_NOUNS`（空洞骑士专有名词白名单）与 `REWRITES`（重写表），
+  校验脚本直接 import 复用，**避免两份定义漂移**。
+  脚本已加「仅在直接执行时跑 main()」守卫，import 不会写盘 —— 别删这个守卫。
+- 判定规则：Fandom 来源 + 例句**不含专有名词** → 重写并标 `AI重写`；
+  已含专名 → 保持原句、标 `Fandom Wiki`。重写句必须含该单词 + 至少 1 个专名。
+- `domainMaterialService.normalizeMaterial` 已加 `exampleSource` 兜底（缺 → `''`）。
+- 展示：`wordCard` 背面例句区 `.mat__example-src`、`detailModal` 的 `.detail__example-src`，
+  文案「例句来源：xxx」。**与 `source`（译名来源）是两个维度，别合并**。
+
 ## 测试
 
 `tools/` 下全部为 Node 环境（自建 DOM/BOM shim），无需浏览器。
-改动前全跑、提交前全跑（**17 个脚本** / 0 失败期望）：
+改动前全跑、提交前全跑（**19 个脚本** / 0 失败期望）：
 `verifyIncrement` / `verifyFeatures4` / `verifyImageStandard` / `verifyCardLayout` /
 `verifyWiring` / `verifyAuth` / `smokeDom` / `verifyFavorites` / `verifyNoWriteOnRead` /
 `verifyFix3FavoriteConsistency` / `verifyTasksII_III` / `verifyWordCase` /
 `verifyExampleCoverage` / `verifyExampleRender` / `verifyFillLogic` /
-`verifyMaterialResilience` / **`verifyPerformance`**。
+`verifyMaterialResilience` / `verifyPerformance` / **`verifyPickerFeedback`** /
+**`verifyExampleSource`**。
 
 改卡片布局相关代码后**至少要跑** `verifyCardLayout` + `verifyImageStandard` + `smokeDom`。
 改认证 / 路由相关代码后**至少要跑** `verifyAuth` + `smokeDom` + `verifyWiring`。
 改启动流程 / 领域切换 / 渲染量相关代码后**至少要跑** `verifyPerformance` + `smokeDom`。
+改领域勾选视觉后**至少要跑** `verifyPickerFeedback` + `smokeDom`（smokeDom 里也点过 picker）。
+改领域材料（JSON）后**至少要跑** `verifyExampleSource` + `verifyExampleCoverage` +
+`verifyExampleRender`。
+
+`verifyPickerFeedback.mjs`（34 断言）锁死 `.dp-card` 三态视觉：未选中 saturate+opacity、
+悬停 translateY(-3px)+border-strong、选中 `color-mix(...var(--domain-primary))` 背景、
+1px 边框 + 2px 同色外环、`.dp-card__check` 白勾实心主题色圆底、`--domain-primary: var(--dp-primary)`
+映射、全 0.2s 过渡且无 0.22s 残留、`hover:none` 关位移；JS 侧 `is-on`/`aria-pressed`/
+`aria-label`/图标 14/`dp-card__tick`；动态部分渲染真实 picker 验初始选中态、点击进入/退出、
+每卡都有 `.dp-card__check` 与自己的 `--dp-primary`。
+⚠️ 该脚本的 CSS 规则提取**先剥注释再匹配**，否则注释里的 `.dp-card` 字样会污染结果。
+
+`verifyExampleSource.mjs`（19 断言）锁死：895 条全有 `exampleSource` 且在四类允许值内、
+Fandom 来源只能标 `Fandom Wiki|AI重写`、标 `Fandom Wiki` 的必须含专名、标 `AI重写` 的
+必须含专名且含该词、example/exampleZh 非空；重写表与 JSON 条数一致且逐条真实生效、
+重写表本身每句都合规；`normalizeMaterial` 有 `exampleSource` 兜底；
+wordCard/detailModal 渲染 `.mat__example-src`/`.detail__example-src` 且 CSS 有定义；
+动态建卡片能在 DOM 里读到「例句来源：xxx」。
 
 `verifyPerformance.mjs`（89 断言）锁死性能契约：index.html 启动骨架屏与内联兜底脚本
 （且不得出现 `Loading Word Bank`）、main.js 的 `BOOT_TIMEOUT=3000`/`withTimeout`/

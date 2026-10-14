@@ -285,6 +285,7 @@ export function createWordCard(props) {
     //   有材料 → 显示领域例句 + 中文翻译；
     //   无材料 → 显示「暂无例句」占位（数据层已批量补全，正常情况下不会走到这里）。
     const hasExample = Boolean(material?.example && String(material.example).trim());
+    const exampleSrc = material?.exampleSource ? String(material.exampleSource).trim() : '';
     scroll.appendChild(h('div.mat__section', {}, [
       h('div.mat__label', {}, [
         svgIcon(iconPath('quill'), { size: 12 }),
@@ -295,6 +296,10 @@ export function createWordCard(props) {
         : h('div.mat__value.mat__value--example.mat__value--empty', { text: '暂无例句' }),
       hasExample && material.exampleZh
         ? h('div.mat__value--example-zh', { text: material.exampleZh })
+        : null,
+      // 例句出处标注：让用户知道这句话「从哪来」，便于判断关联度是否可信
+      hasExample && exampleSrc
+        ? h('div.mat__example-src', { text: `例句来源：${exampleSrc}` })
         : null,
     ]));
 

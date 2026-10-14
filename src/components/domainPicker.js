@@ -48,6 +48,7 @@ export function openDomainPicker(options = {}) {
       type: 'button',
       class: isOn ? 'is-on' : '',
       'aria-pressed': String(isOn),
+      'aria-label': `${d.name || d.id}${isOn ? '（已勾选）' : '（未勾选）'}`,
       dataset: { domainId: d.id },
       style: {
         '--dp-primary': d.theme?.primary || 'var(--c-primary)',
@@ -55,7 +56,7 @@ export function openDomainPicker(options = {}) {
         '--dp-soft': d.theme?.primarySoft || 'rgba(var(--c-primary-rgb), 0.14)',
       },
     }, [
-      h('span.dp-card__check', {}, [svgIcon(iconPath('check'), { size: 13 })]),
+      h('span.dp-card__check', {}, [svgIcon(iconPath('check'), { size: 14, cls: 'dp-card__tick' })]),
       h('span.dp-card__icon', {}, [svgIcon(iconPath(d.icon || 'domain'), { size: 20 })]),
       h('span.dp-card__name', { text: d.name || d.id }),
       d.subtitle ? h('span.dp-card__sub', { text: d.subtitle }) : null,
@@ -71,6 +72,7 @@ export function openDomainPicker(options = {}) {
       const on = chosen.has(d.id);
       card.classList.toggle('is-on', on);
       card.setAttribute('aria-pressed', String(on));
+      card.setAttribute('aria-label', `${d.name || d.id}${on ? '（已勾选）' : '（未勾选）'}`);
       syncHint();
     });
 

@@ -157,6 +157,9 @@ function normalizeMaterial(raw, word) {
     story: m.story || '',
     example: m.example || '',
     exampleZh: m.exampleZh || '',
+    /* 例句出处（Fandom Wiki / AI重写 / 游戏内文本 / AI 生成）。
+     * 与 source（译名来源）是两个不同维度，卡片背面据此标注例句来源。 */
+    exampleSource: m.exampleSource || '',
     imageUrl: m.imageUrl || '',
     source: m.source || '',
     unverified: Boolean(m.unverified),

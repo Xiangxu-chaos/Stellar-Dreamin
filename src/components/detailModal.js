@@ -219,6 +219,7 @@ export function showDetailModal(props) {
    */
   function exampleSection() {
     const hasExample = Boolean(material?.example && String(material.example).trim());
+    const exampleSrc = material?.exampleSource ? String(material.exampleSource).trim() : '';
     return h('div.detail__section', {}, [
       h('div.detail__section-title', {}, [
         svgIcon(iconPath('quill'), { size: 13 }),
@@ -230,6 +231,10 @@ export function showDetailModal(props) {
           : h('div.detail__example-en.detail__example-en--empty', { text: '暂无例句' }),
         hasExample && material.exampleZh
           ? h('div.detail__example-zh', { text: material.exampleZh })
+          : null,
+        // 例句出处：与「译名来源」分开标注，便于判断例句的领域关联度
+        hasExample && exampleSrc
+          ? h('div.detail__example-src', { text: `例句来源：${exampleSrc}` })
           : null,
       ]),
     ]);

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>预览 · 兴趣库勾选状态（任务一）</title>
+<link rel="stylesheet" href="./src/styles/tokens.css" />
+<link rel="stylesheet" href="./src/styles/components.css" />
+<style>
+  body { padding: 28px 20px 60px; }
+  .pv-wrap { max-width: 980px; margin: 0 auto; }
+  .pv-title { font-family: var(--font-display); font-size: 22px; margin-bottom: 6px; }
+  .pv-note { font-size: 13px; color: var(--c-text-soft); line-height: 1.8; margin-bottom: 22px; }
+  .pv-note b { color: var(--c-accent); font-weight: 600; }
+  .pv-row { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-bottom: 30px; }
+  .pv-box {
+    border: 1px solid var(--c-border); border-radius: var(--radius);
+    padding: 18px; background: rgba(0, 0, 0, 0.24);
+  }
+  .pv-box__cap { font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--c-text-faint); margin-bottom: 14px; }
+  .pv-single { max-width: 300px; }
+  @media (max-width: 720px) { .pv-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="pv-wrap">
+  <h1 class="pv-title">兴趣库勾选状态 · 视觉预览</h1>
+  <p class="pv-note">
+    这个页面直接引用项目里的 <b>tokens.css</b> 与 <b>components.css</b>，用的就是真实样式。<br />
+    左侧是<b>已勾选</b>（领域主题色铺满背景 + 加粗加深边框 + 右上角亮起的 ✔）；
+    右侧是<b>未勾选</b>（低饱和灰掉）。把鼠标移到未勾选的卡片上，会看到它微微上浮、边框变亮。
+  </p>
+
+  <div class="pv-row">
+    <div class="pv-box">
+      <div class="pv-box__cap">已勾选（is-on）</div>
+      <button class="dp-card is-on" style="--dp-primary:#5aa9e6;--dp-accent:#d8ecff;--dp-soft:rgba(90, 169, 230, 0.18);">
+        <span class="dp-card__check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" class="dp-card__tick"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <span class="dp-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5c0-1.7 1.4-3 3.1-3h9.8c1.7 0 3.1 1.3 3.1 3v3.2c0 4-3.3 7.3-7.4 7.3h-1.2C7.3 18.9 4 15.7 4 11.7z"/><path d="M9 10.5h.01"/><path d="M15 10.5h.01"/><path d="M9.8 14.2c1.4.9 3 .9 4.4 0"/></svg></span>
+        <span class="dp-card__name">空洞骑士</span>
+        <span class="dp-card__sub">Hollow Knight</span>
+        <span class="dp-card__desc">圣巢、骨钉与灵魂——在废墟王国里用英语唤醒记忆。</span>
+        <span class="dp-card__meta">领域词库</span>
+      </button>
+
+      <div style="height:14px"></div>
+
+      <button class="dp-card is-on" style="--dp-primary:#d64541;--dp-accent:#e0b062;--dp-soft:rgba(214, 69, 65, 0.18);">
+        <span class="dp-card__check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" class="dp-card__tick"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <span class="dp-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21V7l4-3 4 3v14"/><path d="M8 7h8"/><path d="M4 21h16"/><path d="M10 21v-5h4v5"/><path d="M9.5 3.5L12 1l2.5 2.5"/></svg></span>
+        <span class="dp-card__name">杀戮尖塔</span>
+        <span class="dp-card__sub">Slay the Spire</span>
+        <span class="dp-card__desc">爬塔、卡组构筑、遗物与意图——在尖塔里用英语打赢每一场战斗。</span>
+        <span class="dp-card__meta">领域词库</span>
+      </button>
+    </div>
+
+    <div class="pv-box">
+      <div class="pv-box__cap">未勾选（默认态 · 把鼠标移上来试试）</div>
+      <button class="dp-card" style="--dp-primary:#c9a227;--dp-accent:#e8b552;--dp-soft:rgba(201, 162, 39, 0.18);">
+        <span class="dp-card__check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" class="dp-card__tick"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <span class="dp-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M4 18l-1-9 5 3.5L12 5l4 7.5L21 9l-1 9z"/></svg></span>
+        <span class="dp-card__name">王者荣耀</span>
+        <span class="dp-card__sub">Honor of Kings</span>
+        <span class="dp-card__desc">峡谷、分路、野区与团战——在熟悉的战场里记六级词汇。</span>
+        <span class="dp-card__meta">领域词库</span>
+      </button>
+
+      <div style="height:14px"></div>
+
+      <button class="dp-card" style="--dp-primary:#e0454a;--dp-accent:#ff9a6b;--dp-soft:rgba(224, 69, 74, 0.18);">
+        <span class="dp-card__check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" class="dp-card__tick"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <span class="dp-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 2v5"/><path d="M12 17v5"/><path d="M2 12h5"/><path d="M17 12h5"/></svg></span>
+        <span class="dp-card__name">无畏契约</span>
+        <span class="dp-card__sub">VALORANT</span>
+        <span class="dp-card__desc">特工、技能与经济局——在战术射击的枪线里背单词。</span>
+        <span class="dp-card__meta">领域词库</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="pv-row">
+    <div class="pv-box">
+      <div class="pv-box__cap">选中 ⇄ 未选中 单卡对比</div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div class="pv-single" style="flex:1;min-width:260px">
+          <button class="dp-card is-on" style="--dp-primary:#5aa9e6;--dp-accent:#d8ecff;--dp-soft:rgba(90, 169, 230, 0.18);">
+            <span class="dp-card__check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" class="dp-card__tick"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span class="dp-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5c0-1.7 1.4-3 3.1-3h9.8c1.7 0 3.1 1.3 3.1 3v3.2c0 4-3.3 7.3-7.4 7.3h-1.2C7.3 18.9 4 15.7 4 11.7z"/><path d="M9 10.5h.01"/><path d="M15 10.5h.01"/><path d="M9.8 14.2c1.4.9 3 .9 4.4 0"/></svg></span>
+            <span class="dp-card__name">空洞骑士</span>
+            <span class="dp-card__sub">Hollow Knight</span>
+            <span class="dp-card__desc">圣巢、骨钉与灵魂——在废墟王国里用英语唤醒记忆。</span>
+            <span class="dp-card__meta">895 个领域词</span>
+          </button>
+        </div>
+        <div class="pv-single" style="flex:1;min-width:260px">
+          <button class="dp-card" style="--dp-primary:#5aa9e6;--dp-accent:#d8ecff;--dp-soft:rgba(90, 169, 230, 0.18);">
+            <span class="dp-card__check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" class="dp-card__tick"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span class="dp-card__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5c0-1.7 1.4-3 3.1-3h9.8c1.7 0 3.1 1.3 3.1 3v3.2c0 4-3.3 7.3-7.4 7.3h-1.2C7.3 18.9 4 15.7 4 11.7z"/><path d="M9 10.5h.01"/><path d="M15 10.5h.01"/><path d="M9.8 14.2c1.4.9 3 .9 4.4 0"/></svg></span>
+            <span class="dp-card__name">空洞骑士</span>
+            <span class="dp-card__sub">Hollow Knight</span>
+            <span class="dp-card__desc">圣巢、骨钉与灵魂——在废墟王国里用英语唤醒记忆。</span>
+            <span class="dp-card__meta">895 个领域词</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="pv-box">
+      <div class="pv-box__cap">说明</div>
+      <p class="pv-note" style="margin:0">
+        · 选中：背景 = 该领域主题色，边框加粗加深，右上角 ✔ 实心高亮；<br />
+        · 未选中：整卡降饱和 + 压暗，明显「灰下去」；<br />
+        · 悬停：未选中卡片微上浮 3px、边框变亮；<br />
+        · 全部状态切换为 0.2s 平滑过渡。<br />
+        <br />
+        真实交互页：打开网站 → 顶部「增加我的库」，即可勾选体验。
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

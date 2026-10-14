@@ -795,6 +795,13 @@
   font-style: italic;
 }
 .mat__value--example-zh { font-size: 12.5px; color: var(--c-text-soft); }
+/* 例句出处标注（Fandom Wiki / AI重写 / 游戏内文本 / AI 生成） */
+.mat__example-src {
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--c-text-faint);
+}
 
 .mat__divider { height: 1px; background: var(--c-border); margin: 2px 0; }
 
@@ -1049,6 +1056,15 @@
 }
 .detail__example-en.detail__example-en--empty { color: var(--c-text-faint); font-style: italic; }
 .detail__example-zh { font-size: 13px; color: var(--c-text-soft); margin-top: 5px; }
+/* 例句出处标注（与「译名来源」分开） */
+.detail__example-src {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--c-border);
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--c-text-faint);
+}
 
 /* ==========================================================================
    12. 复习模式
@@ -1998,7 +2014,20 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   gap: 12px;
 }
 
+/* --------------------------------------------------------------------------
+   .dp-card —— 勾选领域卡片（本轮：选中/未选中必须一眼可辨）
+   --------------------------------------------------------------------------
+   状态语义：
+     未选中 → 低饱和、灰下去（filter: saturate + opacity 双重压制）
+     悬停    → 未选中卡片微微上浮、边框变亮，暗示「可点击」
+     选中    → 用该领域主题色（--domain-primary = --dp-primary）铺满卡片背景，
+               边框加粗加深，右上角亮起明显的 ✔
+   三个状态之间的所有变化统一走 0.2s 过渡，不生硬跳变。
+   ------------------------------------------------------------------------ */
 .dp-card {
+  /* 把领域主题色同时映射到 --domain-primary，便于与其他组件的命名保持一致 */
+  --domain-primary: var(--dp-primary);
+  --domain-accent: var(--dp-accent);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2012,26 +2041,75 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   cursor: pointer;
   text-align: left;
   font: inherit;
-  transition: border-color .22s var(--ease-out), background .22s var(--ease-out),
-              transform .22s var(--ease-out), box-shadow .22s var(--ease-out);
+  /* 未选中：低饱和度 + 略微压暗，与选中态拉开明显差距 */
+  filter: saturate(0.25);
+  opacity: 0.68;
+  transition: border-color .2s var(--ease-out), background .2s var(--ease-out),
+              transform .2s var(--ease-out), box-shadow .2s var(--ease-out),
+              filter .2s var(--ease-out), opacity .2s var(--ease-out),
+              color .2s var(--ease-out);
 }
-.dp-card:hover { transform: translateY(-2px); border-color: var(--dp-primary); }
+
+/* 悬停（未选中）：微微上浮 + 边框变亮，给出「可以点」的暗示 */
+.dp-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--c-border-strong);
+  filter: saturate(0.75);
+  opacity: 0.95;
+  box-shadow: 0 14px 30px -20px rgba(0, 0, 0, 0.85);
+}
+.dp-card:focus-visible { filter: none; opacity: 1; }
+.dp-card:active { transform: translateY(-1px); }
+
+/* 选中：领域主题色铺满背景 + 边框加粗加深 + 主题色外发光 */
 .dp-card.is-on {
-  border-color: var(--dp-primary);
-  background: linear-gradient(155deg, var(--dp-soft), transparent 78%);
-  box-shadow: 0 0 0 1px var(--dp-primary) inset, 0 10px 26px -14px var(--dp-primary);
+  filter: none;
+  opacity: 1;
+  color: var(--c-text);
+  border-color: var(--domain-primary);
+  /* 兜底（不支持 color-mix 的浏览器）：直接用主题色的 soft 变体 */
+  background: var(--dp-soft);
+  background:
+    linear-gradient(150deg,
+      color-mix(in srgb, var(--domain-primary) 42%, transparent) 0%,
+      color-mix(in srgb, var(--domain-primary) 18%, transparent) 62%,
+      color-mix(in srgb, var(--domain-primary) 30%, transparent) 100%),
+    var(--c-surface-strong);
+  /* 1px 边框 + 2px 同色外环 = 视觉上 3px 的加粗边框，且不引起栅格重排 */
+  box-shadow:
+    0 0 0 2px var(--domain-primary),
+    0 16px 34px -18px var(--domain-primary);
+  transform: none;
+}
+.dp-card.is-on:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 2px var(--domain-primary),
+    0 20px 40px -18px var(--domain-primary);
 }
 
 .dp-card__check {
-  position: absolute; top: 11px; right: 11px;
-  width: 21px; height: 21px; border-radius: 50%;
+  position: absolute; top: 10px; right: 10px;
+  width: 24px; height: 24px; border-radius: 50%;
   display: grid; place-items: center;
-  border: 1px solid var(--c-border-strong);
+  border: 1.5px dashed var(--c-border-strong);
   color: transparent; background: transparent;
-  transition: all .2s var(--ease-out);
+  transform: scale(0.82);
+  transition: color .2s var(--ease-out), background .2s var(--ease-out),
+              border-color .2s var(--ease-out), box-shadow .2s var(--ease-out),
+              transform .2s var(--ease-out);
 }
+.dp-card:hover .dp-card__check { border-color: var(--c-border-strong); }
+/* ✔ 本体：加大加粗，保证在任何主题色圆底上都清晰 */
+.dp-card__check svg,
+.dp-card__check .dp-card__tick { width: 14px; height: 14px; stroke-width: 2.8; }
+/* 选中后的 ✔：实心主题色圆底 + 白色对勾，带主题色光晕，一眼可见 */
 .dp-card.is-on .dp-card__check {
-  color: #0b0a08; background: var(--dp-primary); border-color: var(--dp-primary);
+  color: #fff;
+  background: var(--domain-primary);
+  border: 1.5px solid var(--domain-primary);
+  box-shadow: 0 4px 14px -4px var(--domain-primary);
+  transform: scale(1);
 }
 
 .dp-card__icon {
@@ -2040,13 +2118,32 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   color: var(--dp-primary);
   background: var(--dp-soft);
   border: 1px solid color-mix(in srgb, var(--dp-primary) 34%, transparent);
+  transition: color .2s var(--ease-out), background .2s var(--ease-out),
+              border-color .2s var(--ease-out);
+}
+/* 选中后图标反相：实心主题色底 + 白色图标 */
+.dp-card.is-on .dp-card__icon {
+  color: #fff;
+  background: var(--domain-primary);
+  border-color: var(--domain-primary);
 }
 
 .dp-card__name { font-size: 14.5px; font-weight: 600; color: var(--c-text); margin-top: 3px; }
 .dp-card__sub { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--c-text-faint); }
 .dp-card__desc { font-size: 12.5px; line-height: 1.62; color: var(--c-text-soft); }
 .dp-card__meta { margin-top: 2px; font-size: 11px; color: var(--c-text-faint);
-  padding: 2px 8px; border-radius: 999px; border: 1px solid var(--c-border); }
+  padding: 2px 8px; border-radius: 999px; border: 1px solid var(--c-border);
+  transition: color .2s var(--ease-out), border-color .2s var(--ease-out),
+              background .2s var(--ease-out); }
+
+/* 选中态下正文与徽标同步提高对比度，保证在主题色背景上依然清晰可读 */
+.dp-card.is-on .dp-card__sub { color: var(--c-text-soft); }
+.dp-card.is-on .dp-card__desc { color: var(--c-text); }
+.dp-card.is-on .dp-card__meta {
+  color: var(--c-text);
+  border-color: color-mix(in srgb, var(--domain-primary) 62%, transparent);
+  background: color-mix(in srgb, var(--domain-primary) 22%, transparent);
+}
 
 .dp-hint { font-size: 12.5px; color: var(--c-text-faint); }
 .dp-hint.is-warn { color: #e8b552; }
