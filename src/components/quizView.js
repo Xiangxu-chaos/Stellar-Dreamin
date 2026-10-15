@@ -116,12 +116,12 @@ export function createQuizView(props) {
     host.replaceChildren(h('div.empty', {}, [
       h('div.empty__icon', {}, [svgIcon(iconPath('quiz'), { size: 28 })]),
       h('div.empty__title', {
-        text: source === quizService.QUIZ_SOURCES.FAVORITES ? '收藏夹里的词还不够' : '题库不足，无法出题',
+        text: source === quizService.QUIZ_SOURCES.FAVORITES ? '收藏夹里的词还不够' : '当前档位暂时出不了题',
       }),
       h('div.empty__desc', {
         text: source === quizService.QUIZ_SOURCES.FAVORITES
           ? '复习模式只从收藏夹取词，至少需要 2 张已收藏的卡片。先去卡片库点星标收藏几张吧。'
-          : '当前领域的专有术语不足 2 个。可以切换到「全部卡片」作为题目来源。',
+          : '当前筛选档位里的单词不足 2 个。回到卡片库换个档位（核心 / 相关 / 泛化）或清空搜索再试。',
       }),
       h('button.btn', { type: 'button', onClick: () => onExit?.() }, '返回'),
     ]));

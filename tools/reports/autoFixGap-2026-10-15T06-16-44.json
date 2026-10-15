@@ -1,0 +1,2181 @@
+{
+  "at": "2026-10-15T06:16:44.718Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 30,
+  "gapBefore": 309,
+  "defectBefore": 0,
+  "created": 309,
+  "fixed": 0,
+  "filled": 309,
+  "failed": 0,
+  "remain": 0,
+  "remainGap": 0,
+  "remainDefect": 0,
+  "elapsedSec": 218,
+  "items": [
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "acclaim",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "adaptation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "allegory",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "ambition",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "audience",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "billboard",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "climax",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "companionship",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "convention",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "convey",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "courage",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "craving",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "critic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "custom",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "customs",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "dedication",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "depict",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "desire",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "despair",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "disciple",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "draft",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "emotion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "epic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "evoke",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "evolution",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "fable",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "fairy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "fiction",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "folklore",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "franchise",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "genius",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "grief",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "heritage",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "heroine",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "illustrate",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "imagery",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "influence",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "innovation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "inspiration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "irony",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "isolation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "lament",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "lamentation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "legend",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "longing",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "loyalty",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "masterpiece",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "melancholy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "metaphor",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "myth",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "optimism",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "outline",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "paradox",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "passion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "portray",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "poster",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "puzzle",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "quest",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "revolution",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "ritual",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "rival",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "satire",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "scenario",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "sentiment",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "solidarity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "solitude",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "sorrow",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "spectator",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "stereotype",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "stream",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "symbol",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "tension",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "theme",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "volume",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "wit",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "witness",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "accelerate",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "aggression",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "amateur",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "ambition",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "anxiety",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "aspiration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "bandage",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "bench",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "bonus",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "bracket",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "brilliant",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "bruise",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "cohesion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "commitment",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "composure",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "concentration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "concussion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "conference",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "confidence",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "cooperation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "counter",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "courtesy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "cramp",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "crucial",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "dash",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "dedication",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "defend",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "deficit",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "determination",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "discipline",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "division",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "dodge",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "dramatic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "elevation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "enthusiasm",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "evade",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "fake",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "feint",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "fierce",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "forward",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "fracture",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "franchise",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "hook",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "hoop",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "hostility",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "humility",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "inspiration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "integrity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "intercept",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "interception",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "legend",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "legendary",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "ligament",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "margin",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "nutrition",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "outstanding",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "pace",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "passion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "prestige",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "qualification",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "rally",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "ratio",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "reserve",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "rhythm",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "sensation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "slump",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "spectacle",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "spin",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "statistics",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "streak",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "stress",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "stride",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "surge",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "therapy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "thrill",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "tribute",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "unity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "upset",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "veteran",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "absurd",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "academy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "acclaim",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "adaptation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "allegory",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "atmosphere",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "bleak",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "budget",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "ceremony",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "character",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "commentary",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "compassion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "conspiracy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "convey",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "costume",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "crew",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "depict",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "dialogue",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "dignity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "dilemma",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "documentary",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "elegant",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "emotion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "empathy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "envy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "evoke",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "evolution",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "exquisite",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "fantasy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "fiction",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "folklore",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "frame",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "framed",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "franchise",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "genius",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "genre",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "gloomy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "graceful",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "greed",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "gross",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "grotesque",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "guilt",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "heritage",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "heroine",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "horror",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "humility",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "influence",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "injustice",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "innovation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "inspiration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "intrigue",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "intriguing",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "irony",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "jealousy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "landscape",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "magnificent",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "melancholy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "mercy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "morality",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "mystery",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "narrative",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "novel",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "paradox",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "passion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "portray",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "release",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "revenue",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "revolution",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "satire",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "scandal",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "sentiment",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "sinister",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "spectator",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "splendid",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "sublime",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "subtle",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "sympathy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "twist",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "vanity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "vivid",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "wit",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "witness",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "acceleration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "accuracy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "achievement",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "aggressive",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "ambition",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "anchor",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "aspiration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "banner",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "bravery",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "campaign",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "chant",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "clearance",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "cohesion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "composure",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "comrade",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "confidence",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "controversy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "courage",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "creative",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "criticism",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "determination",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "dignity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "dispute",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "emblem",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "encounter",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "epic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "exhaustion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "expectation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "exploit",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "exploitation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "feat",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "fee",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "feud",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "flexibility",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "harmony",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "hooligan",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "hostility",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "humility",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "hymn",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "incentive",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "initiative",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "inspiration",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "integrity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "intensity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "jump",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "legendary",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "mock",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "momentum",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "muscle",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "ordeal",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "pace",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "prestige",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "provoke",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "reckless",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "reputation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "reward",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "schedule",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "sensation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "slump",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "solidarity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "spectacle",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "spectacular",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "spectator",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "sponsor",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "strain",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "strategic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "streak",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "stubborn",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "transfer",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "tribute",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "unity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "upset",
+      "kind": "gap",
+      "fields": null
+    }
+  ]
+}

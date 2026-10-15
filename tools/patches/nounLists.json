@@ -1,0 +1,16 @@
+{
+  "_comment": [
+    "领域专有名词表 —— 单一事实来源。",
+    "用途 1：tools/autoFixGap.mjs --noun-fix 用它判断哪些例句「看不出领域」，并带着清单去重写。",
+    "用途 2：tools/verifyDomainExpansion.mjs 的 13c/13d 断言从本文件读取，保证校验与修复同源、不会漂移。",
+    "规则：这些领域的每条材料的 example 必须至少包含下列名称之一。"
+  ],
+  "breakingBad": ["Walter White", "Heisenberg", "Jesse Pinkman", "Gus Fring", "Hank Schrader",
+    "Skyler", "Los Pollos Hermanos", "Albuquerque", "DEA", "Blue Sky", "meth", "Breaking Bad"],
+  "sherlock": ["Sherlock Holmes", "Watson", "Moriarty", "Mycroft", "Molly Hooper", "Baker Street",
+    "Scotland Yard", "Lestrade", "Hudson"],
+  "classicMovies": ["Shawshank", "Dufresne", "Titanic", "Forrest Gump", "Inception", "Cobb",
+    "Godfather", "Corleone", "Matrix", "Neo", "Interstellar", "Cooper", "Lord of the Rings"],
+  "basketball": ["NBA", "CBA", "Lakers", "Celtics", "Warriors", "Rockets", "Bulls", "Spurs", "Finals"],
+  "badminton": ["Thomas Cup", "Uber Cup", "Sudirman Cup", "All England", "Lin Dan", "Chen Long", "badminton"]
+}

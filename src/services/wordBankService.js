@@ -70,6 +70,23 @@ const MATERIAL_FILES = {
   hollow_knight: new URL('../data/domainMaterials/hollowKnight.json', import.meta.url).href,
   honor_of_kings: new URL('../data/domainMaterials/honorOfKings.json', import.meta.url).href,
   valorant: new URL('../data/domainMaterials/valorant.json', import.meta.url).href,
+  /* 扩展兴趣库（分批新增，板块见 interestsConfig.DOMAIN_CATEGORY） */
+  slay_the_spire2: new URL('../data/domainMaterials/slayTheSpire2.json', import.meta.url).href,
+  arknights: new URL('../data/domainMaterials/arknights.json', import.meta.url).href,
+  genshin_impact: new URL('../data/domainMaterials/genshinImpact.json', import.meta.url).href,
+  identity_fifth: new URL('../data/domainMaterials/identityFifth.json', import.meta.url).href,
+  stardew_valley: new URL('../data/domainMaterials/stardewValley.json', import.meta.url).href,
+  breaking_bad: new URL('../data/domainMaterials/breakingBad.json', import.meta.url).href,
+  sherlock: new URL('../data/domainMaterials/sherlock.json', import.meta.url).href,
+  classic_movies: new URL('../data/domainMaterials/classicMovies.json', import.meta.url).href,
+  rick_and_morty: new URL('../data/domainMaterials/RickandMorty.json', import.meta.url).href,
+  animation: new URL('../data/domainMaterials/animation.json', import.meta.url).href,
+  basketball: new URL('../data/domainMaterials/basketball.json', import.meta.url).href,
+  badminton: new URL('../data/domainMaterials/badminton.json', import.meta.url).href,
+  football: new URL('../data/domainMaterials/football.json', import.meta.url).href,
+  billiard: new URL('../data/domainMaterials/billiard.json', import.meta.url).href,
+  aviation: new URL('../data/domainMaterials/aviation.json', import.meta.url).href,
+  algorithm: new URL('../data/domainMaterials/algorithm.json', import.meta.url).href,
 };
 
 /** 取某领域的预生成材料地址；未配置返回 '' */
@@ -110,9 +127,11 @@ export function hasDomainWordsCache(domainId) {
   }
   return false;
 }
-/** 清空相关词缓存（切换词库 / 测试时使用） */
+/** 清空相关词缓存（切换词库 / 测试时使用）；同时作废预计算的召回数量 */
 export function clearDomainWordsCache() {
   domainWordsCache.clear();
+  for (const d of Object.values(INTEREST_DOMAINS)) delete d._recallCount;
+  recallCountsPromise = null;
 }
 
 /* ---------------------------------------------------------------------------
@@ -351,6 +370,44 @@ export async function filterByDomain(domainId, options = {}) {
   return typeof options.limit === 'number' ? filtered.slice(0, options.limit) : filtered;
 }
 
+/* ---------------------------------------------------------------------------
+ * 档位（tier）——「核心 / 相关 / 泛化」
+ * ---------------------------------------------------------------------------
+ * 分档**不看数据来源**（专有术语 / 领域词 / 场景泛化），而是按召回分数**排名**：
+ *     核心 core     ：排名前 20%
+ *     相关 related  ：20% – 50%
+ *     泛化 extended ：50% – 100%
+ * 少于 20 个词的领域统一归「核心」，避免切档之后没词可做。
+ * 分档只在 computeDomainWords() 建缓存时算一次（不额外增加遍历），
+ * 结果挂在每个词条对象的 `tier` 字段上，随缓存一起复用。
+ * ------------------------------------------------------------------------ */
+export const WORD_TIERS = { CORE: 'core', RELATED: 'related', EXTENDED: 'extended' };
+/** 档位中文名（卡片标签 / 复习选择器共用） */
+export const TIER_LABELS = { core: '核心', related: '相关', extended: '泛化' };
+/** 少于该词数 → 全部归入「核心」 */
+export const TIER_MIN_TOTAL = 20;
+
+/**
+ * 按**已排序**（分数从高到低）的数组顺序写入 tier。
+ * @param {Array} list 已排序的结果数组（原地写入 tier）
+ */
+export function assignTiers(list) {
+  const n = list.length;
+  if (!n) return list;
+  if (n < TIER_MIN_TOTAL) {
+    for (const it of list) it.tier = WORD_TIERS.CORE;
+    return list;
+  }
+  const coreEnd = Math.max(1, Math.ceil(n * 0.2));
+  const relatedEnd = Math.max(coreEnd, Math.min(n, Math.ceil(n * 0.5)));
+  for (let i = 0; i < n; i += 1) {
+    list[i].tier = i < coreEnd
+      ? WORD_TIERS.CORE
+      : (i < relatedEnd ? WORD_TIERS.RELATED : WORD_TIERS.EXTENDED);
+  }
+  return list;
+}
+
 /** 真正的全量匹配 + 排序（只在缓存未命中时执行一次） */
 async function computeDomainWords(domainId, domain, banks) {
   const index = getDomainIndex(domainId);
@@ -437,7 +494,7 @@ async function computeDomainWords(domainId, domain, banks) {
     return a.word.toLowerCase().localeCompare(b.word.toLowerCase());
   });
 
-  return results;
+  return assignTiers(results);   // 分档在缓存建立时一次算好
 }
 
 /** 同步版本：基于已缓存词条做领域筛选（供首屏无阻塞渲染） */
@@ -466,7 +523,67 @@ export function filterByDomainSync(domainId, options = {}) {
     if (b.relevance.termWeight !== a.relevance.termWeight) return b.relevance.termWeight - a.relevance.termWeight;
     return a.word.toLowerCase().localeCompare(b.word.toLowerCase());
   });
+  assignTiers(out);
   return typeof options.limit === 'number' ? out.slice(0, options.limit) : out;
+}
+
+/* ---------------------------------------------------------------------------
+ * 「相关词」条数预计算（领域选择器数字文案用）
+ * ---------------------------------------------------------------------------
+ * 数字来源＝本领域 buildRelatedWords() 的召回总数（与卡片数一致）。
+ * 一次性把 20 个领域的数量算好并缓存到领域对象的 `_recallCount`，
+ * 渲染时**直接读缓存**，不重复扫描词库。
+ * ------------------------------------------------------------------------ */
+let recallCountsPromise = null;
+
+/** 同步读取已缓存的召回数量；未算好返回 null */
+export function getRecallCount(domainId) {
+  const d = INTEREST_DOMAINS[domainId];
+  return d && typeof d._recallCount === 'number' ? d._recallCount : null;
+}
+
+/** 一次性预计算所有领域的召回数量（幂等并发安全） */
+export async function ensureRecallCounts() {
+  if (recallCountsPromise) return recallCountsPromise;
+  recallCountsPromise = (async () => {
+    await ensureLoaded();
+    const sleep0 = () => new Promise((r) => setTimeout(r, 0));
+    for (const [id, d] of Object.entries(INTEREST_DOMAINS)) {
+      if (typeof d._recallCount === 'number') continue;
+      // filterByDomain 结果会进 domainWordsCache → 顺带把各领域热门缓存预热
+      const list = await filterByDomain(id);
+      d._recallCount = list.length;
+      /* 每个领域算完让出一次主线程（宏任务）：单个领域约 50ms，
+       * 20 个串起来约 1s，不让出会变成一个长任务卡住首屏绘制。 */
+      await sleep0();
+    }
+    return { ...Object.fromEntries(Object.entries(INTEREST_DOMAINS).map(([id, d]) => [id, d._recallCount || 0])) };
+  })();
+  return recallCountsPromise;
+}
+
+/**
+ * 给一批已附加 domainId 的词条补 `tier`（复习/收藏夹/熟词库/错题本用）。
+ * 这些入口不走 filterByDomain，拿不到排序位次，因此按 domainId 查一次缓存再回填。
+ * @param {Array<{word:string, domainId?:string}>} words
+ */
+export async function attachTiers(words) {
+  const list = Array.isArray(words) ? words : [];
+  if (!list.length) return list;
+  const maps = new Map();   // domainId -> Map(lowerWord -> tier)
+  for (const w of list) {
+    if (!w || !w.word) continue;
+    const id = w.domainId;
+    if (!id || !INTEREST_DOMAINS[id]) { w.tier = w.tier || WORD_TIERS.RELATED; continue; }
+    let m = maps.get(id);
+    if (!m) {
+      m = new Map();
+      for (const r of await filterByDomain(id)) m.set(String(r.word).toLowerCase(), r.tier);
+      maps.set(id, m);
+    }
+    w.tier = m.get(String(w.word).toLowerCase()) || WORD_TIERS.RELATED;
+  }
+  return list;
 }
 
 /** 判断单个单词是否为该领域的专有术语，返回官方译名 */
@@ -484,11 +601,17 @@ export function getDomains() {
   return Object.values(INTEREST_DOMAINS).map((d) => ({
     id: d.id,
     name: d.name,
+    /* 板块归属（游戏 / 影视 / 体育 / 其他）：选择界面据此分组展示 */
+    category: d.category || '其他',
+    /* 书名号规则：体育项目等非「作品」领域不加《》（详见 core/domainLabel.js） */
+    titleQuoted: d.titleQuoted,
     subtitle: d.subtitle,
     description: d.description,
     icon: d.icon,
     theme: d.theme,
     termCount: getDomainIndex(d.id).termCount,
+    /* 「相关词 X 条」用的召回总数（ensureRecallCounts 预计算后可用，否则 null → 显示「统计中…」） */
+    recallCount: typeof d._recallCount === 'number' ? d._recallCount : null,
   }));
 }
 
@@ -645,6 +768,12 @@ export default {
   searchWords,
   filterByDomain,
   filterByDomainSync,
+  assignTiers,
+  WORD_TIERS,
+  TIER_LABELS,
+  ensureRecallCounts,
+  getRecallCount,
+  attachTiers,
   hasDomainWordsCache,
   clearDomainWordsCache,
   lookupDomainTerm,

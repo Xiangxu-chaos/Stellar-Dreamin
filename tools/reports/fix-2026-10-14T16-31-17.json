@@ -1,0 +1,2559 @@
+{
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "at": "2026-10-14T16:31:17.766Z",
+  "fixedEntries": 134,
+  "createdEntries": 0,
+  "fixedFields": 137,
+  "changes": [
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "bench",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "看见长椅，就知道自己安全了。",
+        "example": "Find a bench before you push into new ground.",
+        "exampleZh": "在探索新区域前先找一张长椅。"
+      },
+      "after": {
+        "story": "圣巢里没有比长椅更温柔的东西——坐下，就能把疲惫和恐惧一起收起来。",
+        "example": "Find a bench before you push into new ground.",
+        "exampleZh": "在探索新区域前先找一张长椅。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "cavern",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "洞穴越深，光越少，虫越疯。",
+        "example": "The deepest caverns beneath Hallownest hold darker things.",
+        "exampleZh": "圣巢之下最深的洞穴藏着更黑暗的东西。"
+      },
+      "after": {
+        "story": "洞穴越深，光越少，虫子越疯；骑士却只能把光留在骨钉上，继续往下走。",
+        "example": "The deepest caverns beneath Hallownest hold darker things.",
+        "exampleZh": "圣巢之下最深的洞穴藏着更黑暗的东西。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "ruin",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "废墟里的一切都曾经很繁华。",
+        "example": "Every ruin was once a thriving hall.",
+        "exampleZh": "每一处废墟都曾是繁华的厅堂。"
+      },
+      "after": {
+        "story": "废墟里的一切都曾经很繁华，如今只剩下风穿过空荡的走廊。",
+        "example": "Every ruin was once a thriving hall.",
+        "exampleZh": "每一处废墟都曾是繁华的厅堂。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "husk",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "空壳曾经也是谁的孩子。",
+        "example": "Husks wander where they once lived.",
+        "exampleZh": "空壳在他们曾经生活的地方徘徊。"
+      },
+      "after": {
+        "story": "空壳曾经也是谁的孩子，只是瘟疫先把它的名字和记忆一起拿走了。",
+        "example": "Husks wander where they once lived.",
+        "exampleZh": "空壳在他们曾经生活的地方徘徊。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "grotto",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "岩洞很小，但里面的东西不小。",
+        "example": "A tiny grotto in Hallownest hides a big surprise.",
+        "exampleZh": "圣巢中一个小小的岩洞藏着大大的惊喜。"
+      },
+      "after": {
+        "story": "岩洞只够骑士侧身进入，可里面等着他的东西，比洞口大得多。",
+        "example": "A tiny grotto in Hallownest hides a big surprise.",
+        "exampleZh": "圣巢中一个小小的岩洞藏着大大的惊喜。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "claw",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "有了螳螂爪，墙面不再是墙。",
+        "example": "The Mantis Claw lets you cling to walls.",
+        "exampleZh": "螳螂爪能让你攀附在墙上。"
+      },
+      "after": {
+        "story": "拿到螳螂爪之后，墙面不再是墙，而是通往下一片区域的另一条路。",
+        "example": "The Mantis Claw lets you cling to walls.",
+        "exampleZh": "螳螂爪能让你攀附在墙上。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "burrow",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "地洞越深，主人越不好惹。",
+        "example": "The beast burrows back into the ground of Greenpath.",
+        "exampleZh": "那头野兽又钻回苍绿之径的地下。"
+      },
+      "after": {
+        "story": "地洞越深，主人越不好惹；深巢里的每一次下潜，都在赌自己的命。",
+        "example": "The beast burrows back into the ground of Greenpath.",
+        "exampleZh": "那头野兽又钻回苍绿之径的地下。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "tunnel",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "隧道尽头的光，不一定是出口。",
+        "example": "The tunnel connects the Forgotten Crossroads to Greenpath.",
+        "exampleZh": "这条隧道连接着遗忘十字路与苍绿之径。"
+      },
+      "after": {
+        "story": "隧道尽头的光不一定是出口，也可能是另一群在暗处等你的虫子。",
+        "example": "The tunnel connects the Forgotten Crossroads to Greenpath.",
+        "exampleZh": "这条隧道连接着遗忘十字路与苍绿之径。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "elegy",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "挽歌是唱给已经不在的人听的。",
+        "example": "She sings an elegy for the fallen kingdom of Hallownest.",
+        "exampleZh": "她为陨落的圣巢唱起挽歌。"
+      },
+      "after": {
+        "story": "挽歌是唱给已经不在的人听的，而在圣巢，这样的人多到唱不完。",
+        "example": "She sings an elegy for the fallen kingdom of Hallownest.",
+        "exampleZh": "她为陨落的圣巢唱起挽歌。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "crawl",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "它们爬得很慢，但从不停止。",
+        "example": "The crawlers of the Forgotten Crossroads never stop moving.",
+        "exampleZh": "遗忘十字路的爬行者从不停下。"
+      },
+      "after": {
+        "story": "它们爬得很慢，却从不停止，所以你回头时它们总已经站在你身后。",
+        "example": "The crawlers of the Forgotten Crossroads never stop moving.",
+        "exampleZh": "遗忘十字路的爬行者从不停下。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "flee",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "懂得逃离的敌人，往往最难缠。",
+        "example": "Some of Hallownest's enemies flee when badly hurt.",
+        "exampleZh": "圣巢的有些敌人在重伤时会逃离。"
+      },
+      "after": {
+        "story": "懂得逃离的敌人往往最难缠，因为它们会在你转身时从背后再扑一次。",
+        "example": "Some of Hallownest's enemies flee when badly hurt.",
+        "exampleZh": "圣巢的有些敌人在重伤时会逃离。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "evade",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "闪避不需要更快，只需要更早。",
+        "example": "Evade the Mantis Lords' attack by dashing sideways.",
+        "exampleZh": "侧向冲刺即可闪避螳螂领主的攻击。"
+      },
+      "after": {
+        "story": "闪避不需要更快，只需要更早——读懂抬手的那一瞬，比反应快更重要。",
+        "example": "Evade the Mantis Lords' attack by dashing sideways.",
+        "exampleZh": "侧向冲刺即可闪避螳螂领主的攻击。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "glower",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "The last glower of the dying lantern in Dirtmouth lit the corridor for one more second.",
+        "exampleZh": "德特茅斯那盏将熄的灯笼最后怒睁了一下，把走廊又照亮了一秒。"
+      },
+      "after": {
+        "story": "守卫不发一言，只用那双幽光沉沉的眼睛盯着骑士，直到他先动。",
+        "example": "The last glower of the dying lantern in Dirtmouth lit the corridor for one more second.",
+        "exampleZh": "德特茅斯那盏将熄的灯笼最后怒睁了一下，把走廊又照亮了一秒。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "glowing",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Follow the glowing mushrooms — they mark the safest path through Greenpath.",
+        "exampleZh": "跟着发光的蘑菇走——那是穿过苍绿之径最安全的路。"
+      },
+      "after": {
+        "story": "洞口那些发光的蘑菇看着温和，靠得太近才发现它们也会咬人。",
+        "example": "Follow the glowing mushrooms — they mark the safest path through Greenpath.",
+        "exampleZh": "跟着发光的蘑菇走——那是穿过苍绿之径最安全的路。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "lamentation",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "The fight ends not with a roar but with a low lamentation in the strings.",
+        "exampleZh": "这场战斗的落幕不是嘶吼，而是弦乐里一声低低的哀歌。"
+      },
+      "after": {
+        "story": "虫豸的哀嚎在空荡的圣巢里一层层叠起来，成了这座王国唯一的挽歌。",
+        "example": "The fight ends not with a roar but with a low lamentation in the strings.",
+        "exampleZh": "这场战斗的落幕不是嘶吼，而是弦乐里一声低低的哀歌。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "striking",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Every striking swing of the nail pushes the tiny knight one step deeper.",
+        "exampleZh": "骨钉每一次挥击的打击感，都推着小骑士往更深处走。"
+      },
+      "after": {
+        "story": "骑士的骨钉每一次挥出都落在同一处，直到那层硬壳终于裂开。",
+        "example": "Every striking swing of the nail pushes the tiny knight one step deeper.",
+        "exampleZh": "骨钉每一次挥击的打击感，都推着小骑士往更深处走。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "attest",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "古老石碑证明圣巢曾经的辉煌。",
+        "example": "The ancient monuments attest to the former glory of Hallownest.",
+        "exampleZh": "古老的纪念碑证明了圣巢昔日的辉煌。"
+      },
+      "after": {
+        "story": "古老石碑静静立在路边，证明圣巢曾经的辉煌，也证明它如何走到今天。",
+        "example": "The ancient monuments attest to the former glory of Hallownest.",
+        "exampleZh": "古老的纪念碑证明了圣巢昔日的辉煌。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "awaiting",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "被囚禁的幼虫在罐中等待救援。",
+        "example": "The trapped grub remained awaiting rescue deep within the Forgotten Crossroads.",
+        "exampleZh": "被困的幼虫在遗忘十字路深处等待救援。"
+      },
+      "after": {
+        "story": "被囚禁的幼虫在罐中等待救援，它们不知道骑士会不会来，只能等。",
+        "example": "The trapped grub remained awaiting rescue deep within the Forgotten Crossroads.",
+        "exampleZh": "被困的幼虫在遗忘十字路深处等待救援。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "bloom",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "王后花园里花朵在幽光中绽放。",
+        "example": "Strange flowers bloom in the Queen's Gardens despite the kingdom's ruin.",
+        "exampleZh": "尽管王国已成废墟，奇异的花朵仍在王后花园中绽放。"
+      },
+      "after": {
+        "story": "王后花园里的花朵在幽光中静静绽放，仿佛从未被瘟疫碰过。",
+        "example": "Strange flowers bloom in the Queen's Gardens despite the kingdom's ruin.",
+        "exampleZh": "尽管王国已成废墟，奇异的花朵仍在王后花园中绽放。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "bog",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "泥沼吞没了骑士的脚步声。",
+        "example": "The knight waded slowly through the bog, wary of hidden beasts.",
+        "exampleZh": "骑士缓缓涉过沼泽，提防着潜伏的野兽。"
+      },
+      "after": {
+        "story": "泥沼吞没了骑士的脚步声，也让潜藏其下的东西失去了猎物的方位。",
+        "example": "The knight waded slowly through the bog, wary of hidden beasts.",
+        "exampleZh": "骑士缓缓涉过沼泽，提防着潜伏的野兽。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "bold",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骑士大胆地冲向巨大的守卫。",
+        "example": "The bold knight challenged the guardian without a moment's hesitation.",
+        "exampleZh": "大胆的骑士毫不犹豫地挑战了守卫。"
+      },
+      "after": {
+        "story": "骑士大胆地冲向巨大的守卫，因为他知道犹豫只会让那记横扫更疼。",
+        "example": "The bold knight challenged the guardian without a moment's hesitation.",
+        "exampleZh": "大胆的骑士毫不犹豫地挑战了守卫。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "bolt",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "一道闪电劈下，敌人四散逃走。",
+        "example": "A bolt of light struck the cavern as the creature turned to flee.",
+        "exampleZh": "一道光柱击中洞穴，那生物转身逃走。"
+      },
+      "after": {
+        "story": "一道闪电劈下，敌人四散逃走，骑士则趁着那道光追了上去。",
+        "example": "A bolt of light struck the cavern as the creature turned to flee.",
+        "exampleZh": "一道光柱击中洞穴，那生物转身逃走。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "bound",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "被锁链束缚的守卫无法离开。",
+        "example": "The bound guardian struggled against the chains that held it in place.",
+        "exampleZh": "被束缚的守卫挣扎着对抗将它困住的锁链。"
+      },
+      "after": {
+        "story": "被锁链束缚的守卫无法离开岗位，只能一遍遍重复着看守的动作。",
+        "example": "The bound guardian struggled against the chains that held it in place.",
+        "exampleZh": "被束缚的守卫挣扎着对抗将它困住的锁链。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "burden",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "携带沉重护符，骑士步履维艰。",
+        "example": "The heavy charm became a burden that slowed the knight in every battle.",
+        "exampleZh": "沉重的护符成为负担，拖慢了骑士的每一场战斗。"
+      },
+      "after": {
+        "story": "携带沉重护符的骑士步履维艰，多一分力量就少一分灵活。",
+        "example": "The heavy charm became a burden that slowed the knight in every battle.",
+        "exampleZh": "沉重的护符成为负担，拖慢了骑士的每一场战斗。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "calm",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "蓝湖水面平静，骑士暂得安宁。",
+        "example": "The calm waters of the Blue Lake gave the weary knight a moment of peace.",
+        "exampleZh": "蓝湖平静的水面给了疲惫的骑士片刻安宁。"
+      },
+      "after": {
+        "story": "蓝湖的水面平静得没有一丝声音，骑士在这里第一次停下了脚步。",
+        "example": "The calm waters of the Blue Lake gave the weary knight a moment of peace.",
+        "exampleZh": "蓝湖平静的水面给了疲惫的骑士片刻安宁。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "canopy",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "苍绿之径的树冠遮蔽了天光。",
+        "example": "Above the winding paths of Greenpath, a dense canopy blocked out the pale light.",
+        "exampleZh": "苍绿之径蜿蜒小径的上方，茂密的树冠挡住了苍白之光。"
+      },
+      "after": {
+        "story": "苍绿之径的树冠遮蔽了天光，也遮住了那些从上方垂下来的东西。",
+        "example": "Above the winding paths of Greenpath, a dense canopy blocked out the pale light.",
+        "exampleZh": "苍绿之径蜿蜒小径的上方，茂密的树冠挡住了苍白之光。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "capitulate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "面对空洞骑士，敌人最终屈服。",
+        "example": "Surrounded by the knight's relentless attacks, the sentry chose to capitulate.",
+        "exampleZh": "被骑士无情的攻击包围，哨兵选择了投降。"
+      },
+      "after": {
+        "story": "面对空洞骑士的骨钉，再顽固的守卫最终也只能选择屈服。",
+        "example": "Surrounded by the knight's relentless attacks, the sentry chose to capitulate.",
+        "exampleZh": "被骑士无情的攻击包围，哨兵选择了投降。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "capture",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骑士捕获幼虫，送往虫爷爷处。",
+        "example": "The knight used a simple jar to capture the grub hidden in the cave.",
+        "exampleZh": "骑士用简单的罐子捕获了藏在洞穴里的幼虫。"
+      },
+      "after": {
+        "story": "骑士捕获一只幼虫，把它送到虫爷爷那里，换回一枚吉欧的谢礼。",
+        "example": "The knight used a simple jar to capture the grub hidden in the cave.",
+        "exampleZh": "骑士用简单的罐子捕获了藏在洞穴里的幼虫。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "carcass",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "深巢之中，巨兽残骸遍布。",
+        "example": "The dark corridors of Deepnest were littered with the carcass of fallen beasts.",
+        "exampleZh": "深巢黑暗的走廊里散落着倒下野兽的残骸。"
+      },
+      "after": {
+        "story": "深巢之中，巨兽的残骸遍布各处，提醒每个来者这里曾经死过什么。",
+        "example": "The dark corridors of Deepnest were littered with the carcass of fallen beasts.",
+        "exampleZh": "深巢黑暗的走廊里散落着倒下野兽的残骸。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "cathedral",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "泪水之城的大教堂高耸入云。",
+        "example": "The towering cathedral in the City of Tears stood silent above the endless rain.",
+        "exampleZh": "泪水之城高耸的大教堂在无尽的雨中静默矗立。"
+      },
+      "after": {
+        "story": "泪水之城的大教堂高耸入云，雨水顺着穹顶流下，像整座城在哭。",
+        "example": "The towering cathedral in the City of Tears stood silent above the endless rain.",
+        "exampleZh": "泪水之城高耸的大教堂在无尽的雨中静默矗立。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "cautious",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "面对未知区域，骑士步步谨慎。",
+        "example": "The knight was cautious when entering the unexplored cavern, wary of hidden traps.",
+        "exampleZh": "骑士进入未探索的洞穴时十分谨慎，警惕着隐藏的陷阱。"
+      },
+      "after": {
+        "story": "面对从未踏足的区域，骑士步步谨慎，因为圣巢从不给人第二次机会。",
+        "example": "The knight was cautious when entering the unexplored cavern, wary of hidden traps.",
+        "exampleZh": "骑士进入未探索的洞穴时十分谨慎，警惕着隐藏的陷阱。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "celestial",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "蓝湖的水面映出天穹的微光。",
+        "example": "A celestial glow filters through the cavern roof above the Blue Lake.",
+        "exampleZh": "一缕天光透过蓝湖上方的洞顶洒落。"
+      },
+      "after": {
+        "story": "蓝湖的水面映出天穹的微光，那是圣巢地下唯一像天空的东西。",
+        "example": "A celestial glow filters through the cavern roof above the Blue Lake.",
+        "exampleZh": "一缕天光透过蓝湖上方的洞顶洒落。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "chant",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "螳螂领主的吟唱在村落中回荡。",
+        "example": "The Mantis Lords chant in unison before the battle begins.",
+        "exampleZh": "战斗开始前，螳螂领主们齐声吟唱。"
+      },
+      "after": {
+        "story": "螳螂领主的吟唱在村落中回荡，三个音节落下，战斗便正式开始。",
+        "example": "The Mantis Lords chant in unison before the battle begins.",
+        "exampleZh": "战斗开始前，螳螂领主们齐声吟唱。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "chaos",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "瘟疫蔓延，圣巢陷入一片混乱。",
+        "example": "The infection brought chaos to every corner of Hallownest.",
+        "exampleZh": "感染给圣巢的每个角落带来了混乱。"
+      },
+      "after": {
+        "story": "瘟疫蔓延之后，圣巢陷入一片混乱，连守卫也分不清敌人和自己。",
+        "example": "The infection brought chaos to every corner of Hallownest.",
+        "exampleZh": "感染给圣巢的每个角落带来了混乱。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "entwine",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "藤蔓缠住骑士，丝线交织如网。",
+        "example": "Vines entwine the knight as he enters the overgrown grotto beneath the ruins.",
+        "exampleZh": "当骑士进入废墟下杂草丛生的洞穴时，藤蔓缠绕住了他。"
+      },
+      "after": {
+        "story": "藤蔓缠住骑士的双腿，丝线交织成网，把他钉在原地动弹不得。",
+        "example": "Vines entwine the knight as he enters the overgrown grotto beneath the ruins.",
+        "exampleZh": "当骑士进入废墟下杂草丛生的洞穴时，藤蔓缠绕住了他。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "enunciate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "石碑上的预言被清晰念出。",
+        "example": "The seer enunciates the ancient prophecy carved on the stone tablet in the Resting Grounds.",
+        "exampleZh": "先知清晰地念出安息之地石碑上刻着的古老预言。"
+      },
+      "after": {
+        "story": "石碑上的预言被一个字一个字清晰念出，念到最后一个字时，门开了。",
+        "example": "The seer enunciates the ancient prophecy carved on the stone tablet in the Resting Grounds.",
+        "exampleZh": "先知清晰地念出安息之地石碑上刻着的古老预言。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "envelop",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "黑暗笼罩深巢，雾气包围骑士。",
+        "example": "A thick darkness envelops the Deepnest as the knight descends into its winding tunnels.",
+        "exampleZh": "当骑士深入深巢蜿蜒的隧道时，浓重的黑暗笼罩了一切。"
+      },
+      "after": {
+        "story": "黑暗笼罩深巢，雾气从四面把骑士包围，连骨钉的反光都被吞掉了。",
+        "example": "A thick darkness envelops the Deepnest as the knight descends into its winding tunnels.",
+        "exampleZh": "当骑士深入深巢蜿蜒的隧道时，浓重的黑暗笼罩了一切。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "envoy",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "一位使者带着口信穿过废墟。",
+        "example": "An envoy from the distant kingdom arrives at Dirtmouth bearing a sealed message.",
+        "exampleZh": "来自遥远王国的使者带着一封密封的信件抵达德特茅斯。"
+      },
+      "after": {
+        "story": "一位使者带着白王的口信穿过废墟，可他要找的那个人早已不在了。",
+        "example": "An envoy from the distant kingdom arrives at Dirtmouth bearing a sealed message.",
+        "exampleZh": "来自遥远王国的使者带着一封密封的信件抵达德特茅斯。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "epic",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骑士的旅程宛如一部史诗。",
+        "example": "The knight's journey through Hallownest becomes an epic tale of sacrifice and resolve.",
+        "exampleZh": "骑士穿越圣巢的旅程成为一部关于牺牲与决心的史诗。"
+      },
+      "after": {
+        "story": "骑士的旅程宛如一部史诗，只是这部史诗里没有旁白，只有骨钉的声音。",
+        "example": "The knight's journey through Hallownest becomes an epic tale of sacrifice and resolve.",
+        "exampleZh": "骑士穿越圣巢的旅程成为一部关于牺牲与决心的史诗。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "epilogue",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "结局之后，圣巢迎来尾声。",
+        "example": "The epilogue reveals what became of Hallownest after the knight's final battle.",
+        "exampleZh": "尾声揭示了骑士最终之战后圣巢的命运。"
+      },
+      "after": {
+        "story": "结局之后，圣巢迎来自己的尾声：城市还在，只是再没有人为它说话。",
+        "example": "The epilogue reveals what became of Hallownest after the knight's final battle.",
+        "exampleZh": "尾声揭示了骑士最终之战后圣巢的命运。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "erasure",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "记忆被抹去，只剩空壳徘徊。",
+        "example": "The erasure of memory leaves the husks wandering the Forgotten Crossroads without purpose.",
+        "exampleZh": "记忆的抹去让空壳们在遗忘十字路漫无目的地徘徊。"
+      },
+      "after": {
+        "story": "记忆被彻底抹去后，只剩空壳在旧日街道上徘徊，重复着同样的动作。",
+        "example": "The erasure of memory leaves the husks wandering the Forgotten Crossroads without purpose.",
+        "exampleZh": "记忆的抹去让空壳们在遗忘十字路漫无目的地徘徊。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "erudite",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "博学的教师守护着古老知识。",
+        "example": "The erudite teacher in the City of Tears preserves knowledge of the kingdom's forgotten past.",
+        "exampleZh": "泪水之城中博学的教师保存着王国被遗忘的过去的知识。"
+      },
+      "after": {
+        "story": "博学的教师守护着古老知识，即便瘟疫也没能让石碑上的字消失。",
+        "example": "The erudite teacher in the City of Tears preserves knowledge of the kingdom's forgotten past.",
+        "exampleZh": "泪水之城中博学的教师保存着王国被遗忘的过去的知识。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "expel",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "他一击将守卫驱逐出平台边缘。",
+        "example": "A single slash can expel the sentry from the edge of the platform.",
+        "exampleZh": "一击就能把哨兵从平台边缘驱逐出去。"
+      },
+      "after": {
+        "story": "他用一记上挑把守卫驱逐出平台边缘，看着它坠进下面不见底的深渊。",
+        "example": "A single slash can expel the sentry from the edge of the platform.",
+        "exampleZh": "一击就能把哨兵从平台边缘驱逐出去。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "explode",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "那只爆裂虫靠近时突然爆炸。",
+        "example": "The explosive enemy will explode when it gets too close to the knight.",
+        "exampleZh": "那只爆炸敌人靠近骑士时就会爆炸。"
+      },
+      "after": {
+        "story": "那只爆裂虫一靠近就炸开，把骑士和它自己一起送回了最近的长椅。",
+        "example": "The explosive enemy will explode when it gets too close to the knight.",
+        "exampleZh": "那只爆炸敌人靠近骑士时就会爆炸。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "fault",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "圣巢的衰败并非一人之过。",
+        "example": "The knight wondered if the kingdom's downfall was his own fault.",
+        "exampleZh": "骑士想知道王国的衰败是否是他自己的过错。"
+      },
+      "after": {
+        "story": "圣巢的衰败并非一人之过，可最后承担后果的却只有一个孩子。",
+        "example": "The knight wondered if the kingdom's downfall was his own fault.",
+        "exampleZh": "骑士想知道王国的衰败是否是他自己的过错。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "feeble",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "受伤的骑士变得虚弱无力。",
+        "example": "The feeble bug could barely lift its weapon against the knight.",
+        "exampleZh": "那只虚弱的虫子几乎无法举起武器对抗骑士。"
+      },
+      "after": {
+        "story": "受伤的骑士变得虚弱无力，连先前一击能砍碎的外壳现在都砍不动。",
+        "example": "The feeble bug could barely lift its weapon against the knight.",
+        "exampleZh": "那只虚弱的虫子几乎无法举起武器对抗骑士。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "fetish",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "他对吉欧的迷恋近乎疯狂。",
+        "example": "His fetish for collecting Geo drove him to explore every dangerous corner.",
+        "exampleZh": "他对收集吉欧的迷恋驱使他探索每一个危险的角落。"
+      },
+      "after": {
+        "story": "他对吉欧的迷恋近乎疯狂，宁可绕远路也要把每一枚都敲下来带走。",
+        "example": "His fetish for collecting Geo drove him to explore every dangerous corner.",
+        "exampleZh": "他对收集吉欧的迷恋驱使他探索每一个危险的角落。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "fetter",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "锁链束缚着被囚禁的战士。",
+        "example": "The ancient fetters bound the warrior to the wall of the forgotten prison.",
+        "exampleZh": "古老的脚镣将战士束缚在遗忘监狱的墙上。"
+      },
+      "after": {
+        "story": "锁链束缚着被囚禁的战士，链子一动，整间牢房就跟着响起来。",
+        "example": "The ancient fetters bound the warrior to the wall of the forgotten prison.",
+        "exampleZh": "古老的脚镣将战士束缚在遗忘监狱的墙上。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "flank",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "他绕到守卫的侧翼，发动突袭。",
+        "example": "The knight attacked the sentry from its exposed flank.",
+        "exampleZh": "骑士从哨兵暴露的侧翼发起攻击。"
+      },
+      "after": {
+        "story": "他绕到守卫的侧翼发动突袭，因为在圣巢正面硬碰从来不是好主意。",
+        "example": "The knight attacked the sentry from its exposed flank.",
+        "exampleZh": "骑士从哨兵暴露的侧翼发起攻击。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "flood",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "泪水之城被无尽的雨水淹没。",
+        "example": "Water flooded the City of Tears as the Knight explored its silent streets.",
+        "exampleZh": "当骑士探索寂静的街道时，水流淹没了泪水之城。"
+      },
+      "after": {
+        "story": "泪水之城被无尽的雨水淹没，水位常年漫过台阶，也漫过所有人的记忆。",
+        "example": "Water flooded the City of Tears as the Knight explored its silent streets.",
+        "exampleZh": "当骑士探索寂静的街道时，水流淹没了泪水之城。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "flourish",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "圣巢曾在白王治下繁荣一时。",
+        "example": "The kingdom of Hallownest once flourished under the Pale King's rule.",
+        "exampleZh": "圣巢王国曾在白王的统治下繁荣一时。"
+      },
+      "after": {
+        "story": "圣巢曾在白王治下繁荣一时，街道挤满虫群，如今只剩风穿过空巷。",
+        "example": "The kingdom of Hallownest once flourished under the Pale King's rule.",
+        "exampleZh": "圣巢王国曾在白王的统治下繁荣一时。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "flux",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "圣巢的兴衰如流水般变迁。",
+        "example": "Hallownest remained in a state of flux long after the infection spread.",
+        "exampleZh": "在感染蔓延很久之后，圣巢仍处于不断变迁的状态。"
+      },
+      "after": {
+        "story": "圣巢的兴衰如流水般变迁，骑士走过时看到的只是其中一帧。",
+        "example": "Hallownest remained in a state of flux long after the infection spread.",
+        "exampleZh": "在感染蔓延很久之后，圣巢仍处于不断变迁的状态。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "foliage",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "苍绿之径的枝叶遮蔽了前路。",
+        "example": "The dense foliage of Greenpath hid many secrets from the Knight.",
+        "exampleZh": "苍绿之径茂密的枝叶向骑士隐藏了许多秘密。"
+      },
+      "after": {
+        "story": "苍绿之径的枝叶遮蔽了前路，也藏住了那些倒挂在枝头的东西。",
+        "example": "The dense foliage of Greenpath hid many secrets from the Knight.",
+        "exampleZh": "苍绿之径茂密的枝叶向骑士隐藏了许多秘密。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "forebode",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "深巢的寂静预示着不祥。",
+        "example": "The eerie silence of Deepnest foreboded a dangerous encounter ahead.",
+        "exampleZh": "深巢诡异的寂静预示着前方有危险的遭遇。"
+      },
+      "after": {
+        "story": "深巢的寂静预示着不祥——越是听不见声音的地方，越不该久留。",
+        "example": "The eerie silence of Deepnest foreboded a dangerous encounter ahead.",
+        "exampleZh": "深巢诡异的寂静预示着前方有危险的遭遇。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "foretell",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "古老石碑预言了圣巢的衰亡。",
+        "example": "Ancient glyphs foretell the fall of Hallownest beneath the pale light.",
+        "exampleZh": "古老的符文预言了圣巢将在苍白之光下陨落。"
+      },
+      "after": {
+        "story": "古老石碑早已预言了圣巢的衰亡，只是当时没有一只虫愿意相信。",
+        "example": "Ancient glyphs foretell the fall of Hallownest beneath the pale light.",
+        "exampleZh": "古老的符文预言了圣巢将在苍白之光下陨落。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "forfeit",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "挑战失败，他丧失了全部吉欧。",
+        "example": "If the Knight falls in battle, it will forfeit all the Geo it carried.",
+        "exampleZh": "如果骑士在战斗中倒下，它将丧失身上携带的所有吉欧。"
+      },
+      "after": {
+        "story": "挑战失败，他丧失了全部吉欧，连刚买来的护符都变得毫无意义。",
+        "example": "If the Knight falls in battle, it will forfeit all the Geo it carried.",
+        "exampleZh": "如果骑士在战斗中倒下，它将丧失身上携带的所有吉欧。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "formation",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "螳螂战士排成严整的阵形迎敌。",
+        "example": "The Mantis warriors stood in a deadly formation before the Knight.",
+        "exampleZh": "螳螂战士们摆出致命的阵形挡在骑士面前。"
+      },
+      "after": {
+        "story": "螳螂战士排成严整的阵形迎敌，前面倒下后面立刻补上位置。",
+        "example": "The Mantis warriors stood in a deadly formation before the Knight.",
+        "exampleZh": "螳螂战士们摆出致命的阵形挡在骑士面前。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "fortify",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "装上护符，骑士的骨钉更强了。",
+        "example": "The Knight used a charm to fortify its nail before the final battle.",
+        "exampleZh": "骑士在最终决战前用一枚护符强化了自己的骨钉。"
+      },
+      "after": {
+        "story": "装上这枚护符，骑士的骨钉更强了，代价是身上再无多余的位置。",
+        "example": "The Knight used a charm to fortify its nail before the final battle.",
+        "exampleZh": "骑士在最终决战前用一枚护符强化了自己的骨钉。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "ghostly",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "苍白的幽灵在废墟中无声飘过。",
+        "example": "A ghostly figure drifted through the ruins, pale as the fallen kingdom.",
+        "exampleZh": "一个幽灵般的身影飘过废墟，苍白如陨落的王国。"
+      },
+      "after": {
+        "story": "苍白的幽灵在废墟中无声飘过，骑士挥出的骨钉从它们身上穿了过去。",
+        "example": "A ghostly figure drifted through the ruins, pale as the fallen kingdom.",
+        "exampleZh": "一个幽灵般的身影飘过废墟，苍白如陨落的王国。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "grip",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骑士紧握骨钉，跃过尖刺深渊。",
+        "example": "She kept a firm grip on her nail while facing the Mantis Lords.",
+        "exampleZh": "面对螳螂领主时，她紧紧握住自己的骨钉。"
+      },
+      "after": {
+        "story": "骑士紧握骨钉，深吸一口气，跃过那片底下插满尖刺的深渊。",
+        "example": "She kept a firm grip on her nail while facing the Mantis Lords.",
+        "exampleZh": "面对螳螂领主时，她紧紧握住自己的骨钉。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "herald",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "瘟疫的气息预示着圣巢的衰败。",
+        "example": "The silent halls herald the coming of the infection.",
+        "exampleZh": "寂静的厅堂预示着感染的到来。"
+      },
+      "after": {
+        "story": "瘟疫的气息早早预示了圣巢的衰败，只是没有人愿意把它说出口。",
+        "example": "The silent halls herald the coming of the infection.",
+        "exampleZh": "寂静的厅堂预示着感染的到来。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "hesitate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "在深渊边缘，骑士迟疑了一瞬。",
+        "example": "Do not hesitate at the edge of the Abyss.",
+        "exampleZh": "不要在深渊边缘犹豫。"
+      },
+      "after": {
+        "story": "在深渊边缘，骑士迟疑了一瞬，随后还是松开手，让身体落下去。",
+        "example": "Do not hesitate at the edge of the Abyss.",
+        "exampleZh": "不要在深渊边缘犹豫。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "hiss",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "洞穴深处传来嘶嘶的声响。",
+        "example": "The vengefly hisses as it dives toward the knight.",
+        "exampleZh": "复仇蝇扑向骑士时发出嘶嘶声。"
+      },
+      "after": {
+        "story": "洞穴深处传来嘶嘶的声响，骑士举起骨钉，知道有人已经先到了。",
+        "example": "The vengefly hisses as it dives toward the knight.",
+        "exampleZh": "复仇蝇扑向骑士时发出嘶嘶声。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "honorable",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "螳螂领主以可敬的姿态迎战。",
+        "example": "The Mantis Lords gave the knight an honorable duel.",
+        "exampleZh": "螳螂领主与骑士进行了一场光荣的决斗。"
+      },
+      "after": {
+        "story": "螳螂领主以可敬的姿态迎战，三个一起上，却从不从背后偷袭。",
+        "example": "The Mantis Lords gave the knight an honorable duel.",
+        "exampleZh": "螳螂领主与骑士进行了一场光荣的决斗。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "implementation",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "圣巢的封印计划终于开始实施。",
+        "example": "The implementation of the seals bound the Radiance beneath the Hollow Knight.",
+        "exampleZh": "封印的实施将辐光束缚在空洞骑士之下。"
+      },
+      "after": {
+        "story": "圣巢的封印计划终于开始实施，代价是把一个孩子锁进黑卵圣殿。",
+        "example": "The implementation of the seals bound the Radiance beneath the Hollow Knight.",
+        "exampleZh": "封印的实施将辐光束缚在空洞骑士之下。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "imprison",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "空洞骑士被选中去监禁那道光。",
+        "example": "The Pale King tried to imprison the Radiance inside a Vessel.",
+        "exampleZh": "白王试图将辐光监禁在一个容器内。"
+      },
+      "after": {
+        "story": "空洞骑士被选中去监禁那道光，从此它的名字就只剩下一个称号。",
+        "example": "The Pale King tried to imprison the Radiance inside a Vessel.",
+        "exampleZh": "白王试图将辐光监禁在一个容器内。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "impulsive",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "他冲动地跳进螳螂领主的领地。",
+        "example": "An impulsive dash into the Mantis Lords' arena ended in defeat.",
+        "exampleZh": "一次冲动地冲进螳螂领主竞技场以失败告终。"
+      },
+      "after": {
+        "story": "他冲动地跳进螳螂领主的领地，落地那一刻就知道自己算错了距离。",
+        "example": "An impulsive dash into the Mantis Lords' arena ended in defeat.",
+        "exampleZh": "一次冲动地冲进螳螂领主竞技场以失败告终。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "inactive",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "那尊雕像静止不动，仿佛沉睡。",
+        "example": "The inactive statue in the City of Tears suddenly awakened.",
+        "exampleZh": "泪城中那尊静止的雕像突然苏醒。"
+      },
+      "after": {
+        "story": "那尊雕像静止不动，仿佛沉睡，直到骑士走近，它才睁开了眼。",
+        "example": "The inactive statue in the City of Tears suddenly awakened.",
+        "exampleZh": "泪城中那尊静止的雕像突然苏醒。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "incarcerate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "他们把这团瘟疫关押进容器里。",
+        "example": "The King chose to incarcerate the infection within a Vessel.",
+        "exampleZh": "国王选择将感染关押在一个容器内。"
+      },
+      "after": {
+        "story": "他们把这团瘟疫关押进一具容器里，然后给这具容器取名叫骑士。",
+        "example": "The King chose to incarcerate the infection within a Vessel.",
+        "exampleZh": "国王选择将感染关押在一个容器内。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "incubate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "虫卵在黑暗深处静静孵化。",
+        "example": "The infection continued to incubate inside the Hollow Knight.",
+        "exampleZh": "感染在空洞骑士体内继续孵化。"
+      },
+      "after": {
+        "story": "虫卵在黑暗深处静静孵化，破壳的声音在圣巢的地底一遍遍回响。",
+        "example": "The infection continued to incubate inside the Hollow Knight.",
+        "exampleZh": "感染在空洞骑士体内继续孵化。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "indestructible",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "那面墙壁坚不可摧，挡住去路。",
+        "example": "The indestructible shell of the Hollow Knight resisted every blow.",
+        "exampleZh": "空洞骑士坚不可摧的外壳抵挡了每一次攻击。"
+      },
+      "after": {
+        "story": "那面墙壁坚不可摧，骨钉砍上去只留一道白痕，路到这里就断了。",
+        "example": "The indestructible shell of the Hollow Knight resisted every blow.",
+        "exampleZh": "空洞骑士坚不可摧的外壳抵挡了每一次攻击。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "intercept",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "飞来的光弹被骨钉在半空拦下。",
+        "example": "The knight raised the nail to intercept the glowing projectile before it struck.",
+        "exampleZh": "骑士举起骨钉，在发光弹击中之前将其拦截。"
+      },
+      "after": {
+        "story": "飞来的光弹被骨钉在半空拦下，弹开的一瞬骑士已冲进敌人怀里。",
+        "example": "The knight raised the nail to intercept the glowing projectile before it struck.",
+        "exampleZh": "骑士举起骨钉，在发光弹击中之前将其拦截。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "intrepid",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "无畏的骑士孤身潜入深渊。",
+        "example": "The intrepid knight ventured into the deepest caverns without fear of the lurking shadows.",
+        "exampleZh": "这位无畏的骑士深入最深的洞穴，毫不畏惧潜伏的阴影。"
+      },
+      "after": {
+        "story": "无畏的骑士孤身潜入深渊，脚下是没有底的黑暗，头上也没有退路。",
+        "example": "The intrepid knight ventured into the deepest caverns without fear of the lurking shadows.",
+        "exampleZh": "这位无畏的骑士深入最深的洞穴，毫不畏惧潜伏的阴影。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "intrinsic",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "护符的力量源于其内在本质。",
+        "example": "The charm's power is intrinsic, requiring no additional soul to activate its hidden effect.",
+        "exampleZh": "这枚护符的力量是内在的，无需额外灵魂即可激活其隐藏效果。"
+      },
+      "after": {
+        "story": "护符的力量源于其内在本质，换一个佩戴者，效果也不会增加半分。",
+        "example": "The charm's power is intrinsic, requiring no additional soul to activate its hidden effect.",
+        "exampleZh": "这枚护符的力量是内在的，无需额外灵魂即可激活其隐藏效果。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "lustrous",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骑士拾起一枚光泽温润的护符。",
+        "example": "The lustrous shell of the knight shines under the pale light of the City of Tears.",
+        "exampleZh": "骑士光泽的甲壳在泪水之城苍白的光线下闪耀。"
+      },
+      "after": {
+        "story": "骑士拾起一枚光泽温润的护符，握在手里还带着上一任主人的温度。",
+        "example": "The lustrous shell of the knight shines under the pale light of the City of Tears.",
+        "exampleZh": "骑士光泽的甲壳在泪水之城苍白的光线下闪耀。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "maintain",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骑士靠灵魂维持着微弱的生命。",
+        "example": "The knight must maintain enough soul to heal during the fierce boss battle.",
+        "exampleZh": "在激烈的首领战中，骑士必须维持足够的灵魂来治疗自己。"
+      },
+      "after": {
+        "story": "骑士靠灵魂维持着微弱的生命，每受一次伤，面具上的裂痕就更深一分。",
+        "example": "The knight must maintain enough soul to heal during the fierce boss battle.",
+        "exampleZh": "在激烈的首领战中，骑士必须维持足够的灵魂来治疗自己。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "reflect",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "灵魂映照出苍白之王的叹息。",
+        "example": "The pale light from the lantern reflects on the knight's dark shell.",
+        "exampleZh": "提灯发出的苍白光芒反射在骑士漆黑的甲壳上。"
+      },
+      "after": {
+        "story": "灵魂映照出苍白之王的叹息，也映照出他自己不敢承认的那一部分。",
+        "example": "The pale light from the lantern reflects on the knight's dark shell.",
+        "exampleZh": "提灯发出的苍白光芒反射在骑士漆黑的甲壳上。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "refrain",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "他忍住了灵魂的哀鸣继续前行。",
+        "example": "The knight must refrain from crying out when the spikes pierce his shell.",
+        "exampleZh": "当尖刺刺穿甲壳时，骑士必须忍住不喊出声。"
+      },
+      "after": {
+        "story": "他忍住了从灵魂深处涌上来的哀鸣，把骨钉重新握紧，继续往前走。",
+        "example": "The knight must refrain from crying out when the spikes pierce his shell.",
+        "exampleZh": "当尖刺刺穿甲壳时，骑士必须忍住不喊出声。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "refuge",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "长椅是旅人唯一的庇护所。",
+        "example": "The bench in the City of Tears serves as a refuge for weary travelers.",
+        "exampleZh": "泪水之城中的长椅是疲惫旅人的避难所。"
+      },
+      "after": {
+        "story": "长椅是旅人唯一的庇护所，坐下的这一刻，整个圣巢都安静了下来。",
+        "example": "The bench in the City of Tears serves as a refuge for weary travelers.",
+        "exampleZh": "泪水之城中的长椅是疲惫旅人的避难所。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "regiment",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "一大群虫群守卫挡住了去路。",
+        "example": "A regiment of husks guards the entrance to the Forgotten Crossroads.",
+        "exampleZh": "一大群躯壳守卫着遗忘十字路的入口。"
+      },
+      "after": {
+        "story": "一大群虫群守卫挡住了去路，阵型整齐得像有人在后面统一指挥。",
+        "example": "A regiment of husks guards the entrance to the Forgotten Crossroads.",
+        "exampleZh": "一大群躯壳守卫着遗忘十字路的入口。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "reign",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "苍白之王的统治早已崩塌。",
+        "example": "The Pale King's reign ended when the infection spread through Hallownest.",
+        "exampleZh": "当感染蔓延整个圣巢时，苍白之王的统治结束了。"
+      },
+      "after": {
+        "story": "苍白之王的统治早已崩塌，但它的雕像还站在泪水之城最高的地方。",
+        "example": "The Pale King's reign ended when the infection spread through Hallownest.",
+        "exampleZh": "当感染蔓延整个圣巢时，苍白之王的统治结束了。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "rein",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "他握紧缰绳般控制着灵魂。",
+        "example": "The knight keeps a tight rein on his soul to avoid being consumed.",
+        "exampleZh": "骑士紧紧控制着自己的灵魂以免被吞噬。"
+      },
+      "after": {
+        "story": "他像握紧缰绳一样控制着体内的灵魂，多一点就会溢出，少一点就不够。",
+        "example": "The knight keeps a tight rein on his soul to avoid being consumed.",
+        "exampleZh": "骑士紧紧控制着自己的灵魂以免被吞噬。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "reinforce",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "护符加强了骑士的骨钉之力。",
+        "example": "The charm reinforces the knight's nail, making each strike more deadly.",
+        "exampleZh": "护符加强了骑士的骨钉，使每次攻击都更致命。"
+      },
+      "after": {
+        "story": "护符加强了骑士的骨钉之力，也让他每次挥击都多付出一分灵魂。",
+        "example": "The charm reinforces the knight's nail, making each strike more deadly.",
+        "exampleZh": "护符加强了骑士的骨钉，使每次攻击都更致命。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "relieve",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "在长椅上休息缓解了伤痛。",
+        "example": "Sitting on the bench relieves the knight's wounds before the next battle.",
+        "exampleZh": "坐在长椅上缓解了骑士的伤痛，为下一场战斗做准备。"
+      },
+      "after": {
+        "story": "在长椅上休息缓解了伤痛，也让骑士有力气回到刚才倒下的地方。",
+        "example": "Sitting on the bench relieves the knight's wounds before the next battle.",
+        "exampleZh": "坐在长椅上缓解了骑士的伤痛，为下一场战斗做准备。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "reveal",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "古老石碑揭示圣巢衰落的真相。",
+        "example": "The ancient tablet revealed the tragic truth behind Hallownest's fall.",
+        "exampleZh": "古老石碑揭示了圣巢衰落背后的悲惨真相。"
+      },
+      "after": {
+        "story": "古老石碑揭示圣巢衰落的真相，只是读到最后一行的人大多已经死了。",
+        "example": "The ancient tablet revealed the tragic truth behind Hallownest's fall.",
+        "exampleZh": "古老石碑揭示了圣巢衰落背后的悲惨真相。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "rouse",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "钟声响起，沉睡的守卫被唤醒。",
+        "example": "The tolling bell will rouse the sleeping sentries in the City of Tears.",
+        "exampleZh": "钟声会唤醒泪水之城沉睡的哨兵。"
+      },
+      "after": {
+        "story": "钟声响起，沉睡的守卫被唤醒，整条走廊的灯也一盏接一盏亮起来。",
+        "example": "The tolling bell will rouse the sleeping sentries in the City of Tears.",
+        "exampleZh": "钟声会唤醒泪水之城沉睡的哨兵。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "shelter",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "长椅是旅途中难得的庇护所。",
+        "example": "The bench offers shelter from the dangers of the infected roads.",
+        "exampleZh": "长椅为骑士提供了躲避感染道路危险的庇护所。"
+      },
+      "after": {
+        "story": "长椅是旅途中难得的庇护所，坐上去的瞬间，连瘟疫都好像退了半步。",
+        "example": "The bench offers shelter from the dangers of the infected roads.",
+        "exampleZh": "长椅为骑士提供了躲避感染道路危险的庇护所。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "shield",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "持盾的守卫挡下了骑士的骨钉。",
+        "example": "The sentinel raised its shield to block the knight's attack.",
+        "exampleZh": "哨兵举起盾牌挡住了骑士的攻击。"
+      },
+      "after": {
+        "story": "持盾的守卫挡下了骑士的骨钉，却挡不住从背后绕过来的那一记。",
+        "example": "The sentinel raised its shield to block the knight's attack.",
+        "exampleZh": "哨兵举起盾牌挡住了骑士的攻击。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "subdue",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骑士最终制服了螳螂领主。",
+        "example": "It took many attempts to subdue the Mantis Lords in their sacred arena.",
+        "exampleZh": "骑士尝试多次才在神圣竞技场中制服螳螂领主。"
+      },
+      "after": {
+        "story": "骑士最终制服了螳螂领主，而它们倒下时仍保持着迎战的姿势。",
+        "example": "It took many attempts to subdue the Mantis Lords in their sacred arena.",
+        "exampleZh": "骑士尝试多次才在神圣竞技场中制服螳螂领主。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "sword",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "骨钉如剑，斩断圣巢的黑暗。",
+        "example": "His sword, the nail, cuts through the fungal wastes with ease.",
+        "exampleZh": "他的剑——骨钉——轻松斩穿真菌荒地。"
+      },
+      "after": {
+        "story": "骨钉如剑，斩断圣巢的黑暗，也斩断了骑士对这片土地最后的幻想。",
+        "example": "His sword, the nail, cuts through the fungal wastes with ease.",
+        "exampleZh": "他的剑——骨钉——轻松斩穿真菌荒地。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "tender",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "温柔的光，照亮了脆弱的幼虫。",
+        "example": "The tender grub looks up, waiting to be rescued.",
+        "exampleZh": "温柔的幼虫抬起头，等待被拯救。"
+      },
+      "after": {
+        "story": "温柔的光落在罐子上，照亮了里面那只脆弱得一碰就化的幼虫。",
+        "example": "The tender grub looks up, waiting to be rescued.",
+        "exampleZh": "温柔的幼虫抬起头，等待被拯救。"
+      }
+    },
+    {
+      "domain": "空洞骑士",
+      "file": "hollowKnight.json",
+      "word": "testify",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "古老石碑证明圣巢曾经的繁荣。",
+        "example": "The ancient glyphs testify to the glory that Hallownest once possessed.",
+        "exampleZh": "古老的符文证明圣巢曾经拥有的荣耀。"
+      },
+      "after": {
+        "story": "古老石碑证明圣巢曾经的繁荣，也证明了繁荣之后无人接手的空白。",
+        "example": "The ancient glyphs testify to the glory that Hallownest once possessed.",
+        "exampleZh": "古老的符文证明圣巢曾经拥有的荣耀。"
+      }
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "lane",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "选好你的分路，再谈怎么赢。",
+        "example": "Three lanes push toward the enemy crystal at the same time.",
+        "exampleZh": "三条分路同时向敌方水晶推进。"
+      },
+      "after": {
+        "story": "先选好你的分路再谈怎么赢，三条兵线里总有一条会成为突破口。",
+        "example": "Three lanes push toward the enemy crystal at the same time.",
+        "exampleZh": "三条分路同时向敌方水晶推进。"
+      }
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "flank",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "正面打不动，就从侧翼绕过去。",
+        "example": "The assassin flanked the enemy backline through the jungle.",
+        "exampleZh": "刺客穿过野区从侧翼绕到了敌方后排。"
+      },
+      "after": {
+        "story": "正面打不动，就从侧翼绕过去，从野区绕后往往是团战翻盘的起点。",
+        "example": "The assassin flanked the enemy backline through the jungle.",
+        "exampleZh": "刺客穿过野区从侧翼绕到了敌方后排。"
+      }
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "equipment",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "回城后买齐装备，再赶去守塔。",
+        "example": "Counter-building your equipment is half of the strategy in ranked play.",
+        "exampleZh": "在排位里，针对性出装就是一半的策略。"
+      },
+      "after": {
+        "story": "回城后买齐装备再赶去守塔，出装顺序有时比操作更能决定输赢。",
+        "example": "Counter-building your equipment is half of the strategy in ranked play.",
+        "exampleZh": "在排位里，针对性出装就是一半的策略。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "shield",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "举起盾，才有资格谈进攻。",
+        "example": "Raise your shield before the boss charges up.",
+        "exampleZh": "在首领蓄力前先举起护盾。"
+      },
+      "after": {
+        "story": "举起盾才有资格谈进攻，尖塔里的每一次失误都会记在你的血线上。",
+        "example": "Raise your shield before the boss charges up.",
+        "exampleZh": "在首领蓄力前先举起护盾。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "vigor",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "攒够活力，再挥出匕首。",
+        "example": "Vigor adds extra damage to your next attack.",
+        "exampleZh": "活力会为你的下一次攻击附加额外伤害。"
+      },
+      "after": {
+        "story": "先攒够活力再挥匕首，否则那一下只会让你比敌人更早倒下。",
+        "example": "Vigor adds extra damage to your next attack.",
+        "exampleZh": "活力会为你的下一次攻击附加额外伤害。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "discard",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "弃掉没用的牌，也是一种决策。",
+        "example": "Discard the dead cards and dig for the good ones.",
+        "exampleZh": "弃掉废牌，去找真正有用的牌。"
+      },
+      "after": {
+        "story": "把没用的牌弃掉也是一种决策，手牌越干净，抽到核心牌的几率越高。",
+        "example": "Discard the dead cards and dig for the good ones.",
+        "exampleZh": "弃掉废牌，去找真正有用的牌。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "elite",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "打精英是风险，但遗物值得。",
+        "example": "Fight the elite — the relic is worth the risk.",
+        "exampleZh": "去打精英吧，遗物值得这份风险。"
+      },
+      "after": {
+        "story": "打精英是在赌命，但那些遗物值得，前提是你还活着走出房间。",
+        "example": "Fight the elite — the relic is worth the risk.",
+        "exampleZh": "去打精英吧，遗物值得这份风险。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "damage",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "伤害是可以计算的，风险也是。",
+        "example": "Calculate the incoming damage before you commit.",
+        "exampleZh": "在做出决定前先算清将要受到的伤害。"
+      },
+      "after": {
+        "story": "伤害是可以计算的，风险也是；每一点血量都该换算成后面的回合数。",
+        "example": "Calculate the incoming damage before you commit.",
+        "exampleZh": "在做出决定前先算清将要受到的伤害。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "defeat",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "击败一个，还有下一个在等你。",
+        "example": "Defeat the weakest enemy to reduce incoming damage.",
+        "exampleZh": "先击败最弱的敌人以减少承受的伤害。"
+      },
+      "after": {
+        "story": "击败一个，还有下一个在等你，尖塔从不给你喘息的机会。",
+        "example": "Defeat the weakest enemy to reduce incoming damage.",
+        "exampleZh": "先击败最弱的敌人以减少承受的伤害。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "flex",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "屈伸只借你一回合的力量。",
+        "example": "Flex gives power now and takes it back later.",
+        "exampleZh": "屈伸此刻给你力量，稍后又收回去。"
+      },
+      "after": {
+        "story": "屈伸只借你一回合的力量，抓紧这回合把伤害打出去，否则它就会消失。",
+        "example": "Flex gives power now and takes it back later.",
+        "exampleZh": "屈伸此刻给你力量，稍后又收回去。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "entrench",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "掘进一下，格挡直接翻倍。",
+        "example": "Entrench doubles your current block.",
+        "exampleZh": "掘进会让当前格挡翻倍。"
+      },
+      "after": {
+        "story": "掘进一下，本回合的格挡直接翻倍，这正是防战最想看到的那一幕。",
+        "example": "Entrench doubles your current block.",
+        "exampleZh": "掘进会让当前格挡翻倍。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "blizzard",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "冰霜球越多，暴风雪打得越狠。",
+        "example": "Blizzard scales with your frost orbs.",
+        "exampleZh": "暴风雪的伤害随冰霜充能球数量增长。"
+      },
+      "after": {
+        "story": "冰霜球攒得越多，暴风雪打得越狠，所以前期要学会忍住不出手。",
+        "example": "Blizzard scales with your frost orbs.",
+        "exampleZh": "暴风雪的伤害随冰霜充能球数量增长。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dash",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "冲刺既能打人，又能保命。",
+        "example": "Dash deals damage and gives block at once.",
+        "exampleZh": "冲刺同时造成伤害并获得格挡。"
+      },
+      "after": {
+        "story": "冲刺既能打人又能保命，防战的核心往往就是这么一张不起眼的牌。",
+        "example": "Dash deals damage and gives block at once.",
+        "exampleZh": "冲刺同时造成伤害并获得格挡。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "barrage",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "充能球越多，弹幕打得越密。",
+        "example": "Barrage fires once for every orb you hold.",
+        "exampleZh": "你每持有一个充能球，弹幕就攻击一次。"
+      },
+      "after": {
+        "story": "充能球越多，弹幕打得越密；故障机器人的胜负全压在那一回合。",
+        "example": "Barrage fires once for every orb you hold.",
+        "exampleZh": "你每持有一个充能球，弹幕就攻击一次。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "aggregate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "聚合把牌堆的厚度换算成能量。",
+        "example": "Aggregate turns your draw pile into energy.",
+        "exampleZh": "聚合会把抽牌堆的厚度转化为能量。"
+      },
+      "after": {
+        "story": "聚合把抽牌堆的厚度直接换算成能量，牌堆越薄，它反而给得越少。",
+        "example": "Aggregate turns your draw pile into energy.",
+        "exampleZh": "聚合会把抽牌堆的厚度转化为能量。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "skim",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "略读就是一次便宜的三张抽牌。",
+        "example": "Skim draws you three cards for cheap.",
+        "exampleZh": "略读能便宜地为你抽三张牌。"
+      },
+      "after": {
+        "story": "略读就是一次便宜的三张抽牌，用得好能直接把一整套连招串起来。",
+        "example": "Skim draws you three cards for cheap.",
+        "exampleZh": "略读能便宜地为你抽三张牌。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "evaluate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "评估一下局势，顺手抽几张牌。",
+        "example": "Evaluate draws cards and refunds energy.",
+        "exampleZh": "评估会抽牌并返还能量。"
+      },
+      "after": {
+        "story": "评估一下局势，顺手抽几张牌，很多翻盘都是从这一张开始的。",
+        "example": "Evaluate draws cards and refunds energy.",
+        "exampleZh": "评估会抽牌并返还能量。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "account",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "账号里存着你的全部爬塔记录。",
+        "example": "Your account keeps every climb recorded.",
+        "exampleZh": "你的账号记录着每一次爬塔历程。"
+      },
+      "after": {
+        "story": "账号里存着你全部的爬塔记录，包括那些死在第一层的丢人战绩。",
+        "example": "Your account keeps every climb recorded.",
+        "exampleZh": "你的账号记录着每一次爬塔历程。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "frosting",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Layer by layer, the frost built up like frosting — cold, thick, and hard to break.",
+        "exampleZh": "冰霜一层层累积，像糖霜一样——又冷又厚，难以击穿。"
+      },
+      "after": {
+        "story": "冰霜充能球不出手也能留在场上，静静地把每一层伤害都磨掉。",
+        "example": "Layer by layer, the frost built up like frosting — cold, thick, and hard to break.",
+        "exampleZh": "冰霜一层层累积，像糖霜一样——又冷又厚，难以击穿。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "intention",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Always read the enemy's intention before you spend your last block.",
+        "exampleZh": "花掉最后一点格挡前，先看清敌人的意图。"
+      },
+      "after": {
+        "story": "敌人头顶的意图图标从不撒谎，读懂它比多抽一张牌更重要。",
+        "example": "Always read the enemy's intention before you spend your last block.",
+        "exampleZh": "花掉最后一点格挡前，先看清敌人的意图。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "striking",
+      "fields": [
+        "story",
+        "example",
+        "exampleZh"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Upgrading your strikes early keeps the first three acts manageable.",
+        "exampleZh": "前期升级几张「打击」，前三幕会轻松很多。"
+      },
+      "after": {
+        "story": "每一张打击都是你最基础的输出，也常常是最先被升级掉的那张。",
+        "example": "Upgrading your striking cards early keeps the first three acts manageable.",
+        "exampleZh": "前期升级几张大打击牌，前三幕会轻松很多。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "halting",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "A well-timed stun is like halting time for one enemy turn.",
+        "exampleZh": "一个卡准时机的眩晕，就像让敌人的回合停摆了一拍。"
+      },
+      "after": {
+        "story": "脚步一停，敌人的意图就变了；有时候僵持比硬拼更考验耐心。",
+        "example": "A well-timed stun is like halting time for one enemy turn.",
+        "exampleZh": "一个卡准时机的眩晕，就像让敌人的回合停摆了一拍。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "shiver",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Each shiver of the dagger belt reminded him how many knives he had left.",
+        "exampleZh": "匕首带的每一次轻颤，都在提醒他还剩几把刀。"
+      },
+      "after": {
+        "story": "寒流一层层叠上来，不只是敌人在发抖，你的每次抽牌也变得更慢。",
+        "example": "Each shiver of the dagger belt reminded him how many knives he had left.",
+        "exampleZh": "匕首带的每一次轻颤，都在提醒他还剩几把刀。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "abandonment",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Winning this run demanded the total abandonment of my original deck plan.",
+        "exampleZh": "想赢下这一局，就得彻底放弃我原来的牌组规划。"
+      },
+      "after": {
+        "story": "弃掉整手牌是一种放弃，但放弃之后往往才是这套卡组真正的开始。",
+        "example": "Winning this run demanded the total abandonment of my original deck plan.",
+        "exampleZh": "想赢下这一局，就得彻底放弃我原来的牌组规划。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "blinds",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Drawing three status cards in a row feels like the game blinds your whole strategy.",
+        "exampleZh": "连抽三张状态牌，就像整个战术被闪了盲。"
+      },
+      "after": {
+        "story": "被致盲的不只是视野，还有你判断下一张该不该打出来的能力。",
+        "example": "Drawing three status cards in a row feels like the game blinds your whole strategy.",
+        "exampleZh": "连抽三张状态牌，就像整个战术被闪了盲。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "combustion",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Combustion hurts you a little each turn, but it burns enemies far faster.",
+        "exampleZh": "燃烧每回合烧你一点血，但烧敌人的速度快得多。"
+      },
+      "after": {
+        "story": "自燃每回合都在烧自己，可只要撑到对手先倒下，这点血就值了。",
+        "example": "Combustion hurts you a little each turn, but it burns enemies far faster.",
+        "exampleZh": "燃烧每回合烧你一点血，但烧敌人的速度快得多。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "digest",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "",
+        "example": "Some spire monsters literally digest your cards — you get them back after the fight.",
+        "exampleZh": "尖塔里有些怪物真的会「消化」你的牌——战斗结束后才还给你。"
+      },
+      "after": {
+        "story": "消化一张牌换来的是能量，代价是它再也回不到你的牌堆里。",
+        "example": "Some spire monsters literally digest your cards — you get them back after the fight.",
+        "exampleZh": "尖塔里有些怪物真的会「消化」你的牌——战斗结束后才还给你。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "blacksmith",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "铁匠挥锤，为战士升级了卡牌。",
+        "example": "The blacksmith offered to upgrade one of his cards for a small fee.",
+        "exampleZh": "铁匠提出收取少量费用为他升级一张卡牌。"
+      },
+      "after": {
+        "story": "铁匠挥锤，把一张普通的卡牌敲成升级版，营地里最值钱的一次停留。",
+        "example": "The blacksmith offered to upgrade one of his cards for a small fee.",
+        "exampleZh": "铁匠提出收取少量费用为他升级一张卡牌。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "blessing",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "神龛赐福，他获得稀有遗物。",
+        "example": "Finding a rare relic early was a blessing for his deck.",
+        "exampleZh": "早早找到一件稀有遗物对他的卡组来说是一大幸事。"
+      },
+      "after": {
+        "story": "神龛赐福，他拿到一件稀有遗物，代价是错过了一次升级的机会。",
+        "example": "Finding a rare relic early was a blessing for his deck.",
+        "exampleZh": "早早找到一件稀有遗物对他的卡组来说是一大幸事。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "eradicate",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "一记重击，把精英怪彻底根除。",
+        "example": "A single heavy blow can eradicate the elite before it acts.",
+        "exampleZh": "一记重击就能在精英行动前将其彻底消灭。"
+      },
+      "after": {
+        "story": "一记重击把精英怪彻底根除，房间里只剩下掉在地上的几枚金币。",
+        "example": "A single heavy blow can eradicate the elite before it acts.",
+        "exampleZh": "一记重击就能在精英行动前将其彻底消灭。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "pierce",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "一箭穿透护甲，直击敌人心脏。",
+        "example": "This attack can pierce through enemy block and deal damage directly.",
+        "exampleZh": "这次攻击能穿透敌人的格挡并直接造成伤害。"
+      },
+      "after": {
+        "story": "一箭穿透护甲直击要害，再厚的格挡在穿透面前也只是一层纸。",
+        "example": "This attack can pierce through enemy block and deal damage directly.",
+        "exampleZh": "这次攻击能穿透敌人的格挡并直接造成伤害。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "revenge",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "受伤越重，反击的怒火越旺。",
+        "example": "His revenge build grows stronger each time enemies wound him in battle.",
+        "exampleZh": "每次敌人在战斗中伤害他，他的复仇流派就变得更强。"
+      },
+      "after": {
+        "story": "受伤越重，反击的怒火越旺；这套牌的核心就是先挨几下再打回去。",
+        "example": "His revenge build grows stronger each time enemies wound him in battle.",
+        "exampleZh": "每次敌人在战斗中伤害他，他的复仇流派就变得更强。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ruin",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "高塔深处，昔日繁华只剩废墟。",
+        "example": "One careless turn can ruin your entire deck strategy against the spire.",
+        "exampleZh": "一个粗心的回合就可能毁掉你对抗高塔的整个卡组策略。"
+      },
+      "after": {
+        "story": "高塔深处，昔日的繁华只剩废墟，脚下的每一块砖都埋着前人的骨。",
+        "example": "One careless turn can ruin your entire deck strategy against the spire.",
+        "exampleZh": "一个粗心的回合就可能毁掉你对抗高塔的整个卡组策略。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ruthless",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "敌人出手无情，招招直取性命。",
+        "example": "The ruthless elite attacks without mercy, ignoring your weakened defense.",
+        "exampleZh": "无情的精英怪毫不留情地攻击，无视你已被削弱的防御。"
+      },
+      "after": {
+        "story": "敌人出手无情，招招直取性命；在这里，仁慈从来不是可选项。",
+        "example": "The ruthless elite attacks without mercy, ignoring your weakened defense.",
+        "exampleZh": "无情的精英怪毫不留情地攻击，无视你已被削弱的防御。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "sacred",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "祭坛之上，圣物散发微光。",
+        "example": "This sacred relic grants you divine protection during the hardest ascension runs.",
+        "exampleZh": "这件神圣的遗物在最高进阶难度的挑战中赐予你神圣的庇护。"
+      },
+      "after": {
+        "story": "祭坛之上，圣物散发微光，碰它之前你得先想清楚代价是什么。",
+        "example": "This sacred relic grants you divine protection during the hardest ascension runs.",
+        "exampleZh": "这件神圣的遗物在最高进阶难度的挑战中赐予你神圣的庇护。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "sacrifice",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "献出生命，只为换取一击之力。",
+        "example": "You must sacrifice health to activate the powerful effect of this dark card.",
+        "exampleZh": "你必须牺牲生命值来激活这张黑暗卡牌的强大效果。"
+      },
+      "after": {
+        "story": "献出生命只为换取一击之力，尖塔里最悲壮也最常用的一张牌。",
+        "example": "You must sacrifice health to activate the powerful effect of this dark card.",
+        "exampleZh": "你必须牺牲生命值来激活这张黑暗卡牌的强大效果。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "savage",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "野兽扑来，撕咬凶猛无比。",
+        "example": "The savage beast lunges at you with claws that tear through your armor.",
+        "exampleZh": "凶猛的野兽扑向你，利爪撕开你的护甲。"
+      },
+      "after": {
+        "story": "野兽扑来，撕咬凶猛无比，而你手里只剩最后一张没用上的牌。",
+        "example": "The savage beast lunges at you with claws that tear through your armor.",
+        "exampleZh": "凶猛的野兽扑向你，利爪撕开你的护甲。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "swing",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "挥动巨剑，一击劈开成群小怪。",
+        "example": "Swing your weapon hard to cut through the slimes blocking your path.",
+        "exampleZh": "用力挥舞你的武器，劈开挡路的史莱姆。"
+      },
+      "after": {
+        "story": "挥动巨剑一击劈开成群小怪，清场的快感能让人暂时忘掉血量。",
+        "example": "Swing your weapon hard to cut through the slimes blocking your path.",
+        "exampleZh": "用力挥舞你的武器，劈开挡路的史莱姆。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "thrust",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "向前猛刺，直取精英怪的心脏。",
+        "example": "A quick thrust with your dagger pierces the elite's thick armor.",
+        "exampleZh": "用匕首快速一刺，穿透了精英怪厚重的护甲。"
+      },
+      "after": {
+        "story": "向前猛刺，直取精英怪的心脏；基础攻击里最朴素也最可靠的一招。",
+        "example": "A quick thrust with your dagger pierces the elite's thick armor.",
+        "exampleZh": "用匕首快速一刺，穿透了精英怪厚重的护甲。"
+      }
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "transcend",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "突破极限，进阶二十也敢硬闯。",
+        "example": "With the right relics, you can transcend your limits and beat Ascension twenty.",
+        "exampleZh": "有了合适的遗物，你就能超越自身极限，击败进阶二十。"
+      },
+      "after": {
+        "story": "突破极限，进阶二十也敢硬闯，哪怕失败的概率从一开始就写在脸上。",
+        "example": "With the right relics, you can transcend your limits and beat Ascension twenty.",
+        "exampleZh": "有了合适的遗物，你就能超越自身极限，击败进阶二十。"
+      }
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "perimeter",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "真正的防守，从据点外就开始。",
+        "example": "They set traps along the perimeter to catch early rotations.",
+        "exampleZh": "他们在外围设下陷阱，专门抓敌方前期的转点。"
+      },
+      "after": {
+        "story": "真正的防守从据点外就开始，把对手挡在包点之外，比拆包容易得多。",
+        "example": "They set traps along the perimeter to catch early rotations.",
+        "exampleZh": "他们在外围设下陷阱，专门抓敌方前期的转点。"
+      }
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "defuse",
+      "fields": [
+        "example",
+        "exampleZh"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "拆到一半被打断，就得从头再来——这就是无畏契约的残忍。",
+        "example": "He started defusing with only five seconds left on the timer.",
+        "exampleZh": "他在倒计时只剩五秒时开始拆除。"
+      },
+      "after": {
+        "story": "拆到一半被打断，就得从头再来——这就是无畏契约的残忍。",
+        "example": "He started to defuse the spike with only five seconds left on the timer.",
+        "exampleZh": "倒计时只剩五秒时，他才开始拆除爆能器。"
+      }
+    }
+  ]
+}

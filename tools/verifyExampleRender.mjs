@@ -1,14 +1,18 @@
 /**
- * 问题二专项回归：卡片背面「英文例句」区域必须始终渲染。
+ * 卡片背面「英文例句」区域渲染契约（已随兜底逻辑下线而更新）。
  *
- * 背景：用户截图对比——王者荣耀(basement) 卡片没有英文例句，无畏契约(lane) 有。
- * 根因：basement 没有预生成材料，而旧代码用 `if (material?.example)` 把整块例句区
- *       都藏起来了（不是字段名不一致，是覆盖缺口 + 渲染门控写错）。
+ * 历史：曾用 `if (material?.example)` 藏起整块例句区 → 补成「造句练习」/「暂无例句」
+ *       兜底 → 再改为 localDomainHint 领域提示。这些兜底全部是废话，已彻底删除。
+ *
+ * 现行契约（不可回退）：
+ *   有 material.example → 渲染「英文例句」标签 + 真实例句 + 中文翻译
+ *   无 material         → 「英文例句」「领域关联」区块**整块隐藏**，
+ *                         且不得出现「暂无例句」等任何占位 / 兜底话术
  *
  * 本测试直接驱动真实 WordCard 组件，断言：
  *   A. 有材料的词（lane）→ 渲染「英文例句」标签 + 真实例句
- *   B. 无材料的词（basement）→ 仍渲染「英文例句 · 造句练习」标签 + 造句提示（含该词本身）
- *   C. 四个领域各取样本 → 例句区均存在
+ *   B. 无材料的词（basement）→ 不渲染例句区、不渲染领域关联区、无任何兜底文案
+ *   C. 四个领域各取样本 → 例句区均存在且包含该单词
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -134,7 +138,7 @@ ok('A. lane(有材料) 渲染「英文例句」标签', laneText.includes('英�
 ok('A. lane 显示真实例句（非造句提示）', !laneText.includes('造句练习') && /lane/i.test(laneText));
 console.log('   [lane 例句区]', (laneCard.querySelector('.mat__value--example') || {}).textContent);
 
-/* B. 无材料（basement @ honor_of_kings）：删掉材料后必须仍渲染例句区 */
+/* B. 无材料（basement @ honor_of_kings）：整块隐藏，且不得有任何兜底废话 */
 const hok = load('honorOfKings');
 const hadMaterial = Boolean(hok.materials.basement);
 delete hok.materials.basement; // 模拟“没有预生成材料”
@@ -143,10 +147,14 @@ const basementCard = await createWordCard({
   domain: { id: 'honor_of_kings', name: '王者荣耀', subtitle: 'Honor of Kings' },
 });
 const basementText = basementCard.textContent;
-ok('B. basement(无材料) 仍渲染例句区标签', basementText.includes('英文例句'), basementText.slice(0, 80));
-ok('B. basement 不再出现「造句练习」/「Your turn」兜底', !/造句练习|Your turn|自己造一句/.test(basementText));
-ok('B. basement 无材料时显示「暂无例句」占位', basementText.includes('暂无例句'));
-console.log('   [basement 例句区]', (basementCard.querySelector('.mat__value--example') || {}).textContent);
+ok('B. basement(无材料) 不渲染「英文例句」区块', !basementText.includes('英文例句'), basementText.slice(0, 120));
+ok('B. basement(无材料) 不渲染「领域关联」区块', !basementText.includes('领域关联'), basementText.slice(0, 120));
+const BANNED = ['暂无例句', '暂无预生成材料', '造句练习', 'Your turn', '自己造一句',
+  '较为常见', '较常见', '可联想', '可以建立', '可结合场景', '可用以', '与之相关',
+  '该词与当前领域暂无直接对应关系'];
+ok('B. basement 无任何占位 / 兜底废话文案',
+  !BANNED.some((b) => basementText.includes(b)), BANNED.filter((b) => basementText.includes(b)).join(', '));
+ok('B. basement(无材料) 仍保留通用释义等真实字段', basementText.includes('通用释义'));
 if (hadMaterial) hok.materials.basement; // 还原（不改磁盘）
 
 /* C. 四个领域各取一个真实词，例句必须真实存在且包含该词 */
@@ -165,6 +173,29 @@ for (const [domainId, file] of Object.entries(DOMAINS)) {
   ok(`C. ${j.gameNameEn} (${word}) 例句包含该单词本身`,
     new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i').test(exText), exText);
 }
+
+/* D. 翻转卡片（flipCard）同一条契约：无材料 → 只留生成入口，不显示任何兜底 */
+const { createFlipCard } = await import('../src/components/flipCard.js');
+const flipProps = (material) => ({
+  word: { word: 'basement', translation: '地下室', type: 'core' },
+  material,
+  domain: { id: 'honor_of_kings', name: '王者荣耀' },
+  relevance: { level: 'vocab', score: 60 },
+});
+const flipNoMat = createFlipCard(flipProps(null)).textContent;
+ok('D. flipCard 无材料时不渲染「领域关联」', !flipNoMat.includes('领域关联'), flipNoMat.slice(0, 120));
+ok('D. flipCard 无材料时不渲染「英文例句」', !flipNoMat.includes('英文例句'), flipNoMat.slice(0, 120));
+ok('D. flipCard 无材料时无占位 / 兜底废话',
+  !BANNED.some((b) => flipNoMat.includes(b)), BANNED.filter((b) => flipNoMat.includes(b)).join(', '));
+ok('D. flipCard 无材料时仍保留「生成记忆材料」入口', flipNoMat.includes('生成记忆材料'));
+
+const flipWithMat = createFlipCard(flipProps({
+  root: 'base', generalMeaning: 'n. 地下室', domainMeaning: '（材料）领域释义',
+  story: '（材料）一段足够长的具体场景微故事，用来触发区块渲染。',
+  example: 'The basement of the base hid a secret passage.', exampleZh: '基地的地下室藏着一条密道。',
+})).textContent;
+ok('D. flipCard 有材料时渲染「领域关联」与「英文例句」',
+  flipWithMat.includes('领域关联') && flipWithMat.includes('英文例句'), flipWithMat.slice(0, 120));
 
 /* ---------- 结果 ---------- */
 console.log('=== 问题二回归：卡片英文例句区 ===\n');

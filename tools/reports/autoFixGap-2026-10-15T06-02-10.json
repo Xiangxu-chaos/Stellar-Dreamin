@@ -1,0 +1,550 @@
+{
+  "at": "2026-10-15T06:02:10.005Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 30,
+  "gapBefore": 76,
+  "defectBefore": 0,
+  "created": 76,
+  "fixed": 0,
+  "filled": 76,
+  "failed": 0,
+  "remain": 0,
+  "remainGap": 0,
+  "remainDefect": 0,
+  "elapsedSec": 66,
+  "items": [
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "maintenance",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "meteor",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "mission",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "navigate",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "observation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "probe",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "propel",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "range",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "fluke",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "focus",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "friction",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "gamble",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "grip",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "jump",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "momentum",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "nerve",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "opportunity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "qualification",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "rhythm",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "spectator",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "sphere",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "spin",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "strike",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "striking",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "stroke",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "tactic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "tap",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "tension",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "velocity",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "veteran",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "phase",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "rank",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "fierce",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "final",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "formation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "highlight",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "injury",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "intense",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "intercept",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "interception",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "leap",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "legend",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "legion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "lively",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "mysterious",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "obscure",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "panic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "patrol",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "pursue",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "rank",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "sacrifice",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "sinister",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "stalk",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "struggle",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "tactic",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "flee",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "gadget",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "galaxy",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "gross",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "hijack",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "impulsive",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "infinite",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "insecure",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "intellect",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "intelligence",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "invention",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "irony",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "laboratory",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "mission",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "mock",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "naive",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "paradox",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "ripe",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "rumor",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "schedule",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "spouse",
+      "kind": "gap",
+      "fields": null
+    }
+  ]
+}

@@ -1,0 +1,2978 @@
+{
+  "at": "2026-10-15T08:15:03.288Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 30,
+  "gapBefore": 0,
+  "defectBefore": 296,
+  "created": 296,
+  "fixed": 296,
+  "filled": 0,
+  "failed": 0,
+  "remain": 0,
+  "remainGap": 0,
+  "remainDefect": 0,
+  "elapsedSec": 233,
+  "items": [
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "crucial",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "curse",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "debate",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "deceive",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "dedicate",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "dedicated",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "defiance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "deliberate",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "delusion",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "demolish",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "department",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "descend",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "destiny",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "detect",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "abandon",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "abrupt",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "absurd",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "abundantly",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "accomplish",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "accusation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "accuse",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "achievement",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "advance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "affection",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "aggression",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "alliance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "amateur",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "ambush",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "amiable",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "anxiety",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "anxious",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "applause",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "apprentice",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "argue",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "artisan",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "ascend",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "aspiration",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "assemble",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "authority",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "balance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "bargain",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "disaster",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "discord",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "disguise",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "disgust",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "disperse",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "dispute",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "dominance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "doubt",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "downfall",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "dread",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "drift",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "duration",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "dwell",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "eager",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "echo",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "elegant",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "empathy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "encourage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "endure",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "enormous",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "essential",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "eternal",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "evidence",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "exceed",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "excessive",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "execute",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "exhaustion",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "gradual",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "grapple",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "gratitude",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "greed",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "grieve",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "grotesque",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "guilt",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "hardship",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "harmony",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "hesitant",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "homage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "horizon",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "hostile",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "hostility",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "humiliation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "humility",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "hurdle",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "hypocrisy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "ignorance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "illness",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "illusion",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "immense",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "impulsive",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "infer",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "inhabit",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "injury",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "injustice",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "innocence",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "inquiry",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "scatter",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "seduce",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "shield",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "sinister",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "soar",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "stability",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "stake",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "stare",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "stubborn",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "sufficient",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "surpass",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "suspect",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "justify",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "scarce",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "slavery",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "strike",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "sublime",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "aggression",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "companionship",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "concession",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "depression",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "disappearance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "escapee",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "forbearance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "impression",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "intercession",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "intervene",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "intervention",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "interview",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "masterpiece",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "objection",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "profession",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "recession",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "referendum",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "succession",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "legend",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "fluke",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "focus",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "momentum",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "qualification",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "rhythm",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "spectator",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "striking",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "stroke",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "tactic",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "veteran",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "rank",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "mysterious",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "obscure",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "panic",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "patrol",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "pursue",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "rank",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "sacrifice",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "sinister",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "stalk",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "struggle",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "tactic",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "gathering",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "gaze",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "generosity",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "generous",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "glide",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "glimpse",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "gloomy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "grace",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "graceful",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "gradual",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "grapple",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "gratitude",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "greed",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "grief",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "grieve",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "grotesque",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "hardship",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "harmony",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "heritage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "hesitant",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "homage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "horizon",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "hostile",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "hostility",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "humiliation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "humility",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "hurdle",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "hypocrisy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "ignorance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "illness",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "irrecoverable",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "keystone",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "liberation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "logistics",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "machinery",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "magnet",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "masterpiece",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "mental",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "merchandise",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "meteor",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "miserable",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "mission",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "nuclear",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ornament",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "overthrow",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "overturn",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "parasite",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "pension",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "philosopher",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "philosophy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "preferable",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "puzzle",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "questionnaire",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "recognition",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "reinforce",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "reliance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "render",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "repulsive",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "sanction",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "satisfaction",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "exemplify",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "objection",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "operate",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "perspective",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "prospective",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "protective",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "qualification",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "quotation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "reputation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "respective",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "satisfaction",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "screen",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "spectrum",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "stability",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "strategic",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "subjective",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "transaction",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "vegetation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "vocation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "abandon",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "abandonment",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disaster",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disciple",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "discipline",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "discord",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "discourage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disgust",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disperse",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "dispute",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "doubt",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "downfall",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "dread",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "drift",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "duration",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "dwell",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "eager",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "echo",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "elegant",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "empathy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "encourage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "endure",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "enormous",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "envy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "epic",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "essential",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "eternal",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "evidence",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "evolution",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "exceed",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "excessive",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "exhaustion",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "gloomy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "grace",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "graceful",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "gradual",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "grapple",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "gratitude",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "greed",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "grief",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "grieve",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "grotesque",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "guilt",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hardship",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "harmony",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "heritage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hesitant",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "homage",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "horizon",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hostility",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "humiliation",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "humility",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hurdle",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hypocrisy",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "ignorance",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "illness",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "illusion",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "immense",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "improvise",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "impulsive",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "infer",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "influence",
+      "kind": "defect",
+      "fields": [
+        "example",
+        "exampleZh"
+      ]
+    }
+  ]
+}

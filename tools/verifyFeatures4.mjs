@@ -130,6 +130,7 @@ globalThis.fetch = async (url) => {
 /* ---------------- 载入被测模块 ---------------- */
 const ds = (await import('../src/services/dataService.js')).default;
 const study = (await import('../src/services/studyService.js')).default;
+const wb = (await import('../src/services/wordBankService.js')).default;
 const { createWordCard } = await import('../src/components/wordCard.js');
 
 /* ==========================================================================
@@ -155,9 +156,12 @@ mine = await ds.getUserDomains();
 ok('setUserDomains 去重并覆盖', mine.length === 2, JSON.stringify(mine));
 
 const choices = await study.getDomainChoices();
+/* 领域数量随扩展兴趣库持续增加，这里断言「等于全部已注册领域」而不是写死数字 */
+const registeredDomains = wb.getDomains();
 ok('getDomainChoices 返回全部领域并带 inMyLibrary 标记',
-  choices.length === 4 && choices.every((c) => typeof c.inMyLibrary === 'boolean'),
-  choices.map((c) => `${c.id}:${c.inMyLibrary}`).join(', '));
+  choices.length === registeredDomains.length && choices.length >= 4
+    && choices.every((c) => typeof c.inMyLibrary === 'boolean'),
+  `${choices.length}/${registeredDomains.length} — ` + choices.map((c) => `${c.id}:${c.inMyLibrary}`).join(', '));
 
 const myDomains = await study.getMyDomains();
 ok('getMyDomains 只返回我的库里的领域', myDomains.length === 2
@@ -289,27 +293,43 @@ ok('错题词条带 errorRatio 字段', typeof wrongWords[0].errorRatio === 'num
 /* ==========================================================================
  * 功能二：复习分组
  * ======================================================================= */
-/* 准备 5 个收藏词，按每组 2 词切分 → 3 组 */
+/* 准备 5 个收藏词，按每组 2 词切分。
+ * ⚠️ 复习现在**按档位过滤**（默认「相关」），所以这里取这 5 个词里词数最多的那一档来验证切分逻辑，
+ *    分组规则本身（每组 ≤ N、末组余数、无重复）与档位无关。 */
 await ds.clearFavorites();
-for (const w of ['ascension', 'barrier', 'frosting', 'escalate', 'ascend']) {
-  await ds.setFavorite('slay_the_spire', w, true);
-}
-const prep = await study.buildReviewGroups({ groupSize: 2, includeMastered: true });
-ok('buildReviewGroups 切分出 3 组', prep.totalGroups === 3, `totalGroups=${prep.totalGroups}`);
-ok('前两组各 2 词、末组 1 词',
-  prep.groups[0].length === 2 && prep.groups[1].length === 2 && prep.groups[2].length === 1,
+const PICK = ['ascension', 'barrier', 'frosting', 'escalate', 'ascend'];
+for (const w of PICK) await ds.setFavorite('slay_the_spire', w, true);
+
+const wbs = (await import('../src/services/wordBankService.js')).default;
+const tiered = await wbs.attachTiers(PICK.map((w) => ({ word: w, domainId: 'slay_the_spire' })));
+const tierHist = tiered.reduce((m, x) => { m[x.tier] = (m[x.tier] || 0) + 1; return m; }, {});
+const pickTier = Object.entries(tierHist).sort((a, b) => b[1] - a[1])[0][0];
+const pickCount = tierHist[pickTier];
+
+ok('未指定档位时默认「相关」',
+  (await study.buildReviewGroups({ groupSize: 10 })).tier === 'related');
+
+const prep = await study.buildReviewGroups({ groupSize: 2, includeMastered: true, tier: pickTier });
+ok('buildReviewGroups 按档切分出 ceil(n/2) 组',
+  prep.totalGroups === Math.ceil(pickCount / 2),
+  `tier=${pickTier} n=${pickCount} totalGroups=${prep.totalGroups}`);
+ok('每组 ≤ 2 词且首组满员',
+  prep.groups.every((g) => g.length <= 2) && prep.groups[0].length === 2,
   prep.groups.map((g) => g.length).join(','));
-ok('分组总数 = 全部收藏词数', prep.groups.flat().length === 5, `${prep.groups.flat().length}`);
+ok('分组总数 = 该档收藏词数', prep.groups.flat().length === pickCount, `${prep.groups.flat().length}/${pickCount}`);
 ok('分组结果无重复词',
-  new Set(prep.groups.flat().map((w) => `${w.domainId}::${w.word}`)).size === 5);
+  new Set(prep.groups.flat().map((w) => `${w.domainId}::${w.word}`)).size === pickCount);
+ok('按档过滤：tier=core 的结果只含 core 档',
+  (await study.buildReviewGroups({ groupSize: 50, includeMastered: true, tier: 'core' }))
+    .groups.flat().every((w) => w.tier === 'core'));
 
 /* 默认排除熟词 */
-await ds.setMastered('slay_the_spire', 'barrier', true);
-const prepNoMastered = await study.buildReviewGroups({ groupSize: 10, includeMastered: false });
-ok('默认排除熟词', prepNoMastered.total === 4 && prepNoMastered.excludedMastered === 1,
-  `total=${prepNoMastered.total}, excluded=${prepNoMastered.excludedMastered}`);
-const prepWithMastered = await study.buildReviewGroups({ groupSize: 10, includeMastered: true });
-ok('勾选「包含熟词」后纳入', prepWithMastered.total === 5, `total=${prepWithMastered.total}`);
+const masteredWord = prep.groups.flat()[0].word;
+await ds.setMastered('slay_the_spire', masteredWord, true);
+const prepNoMastered = await study.buildReviewGroups({ groupSize: 10, includeMastered: false, tier: pickTier });
+ok('默认排除熟词', prepNoMastered.excludedMastered === 1, `excluded=${prepNoMastered.excludedMastered}`);
+const prepWithMastered = await study.buildReviewGroups({ groupSize: 10, includeMastered: true, tier: pickTier });
+ok('勾选「包含熟词」后纳入', prepWithMastered.total === pickCount, `total=${prepWithMastered.total}/${pickCount}`);
 await ds.clearMastered();
 
 /* 会话落库结构 */

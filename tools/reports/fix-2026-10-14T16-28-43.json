@@ -1,0 +1,67 @@
+{
+  "mode": "mock",
+  "model": null,
+  "at": "2026-10-14T16:28:43.994Z",
+  "fixedEntries": 3,
+  "createdEntries": 0,
+  "fixedFields": 3,
+  "changes": [
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "lane",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "选好你的分路，再谈怎么赢。",
+        "example": "Three lanes push toward the enemy crystal at the same time.",
+        "exampleZh": "三条分路同时向敌方水晶推进。"
+      },
+      "after": {
+        "story": "【自检样本】王者荣耀里，王者荣耀这一局的关键就压在 lane 上，一着不慎满盘皆输。",
+        "example": "Three lanes push toward the enemy crystal at the same time.",
+        "exampleZh": "三条分路同时向敌方水晶推进。"
+      }
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "flank",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "正面打不动，就从侧翼绕过去。",
+        "example": "The assassin flanked the enemy backline through the jungle.",
+        "exampleZh": "刺客穿过野区从侧翼绕到了敌方后排。"
+      },
+      "after": {
+        "story": "【自检样本】王者荣耀里，王者荣耀这一局的关键就压在 flank 上，一着不慎满盘皆输。",
+        "example": "The assassin flanked the enemy backline through the jungle.",
+        "exampleZh": "刺客穿过野区从侧翼绕到了敌方后排。"
+      }
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "equipment",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "回城后买齐装备，再赶去守塔。",
+        "example": "Counter-building your equipment is half of the strategy in ranked play.",
+        "exampleZh": "在排位里，针对性出装就是一半的策略。"
+      },
+      "after": {
+        "story": "【自检样本】王者荣耀里，王者荣耀这一局的关键就压在 equipment 上，一着不慎满盘皆输。",
+        "example": "Counter-building your equipment is half of the strategy in ranked play.",
+        "exampleZh": "在排位里，针对性出装就是一半的策略。"
+      }
+    }
+  ]
+}

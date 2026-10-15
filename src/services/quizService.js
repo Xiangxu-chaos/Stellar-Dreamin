@@ -27,7 +27,7 @@ import * as authService from '../core/authService.js';
 export const QUIZ_SOURCES = {
   ALL: 'all',           // 全部卡片（当前领域全部相关词）
   FAVORITES: 'favorites', // 收藏夹
-  DOMAIN: 'domain',     // 当前领域（仅专有术语级）
+  DOMAIN: 'domain',     // 当前领域（传入 words 时取该列表，否则退回专有术语级）
 };
 
 export const QUIZ_TYPES = {
@@ -73,6 +73,17 @@ function sample(arr, n) {
 export async function getQuestionPool(source, ctx = {}) {
   const { domainId, words } = ctx;
 
+  // 功能三：做题时排除「已掌握（熟词库）」单词。
+  //   同一个词一旦标记熟词就不再进入题目池（含领域测验 / 收藏夹复习 / 错题复习 /
+  //   分组复习——它们最终都走本函数），避免反复考已经会的词。
+  const masteredKeys = new Set(await dataService.getMasteredKeys());
+  const isMasteredWord = (w) => {
+    const d = w.domainId || domainId || '';
+    const word = w.word || '';
+    if (!d || !word) return false;
+    return masteredKeys.has(`${d}::${String(word).toLowerCase()}`);
+  };
+
   if (source === QUIZ_SOURCES.FAVORITES) {
     // 收藏夹：跨领域聚合（需求：复习模式只从收藏夹取词）
     const favs = await dataService.getFavorites();
@@ -87,19 +98,28 @@ export async function getQuestionPool(source, ctx = {}) {
       await domainMaterialService.attachMaterials(f.domainId, [withDomain]);
       out.push(withDomain);
     }
-    return out;
+    await wordBankService.attachTiers(out);   // 揭晓卡片的档位标签
+    return out.filter((w) => !isMasteredWord(w));
   }
 
   if (source === QUIZ_SOURCES.ALL) {
     const list = (words || []).map((w) => ({ ...w }));
     await domainMaterialService.attachMaterials(domainId, list);
-    return wordBankService.attachDomainTags(list);
+    const tagged = wordBankService.attachDomainTags(list);
+    await wordBankService.attachTiers(tagged);
+    return tagged.filter((w) => !isMasteredWord(w));
   }
 
-  // 默认：当前领域，仅取专有术语级（保证释义有区分度）
-  const exact = wordBankService.getDomainExactWords(domainId);
-  await domainMaterialService.attachMaterials(domainId, exact);
-  return wordBankService.attachDomainTags(exact);
+  // 当前领域题池。
+  //   • 调用方传入了 `words`（卡片库「做题」按钮传的是**当前档位筛选后的列表**）
+  //     → 就以它为准，实现「选哪档就只做哪档的词」；
+  //   • 未传入时退回「专有术语级」旧行为（保留给无筛选上下文的调用方 / 测试）。
+  const provided = (words || []).map((w) => ({ ...w }));
+  const base = provided.length ? provided : wordBankService.getDomainExactWords(domainId);
+  await domainMaterialService.attachMaterials(domainId, base);
+  const domTagged = wordBankService.attachDomainTags(base);
+  await wordBankService.attachTiers(domTagged);
+  return domTagged.filter((w) => !isMasteredWord(w));
 }
 
 /**
@@ -119,7 +139,14 @@ async function getDistractorPool(source, ctx = {}, primaryPool = []) {
 
   // 收藏夹太少 → 用全量词库补齐（只作干扰项来源，不会成为考题）
   const all = await wordBankService.getAllWords({ limit: 1500 });
-  const extra = all.filter((w) => !primaryPool.some((p) => p.word.toLowerCase() === w.word.toLowerCase()));
+  const masteredKeys = new Set(await dataService.getMasteredKeys());
+  const extra = all.filter((w) => {
+    if (primaryPool.some((p) => p.word.toLowerCase() === w.word.toLowerCase())) return false;
+    // 同样排除熟词：熟词库单词连干扰项里也不出现
+    const d = w.domainId || ctx.domainId || '';
+    if (d && masteredKeys.has(`${d}::${String(w.word).toLowerCase()}`)) return false;
+    return true;
+  });
   const merged = [...primaryPool, ...wordBankService.attachDomainTags(extra)];
   return merged;
 }

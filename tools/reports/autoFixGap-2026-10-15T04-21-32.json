@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-15T04:21:32.832Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 60,
+  "created": 30,
+  "failed": 0,
+  "remain": 30,
+  "elapsedSec": 87,
+  "items": [
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "broadcast"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "episode"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "series"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "adventure"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "aesthetic"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "aesthetics"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "animate"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "character"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "comedy"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "community"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "composition"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "crew"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "debut"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "designation"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "fantasy"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "figure"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "forum"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "frame"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "framed"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "genre"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "horror"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "illustration"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "layout"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "merchandise"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "mystery"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "narrative"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "panel"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "perspective"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "plot"
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "popularity"
+    }
+  ]
+}

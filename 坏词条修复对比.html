@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>坏词条修复前后对比</title>
+<style>
+  :root{--bg:#0f1116;--panel:#171a21;--line:#2a2f3a;--tx:#e8ebf0;--dim:#98a1b0;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--acc:#7dd3fc}
+  *{box-sizing:border-box}
+  body{margin:0;padding:28px;background:var(--bg);color:var(--tx);font:14px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+  h1{font-size:22px;margin:0 0 6px}
+  .sub{color:var(--dim);margin-bottom:22px}
+  h2{font-size:16px;margin:30px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .fn,.badge{font-size:12px;color:var(--dim);font-weight:400}
+  .badge{background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:2px 9px;margin-left:6px}
+  .cards{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 26px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;min-width:150px}
+  .card b{display:block;font-size:24px;line-height:1.3}
+  .card span{color:var(--dim);font-size:12px}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:8px}
+  th,td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  th{background:#1d2129;color:var(--dim);font-weight:600;font-size:12px}
+  tr:last-child td{border-bottom:none}
+  .w{font-weight:700;color:var(--acc);white-space:nowrap;width:110px}
+  .fld{color:var(--dim);font-size:12px;width:78px;white-space:nowrap}
+  .before{color:#b9a5a5;width:38%}
+  .after{color:#bfe8c9;width:38%}
+  .ln{display:inline-block;margin-left:6px;font-size:11px;color:var(--bad)}
+  .ln.ok{color:var(--ok)}
+  .zh{color:var(--dim);font-size:12px}
+  code{font-family:Consolas,Menlo,monospace;font-size:12.5px;color:#e3d9a8}
+  .num{text-align:right;font-variant-numeric:tabular-nums}
+  .good{color:var(--ok)}.bad{color:var(--bad);font-weight:700}.warn{color:var(--warn)}
+  .mono{font-family:Consolas,Menlo,monospace;font-size:12.5px}
+  .small{font-size:11.5px;color:var(--dim)}
+  .note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:8px;padding:12px 16px;margin:22px 0;color:#c9d2de}
+  .note b{color:var(--tx)}
+</style></head><body>
+
+<h1>坏词条修复前后对比</h1>
+<div class="sub">2026-10-15 · 扫描范围：<code>src/data/domainMaterials/</code> 全部 12 个领域文件 · 共 1572 条材料</div>
+
+<div class="cards">
+  <div class="card"><b>135</b><span>修复的坏词条</span></div>
+  <div class="card"><b>138</b><span>改动的字段数</span></div>
+  <div class="card"><b>134</b><span>story 被替换</span></div>
+  <div class="card"><b>2</b><span>example 被替换</span></div>
+  <div class="card"><b>0</b><span>删除的词条</span></div>
+  <div class="card"><b>1572 → 1572</b><span>总条数（未减少）</span></div>
+</div>
+
+<div class="note">
+<b>关于「不要删除整个文件」：</b>本次修复<strong>没有删除、没有重建任何文件</strong>。
+下表逐文件核对「修改前备份 vs 当前」：词条数完全一致，丢失 0、新增 0，
+只有被判定为坏词条的条目其<strong>出错字段本身</strong>被替换。
+8 个新领域（方舟 / 羽毛球 / 篮球 / 绝命毒师 / 经典电影 / 原神 / 夏洛克 / 杀戮尖塔2）本次改动为 0 —— 一个好词条都没碰。
+</div>
+
+<h2>一、文件完整性核对（修改前备份 → 当前）</h2>
+<table><thead><tr><th>文件</th><th class="num">修前条数</th><th class="num">修后条数</th><th class="num">丢失</th><th class="num">新增</th><th class="num">变更条目</th><th>变更字段</th></tr></thead>
+<tbody>
+<tr>
+  <td class="mono">arknights.json</td>
+  <td class="num">24</td><td class="num">24</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">badminton.json</td>
+  <td class="num">30</td><td class="num">30</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">basketball.json</td>
+  <td class="num">30</td><td class="num">30</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">breakingBad.json</td>
+  <td class="num">35</td><td class="num">35</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">classicMovies.json</td>
+  <td class="num">33</td><td class="num">33</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">genshinImpact.json</td>
+  <td class="num">24</td><td class="num">24</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">hollowKnight.json</td>
+  <td class="num">895</td><td class="num">895</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">honorOfKings.json</td>
+  <td class="num">100</td><td class="num">100</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">sherlock.json</td>
+  <td class="num">32</td><td class="num">32</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">slayTheSpire.json</td>
+  <td class="num">246</td><td class="num">246</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">slayTheSpire2.json</td>
+  <td class="num">24</td><td class="num">24</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr>
+  <td class="mono">valorant.json</td>
+  <td class="num">99</td><td class="num">99</td>
+  <td class="num good">0</td>
+  <td class="num good">0</td>
+  <td class="num">0</td>
+  <td class="mono small">—</td>
+</tr>
+<tr><td class="mono"><b>合计</b></td><td class="num"><b>1572</b></td><td class="num"><b>1572</b></td><td class="num good"><b>0</b></td><td class="num good"><b>0</b></td><td class="num"><b>135</b></td><td class="mono small">story×134、example×2、exampleZh×2</td></tr>
+</tbody></table>
+
+<h2>二、逐条修复前后对比</h2>
+<h2>空洞骑士 <span class="fn">hollowKnight.json</span> <span class="badge">92 条</span></h2>
+<table><thead><tr><th class="w">单词</th><th class="fld">字段</th><th>修复前</th><th>修复后</th></tr></thead><tbody>
+<tr>
+        <td class="w" rowspan="1">bench</td>
+        <td class="fld">story</td>
+        <td class="before">看见长椅，就知道自己安全了。<span class="ln">14 字</span></td>
+        <td class="after">圣巢里没有比长椅更温柔的东西——坐下，就能把疲惫和恐惧一起收起来。<span class="ln ok">33 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">cavern</td>
+        <td class="fld">story</td>
+        <td class="before">洞穴越深，光越少，虫越疯。<span class="ln">13 字</span></td>
+        <td class="after">洞穴越深，光越少，虫子越疯；骑士却只能把光留在骨钉上，继续往下走。<span class="ln ok">33 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">ruin</td>
+        <td class="fld">story</td>
+        <td class="before">废墟里的一切都曾经很繁华。<span class="ln">13 字</span></td>
+        <td class="after">废墟里的一切都曾经很繁华，如今只剩下风穿过空荡的走廊。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">husk</td>
+        <td class="fld">story</td>
+        <td class="before">空壳曾经也是谁的孩子。<span class="ln">11 字</span></td>
+        <td class="after">空壳曾经也是谁的孩子，只是瘟疫先把它的名字和记忆一起拿走了。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">grotto</td>
+        <td class="fld">story</td>
+        <td class="before">岩洞很小，但里面的东西不小。<span class="ln">14 字</span></td>
+        <td class="after">岩洞只够骑士侧身进入，可里面等着他的东西，比洞口大得多。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">claw</td>
+        <td class="fld">story</td>
+        <td class="before">有了螳螂爪，墙面不再是墙。<span class="ln">13 字</span></td>
+        <td class="after">拿到螳螂爪之后，墙面不再是墙，而是通往下一片区域的另一条路。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">burrow</td>
+        <td class="fld">story</td>
+        <td class="before">地洞越深，主人越不好惹。<span class="ln">12 字</span></td>
+        <td class="after">地洞越深，主人越不好惹；深巢里的每一次下潜，都在赌自己的命。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">tunnel</td>
+        <td class="fld">story</td>
+        <td class="before">隧道尽头的光，不一定是出口。<span class="ln">14 字</span></td>
+        <td class="after">隧道尽头的光不一定是出口，也可能是另一群在暗处等你的虫子。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">elegy</td>
+        <td class="fld">story</td>
+        <td class="before">挽歌是唱给已经不在的人听的。<span class="ln">14 字</span></td>
+        <td class="after">挽歌是唱给已经不在的人听的，而在圣巢，这样的人多到唱不完。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">crawl</td>
+        <td class="fld">story</td>
+        <td class="before">它们爬得很慢，但从不停止。<span class="ln">13 字</span></td>
+        <td class="after">它们爬得很慢，却从不停止，所以你回头时它们总已经站在你身后。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">flee</td>
+        <td class="fld">story</td>
+        <td class="before">懂得逃离的敌人，往往最难缠。<span class="ln">14 字</span></td>
+        <td class="after">懂得逃离的敌人往往最难缠，因为它们会在你转身时从背后再扑一次。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">evade</td>
+        <td class="fld">story</td>
+        <td class="before">闪避不需要更快，只需要更早。<span class="ln">14 字</span></td>
+        <td class="after">闪避不需要更快，只需要更早——读懂抬手的那一瞬，比反应快更重要。<span class="ln ok">32 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">glower</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">守卫不发一言，只用那双幽光沉沉的眼睛盯着骑士，直到他先动。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">glowing</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">洞口那些发光的蘑菇看着温和，靠得太近才发现它们也会咬人。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">lamentation</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">虫豸的哀嚎在空荡的圣巢里一层层叠起来，成了这座王国唯一的挽歌。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">striking</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">骑士的骨钉每一次挥出都落在同一处，直到那层硬壳终于裂开。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">attest</td>
+        <td class="fld">story</td>
+        <td class="before">古老石碑证明圣巢曾经的辉煌。<span class="ln">14 字</span></td>
+        <td class="after">古老石碑静静立在路边，证明圣巢曾经的辉煌，也证明它如何走到今天。<span class="ln ok">32 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">awaiting</td>
+        <td class="fld">story</td>
+        <td class="before">被囚禁的幼虫在罐中等待救援。<span class="ln">14 字</span></td>
+        <td class="after">被囚禁的幼虫在罐中等待救援，它们不知道骑士会不会来，只能等。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">bloom</td>
+        <td class="fld">story</td>
+        <td class="before">王后花园里花朵在幽光中绽放。<span class="ln">14 字</span></td>
+        <td class="after">王后花园里的花朵在幽光中静静绽放，仿佛从未被瘟疫碰过。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">bog</td>
+        <td class="fld">story</td>
+        <td class="before">泥沼吞没了骑士的脚步声。<span class="ln">12 字</span></td>
+        <td class="after">泥沼吞没了骑士的脚步声，也让潜藏其下的东西失去了猎物的方位。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">bold</td>
+        <td class="fld">story</td>
+        <td class="before">骑士大胆地冲向巨大的守卫。<span class="ln">13 字</span></td>
+        <td class="after">骑士大胆地冲向巨大的守卫，因为他知道犹豫只会让那记横扫更疼。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">bolt</td>
+        <td class="fld">story</td>
+        <td class="before">一道闪电劈下，敌人四散逃走。<span class="ln">14 字</span></td>
+        <td class="after">一道闪电劈下，敌人四散逃走，骑士则趁着那道光追了上去。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">bound</td>
+        <td class="fld">story</td>
+        <td class="before">被锁链束缚的守卫无法离开。<span class="ln">13 字</span></td>
+        <td class="after">被锁链束缚的守卫无法离开岗位，只能一遍遍重复着看守的动作。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">burden</td>
+        <td class="fld">story</td>
+        <td class="before">携带沉重护符，骑士步履维艰。<span class="ln">14 字</span></td>
+        <td class="after">携带沉重护符的骑士步履维艰，多一分力量就少一分灵活。<span class="ln ok">26 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">calm</td>
+        <td class="fld">story</td>
+        <td class="before">蓝湖水面平静，骑士暂得安宁。<span class="ln">14 字</span></td>
+        <td class="after">蓝湖的水面平静得没有一丝声音，骑士在这里第一次停下了脚步。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">canopy</td>
+        <td class="fld">story</td>
+        <td class="before">苍绿之径的树冠遮蔽了天光。<span class="ln">13 字</span></td>
+        <td class="after">苍绿之径的树冠遮蔽了天光，也遮住了那些从上方垂下来的东西。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">capitulate</td>
+        <td class="fld">story</td>
+        <td class="before">面对空洞骑士，敌人最终屈服。<span class="ln">14 字</span></td>
+        <td class="after">面对空洞骑士的骨钉，再顽固的守卫最终也只能选择屈服。<span class="ln ok">26 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">capture</td>
+        <td class="fld">story</td>
+        <td class="before">骑士捕获幼虫，送往虫爷爷处。<span class="ln">14 字</span></td>
+        <td class="after">骑士捕获一只幼虫，把它送到虫爷爷那里，换回一枚吉欧的谢礼。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">carcass</td>
+        <td class="fld">story</td>
+        <td class="before">深巢之中，巨兽残骸遍布。<span class="ln">12 字</span></td>
+        <td class="after">深巢之中，巨兽的残骸遍布各处，提醒每个来者这里曾经死过什么。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">cathedral</td>
+        <td class="fld">story</td>
+        <td class="before">泪水之城的大教堂高耸入云。<span class="ln">13 字</span></td>
+        <td class="after">泪水之城的大教堂高耸入云，雨水顺着穹顶流下，像整座城在哭。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">cautious</td>
+        <td class="fld">story</td>
+        <td class="before">面对未知区域，骑士步步谨慎。<span class="ln">14 字</span></td>
+        <td class="after">面对从未踏足的区域，骑士步步谨慎，因为圣巢从不给人第二次机会。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">celestial</td>
+        <td class="fld">story</td>
+        <td class="before">蓝湖的水面映出天穹的微光。<span class="ln">13 字</span></td>
+        <td class="after">蓝湖的水面映出天穹的微光，那是圣巢地下唯一像天空的东西。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">chant</td>
+        <td class="fld">story</td>
+        <td class="before">螳螂领主的吟唱在村落中回荡。<span class="ln">14 字</span></td>
+        <td class="after">螳螂领主的吟唱在村落中回荡，三个音节落下，战斗便正式开始。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">chaos</td>
+        <td class="fld">story</td>
+        <td class="before">瘟疫蔓延，圣巢陷入一片混乱。<span class="ln">14 字</span></td>
+        <td class="after">瘟疫蔓延之后，圣巢陷入一片混乱，连守卫也分不清敌人和自己。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">entwine</td>
+        <td class="fld">story</td>
+        <td class="before">藤蔓缠住骑士，丝线交织如网。<span class="ln">14 字</span></td>
+        <td class="after">藤蔓缠住骑士的双腿，丝线交织成网，把他钉在原地动弹不得。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">enunciate</td>
+        <td class="fld">story</td>
+        <td class="before">石碑上的预言被清晰念出。<span class="ln">12 字</span></td>
+        <td class="after">石碑上的预言被一个字一个字清晰念出，念到最后一个字时，门开了。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">envelop</td>
+        <td class="fld">story</td>
+        <td class="before">黑暗笼罩深巢，雾气包围骑士。<span class="ln">14 字</span></td>
+        <td class="after">黑暗笼罩深巢，雾气从四面把骑士包围，连骨钉的反光都被吞掉了。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">envoy</td>
+        <td class="fld">story</td>
+        <td class="before">一位使者带着口信穿过废墟。<span class="ln">13 字</span></td>
+        <td class="after">一位使者带着白王的口信穿过废墟，可他要找的那个人早已不在了。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">epic</td>
+        <td class="fld">story</td>
+        <td class="before">骑士的旅程宛如一部史诗。<span class="ln">12 字</span></td>
+        <td class="after">骑士的旅程宛如一部史诗，只是这部史诗里没有旁白，只有骨钉的声音。<span class="ln ok">32 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">epilogue</td>
+        <td class="fld">story</td>
+        <td class="before">结局之后，圣巢迎来尾声。<span class="ln">12 字</span></td>
+        <td class="after">结局之后，圣巢迎来自己的尾声：城市还在，只是再没有人为它说话。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">erasure</td>
+        <td class="fld">story</td>
+        <td class="before">记忆被抹去，只剩空壳徘徊。<span class="ln">13 字</span></td>
+        <td class="after">记忆被彻底抹去后，只剩空壳在旧日街道上徘徊，重复着同样的动作。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">erudite</td>
+        <td class="fld">story</td>
+        <td class="before">博学的教师守护着古老知识。<span class="ln">13 字</span></td>
+        <td class="after">博学的教师守护着古老知识，即便瘟疫也没能让石碑上的字消失。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">expel</td>
+        <td class="fld">story</td>
+        <td class="before">他一击将守卫驱逐出平台边缘。<span class="ln">14 字</span></td>
+        <td class="after">他用一记上挑把守卫驱逐出平台边缘，看着它坠进下面不见底的深渊。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">explode</td>
+        <td class="fld">story</td>
+        <td class="before">那只爆裂虫靠近时突然爆炸。<span class="ln">13 字</span></td>
+        <td class="after">那只爆裂虫一靠近就炸开，把骑士和它自己一起送回了最近的长椅。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">fault</td>
+        <td class="fld">story</td>
+        <td class="before">圣巢的衰败并非一人之过。<span class="ln">12 字</span></td>
+        <td class="after">圣巢的衰败并非一人之过，可最后承担后果的却只有一个孩子。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">feeble</td>
+        <td class="fld">story</td>
+        <td class="before">受伤的骑士变得虚弱无力。<span class="ln">12 字</span></td>
+        <td class="after">受伤的骑士变得虚弱无力，连先前一击能砍碎的外壳现在都砍不动。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">fetish</td>
+        <td class="fld">story</td>
+        <td class="before">他对吉欧的迷恋近乎疯狂。<span class="ln">12 字</span></td>
+        <td class="after">他对吉欧的迷恋近乎疯狂，宁可绕远路也要把每一枚都敲下来带走。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">fetter</td>
+        <td class="fld">story</td>
+        <td class="before">锁链束缚着被囚禁的战士。<span class="ln">12 字</span></td>
+        <td class="after">锁链束缚着被囚禁的战士，链子一动，整间牢房就跟着响起来。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">flank</td>
+        <td class="fld">story</td>
+        <td class="before">他绕到守卫的侧翼，发动突袭。<span class="ln">14 字</span></td>
+        <td class="after">他绕到守卫的侧翼发动突袭，因为在圣巢正面硬碰从来不是好主意。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">flood</td>
+        <td class="fld">story</td>
+        <td class="before">泪水之城被无尽的雨水淹没。<span class="ln">13 字</span></td>
+        <td class="after">泪水之城被无尽的雨水淹没，水位常年漫过台阶，也漫过所有人的记忆。<span class="ln ok">32 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">flourish</td>
+        <td class="fld">story</td>
+        <td class="before">圣巢曾在白王治下繁荣一时。<span class="ln">13 字</span></td>
+        <td class="after">圣巢曾在白王治下繁荣一时，街道挤满虫群，如今只剩风穿过空巷。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">flux</td>
+        <td class="fld">story</td>
+        <td class="before">圣巢的兴衰如流水般变迁。<span class="ln">12 字</span></td>
+        <td class="after">圣巢的兴衰如流水般变迁，骑士走过时看到的只是其中一帧。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">foliage</td>
+        <td class="fld">story</td>
+        <td class="before">苍绿之径的枝叶遮蔽了前路。<span class="ln">13 字</span></td>
+        <td class="after">苍绿之径的枝叶遮蔽了前路，也藏住了那些倒挂在枝头的东西。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">forebode</td>
+        <td class="fld">story</td>
+        <td class="before">深巢的寂静预示着不祥。<span class="ln">11 字</span></td>
+        <td class="after">深巢的寂静预示着不祥——越是听不见声音的地方，越不该久留。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">foretell</td>
+        <td class="fld">story</td>
+        <td class="before">古老石碑预言了圣巢的衰亡。<span class="ln">13 字</span></td>
+        <td class="after">古老石碑早已预言了圣巢的衰亡，只是当时没有一只虫愿意相信。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">forfeit</td>
+        <td class="fld">story</td>
+        <td class="before">挑战失败，他丧失了全部吉欧。<span class="ln">14 字</span></td>
+        <td class="after">挑战失败，他丧失了全部吉欧，连刚买来的护符都变得毫无意义。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">formation</td>
+        <td class="fld">story</td>
+        <td class="before">螳螂战士排成严整的阵形迎敌。<span class="ln">14 字</span></td>
+        <td class="after">螳螂战士排成严整的阵形迎敌，前面倒下后面立刻补上位置。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">fortify</td>
+        <td class="fld">story</td>
+        <td class="before">装上护符，骑士的骨钉更强了。<span class="ln">14 字</span></td>
+        <td class="after">装上这枚护符，骑士的骨钉更强了，代价是身上再无多余的位置。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">ghostly</td>
+        <td class="fld">story</td>
+        <td class="before">苍白的幽灵在废墟中无声飘过。<span class="ln">14 字</span></td>
+        <td class="after">苍白的幽灵在废墟中无声飘过，骑士挥出的骨钉从它们身上穿了过去。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">grip</td>
+        <td class="fld">story</td>
+        <td class="before">骑士紧握骨钉，跃过尖刺深渊。<span class="ln">14 字</span></td>
+        <td class="after">骑士紧握骨钉，深吸一口气，跃过那片底下插满尖刺的深渊。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">herald</td>
+        <td class="fld">story</td>
+        <td class="before">瘟疫的气息预示着圣巢的衰败。<span class="ln">14 字</span></td>
+        <td class="after">瘟疫的气息早早预示了圣巢的衰败，只是没有人愿意把它说出口。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">hesitate</td>
+        <td class="fld">story</td>
+        <td class="before">在深渊边缘，骑士迟疑了一瞬。<span class="ln">14 字</span></td>
+        <td class="after">在深渊边缘，骑士迟疑了一瞬，随后还是松开手，让身体落下去。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">hiss</td>
+        <td class="fld">story</td>
+        <td class="before">洞穴深处传来嘶嘶的声响。<span class="ln">12 字</span></td>
+        <td class="after">洞穴深处传来嘶嘶的声响，骑士举起骨钉，知道有人已经先到了。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">honorable</td>
+        <td class="fld">story</td>
+        <td class="before">螳螂领主以可敬的姿态迎战。<span class="ln">13 字</span></td>
+        <td class="after">螳螂领主以可敬的姿态迎战，三个一起上，却从不从背后偷袭。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">implementation</td>
+        <td class="fld">story</td>
+        <td class="before">圣巢的封印计划终于开始实施。<span class="ln">14 字</span></td>
+        <td class="after">圣巢的封印计划终于开始实施，代价是把一个孩子锁进黑卵圣殿。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">imprison</td>
+        <td class="fld">story</td>
+        <td class="before">空洞骑士被选中去监禁那道光。<span class="ln">14 字</span></td>
+        <td class="after">空洞骑士被选中去监禁那道光，从此它的名字就只剩下一个称号。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">impulsive</td>
+        <td class="fld">story</td>
+        <td class="before">他冲动地跳进螳螂领主的领地。<span class="ln">14 字</span></td>
+        <td class="after">他冲动地跳进螳螂领主的领地，落地那一刻就知道自己算错了距离。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">inactive</td>
+        <td class="fld">story</td>
+        <td class="before">那尊雕像静止不动，仿佛沉睡。<span class="ln">14 字</span></td>
+        <td class="after">那尊雕像静止不动，仿佛沉睡，直到骑士走近，它才睁开了眼。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">incarcerate</td>
+        <td class="fld">story</td>
+        <td class="before">他们把这团瘟疫关押进容器里。<span class="ln">14 字</span></td>
+        <td class="after">他们把这团瘟疫关押进一具容器里，然后给这具容器取名叫骑士。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">incubate</td>
+        <td class="fld">story</td>
+        <td class="before">虫卵在黑暗深处静静孵化。<span class="ln">12 字</span></td>
+        <td class="after">虫卵在黑暗深处静静孵化，破壳的声音在圣巢的地底一遍遍回响。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">indestructible</td>
+        <td class="fld">story</td>
+        <td class="before">那面墙壁坚不可摧，挡住去路。<span class="ln">14 字</span></td>
+        <td class="after">那面墙壁坚不可摧，骨钉砍上去只留一道白痕，路到这里就断了。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">intercept</td>
+        <td class="fld">story</td>
+        <td class="before">飞来的光弹被骨钉在半空拦下。<span class="ln">14 字</span></td>
+        <td class="after">飞来的光弹被骨钉在半空拦下，弹开的一瞬骑士已冲进敌人怀里。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">intrepid</td>
+        <td class="fld">story</td>
+        <td class="before">无畏的骑士孤身潜入深渊。<span class="ln">12 字</span></td>
+        <td class="after">无畏的骑士孤身潜入深渊，脚下是没有底的黑暗，头上也没有退路。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">intrinsic</td>
+        <td class="fld">story</td>
+        <td class="before">护符的力量源于其内在本质。<span class="ln">13 字</span></td>
+        <td class="after">护符的力量源于其内在本质，换一个佩戴者，效果也不会增加半分。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">lustrous</td>
+        <td class="fld">story</td>
+        <td class="before">骑士拾起一枚光泽温润的护符。<span class="ln">14 字</span></td>
+        <td class="after">骑士拾起一枚光泽温润的护符，握在手里还带着上一任主人的温度。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">maintain</td>
+        <td class="fld">story</td>
+        <td class="before">骑士靠灵魂维持着微弱的生命。<span class="ln">14 字</span></td>
+        <td class="after">骑士靠灵魂维持着微弱的生命，每受一次伤，面具上的裂痕就更深一分。<span class="ln ok">32 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">reflect</td>
+        <td class="fld">story</td>
+        <td class="before">灵魂映照出苍白之王的叹息。<span class="ln">13 字</span></td>
+        <td class="after">灵魂映照出苍白之王的叹息，也映照出他自己不敢承认的那一部分。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">refrain</td>
+        <td class="fld">story</td>
+        <td class="before">他忍住了灵魂的哀鸣继续前行。<span class="ln">14 字</span></td>
+        <td class="after">他忍住了从灵魂深处涌上来的哀鸣，把骨钉重新握紧，继续往前走。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">refuge</td>
+        <td class="fld">story</td>
+        <td class="before">长椅是旅人唯一的庇护所。<span class="ln">12 字</span></td>
+        <td class="after">长椅是旅人唯一的庇护所，坐下的这一刻，整个圣巢都安静了下来。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">regiment</td>
+        <td class="fld">story</td>
+        <td class="before">一大群虫群守卫挡住了去路。<span class="ln">13 字</span></td>
+        <td class="after">一大群虫群守卫挡住了去路，阵型整齐得像有人在后面统一指挥。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">reign</td>
+        <td class="fld">story</td>
+        <td class="before">苍白之王的统治早已崩塌。<span class="ln">12 字</span></td>
+        <td class="after">苍白之王的统治早已崩塌，但它的雕像还站在泪水之城最高的地方。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">rein</td>
+        <td class="fld">story</td>
+        <td class="before">他握紧缰绳般控制着灵魂。<span class="ln">12 字</span></td>
+        <td class="after">他像握紧缰绳一样控制着体内的灵魂，多一点就会溢出，少一点就不够。<span class="ln ok">32 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">reinforce</td>
+        <td class="fld">story</td>
+        <td class="before">护符加强了骑士的骨钉之力。<span class="ln">13 字</span></td>
+        <td class="after">护符加强了骑士的骨钉之力，也让他每次挥击都多付出一分灵魂。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">relieve</td>
+        <td class="fld">story</td>
+        <td class="before">在长椅上休息缓解了伤痛。<span class="ln">12 字</span></td>
+        <td class="after">在长椅上休息缓解了伤痛，也让骑士有力气回到刚才倒下的地方。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">reveal</td>
+        <td class="fld">story</td>
+        <td class="before">古老石碑揭示圣巢衰落的真相。<span class="ln">14 字</span></td>
+        <td class="after">古老石碑揭示圣巢衰落的真相，只是读到最后一行的人大多已经死了。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">rouse</td>
+        <td class="fld">story</td>
+        <td class="before">钟声响起，沉睡的守卫被唤醒。<span class="ln">14 字</span></td>
+        <td class="after">钟声响起，沉睡的守卫被唤醒，整条走廊的灯也一盏接一盏亮起来。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">shelter</td>
+        <td class="fld">story</td>
+        <td class="before">长椅是旅途中难得的庇护所。<span class="ln">13 字</span></td>
+        <td class="after">长椅是旅途中难得的庇护所，坐上去的瞬间，连瘟疫都好像退了半步。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">shield</td>
+        <td class="fld">story</td>
+        <td class="before">持盾的守卫挡下了骑士的骨钉。<span class="ln">14 字</span></td>
+        <td class="after">持盾的守卫挡下了骑士的骨钉，却挡不住从背后绕过来的那一记。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">subdue</td>
+        <td class="fld">story</td>
+        <td class="before">骑士最终制服了螳螂领主。<span class="ln">12 字</span></td>
+        <td class="after">骑士最终制服了螳螂领主，而它们倒下时仍保持着迎战的姿势。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">sword</td>
+        <td class="fld">story</td>
+        <td class="before">骨钉如剑，斩断圣巢的黑暗。<span class="ln">13 字</span></td>
+        <td class="after">骨钉如剑，斩断圣巢的黑暗，也斩断了骑士对这片土地最后的幻想。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">tender</td>
+        <td class="fld">story</td>
+        <td class="before">温柔的光，照亮了脆弱的幼虫。<span class="ln">14 字</span></td>
+        <td class="after">温柔的光落在罐子上，照亮了里面那只脆弱得一碰就化的幼虫。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">testify</td>
+        <td class="fld">story</td>
+        <td class="before">古老石碑证明圣巢曾经的繁荣。<span class="ln">14 字</span></td>
+        <td class="after">古老石碑证明圣巢曾经的繁荣，也证明了繁荣之后无人接手的空白。<span class="ln ok">30 字</span></td>
+      </tr>
+</tbody></table>
+<h2>王者荣耀 <span class="fn">honorOfKings.json</span> <span class="badge">3 条</span></h2>
+<table><thead><tr><th class="w">单词</th><th class="fld">字段</th><th>修复前</th><th>修复后</th></tr></thead><tbody>
+<tr>
+        <td class="w" rowspan="1">lane</td>
+        <td class="fld">story</td>
+        <td class="before">选好你的分路，再谈怎么赢。<span class="ln">13 字</span></td>
+        <td class="after">先选好你的分路再谈怎么赢，三条兵线里总有一条会成为突破口。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">flank</td>
+        <td class="fld">story</td>
+        <td class="before">正面打不动，就从侧翼绕过去。<span class="ln">14 字</span></td>
+        <td class="after">正面打不动，就从侧翼绕过去，从野区绕后往往是团战翻盘的起点。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">equipment</td>
+        <td class="fld">story</td>
+        <td class="before">回城后买齐装备，再赶去守塔。<span class="ln">14 字</span></td>
+        <td class="after">回城后买齐装备再赶去守塔，出装顺序有时比操作更能决定输赢。<span class="ln ok">29 字</span></td>
+      </tr>
+</tbody></table>
+<h2>杀戮尖塔 <span class="fn">slayTheSpire.json</span> <span class="badge">37 条</span></h2>
+<table><thead><tr><th class="w">单词</th><th class="fld">字段</th><th>修复前</th><th>修复后</th></tr></thead><tbody>
+<tr>
+        <td class="w" rowspan="1">shield</td>
+        <td class="fld">story</td>
+        <td class="before">举起盾，才有资格谈进攻。<span class="ln">12 字</span></td>
+        <td class="after">举起盾才有资格谈进攻，尖塔里的每一次失误都会记在你的血线上。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">vigor</td>
+        <td class="fld">story</td>
+        <td class="before">攒够活力，再挥出匕首。<span class="ln">11 字</span></td>
+        <td class="after">先攒够活力再挥匕首，否则那一下只会让你比敌人更早倒下。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">discard</td>
+        <td class="fld">story</td>
+        <td class="before">弃掉没用的牌，也是一种决策。<span class="ln">14 字</span></td>
+        <td class="after">把没用的牌弃掉也是一种决策，手牌越干净，抽到核心牌的几率越高。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">elite</td>
+        <td class="fld">story</td>
+        <td class="before">打精英是风险，但遗物值得。<span class="ln">13 字</span></td>
+        <td class="after">打精英是在赌命，但那些遗物值得，前提是你还活着走出房间。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">damage</td>
+        <td class="fld">story</td>
+        <td class="before">伤害是可以计算的，风险也是。<span class="ln">14 字</span></td>
+        <td class="after">伤害是可以计算的，风险也是；每一点血量都该换算成后面的回合数。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">defeat</td>
+        <td class="fld">story</td>
+        <td class="before">击败一个，还有下一个在等你。<span class="ln">14 字</span></td>
+        <td class="after">击败一个，还有下一个在等你，尖塔从不给你喘息的机会。<span class="ln ok">26 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">flex</td>
+        <td class="fld">story</td>
+        <td class="before">屈伸只借你一回合的力量。<span class="ln">12 字</span></td>
+        <td class="after">屈伸只借你一回合的力量，抓紧这回合把伤害打出去，否则它就会消失。<span class="ln ok">32 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">entrench</td>
+        <td class="fld">story</td>
+        <td class="before">掘进一下，格挡直接翻倍。<span class="ln">12 字</span></td>
+        <td class="after">掘进一下，本回合的格挡直接翻倍，这正是防战最想看到的那一幕。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">blizzard</td>
+        <td class="fld">story</td>
+        <td class="before">冰霜球越多，暴风雪打得越狠。<span class="ln">14 字</span></td>
+        <td class="after">冰霜球攒得越多，暴风雪打得越狠，所以前期要学会忍住不出手。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">dash</td>
+        <td class="fld">story</td>
+        <td class="before">冲刺既能打人，又能保命。<span class="ln">12 字</span></td>
+        <td class="after">冲刺既能打人又能保命，防战的核心往往就是这么一张不起眼的牌。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">barrage</td>
+        <td class="fld">story</td>
+        <td class="before">充能球越多，弹幕打得越密。<span class="ln">13 字</span></td>
+        <td class="after">充能球越多，弹幕打得越密；故障机器人的胜负全压在那一回合。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">aggregate</td>
+        <td class="fld">story</td>
+        <td class="before">聚合把牌堆的厚度换算成能量。<span class="ln">14 字</span></td>
+        <td class="after">聚合把抽牌堆的厚度直接换算成能量，牌堆越薄，它反而给得越少。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">skim</td>
+        <td class="fld">story</td>
+        <td class="before">略读就是一次便宜的三张抽牌。<span class="ln">14 字</span></td>
+        <td class="after">略读就是一次便宜的三张抽牌，用得好能直接把一整套连招串起来。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">evaluate</td>
+        <td class="fld">story</td>
+        <td class="before">评估一下局势，顺手抽几张牌。<span class="ln">14 字</span></td>
+        <td class="after">评估一下局势，顺手抽几张牌，很多翻盘都是从这一张开始的。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">account</td>
+        <td class="fld">story</td>
+        <td class="before">账号里存着你的全部爬塔记录。<span class="ln">14 字</span></td>
+        <td class="after">账号里存着你全部的爬塔记录，包括那些死在第一层的丢人战绩。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">frosting</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">冰霜充能球不出手也能留在场上，静静地把每一层伤害都磨掉。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">intention</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">敌人头顶的意图图标从不撒谎，读懂它比多抽一张牌更重要。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="2">striking</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">每一张打击都是你最基础的输出，也常常是最先被升级掉的那张。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        
+        <td class="fld">example<br>exampleZh</td>
+        <td class="before"><code>Upgrading your strikes early keeps the first three acts manageable.</code><br><span class="zh">前期升级几张「打击」，前三幕会轻松很多。</span></td>
+        <td class="after"><code>Upgrading your striking cards early keeps the first three acts manageable.</code><br><span class="zh">前期升级几张大打击牌，前三幕会轻松很多。</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">halting</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">脚步一停，敌人的意图就变了；有时候僵持比硬拼更考验耐心。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">shiver</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">寒流一层层叠上来，不只是敌人在发抖，你的每次抽牌也变得更慢。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">abandonment</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">弃掉整手牌是一种放弃，但放弃之后往往才是这套卡组真正的开始。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">blinds</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">被致盲的不只是视野，还有你判断下一张该不该打出来的能力。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">combustion</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">自燃每回合都在烧自己，可只要撑到对手先倒下，这点血就值了。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">digest</td>
+        <td class="fld">story</td>
+        <td class="before">（空）<span class="ln">0 字</span></td>
+        <td class="after">消化一张牌换来的是能量，代价是它再也回不到你的牌堆里。<span class="ln ok">27 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">blacksmith</td>
+        <td class="fld">story</td>
+        <td class="before">铁匠挥锤，为战士升级了卡牌。<span class="ln">14 字</span></td>
+        <td class="after">铁匠挥锤，把一张普通的卡牌敲成升级版，营地里最值钱的一次停留。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">blessing</td>
+        <td class="fld">story</td>
+        <td class="before">神龛赐福，他获得稀有遗物。<span class="ln">13 字</span></td>
+        <td class="after">神龛赐福，他拿到一件稀有遗物，代价是错过了一次升级的机会。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">eradicate</td>
+        <td class="fld">story</td>
+        <td class="before">一记重击，把精英怪彻底根除。<span class="ln">14 字</span></td>
+        <td class="after">一记重击把精英怪彻底根除，房间里只剩下掉在地上的几枚金币。<span class="ln ok">29 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">pierce</td>
+        <td class="fld">story</td>
+        <td class="before">一箭穿透护甲，直击敌人心脏。<span class="ln">14 字</span></td>
+        <td class="after">一箭穿透护甲直击要害，再厚的格挡在穿透面前也只是一层纸。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">revenge</td>
+        <td class="fld">story</td>
+        <td class="before">受伤越重，反击的怒火越旺。<span class="ln">13 字</span></td>
+        <td class="after">受伤越重，反击的怒火越旺；这套牌的核心就是先挨几下再打回去。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">ruin</td>
+        <td class="fld">story</td>
+        <td class="before">高塔深处，昔日繁华只剩废墟。<span class="ln">14 字</span></td>
+        <td class="after">高塔深处，昔日的繁华只剩废墟，脚下的每一块砖都埋着前人的骨。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">ruthless</td>
+        <td class="fld">story</td>
+        <td class="before">敌人出手无情，招招直取性命。<span class="ln">14 字</span></td>
+        <td class="after">敌人出手无情，招招直取性命；在这里，仁慈从来不是可选项。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">sacred</td>
+        <td class="fld">story</td>
+        <td class="before">祭坛之上，圣物散发微光。<span class="ln">12 字</span></td>
+        <td class="after">祭坛之上，圣物散发微光，碰它之前你得先想清楚代价是什么。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">sacrifice</td>
+        <td class="fld">story</td>
+        <td class="before">献出生命，只为换取一击之力。<span class="ln">14 字</span></td>
+        <td class="after">献出生命只为换取一击之力，尖塔里最悲壮也最常用的一张牌。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">savage</td>
+        <td class="fld">story</td>
+        <td class="before">野兽扑来，撕咬凶猛无比。<span class="ln">12 字</span></td>
+        <td class="after">野兽扑来，撕咬凶猛无比，而你手里只剩最后一张没用上的牌。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">swing</td>
+        <td class="fld">story</td>
+        <td class="before">挥动巨剑，一击劈开成群小怪。<span class="ln">14 字</span></td>
+        <td class="after">挥动巨剑一击劈开成群小怪，清场的快感能让人暂时忘掉血量。<span class="ln ok">28 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">thrust</td>
+        <td class="fld">story</td>
+        <td class="before">向前猛刺，直取精英怪的心脏。<span class="ln">14 字</span></td>
+        <td class="after">向前猛刺，直取精英怪的心脏；基础攻击里最朴素也最可靠的一招。<span class="ln ok">30 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">transcend</td>
+        <td class="fld">story</td>
+        <td class="before">突破极限，进阶二十也敢硬闯。<span class="ln">14 字</span></td>
+        <td class="after">突破极限，进阶二十也敢硬闯，哪怕失败的概率从一开始就写在脸上。<span class="ln ok">31 字</span></td>
+      </tr>
+</tbody></table>
+<h2>无畏契约 <span class="fn">valorant.json</span> <span class="badge">3 条</span></h2>
+<table><thead><tr><th class="w">单词</th><th class="fld">字段</th><th>修复前</th><th>修复后</th></tr></thead><tbody>
+<tr>
+        <td class="w">defuse</td>
+        <td class="fld">example<br>exampleZh</td>
+        <td class="before"><code>He started defusing with only five seconds left on the timer.</code><br><span class="zh">他在倒计时只剩五秒时开始拆除。</span></td>
+        <td class="after"><code>He started to defuse the spike with only five seconds left on the timer.</code><br><span class="zh">倒计时只剩五秒时，他才开始拆除爆能器。</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">perimeter</td>
+        <td class="fld">story</td>
+        <td class="before">真正的防守，从据点外就开始。<span class="ln">14 字</span></td>
+        <td class="after">真正的防守从据点外就开始，把对手挡在包点之外，比拆包容易得多。<span class="ln ok">31 字</span></td>
+      </tr>
+<tr>
+        <td class="w" rowspan="1">hazard</td>
+        <td class="fld">story</td>
+        <td class="before">别踩在自己人放的毒里——这是新手最常见的死法。<span class="ln">23 字</span></td>
+        <td class="after">别踩在自己人放的毒里——新手十次里有八次，都是死在这条线上的。<span class="ln ok">31 字</span></td>
+      </tr>
+</tbody></table>
+
+<div class="note">
+<b>判定规则（与 <code>tools/genDomainMaterials.mjs</code> 的 <code>checkMaterial()</code> 同一套）：</b><br>
+① story 为空 或 少于 15 字 或 超过 60 字；② story 含空泛话术（较为常见 / 可用以 / 可联想 / 可以建立 / 可与游戏场景建立联想 / 可结合场景 / 与之相关 …）；
+③ example 为空 或 未包含该单词本身（不区分大小写）。
+</div>
+
+<div class="note">
+<b>仍待处理：</b>另有 <strong>581 个领域相关词完全没有材料</strong>——它们不是你所说的「story 里写了废话」，
+而是压根没有 story 字段。卡片背面在这些词上会走运行时兜底文案
+（<code>该词在《X》的语境中较为常见，可与游戏场景建立联想。</code>），这才是你在界面上看到的「废话」的真实来源。
+补齐这 581 条需要调用 DeepSeek：
+<code>DEEPSEEK_API_KEY=sk-xxx node tools/fixDefectiveMaterials.mjs --gap</code>
+</div>
+
+</body></html>

@@ -23,6 +23,7 @@
 
 import dataService from './dataService.js';
 import { INTEREST_DOMAINS } from '../config/interestsConfig.js';
+import { domainLabel } from '../core/domainLabel.js';
 
 /* ---------------------------------------------------------------------------
  * 底层：OpenAI 兼容 chat/completions
@@ -242,7 +243,7 @@ export async function rankBySemanticRelevance(words, domainId, options = {}) {
   const wordLines = list.map((w, i) => `${i + 1}. ${w.word} — ${w.translation || ''}`).join('\n');
 
   const systemPrompt = [
-    `你是《${domain.name}》的资深玩家兼英语词汇专家。`,
+    `你是${domainLabel(domain)}的资深玩家兼英语词汇专家。`,
     '你的任务是判断每个英语单词与该游戏的关联强度，用于筛选「用游戏语境记忆单词」的学习素材。',
     '',
     '判定标准：',
@@ -258,7 +259,7 @@ export async function rankBySemanticRelevance(words, domainId, options = {}) {
     '{"results":[{"word":"单词","score":85,"reason":"不超过20字的理由","isTerm":false}]}',
   ].join('\n');
 
-  const userPrompt = `兴趣领域：《${domain.name}》（${domain.subtitle}）\n\n候选单词：\n${wordLines}\n\n请为每个单词给出关联强度评分，按分数从高到低返回。`;
+  const userPrompt = `兴趣领域：${domainLabel(domain)}（${domain.subtitle}）\n\n候选单词：\n${wordLines}\n\n请为每个单词给出关联强度评分，按分数从高到低返回。`;
 
   const { content } = await chatCompletion(
     [{ role: 'system', content: systemPrompt }, { role: 'user', content: userPrompt }],

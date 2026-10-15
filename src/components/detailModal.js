@@ -15,6 +15,7 @@
 
 import { h, svgIcon } from '../core/dom.js';
 import { iconPath } from '../core/icons.js';
+import { domainLabel } from '../core/domainLabel.js';
 import { openModal } from './modal.js';
 
 /**
@@ -45,8 +46,10 @@ export function showDetailModal(props) {
     body.appendChild(h('div.detail__sections', {}, [
       section('wand', '词根 / 派生说明', material?.root || word.root || '核心词'),
       section('book', '通用释义', material?.generalMeaning || word.translation || '—'),
-      section('domain', `领域关联释义 · ${domain?.name || ''}`,
-        material?.domainMeaning || hint(), true),
+      /* 领域关联释义：只在有真实材料时渲染；无材料整块隐藏（已删除 hint() 兜底） */
+      material?.domainMeaning
+        ? section('domain', `领域关联释义 · ${domainLabel(domain)}`, material.domainMeaning, true)
+        : null,
       material?.story ? section('flame', '微故事 / 场景联想', material.story, false, 'story') : null,
       exampleSection(),
       sourceSection(),
@@ -213,12 +216,12 @@ export function showDetailModal(props) {
   }
 
   /**
-   * 英文例句区 —— 卡片上展示的词**必须**有现成的、包含该词的完整英文例句。
-   * ⚠️ 已废弃「造句练习」兜底文案，不再引导用户自己造句。
-   * 无材料时只显示「暂无例句」（数据层已批量补全，正常不会出现）。
+   * 英文例句区 —— 只在**确实有例句**时渲染。
+   * ⚠️ 已删除「暂无例句」占位；无材料时整块隐藏，不显示任何废话。
    */
   function exampleSection() {
-    const hasExample = Boolean(material?.example && String(material.example).trim());
+    const example = material?.example ? String(material.example).trim() : '';
+    if (!example) return null;
     const exampleSrc = material?.exampleSource ? String(material.exampleSource).trim() : '';
     return h('div.detail__section', {}, [
       h('div.detail__section-title', {}, [
@@ -226,14 +229,12 @@ export function showDetailModal(props) {
         '英文例句',
       ]),
       h('div.detail__example', {}, [
-        hasExample
-          ? h('div.detail__example-en', { text: material.example })
-          : h('div.detail__example-en.detail__example-en--empty', { text: '暂无例句' }),
-        hasExample && material.exampleZh
+        h('div.detail__example-en', { text: example }),
+        material.exampleZh
           ? h('div.detail__example-zh', { text: material.exampleZh })
           : null,
         // 例句出处：与「译名来源」分开标注，便于判断例句的领域关联度
-        hasExample && exampleSrc
+        exampleSrc
           ? h('div.detail__example-src', { text: `例句来源：${exampleSrc}` })
           : null,
       ]),
@@ -241,14 +242,13 @@ export function showDetailModal(props) {
   }
 
   function metaSection() {
+    /* 无材料时整块隐藏 —— 不再显示「该词暂无预生成材料」这类废话 */
+    if (!material) return null;
     const rows = [];
     rows.push(h('span.chip', {}, [
       svgIcon(iconPath('database'), { size: 11 }),
       '预生成静态材料',
     ]));
-    if (!material) {
-      rows.push(h('span.chip', { text: '该词暂无预生成材料' }));
-    }
     if (!rows.length) return null;
     return h('div.detail__section', {}, [
       h('div.detail__section-title', {}, [svgIcon(iconPath('info'), { size: 13 }), '附加信息']),
@@ -256,13 +256,7 @@ export function showDetailModal(props) {
     ]);
   }
 
-  function hint() {
-    if (relevance?.level === 'exact') {
-      return `在《${domain.name}》中对应官方术语「${relevance.domainTermZh || '【译名待确认】'}」。`;
-    }
-    if (relevance?.level === 'vocab') return `该词在《${domain.name}》语境中较常见，可与游戏场景建立联想。`;
-    return '该词与当前领域暂无直接对应关系。';
-  }
+  /* ⚠️ 已删除 hint()：领域关联释义不再有兜底文案，无材料即整块隐藏。 */
 
   render();
 

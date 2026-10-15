@@ -152,11 +152,12 @@ for (const nd of NEW_DOMAINS) {
     }
     ok(`[${nd.id}] 材料字段完整（含 source/unverified）`, bad.length === 0, bad.slice(0, 6).join(', '));
 
-    /* 禁止自行翻译：unverified=true 的条目，domainMeaning 必须说明不确定性 */
+    /* 禁止自行翻译：unverified=true 的条目，domainMeaning 必须说明不确定性。
+       「AI 补充，待复核」也算明确的不确定性声明（autoFixGap 补缺口时写入的措辞）。 */
     const badUnv = keys.filter((k) => {
       const m = raw.materials[k];
       if (!m.unverified) return false;
-      return !/待确认|无权威来源|未.{0,4}(固定|收录|以.{0,3}术语)|非国服|非官方/.test(m.domainMeaning + m.source);
+      return !/待确认|待复核|无权威来源|未.{0,4}(固定|收录|以.{0,3}术语)|非国服|非官方/.test(m.domainMeaning + m.source);
     });
     ok(`[${nd.id}] unverified 条目均写明「待确认」措辞`, badUnv.length === 0, badUnv.join(', '));
 
@@ -231,7 +232,7 @@ for (const nd of NEW_DOMAINS) {
 
 /* 领域主题不得重复（各自独立配色） */
 const themeIds = new Set(allDomains.map((d) => d.theme?.id));
-ok('4 个领域主题互不重复', themeIds.size === 4, [...themeIds].join(', '));
+ok('领域主题互不重复（各自独立配色）', themeIds.size === allDomains.length, `${themeIds.size}/${allDomains.length}`);
 
 /* ==========================================================================
  * 任务二：复习模式 = 收藏夹专属 + 预生成例句

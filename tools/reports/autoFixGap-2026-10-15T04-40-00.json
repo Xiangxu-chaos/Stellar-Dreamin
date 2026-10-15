@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-15T04:40:00.242Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 74,
+  "created": 30,
+  "failed": 0,
+  "remain": 44,
+  "elapsedSec": 251,
+  "items": [
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "comet"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "command"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "commander"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "constellation"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "contingency"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "control"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "cosmic"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "crew"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "cruise"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "deadline"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "deploy"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "descent"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "designation"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "dimension"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "dock"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "eclipse"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "engineer"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "expedition"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "experiment"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "exploration"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "facility"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "fuel"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "galaxy"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "glide"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "hover"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "ignite"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "infrastructure"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "integration"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "jettison"
+    },
+    {
+      "domain": "航空航天",
+      "file": "aviation.json",
+      "word": "lunar"
+    }
+  ]
+}

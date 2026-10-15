@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-15T04:43:58.080Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 141,
+  "created": 30,
+  "failed": 0,
+  "remain": 111,
+  "elapsedSec": 221,
+  "items": [
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "array"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "dictionary"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "graph"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "greedy"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "hack"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "heap"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "queue"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "sample"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "stack"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "string"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "accelerate"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "adjacent"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "benchmark"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "boundary"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "breadth"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "challenge"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "code"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "combination"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "compile"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "complexity"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "composite"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "constant"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "constraint"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "contest"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "contradiction"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "coordinate"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "counter"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "delete"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "diameter"
+    },
+    {
+      "domain": "算法竞赛",
+      "file": "algorithm.json",
+      "word": "edge"
+    }
+  ]
+}

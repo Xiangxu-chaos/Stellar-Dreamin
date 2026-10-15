@@ -36,6 +36,8 @@
 
 import { h, svgIcon, clear, debounce, throttle } from '../core/dom.js';
 import { iconPath } from '../core/icons.js';
+import { domainLabel } from '../core/domainLabel.js';
+import { TIERS, tierOf, tierLabel } from '../core/tierLabel.js';
 import * as themeManager from '../core/themeManager.js';
 import { createWordCard } from '../components/wordCard.js';
 import { showDetailModal } from '../components/detailModal.js';
@@ -115,6 +117,14 @@ export async function createHomePage(options = {}) {
   };
   /** 领域加载竞态守卫：快速连续切换时，只有最后一次的结果允许落地 */
   let loadSeq = 0;
+
+  /**
+   * 领域网格里的「相关词 X 条」占位节点。
+   * 数量来自 wordBankService 的召回预计算（后台进行），拿到后原地回填数字。
+   */
+  const domainCountNodes = [];
+  /** 「相关词 X 条」文案（数量未算出时显示「…」，不显示假数字） */
+  const recallText = (n) => `相关词 ${typeof n === 'number' ? n : '…'} 条`;
 
   /* =======================================================================
      根结构
@@ -205,7 +215,7 @@ export async function createHomePage(options = {}) {
       navTabs,
       h('div.topbar__stats', {}, [
         h('span.stat-chip', {}, ['词库 ', h('b', {}, [statWords])]),
-        h('span.stat-chip', {}, ['领域术语 ', h('b', {}, [statTerms])]),
+        h('span.stat-chip', {}, ['相关词 ', h('b', {}, [statTerms])]),
         h('span.stat-chip', {}, ['收藏 ', h('b', {}, [statFav])]),
       ]),
       masteryBar,
@@ -306,6 +316,7 @@ export async function createHomePage(options = {}) {
       domains: state.domains,
       selected: [],
       onboarding: true,
+      countsPromise: state.countsPromise,
       onConfirm: async (ids) => {
         await studyService.setUserDomains(ids);
         state.myDomainIds = ids;
@@ -322,6 +333,7 @@ export async function createHomePage(options = {}) {
       domains: state.domains,
       selected: state.myDomainIds,
       onboarding: false,
+      countsPromise: state.countsPromise,
       onConfirm: async (ids) => {
         await studyService.setUserDomains(ids);
         state.myDomainIds = ids;
@@ -373,6 +385,13 @@ export async function createHomePage(options = {}) {
     state.domains = wordBankService.getDomains();
     state.domainMap = Object.fromEntries(state.domains.map((d) => [d.id, d]));
 
+    /* 领域选择器上的「相关词 X 条」＝该领域召回总数（与卡片数一致）。
+     * 一次性预计算全部领域并缓存到领域对象，之后渲染只读缓存；
+     * 这里 fire-and-forget，绝不阻塞首屏。 */
+    if (!state.countsPromise) {
+      state.countsPromise = wordBankService.ensureRecallCounts().catch(() => null);
+    }
+
     // 功能一：领域网格只渲染「我的库」里的领域
     const mySet = new Set(state.myDomainIds);
     const visible = state.myDomainIds.length
@@ -380,7 +399,22 @@ export async function createHomePage(options = {}) {
       : [];
 
     const grid = h('div.domain-grid');
+    domainCountNodes.length = 0;              // 网格重建 → 旧的占位节点引用一并丢弃
     for (const d of visible) grid.appendChild(buildDomainCard(d));
+
+    /* 召回数量由 ensureRecallCounts() 后台预计算：拿到后**原地回填**数字，
+       不重渲染整块网格（首屏不阻塞、也不闪烁）。 */
+    if (state.countsPromise) {
+      state.countsPromise.then((counts) => {
+        if (!counts) return;
+        for (const { node, id } of domainCountNodes) {
+          if (typeof counts[id] === 'number') node.textContent = recallText(counts[id]);
+        }
+        if (state.domainId && typeof counts[state.domainId] === 'number') {
+          statTerms.textContent = String(counts[state.domainId]);
+        }
+      });
+    }
 
     clear(heroHost);
 
@@ -425,6 +459,11 @@ export async function createHomePage(options = {}) {
     const t = d.theme || {};
     const isActive = state.domainId === d.id;
 
+    /* 「相关词 X 条」：X = 该领域召回总数（与卡片库里的卡片数一致），
+       数量由 ensureRecallCounts() 预计算，未算好时先占位「…」再回填。 */
+    const countNode = h('span', { text: recallText(d.recallCount) });
+    domainCountNodes.push({ node: countNode, id: d.id });
+
     // 把该领域自己的主题 token 局部注入卡片，实现「同一页面上多个领域各自不同色」
     const card = h('button.domain-card', {
       type: 'button',
@@ -455,7 +494,7 @@ export async function createHomePage(options = {}) {
       h('p.domain-card__desc', { text: d.description }),
       h('div.domain-card__foot', {}, [
         h('div.domain-card__meta', {}, [
-          '术语表 ', h('b', { text: String(d.termCount) }), ' 条',
+          countNode,
           h('div', { style: { marginTop: '6px' } }, [
             h('span.theme-tag', {}, [
               h('span.theme-tag__dot'),
@@ -482,7 +521,9 @@ export async function createHomePage(options = {}) {
 
     // 换肤
     themeManager.applyTheme(state.domain?.theme);
-    statTerms.textContent = String(state.domain?.termCount ?? 0);
+    statTerms.textContent = typeof state.domain?.recallCount === 'number'
+      ? String(state.domain.recallCount)
+      : '…';
 
     // 恢复该领域已勾选
     state.selected = await dataService.getSelection(domainId);
@@ -502,7 +543,7 @@ export async function createHomePage(options = {}) {
 
     if (!options.silent) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      showToast(`已进入《${state.domain.name}》`, {
+      showToast(`已进入${domainLabel(state.domain)}`, {
         desc: `匹配到 ${state.matchCount} 个相关词，配色已切换为「${state.domain.theme?.label || '默认'}」`,
         type: 'ok',
       });
@@ -542,6 +583,12 @@ export async function createHomePage(options = {}) {
     state.visibleCount = PAGE_SIZE;   // 过滤条件变化 → 回到首屏一页
     let list = state.allRelated;
 
+    /* 档位筛选：严格按 wordBankService 写入的 tier 字段过滤（核心 / 相关 / 泛化）。
+       ⚠️ 必须在「搜索」之前做——这样「领域内搜索」永远只在当前档位里找；
+       而领域内未命中时的「全库搜索」结果（无 tier）不会因为档位被清空。 */
+    const level = TIERS.includes(state.ui.filterLevel) ? state.ui.filterLevel : 'related';
+    list = list.filter((w) => tierOf(w) === level);
+
     if (state.query) {
       const kw = state.query.toLowerCase();
       list = list.filter((w) => w.word.toLowerCase().includes(kw) || (w.translation || '').includes(state.query));
@@ -564,10 +611,6 @@ export async function createHomePage(options = {}) {
 
     if (state.ui.onlySelected && state.selected.size) {
       list = list.filter((w) => state.selected.has(w.word));
-    }
-
-    if (state.ui.filterLevel && state.ui.filterLevel !== 'all') {
-      list = list.filter((w) => w.relevance?.level === state.ui.filterLevel);
     }
 
     // 附带静态记忆材料 + 配图 + 多领域标签（全部由 service 层完成）
@@ -687,16 +730,18 @@ export async function createHomePage(options = {}) {
       renderToolbar(); refreshVisibleCards();
     });
 
-    segBtn(levelSeg, '全部', null, state.ui.filterLevel === 'all', () => {
-      state.ui.filterLevel = 'all';
-      dataService.saveUI({ filterLevel: 'all' });
-      renderToolbar(); refreshVisibleCards();
-    });
-    segBtn(levelSeg, '专有术语', null, state.ui.filterLevel === 'exact', () => {
-      state.ui.filterLevel = 'exact';
-      dataService.saveUI({ filterLevel: 'exact' });
-      renderToolbar(); refreshVisibleCards();
-    });
+    /* 档位筛选：核心 / 相关 / 泛化（默认「相关」）。
+       过滤严格基于 wordBankService 写入的 tier 字段，不是旧版的 relevance.level。 */
+    levelSeg.title = '按档位筛选（核心 / 相关 / 泛化）';
+    for (const t of TIERS) {
+      segBtn(levelSeg, tierLabel(t), null, state.ui.filterLevel === t, () => {
+        if (state.ui.filterLevel === t) return;
+        state.ui.filterLevel = t;
+        dataService.saveUI({ filterLevel: t });
+        renderToolbar();
+        refreshVisibleCards();
+      });
+    }
 
     onlySelectedBtn.replaceChildren(
       svgIcon(iconPath(state.ui.onlySelected ? 'checkCircle' : 'filter'), { size: 12, cls: 'btn__icon' }),
@@ -740,12 +785,23 @@ export async function createHomePage(options = {}) {
       renderToolbar(); renderContent();
     };
 
-    // ---- 做题模式（需求五）----
+    // ---- 做题模式（需求五 + 档位联动）----
+    // 题源 = 当前筛选后的列表（即当前档位下的卡片），暂不跨档抽题。
+    quizBtn.title = `只从当前「${tierLabel(state.ui.filterLevel)}」档的卡片里抽题`;
     quizBtn.replaceChildren(
       svgIcon(iconPath('quiz'), { size: 12, cls: 'btn__icon' }),
       document.createTextNode('做题'),
     );
-    quizBtn.onclick = () => startQuiz({ source: quizService.QUIZ_SOURCES.DOMAIN });
+    quizBtn.onclick = () => {
+      if (!state.words.length) {
+        showToast('当前档位暂时没有可做题的单词', {
+          desc: `「${tierLabel(state.ui.filterLevel)}」档下没有卡片，换个档位或清空搜索再试。`,
+          type: 'err',
+        });
+        return;
+      }
+      startQuiz({ source: quizService.QUIZ_SOURCES.DOMAIN });
+    };
 
     // ---- 复习（需求二：收藏夹专属选择题 + 预生成例句，全程不调 AI）----
     reviewBtn.title = '复习模式只从收藏夹出题，例句直接取自预生成材料';
@@ -877,7 +933,7 @@ export async function createHomePage(options = {}) {
       h('div.empty__icon', {}, [svgIcon(iconPath('compass'), { size: 28 })]),
       h('div.empty__title', { text: '请先在上方选择一个兴趣领域' }),
       h('div.empty__desc', {
-        text: '选定后，系统会用该领域的专有术语表从词库中筛出相关词，并直接展示内置的记忆材料与配图 —— 打开即读，无需 API Key。',
+        text: '选定后，系统会围绕该领域从词库里筛出相关词（核心 / 相关 / 泛化三档），并直接展示内置的记忆材料 —— 打开即读，无需 API Key。',
       }),
     ]));
   }
@@ -891,13 +947,16 @@ export async function createHomePage(options = {}) {
     if (!state.domainId) return renderDomains();
 
     if (!state.words.length) {
+      const curLevel = TIERS.includes(state.ui.filterLevel) ? state.ui.filterLevel : 'related';
       contentHost.replaceChildren(h('div.empty', {}, [
         h('div.empty__icon', {}, [svgIcon(iconPath('search'), { size: 28 })]),
-        h('div.empty__title', { text: state.query ? '没有匹配的单词' : '暂无相关词' }),
+        h('div.empty__title', {
+          text: state.query ? '没有匹配的单词' : `${tierLabel(curLevel)}档暂无相关词`,
+        }),
         h('div.empty__desc', {
           text: state.query
             ? '试试其他关键词，或清空搜索框查看全部相关词。'
-            : '当前筛选条件下没有结果，可尝试切换排序或层级筛选。',
+            : `当前按「${tierLabel(curLevel)}」档筛选，该档下没有卡片。点上方「核心 / 相关 / 泛化」换个档位试试。`,
         }),
         state.query
           ? h('button.btn', {
@@ -918,7 +977,7 @@ export async function createHomePage(options = {}) {
       h('div', {}, [
         h('h2', {
           style: { fontSize: '19px' },
-          text: state.query ? `搜索结果 · ${state.words.length} 词` : `《${state.domain.name}》相关词 · ${state.words.length} 词`,
+          text: state.query ? `搜索结果 · ${state.words.length} 词` : `${domainLabel(state.domain)}相关词 · ${state.words.length} 词`,
         }),
         h('div.form-hint', {
           text: state.query && state.searchResults
@@ -1123,7 +1182,7 @@ export async function createHomePage(options = {}) {
         }),
       ]),
       h('div.fav-stats', {}, [
-        h('span.chip', {}, `${exactCount} 个专有术语`),
+        h('span.chip', {}, `${exactCount} 个官方认证`),
         h('span.chip', {}, `${imageCount} 张含配图`),
         h('button.btn.btn--accent.btn--sm', {
           type: 'button',
@@ -1435,6 +1494,14 @@ export async function createHomePage(options = {}) {
       showToast('请先选择兴趣领域', { type: 'err' });
       return;
     }
+    /* 档位联动：做题只从「当前筛选后的列表」抽题，空列表给友好提示而非抛异常 */
+    if (source === quizService.QUIZ_SOURCES.DOMAIN && !state.words.length) {
+      showToast('当前档位暂时没有可做题的单词', {
+        desc: `「${tierLabel(state.ui.filterLevel)}」档下没有卡片，换个档位或清空搜索再试。`,
+        type: 'err',
+      });
+      return;
+    }
 
     state.mode = 'quiz';
     clear(toolbarHost);
@@ -1578,6 +1645,8 @@ export async function createHomePage(options = {}) {
         words: state.words.length,
         favorites: state.favoriteKeys.size,
         matchCount: state.matchCount,
+        /* 当前档位筛选（核心 / 相关 / 泛化），供调试与测试断言 */
+        filterLevel: state.ui.filterLevel,
         // 懒渲染（本轮增量）
         visibleCount: state.visibleCount,
         pageSize: PAGE_SIZE,

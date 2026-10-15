@@ -138,7 +138,7 @@ const { INTEREST_DOMAINS } = await import('../src/config/interestsConfig.js');
 const { createWordCard } = await import('../src/components/wordCard.js');
 
 const DOMAINS = Object.entries(INTEREST_DOMAINS);
-ok('存在四个兴趣领域', DOMAINS.length === 4, `${DOMAINS.length} 个`);
+ok('存在至少四个兴趣领域', DOMAINS.length >= 4, `${DOMAINS.length} 个`);
 
 for (const [id, dom] of DOMAINS) {
   const card = createWordCard({
@@ -182,11 +182,20 @@ for (const [id, dom] of DOMAINS) {
   ok(`[${id}] 单词区在徽标行之后`,
     badges && wordwrap && front.children.indexOf(wordwrap) > front.children.indexOf(badges));
 
-  /* 任务一：正面**只允许三类标签** —— 领域 / 认证 / 词性。
+  /* 任务一：正面**只允许四类标签** —— 领域 / 认证 / 词性 / 档位。
    * 且认证标签文案必须是「官方认证」，绝不能出现长译名 / 来源 / 待确认等啰嗦文本。 */
   const chipEls = badges ? collectByClass(badges, 'chip') : [];
   const chips = chipEls.map((el) => el.textContent.trim());
-  ok(`[${id}] 正面徽标数量 ≤ 3`, chips.length <= 3, `实际 ${chips.length} 个：${chips.join(' | ')}`);
+  ok(`[${id}] 正面徽标数量 ≤ 4`, chips.length <= 4, `实际 ${chips.length} 个：${chips.join(' | ')}`);
+  {
+    const tierChip = chipEls.find((el) => el.className.split(' ').some((k) => k.startsWith('chip--tier-')));
+    const tierText = tierChip ? tierChip.textContent.trim() : '';
+    const tierCls = tierChip ? tierChip.className.split(' ').find((k) => k.startsWith('chip--tier-')) : '';
+    ok(`[${id}] 正面档位标签与档位一致`,
+      Boolean(tierChip) && ['核心', '相关', '泛化'].includes(tierText)
+        && tierCls === `chip--tier-${({ 核心: 'core', 相关: 'related', 泛化: 'extended' })[tierText]}`,
+      tierChip ? `${tierCls} → ${tierText}` : '（缺失）');
+  }
 
   const domainChip = chipEls.find((el) => el._cls.has('chip--domain'));
   ok(`[${id}] 存在领域标签且只显示领域名`,

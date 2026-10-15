@@ -184,7 +184,7 @@ ok('顶栏有掌握进度条', Boolean(root.querySelector('.mastery-bar')));
 /* ============ 功能一：首次进入引导 ============ */
 await flush(60);   // 等 boot() 里的 wordBankService.ensureLoaded() 链跑完
 const pickerCards = document.body.querySelectorAll('.dp-card');
-ok('首次进入弹出领域选择引导', pickerCards.length === 4, `${pickerCards.length} 张领域卡`);
+ok('首次进入弹出领域选择引导', pickerCards.length >= 4, `${pickerCards.length} 张领域卡`);
 const pickerModal = document.body.querySelector('.modal__panel--wide');
 ok('引导为宽模态且不可关闭', Boolean(pickerModal) && !document.body.querySelector('.modal__close'),
   pickerModal ? 'wide' : 'missing');
@@ -221,6 +221,45 @@ if (!st().domainId && spireCard) { spireCard.click(); await flush(80); }
 spireCard = root.querySelectorAll('.domain-card').find((c) => c.textContent.includes('杀戮尖塔'));
 ok('已选中领域', st().domainId === 'slay_the_spire', String(st().domainId));
 ok('筛选出相关词', st().matchCount > 100, `${st().matchCount} 词`);
+
+/* ---- 档位筛选栏：核心 / 相关 / 泛化（默认「相关」）---- */
+const segBtns = () => root.querySelectorAll('.seg__btn');
+const tierBtn = (label) => segBtns().find((b) => b.textContent.trim() === label);
+const TIER_NAMES = ['核心', '相关', '泛化'];
+ok('筛选栏有「核心 / 相关 / 泛化」三个选项', TIER_NAMES.every((t) => Boolean(tierBtn(t))),
+  segBtns().map((b) => b.textContent.trim()).join(' | '));
+ok('默认选中「相关」',
+  Boolean(tierBtn('相关')?.classList.contains('is-active')) && st().filterLevel === 'related',
+  String(st().filterLevel));
+
+/** 收集当前已渲染卡片正面的档位标签文案 */
+const tierChipTexts = () => root.querySelectorAll('.wordcard').map((c) => {
+  const badges = c.querySelector('.wordcard__badges');
+  const chip = badges
+    ? badges.querySelectorAll('.chip').find((x) => x.className.split(' ').some((k) => k.startsWith('chip--tier-')))
+    : null;
+  return chip ? chip.textContent.trim() : '';
+});
+
+tierBtn('核心').click();
+await flush(30);
+const coreChips = tierChipTexts();
+ok('切到「核心」后卡片全部是核心档',
+  coreChips.length > 0 && coreChips.every((t) => t === '核心'),
+  `共 ${coreChips.length} 张；档位=${[...new Set(coreChips)].join(',')}`);
+
+tierBtn('泛化').click();
+await flush(30);
+const extChips = tierChipTexts();
+ok('切到「泛化」后卡片全部是泛化档',
+  extChips.length > 0 && extChips.every((t) => t === '泛化'),
+  `共 ${extChips.length} 张；档位=${[...new Set(extChips)].join(',')}`);
+
+tierBtn('相关').click();
+await flush(30);
+ok('切回「相关」档且卡片全部是相关档',
+  st().filterLevel === 'related' && tierChipTexts().every((t) => t === '相关'),
+  `档位=${[...new Set(tierChipTexts())].join(',')}`);
 
 /* 卡片渲染 */
 const cards = root.querySelectorAll('.wordcard');
@@ -413,6 +452,25 @@ if (reviewBtn) {
   ok('默认每组 20 词高亮', sizeOpts.some((b) => b.textContent === '20 词' && b._cls.has('btn--accent')));
   const includeBox = setupEl ? setupEl.querySelector('.check-line') : null;
   ok('设置页有「包含熟词」开关', Boolean(includeBox && includeBox.querySelector('input')));
+
+  /* ---- 档位选择器（核心 / 相关 / 泛化，默认「相关」）----
+   * 默认档位可能是空的（收藏词恰好都在别的档），因此测试里选「词数最多」的一档，
+   * 保证后续能真的进入答题；默认高亮本身也单独断言。 */
+  const tierWrap = setupEl ? setupEl.querySelector('.tier-opts') : null;
+  const tierBtns = tierWrap ? tierWrap.querySelectorAll('.btn') : [];
+  ok('复习设置页有档位选择器', tierBtns.length === 3, tierBtns.map((b) => b.textContent.trim()).join(','));
+  ok('档位选项为 核心/相关/泛化', tierBtns.map((b) => b.textContent.trim().split(' ')[0]).join(',') === '核心,相关,泛化',
+    tierBtns.map((b) => b.textContent.trim()).join(','));
+  ok('默认档位为「相关」', tierBtns.some((b) => /^相关 /.test(b.textContent.trim()) && b._cls.has('btn--accent')),
+    tierBtns.map((b) => `${b.textContent.trim()}${b._cls.has('btn--accent') ? '*' : ''}`).join(' '));
+
+  const numOf = (b) => Number((b.textContent.match(/(\d+)/) || [0, 0])[1]);
+  const bestTier = tierBtns.slice().sort((a, b) => numOf(b) - numOf(a))[0];
+  if (bestTier && numOf(bestTier) > 0 && !bestTier._cls.has('btn--accent')) {
+    bestTier.click();
+    await flush(300);   // 切档会整页重算（boot）
+  }
+
   const startBtn = root.querySelectorAll('.btn').find((b) => /开始第 1 组/.test(b.textContent));
   ok('有「开始第 1 组」按钮', Boolean(startBtn));
   if (startBtn) {

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>缺口补齐报告 · 六级兴趣化记忆卡片</title>
+<style>
+  :root { --bg:#0f1115; --panel:#171a21; --line:rgba(255,255,255,.10); --text:#e8eaf0;
+          --dim:#9aa3b2; --accent:#6ea8fe; --good:#5ad19a; --warn:#ffce7a; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:32px 20px 64px; background:var(--bg); color:var(--text);
+         font:15px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif; }
+  .wrap { max-width:1040px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  h2 { font-size:19px; margin:34px 0 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  .sub { color:var(--dim); font-size:13px; margin-bottom:22px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .kpi b { display:block; font-size:28px; line-height:1.2; }
+  .kpi span { color:var(--dim); font-size:12.5px; }
+  table { width:100%; border-collapse:collapse; background:var(--panel);
+          border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:13.5px; }
+  th,td { padding:9px 12px; text-align:left; border-bottom:1px solid var(--line); }
+  th { background:rgba(255,255,255,.04); color:var(--dim); font-weight:600; }
+  tr:last-child td { border-bottom:none; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .ok { color:var(--good); } .zero { color:var(--dim); } .warn { color:var(--warn); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px;
+          padding:14px 16px; margin-bottom:12px; }
+  .card__head { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; margin-bottom:8px; }
+  .card__word { font-size:17px; font-weight:700; color:var(--accent); }
+  .tag { font-size:11.5px; padding:1px 8px; border-radius:999px; border:1px solid var(--line); color:var(--dim); }
+  .row { margin:6px 0; }
+  .row i { font-style:normal; color:var(--dim); font-size:12.5px; display:inline-block; min-width:74px; }
+  .ex { color:#cfe0ff; } .zh { color:var(--dim); font-size:13.5px; }
+  code { background:rgba(255,255,255,.06); padding:1px 5px; border-radius:5px; font-size:13px; }
+  .note { background:rgba(110,168,254,.08); border:1px solid rgba(110,168,254,.28);
+          border-radius:10px; padding:12px 14px; color:#cfe0ff; font-size:13.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>缺口补齐报告</h1>
+  <div class="sub">生成时间：2026/10/15 10:08:23 ·
+    对比基线：<code>C:\Users\ASUS\AppData\Local\Temp\dm_backup3</code> → 当前 <code>src/data/domainMaterials/</code></div>
+
+  <div class="grid">
+    <div class="kpi"><b>1341</b><span>本次新增材料条目</span></div>
+    <div class="kpi"><b>1572 → 2913</b><span>材料总量</span></div>
+    <div class="kpi"><b class="ok">0</b><span>原有条目被改动（必须 0）</span></div>
+    <div class="kpi"><b class="ok">0</b><span>条目被删除（必须 0）</span></div>
+  </div>
+
+  <div class="note" style="margin-top:18px">
+    本次运行走的是 <code>tools/autoFixGap.mjs</code> —— 它<strong>只新增、不修改、不删除</strong>。
+    上表「原有条目被改动」与「条目被删除」两项恒为 0，就是最直接的证据。
+  </div>
+
+  <h2>一、逐领域明细</h2>
+  <table>
+    <tr><th>领域</th><th>文件</th><th class="num">补齐前</th><th class="num">补齐后</th>
+        <th class="num">新增</th><th class="num">原有改动</th><th class="num">删除</th></tr>
+    <tr>
+      <td>明日方舟</td><td><code>arknights.json</code></td>
+      <td class="num">24</td><td class="num">118</td>
+      <td class="num ok">+94</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>羽毛球</td><td><code>badminton.json</code></td>
+      <td class="num">30</td><td class="num">53</td>
+      <td class="num ok">+23</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>篮球</td><td><code>basketball.json</code></td>
+      <td class="num">30</td><td class="num">95</td>
+      <td class="num ok">+65</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>绝命毒师</td><td><code>breakingBad.json</code></td>
+      <td class="num">35</td><td class="num">67</td>
+      <td class="num ok">+32</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>经典电影</td><td><code>classicMovies.json</code></td>
+      <td class="num">33</td><td class="num">87</td>
+      <td class="num ok">+54</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>原神</td><td><code>genshinImpact.json</code></td>
+      <td class="num">24</td><td class="num">161</td>
+      <td class="num ok">+137</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>空洞骑士</td><td><code>hollowKnight.json</code></td>
+      <td class="num">895</td><td class="num">895</td>
+      <td class="num zero">0</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>王者荣耀</td><td><code>honorOfKings.json</code></td>
+      <td class="num">100</td><td class="num">188</td>
+      <td class="num ok">+88</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>神探夏洛克</td><td><code>sherlock.json</code></td>
+      <td class="num">32</td><td class="num">86</td>
+      <td class="num ok">+54</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>杀戮尖塔</td><td><code>slayTheSpire.json</code></td>
+      <td class="num">246</td><td class="num">720</td>
+      <td class="num ok">+474</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>杀戮尖塔2</td><td><code>slayTheSpire2.json</code></td>
+      <td class="num">24</td><td class="num">146</td>
+      <td class="num ok">+122</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr>
+      <td>无畏契约</td><td><code>valorant.json</code></td>
+      <td class="num">99</td><td class="num">297</td>
+      <td class="num ok">+198</td>
+      <td class="num ok">0</td>
+      <td class="num ok">0</td></tr>
+    <tr><td><b>合计</b></td><td></td>
+      <td class="num"><b>1572</b></td><td class="num"><b>2913</b></td>
+      <td class="num ok"><b>+1341</b></td>
+      <td class="num ok"><b>0</b></td>
+      <td class="num ok"><b>0</b></td></tr>
+  </table>
+
+  <h2>二、脚本内部红线自检（仅针对本次新增的 1341 条）</h2>
+  <table>
+    <tr><th>检查项</th><th class="num">违规条数</th><th>说明</th></tr>
+    <tr><td>story 字数 ∈ [15, 60]</td><td class="num ok">0</td><td>微故事必须够长且不啰嗦</td></tr>
+    <tr><td>story 无空泛话术</td><td class="num ok">0</td><td>禁用「较为常见 / 可联想 / 可以建立…」黑名单</td></tr>
+    <tr><td>example 含该单词</td><td class="num ok">0</td><td>英文例句必须原样含该词（不区分大小写）</td></tr>
+  </table>
+
+  <h2>三、新增材料抽样（每领域 2 条）</h2>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">basement</span>
+      <span class="tag">明日方舟</span>
+      <span class="tag">story 38 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 地下室</div>
+    <div class="row"><i>领域关联</i>罗德岛本舰地下层：存放源石样本、隔离矿石病重症感染者的封闭区域</div>
+    <div class="row"><i>微故事</i>罗德岛本舰的地下室里，凯尔希把高危源石样本锁进隔离柜，禁止任何干员私自靠近。</div>
+    <div class="row"><i>英文例句</i><span class="ex">The Rhodes Island basement stores dangerous Originium samples behind locked doors.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">罗德岛的地下室将危险的源石样本锁在门后。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">dormitory</span>
+      <span class="tag">明日方舟</span>
+      <span class="tag">story 33 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 宿舍</div>
+    <div class="row"><i>领域关联</i>干员宿舍区：干员休息、恢复体力的生活区</div>
+    <div class="row"><i>微故事</i>深夜的干员宿舍里，能天使还在打游戏，隔壁的德克萨斯已经关灯睡觉了。</div>
+    <div class="row"><i>英文例句</i><span class="ex">After a long patrol, the operators returned to their dormitory to rest.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">长时间巡逻后，干员们回到宿舍休息。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">interval</span>
+      <span class="tag">羽毛球</span>
+      <span class="tag">story 56 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 间隔，间歇；幕间休息</div>
+    <div class="row"><i>领域关联</i>羽毛球比赛中的技术暂停（局中11分时的间歇），以及两局之间的休息时间</div>
+    <div class="row"><i>微故事</i>汤姆斯杯决赛第三局，林丹11比9领先时裁判示意进入interval，他走到场边擦汗喝水，教练抓紧布置下一段战术。</div>
+    <div class="row"><i>英文例句</i><span class="ex">During the interval of the Thomas Cup final, Lin Dan wiped his sweat and listened to his coach's instructions.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">在汤姆斯杯决赛的间歇期间，林丹擦了擦汗，听取教练的指导。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">agility</span>
+      <span class="tag">羽毛球</span>
+      <span class="tag">story 47 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 敏捷，灵活；机敏</div>
+    <div class="row"><i>领域关联</i>羽毛球运动员在场上快速移动、急停变向和反应的能力</div>
+    <div class="row"><i>微故事</i>尤伯杯半决赛，中国女单选手凭借惊人的agility连续救起三个边线球，最终逆转取胜，全场沸腾。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Her agility on the court helped her save three smashes during the Uber Cup semifinal.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">她在场上的敏捷帮助她在尤伯杯半决赛中救起了三个扣杀。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">accuracy</span>
+      <span class="tag">篮球</span>
+      <span class="tag">story 37 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 准确性，精确度</div>
+    <div class="row"><i>领域关联</i>投篮命中率、传球准确度等比赛中的精准程度。</div>
+    <div class="row"><i>微故事</i>总决赛第七场，库里三分球十投八中，accuracy 高达八成，直接杀死比赛。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Stephen Curry's accuracy from beyond the arc was crucial in the NBA Finals.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">斯蒂芬·库里在NBA总决赛中三分线外的准确性至关重要。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">accurate</span>
+      <span class="tag">篮球</span>
+      <span class="tag">story 36 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>adj. 准确的，精确的</div>
+    <div class="row"><i>领域关联</i>描述投篮、传球或判罚精准无误。</div>
+    <div class="row"><i>微故事</i>季后赛最后一攻，詹姆斯一记 accurate 长传找到底角的队友，三分绝杀。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Stephen Curry's accurate three-point shooting helped the Warriors win another NBA championship.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">斯蒂芬·库里精准的三分投篮帮助勇士队又赢得了一个NBA总冠军。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">acid</span>
+      <span class="tag">绝命毒师</span>
+      <span class="tag">story 33 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 酸；adj. 酸的</div>
+    <div class="row"><i>领域关联</i>在制毒过程中，酸是关键的化学试剂，用于提取和纯化冰毒。</div>
+    <div class="row"><i>微故事</i>沃尔特·怀特在实验室里用酸溶解了证据，杰西·平克曼看到后震惊不已。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Walter White used a powerful acid to dissolve the evidence in Breaking Bad.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">在《绝命毒师》中，沃尔特·怀特用强酸溶解了证据。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">addiction</span>
+      <span class="tag">绝命毒师</span>
+      <span class="tag">story 36 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 上瘾，沉溺</div>
+    <div class="row"><i>领域关联</i>指对冰毒等毒品的依赖，是剧中许多角色陷入深渊的根源。</div>
+    <div class="row"><i>微故事</i>杰西·平克曼的女友简因吸毒过量而死，凸显了addiction的致命危害。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Jesse Pinkman struggled with his addiction to meth throughout Breaking Bad.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">在《绝命毒师》中，杰西·平克曼一直在与冰毒瘾作斗争。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">inception</span>
+      <span class="tag">经典电影</span>
+      <span class="tag">story 45 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 开端，开始</div>
+    <div class="row"><i>领域关联</i>影片开头、故事起点；也指《盗梦空间》中“植入观念”的原始概念</div>
+    <div class="row"><i>微故事</i>《盗梦空间》中，柯布向团队解释植入观念的inception，即从梦的起点改变一个人的想法。</div>
+    <div class="row"><i>英文例句</i><span class="ex">In Inception, Cobb explains that inception means planting an idea at the very beginning of a dream.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">在《盗梦空间》中，柯布解释说植入观念意味着在梦的最开端种下一个想法。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">architecture</span>
+      <span class="tag">经典电影</span>
+      <span class="tag">story 49 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 建筑学，建筑风格</div>
+    <div class="row"><i>领域关联</i>电影中的建筑风格、场景设计；也指梦境空间的构造</div>
+    <div class="row"><i>微故事</i>《盗梦空间》里，柯布带阿丽雅德妮进入梦境，她惊叹于巴黎街道的architecture像折叠的纸盒。</div>
+    <div class="row"><i>英文例句</i><span class="ex">In Inception, Ariadne marvels at the architecture of Paris as the streets fold over like a cardboard box.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">在《盗梦空间》中，阿丽雅德妮惊叹于巴黎的建筑，街道像纸盒一样折叠起来。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">aggravate</span>
+      <span class="tag">原神</span>
+      <span class="tag">story 44 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>v. 加重，恶化；激怒</div>
+    <div class="row"><i>领域关联</i>在《原神》中，指元素反应「激化」中的「蔓激化」，使草元素伤害加重</div>
+    <div class="row"><i>微故事</i>提瓦特的纳西妲用草元素攻击触发了蔓激化，敌人的伤势瞬间aggravate，血量急剧下降。</div>
+    <div class="row"><i>英文例句</i><span class="ex">In Teyvat, the Dendro reaction can aggravate the damage dealt to enemies.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">在提瓦特，草元素反应可以加重对敌人造成的伤害。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">aggravating</span>
+      <span class="tag">原神</span>
+      <span class="tag">story 40 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>adj. 令人恼怒的，加剧的</div>
+    <div class="row"><i>领域关联</i>在《原神》中，形容激化反应带来的持续加剧的伤害或令人烦躁的敌人行为</div>
+    <div class="row"><i>微故事</i>深渊教团的法师不断召唤丘丘人，这种aggravating的战术让旅行者十分头疼。</div>
+    <div class="row"><i>英文例句</i><span class="ex">The aggravating attacks from the Abyss Order made the journey more difficult.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">深渊教团那些令人恼怒的攻击让旅程变得更加艰难。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">beleaguer</span>
+      <span class="tag">王者荣耀</span>
+      <span class="tag">story 42 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>v. 围攻，使困扰</div>
+    <div class="row"><i>领域关联</i>在王者荣耀中，指多路兵线压境，敌方英雄持续围困我方防御塔或基地，使我方陷入被动。</div>
+    <div class="row"><i>微故事</i>敌方五人抱团压上高地，兵线如潮水般涌来，我方基地水晶被 beleaguer 得喘不过气。</div>
+    <div class="row"><i>英文例句</i><span class="ex">In Honor of Kings, the enemy team beleaguered our crystal with continuous minion waves.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">在王者荣耀中，敌方队伍用连绵的小兵波围攻我们的水晶。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">besiege</span>
+      <span class="tag">王者荣耀</span>
+      <span class="tag">story 37 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>v. 围攻，包围</div>
+    <div class="row"><i>领域关联</i>在王者荣耀中，指敌方英雄集结在防御塔或基地周围，形成包围之势，阻止我方出入。</div>
+    <div class="row"><i>微故事</i>暗影主宰被击杀后，敌方带着主宰先锋 besiege 我方高地，防御塔接连倒塌。</div>
+    <div class="row"><i>英文例句</i><span class="ex">After slaying the Overlord, the enemy besieged our high ground in Honor of Kings.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">击杀暗影主宰后，敌方在王者荣耀中围攻我们的高地。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">arrogant</span>
+      <span class="tag">神探夏洛克</span>
+      <span class="tag">story 38 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>adj. 傲慢的，自大的</div>
+    <div class="row"><i>领域关联</i>夏洛克·福尔摩斯常被苏格兰场警探视为傲慢无礼，他毫不掩饰对平庸智力的蔑视。</div>
+    <div class="row"><i>微故事</i>雷斯垂德在贝克街抱怨夏洛克·福尔摩斯太傲慢，夏洛克却用一句推理让他哑口无言。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Lestrade often calls Sherlock Holmes arrogant, yet the consulting detective's deductions are rarely wrong.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">雷斯垂德常称夏洛克·福尔摩斯傲慢，但这位咨询侦探的推理很少出错。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">autopsy</span>
+      <span class="tag">神探夏洛克</span>
+      <span class="tag">story 43 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 验尸，解剖</div>
+    <div class="row"><i>领域关联</i>在圣巴塞洛缪医院，莫莉·琥珀为夏洛克·福尔摩斯提供验尸报告和尸体样本。</div>
+    <div class="row"><i>微故事</i>莫莉·琥珀在圣巴塞洛缪医院做完验尸，把报告递给夏洛克·福尔摩斯，他立刻发现了毒药痕迹。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Molly Hooper performed the autopsy at Barts and handed the report to Sherlock Holmes.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">莫莉·琥珀在圣巴塞洛缪医院完成验尸，把报告交给了夏洛克·福尔摩斯。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">ability</span>
+      <span class="tag">杀戮尖塔</span>
+      <span class="tag">story 36 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 能力，本领</div>
+    <div class="row"><i>领域关联</i>能力牌，打出后不立即生效而是提供被动效果或状态，如“恶魔形态”每回合增加力量</div>
+    <div class="row"><i>微故事</i>在尖塔中，铁甲战士抽到能力牌恶魔形态，每回合获得力量，最终击败腐化之心。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Playing a Power card like Demon Form grants a permanent ability that increases Strength each turn.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">打出像恶魔形态这样的能力牌会提供一种永久能力，每回合增加力量。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">absorption</span>
+      <span class="tag">杀戮尖塔</span>
+      <span class="tag">story 34 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 吸收，专注</div>
+    <div class="row"><i>领域关联</i>吸收，指通过卡牌或遗物吸收伤害、能量或生命值，如“收割”吸收生命</div>
+    <div class="row"><i>微故事</i>静默猎手用“收割”吸收敌人生命，回复自身生命值，成功在进阶20存活。</div>
+    <div class="row"><i>英文例句</i><span class="ex">The Reaper card allows absorption of health from enemies, healing the Silent in the Spire.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">“收割”牌允许从敌人身上吸收生命值，为尖塔中的静默猎手回复生命。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">ascension</span>
+      <span class="tag">杀戮尖塔2</span>
+      <span class="tag">story 34 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>上升，升天</div>
+    <div class="row"><i>领域关联</i>进阶模式，逐层增加难度的挑战等级</div>
+    <div class="row"><i>微故事</i>铁甲战士踏入尖塔，选择进阶20，每层敌人都更凶狠，他倒在了首领面前。</div>
+    <div class="row"><i>英文例句</i><span class="ex">The Ironclad unlocked Ascension 20 after defeating the boss.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">铁甲战士在击败首领后解锁了进阶20。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">chest</span>
+      <span class="tag">杀戮尖塔2</span>
+      <span class="tag">story 26 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>胸膛；箱子</div>
+    <div class="row"><i>领域关联</i>宝箱，可开出遗物或金币的容器</div>
+    <div class="row"><i>微故事</i>静默猎手打开宝箱，获得一枚稀有遗物，攻击力大幅提升。</div>
+    <div class="row"><i>英文例句</i><span class="ex">The Silent opened a chest and found a rare relic.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">静默猎手打开一个宝箱，找到了一件稀有遗物。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">apparition</span>
+      <span class="tag">无畏契约</span>
+      <span class="tag">story 42 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 幻影，鬼怪</div>
+    <div class="row"><i>领域关联</i>在《无畏契约》中，指幽影（Omen）释放的暗影幻象，用于遮蔽视野或迷惑对手。</div>
+    <div class="row"><i>微故事</i>幽影在亚平宁镇守A点，残局时放出apparition遮蔽狙击镜，对手误判位置被反杀。</div>
+    <div class="row"><i>英文例句</i><span class="ex">Omen's apparition blocked the enemy's vision, allowing the team to retake the site.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">幽影的幻影遮蔽了敌人的视野，让队伍得以重新夺回据点。</span></div>
+  </div>
+  <div class="card">
+    <div class="card__head">
+      <span class="card__word">ascendancy</span>
+      <span class="tag">无畏契约</span>
+      <span class="tag">story 36 字</span>
+      <span class="tag">AI 生成</span>
+    </div>
+    <div class="row"><i>通用释义</i>n. 优势，支配地位</div>
+    <div class="row"><i>领域关联</i>在《无畏契约》中，指一方在比赛中取得的统治性优势，如经济领先或地图控制。</div>
+    <div class="row"><i>微故事</i>上半场连赢八局后，队伍取得ascendancy，经济领先让对手无力反击。</div>
+    <div class="row"><i>英文例句</i><span class="ex">After winning eight rounds in a row, the team gained ascendancy and controlled the entire map.</span></div>
+    <div class="row"><i>例句翻译</i><span class="zh">连赢八局后，队伍取得了优势并控制了整张地图。</span></div>
+  </div>
+
+  <h2>四、涉及领域（按新增量排序）</h2>
+  <table>
+    <tr><th>领域</th><th class="num">新增</th><th>新增词汇（前 20）</th></tr>
+    <tr>
+      <td>杀戮尖塔</td><td class="num ok">+474</td>
+      <td><code>ability, absorption, adhere, affair, amass, anarchy, armament, assail, assault, assess, assessment, atlas, atrocious, atrocity, attrition, augury, batter, blaze, boisterous, bolt …</code></td></tr>
+    <tr>
+      <td>无畏契约</td><td class="num ok">+198</td>
+      <td><code>apparition, ascendancy, bastion, bunker, communicable, covenant, cure, deadly, demolish, detriment, disguise, dominance, dominant, economic, economical, economist, espionage, fatal, feint, fiasco …</code></td></tr>
+    <tr>
+      <td>原神</td><td class="num ok">+137</td>
+      <td><code>aggravate, aggravating, ascension, bloom, bow, melt, reputation, sword, vision, altar, archaeology, archive, ascent, blueprint, bounty, cathedral, celestial, chronicle, commission, commissioner …</code></td></tr>
+    <tr>
+      <td>杀戮尖塔2</td><td class="num ok">+122</td>
+      <td><code>ascension, chest, curse, damage, defend, elite, enemy, exhaustion, intention, merchant, poison, reward, strike, striking, upgrade, agony, altar, ascent, bind, carcass …</code></td></tr>
+    <tr>
+      <td>明日方舟</td><td class="num ok">+94</td>
+      <td><code>basement, dormitory, elite, potential, barrier, calamity, caravan, crystal, currency, diagnose, disaster, discipline, evacuate, frontier, garrison, intelligence, isolation, logistics, mineral, patrol …</code></td></tr>
+    <tr>
+      <td>王者荣耀</td><td class="num ok">+88</td>
+      <td><code>beleaguer, besiege, capitulate, caste, cure, decelerate, despot, detriment, economic, economical, economist, empirical, empiricism, equip, fiasco, flunk, founder, gear, gradation, hierarchy …</code></td></tr>
+    <tr>
+      <td>篮球</td><td class="num ok">+65</td>
+      <td><code>accuracy, accurate, athletic, award, balance, banner, broadcast, campaign, challenge, champion, chant, chase, clash, combat, compete, competition, competitive, competitor, conquer, consistency …</code></td></tr>
+    <tr>
+      <td>经典电影</td><td class="num ok">+54</td>
+      <td><code>inception, architecture, audience, award, cinema, classic, climax, comedy, conflict, corruption, crisis, critic, deception, drown, encounter, haunt, haunting, immortal, legend, liberty …</code></td></tr>
+    <tr>
+      <td>神探夏洛克</td><td class="num ok">+54</td>
+      <td><code>arrogant, autopsy, blunder, brilliant, coincide, confess, confront, confrontation, custody, decipher, deductive, detective, disguise, eccentric, fatal, flaw, fraud, guilt, hunch, inference …</code></td></tr>
+    <tr>
+      <td>绝命毒师</td><td class="num ok">+32</td>
+      <td><code>acid, addiction, bribe, chemical, concealment, conspiracy, convict, conviction, corruption, crystal, custody, debt, desperate, diagnosis, explosive, extract, extraction, fugitive, gang, guilt …</code></td></tr>
+    <tr>
+      <td>羽毛球</td><td class="num ok">+23</td>
+      <td><code>interval, agility, coach, competition, endurance, fatigue, finalist, injury, recover, referee, spectator, tactic, velocity, equinox, fitful, interlude, intermission, intermittent, lull, double …</code></td></tr>
+  </table>
+</div>
+</body>
+</html>

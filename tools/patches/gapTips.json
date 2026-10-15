@@ -1,0 +1,10 @@
+{
+  "_comment": [
+    "逐词「陷阱提示」：注入 tools/autoFixGap.mjs 的 prompt，用于那些 AI 天然容易写错形态的词。",
+    "用法：node tools/autoFixGap.mjs --tips=tools/patches/gapTips.json [--domain=xxx]",
+    "键 = 单词（小写），值 = 给 AI 的一句话提示。只在对应词进入本批时才会出现。"
+  ],
+  "consultant": "例句里必须原样出现 consultant 这个词本身（不要写成 consulting / consult）——例如：Sherlock Holmes serves as a consultant for Scotland Yard.",
+  "exemplify": "例句里必须原样出现 exemplify 这个词本身（不要写成 exemplifies / exemplified）——例如：These cases exemplify a wider problem.",
+  "overcome": "例句里必须原样出现 overcome 这个词本身（不要写成 overcame / overcoming）——例如：They must overcome the odds."
+}

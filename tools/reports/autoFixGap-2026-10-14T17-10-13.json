@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-14T17:10:13.986Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 2,
+  "gapBefore": 2,
+  "created": 1,
+  "failed": 1,
+  "remain": 1,
+  "elapsedSec": 7,
+  "items": [
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "exemplify"
+    }
+  ]
+}

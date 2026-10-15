@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-14T16:52:09.591Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 4,
+  "gapBefore": 23,
+  "created": 4,
+  "failed": 0,
+  "remain": 19,
+  "elapsedSec": 5,
+  "items": [
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "interval"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "agility"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "coach"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "competition"
+    }
+  ]
+}

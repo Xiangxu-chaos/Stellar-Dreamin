@@ -32,6 +32,11 @@ import studyService from '../services/studyService.js';
 const SIZES = studyService.REVIEW_GROUP_SIZES || [10, 20, 30, 50];
 const DEFAULT_SIZE = studyService.DEFAULT_REVIEW_GROUP_SIZE || 20;
 
+/** 复习档位（核心 / 相关 / 泛化，默认「相关」） */
+const TIERS = studyService.REVIEW_TIERS || ['core', 'related', 'extended'];
+const TIER_LABELS = studyService.REVIEW_TIER_LABELS || { core: '核心', related: '相关', extended: '泛化' };
+const DEFAULT_TIER = studyService.DEFAULT_REVIEW_TIER || 'related';
+
 /**
  * @param {object} options
  * @param {string|null} options.domainId     可选：只看某个收藏领域
@@ -63,11 +68,14 @@ export function createReviewGroupView(options = {}) {
   let groups = [];
   let groupSize = DEFAULT_SIZE;
   let includeMastered = false;
+  let tier = DEFAULT_TIER;     // 复习档位：core / related / extended
   let currentGroup = 0;        // 0-based
   /** 已落盘的分组统计 [{groupIndex, words, correctCount, wrongCount}] */
   const finishedGroups = [];
 
   let mountedChild = null;     // 当前挂载的 quizView（便于卸载）
+  /** 竞态守卫：切换「每档 / 包含熟词」时会并发重算，只认最后一次 */
+  let prepSeq = 0;
 
   boot();
 
@@ -77,13 +85,17 @@ export function createReviewGroupView(options = {}) {
   async function boot() {
     clear(root);
     root.appendChild(buildSetupLoading());
+    const seq = ++prepSeq;
     try {
-      const prep = await studyService.buildReviewGroups({ domainId, groupSize, includeMastered });
+      const prep = await studyService.buildReviewGroups({ domainId, groupSize, includeMastered, tier });
+      if (seq !== prepSeq) return;              // 期间又改了设置 → 丢弃这次结果
       groups = prep.groups;
       groupSize = prep.groupSize;
       includeMastered = prep.includeMastered;
+      tier = prep.tier || tier;
       renderSetup(prep);
     } catch (e) {
+      if (seq !== prepSeq) return;
       console.warn('[reviewGroupView] 准备分组失败', e);
       renderSetupError(e);
     }
@@ -149,13 +161,30 @@ export function createReviewGroupView(options = {}) {
         if (next === pendingIncludeMastered) return;
         pendingIncludeMastered = next;
         includeMastered = next;
-        // 包含熟词会改变参与复习的词集合 → 需要重新分组
-        const keepSize = groupSize;
-        const rePrep = await studyService.buildReviewGroups({ domainId, groupSize: keepSize, includeMastered });
-        groups = rePrep.groups;
-        paintHint();
+        // 包含熟词会改变参与复习的词集合 → 整页重算（boot 内自带竞态守卫）
+        await boot();
       },
     });
+
+    /* ---- 档位选择器（核心 / 相关 / 泛化，默认「相关」）----
+     * 选哪一档，复习题目就只从该档抽取；切档会整页重算分组。 */
+    const tierCounts = (prep && prep.tierCounts) || { core: 0, related: 0, extended: 0 };
+    const tierOpts = h('div.group-setup__opts.tier-opts');
+    const tierButtons = TIERS.map((id) => {
+      const btn = h('button.btn.btn--sm', {
+        type: 'button',
+        class: id === tier ? `btn--accent tier-opt--${id}` : `tier-opt--${id}`,
+        title: `只复习「${TIER_LABELS[id]}」档的词`,
+        text: `${TIER_LABELS[id]} ${tierCounts[id] ?? 0}`,
+        onClick: async () => {
+          if (id === tier) return;
+          tier = id;
+          await boot();
+        },
+      });
+      return btn;
+    });
+    tierOpts.append(...tierButtons);
 
     /** 根据当前 groupSize 重新计算分组预览（本地切分，无需再读存储） */
     function recount() {
@@ -167,11 +196,18 @@ export function createReviewGroupView(options = {}) {
     function paintHint() {
       const { groups: g, size, total } = recount();
       if (total === 0) {
-        hint.replaceChildren(h('span', {
-          text: pendingIncludeMastered
-            ? '收藏夹还是空的。先去卡片库收藏一些单词，再回来复习。'
-            : '收藏夹里没有可复习的词（熟词已被排除，可勾选「包含熟词」）。',
-        }));
+        /* 空态要区分三件事：档位没词 / 熟词被排除 / 收藏夹本来就空 —— 否则文案会误导。 */
+        const otherTiers = TIERS.filter((t) => t !== tier && (tierCounts[t] || 0) > 0);
+        let msg;
+        if (otherTiers.length) {
+          msg = `「${TIER_LABELS[tier]}」档暂时没有可复习的词；可切到 ${otherTiers
+            .map((t) => `${TIER_LABELS[t]}（${tierCounts[t]}）`).join('、')} 试试。`;
+        } else if (excluded > 0 && !pendingIncludeMastered) {
+          msg = '收藏夹里没有可复习的词（熟词已被排除，可勾选「包含熟词」）。';
+        } else {
+          msg = '收藏夹还是空的。先去卡片库收藏一些单词，再回来复习。';
+        }
+        hint.replaceChildren(h('span', { text: msg }));
         startBtn.disabled = true;
         return;
       }
@@ -224,6 +260,15 @@ export function createReviewGroupView(options = {}) {
           h('span', { text: '每组多少个词？' }),
         ]),
         sizeOpts,
+      ]),
+      h('div.group-setup__row', {}, [
+        h('div.group-setup__label', {}, [
+          h('span', { text: '复习哪一档？' }),
+          h('span.group-setup__note', {
+            text: '核心＝召回最相关的前 20%｜相关＝20%–50%｜泛化＝其余',
+          }),
+        ]),
+        tierOpts,
       ]),
       h('label.check-line', {}, [
         includeBox,

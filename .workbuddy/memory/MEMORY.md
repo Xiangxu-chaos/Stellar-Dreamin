@@ -1,303 +1,193 @@
 # 项目长期记忆：六级单词 · 兴趣化记忆卡片
 
-## 架构铁律（违反会导致数据损坏）
+纯前端 ES Module + 命令式 DOM（`h()` from `src/core/dom.js`），**无构建链**。
+所有 `tools/*.mjs` 跑在 Node（自建 DOM/BOM shim），不需要浏览器。
 
-1. **分层边界**：`components/` 与 `pages/` 禁止出现 `localStorage.` / `fetch(` / 词库 JSON 路径。
-   已由 `tools/verifyIncrement.mjs` 第 10 项自动断言。
+---
 
-2. **读取函数绝不写盘**（血的教训）。
-   `dataService.js` 中所有「读」函数（`readFavoriteList` / `getFavorites` /
-   `getFavoriteKeys` / `getAllFavoriteWords` / `isFavorite`）**不得包含任何写入调用**。
-   - 曾因在 `readFavoriteList()` 里加「自愈回写」，导致一次普通读取就把
-     localStorage 的收藏写成 `{}`（表现为「进收藏夹数字清零、刷新也空」）。
-   - 任何「顺手修数据 / 迁移脏数据」的逻辑必须放在**写路径**（用户主动操作），
-     并走 `updateRaw()` 串行队列；读路径只能返回归一化视图，脏数据一律忽略。
-   - 已由 `tools/verifyIncrement.mjs` 第 11 项自动断言（静态解析函数体）。
+## 一、架构铁律（违反会导致数据损坏）
 
-3. **所有存储写操作走 `updateRaw(key, mutator)`**，禁止在业务代码里直接 `writeRaw`/`setItem`，
-   否则并发点击会相互覆盖。
+1. **分层边界**：`components/` 与 `pages/` 禁止出现 `localStorage.` / `fetch(` / 词库 JSON 路径
+   （`tools/verifyIncrement.mjs` 第 10 项静态断言）。
+2. **读取函数绝不写盘**（血的教训）：`dataService.js` 所有「读」函数不得含任何写入调用。
+   曾因在 `readFavoriteList()` 加「自愈回写」，一次普通读取就把收藏写成 `{}`。
+   任何迁移/修脏数据逻辑只能放在**写路径**（用户主动操作）并走 `updateRaw()`；读路径只返回归一化视图。
+3. **所有存储写操作走 `updateRaw(key, mutator)`**，禁止业务代码直接 `writeRaw`/`setItem`（并发点击会互相覆盖）。
+4. **唯一接触后端的模块 = `src/core/authService.js`**；`index.html` 不引入任何第三方 SDK。
 
-## 数据语义
+## 二、数据语义
 
-- **收藏全局唯一**：`getFavorites()` 返回全部（跨领域），不做领域过滤、无写入副作用。
-  存储为 `{ [domainId::word]: {word, domainId, favoritedAt} }` 扁平表。
-- **计数口径**：顶部导航数字 = `getFavorites().length`（= 归一化后仍有效的记录条数）。
+- **收藏全局唯一**：`getFavorites()` 跨领域返回全部、无写入副作用；存储 `{ [domainId::word]: {...} }`；
+  顶部数字 = `getFavorites().length`。
 - **「单词 × 领域」模型**：同一个词可在多个领域各有独立材料与收藏记录。
-- 新增兴趣领域：只改 `src/config/interestsConfig.js` + 加一份
-  `src/data/domainMaterials/<id>.json` + 在 `wordBankService.MATERIAL_FILES` 加映射，
-  运行时永不调 AI。
+- 数量类断言一律「与配置长度对比」，**不写死数字**。
 
-## 图片功能：已彻底移除（2026-10-14 定稿，当前状态）
+## 三、领域体系（12 个领域 / 四板块）
 
-4. **卡片不再显示任何图片**。用户决定暂时放弃自动配图，保留纯文字卡片。
-   模板层已**删除全部** `<img>` 创建、外部图链接加载、`picsum` 等随机图库、
-   图片 URL 编辑与本地上传逻辑。
-   - `wordCard.buildFigure()` 恒渲染占位块；detailModal 的图片编辑区已整块删除。
-   - `homePage` 去掉 `onSaveImage/onUploadImage/onClearUpload` 与 `refreshCardImage`。
-   - `settingsModal` 去掉「清除配图覆盖」按钮。
-   - 废弃并删除：`tools/validateImageUrls.mjs`、`tools/applyValidatedImages.mjs`、
-     `tools/_imgsrc/`。
-   - **严禁**再接入任何随机图库 / 图片生成服务。
+`category` 只能是 `DOMAIN_CATEGORY.GAME='游戏' / FILM='影视' / SPORTS='体育' / OTHER='其他'`；
+`DOMAIN_CATEGORY_ORDER = ['游戏','影视','体育','其他']` 即界面展示顺序。
+`getDomains()` 透传 `category`（缺省 `'其他'`）+ `titleQuoted`；
+`domainPicker.groupByCategory()` 分组，**未识别/缺失的 category 一律归「其他」**（卡片不能凭空消失）。
+DOM 结构：`.dp-groups > section.dp-group[data-category] > (.dp-group__head + .dp-grid)`。
 
-5. **`imageUrl` 字段保留为空串占位**：四个领域 JSON（共 1340 条）的 `imageUrl`
-   一律为 `""`，字段本身保留（`normalizeMaterial()` 兜底 `''`）。
-   以后要恢复配图，只需往 JSON 填链接，无需改结构。
-   - 批量清空脚本：`tools/clearImageUrls.mjs`（幂等）。
-   - 规范原文仍在 `src/config/interestsConfig.js`：
-     「所有领域材料必须支持 imageUrl 字段，用于卡片配图」。
+分布：游戏 7（原四领域 + 杀戮尖塔2 / 明日方舟 / 原神）、影视 3（绝命毒师 / 神探夏洛克 / 经典电影）、
+体育 2（篮球 / 羽毛球）、其他 0。主题色由 `makeDomainTheme({...})` 工厂推导 —— **不要手写 theme**，
+漏配 token 会悄悄回退成默认蓝。
 
-6. **`domainMaterialService` 的图片解析工具保留但恒返回空串**：
-   `resolveImage()` / `pickImage()` / `getMaterialWithImage()` /
-   `attachMaterials()` 仍在（历史兼容），因数据层无图，解析结果恒为 `''`。
-   `dataService` 的 `userImages`（上传图 Base64）与 `images`（URL 覆盖）两张表
-   及 API **仍在**，仅组件层不再调用。读取函数零写入铁律不变。
+**新增领域三步**（不要手写 JSON）：
+① `tools/genDomainMaterials.mjs` 的 `DOMAINS` 加数据块（`file` 字段决定文件名），
+   跑 `--domain=<key>`（`--dry` 只校验）；
+② `interestsConfig.js` 加领域常量（`category` + `theme` + `domainTerms` + `domainVocabulary`
+   + `excludedTerms` + `generationPrompt`）并登记 `INTEREST_DOMAINS` / `DOMAIN_ORDER`；
+③ `wordBankService.MATERIAL_FILES` 加映射。
 
-7. **占位块布局铁律（不可回退）**：`.wordcard__figure` / `.detail__figure` 用
-   `aspect-ratio: 16/9 + max-height + overflow: hidden`，**禁止改回固定 `height`**；
-   背景统一灰色 `rgba(128,132,148,0.10)`；
-   占位块 `.wordcard__ph-figure` / `.detail__figure-empty` 铺满容器、内容居中、
-   `overflow: hidden`，保证卡片高度分毫不差、绝不撑破。
+⚠️ **孤儿材料铁律**：材料词必须**同时**① 存在于 `src/data/cet6Core.json`（5942 词）
+② 落在该领域的**召回集合**内（`studyService.buildRelatedWords()` 为准，由 `domainTerms`/`domainVocabulary`
+驱动）。缺任一条 → 材料永远筛不进领域、界面永不出现。`excludedTerms` 会**整词剔除**。
+已知坑：`cooper`(库珀) 会误伤 `cooperation/cooperate`，必须放进 `excludedTerms`。
 
-9. **卡片正面布局铁律（标签精简后定稿）**：
-   `.wordcard` / `.wordcard--compact` **只用 `min-height`（336px / 300px），
-   禁止写死 `height`** —— 标签换行时卡片必须能被自然撑高；
-   `.wordcard__face` 为 `flex column`；子元素弹性分配：
-   - `.wordcard__figure` = `flex: 0 1 auto; min-height: 0`（可收缩，给长标签让位）；
-   - `.wordcard__badges` = `flex: none`（不被压缩，永远完整）；
-   - `.wordcard__wordwrap` = `flex: 1 1 auto; min-height: 0; overflow: hidden`
-     （**必须 overflow:hidden**，否则内容超出时垂直居中的单词会向上溢出盖住标签）；
-   - `.wordcard__word` = **`flex-shrink: 0`**（单词绝不压缩变形，曾出现 chamber→cnamber）；
-   - `.wordcard__foot` = `flex: none`。
-   长领域标签换行靠 `.wordcard__badges .chip--domain { white-space: normal }`。
-   **禁止**用 `position: absolute` 摆放标签 / 单词。
-   已由 `tools/verifyCardLayout.mjs`（66 断言）静态 + 动态锁死。
+## 四、卡片渲染铁律
 
-10. **卡片正面标签铁律（只允许 3 类，顺序固定）**：
-    ① 领域名 —— `buildDomainBadges()` 只返回 `chip--domain`，**文本就是 `domain.name`**，
-       不得拼接 `· 官方译名`、不得显示角色/分支、不得用 `chip--domain-exact`；
-    ② 认证 —— `chip--term`，文案固定 **「官方认证」**，仅 `relevance.level === 'exact'`
-       时出现；普通词不加；
-    ③ 词性 —— `chip--core` / `chip--derived` = 「核心词」/「派生词」。
-    **正面严禁** `buildSourceChip()`（`chip--source` 显示 source 全文、`chip--warn`
-    「译名待确认」）—— 来源徽标只允许出现在**背面**。
-    已由 `tools/verifyCardLayout.mjs` 动态断言锁死。
+- **图片功能已彻底移除**（2026-10-14 定稿）：无 `<img>`、无外部图链接、无随机图库（**严禁**再接）。
+  `imageUrl` 字段保留为空串占位（`normalizeMaterial()` 兜底 `''`）；清空脚本 `tools/clearImageUrls.mjs`。
+  `domainMaterialService` 的 `resolveImage/pickImage/...` 保留但恒返回 `''`。
+- **无材料时不再显示任何兜底废话**（2026-10-15 定稿，不可回退）：
+  `localDomainHint()`（wordCard / flipCard）与 `hint()`（detailModal）**已彻底删除**。
+  背面只渲染真实存在的 material 字段：`domainMeaning` / `story` / `example` 缺哪块就**整块隐藏**，
+  不显示「暂无例句」「该词与当前领域暂无直接对应关系」等任何占位。
+  detailModal 无材料时 `metaSection()` 也返回 null。
+- **占位块布局**：`.wordcard__figure` / `.detail__figure` 用 `aspect-ratio:16/9 + max-height + overflow:hidden`，
+  **禁止改回固定 `height`**；灰底 `rgba(128,132,148,0.10)`。
+- **卡片正面布局**：`.wordcard` 只用 `min-height`（336px / 300px），**禁止写死 `height`**。
+  `.wordcard__face` flex column；`__figure` = `flex:0 1 auto; min-height:0`；
+  `__badges` = `flex:none`；`__wordwrap` = `flex:1 1 auto; min-height:0; overflow:hidden`（必须 overflow，
+  否则单词会向上溢出盖住标签）；`__word` = **`flex-shrink:0`**（曾出现 chamber→cnamber）；`__foot` = `flex:none`。
+  长领域标签换行靠 `.chip--domain { white-space: normal }`。**禁止** `position:absolute` 摆标签/单词。
+- **正面只允许 3 类标签（顺序固定）**：① 领域名（**文本就是 `domain.name`**，不拼译名、不显示角色）；
+  ② 认证 `chip--term`「官方认证」（仅 `relevance.level === 'exact'`）；③ 词性「核心词 / 派生词」。
+  **正面严禁** source / 「译名待确认」徽标 —— 来源徽标只能在背面。
 
-11. **复习模式「移入熟词库」流转**：
-    `quizView.choose()` 答案展开后，按钮组含「移入熟词库」→ 调
-    `props.onMoveToMastered(word, domainId, true)`，成功后按钮固定为「已在熟词库」
-    并 disabled，再 `scrollIntoView` 到「下一题」。`props.isMastered(word, domainId)`
-    为真时按钮初始即禁用。
-    接线链：`homePage.handleMoveToMastered` → `startReview` / `startQuiz` /
-    `startWrongReview` → `createReviewGroupView({ onMoveToMastered, isMastered })`
-    → `createQuizView`。
-    `handleMoveToMastered` 内部：`studyService.setMastered(dId, w, true)` +
-    `dataService.setFavorite(dId, w, false)`，再同步 `state.masteredKeys` /
-    `state.favoriteKeys` / `state.words` / 已挂载卡片 / 顶部数字 / `reloadMastered()`。
+## 五、`.dp-card` 视觉三态（勿回退）
 
-12. **后端最终方案：自建免备案 API（Cloudflare Worker + D1）**。
-    Supabase（国内被墙 + 代理域名始终 NXDOMAIN）与腾讯云 CloudBase 两套方案
-    **已全部废弃并彻底移除**。
-    ⚠️ 已删除：`src/core/supabaseClient.js`、`src/core/cloudbaseClient.js`、
-    `sql/01_init_schema.sql`。`index.html` **不再引入任何第三方 SDK**
-    （唯一外链只剩 Google Fonts），注册/登录/上报全部走原生 `fetch`。
+由 `components.css` 第 22 节锁死：未选中 `saturate(0.25)+opacity 0.68`；悬停 `translateY(-3px)+border-strong`
+（触摸设备在 `@media (hover:none)` 关掉）；选中 = `color-mix(... var(--domain-primary))` 渐变背景
++ `1px border + 2px 同色外环`（**不引起栅格重排，别改成真 2px border**）+ 实心主题色圆底白勾。
+命名映射：组件传 `--dp-primary`，CSS 内一律用 `--domain-primary`。过渡统一 **0.2s**（不得残留 0.22s）。
+勾选图标 `iconPath('check')` 尺寸 14 + `cls:'dp-card__tick'`；卡片带 `aria-pressed` / `aria-label`。
 
-    **接口（全部 POST + JSON，Base = `https://api.stellar-dreamin.site`）**
-    - `POST /api/register` `{username, password}` → `{success:true, userId}`
-    - `POST /api/login`    `{username, password}` → `{success:true, userId}`
-    - `POST /api/record`   `{userId, type, word, domainId}` → `{success:true}`
-    （2026-10-14 实测：CORS `Access-Control-Allow-Origin: *`，允许 POST/OPTIONS，
-    `Content-Type` 可带；错误体字段是 **`error`** 不是 `message`：
-    登录失败 `401 {"error":"用户名或密码错误"}`，重名注册 `400 {"error":"用户名已存在"}`。
-    ⚠️ 后端对**缺 password** 的注册请求不校验，会直接建号，客户端已自行拦截空密码。）
+## 六、领域名称书名号（2026-10-15 定稿）
 
-    ✅ **唯一接触后端的模块 = `src/core/authService.js`**（唯一出现 `fetch` 的
-    认证/上报代码）。导出：`API_BASE` / `SESSION_KEY='wb:cet6:auth'` /
-    `RECORD_TYPES{favorite,wrong,mastered}` / `loadSession` / `saveSession` /
-    `clearSession` / `getUserId` / `isSignedIn` / `register` / `login` /
-    `registerAndSignIn` / `loginAndSignIn` / `logout` / `reportRecord` /
-    `translateAuthError`。
-    `loadSession()` 兼容两种历史形态：纯 userId 字符串、`{userId,username}` JSON；
-    存储访问全部 try/catch，损坏时按未登录处理。
-    `postJSON` 带 `AbortController` 超时（12s），错误带 `code`
-    （`input|timeout|network|http|bad-json|api`）再交给 `translateAuthError` 出中文。
+**作品（游戏/影视）加《》，体育项目等非作品不加** —— 篮球 / 羽毛球是纯文字。
+唯一判定处：`src/core/domainLabel.js`（`isTitleQuoted()` / `domainLabel()`）；
+优先级 `domain.titleQuoted` → `category==='体育'` → 按 id 回查配置 → 兜底按作品处理。
+`BASKETBALL`/`BADMINTON` 显式 `titleQuoted:false`；`getDomains()` 已透传。
+**禁止**再硬编码 `` `《${domain.name}》` ``；已接入 5 处：wordCard / flipCard / detailModal / homePage / aiService。
+⚠️ `getDomains()` 是**白名单式拷贝**，新增字段必须手动加，否则下游拿不到。
 
-    **路由（`src/main.js`）**：读 `authService.loadSession()` ——
-    有会话 → `createHomePage({userId, username, onSignOut})`；
-    无会话 → `createLoginView({onSuccess})`。
-    `onSuccess` 里 `saveSession` 已由 `loginAndSignIn`/`registerAndSignIn` 完成，
-    main 只负责切视图（**没有用整页 reload**，效果等价且不闪屏）。
-    退出登录走 `confirmDialog`（`components/modal.js`）确认 → `authService.logout()`
-    → 回登录页。`currentView` 状态位（'app'|'login'）防重复挂载。
-    `homePage` 只经 props 收 `{userId, username, onSignOut}`，顶栏为
-    `.topbar__user` = `当前用户：{userId}` + `.topbar__user-out` 退出按钮；
-    **未注入 userId 时不渲染**（保持 Node 测试的旧 DOM 结构）。
+## 七、后端（自建免备案 API：Cloudflare Worker + D1）
 
-    **行为上报（旁路统计，失败静默、绝不影响本地功能）**
-    - 收藏 → `homePage.handleToggleFavorite` 里 `if (actual) report(FAVORITE,...)`
-    - 标记熟词 → `handleToggleMastered` / `handleMoveToMastered` → `report(MASTERED,...)`
-    - 答错 → **`quizService.submitQuizAnswer`** 内 `if (!correct) reportRecord(WRONG)`
-      （单点触发：所有做题入口都经过它，保证「一次作答只上报一次」且不会漏）
-    `reportRecord` 是 fire-and-forget，未登录直接 `Promise.resolve(null)`，
-    内部 `.catch` 吞错。
+Supabase / 腾讯云 CloudBase 方案**已全部废弃并删除**（含 `supabaseClient.js`、`cloudbaseClient.js`、`sql/`）。
+Base = `https://api.stellar-dreamin.site`，全部 POST + JSON：
+`/api/register`、`/api/login` → `{success:true, userId}`；`/api/record` `{userId,type,word,domainId}`。
+CORS `*`；错误体字段是 **`error`** 不是 `message`（401 用户名或密码错误 / 400 用户名已存在）。
+⚠️ 后端对**缺 password** 的注册请求不校验会直接建号，客户端自行拦截空密码。
 
-    ⚠️ **本阶段不做数据隔离**：收藏/错题/熟词仍全部走本地 localStorage，
-    `/api/record` 只上报、不回写、不参与渲染。数据迁移是下一阶段任务。
-    四张表的字段设计仍沿用：`favorites` / `wrong_words` / `mastered_words` /
-    `user_domains`（`user_domains` 是领域订阅，**天然没有 word 字段**）。
+`authService.js` 导出：`API_BASE` / `SESSION_KEY='wb:cet6:auth'` / `RECORD_TYPES` / `loadSession` /
+`saveSession` / `clearSession` / `getUserId` / `isSignedIn` / `register` / `login` /
+`registerAndSignIn` / `loginAndSignIn` / `logout` / `reportRecord` / `translateAuthError`。
+`loadSession()` 兼容「纯 userId 字符串」与 `{userId,username}`；损坏按未登录处理。
+`postJSON` 带 `AbortController` 12s 超时，错误带 `code`（input|timeout|network|http|bad-json|api）。
 
-13. **性能铁律（2026-10-14 定稿，改动前务必先读）**
-    - **启动非阻塞**：`index.html` 的 `#boot-splash` 是**启动骨架屏**
-      （内联 HTML/CSS + 3 个 `.sk-card`，0 依赖 0 网络 → 解析完即可见），
-      文案是「加载中…」，**不得再写回 `Loading Word Bank`**。
-      另有内联兜底脚本：3.5s 后仍存在则显示 `#boot-retry` 重试按钮。
-    - `main.js` 有 `export const BOOT_TIMEOUT = 3000` + `withTimeout(promise, ms, fallback)`
-      （**超时不 reject**，返回 `{timedOut, ok, value, error}`）。
-      词库 `ensureLoaded()` 与 `resolveSession()` **各带 3s 超时**，
-      且词库加载**不阻塞**路由决策（先拿 `bankTask` 再判会话）。
-      会话超时 → 视为未登录 + 「登录验证超时，请重试」。挂载视图后立刻
-      `removeSplash()`（不等词库），并清 `window.__bootSplashTimer`。
-    - `homePage` 有 `BANK_TIMEOUT = 3000` 软超时守卫：超时 → `renderBankTimeout()`
-      （「词库加载超时 + 重新载入」），词库晚到则正常渲染（自愈）。
-      **任何路径都不允许无限停留在骨架屏。**
-    - **懒渲染铁律**：`PAGE_SIZE = 30`、`MAX_RENDER_CARDS = 50`、
-      `renderStep() = Math.min(PAGE_SIZE, MAX_RENDER_CARDS)`。
-      首屏只渲染 `state.words.slice(0, state.visibleCount)`；
-      「加载更多」必须走 `extendGrid()` / `extendList()` **增量追加**
-      （禁止整表重渲染，否则丢失翻面状态 + 卡顿），单批增量恒 ≤ 30 ≤ 50。
-      收藏夹用 `state.favVisible` 分页（重渲染式）。
-      `selectDomain` / `refreshVisibleCards` / `switchTab('favorites')` 都要重置分页。
-    - **领域切换有竞态守卫** `loadSeq`（`const seq = ++loadSeq`，回来时
-      `seq !== loadSeq` 丢弃）——快速连点领域不会被慢请求覆盖。
-      另外 `syncUserStateDebounced = debounce(…, 200)` 在 `selectDomain` 末尾调用，
-      为将来「向后端拉用户状态」预留 200ms 防抖（当前 `authService.fetchUserState`
-      未导出 → 空操作，**没有新增任何后端请求**）。
-    - **内存缓存（第二次切回同领域秒开的来源）**：
-      · `wordBankService.domainWordsCache`（键 `domainId|词库集合`）缓存
-        `computeDomainWords()` 的全量匹配+排序结果；命中直接返回**同一数组本体**，
-        `limit`/`minScore` 只在缓存上切片/过滤。切词库/注册自定义词库会失效缓存。
-      · `domainMaterialService.ensure()` 命中 `materialCache` 直接同步返回；
-        导出 `isLoaded` / `peekMaterials` / `peekMaterial` / `clearCache`。
-    - 卡片 DOM 只在 `homePage.buildGrid/buildList` 生成，**新增渲染入口必须同样分页**。
+路由：`main.js` 读会话 → 有则 `createHomePage({userId,username,onSignOut})`，无则 `createLoginView({onSuccess})`；
+**不整页 reload**。退出走 `confirmDialog`。顶栏 `.topbar__user`；**未注入 userId 时不渲染**（保持 Node 测试的旧 DOM）。
+上报（fire-and-forget，失败静默）：收藏 → `handleToggleFavorite`；熟词 → `handleToggleMastered` /
+`handleMoveToMastered`；答错 → **`quizService.submitQuizAnswer` 单点上报**（保证一次作答只报一次）。
+⚠️ 本阶段**不做数据隔离**：收藏/错题/熟词仍全走 localStorage，`/api/record` 只上报不回写。
 
-14. **启动骨架屏 / 分页器样式落点**（`components.css` 第 20 节）：
-    `.loading-head` / `.skeleton-grid` / `.skeleton-card`(+`__figure`/`__bar`) /
-    `@keyframes skeleton-shimmer` / `.card-flow` / `.card-pager` / `.card-pager__btn` /
-    `.card-pager__hint`；`responsive.css` 小屏 `.skeleton-grid` 两列 + 分页按钮占满宽。
+## 八、性能铁律（改动前先读）
 
+- **启动非阻塞**：`#boot-splash` 内联骨架屏（0 依赖 0 网络），文案「加载中…」，
+  **不得写回 `Loading Word Bank`**；内联兜底脚本 3.5s 后显示 `#boot-retry`。
+- `main.js`：`BOOT_TIMEOUT=3000` + `withTimeout()`（**超时不 reject**，返回 `{timedOut,ok,value,error}`）；
+  词库加载与登录验证**并行**、各带 3s 超时；词库不阻塞路由决策；挂载后立刻 `removeSplash()`。
+- `homePage`：`BANK_TIMEOUT=3000` 软超时 → `renderBankTimeout()`，词库晚到自愈。
+  **任何路径都不允许无限停留骨架屏。**
+- **懒渲染**：`PAGE_SIZE=30`、`MAX_RENDER_CARDS=50`；首屏只渲 `slice(0, visibleCount)`；
+  「加载更多」走 `extendGrid()/extendList()` **增量追加**（禁止整表重渲染，会丢翻面状态 + 卡顿）。
+  `selectDomain` / `refreshVisibleCards` / `switchTab` 都要重置分页。
+- **竞态守卫** `loadSeq`（回来时 `seq !== loadSeq` 丢弃）；`syncUserStateDebounced` 200ms 防抖。
+- **内存缓存**：`wordBankService.domainWordsCache`（键 `domainId|词库集合`，命中返回**同一数组本体**）；
+  `domainMaterialService.ensure()` 命中 `materialCache` 同步返回（导出 `isLoaded/peekMaterials/peekMaterial/clearCache`）。
 
-（历史）8. 合法图源白名单（仅在对未来恢复配图时有参考价值）：
-   `steamcdn-a.akamaihd.net`、`media.valorant-api.com`、`game.gtimg.cn`。
-   加新图前**必须**用 `tools/validateImageUrls.mjs` 实测
-   `200 + image/* + 实际字节 >1KB`，不通过就留空。
-   ⚠️ 不用 Fandom（`static.wikia.nocookie.net` 实测 404 + referer 校验）。
+## 九、其它功能约定
 
-## 领域勾选卡片的视觉状态（2026-10-14 新增，勿回退）
+- **复习模式「移入熟词库」**：`quizView.choose()` 答案展开后按钮 → `onMoveToMastered(word, domainId, true)`，
+  成功后固定为「已在熟词库」并 disabled，再滚动到「下一题」；`isMastered()` 为真时初始禁用。
+  接线：`homePage.handleMoveToMastered` → `startReview/startQuiz/startWrongReview` →
+  `createReviewGroupView` → `createQuizView`。
+- **`exampleSource`**（例句出处，与 `source` 译名来源是两个维度，**别合并**）：
+  取值 `Fandom Wiki` / `AI重写` / `游戏内文本` / `AI 生成`；`normalizeMaterial` 已兜底。
+  维护脚本 `tools/addExampleSource.mjs`（幂等，**带 main() 守卫**，别删）；导出 `HK_PROPER_NOUNS` / `REWRITES` 供测试复用。
+  展示：`.mat__example-src`（wordCard 背面）/ `.detail__example-src`（detailModal），文案「例句来源：xxx」。
 
-`components/domainPicker.js` 的 `.dp-card` 三态视觉由 `components.css` 第 22 节锁死：
+---
 
-- **未选中（默认）**：`filter: saturate(0.25)` + `opacity: 0.68` + `border: 1px solid var(--c-border)`。
-  **禁止**去掉 filter/opacity —— 这是「一眼分清选没选」的对比基准。
-- **悬停**：`translateY(-3px)` + `border-color: var(--c-border-strong)`（只对未选中生效，
-  选中态另有 `.dp-card.is-on:hover`）。触摸设备在 `responsive.css` 的 `@media (hover:none)`
-  里把 `.dp-card:hover { transform: none }` 关掉。
-- **选中**：`.dp-card.is-on` ——
-  · `background` = 主题色渐变（`color-mix(in srgb, var(--domain-primary) 42%/18%/30%, transparent)`
-    叠 `--c-surface-strong`），先写一行 `var(--dp-soft)` 作不支持 color-mix 的兜底；
-  · `border-color: var(--domain-primary)` + `box-shadow: 0 0 0 2px var(--domain-primary)`
-    （1px 边框 + 2px 同色外环 = 视觉 3px 加粗，**不引起栅格重排**，别改成真的 2px border）；
-  · 右上角 `.dp-card__check` 变实心主题色圆底 + 白勾（`color:#fff`），`scale(1)`；
-  · 图标 `.dp-card__icon` 反相（实心主题色底 + 白图标）。
-- **命名映射铁律**：`.dp-card` 内 `--domain-primary: var(--dp-primary)`。
-  组件传的是 `--dp-primary`（每卡一个），CSS 里一律用 `--domain-primary`，
-  与 `homePage` 领域卡的命名保持一致。
-- **过渡统一 0.2s**（`0.2s var(--ease-out)`），**不得**出现 `0.22s` 等旧值。
-- 勾选图标 `iconPath('check')` 尺寸 **14**，带 `cls: 'dp-card__tick'`；
-  CSS `.dp-card__check svg` 描边 `stroke-width: 2.8`。
-- 卡片带 `aria-pressed` 与 `aria-label="名称（已勾选 / 未勾选）"`，点击时同步更新。
+## 十、材料质量红线（硬性拦截，不可放宽）
 
-## 例句出处字段 exampleSource（2026-10-14 新增）
+`tools/genDomainMaterials.mjs` 的 `validate()` 是**唯一**写盘前置闸门：
+- story ∈ **[15, 60] 字**；禁用 `VAGUE_PHRASES`（常见 / 可用以 / 可联想 / 可以建立 / 与之相关 /
+  众所周知 / 可与游戏场景建立联想 …）；
+- example 非空且**必须含该单词**：`exampleHasWord(word, example)` = `bare` 包含 或
+  去尾 e 的 `stem`(≥5) 包含（容忍 -ing/-ed/-s；**注意 y→ies / 不规则过去式不算**）。
+- **两段式写盘**：先把选中的领域**全部**校验完，任一不合格 → `exit(1)`，**一个字节都不写**。
+- `export { STORY_MIN, STORY_MAX, VAGUE_PHRASES, storyLength, validate, checkMaterial, exampleHasWord, DOMAINS }`。
+  `checkMaterial(key,w,m)` 是**单条红线的唯一实现**，生成器与修复工具共用。
+- 生成器与已落盘 JSON **严格幂等**（`--all` 重跑 diff 为 SAME）→ 修数据正确姿势是
+  「改生成器 → 重新生成」，**不要手改 JSON**。
+- ⚠️ 生成器有 **merge-preserve**：`--all` 会保留磁盘上、源码里没有的条目（`--reset` 关闭），
+  防止 AI 补充的材料被覆盖。
 
-- `src/data/domainMaterials/hollowKnight.json` 的 **895 条**材料全部带 `exampleSource`，
-  取值只有四类：`Fandom Wiki`(3) / `AI重写`(87) / `游戏内文本`(28) / `AI 生成`(777)。
-- 生成/维护脚本：`tools/addExampleSource.mjs`（**幂等**，`--dry` 可干跑）。
-  同时导出 `HK_PROPER_NOUNS`（空洞骑士专有名词白名单）与 `REWRITES`（重写表），
-  校验脚本直接 import 复用，**避免两份定义漂移**。
-  脚本已加「仅在直接执行时跑 main()」守卫，import 不会写盘 —— 别删这个守卫。
-- 判定规则：Fandom 来源 + 例句**不含专有名词** → 重写并标 `AI重写`；
-  已含专名 → 保持原句、标 `Fandom Wiki`。重写句必须含该单词 + 至少 1 个专名。
-- `domainMaterialService.normalizeMaterial` 已加 `exampleSource` 兜底（缺 → `''`）。
-- 展示：`wordCard` 背面例句区 `.mat__example-src`、`detailModal` 的 `.detail__example-src`，
-  文案「例句来源：xxx」。**与 `source`（译名来源）是两个维度，别合并**。
+**修复 / 补齐工具链**
+- `tools/fixDefectiveMaterials.mjs`：精准修复坏字段。`--patch=<file>` 用显式补丁、
+  默认调 DeepSeek、`--mock` 离线自检、`--dry` 只扫描、`--gap` 补缺口。
+  **字段级合并**：story 坏只改 story，example 坏只改 example+exampleZh，其余字段一字节不动。
+  写盘前二次把关且**只校验本次实际修改的字段**（老库缺 `exampleSource` 不该阻止 story 修复）。
+- `tools/autoFixGap.mjs`（**本轮核心**）：补齐「领域词没有材料」的缺口。
+  自带 `for` 循环：按 `--batch`（默认 30）逐批处理，**每批立刻写盘**并打进度日志；
+  不合格的词**二分递归重拆小批**、最后单条重试；网络错误指数退避（`--retries`，默认 4）。
+  断点续跑安全（已补齐的词自动跳过）。`--dry` 计划预览 / `--mock` 离线自检 / `--tips=<json>` 注入逐词陷阱提示。
+  `--noun-fix` 另一模式：只重写「例句看不出领域」的条目（仅换 example/exampleZh），
+  强制含 `tools/patches/nounLists.json` 里的领域专有名词。
+  ⚠️ **Node fetch shim 只许拦 `file://`**，其余 URL 必须透传原生 fetch，
+  否则 DeepSeek 的 HTTPS 请求会被当成本地路径解析、得到 404 空响应（已踩坑）。
+- `tools/genGapReport.mjs` → `缺口补齐报告.html`；`tools/genFixReport.mjs` → `坏词条修复对比.html`。
+- `tools/genLegacyBaseline.mjs` → `tools/baselines/legacy-baseline.json`：原始四领域**原有条目**的内容指纹
+  （`source` 不含「AI 补充」的条目，按 key 排序后 sha256）。补缺口会合法地增加条数，
+  所以「原有条目没被改」只能靠指纹证明。**不要手改基线文件**，重冻结要重跑脚本并说明原因。
+- AI 补充的条目统一 `unverified: true` + `source: '《领域》官方中文（AI 补充，待复核）'`；
+  断言接受「待确认 / 待复核」两种措辞。
 
-## 测试
+**测试**：`tools/verify*.mjs` + `smokeDom.mjs` 共 **22 个脚本 / 0 失败期望**。
+改动前全跑、提交前全跑。按改动面选最小集合：
+卡片布局 → `verifyCardLayout`+`verifyImageStandard`+`smokeDom`；
+认证/路由 → `verifyAuth`+`verifyWiring`+`smokeDom`；
+启动/切换/渲染量 → `verifyPerformance`+`smokeDom`；
+勾选视觉 → `verifyPickerFeedback`+`smokeDom`；
+材料 JSON → `verifyExampleSource`+`verifyExampleCoverage`+`verifyExampleRender`+
+`verifyMaterialQuality`+`verifyDomainExpansion`；
+领域配置/板块/新增领域 → `verifyDomainExpansion`+`verifyIncrement`+`verifyTasksII_III`+`smokeDom`。
+⚠️ 原始四领域老数据有历史瑕疵（缺 `exampleSource`），按「旧数据保持不动」只做轻量校验，
+但 **story 字数 / 空泛话术 / 例句含词** 已通过 `verifyMaterialQuality` A6~A9 **全库 12 文件统一纳入**。
 
-`tools/` 下全部为 Node 环境（自建 DOM/BOM shim），无需浏览器。
-改动前全跑、提交前全跑（**19 个脚本** / 0 失败期望）：
-`verifyIncrement` / `verifyFeatures4` / `verifyImageStandard` / `verifyCardLayout` /
-`verifyWiring` / `verifyAuth` / `smokeDom` / `verifyFavorites` / `verifyNoWriteOnRead` /
-`verifyFix3FavoriteConsistency` / `verifyTasksII_III` / `verifyWordCase` /
-`verifyExampleCoverage` / `verifyExampleRender` / `verifyFillLogic` /
-`verifyMaterialResilience` / `verifyPerformance` / **`verifyPickerFeedback`** /
-**`verifyExampleSource`**。
+### ⚠️ 易踩的坑
 
-改卡片布局相关代码后**至少要跑** `verifyCardLayout` + `verifyImageStandard` + `smokeDom`。
-改认证 / 路由相关代码后**至少要跑** `verifyAuth` + `smokeDom` + `verifyWiring`。
-改启动流程 / 领域切换 / 渲染量相关代码后**至少要跑** `verifyPerformance` + `smokeDom`。
-改领域勾选视觉后**至少要跑** `verifyPickerFeedback` + `smokeDom`（smokeDom 里也点过 picker）。
-改领域材料（JSON）后**至少要跑** `verifyExampleSource` + `verifyExampleCoverage` +
-`verifyExampleRender`。
+1. 断言若直接匹配**文件原文**，注释里的字样会污染结果（已有两次教训）。
+   凡「不得出现某字符串」的断言，**一律先剥注释再匹配**。
+2. shim 的 `querySelector` **只搜后代、不搜自身**，也不支持后代组合器（`.a b` 会被当成一个类名）。
+3. shim 的 `style` 必须是带 `setProperty` 的对象；`window` 还必须提供 **`setTimeout`/`clearTimeout`**
+   （`themeManager.applyTheme` 会调）。只切一次领域不触发，**连切两次才暴露**。
+4. Node 下 `studyService`/`wordBankService` 靠 `fetch` 读本地 JSON，原生 fetch 不支持 `file://`
+   （`not implemented... yet...`）→ 测试脚本必须自建 fetch shim，且**只拦 `file://`**。
 
-`verifyPickerFeedback.mjs`（34 断言）锁死 `.dp-card` 三态视觉：未选中 saturate+opacity、
-悬停 translateY(-3px)+border-strong、选中 `color-mix(...var(--domain-primary))` 背景、
-1px 边框 + 2px 同色外环、`.dp-card__check` 白勾实心主题色圆底、`--domain-primary: var(--dp-primary)`
-映射、全 0.2s 过渡且无 0.22s 残留、`hover:none` 关位移；JS 侧 `is-on`/`aria-pressed`/
-`aria-label`/图标 14/`dp-card__tick`；动态部分渲染真实 picker 验初始选中态、点击进入/退出、
-每卡都有 `.dp-card__check` 与自己的 `--dp-primary`。
-⚠️ 该脚本的 CSS 规则提取**先剥注释再匹配**，否则注释里的 `.dp-card` 字样会污染结果。
-
-`verifyExampleSource.mjs`（19 断言）锁死：895 条全有 `exampleSource` 且在四类允许值内、
-Fandom 来源只能标 `Fandom Wiki|AI重写`、标 `Fandom Wiki` 的必须含专名、标 `AI重写` 的
-必须含专名且含该词、example/exampleZh 非空；重写表与 JSON 条数一致且逐条真实生效、
-重写表本身每句都合规；`normalizeMaterial` 有 `exampleSource` 兜底；
-wordCard/detailModal 渲染 `.mat__example-src`/`.detail__example-src` 且 CSS 有定义；
-动态建卡片能在 DOM 里读到「例句来源：xxx」。
-
-`verifyPerformance.mjs`（89 断言）锁死性能契约：index.html 启动骨架屏与内联兜底脚本
-（且不得出现 `Loading Word Bank`）、main.js 的 `BOOT_TIMEOUT=3000`/`withTimeout`/
-两个 3s 超时/骨架屏移除时机、homePage 的 `PAGE_SIZE=30`/`MAX_RENDER_CARDS=50`/
-`renderStep`/增量追加/`loadSeq`/200ms 防抖/`BANK_TIMEOUT`、
-两个 service 的缓存 API 与缓存键、CSS 骨架屏与分页器；
-动态部分验证「第二次调用返回同一数组且零新增请求」「材料二次读取零新增 fetch」
-「首屏 30 张、加载更多 +30、切换领域回 30、列表 ≤50 行」「无未捕获 rejection」。
-`verifyImageStandard.mjs` 现验证「图片功能已下线」：imageUrl 全空、无 `<img>` 逻辑、
-无 FileReader、16/9 + overflow:hidden + 灰底、无随机图库、分层边界（47 断言）。
-`verifyCardLayout.mjs`（66 断言）锁死：卡片只用 min-height、单词 `flex-shrink: 0`、
-正面徽标 ≤3 个且只能是「领域名 / 官方认证 / 核心词|派生词」、正面无 source/warn 徽标、
-背面保留来源徽标与例句区。
-`verifyAuth.mjs`（152 断言）锁死：authService 的三个接口路径 / POST+JSON / 超时 /
-会话键 `wb:cet6:auth` / 上报体严格等于 `{userId,type,word,domainId}` /
-fire-and-forget / 未登录不上报 / 中文错误文案（含 401、409、超时、非 JSON、
-`{success:false}`）；index.html 不再有第三方 SDK；main.js 路由守卫与退出登录；
-homePage 顶栏「当前用户：{userId}」+ 三处上报 + 分层边界（不碰 localStorage/fetch）；
-quizService 答错单点上报；loginView 双标签/输入框/成功回调/失败提示 + 分层边界；
-CSS 的 `.auth*` 与 `.topbar__user*`；旧方案文件已删。
-动态部分用**假 fetch** 跑通注册/登录/超时/网络失败/409/401/非 JSON/缺 userId
-共 9 条错误路径 + 上报 payload + 未登录跳过，再渲染 loginView（登录态/注册态/
-成功/失败）与 homePage 顶栏，**全程不联网**。
-
-⚠️ 易踩的坑：
-1. 断言若直接匹配**文件原文**，注释里的字样会污染结果。
-   已有两次教训（旧域名留在注释里导致「假通过」；注释写「不 import xxx」导致假失败）。
-   凡涉及「不得出现某字符串」的断言，一律先剥注释再匹配。
-2. shim 的 `querySelector` **只搜后代、不搜自身**，也不支持后代组合器
-   （`.a b` 会被当成一个类名）。根节点要用 `_cls.has()` 判断。
-3. shim 的 `style` 必须是带 `setProperty` 的对象（`themeManager` 会调它）；
-   shim 的 `window` 还必须提供 **`setTimeout` / `clearTimeout`**
-   （`themeManager.applyTheme` 换肤动画会调 `window.setTimeout`）。
-   ⚠️ 只切一次领域不会触发它（`currentThemeId` 首轮为空），**连切两次才暴露** —— 
-   写涉及「多次切换领域」的测试时务必先补上。
-
-本地预览：`启动本地预览.bat`（端口 8099）。
-沙箱**有外网**（baidu / cloudflare / github / `api.stellar-dreamin.site` 实测均通），
-但走的是 `https_proxy` 网关，**访问本地 8099 要加 `--noproxy '*'`**，否则会得到 502。
-自建后端已实测可用，**登录闭环可在浏览器里真正跑通**（不再有「只能在浏览器确认」的悬案）。
+**本地预览**：`启动本地预览.bat`（端口 8099）。
+沙箱**有外网**，但走 `https_proxy` 网关，**访问本地 8099 必须加 `--noproxy '*'`**，否则 502。

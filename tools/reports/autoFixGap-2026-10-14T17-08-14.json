@@ -1,0 +1,6683 @@
+{
+  "at": "2026-10-14T17:08:14.425Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 30,
+  "gapBefore": 1337,
+  "created": 1334,
+  "failed": 3,
+  "remain": 3,
+  "elapsedSec": 954,
+  "items": [
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "basement"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "dormitory"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "elite"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "potential"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "barrier"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "calamity"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "caravan"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "crystal"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "currency"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "diagnose"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "disaster"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "discipline"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "evacuate"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "frontier"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "garrison"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "intelligence"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "isolation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "logistics"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "mineral"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "patrol"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "refuge"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "reinforce"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "remedy"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "rescue"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "siege"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "survival"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "symptom"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "terminal"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "apostle"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "doctorate"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "sane"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "accumulation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "annihilate"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "antipathy"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "appellation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "ballistics"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "blacksmith"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "calculation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "circulation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "commitment"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "confidential"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "consequential"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "consolation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "constellation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "continence"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "continent"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "contingency"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "contingent"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "continuance"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "continuity"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "contract"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "control"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "controversial"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "controversy"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "correlation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "defend"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "defendant"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "desolation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "disaffected"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "elation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "emotion"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "employment"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "escalation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "essential"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "factor"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "generator"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "haunting"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "inconsequential"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "infection"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "infectious"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "inferential"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "inflation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "influential"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "inoculation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "insanity"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "installation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "insulation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "integral"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "integrate"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "integration"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "integrity"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "jubilation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "lateral"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "legislation"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "motion"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "operate"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "origin"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "originate"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "paradox"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "promote"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "satisfactory"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "specialize"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "statistics"
+    },
+    {
+      "domain": "明日方舟",
+      "file": "arknights.json",
+      "word": "unemployment"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "endurance"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "fatigue"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "finalist"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "injury"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "recover"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "referee"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "spectator"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "tactic"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "velocity"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "equinox"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "fitful"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "interlude"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "intermission"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "intermittent"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "lull"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "double"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "intervene"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "intervention"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "interview"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "accuracy"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "accurate"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "athletic"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "award"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "balance"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "banner"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "broadcast"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "campaign"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "challenge"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "champion"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "chant"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "chase"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "clash"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "combat"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "compete"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "competition"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "competitive"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "competitor"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "conquer"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "consistency"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "consistent"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "contest"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "contestant"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "contract"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "coordinate"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "dexterity"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "dominant"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "dominate"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "draft"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "elimination"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "energetic"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "excel"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "exhaust"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "exhaustion"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "fitness"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "flexibility"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "flexible"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "hurdle"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "intense"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "intensity"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "jump"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "leap"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "logo"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "posture"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "prevail"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "pursue"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "pursuit"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "robust"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "salary"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "sponsor"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "strain"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "strenuous"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "stretch"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "surpass"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "swift"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "tackle"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "transfer"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "triumph"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "uniform"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "velocity"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "vigorous"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "golden"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "layoff"
+    },
+    {
+      "domain": "篮球",
+      "file": "basketball.json",
+      "word": "regulate"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "acid"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "addiction"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "bribe"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "chemical"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "concealment"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "conspiracy"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "convict"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "conviction"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "corruption"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "crystal"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "custody"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "debt"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "desperate"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "diagnosis"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "explosive"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "extract"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "extraction"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "fugitive"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "gang"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "guilt"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "interrogation"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "legitimate"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "loyal"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "pursuit"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "refine"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "revenue"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "ruthless"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "suspicious"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "testimony"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "threat"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "trial"
+    },
+    {
+      "domain": "绝命毒师",
+      "file": "breakingBad.json",
+      "word": "verdict"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "inception"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "architecture"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "audience"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "award"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "cinema"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "classic"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "climax"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "comedy"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "conflict"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "corruption"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "crisis"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "critic"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "deception"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "drown"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "encounter"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "haunt"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "haunting"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "immortal"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "legend"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "liberty"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "masterpiece"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "metaphor"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "myth"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "noble"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "plot"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "profound"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "protagonist"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "quest"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "rebellion"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "redeem"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "rescue"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "revenge"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "ruin"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "screen"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "script"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "solitude"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "sorrow"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "surrender"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "symbol"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "tension"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "theme"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "trial"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "assumption"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "conception"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "consumption"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "contraception"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "exemption"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "forefather"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "interception"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "intersect"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "intersection"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "intersperse"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "interstate"
+    },
+    {
+      "domain": "经典电影",
+      "file": "classicMovies.json",
+      "word": "perception"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "aggravate"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "aggravating"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "ascension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "bloom"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "bow"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "melt"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "reputation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "sword"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "vision"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "altar"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "archaeology"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "archive"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "ascent"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "blueprint"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "bounty"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "cathedral"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "celestial"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "chronicle"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "commission"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "commissioner"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "corrosion"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "crystal"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "desolation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "element"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "ethereal"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "excavation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "forge"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "fragment"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "frontier"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "harmony"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "legend"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "myth"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "quest"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "relic"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "sanctuary"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "voyage"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "armament"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "blaze"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "breakthrough"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "combustion"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "congeal"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "diffuse"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "endowment"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "evaporate"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "flair"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "flame"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "flare"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "genius"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "glide"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "incendiary"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "prestige"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "stature"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "abstraction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "accreditation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "accumulation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "acquaint"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "acquaintance"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "adaptation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "advent"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "adventure"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "appellation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "apprehension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "arbitrate"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "attraction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "blossom"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "calculation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "circulation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "compaction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "comprehension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "computation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "conduct"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "confrontation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "connotation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "consolation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "consternation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "correlation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "damage"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "dimension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "disorder"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "disputation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "dissension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "dissertation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "distraction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "division"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "documentation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "elation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "electrician"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "electrocute"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "electron"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "electronic"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "elementary"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "escalation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "exaltation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "expectation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "exploitation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "extension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "extraction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "faction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "fraction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "fragile"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "fragility"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "hesitation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "hyperbole"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "hypertension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "imitation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "implementation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "inaction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "incrustation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "indentation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "inflation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "infraction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "inoculation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "installation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "insulation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "interaction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "interpretation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "intertwine"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "invitation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "irritation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "isolation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "jubilation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "lamentation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "legislation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "limitation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "origin"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "originate"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "overlook"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "pension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "plantation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "provision"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "quotation"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "satisfaction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "spiral"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "statue"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "tension"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "transaction"
+    },
+    {
+      "domain": "原神",
+      "file": "genshinImpact.json",
+      "word": "vegetation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "beleaguer"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "besiege"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "capitulate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "caste"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "cure"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "decelerate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "despot"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "detriment"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "economic"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "economical"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "economist"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "empirical"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "empiricism"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "equip"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "fiasco"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "flunk"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "founder"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "gear"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "gradation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "hierarchy"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "inexperience"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "injure"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "injury"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "invulnerable"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "kit"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "knack"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "lampoon"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "lurk"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "mob"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "outfit"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "penetrate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "pierce"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "propel"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "prophet"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "reel"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "spring"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "therapy"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "vulnerable"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "acceleration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "administration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "admiration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "alteration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "aspiration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "assassinate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "assistance"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "collaboration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "commemoration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "concentration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "configuration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "conflagration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "cooperation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "corporation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "critic"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "critical"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "criticism"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "criticize"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "declaration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "defendant"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "deliberation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "desperation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "duration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "emigration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "estimate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "experiment"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "expiration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "exploration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "federation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "freighter"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "frustration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "generation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "illegitimate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "illustration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "impassive"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "inauguration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "incorporation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "inscribe"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "inspiration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "integration"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "intimate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "legitimate"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "liberation"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "massive"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "overlook"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "physician"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "physicist"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "positive"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "render"
+    },
+    {
+      "domain": "王者荣耀",
+      "file": "honorOfKings.json",
+      "word": "resist"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "arrogant"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "autopsy"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "blunder"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "brilliant"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "coincide"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "confess"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "confront"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "confrontation"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "custody"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "decipher"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "deductive"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "detective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "disguise"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "eccentric"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "fatal"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "flaw"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "fraud"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "guilt"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "hunch"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "inference"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "inspect"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "inspection"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "intellectual"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "interrogation"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "logic"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "logical"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "mystery"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "peculiar"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "poison"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "precise"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "pursue"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "puzzle"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "rational"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "recall"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "reveal"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "scandal"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "trace"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "trap"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "trial"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "verdict"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "victim"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "collective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "consult"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "effective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "ineffective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "interlock"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "invective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "irrespective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "perspective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "prospective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "protective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "respective"
+    },
+    {
+      "domain": "神探夏洛克",
+      "file": "sherlock.json",
+      "word": "subjective"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ability"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "absorption"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "adhere"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "affair"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "amass"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "anarchy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "armament"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "assail"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "assault"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "assess"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "assessment"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "atlas"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "atrocious"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "atrocity"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "attrition"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "augury"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "batter"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "blaze"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "boisterous"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "bolt"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "bonfire"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "bound"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "braid"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "bump"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "capability"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "capable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "capitulate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cardiac"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cartography"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cease"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cement"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ceremonial"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ceremony"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cessation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "champion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "chaotic"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "chief"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "circulate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "circulation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "circulatory"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "clergy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cloudy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "clout"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "clue"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "collide"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "combatant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "commemoration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "commonplace"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "competence"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "competent"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "conservation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "consolidate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "constituency"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "constituent"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "consumption"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "contemplative"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "contingency"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cornerstone"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "courier"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "course"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "crack"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "crackdown"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "crash"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "crook"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "crooked"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cue"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cure"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "curve"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cushion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dagger"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "debilitate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "decor"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "decorate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dedicated"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "deform"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "deity"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "deplete"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "detachment"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "detect"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "detriment"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "devour"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "devout"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "diagram"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dim"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "disarray"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "disclaim"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "discontinue"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "disorder"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "disorderly"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "disorganize"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "distract"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dread"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dynamic"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "electorate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "electrocute"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "emergency"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "empower"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "energize"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "erupt"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "escalate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "escalation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "estimate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "evocative"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "evolution"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "excavate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "excavation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "expend"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "expendable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "exuberant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "feeble"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ferocity"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "fiasco"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "finding"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "flamboyant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "flame"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "flare"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "flunk"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "foe"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "foggy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "foreman"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "forgo"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "forsake"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "fortuitous"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "founder"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "fraction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "fractional"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "furnish"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "garner"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "gather"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "gesture"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "glean"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "glow"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "gorgeous"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "guidance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "gust"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "gyrate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "halcyon"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hazy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hint"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "horrify"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "horror"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hypnosis"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "illegible"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "imprecation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incapable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incapacitate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incendiary"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incident"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "indefinable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "indeterminate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "indignation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "indistinct"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "induct"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infirm"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infirmity"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infrequent"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inherent"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "injure"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "injury"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "innocuous"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inoffensive"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "insist"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "insistence"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "insistent"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "intend"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "intermission"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "interweave"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "invulnerable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "irate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ire"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "itinerary"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "jumble"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "jump"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "knack"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "knit"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "lair"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "limbo"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "literacy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "lounge"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "lustrous"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "luxuriant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "malicious"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "mess"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "muscle"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "obscure"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "occurrence"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ordinary"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "outbreak"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "outrage"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "persist"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "preserve"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "prompt"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "protective"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "radiant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "reflect"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "religious"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "relinquish"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "repertoire"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "reserve"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "resign"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "revolve"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "rotate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "route"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "secure"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "serene"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "slam"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "smother"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "sober"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "specimen"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "spectacular"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "spectator"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "spike"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "spin"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "spot"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "spring"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "statistical"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "steer"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "stumble"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "suffocate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "suspend"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "swift"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "terrify"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "therapy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "tranquil"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "trial"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "turbulent"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "turmoil"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "uncover"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "vague"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "whirl"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "abstraction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "acceleration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "accountable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "accountant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "accurate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "administration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "admiration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "admission"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "alliance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "alteration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ammunition"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "appliance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "apprehension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "assistance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "attraction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "augment"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "austerity"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "autograph"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "automate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "automatic"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ballistics"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "bandage"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "battery"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "benevolence"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "brilliant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "bronze"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "bulletin"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "calendar"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "carrier"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cauliflower"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "censorship"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "chemical"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "circumstance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "clockwise"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cognition"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "collaboration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "collective"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "collusion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "combination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "combustible"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "commission"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "commonwealth"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "compaction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "compliance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "comprehension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "concentration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "conclude"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "conclusive"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "condemnation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "condolence"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "configuration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "conflagration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "confluence"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "conform"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "confuse"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "congregate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "conjure"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "conscience"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "considerable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "consternation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "consumer"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "consummate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "cooperation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "coronation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "corporation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "corpse"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "counter"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "creative"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "crescent"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "custom"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "customs"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "deadly"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "deceive"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "declaration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "defendant"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "definition"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "deliberation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "deliverance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "delusion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "demonstrate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "denomination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dental"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "desegregate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "designate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "designation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "desperado"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "desperate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "desperation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "destination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "detonation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "devolve"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dictatorship"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dimension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "discrimination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "disillusion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "disrepair"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "dissension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "distracted"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "distraught"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "domination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "donation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "double"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "duration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "editorial"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "electrician"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "electron"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "electronic"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "elimination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "embrace"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "emigration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "emission"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "encore"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "enlighten"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "enshrine"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "escapee"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "establish"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "estrangement"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "everlasting"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "exclusion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "excursion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "exhaustive"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "expiration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "explanation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "explode"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "exploration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "extension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "extraction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "faction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "federation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "finale"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "flurry"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "forceful"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "foreigner"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "fortress"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "fountain"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "fragment"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "frustrate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "frustration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "generation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "golden"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hallucination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "headmaster"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hibernation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "horsepower"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hospitality"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hyperbole"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "hypertension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ignition"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "illumination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "illusion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "illustrate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "illustration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "immortality"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "imponderable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "impurity"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inaction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inauguration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incarnation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incense"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incidental"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inclination"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incorporation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "incursion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infinite"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infinitesimal"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infinity"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inflammable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inflammation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inflammatory"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "influence"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infraction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infringement"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "infusion"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "innumerable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inoperable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inspiration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "inspire"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "instance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "insufferable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "insuperable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "integration"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "intentional"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "interaction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "interchange"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "interesting"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "interruption"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "intolerable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "intonation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "involvement"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "irrecoverable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "keystone"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "liberation"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "logistics"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "machinery"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "magnet"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "masterpiece"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "mental"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "merchandise"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "meteor"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "miserable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "mission"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "nuclear"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "ornament"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "overthrow"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "overturn"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "parasite"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "pension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "philosopher"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "philosophy"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "preferable"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "puzzle"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "questionnaire"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "recognition"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "reinforce"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "reliance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "render"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "repulsive"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "sanction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "satisfaction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "screen"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "segregate"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "signature"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "slavery"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "specialize"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "startle"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "static"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "statue"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "stream"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "strengthen"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "substance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "tactic"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "tangible"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "tension"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "thread"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "thunder"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "tolerance"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "transaction"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "transcript"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "transfer"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "transform"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "transit"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "transition"
+    },
+    {
+      "domain": "杀戮尖塔",
+      "file": "slayTheSpire.json",
+      "word": "trench"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "ascension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "chest"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "curse"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "damage"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "defend"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "elite"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "enemy"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "exhaustion"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "intention"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "merchant"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "poison"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "reward"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "strike"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "striking"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "upgrade"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "agony"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "altar"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "ascent"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "bind"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "carcass"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "chamber"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "conjure"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "corridor"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "decay"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "descent"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "dread"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "gamble"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "gloom"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "grave"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "haunt"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "haunting"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "labyrinth"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "malice"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "pact"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "peril"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "rot"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "ruin"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "skeleton"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "skull"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "torment"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "wither"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "ability"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "aggression"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "agility"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "assail"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "assault"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "atlas"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "attrition"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "barrage"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "bonfire"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "capability"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "capable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "capacity"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "cartography"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "ceremonial"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "ceremony"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "chief"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "commemoration"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "competence"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "competent"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "consume"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "consumption"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "crackdown"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "debilitate"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "defense"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "deplete"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "detriment"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "diagram"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "empower"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "escalate"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "escalation"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "escort"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "expend"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "expendable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "feeble"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "foe"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "imprecation"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "incapable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "incapacitate"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "infirm"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "infirmity"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "inherent"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "injure"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "injury"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "intend"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "invulnerable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "knack"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "literacy"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "muscle"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "repertoire"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "reserve"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "swift"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "apprehension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "austerity"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "comprehension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "considerable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "cooperate"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "cooperation"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "defendant"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "dimension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "dissension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "exhaustive"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "extension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "figurative"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "hypertension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "imperative"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "imponderable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "innumerable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "inoperable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "insufferable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "insuperable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "intentional"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "intolerable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "irrecoverable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "lucrative"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "merchandise"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "miserable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "narrative"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "pension"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "preferable"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "strengthen"
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "file": "slayTheSpire2.json",
+      "word": "tension"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "apparition"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "ascendancy"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "bastion"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "bunker"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "communicable"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "covenant"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "cure"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "deadly"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "demolish"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "detriment"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disguise"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "dominance"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "dominant"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "economic"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "economical"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "economist"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "espionage"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "fatal"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "feint"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "fiasco"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "flunk"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "fog"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "foothold"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "founder"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "furious"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "fury"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "gallant"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "gallantry"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "gambit"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "garrison"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "glimmer"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "glisten"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "guise"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "heroic"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "information"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "injure"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "injury"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "injustice"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "intelligence"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "invulnerable"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "justice"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "knack"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "mortal"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "oversee"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "pact"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "predominant"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "propel"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "smog"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "sneak"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "therapy"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "triumph"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "vulnerable"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "abstraction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "accreditation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "adaptation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "altercation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "application"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "attraction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "authentication"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "callous"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "capability"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "certification"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "clarification"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "classified"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "classify"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "collective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "combination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "communal"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "commune"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "communicate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "communism"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "community"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "compaction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "compatibility"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "complication"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "computation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "condemnation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "confirmation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "confrontation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "connotation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "consternation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contraband"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contraception"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contractor"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contradict"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contradiction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contraption"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contrary"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "contrast"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "control"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "controversial"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "controversy"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "coordinate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "coronation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "credibility"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "credit"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "declamation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "dedication"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "defamation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "defend"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "defendant"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "denomination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "designation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "desirability"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "destination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "detective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "determination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "detonation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disability"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disadvantage"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "discrimination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "disputation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "dissertation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "distract"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "distracted"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "distraught"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "documentation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "domination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "donation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "effective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "elimination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "estimate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "exaltation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "exclamation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "execution"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "executive"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "executor"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "expectation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "explanation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "exploitation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "fabrication"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "faction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "flexibility"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "format"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "formative"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "fraction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "generator"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "gratification"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hallucination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hesitation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hibernation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "identification"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "illegitimate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "illumination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "imitation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "implementation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "implication"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "imprecation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "inability"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "inaction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "incarnation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "inclination"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "incrustation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "indentation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "indication"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "indignation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "ineffective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "inflammation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "infraction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "initial"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "initially"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "initiate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "initiative"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "instability"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "interaction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "interpretation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "intimate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "intonation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "invective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "invitation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "invocation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "irrespective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "irritation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "justification"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "lamentation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "legitimate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "liability"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "limitation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "location"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "manufacture"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "objection"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "operate"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "perspective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "prospective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "protective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "qualification"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "quotation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "reputation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "respective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "satisfaction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "screen"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "spectrum"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "stability"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "strategic"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "subjective"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "transaction"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "vegetation"
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "vocation"
+    }
+  ]
+}

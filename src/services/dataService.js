@@ -688,14 +688,23 @@ const DEFAULT_UI = {
   domainId: null,
   view: 'grid',          // grid | list
   sortBy: 'relevance',   // relevance | alpha
-  filterLevel: 'all',    // all | exact | vocab
+  /* 卡片库顶部「档位筛选」：核心 core / 相关 related / 泛化 extended（默认「相关」）。
+     ⚠️ 旧版取值 'all' / 'exact' / 'vocab' 已废弃，读取时统一归一化回默认档。 */
+  filterLevel: 'related',
   showMastered: true,
   themeIntensity: 1,
 };
 
+/** 合法的档位筛选值（与 wordBankService 的 tier 字段一一对应） */
+export const FILTER_TIERS = ['core', 'related', 'extended'];
+
 export async function getUI() {
   const saved = await readRaw(KEYS.ui);
-  return { ...DEFAULT_UI, ...(saved || {}) };
+  const ui = { ...DEFAULT_UI, ...(saved || {}) };
+  /* 读取期归一化：旧版 'all' / 'exact' / 'vocab' 等非法值 → 回落到默认档。
+     只做视图归一化、绝不写盘（读函数一律不得写盘）。 */
+  if (!FILTER_TIERS.includes(ui.filterLevel)) ui.filterLevel = DEFAULT_UI.filterLevel;
+  return ui;
 }
 
 export async function saveUI(patch) {

@@ -99,17 +99,21 @@ ok('9. 勾选图标尺寸已放大到 14', /iconPath\(\s*'check'\s*\)\s*,\s*\{\s
   (pickerSrc.match(/iconPath\(\s*'check'\s*\)[^)]*\)/) || [''])[0]);
 ok('9b. 勾选图标有独立类名便于加粗', /dp-card__tick/.test(pickerSrc));
 ok('9c. CSS 对勾本体加粗描边', /\.dp-card__check[\s\S]{0,80}stroke-width:\s*2\.8/.test(css));
+ok('9d. domainPicker 按板块分组渲染（.dp-group + 标题）',
+  /dp-group/.test(pickerSrc) && /DOMAIN_CATEGORY_ORDER/.test(pickerSrc));
+ok('9e. 未识别 / 缺失的 category 归入「其他」', /DOMAIN_CATEGORY\.OTHER/.test(pickerSrc));
+ok('9f. 卡片把 category 落到 dataset（供分组断言）', /dataset:\s*\{[^}]*category/.test(pickerSrc));
 
 /* ==========================================================================
    三、动态断言（真实组件）
    ========================================================================== */
 installShim();
 
-const { INTEREST_DOMAINS } = await import('../src/config/interestsConfig.js');
+const { INTEREST_DOMAINS, DOMAIN_CATEGORY_ORDER, DOMAIN_CATEGORY } = await import('../src/config/interestsConfig.js');
 const { openDomainPicker } = await import('../src/components/domainPicker.js');
 
 const domains = Object.values(INTEREST_DOMAINS).map((d) => ({
-  id: d.id, name: d.name, subtitle: d.subtitle || '', description: d.description || '',
+  id: d.id, name: d.name, category: d.category, subtitle: d.subtitle || '', description: d.description || '',
   icon: d.icon, theme: d.theme, termCount: d.termCount || 0,
 }));
 ok('动态用例准备：领域数量 ≥ 4', domains.length >= 4, `${domains.length} 个`);
@@ -149,6 +153,33 @@ ok('11b. 点击后 aria-pressed=true', target.getAttribute('aria-pressed') === '
 target._ev.click?.forEach((fn) => fn({}));
 ok('11c. 再次点击 → 退回未选中态', !target._cls.has('is-on'));
 ok('11d. 再次点击后 aria-pressed=false', target.getAttribute('aria-pressed') === 'false');
+
+/* ==========================================================================
+   四、板块分组（游戏 / 影视 / 体育 / 其他）
+   ========================================================================== */
+const groups = globalThis.document.body.querySelectorAll('.dp-group');
+const titles = groups.map((g) => g.querySelector('.dp-group__title')?.textContent || '');
+ok('14. 领域卡片按板块分组渲染', groups.length >= 1, `${groups.length} 组：${titles.join(' / ')}`);
+ok('14b. 板块标题只出现白名单四类',
+  titles.every((t) => DOMAIN_CATEGORY_ORDER.includes(t)), titles.join(' / '));
+ok('14c. 板块顺序与 DOMAIN_CATEGORY_ORDER 一致',
+  titles.map((t) => DOMAIN_CATEGORY_ORDER.indexOf(t)).every((v, i, a) => v >= 0 && (i === 0 || v > a[i - 1])),
+  titles.join(' → '));
+ok('14d. 每组标题旁有领域数量徽标',
+  groups.every((g) => Boolean(g.querySelector('.dp-group__count'))));
+
+const grouped = cards.map((c) => ({ id: c.dataset.domainId, cat: c.dataset.category, g: c.closest('.dp-group') }));
+ok('15. 每张卡片都落在某个板块组内', grouped.every((x) => Boolean(x.g)),
+  grouped.filter((x) => !x.g).map((x) => x.id).join(', '));
+ok('15b. 卡片所属板块 = 该领域的 category',
+  grouped.every((x) => x.g && x.g.dataset.category === x.cat),
+  grouped.filter((x) => x.g && x.g.dataset.category !== x.cat).map((x) => x.id).join(', '));
+ok('15c. 每个领域都能归入四个板块之一',
+  domains.every((d) => DOMAIN_CATEGORY_ORDER.includes(byId(d.id).dataset.category)),
+  domains.map((d) => `${d.id}:${byId(d.id).dataset.category}`).join(' '));
+ok('15d. 现有四个领域全部归入「游戏」',
+  domains.filter((d) => ['slay_the_spire', 'hollow_knight', 'honor_of_kings', 'valorant'].includes(d.id))
+    .every((d) => d.category === DOMAIN_CATEGORY.GAME));
 
 /* ==========================================================================
    最小 DOM shim（只为本脚本的服务，独立于其他校验脚本）

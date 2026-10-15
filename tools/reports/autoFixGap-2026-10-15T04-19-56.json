@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-15T04:19:56.347Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 133,
+  "created": 30,
+  "failed": 0,
+  "remain": 103,
+  "elapsedSec": 47,
+  "items": [
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "absurd"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "adventure"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "alien"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "citadel"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "dimension"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "experiment"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "federation"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "genius"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "satire"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "unity"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "universe"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "adolescent"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "alternate"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "anxious"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "atomic"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "bizarre"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "catastrophe"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "chaos"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "chase"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "conflict"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "confrontation"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "crash"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "cynicism"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "despair"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "device"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "dilemma"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "disaster"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "equation"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "escapade"
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "file": "RickandMorty.json",
+      "word": "evolve"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-14T16:50:58.880Z",
+  "mode": "mock",
+  "model": null,
+  "batchSize": 2,
+  "gapBefore": 23,
+  "created": 2,
+  "failed": 0,
+  "remain": 21,
+  "elapsedSec": 0,
+  "items": [
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "interval"
+    },
+    {
+      "domain": "羽毛球",
+      "file": "badminton.json",
+      "word": "agility"
+    }
+  ]
+}

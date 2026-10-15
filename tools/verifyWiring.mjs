@@ -106,6 +106,8 @@ const css = readFileSync(path.join(ROOT, 'src/styles/components.css'), 'utf8');
 const needClasses = [
   'dp-body', 'dp-grid', 'dp-card', 'dp-card__check', 'dp-card__icon', 'dp-card__name',
   'dp-card__desc', 'dp-card__meta', 'dp-hint', 'dp-foot',
+  /* 板块分组（游戏 / 影视 / 体育 / 其他） */
+  'dp-groups', 'dp-group', 'dp-group__head', 'dp-group__icon', 'dp-group__title', 'dp-group__count',
   'lib-empty', 'lib-empty__icon', 'lib-empty__title', 'lib-empty__desc',
   'mastery-bar', 'mastery-bar__label', 'mastery-bar__num', 'mastery-bar__track',
   'mastery-bar__fill', 'mastery-bar__pct',
@@ -123,7 +125,7 @@ const missingCss = needClasses.filter((c) => !new RegExp(`\\.${c.replace(/[.*+?^
 ok('新增 CSS 类全部有样式定义', missingCss.length === 0, missingCss.join(', '));
 
 /* is-mastered 视觉弱化 */
-ok('is-mastered 有降饱和视觉规则', /\.wordcard\.is-mastered\s+\.wordcard__inner\s*\{[^}]*saturate/.test(css));
+ok('is-mastered 有降饱和视觉规则', /\.wordcard\.is-mastered\s+\.wordcard__face\s*\{[^}]*saturate/.test(css));
 
 /* 5. 所有 JS 语法可解析（在子进程里用 --check） */
 ok('src 下所有 js 文件已由外部 --check 验证（见脚本调用方）', true);

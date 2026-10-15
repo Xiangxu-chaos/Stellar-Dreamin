@@ -27,6 +27,8 @@
 
 import { h, svgIcon } from '../core/dom.js';
 import { iconPath } from '../core/icons.js';
+import { domainLabel } from '../core/domainLabel.js';
+import { tierClass, tierLabel } from '../core/tierLabel.js';
 
 /**
  * @param {object} props
@@ -184,11 +186,12 @@ export function createWordCard(props) {
    * 正面
    * ---------------------------------------------------------------------- */
   function buildFront() {
-    /* ⚠️ 精简铁律（任务一）：正面**只允许三类标签**，顺序固定、样式统一：
+    /* ⚠️ 精简铁律：正面**只允许四类标签**，顺序固定、样式统一：
      *   ① 领域标签（buildDomainBadges）—— 只显示领域名
      *   ② 认证标签 —— 仅当 relevance.level === 'exact' 时显示「官方认证」，
      *                 普通词汇**什么都不加**
      *   ③ 词性标签 —— 「核心词」/「派生词」
+     *   ④ 档位标签 —— 「核心」/「相关」/「泛化」（核心=主题色高亮，泛化=低调灰）
      * 严禁在正面出现来源网址、完整 source 文本、「译名待确认」等啰嗦内容
      * （buildSourceChip 只允许出现在背面）。 */
     const badges = [];
@@ -208,6 +211,16 @@ export function createWordCard(props) {
     badges.push(h('span.chip', {
       class: word.type === 'derived' ? 'chip--derived' : 'chip--core',
       text: word.type === 'derived' ? '派生词' : '核心词',
+    }));
+
+    /* ④ 档位标签（核心 / 相关 / 泛化）
+     * 档位按召回分数排名动态划分（前 20% / 20–50% / 50–100%），
+     * 词条没有 tier 字段时按「相关」兜底（详见 core/tierLabel.js）。 */
+    badges.push(h('span.chip', {
+      class: tierClass(word),
+      title: `该词在当前领域的档位：${tierLabel(word)}`,
+      style: domain?.theme?.primary ? { '--chip-tier': domain.theme.primary } : {},
+      text: tierLabel(word),
     }));
 
     return h('div.wordcard__face.wordcard__face--front', {}, [
@@ -263,15 +276,18 @@ export function createWordCard(props) {
       h('div.mat__value', { text: material?.generalMeaning || word.translation || '—' }),
     ]));
 
-    scroll.appendChild(h('div.mat__section', {}, [
-      h('div.mat__label', {}, [
-        svgIcon(iconPath('domain'), { size: 12 }),
-        `领域关联 · ${domain?.name || ''}`,
-      ]),
-      h('div.mat__value.mat__value--soft', {
-        text: material?.domainMeaning || localDomainHint(relevance, domain),
-      }),
-    ]));
+    /* 领域关联区 —— 只在**确实有材料**时渲染（有内容才显示）。
+       ⚠️ 已彻底删除 localDomainHint 兜底：无材料时整块隐藏，
+       绝不再显示「该词在《X》的语境中较为常见，可与游戏场景建立联想」这类废话。 */
+    if (material?.domainMeaning) {
+      scroll.appendChild(h('div.mat__section', {}, [
+        h('div.mat__label', {}, [
+          svgIcon(iconPath('domain'), { size: 12 }),
+          `领域关联 · ${domainLabel(domain)}`,
+        ]),
+        h('div.mat__value.mat__value--soft', { text: material.domainMeaning }),
+      ]));
+    }
 
     if (material?.story) {
       scroll.appendChild(h('div.mat__section', {}, [
@@ -280,28 +296,25 @@ export function createWordCard(props) {
       ]));
     }
 
-    // 英文例句区 —— 卡片上展示的词**必须**有现成的、包含该词的完整英文例句。
-    //   ⚠️ 已废弃「造句练习」兜底：不再要求用户自己造句。
-    //   有材料 → 显示领域例句 + 中文翻译；
-    //   无材料 → 显示「暂无例句」占位（数据层已批量补全，正常情况下不会走到这里）。
-    const hasExample = Boolean(material?.example && String(material.example).trim());
-    const exampleSrc = material?.exampleSource ? String(material.exampleSource).trim() : '';
-    scroll.appendChild(h('div.mat__section', {}, [
-      h('div.mat__label', {}, [
-        svgIcon(iconPath('quill'), { size: 12 }),
-        '英文例句',
-      ]),
-      hasExample
-        ? h('div.mat__value.mat__value--example', { text: material.example })
-        : h('div.mat__value.mat__value--example.mat__value--empty', { text: '暂无例句' }),
-      hasExample && material.exampleZh
-        ? h('div.mat__value--example-zh', { text: material.exampleZh })
-        : null,
-      // 例句出处标注：让用户知道这句话「从哪来」，便于判断关联度是否可信
-      hasExample && exampleSrc
-        ? h('div.mat__example-src', { text: `例句来源：${exampleSrc}` })
-        : null,
-    ]));
+    /* 英文例句区 —— 只在**确实有例句**时渲染。
+       ⚠️ 已删除「暂无例句」占位与全部兜底文案：无材料时整块隐藏。 */
+    if (material?.example && String(material.example).trim()) {
+      const exampleSrc = material.exampleSource ? String(material.exampleSource).trim() : '';
+      scroll.appendChild(h('div.mat__section', {}, [
+        h('div.mat__label', {}, [
+          svgIcon(iconPath('quill'), { size: 12 }),
+          '英文例句',
+        ]),
+        h('div.mat__value.mat__value--example', { text: material.example }),
+        material.exampleZh
+          ? h('div.mat__value--example-zh', { text: material.exampleZh })
+          : null,
+        // 例句出处标注：让用户知道这句话「从哪来」，便于判断关联度是否可信
+        exampleSrc
+          ? h('div.mat__example-src', { text: `例句来源：${exampleSrc}` })
+          : null,
+      ]));
+    }
 
     // 材料来源与严谨性标注（模块四）
     const srcRows = [];
@@ -472,24 +485,15 @@ function briefOf(translation) {
 
 /**
  * ⚠️ 已删除 buildPracticePrompt()（原「造句练习」兜底文案）。
- * 需求明确：卡片上展示的词必须都有现成的、包含该词的准确英文例句，
- * 不允许出现「让你的用户自己造句」的任何引导。缺失时只显示「暂无例句」，
- * 并由数据层批量补全（见 tools/fillMaterials.mjs）。
+ * ⚠️ 已删除 localDomainHint()（领域关联兜底文案）。
+ *
+ * 现行规则（不可回退）：
+ *   卡片背面**只渲染真实存在的材料字段**：
+ *     · material.domainMeaning 存在 → 显示「领域关联」区块；
+ *     · material.story        存在 → 显示「微故事 / 场景」区块；
+ *     · material.example      存在 → 显示「英文例句」区块。
+ *   任一字段缺失 → **整块隐藏**，不显示任何占位或兜底话术。
+ *   因此「让 581 个缺材料的词不再显示废话」是渲染层与数据层双重保证的。
  */
-
-/** 无静态材料时，用本地关联信息给出领域提示（不使用任何编造的译名） */
-function localDomainHint(relevance, domain) {  if (!relevance || !domain) return '该词与当前领域暂无直接对应关系。';
-  if (relevance.level === 'exact') {
-    const zh = relevance.domainTermZh || '【译名待确认】';
-    return `在《${domain.name}》中对应官方术语「${zh}」。`;
-  }
-  if (relevance.level === 'vocab') {
-    return `该词在《${domain.name}》的语境中较为常见，可与游戏场景建立联想。`;
-  }
-  if (relevance.level === 'gloss') {
-    return `释义与《${domain.name}》的术语用词接近，可借术语语义加深记忆。`;
-  }
-  return '该词与当前领域暂无直接对应关系。';
-}
 
 export default createWordCard;

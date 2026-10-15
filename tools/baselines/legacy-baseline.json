@@ -1,0 +1,30 @@
+{
+  "_comment": [
+    "原始四领域「原有条目」内容指纹基线（不含 AI 补充的新增条目）。",
+    "由 tools/genLegacyBaseline.mjs 生成；tools/verifyDomainExpansion.mjs 断言 14 使用。",
+    "不要手改本文件 —— 需要重新冻结时请重跑生成脚本并说明原因。"
+  ],
+  "frozenAt": "2026-10-14T17:18:02.392Z",
+  "files": {
+    "slayTheSpire": {
+      "count": 246,
+      "sha256": "d4bf0b54e2258d846c804bc98a74af19",
+      "total": 246
+    },
+    "hollowKnight": {
+      "count": 895,
+      "sha256": "96e4b5e06dc7f83b01cfa689a4454cfa",
+      "total": 895
+    },
+    "honorOfKings": {
+      "count": 100,
+      "sha256": "76d6be701aeaadc16ea596823837e184",
+      "total": 100
+    },
+    "valorant": {
+      "count": 99,
+      "sha256": "3202ccd7eac5080a7b74d488da828a1c",
+      "total": 99
+    }
+  }
+}

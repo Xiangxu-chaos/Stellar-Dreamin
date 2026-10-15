@@ -1,0 +1,228 @@
+{
+  "at": "2026-10-15T05:52:59.261Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 30,
+  "gapBefore": 30,
+  "defectBefore": 0,
+  "created": 30,
+  "fixed": 0,
+  "filled": 30,
+  "failed": 0,
+  "remain": 0,
+  "remainGap": 0,
+  "remainDefect": 0,
+  "elapsedSec": 20,
+  "items": [
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "proportion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "protagonist",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "release",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "sketch",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "trend",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "visual",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "array",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "battery",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "caption",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "cartoon",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "dub",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "monitor",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "oversee",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "quarterly",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "script",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "supervise",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "confirmation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "declamation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "defamation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "demonstrable",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "demonstrate",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "directly",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "directory",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "exclamation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "formation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "inflammation",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "information",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "insert",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "insertion",
+      "kind": "gap",
+      "fields": null
+    },
+    {
+      "domain": "日漫",
+      "file": "animation.json",
+      "word": "screen",
+      "kind": "gap",
+      "fields": null
+    }
+  ]
+}

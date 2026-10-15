@@ -1,0 +1,113 @@
+{
+  "at": "2026-10-15T04:17:52.073Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 74,
+  "created": 20,
+  "failed": 0,
+  "remain": 54,
+  "elapsedSec": 76,
+  "items": [
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "trait"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "asylum"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "avoid"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "bait"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "chase"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "coordinate"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "costume"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "defeat"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "disguise"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "dodge"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "dread"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "eerie"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "evade"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "flee"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "gloomy"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "horror"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "lever"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "lurk"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "mansion"
+    },
+    {
+      "domain": "第五人格",
+      "file": "identityFifth.json",
+      "word": "mask"
+    }
+  ]
+}

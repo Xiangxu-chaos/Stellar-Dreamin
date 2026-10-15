@@ -1,0 +1,43 @@
+{
+  "breakingBad": [],
+  "sherlock": [
+    "scandal",
+    "victim"
+  ],
+  "classicMovies": [
+    "cinema",
+    "critic",
+    "haunting",
+    "tension"
+  ],
+  "basketball": [
+    "accurate",
+    "combat",
+    "competition",
+    "competitive",
+    "competitor",
+    "consistent",
+    "contest",
+    "contestant",
+    "coordinate",
+    "dexterity",
+    "exhaustion",
+    "flexibility",
+    "intensity",
+    "jump",
+    "leap",
+    "posture",
+    "salary",
+    "strain",
+    "strenuous",
+    "stretch",
+    "surpass",
+    "swift",
+    "tackle",
+    "uniform"
+  ],
+  "badminton": [
+    "velocity",
+    "intervene"
+  ]
+}

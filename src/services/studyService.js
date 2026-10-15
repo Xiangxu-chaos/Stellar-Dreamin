@@ -129,6 +129,7 @@ export async function buildFavorites(domainId) {
 
   // 最近收藏的排前面
   out.sort((a, b) => (b.favoritedAt || 0) - (a.favoritedAt || 0));
+  await wordBankService.attachTiers(out);   // 档位标签 + 复习按档过滤都依赖它
   return out;
 }
 
@@ -290,6 +291,7 @@ export async function buildMasteredWords(domainId) {
     out.push(item);
   }
   out.sort((a, b) => (b.masteredAt || 0) - (a.masteredAt || 0));
+  await wordBankService.attachTiers(out);   // 卡片正面的档位标签
   return out;
 }
 
@@ -340,6 +342,7 @@ export async function buildWrongWords(domainId) {
     wordBankService.attachDomainTags([item]);
     out.push(item);
   }
+  await wordBankService.attachTiers(out);   // 卡片正面的档位标签
   return out; // dataService 已按错误率降序
 }
 
@@ -350,6 +353,11 @@ export async function buildWrongWords(domainId) {
 /** 每组可选词数（需求：10/20/30/50，默认 20） */
 export const REVIEW_GROUP_SIZES = [10, 20, 30, 50];
 export const DEFAULT_REVIEW_GROUP_SIZE = 20;
+
+/** 复习档位（需求：核心 / 相关 / 泛化，默认「相关」） */
+export const REVIEW_TIERS = ['core', 'related', 'extended'];
+export const DEFAULT_REVIEW_TIER = 'related';
+export const REVIEW_TIER_LABELS = { core: '核心', related: '相关', extended: '泛化' };
 
 /**
  * 准备复习分组。
@@ -364,15 +372,26 @@ export async function buildReviewGroups(options = {}) {
   const groupSize = Number(options.groupSize) || DEFAULT_REVIEW_GROUP_SIZE;
   const domainId = options.domainId || null;
 
-  // 1) 取收藏（已附材料与领域标签）——复习题的来源
+  // 1) 取收藏（已附材料 / 领域标签 / 档位 tier）——复习题的来源
   const favorites = await buildFavorites(domainId);
 
   // 2) 默认排除熟词；用户勾选「包含熟词」时才纳入
   const includeMastered = Boolean(options.includeMastered);
   const masteredKeys = new Set(await dataService.getMasteredKeys());
-  const pool = includeMastered
+  const notMastered = includeMastered
     ? favorites
     : favorites.filter((w) => !masteredKeys.has(`${w.domainId}::${String(w.word).toLowerCase()}`));
+
+  // 2b) 按档位过滤（核心 / 相关 / 泛化）；缺 tier 的词按「相关」兜底
+  const tier = REVIEW_TIERS.includes(options.tier) ? options.tier : DEFAULT_REVIEW_TIER;
+  const pool = notMastered.filter((w) => (w.tier || DEFAULT_REVIEW_TIER) === tier);
+
+  // 2c) 各档剩余词数（给选择器显示，过滤熟词之后再统计）
+  const tierCounts = { core: 0, related: 0, extended: 0 };
+  for (const w of notMastered) {
+    const t = w.tier || DEFAULT_REVIEW_TIER;
+    if (tierCounts[t] !== undefined) tierCounts[t] += 1;
+  }
 
   // 3) 随机打散后按 groupSize 切分
   const shuffled = shuffleArray(pool);
@@ -386,8 +405,10 @@ export async function buildReviewGroups(options = {}) {
     groupSize,
     total: shuffled.length,
     totalGroups: groups.length,
-    excludedMastered: favorites.length - pool.length,
+    excludedMastered: favorites.length - notMastered.length,
     includeMastered,
+    tier,
+    tierCounts,
   };
 }
 
@@ -450,4 +471,7 @@ export default {
   getQuizSessions,
   REVIEW_GROUP_SIZES,
   DEFAULT_REVIEW_GROUP_SIZE,
+  REVIEW_TIERS,
+  DEFAULT_REVIEW_TIER,
+  REVIEW_TIER_LABELS,
 };

@@ -532,8 +532,12 @@
   position: relative;
   height: 316px;
   perspective: 1500px;
+  /* ⚠️ preserve-3d 必须与 perspective 同体：否则翻转父级一旦带 transform（见下方
+   * 入场动画），会把子级 .flip__inner 的 rotateY(180) 拍平，背面文字被镜像（左右反）。
+   * 入场动画用 backwards 收尾，不把 to 帧的 scale(1) 持久化，进一步杜绝拍平。 */
+  transform-style: preserve-3d;
   cursor: pointer;
-  animation: card-in 0.5s var(--ease-out) both;
+  animation: card-in 0.5s var(--ease-out) backwards;
   animation-delay: var(--enter-delay, 0ms);
   outline: none;
 }
@@ -660,6 +664,27 @@
   color: var(--c-text-faint);
 }
 .chip--core { color: var(--c-text-faint); }
+
+/* ---- 档位标签（核心 / 相关 / 泛化）----
+ * 核心：主题色高亮（边框 + 淡底 + 主色文字）
+ * 相关：常规色（与现有普通标签一致）
+ * 泛化：低调灰
+ * 主题色由组件注入 --chip-tier（取当前领域 theme.primary），缺省回退主色。 */
+.chip--tier-core {
+  border-color: color-mix(in srgb, var(--chip-tier, var(--c-primary)) 58%, transparent);
+  background: color-mix(in srgb, var(--chip-tier, var(--c-primary)) 16%, transparent);
+  color: var(--chip-tier, var(--c-primary));
+  font-weight: 600;
+}
+.chip--tier-related {
+  border-color: var(--c-border-strong);
+  color: var(--c-text-soft);
+}
+.chip--tier-extended {
+  border-color: var(--c-border);
+  color: var(--c-text-faint);
+  opacity: 0.86;
+}
 .chip svg { width: 11px; height: 11px; }
 
 .flip__wordwrap {
@@ -789,10 +814,6 @@
   font-size: 14px;
   letter-spacing: 0.005em;
   color: var(--c-accent);
-}
-.mat__value--example.mat__value--empty {
-  color: var(--c-text-faint);
-  font-style: italic;
 }
 .mat__value--example-zh { font-size: 12.5px; color: var(--c-text-soft); }
 /* 例句出处标注（Fandom Wiki / AI重写 / 游戏内文本 / AI 生成） */
@@ -1054,7 +1075,6 @@
   color: var(--c-accent);
   line-height: 1.55;
 }
-.detail__example-en.detail__example-en--empty { color: var(--c-text-faint); font-style: italic; }
 .detail__example-zh { font-size: 13px; color: var(--c-text-soft); margin-top: 5px; }
 /* 例句出处标注（与「译名来源」分开） */
 .detail__example-src {
@@ -1460,8 +1480,13 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
   position: relative;
   min-height: 336px;
   perspective: 1500px;
+  /* ⚠️ 修复「收藏夹翻面镜像」：翻转父级必须 preserve-3d，否则卡片入场动画残留的
+   * transform（scale(1)）会把子级 .wordcard__inner 的 rotateY(180) 拍平成 scaleX(-1)，
+   * 背面文字左右反转（镜像）。preserve-3d 保证 3D 翻转上下文永不被拍平。
+   * 入场动画用 backwards（to 帧即自然态，无需 forwards 持久化 transform）。 */
+  transform-style: preserve-3d;
   cursor: pointer;
-  animation: card-in 0.5s var(--ease-out) both;
+  animation: card-in 0.5s var(--ease-out) backwards;
   animation-delay: var(--enter-delay, 0ms);
   outline: none;
 }
@@ -1784,11 +1809,15 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
 .wordcard.is-mastered .wordcard__face {
   border-color: rgba(143, 227, 176, 0.3);
 }
-.wordcard.is-mastered .wordcard__inner {
+/* ⚠️ 修复「熟词翻面镜像」：绝不能把 filter 放在 .wordcard__inner 上 ——
+ *   filter 会强制 transform-style: flat，把子级两张 face 的 rotateY(180deg)
+ *   拍平成 scaleX(-1)，背面文字左右反转。filter 改放到 leaf 级的 face 上，
+ *   既不影响面部自身的 rotateY，也不会拍平翻转上下文。 */
+.wordcard.is-mastered .wordcard__face {
   filter: saturate(0.5) brightness(0.94);
   transition: filter 0.3s var(--ease-out);
 }
-.wordcard.is-mastered:hover .wordcard__inner { filter: saturate(0.78) brightness(1); }
+.wordcard.is-mastered:hover .wordcard__face { filter: saturate(0.78) brightness(1); }
 
 .wordcard__master-btn.is-on {
   border-color: rgba(143, 227, 176, 0.5) !important;
@@ -2007,6 +2036,49 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
    ========================================================================== */
 .dp-body { display: flex; flex-direction: column; gap: 16px; }
 .dp-lead { margin: 0; font-size: 13.5px; line-height: 1.75; color: var(--c-text-soft); }
+
+/* --------------------------------------------------------------------------
+   .dp-groups / .dp-group —— 板块分组（游戏 / 影视 / 体育 / 其他）
+   --------------------------------------------------------------------------
+   领域数量变多以后，用户需要一眼看出「这个库属于哪个板块」，
+   因此每组一个标题行，组间用细分隔线拉开层次。
+   -------------------------------------------------------------------------- */
+.dp-groups { display: flex; flex-direction: column; gap: 18px; }
+
+.dp-group { display: flex; flex-direction: column; gap: 10px; }
+.dp-group + .dp-group {
+  padding-top: 16px;
+  border-top: 1px solid var(--c-border);
+}
+
+.dp-group__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dp-group__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 7px;
+  color: var(--c-accent);
+  background: var(--c-surface-strong, rgba(255, 255, 255, 0.06));
+  border: 1px solid var(--c-border);
+}
+.dp-group__title {
+  font-size: 13.5px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  color: var(--c-text);
+}
+.dp-group__count {
+  font-size: 11.5px;
+  color: var(--c-text-faint);
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--c-border);
+}
 
 .dp-grid {
   display: grid;
@@ -2244,6 +2316,8 @@ textarea.input { resize: vertical; min-height: 190px; line-height: 1.6; font-siz
 .group-setup__label { font-size: 13px; color: var(--c-text-soft); }
 .group-setup__label b { color: var(--c-text); }
 .group-setup__opts { display: flex; flex-wrap: wrap; gap: 8px; }
+/* 档位选择器下方的一行说明（核心 / 相关 / 泛化 的划分口径） */
+.group-setup__note { display: block; margin-top: 4px; font-size: 11px; line-height: 1.6; color: var(--c-text-faint); }
 .group-setup__summary {
   padding: 13px 15px; border-radius: var(--radius);
   border: 1px solid var(--c-border); background: var(--c-surface);

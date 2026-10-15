@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-15T04:25:12.335Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 73,
+  "created": 30,
+  "failed": 0,
+  "remain": 43,
+  "elapsedSec": 63,
+  "items": [
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "chalk"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "champion"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "clearance"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "cue"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "cushion"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "foul"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "frame"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "framed"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "interval"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "maximum"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "mission"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "referee"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "session"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "accuracy"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "advantage"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "aim"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "applause"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "arena"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "atmosphere"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "bounce"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "calculation"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "collapse"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "composure"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "concentration"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "consistency"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "control"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "deflect"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "discipline"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "dominance"
+    },
+    {
+      "domain": "台球",
+      "file": "billiard.json",
+      "word": "final"
+    }
+  ]
+}

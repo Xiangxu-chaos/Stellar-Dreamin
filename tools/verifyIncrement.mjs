@@ -95,10 +95,10 @@ const wc = wb.getWordCount();
 ok('词库载入', wc >= 5000 && wc <= 6000, `${wc} 词`);
 
 const domains = wb.getDomains();
-ok('领域数量 = 4', domains.length === 4, domains.map((d) => `${d.name}(${d.termCount})`).join(' / '));
+ok('领域数量 ≥ 4（四个原始领域必须在册）', domains.length >= 4 && ['slay_the_spire', 'hollow_knight', 'honor_of_kings', 'valorant'].every((id) => domains.some((d) => d.id === id)), domains.map((d) => `${d.name}(${d.termCount})`).join(' / '));
 
 const withMat = wb.getDomainsWithMaterials();
-ok('材料文件映射 = 4 个领域', withMat.length === 4, withMat.join(', '));
+ok('每个已注册领域都有材料文件映射', withMat.length === domains.length, `${withMat.length}/${domains.length}`);
 
 /* 新增领域（任务三）必须在册 */
 const NEW_DOMAINS = ['honor_of_kings', 'valorant'];
@@ -134,7 +134,14 @@ for (const dId of withMat) {
     if (typeof m.unverified !== 'boolean') badFields.push(`${dId}/${w}.unverified(type)`);
   }
 }
-ok('预生成材料总量 = 1340', totalMat === 1340, `${totalMat} 条`);
+/* 原始四领域固定 1340 条；扩展兴趣库只会追加，因此这里是「下界 + 每库下限」双断言 */
+ok('预生成材料总量 ≥ 1340（原始四领域基线）', totalMat >= 1340, `${totalMat} 条`);
+const thinDomains = [];
+for (const dId of withMat) {
+  const st = await dms.getMaterialStats(dId);
+  if (st.total < 20) thinDomains.push(`${dId}:${st.total}`);
+}
+ok('每个有材料文件的领域都至少有 20 条', thinDomains.length === 0, thinDomains.join(', '));
 ok('材料字段无缺失', badFields.length === 0, badFields.slice(0, 5).join(', '));
 ok('每条材料都有 source', missingSource === 0, `${missingSource} 条缺失`);
 ok('每条材料都有非空 example（问题二）', emptyExample.length === 0, emptyExample.slice(0, 5).join(', '));
@@ -175,7 +182,9 @@ for (const dId of withMat) {
   const withMaterial = cards.filter((w) => w.material).length;
   const withDomains = cards.filter((w) => Array.isArray(w.domains)).length;
   const withImageField = cards.filter((w) => typeof w.image === 'string').length;
-  ok(`[${dId}] 相关词筛选`, words.length > 100, `${words.length} 词`);
+  // 阈值不能写死 100：影视/体育类领域的六级词命中面天然窄于游戏类，
+  // 只断言「确实筛出了可用数量的相关词」，并保证上限不超 localLimit。
+  ok(`[${dId}] 相关词筛选`, words.length >= 20 && words.length <= 600, `${words.length} 词`);
   ok(`[${dId}] 卡片已挂载 material`, withMaterial > 0, `${withMaterial}/400`);
   ok(`[${dId}] 卡片已挂载 domains`, withDomains === cards.length, `${withDomains}/${cards.length}`);
   ok(`[${dId}] 卡片带 image 字段`, withImageField === cards.length, `${withImageField}/${cards.length}`);

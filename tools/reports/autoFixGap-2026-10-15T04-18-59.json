@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-15T04:18:59.495Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 78,
+  "created": 30,
+  "failed": 0,
+  "remain": 48,
+  "elapsedSec": 57,
+  "items": [
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "bundle"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "combat"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "desert"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "deserter"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "desertion"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "divorce"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "greenhouse"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "inventory"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "quest"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "recipe"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "spring"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "bait"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "barn"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "budget"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "calendar"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "copper"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "crop"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "crystal"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "cultivate"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "expense"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "gem"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "gossip"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "harvest"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "income"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "incoming"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "irrigate"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "livestock"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "mineral"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "pasture"
+    },
+    {
+      "domain": "星露谷物语",
+      "file": "stardewValley.json",
+      "word": "plantation"
+    }
+  ]
+}

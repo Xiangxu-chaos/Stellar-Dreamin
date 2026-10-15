@@ -1,0 +1,2209 @@
+{
+  "at": "2026-10-15T08:11:10.776Z",
+  "totalGap": 0,
+  "totalDefect": 296,
+  "batchSize": 30,
+  "items": [
+    {
+      "domain": "算法竞赛",
+      "id": "algorithm",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "crucial",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "curse",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "debate",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "deceive",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dedicate",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dedicated",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "defiance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "deliberate",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "delusion",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "demolish",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "department",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "descend",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "destiny",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "detect",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "日漫",
+      "id": "animation",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "abandon",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "abrupt",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "absurd",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "abundantly",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "accomplish",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "accusation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "accuse",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "achievement",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "advance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "affection",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "aggression",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "alliance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "amateur",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "ambush",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "amiable",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "anxiety",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "anxious",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "applause",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "apprentice",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "argue",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "artisan",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "ascend",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "aspiration",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "assemble",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "authority",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "balance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "bargain",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disaster",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "discord",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disguise",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disgust",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disperse",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dispute",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dominance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "doubt",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "downfall",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dread",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "drift",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "duration",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dwell",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "eager",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "echo",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "elegant",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "empathy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "encourage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "endure",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "enormous",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "essential",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "eternal",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "evidence",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "exceed",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "excessive",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "execute",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "exhaustion",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gradual",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grapple",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gratitude",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "greed",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grieve",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grotesque",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "guilt",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hardship",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "harmony",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hesitant",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "homage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "horizon",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hostile",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hostility",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "humiliation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "humility",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hurdle",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hypocrisy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "ignorance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "illness",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "illusion",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "immense",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "impulsive",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "infer",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "inhabit",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "injury",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "injustice",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "innocence",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "inquiry",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "明日方舟",
+      "id": "arknights",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "航空航天",
+      "id": "aviation",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "scatter",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "seduce",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "shield",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "sinister",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "soar",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "stability",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "stake",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "stare",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "stubborn",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "sufficient",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "surpass",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "suspect",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "羽毛球",
+      "id": "badminton",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "篮球",
+      "id": "basketball",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "justify",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "scarce",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "slavery",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "strike",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "sublime",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "台球",
+      "id": "billiard",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "aggression",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "companionship",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "concession",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "depression",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disappearance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "escapee",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "forbearance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "impression",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "intercession",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "intervene",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "intervention",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "interview",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "masterpiece",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "objection",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "profession",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "recession",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "referendum",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "succession",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "legend",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "fluke",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "focus",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "momentum",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "qualification",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "rhythm",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "spectator",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "striking",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "stroke",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "tactic",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "veteran",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "rank",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "绝命毒师",
+      "id": "breaking_bad",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "经典电影",
+      "id": "classic_movies",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "足球",
+      "id": "football",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "原神",
+      "id": "genshin_impact",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "空洞骑士",
+      "id": "hollow_knight",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "王者荣耀",
+      "id": "honor_of_kings",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "第五人格",
+      "id": "identity_fifth",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "mysterious",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "obscure",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "panic",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "patrol",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "pursue",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "rank",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "sacrifice",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "sinister",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "stalk",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "struggle",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "tactic",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "瑞克和莫蒂",
+      "id": "rick_and_morty",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "神探夏洛克",
+      "id": "sherlock",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "gathering",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gaze",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "generosity",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "generous",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "glide",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "glimpse",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gloomy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grace",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "graceful",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gradual",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grapple",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gratitude",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "greed",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grief",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grieve",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grotesque",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hardship",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "harmony",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "heritage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hesitant",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "homage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "horizon",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hostile",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hostility",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "humiliation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "humility",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hurdle",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hypocrisy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "ignorance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "illness",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "杀戮尖塔",
+      "id": "slay_the_spire",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "irrecoverable",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "keystone",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "liberation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "logistics",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "machinery",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "magnet",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "masterpiece",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "mental",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "merchandise",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "meteor",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "miserable",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "mission",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "nuclear",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "ornament",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "overthrow",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "overturn",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "parasite",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "pension",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "philosopher",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "philosophy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "preferable",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "puzzle",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "questionnaire",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "recognition",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "reinforce",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "reliance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "render",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "repulsive",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "sanction",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "satisfaction",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "exemplify",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "杀戮尖塔2",
+      "id": "slay_the_spire2",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "星露谷物语",
+      "id": "stardew_valley",
+      "gaps": [],
+      "defects": []
+    },
+    {
+      "domain": "无畏契约",
+      "id": "valorant",
+      "gaps": [],
+      "defects": [
+        {
+          "word": "objection",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "operate",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "perspective",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "prospective",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "protective",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "qualification",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "quotation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "reputation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "respective",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "satisfaction",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "screen",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "spectrum",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "stability",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "strategic",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "subjective",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "transaction",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "vegetation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "vocation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "abandon",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "abandonment",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disaster",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disciple",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "discipline",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "discord",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "discourage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disgust",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "disperse",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dispute",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "doubt",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "downfall",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dread",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "drift",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "duration",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "dwell",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "eager",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "echo",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "elegant",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "empathy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "encourage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "endure",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "enormous",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "envy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "epic",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "essential",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "eternal",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "evidence",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "evolution",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "exceed",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "excessive",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "exhaustion",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gloomy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grace",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "graceful",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gradual",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grapple",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "gratitude",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "greed",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grief",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grieve",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "grotesque",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "guilt",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hardship",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "harmony",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "heritage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hesitant",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "homage",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "horizon",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hostility",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "humiliation",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "humility",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hurdle",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "hypocrisy",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "ignorance",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "illness",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "illusion",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "immense",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "improvise",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "impulsive",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "infer",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        },
+        {
+          "word": "influence",
+          "fields": [
+            "example",
+            "exampleZh"
+          ]
+        }
+      ]
+    }
+  ]
+}

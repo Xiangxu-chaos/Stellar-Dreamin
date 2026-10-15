@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-15T04:24:01.136Z",
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "batchSize": 10,
+  "gapBefore": 91,
+  "created": 30,
+  "failed": 0,
+  "remain": 61,
+  "elapsedSec": 138,
+  "items": [
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "coach"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "defeat"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "forward"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "foul"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "penalty"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "pitch"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "poster"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "referee"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "substitute"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "agility"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "arena"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "balance"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "brilliant"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "broadcast"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "champion"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "chip"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "clearing"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "commentary"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "competition"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "counter"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "cramp"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "crucial"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "decisive"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "defense"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "discipline"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "dominant"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "dramatic"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "dribble"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "endurance"
+    },
+    {
+      "domain": "足球",
+      "file": "football.json",
+      "word": "fatigue"
+    }
+  ]
+}

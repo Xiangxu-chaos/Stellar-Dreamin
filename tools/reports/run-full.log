@@ -1,0 +1,200 @@
+[2026-10-14 16:52:20] ============================================================
+[2026-10-14 16:52:20] 模式：调用 DeepSeek（deepseek-chat）
+[2026-10-14 16:52:20] 领域：12 个 | 每批 30 条 | 串行执行 | 网络重试 4 次
+[2026-10-14 16:52:20] ============================================================
+[2026-10-14 16:52:20] 扫描：明日方舟       材料   24 条 | 领域词缺口   94 个
+[2026-10-14 16:52:20] 扫描：羽毛球        材料   34 条 | 领域词缺口   19 个
+[2026-10-14 16:52:20] 扫描：篮球         材料   30 条 | 领域词缺口   65 个
+[2026-10-14 16:52:20] 扫描：绝命毒师       材料   35 条 | 领域词缺口   32 个
+[2026-10-14 16:52:20] 扫描：经典电影       材料   33 条 | 领域词缺口   54 个
+[2026-10-14 16:52:20] 扫描：原神         材料   24 条 | 领域词缺口  137 个
+[2026-10-14 16:52:20] 扫描：空洞骑士       材料  895 条 | 领域词缺口    0 个
+[2026-10-14 16:52:20] 扫描：王者荣耀       材料  100 条 | 领域词缺口   88 个
+[2026-10-14 16:52:20] 扫描：神探夏洛克      材料   32 条 | 领域词缺口   54 个
+[2026-10-14 16:52:20] 扫描：杀戮尖塔       材料  246 条 | 领域词缺口  474 个
+[2026-10-14 16:52:20] 扫描：杀戮尖塔2      材料   24 条 | 领域词缺口  122 个
+[2026-10-14 16:52:20] 扫描：无畏契约       材料   99 条 | 领域词缺口  198 个
+[2026-10-14 16:52:20] 
+缺口合计：1337 个词 —— 这正是卡片背面「显示不出任何内容」的那批词。
+[2026-10-14 16:52:20] 待办：50 批（每批 ≤ 30 词）
+[2026-10-14 16:52:20] 队列清单已写：tools\reports\gap-queue.json
+[2026-10-14 16:52:20] [1/50] 明日方舟 —— 本批 30 词：basement, dormitory, elite, potential, barrier, calamity, caravan, crystal, currency, diagnose …
+[2026-10-14 16:52:43]    💾 已写入 arknights.json（本批 +30 条）
+[2026-10-14 16:52:43]    进度：本批成功 30 / 30 ｜ 累计新增 30 / 1337 ｜ 失败 0 ｜ 用时 23s
+[2026-10-14 16:52:43] [2/50] 明日方舟 —— 本批 30 词：sane, accumulation, annihilate, antipathy, appellation, ballistics, blacksmith, calculation, circulation, commitment …
+[2026-10-14 16:53:04]    💾 已写入 arknights.json（本批 +30 条）
+[2026-10-14 16:53:04]    进度：本批成功 30 / 30 ｜ 累计新增 60 / 1337 ｜ 失败 0 ｜ 用时 44s
+[2026-10-14 16:53:04] [3/50] 明日方舟 —— 本批 30 词：emotion, employment, escalation, essential, factor, generator, haunting, inconsequential, infection, infectious …
+[2026-10-14 16:53:23]    💾 已写入 arknights.json（本批 +30 条）
+[2026-10-14 16:53:23]    进度：本批成功 30 / 30 ｜ 累计新增 90 / 1337 ｜ 失败 0 ｜ 用时 63s
+[2026-10-14 16:53:23] [4/50] 明日方舟 —— 本批 4 词：satisfactory, specialize, statistics, unemployment
+[2026-10-14 16:53:27]    💾 已写入 arknights.json（本批 +4 条）
+[2026-10-14 16:53:27]    进度：本批成功 4 / 4 ｜ 累计新增 94 / 1337 ｜ 失败 0 ｜ 用时 67s
+[2026-10-14 16:53:27] [5/50] 羽毛球 —— 本批 19 词：endurance, fatigue, finalist, injury, recover, referee, spectator, tactic, velocity, equinox …
+[2026-10-14 16:53:42]    💾 已写入 badminton.json（本批 +19 条）
+[2026-10-14 16:53:42]    进度：本批成功 19 / 19 ｜ 累计新增 113 / 1337 ｜ 失败 0 ｜ 用时 82s
+[2026-10-14 16:53:42] [6/50] 篮球 —— 本批 30 词：accuracy, accurate, athletic, award, balance, banner, broadcast, campaign, challenge, champion …
+[2026-10-14 16:54:04]    💾 已写入 basketball.json（本批 +30 条）
+[2026-10-14 16:54:04]    进度：本批成功 30 / 30 ｜ 累计新增 143 / 1337 ｜ 失败 0 ｜ 用时 103s
+[2026-10-14 16:54:04] [7/50] 篮球 —— 本批 30 词：energetic, excel, exhaust, exhaustion, fitness, flexibility, flexible, hurdle, intense, intensity …
+[2026-10-14 16:54:29]    · overcome 第 1 次单独重试仍不达标：example 未含该单词
+[2026-10-14 16:54:31]    · overcome 第 2 次单独重试仍不达标：example 未含该单词
+[2026-10-14 16:54:31]    💾 已写入 basketball.json（本批 +29 条）
+[2026-10-14 16:54:31]    进度：本批成功 29 / 30 ｜ 累计新增 172 / 1337 ｜ 失败 1 ｜ 用时 131s
+[2026-10-14 16:54:31] [8/50] 篮球 —— 本批 5 词：velocity, vigorous, golden, layoff, regulate
+[2026-10-14 16:54:37]    💾 已写入 basketball.json（本批 +5 条）
+[2026-10-14 16:54:37]    进度：本批成功 5 / 5 ｜ 累计新增 177 / 1337 ｜ 失败 1 ｜ 用时 137s
+[2026-10-14 16:54:37] [9/50] 绝命毒师 —— 本批 30 词：acid, addiction, bribe, chemical, concealment, conspiracy, convict, conviction, corruption, crystal …
+[2026-10-14 16:54:58]    💾 已写入 breakingBad.json（本批 +30 条）
+[2026-10-14 16:54:58]    进度：本批成功 30 / 30 ｜ 累计新增 207 / 1337 ｜ 失败 1 ｜ 用时 158s
+[2026-10-14 16:54:58] [10/50] 绝命毒师 —— 本批 2 词：trial, verdict
+[2026-10-14 16:55:02]    💾 已写入 breakingBad.json（本批 +2 条）
+[2026-10-14 16:55:02]    进度：本批成功 2 / 2 ｜ 累计新增 209 / 1337 ｜ 失败 1 ｜ 用时 162s
+[2026-10-14 16:55:02] [11/50] 经典电影 —— 本批 30 词：inception, architecture, audience, award, cinema, classic, climax, comedy, conflict, corruption …
+[2026-10-14 16:55:22]    💾 已写入 classicMovies.json（本批 +30 条）
+[2026-10-14 16:55:22]    进度：本批成功 30 / 30 ｜ 累计新增 239 / 1337 ｜ 失败 1 ｜ 用时 182s
+[2026-10-14 16:55:22] [12/50] 经典电影 —— 本批 24 词：rescue, revenge, ruin, screen, script, solitude, sorrow, surrender, symbol, tension …
+[2026-10-14 16:55:41]    💾 已写入 classicMovies.json（本批 +24 条）
+[2026-10-14 16:55:41]    进度：本批成功 24 / 24 ｜ 累计新增 263 / 1337 ｜ 失败 1 ｜ 用时 201s
+[2026-10-14 16:55:41] [13/50] 原神 —— 本批 30 词：aggravate, aggravating, ascension, bloom, bow, melt, reputation, sword, vision, altar …
+[2026-10-14 16:56:03]    💾 已写入 genshinImpact.json（本批 +30 条）
+[2026-10-14 16:56:03]    进度：本批成功 30 / 30 ｜ 累计新增 293 / 1337 ｜ 失败 1 ｜ 用时 222s
+[2026-10-14 16:56:03] [14/50] 原神 —— 本批 30 词：legend, myth, quest, relic, sanctuary, voyage, armament, blaze, breakthrough, combustion …
+[2026-10-14 16:56:22]    💾 已写入 genshinImpact.json（本批 +30 条）
+[2026-10-14 16:56:22]    进度：本批成功 30 / 30 ｜ 累计新增 323 / 1337 ｜ 失败 1 ｜ 用时 242s
+[2026-10-14 16:56:22] [15/50] 原神 —— 本批 30 词：appellation, apprehension, arbitrate, attraction, blossom, calculation, circulation, compaction, comprehension, computation …
+[2026-10-14 16:56:40]    💾 已写入 genshinImpact.json（本批 +30 条）
+[2026-10-14 16:56:40]    进度：本批成功 30 / 30 ｜ 累计新增 353 / 1337 ｜ 失败 1 ｜ 用时 260s
+[2026-10-14 16:56:40] [16/50] 原神 —— 本批 30 词：elementary, escalation, exaltation, expectation, exploitation, extension, extraction, faction, fraction, fragile …
+[2026-10-14 16:56:58]    💾 已写入 genshinImpact.json（本批 +30 条）
+[2026-10-14 16:56:58]    进度：本批成功 30 / 30 ｜ 累计新增 383 / 1337 ｜ 失败 1 ｜ 用时 278s
+[2026-10-14 16:56:58] [17/50] 原神 —— 本批 17 词：jubilation, lamentation, legislation, limitation, origin, originate, overlook, pension, plantation, provision …
+[2026-10-14 16:57:13]    💾 已写入 genshinImpact.json（本批 +17 条）
+[2026-10-14 16:57:13]    进度：本批成功 17 / 17 ｜ 累计新增 400 / 1337 ｜ 失败 1 ｜ 用时 292s
+[2026-10-14 16:57:13] [18/50] 王者荣耀 —— 本批 30 词：beleaguer, besiege, capitulate, caste, cure, decelerate, despot, detriment, economic, economical …
+[2026-10-14 16:57:34]    💾 已写入 honorOfKings.json（本批 +30 条）
+[2026-10-14 16:57:34]    进度：本批成功 30 / 30 ｜ 累计新增 430 / 1337 ｜ 失败 1 ｜ 用时 314s
+[2026-10-14 16:57:34] [19/50] 王者荣耀 —— 本批 30 词：penetrate, pierce, propel, prophet, reel, spring, therapy, vulnerable, acceleration, administration …
+[2026-10-14 16:57:55]    💾 已写入 honorOfKings.json（本批 +30 条）
+[2026-10-14 16:57:55]    进度：本批成功 30 / 30 ｜ 累计新增 460 / 1337 ｜ 失败 1 ｜ 用时 335s
+[2026-10-14 16:57:55] [20/50] 王者荣耀 —— 本批 28 词：duration, emigration, estimate, experiment, expiration, exploration, federation, freighter, frustration, generation …
+[2026-10-14 16:58:13]    💾 已写入 honorOfKings.json（本批 +28 条）
+[2026-10-14 16:58:13]    进度：本批成功 28 / 28 ｜ 累计新增 488 / 1337 ｜ 失败 1 ｜ 用时 353s
+[2026-10-14 16:58:13] [21/50] 神探夏洛克 —— 本批 30 词：arrogant, autopsy, blunder, brilliant, coincide, confess, confront, confrontation, custody, decipher …
+[2026-10-14 16:58:32]    💾 已写入 sherlock.json（本批 +30 条）
+[2026-10-14 16:58:32]    进度：本批成功 30 / 30 ｜ 累计新增 518 / 1337 ｜ 失败 1 ｜ 用时 372s
+[2026-10-14 16:58:32] [22/50] 神探夏洛克 —— 本批 24 词：pursue, puzzle, rational, recall, reveal, scandal, trace, trap, trial, verdict …
+[2026-10-14 16:58:51]    · consultant 第 1 次单独重试仍不达标：example 未含该单词
+[2026-10-14 16:58:53]    · consultant 第 2 次单独重试仍不达标：example 未含该单词
+[2026-10-14 16:58:53]    💾 已写入 sherlock.json（本批 +23 条）
+[2026-10-14 16:58:53]    进度：本批成功 23 / 24 ｜ 累计新增 541 / 1337 ｜ 失败 2 ｜ 用时 393s
+[2026-10-14 16:58:53] [23/50] 杀戮尖塔 —— 本批 30 词：ability, absorption, adhere, affair, amass, anarchy, armament, assail, assault, assess …
+[2026-10-14 16:59:17]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 16:59:17]    进度：本批成功 30 / 30 ｜ 累计新增 571 / 1337 ｜ 失败 2 ｜ 用时 417s
+[2026-10-14 16:59:17] [24/50] 杀戮尖塔 —— 本批 30 词：cement, ceremonial, ceremony, cessation, champion, chaotic, chief, circulate, circulation, circulatory …
+[2026-10-14 16:59:40]    · contingency 第 1 次单独重试仍不达标：story 超长 63 字
+[2026-10-14 16:59:42]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 16:59:42]    进度：本批成功 30 / 30 ｜ 累计新增 601 / 1337 ｜ 失败 2 ｜ 用时 442s
+[2026-10-14 16:59:42] [25/50] 杀戮尖塔 —— 本批 30 词：crack, crackdown, crash, crook, crooked, cue, cure, curve, cushion, dagger …
+[2026-10-14 17:00:00]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:00:00]    进度：本批成功 30 / 30 ｜ 累计新增 631 / 1337 ｜ 失败 2 ｜ 用时 460s
+[2026-10-14 17:00:00] [26/50] 杀戮尖塔 —— 本批 30 词：distract, dread, dynamic, electorate, electrocute, emergency, empower, energize, erupt, escalate …
+[2026-10-14 17:00:22]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:00:22]    进度：本批成功 30 / 30 ｜ 累计新增 661 / 1337 ｜ 失败 2 ｜ 用时 482s
+[2026-10-14 17:00:22] [27/50] 杀戮尖塔 —— 本批 30 词：forgo, forsake, fortuitous, founder, fraction, fractional, furnish, garner, gather, gesture …
+[2026-10-14 17:00:50]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:00:50]    进度：本批成功 30 / 30 ｜ 累计新增 691 / 1337 ｜ 失败 2 ｜ 用时 510s
+[2026-10-14 17:00:50] [28/50] 杀戮尖塔 —— 本批 30 词：indignation, indistinct, induct, infirm, infirmity, infrequent, inherent, injure, injury, innocuous …
+[2026-10-14 17:01:10]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:01:10]    进度：本批成功 30 / 30 ｜ 累计新增 721 / 1337 ｜ 失败 2 ｜ 用时 530s
+[2026-10-14 17:01:10] [29/50] 杀戮尖塔 —— 本批 30 词：luxuriant, malicious, mess, muscle, obscure, occurrence, ordinary, outbreak, outrage, persist …
+[2026-10-14 17:01:35]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:01:35]    进度：本批成功 30 / 30 ｜ 累计新增 751 / 1337 ｜ 失败 2 ｜ 用时 554s
+[2026-10-14 17:01:35] [30/50] 杀戮尖塔 —— 本批 30 词：spectator, spike, spin, spot, spring, statistical, steer, stumble, suffocate, suspend …
+[2026-10-14 17:01:59]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:01:59]    进度：本批成功 30 / 30 ｜ 累计新增 781 / 1337 ｜ 失败 2 ｜ 用时 578s
+[2026-10-14 17:01:59] [31/50] 杀戮尖塔 —— 本批 30 词：ammunition, appliance, apprehension, assistance, attraction, augment, austerity, autograph, automate, automatic …
+[2026-10-14 17:02:21]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:02:21]    进度：本批成功 30 / 30 ｜ 累计新增 811 / 1337 ｜ 失败 2 ｜ 用时 601s
+[2026-10-14 17:02:21] [32/50] 杀戮尖塔 —— 本批 30 词：commission, commonwealth, compaction, compliance, comprehension, concentration, conclude, conclusive, condemnation, condolence …
+[2026-10-14 17:02:37]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:02:37]    进度：本批成功 30 / 30 ｜ 累计新增 841 / 1337 ｜ 失败 2 ｜ 用时 617s
+[2026-10-14 17:02:37] [33/50] 杀戮尖塔 —— 本批 30 词：customs, deadly, deceive, declaration, defendant, definition, deliberation, deliverance, delusion, demonstrate …
+[2026-10-14 17:02:57]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:02:57]    进度：本批成功 30 / 30 ｜ 累计新增 871 / 1337 ｜ 失败 2 ｜ 用时 636s
+[2026-10-14 17:02:57] [34/50] 杀戮尖塔 —— 本批 30 词：donation, double, duration, editorial, electrician, electron, electronic, elimination, embrace, emigration …
+[2026-10-14 17:03:18]    · exemplify 第 1 次单独重试仍不达标：example 未含该单词
+[2026-10-14 17:03:19]    · exemplify 第 2 次单独重试仍不达标：story 超长 66 字
+[2026-10-14 17:03:19]    💾 已写入 slayTheSpire.json（本批 +29 条）
+[2026-10-14 17:03:19]    进度：本批成功 29 / 30 ｜ 累计新增 900 / 1337 ｜ 失败 3 ｜ 用时 659s
+[2026-10-14 17:03:19] [35/50] 杀戮尖塔 —— 本批 30 词：finale, flurry, forceful, foreigner, fortress, fountain, fragment, frustrate, frustration, generation …
+[2026-10-14 17:03:40]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:03:40]    进度：本批成功 30 / 30 ｜ 累计新增 930 / 1337 ｜ 失败 3 ｜ 用时 680s
+[2026-10-14 17:03:40] [36/50] 杀戮尖塔 —— 本批 30 词：incidental, inclination, incorporation, incursion, infinite, infinitesimal, infinity, inflammable, inflammation, inflammatory …
+[2026-10-14 17:04:02]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:04:02]    进度：本批成功 30 / 30 ｜ 累计新增 960 / 1337 ｜ 失败 3 ｜ 用时 702s
+[2026-10-14 17:04:02] [37/50] 杀戮尖塔 —— 本批 30 词：irrecoverable, keystone, liberation, logistics, machinery, magnet, masterpiece, mental, merchandise, meteor …
+[2026-10-14 17:04:21]    💾 已写入 slayTheSpire.json（本批 +30 条）
+[2026-10-14 17:04:21]    进度：本批成功 30 / 30 ｜ 累计新增 990 / 1337 ｜ 失败 3 ｜ 用时 721s
+[2026-10-14 17:04:21] [38/50] 杀戮尖塔 —— 本批 24 词：screen, segregate, signature, slavery, specialize, startle, static, statue, stream, strengthen …
+[2026-10-14 17:04:37]    💾 已写入 slayTheSpire.json（本批 +24 条）
+[2026-10-14 17:04:37]    进度：本批成功 24 / 24 ｜ 累计新增 1014 / 1337 ｜ 失败 3 ｜ 用时 736s
+[2026-10-14 17:04:37] [39/50] 杀戮尖塔2 —— 本批 30 词：ascension, chest, curse, damage, defend, elite, enemy, exhaustion, intention, merchant …
+[2026-10-14 17:04:51]    💾 已写入 slayTheSpire2.json（本批 +30 条）
+[2026-10-14 17:04:51]    进度：本批成功 30 / 30 ｜ 累计新增 1044 / 1337 ｜ 失败 3 ｜ 用时 751s
+[2026-10-14 17:04:51] [40/50] 杀戮尖塔2 —— 本批 30 词：haunting, labyrinth, malice, pact, peril, rot, ruin, skeleton, skull, torment …
+[2026-10-14 17:05:11]    💾 已写入 slayTheSpire2.json（本批 +30 条）
+[2026-10-14 17:05:11]    进度：本批成功 30 / 30 ｜ 累计新增 1074 / 1337 ｜ 失败 3 ｜ 用时 771s
+[2026-10-14 17:05:11] [41/50] 杀戮尖塔2 —— 本批 30 词：consume, consumption, crackdown, debilitate, defense, deplete, detriment, diagram, empower, escalate …
+[2026-10-14 17:05:26]    💾 已写入 slayTheSpire2.json（本批 +30 条）
+[2026-10-14 17:05:26]    进度：本批成功 30 / 30 ｜ 累计新增 1104 / 1337 ｜ 失败 3 ｜ 用时 786s
+[2026-10-14 17:05:26] [42/50] 杀戮尖塔2 —— 本批 30 词：reserve, swift, apprehension, austerity, comprehension, considerable, cooperate, cooperation, defendant, dimension …
+[2026-10-14 17:05:44]    💾 已写入 slayTheSpire2.json（本批 +30 条）
+[2026-10-14 17:05:44]    进度：本批成功 30 / 30 ｜ 累计新增 1134 / 1337 ｜ 失败 3 ｜ 用时 804s
+[2026-10-14 17:05:44] [43/50] 杀戮尖塔2 —— 本批 2 词：strengthen, tension
+[2026-10-14 17:05:47]    💾 已写入 slayTheSpire2.json（本批 +2 条）
+[2026-10-14 17:05:47]    进度：本批成功 2 / 2 ｜ 累计新增 1136 / 1337 ｜ 失败 3 ｜ 用时 807s
+[2026-10-14 17:05:47] [44/50] 无畏契约 —— 本批 30 词：apparition, ascendancy, bastion, bunker, communicable, covenant, cure, deadly, demolish, detriment …
+[2026-10-14 17:06:13]    💾 已写入 valorant.json（本批 +30 条）
+[2026-10-14 17:06:13]    进度：本批成功 30 / 30 ｜ 累计新增 1166 / 1337 ｜ 失败 3 ｜ 用时 833s
+[2026-10-14 17:06:13] [45/50] 无畏契约 —— 本批 30 词：glimmer, glisten, guise, heroic, information, injure, injury, injustice, intelligence, invulnerable …
+[2026-10-14 17:06:37]    💾 已写入 valorant.json（本批 +30 条）
+[2026-10-14 17:06:37]    进度：本批成功 30 / 30 ｜ 累计新增 1196 / 1337 ｜ 失败 3 ｜ 用时 857s
+[2026-10-14 17:06:37] [46/50] 无畏契约 —— 本批 30 词：capability, certification, clarification, classified, classify, collective, combination, communal, commune, communicate …
+[2026-10-14 17:06:57]    💾 已写入 valorant.json（本批 +30 条）
+[2026-10-14 17:06:57]    进度：本批成功 30 / 30 ｜ 累计新增 1226 / 1337 ｜ 失败 3 ｜ 用时 877s
+[2026-10-14 17:06:57] [47/50] 无畏契约 —— 本批 30 词：controversial, controversy, coordinate, coronation, credibility, credit, declamation, dedication, defamation, defend …
+[2026-10-14 17:07:22]    💾 已写入 valorant.json（本批 +30 条）
+[2026-10-14 17:07:22]    进度：本批成功 30 / 30 ｜ 累计新增 1256 / 1337 ｜ 失败 3 ｜ 用时 902s
+[2026-10-14 17:07:22] [48/50] 无畏契约 —— 本批 30 词：elimination, estimate, exaltation, exclamation, execution, executive, executor, expectation, explanation, exploitation …
+[2026-10-14 17:07:39]    💾 已写入 valorant.json（本批 +30 条）
+[2026-10-14 17:07:39]    进度：本批成功 30 / 30 ｜ 累计新增 1286 / 1337 ｜ 失败 3 ｜ 用时 919s
+[2026-10-14 17:07:39] [49/50] 无畏契约 —— 本批 30 词：incarnation, inclination, incrustation, indentation, indication, indignation, ineffective, inflammation, infraction, initial …
+[2026-10-14 17:08:00]    💾 已写入 valorant.json（本批 +30 条）
+[2026-10-14 17:08:00]    进度：本批成功 30 / 30 ｜ 累计新增 1316 / 1337 ｜ 失败 3 ｜ 用时 940s
+[2026-10-14 17:08:00] [50/50] 无畏契约 —— 本批 18 词：objection, operate, perspective, prospective, protective, qualification, quotation, reputation, respective, satisfaction …
+[2026-10-14 17:08:14]    💾 已写入 valorant.json（本批 +18 条）
+[2026-10-14 17:08:14]    进度：本批成功 18 / 18 ｜ 累计新增 1334 / 1337 ｜ 失败 3 ｜ 用时 954s
+[2026-10-14 17:08:14] 
+================ 重新扫描核对 ================
+[2026-10-14 17:08:14]    明日方舟       材料  118 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    羽毛球        材料   53 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    篮球         材料   94 条 | 仍缺 1 个
+[2026-10-14 17:08:14]    绝命毒师       材料   67 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    经典电影       材料   87 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    原神         材料  161 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    空洞骑士       材料  895 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    王者荣耀       材料  188 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    神探夏洛克      材料   85 条 | 仍缺 1 个
+[2026-10-14 17:08:14]    杀戮尖塔       材料  719 条 | 仍缺 1 个
+[2026-10-14 17:08:14]    杀戮尖塔2      材料  146 条 | 仍缺 0 个
+[2026-10-14 17:08:14]    无畏契约       材料  297 条 | 仍缺 0 个
+[2026-10-14 17:08:14] 
+================ 汇总 ================
+[2026-10-14 17:08:14] 缺口（开始时）：1337 个
+[2026-10-14 17:08:14] 本脚本补齐：    1334 条
+[2026-10-14 17:08:14] 仍缺 / 失败：   3 个
+[2026-10-14 17:08:14] 耗时：          954s
+[2026-10-14 17:08:14] 报告：          tools\reports\autoFixGap-2026-10-14T17-08-14.json
+[2026-10-14 17:08:14] 
+⚠️ 仍有 3 个词未补齐。直接把本命令再跑一次即可继续（已补齐的词会自动跳过）。

@@ -7,12 +7,16 @@
  * 设计约束：
  *   - 卡片组件不直接访问 service，所有数据由调用方（page）注入 props。
  *     这样未来换数据来源（后端 / 分享）时本组件无需改动。
- *   - 背面若尚未生成 AI 材料，展示「本地兜底内容 + 生成按钮」而非空白。
+ *   - 背面只渲染真实存在的 material 字段：domainMeaning / story / example 缺哪块就
+ *     隐藏哪块，**不显示任何占位或兜底话术**（localDomainHint 已彻底删除）。
+ *     完全没有材料时只保留「生成记忆材料」入口。
  * ============================================================================
  */
 
 import { h, svgIcon, esc } from '../core/dom.js';
 import { iconPath } from '../core/icons.js';
+import { domainLabel } from '../core/domainLabel.js';
+import { tierClass, tierLabel } from '../core/tierLabel.js';
 
 /**
  * @param {object} props
@@ -85,6 +89,14 @@ export function createFlipCard(props) {
       text: word.type === 'derived' ? '派生词' : '核心词',
     }));
 
+    /* 档位标签（核心 / 相关 / 泛化）—— 缺 tier 时按「相关」兜底 */
+    badges.push(h('span.chip', {
+      class: tierClass(word),
+      title: `该词在当前领域的档位：${tierLabel(word)}`,
+      style: domain?.theme?.primary ? { '--chip-tier': domain.theme.primary } : {},
+      text: tierLabel(word),
+    }));
+
     if (material) {
       badges.push(h('span.chip.chip--term', { title: 'AI 记忆材料已生成' }, [
         svgIcon(iconPath('sparkles'), { size: 11 }),
@@ -132,12 +144,13 @@ export function createFlipCard(props) {
       h('div.mat__value', { text: material?.generalMeaning || word.translation || '—' }),
     ]));
 
-    scroll.appendChild(h('div.mat__section', {}, [
-      h('div.mat__label', {}, [svgIcon(iconPath('domain'), { size: 12 }), `领域关联 · ${domain?.name || ''}`]),
-      h('div.mat__value.mat__value--soft', {
-        text: material?.domainMeaning || localDomainHint(relevance, domain),
-      }),
-    ]));
+    // 领域关联区 —— 只在确实有材料时渲染；无材料整块隐藏（无兜底废话）
+    if (material?.domainMeaning) {
+      scroll.appendChild(h('div.mat__section', {}, [
+        h('div.mat__label', {}, [svgIcon(iconPath('domain'), { size: 12 }), `领域关联 · ${domainLabel(domain)}`]),
+        h('div.mat__value.mat__value--soft', { text: material.domainMeaning }),
+      ]));
+    }
 
     if (material?.story) {
       scroll.appendChild(h('div.mat__section', {}, [
@@ -146,7 +159,8 @@ export function createFlipCard(props) {
       ]));
     }
 
-    if (material?.example) {
+    // 英文例句区 —— 只在确实有例句时渲染；无材料整块隐藏（已删除「暂无例句」占位）
+    if (material?.example && String(material.example).trim()) {
       scroll.appendChild(h('div.mat__section', {}, [
         h('div.mat__label', {}, [svgIcon(iconPath('quill'), { size: 12 }), '英文例句']),
         h('div.mat__value.mat__value--example', { text: material.example }),
@@ -209,20 +223,10 @@ function briefOf(translation) {
   return s;
 }
 
-/** 未生成 AI 材料时，用本地关联信息给出领域提示（不使用任何编造的译名） */
-function localDomainHint(relevance, domain) {
-  if (!relevance || !domain) return '无直接对应';
-  if (relevance.level === 'exact') {
-    const zh = relevance.domainTermZh || '【译名待确认】';
-    return `在《${domain.name}》中对应官方术语「${zh}」。`;
-  }
-  if (relevance.level === 'vocab') {
-    return `该词在《${domain.name}》的语境中较为常见，可与游戏场景建立联想。`;
-  }
-  if (relevance.level === 'gloss') {
-    return `释义与《${domain.name}》的术语用词接近，可借术语语义加深记忆。`;
-  }
-  return '无直接对应';
-}
+/**
+ * ⚠️ 已删除 localDomainHint()（领域关联兜底文案）。
+ * 背面只渲染真实存在的 material 字段（domainMeaning / story / example），
+ * 缺哪块就隐藏哪块，绝不显示占位或兜底话术。
+ */
 
 export default createFlipCard;

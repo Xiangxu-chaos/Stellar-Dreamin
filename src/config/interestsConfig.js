@@ -113,6 +113,8 @@
  * ============================================================================
  */
 
+import { SCENARIO_VOCABULARY } from './scenarioVocabulary.js';
+
 /* ---------------------------------------------------------------------------
  * 通用（默认）主题：当用户未选择领域，或未来新增领域未定义 theme 时兜底
  * ------------------------------------------------------------------------ */
@@ -148,12 +150,36 @@ export const DEFAULT_THEME = {
 };
 
 /* ---------------------------------------------------------------------------
+ * ★ 领域板块（category）★
+ * ---------------------------------------------------------------------------
+ * 领域选择界面按板块分组展示，顺序即 DOMAIN_CATEGORY_ORDER。
+ * 每个领域的 category 字段**只能**取下面四个值之一，未识别的取值一律
+ * 归入「其他」板块（见 domainPicker 的归一化逻辑），保证新增领域不会因为
+ * 拼错板块名而从界面上消失。
+ * ------------------------------------------------------------------------ */
+export const DOMAIN_CATEGORY = {
+  GAME: '游戏',
+  FILM: '影视',
+  SPORTS: '体育',
+  OTHER: '其他',
+};
+
+/** 板块展示顺序（与需求给定的四板块一致） */
+export const DOMAIN_CATEGORY_ORDER = [
+  DOMAIN_CATEGORY.GAME,
+  DOMAIN_CATEGORY.FILM,
+  DOMAIN_CATEGORY.SPORTS,
+  DOMAIN_CATEGORY.OTHER,
+];
+
+/* ---------------------------------------------------------------------------
  * 领域 1：杀戮尖塔 (Slay the Spire)
  *  主题：暗红暗金卡牌风
  * ------------------------------------------------------------------------ */
 const SLAY_THE_SPIRE = {
   id: 'slay_the_spire',
   name: '杀戮尖塔',
+  category: DOMAIN_CATEGORY.GAME,
   subtitle: 'Slay the Spire',
   description: '爬塔、卡组构筑、遗物与意图——在尖塔里用英语打赢每一场战斗。',
   icon: 'tower',
@@ -1208,6 +1234,7 @@ const SLAY_THE_SPIRE = {
 const HOLLOW_KNIGHT = {
   id: 'hollow_knight',
   name: '空洞骑士',
+  category: DOMAIN_CATEGORY.GAME,
   subtitle: 'Hollow Knight',
   description: '圣巢、骨钉与灵魂——在废墟王国里用英语唤醒记忆。',
   icon: 'mask',
@@ -3443,6 +3470,7 @@ const HOLLOW_KNIGHT = {
 const HONOR_OF_KINGS = {
   id: 'honor_of_kings',
   name: '王者荣耀',
+  category: DOMAIN_CATEGORY.GAME,
   subtitle: 'Honor of Kings',
   description: '峡谷、分路、野区与团战——在熟悉的战场里记六级词汇。',
   icon: 'crown',
@@ -3825,6 +3853,7 @@ const HONOR_OF_KINGS = {
 const VALORANT = {
   id: 'valorant',
   name: '无畏契约',
+  category: DOMAIN_CATEGORY.GAME,
   subtitle: 'VALORANT',
   description: '特工、技能与经济局——在战术射击的枪线里背单词。',
   icon: 'crosshair',
@@ -4227,17 +4256,3838 @@ const VALORANT = {
 };
 
 /* ---------------------------------------------------------------------------
+ * 主题工厂（仅供新增领域使用）
+ * ---------------------------------------------------------------------------
+ * 手写 20 个 theme token 极易漏配，而漏配的 token 会被 themeManager 兜底成
+ * 「默认蓝」——表现为「切了领域但页面还是蓝的」。这里从
+ * 「底色 + 主色 + 强调色 + 三级文字色」推导整套 token，保证配色完整自洽。
+ *
+ * ⚠️ 已存在的四个领域保留各自手写的 theme（历史配色，不动）。
+ * ------------------------------------------------------------------------ */
+const FONT_BODY_DEFAULT = "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif";
+
+function rgbTriplet(hex) {
+  const h = String(hex).replace('#', '').trim();
+  const full = h.length === 3 ? h.split('').map((c) => c + c).join('') : h;
+  const n = parseInt(full, 16);
+  return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
+}
+
+function makeDomainTheme(spec) {
+  const {
+    id, label, bg, bgGradient, primary, accent,
+    text = '#eef3f9', textSoft = '#a8b6c4', textFaint = '#6f7d8b',
+    radius = '16px', fontDisplay = FONT_BODY_DEFAULT,
+  } = spec;
+  const p = rgbTriplet(primary);
+  const a = rgbTriplet(accent);
+  return {
+    id, label, bg, bgGradient,
+    surface: `rgba(${p}, 0.055)`,
+    surfaceStrong: `rgba(${p}, 0.10)`,
+    border: `rgba(${p}, 0.22)`,
+    borderStrong: `rgba(${p}, 0.42)`,
+    text, textSoft, textFaint,
+    primary,
+    primarySoft: `rgba(${p}, 0.18)`,
+    accent,
+    accentSoft: `rgba(${a}, 0.15)`,
+    cardGradient: `linear-gradient(160deg, rgba(${a}, 0.11) 0%, rgba(${p}, 0.16) 50%, rgba(${a}, 0.06) 100%)`,
+    cardGlow: `rgba(${p}, 0.42)`,
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.20) 48%, transparent 64%)',
+    success: '#6fe0c0',
+    danger: '#ff8080',
+    fontDisplay,
+    fontBody: FONT_BODY_DEFAULT,
+    radius,
+  };
+}
+
+/* ---------------------------------------------------------------------------
+ * 领域 5：杀戮尖塔2 (Slay the Spire 2) —— 板块：游戏
+ *  主题：幽紫骸骨
+ *  译名来源：Mega Crit 官方中文（Steam 简体中文 / 2025-12 开发者访谈）与
+ *            中文资料库 sts2.urarawin.com 的界面译名。
+ *  ⚠️ Doom 的中文在社区有「厄运」「灾厄」两种写法，官方未固定 → 材料侧
+ *     unverified: true，前端显示【译名待确认】。
+ * ------------------------------------------------------------------------ */
+const SLAY_THE_SPIRE_2 = {
+  id: 'slay_the_spire2',
+  name: '杀戮尖塔2',
+  category: DOMAIN_CATEGORY.GAME,
+  subtitle: 'Slay the Spire 2',
+  description: '亡灵契约师、奥斯提与厄运——在新尖塔里把六级词汇钉进脑子。',
+  icon: 'tower',
+  theme: makeDomainTheme({
+    id: 'slay_the_spire2',
+    label: '幽紫骸骨',
+    bg: '#0a0812',
+    bgGradient:
+      'radial-gradient(1140px 780px at 12% -12%, #3b1f66 0%, transparent 58%), radial-gradient(940px 680px at 108% 6%, #17475c 0%, transparent 52%), radial-gradient(820px 820px at 50% 122%, #241041 0%, transparent 60%), linear-gradient(180deg, #0d0a17 0%, #050409 100%)',
+    primary: '#8b5cf6',
+    accent: '#5eead4',
+    text: '#efeaf9',
+    textSoft: '#b3a8c8',
+    textFaint: '#7a6f92',
+    radius: '16px',
+  }),
+
+  domainTerms: {
+    // --- 新角色 / 核心单位 ---
+    necrobinder: '亡灵契约师',
+    theNecrobinder: '亡灵契约师',
+    osty: '奥斯提',
+    regent: '储君',
+    theRegent: '储君',
+    ironclad: '铁甲战士',
+    theIronclad: '铁甲战士',
+    silent: '静默猎手',
+    theSilent: '静默猎手',
+    soul: '灵魂',
+    soulToken: '灵魂',
+    doom: '厄运',
+    summon: '召唤',
+    guard: '护卫',
+    strike: '打击',
+    defend: '防御',
+    // --- 核心机制 ---
+    spire: '尖塔',
+    block: '格挡',
+    energy: '能量',
+    intent: '意图',
+    hp: '生命值',
+    relic: '遗物',
+    potion: '药水',
+    deck: '卡组',
+    hand: '手牌',
+    draw: '抽牌',
+    discard: '弃牌',
+    exhaust: '消耗',
+    ethereal: '虚无',
+    innate: '固有',
+    retain: '保留',
+    upgrade: '升级',
+    rarity: '稀有度',
+    ascension: '进阶',
+    act: '章节',
+    boss: '首领',
+    elite: '精英',
+    enemy: '敌人',
+    turn: '回合',
+    damage: '伤害',
+    // --- 状态 ---
+    weak: '虚弱',
+    vulnerable: '易伤',
+    frail: '虚弱无力',
+    strength: '力量',
+    dexterity: '敏捷',
+    poison: '中毒',
+    ritual: '仪式',
+    curse: '诅咒',
+    // --- 卡牌类型 / 流程 ---
+    card: '卡牌',
+    attack: '攻击',
+    skill: '技能',
+    power: '能力',
+    reward: '奖励',
+    shop: '商店',
+    merchant: '商人',
+    campfire: '篝火',
+    restSite: '休息处',
+    chest: '宝箱',
+    map: '地图',
+    floor: '楼层',
+    // --- 新模式 ---
+    cooperative: '合作模式',
+    coOp: '合作模式',
+  },
+
+  domainVocabulary: {
+    bone: '骸骨',
+    skull: '骷髅',
+    skeleton: '骨架',
+    marrow: '骨髓',
+    corpse: '尸体',
+    carcass: '残骸',
+    grave: '坟墓',
+    tomb: '陵墓',
+    crypt: '地穴',
+    catacomb: '地下墓窟',
+    shroud: '裹尸布',
+    ashes: '骨灰',
+    phantom: '幻影',
+    specter: '幽灵',
+    wraith: '亡魂',
+    haunt: '萦绕',
+    lich: '巫妖',
+    sorcery: '巫术',
+    incantation: '咒语',
+    conjure: '召唤',
+    bind: '束缚',
+    pact: '契约',
+    vengeance: '复仇',
+    malice: '怨恨',
+    dread: '恐惧',
+    gloom: '幽暗',
+    decay: '腐朽',
+    wither: '枯萎',
+    rot: '腐烂',
+    ruin: '废墟',
+    oblivion: '湮没',
+    torment: '折磨',
+    agony: '极度痛苦',
+    sacrifice: '献祭',
+    resurrection: '复活',
+    revenant: '亡魂',
+    necromancy: '死灵术',
+    descent: '下降',
+    ascent: '上升',
+    abyss: '深渊',
+    labyrinth: '迷宫',
+    corridor: '走廊',
+    chamber: '厅室',
+    vault: '穹顶',
+    altar: '祭坛',
+    ritual: '仪式',
+    totem: '图腾',
+    grimoire: '魔法书',
+    talisman: '护符',
+    omen: '预兆',
+    fate: '命运',
+    doom: '厄运',
+    peril: '危险',
+    gamble: '赌博',
+    risk: '风险',
+  },
+
+  excludedTerms: [
+    // 「储君」的英文 Regent 与 regular/regenerate 等词前缀相近，靠词形规则易误伤
+    'regents', 'regency',
+    // soul 的常见派生词在通用语境里过多，避免拉进大量噪声
+    'soulful', 'soulless',
+  ],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为《杀戮尖塔2》（Slay the Spire 2）。以下为官方中文译名参照表（来源：Mega Crit 官方中文 / Steam 简体中文 / 中文资料库 sts2.urarawin.com），请严格遵守，不得自行翻译：
+尖塔(Spire)、进度层级「进阶」(Ascension)、格挡(Block)、能量(Energy)、意图(Intent)、遗物(Relic)、药水(Potion)、卡组(Deck)、手牌(Hand)、抽牌堆(Draw Pile)、弃牌堆(Discard Pile)、消耗(Exhaust)、虚无(Ethereal)、固有(Innate)、保留(Retain)、升级(Upgrade)、易伤(Vulnerable)、虚弱(Weak)、虚弱无力(Frail)、力量(Strength)、敏捷(Dexterity)、中毒(Poison)、诅咒(Curse)、首领(Boss)、精英(Elite)、篝火(Campfire)、休息处(Rest Site)、商人(Merchant)、商店(Shop)、宝箱(Chest)、地图(Map)、章节(Act)、楼层(Floor)、合作模式(Co-op)、
+角色：亡灵契约师(The Necrobinder)、铁甲战士(The Ironclad)、静默猎手(The Silent)、储君(The Regent)、奥斯提(Osty)。
+⚠️ 「厄运」(Doom) 的中文在中文社区并存「厄运」「灾厄」两种写法，官方尚未固定：提到它时必须标注【译名待确认】。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 领域 6：明日方舟 (Arknights) —— 板块：游戏
+ *  主题：冷灰源石橙
+ *  译名来源：鹰角网络官方中文（官网 ak.hypergryph.com / 游戏内界面），
+ *            中英对照以国际服官网 arknights.yo-star.com 核验。
+ * ------------------------------------------------------------------------ */
+const ARKNIGHTS = {
+  id: 'arknights',
+  name: '明日方舟',
+  category: DOMAIN_CATEGORY.GAME,
+  subtitle: 'Arknights',
+  description: '源石、天灾与感染者——在罗德岛的战术推演里背下六级词汇。',
+  icon: 'shield',
+  theme: makeDomainTheme({
+    id: 'arknights',
+    label: '冷灰源石橙',
+    bg: '#0b0d10',
+    bgGradient:
+      'radial-gradient(1120px 780px at 10% -14%, #3a3f47 0%, transparent 56%), radial-gradient(920px 660px at 106% 6%, #4a3416 0%, transparent 52%), radial-gradient(880px 820px at 50% 122%, #1b1f24 0%, transparent 62%), linear-gradient(180deg, #0e1114 0%, #070809 100%)',
+    primary: '#d99a2b',
+    accent: '#8fb8cc',
+    text: '#eef1f4',
+    textSoft: '#a6b0ba',
+    textFaint: '#6c7681',
+    radius: '14px',
+    fontDisplay: "'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+  }),
+
+  domainTerms: {
+    // --- 世界观核心 ---
+    originium: '源石',
+    originiums: '源石',
+    originiumOre: '源石矿石',
+    originiumArts: '源石技艺',
+    arts: '源石技艺',
+    infected: '感染者',
+    oripathy: '矿石病',
+    catastrophe: '天灾',
+    reunion: '整合运动',
+    rhodesIsland: '罗德岛',
+    nomadicCity: '移动城邦',
+    operator: '干员',
+    doctor: '博士',
+    terra: '泰拉',
+    terraHistoricus: '泰拉记事社',
+    // --- 组织 ---
+    rhineLab: '莱茵生命',
+    penguinLogistics: '企鹅物流',
+    blackSteel: '黑钢国际',
+    blacksteelWorldwide: '黑钢国际',
+    abyssalHunters: '深海猎人',
+    followers: '使徒',
+    // --- 国家 / 地区 ---
+    lungmen: '龙门',
+    ursus: '乌萨斯',
+    victoria: '维多利亚',
+    kazimierz: '卡西米尔',
+    leithania: '莱塔尼亚',
+    iberia: '伊比利亚',
+    sargon: '萨尔贡',
+    siracusa: '叙拉古',
+    columbia: '哥伦比亚',
+    rimBilliton: '雷姆必拓',
+    laterano: '拉特兰',
+    sarkaz: '萨卡兹',
+    sankta: '萨科塔',
+    aegir: '阿戈尔',
+    kjerag: '谢拉格',
+    minos: '米诺斯',
+    higashi: '东国',
+    // --- 干员职业 ---
+    vanguard: '先锋',
+    guard: '近卫',
+    defender: '重装',
+    sniper: '狙击',
+    caster: '术师',
+    medic: '医疗',
+    supporter: '辅助',
+    specialist: '特种',
+    // --- 战斗 / 养成 ---
+    deploy: '部署',
+    deployment: '部署',
+    elite: '精英化',
+    promotion: '精英化',
+    potential: '潜能',
+    module: '模组',
+    skillRank: '技能等级',
+    // --- 玩法系统 ---
+    annihilation: '剿灭作战',
+    contingencyContract: '危机合约',
+    integratedStrategies: '集成战略',
+    reclamationAlgorithm: '生息演算',
+    paradoxSimulation: '悖论模拟',
+    headhunting: '寻访',
+    recruitment: '招募',
+    sanity: '理智',
+    lmd: '龙门币',
+    orundum: '合成玉',
+    base: '基建',
+    controlCenter: '控制中枢',
+    tradingPost: '贸易站',
+    factory: '制造站',
+    powerPlant: '发电站',
+    dormitory: '宿舍',
+    receptionRoom: '会客室',
+    workshop: '加工站',
+  },
+
+  domainVocabulary: {
+    catastrophe: '大灾难',
+    disaster: '灾难',
+    calamity: '灾祸',
+    contagion: '传染',
+    epidemic: '流行病',
+    pandemic: '大流行',
+    quarantine: '隔离',
+    isolation: '隔绝',
+    refugee: '难民',
+    exile: '流放',
+    nomad: '游牧者',
+    caravan: '商队',
+    nomadic: '游牧的',
+    mobile: '可移动的',
+    purge: '清除',
+    suppress: '压制',
+    deploy: '部署',
+    formation: '阵型',
+    tactic: '战术',
+    strategy: '战略',
+    operation: '行动',
+    rescue: '营救',
+    salvage: '打捞',
+    evacuate: '撤离',
+    reinforce: '增援',
+    morale: '士气',
+    discipline: '纪律',
+    pharmacy: '药房',
+    pharmaceutical: '制药的',
+    remedy: '治疗法',
+    vaccine: '疫苗',
+    immunity: '免疫',
+    chronic: '慢性的',
+    terminal: '末期的',
+    symptom: '症状',
+    diagnose: '诊断',
+    ore: '矿石',
+    crystal: '结晶',
+    mineral: '矿物',
+    toxicity: '毒性',
+    radiation: '辐射',
+    contamination: '污染',
+    extinction: '灭绝',
+    survival: '生存',
+    sanctuary: '庇护所',
+    refuge: '避难所',
+    barrier: '屏障',
+    frontier: '边境',
+    patrol: '巡逻',
+    garrison: '驻防',
+    siege: '围攻',
+    skirmish: '小规模冲突',
+    onslaught: '猛攻',
+    counterattack: '反击',
+    vigilance: '警觉',
+    reconnaissance: '侦察',
+    intelligence: '情报',
+    analyst: '分析师',
+    logistics: '后勤',
+    ration: '配给',
+    currency: '货币',
+  },
+
+  excludedTerms: [
+    // Arts / Guard / Medic 等在通用英语里是高频词，避免泛化召回
+    'artistic', 'artistry', 'guarded', 'guarding', 'medication', 'medicated',
+    'supporter', 'supportive', 'specialists', 'casters', 'sniperRifle',
+  ],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为《明日方舟》（Arknights）。以下为官方中文译名，来源为鹰角网络官方中文（官网 ak.hypergryph.com）与国际服官网 arknights.yo-star.com 的中英对照，请严格遵守，不得自行翻译：
+源石(Originium)、源石技艺(Originium Arts)、感染者(Infected)、矿石病(Oripathy)、天灾(Catastrophe)、整合运动(Reunion)、罗德岛(Rhodes Island)、移动城邦(Nomadic City)、干员(Operator)、博士(Doctor)、泰拉(Terra)、
+干员职业：先锋(Vanguard)、近卫(Guard)、重装(Defender)、狙击(Sniper)、术师(Caster)、医疗(Medic)、辅助(Supporter)、特种(Specialist)；
+玩法系统：剿灭作战(Annihilation)、危机合约(Contingency Contract)、集成战略(Integrated Strategies)、生息演算(Reclamation Algorithm)、悖论模拟(Paradox Simulation)、寻访(Headhunting)、招募(Recruitment)、理智(Sanity)、龙门币(LMD)、合成玉(Orundum)、基建(Base)、制造站(Factory)、贸易站(Trading Post)、发电站(Power Plant)、宿舍(Dormitory)；
+地区与组织：龙门(Lungmen)、乌萨斯(Ursus)、维多利亚(Victoria)、卡西米尔(Kazimierz)、莱塔尼亚(Leithania)、伊比利亚(Iberia)、萨尔贡(Sargon)、叙拉古(Siracusa)、哥伦比亚(Columbia)、雷姆必拓(Rim Billiton)、拉特兰(Laterano)、萨卡兹(Sarkaz)、萨科塔(Sankta)、阿戈尔(Aegir)、谢拉格(Kjerag)、米诺斯(Minos)、东国(Higashi)、莱茵生命(Rhine Lab)、企鹅物流(Penguin Logistics)、黑钢国际(BlackSteel Worldwide)、深海猎人(Abyssal Hunters)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 领域 7：原神 (Genshin Impact) —— 板块：游戏
+ *  主题：提瓦特青金
+ *  译名来源：米哈游官方中文（游戏内中文界面 / 官网 ys.mihoyo.com）。
+ * ------------------------------------------------------------------------ */
+const GENSHIN_IMPACT = {
+  id: 'genshin_impact',
+  name: '原神',
+  category: DOMAIN_CATEGORY.GAME,
+  subtitle: 'Genshin Impact',
+  description: '提瓦特、神之眼与元素反应——在七国的旅途里背下六级词汇。',
+  icon: 'sparkles',
+  theme: makeDomainTheme({
+    id: 'genshin_impact',
+    label: '提瓦特青金',
+    bg: '#070d12',
+    bgGradient:
+      'radial-gradient(1140px 780px at 12% -12%, #0f4a48 0%, transparent 58%), radial-gradient(940px 660px at 108% 6%, #4a3a14 0%, transparent 52%), radial-gradient(880px 820px at 50% 122%, #0d2b33 0%, transparent 60%), linear-gradient(180deg, #091016 0%, #05080b 100%)',
+    primary: '#31c9a4',
+    accent: '#e8c778',
+    text: '#eaf7f3',
+    textSoft: '#9dc0b8',
+    textFaint: '#668a84',
+    radius: '18px',
+    fontDisplay: "'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+  }),
+
+  domainTerms: {
+    // --- 世界 / 地区 ---
+    teyvat: '提瓦特',
+    mondstadt: '蒙德',
+    liyue: '璃月',
+    inazuma: '稻妻',
+    sumeru: '须弥',
+    fontaine: '枫丹',
+    natlan: '纳塔',
+    snezhnaya: '至冬',
+    khaenriah: '坎瑞亚',
+    celestia: '天空岛',
+    theAbyss: '深渊',
+    abyssOrder: '深渊教团',
+    theSeven: '尘世七执政',
+    archon: '魔神',
+    // --- 角色养成 ---
+    vision: '神之眼',
+    constellation: '命之座',
+    artifact: '圣遗物',
+    artifactSet: '圣遗物套装',
+    primogem: '原石',
+    mora: '摩拉',
+    adventurersGuild: '冒险家协会',
+    ascension: '突破',
+    talent: '天赋',
+    refinement: '精炼',
+    elementalMastery: '元素精通',
+    critRate: '暴击率',
+    critDamage: '暴击伤害',
+    friendship: '好感度',
+    // --- 武器 ---
+    weapon: '武器',
+    sword: '单手剑',
+    claymore: '双手剑',
+    polearm: '长柄武器',
+    bow: '弓',
+    catalyst: '法器',
+    // --- 敌人 / 势力 ---
+    fatui: '愚人众',
+    fatuiHarbingers: '愚人众执行官',
+    hilichurl: '丘丘人',
+    slime: '史莱姆',
+    ruinGuard: '遗迹守卫',
+    ruinHunter: '遗迹猎者',
+    knightsOfFavonius: '西风骑士团',
+    millelith: '千岩军',
+    qixing: '璃月七星',
+    // --- 系统 / 玩法 ---
+    domain: '秘境',
+    leyLine: '地脉',
+    leyLineBlossom: '地脉之花',
+    spiralAbyss: '深境螺旋',
+    sereniteaPot: '尘歌壶',
+    statueOfTheSeven: '七天神像',
+    teleportWaypoint: '传送锚点',
+    originalResin: '原粹树脂',
+    fragileResin: '脆弱树脂',
+    battlePass: '纪行',
+    intertwinedFate: '纠缠之缘',
+    acquaintFate: '相遇之缘',
+    wish: '祈愿',
+    trounceDomain: '征讨领域',
+    reputation: '声望',
+    stamina: '体力',
+    gliding: '滑翔',
+    // --- 元素反应 ---
+    elementalReaction: '元素反应',
+    vaporize: '蒸发',
+    melt: '融化',
+    overloaded: '超载',
+    electroCharged: '感电',
+    frozen: '冻结',
+    swirl: '扩散',
+    crystallize: '结晶',
+    superconduct: '超导',
+    burning: '燃烧',
+    bloom: '绽放',
+    aggravate: '激化',
+    hyperbloom: '超绽放',
+    quicken: '原激化',
+    // --- 角色 ---
+    traveler: '旅行者',
+    paimon: '派蒙',
+  },
+
+  domainVocabulary: {
+    elemental: '元素的',
+    element: '元素',
+    anemo: '风',
+    geo: '岩',
+    electro: '雷',
+    dendro: '草',
+    hydro: '水',
+    pyro: '火',
+    cryo: '冰',
+    ascent: '上升',
+    beacon: '信标',
+    waypoint: '路标',
+    expedition: '远征',
+    quest: '任务',
+    commission: '委托',
+    bounty: '悬赏',
+    bountyBoard: '悬赏板',
+    blessing: '祝福',
+    resonance: '共鸣',
+    harmony: '和谐',
+    fortune: '财富',
+    tribute: '贡品',
+    pilgrimage: '朝圣',
+    lore: '传说',
+    myth: '神话',
+    legend: '传说',
+    herald: '使者',
+    oracle: '神谕',
+    prophecy: '预言',
+    bestow: '赐予',
+    bestowment: '赠予',
+    ruin: '废墟',
+    relic: '遗物',
+    antiquity: '古物',
+    excavation: '发掘',
+    archaeology: '考古学',
+    wanderer: '流浪者',
+    voyage: '航行',
+    journey: '旅程',
+    frontier: '边境',
+    realm: '领域',
+    sanctuary: '圣所',
+    sanctum: '圣殿',
+    temple: '神庙',
+    altar: '祭坛',
+    shrine: '神龛',
+    cathedral: '大教堂',
+    archive: '档案',
+    chronicle: '编年史',
+    tome: '典籍',
+    fragment: '碎片',
+    crystal: '水晶',
+    alloy: '合金',
+    forge: '锻造',
+    prototype: '原型',
+    blueprint: '蓝图',
+    alchemy: '炼金术',
+    corrosion: '腐蚀',
+    turbulence: '湍流',
+    tranquillity: '宁静',
+    serenity: '平静',
+    desolation: '荒芜',
+    verdant: '翠绿的',
+    celestial: '天上的',
+    ethereal: '空灵的',
+  },
+
+  excludedTerms: [
+    // 「秘境/Domain」在通用英语中过于常见，避免泛化召回
+    'domains', 'domainName',
+    // 「弓/Bow」「风/Wind」等高频词不作为术语，只放在常用词表
+    'bowed', 'bowing', 'swordplay',
+  ],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为《原神》（Genshin Impact）。以下为官方中文译名（来源：米哈游官方中文 / 游戏内中文界面），请严格遵守，不得自行翻译：
+地区：提瓦特(Teyvat)、蒙德(Mondstadt)、璃月(Liyue)、稻妻(Inazuma)、须弥(Sumeru)、枫丹(Fontaine)、纳塔(Natlan)、至冬(Snezhnaya)、坎瑞亚(Khaenri'ah)、天空岛(Celestia)；
+养成：神之眼(Vision)、命之座(Constellation)、圣遗物(Artifact)、原石(Primogem)、摩拉(Mora)、冒险家协会(Adventurers' Guild)、突破(Ascension)、天赋(Talent)、精炼(Refinement)、元素精通(Elemental Mastery)；
+武器类型：单手剑(Sword)、双手剑(Claymore)、长柄武器(Polearm)、弓(Bow)、法器(Catalyst)；
+势力与敌人：愚人众(Fatui)、愚人众执行官(Fatui Harbingers)、深渊教团(Abyss Order)、丘丘人(Hilichurl)、史莱姆(Slime)、遗迹守卫(Ruin Guard)、西风骑士团(Knights of Favonius)、千岩军(Millelith)、璃月七星(Qixing)；
+系统：秘境(Domain)、地脉(Ley Line)、深境螺旋(Spiral Abyss)、尘歌壶(Serenitea Pot)、七天神像(Statue of The Seven)、传送锚点(Teleport Waypoint)、原粹树脂(Original Resin)、纪行(Battle Pass)、纠缠之缘(Intertwined Fate)、相遇之缘(Acquaint Fate)、祈愿(Wish)、征讨领域(Trounce Domain)；
+元素反应：蒸发(Vaporize)、融化(Melt)、超载(Overloaded)、感电(Electro-Charged)、冻结(Frozen)、扩散(Swirl)、结晶(Crystallize)、超导(Superconduct)、燃烧(Burning)、绽放(Bloom)、激化(Aggravate)、超绽放(Hyperbloom)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
  * 领域注册表
  *
  * 最终版：此对象将由 dataService 从后端/本地加载「内置领域 + 用户自定义领域」后合并。
  * 本次预设版：内置四个领域（杀戮尖塔 / 空洞骑士 / 王者荣耀 / 无畏契约）。
  * 页面只通过 getAllDomains() / getDomainById() 访问，不直接引用此常量。
  * ------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------
+ * 领域 8：绝命毒师 (Breaking Bad) —— 板块：影视
+ *  主题：沙漠琥珀蓝
+ *  译名来源：AMC 官方中文物料 / 索尼影视中文发行版通行译名。
+ * ------------------------------------------------------------------------ */
+const BREAKING_BAD = {
+  id: 'breaking_bad',
+  name: '绝命毒师',
+  category: DOMAIN_CATEGORY.FILM,
+  subtitle: 'Breaking Bad',
+  description: '化学、纯度与海森堡——在一场制毒生意里背下六级词汇。',
+  icon: 'flame',
+  theme: makeDomainTheme({
+    id: 'breaking_bad',
+    label: '沙漠琥珀蓝',
+    bg: '#0d0a06',
+    bgGradient:
+      'radial-gradient(1140px 760px at 8% -14%, #6b4712 0%, transparent 56%), radial-gradient(920px 660px at 108% 4%, #123c4a 0%, transparent 52%), radial-gradient(860px 800px at 50% 124%, #3a2508 0%, transparent 60%), linear-gradient(180deg, #120d07 0%, #070503 100%)',
+    primary: '#e0862b',
+    accent: '#3ba6c8',
+    text: '#f7efe4',
+    textSoft: '#c0ac93',
+    textFaint: '#82715c',
+    radius: '15px',
+  }),
+
+  domainTerms: {
+    // --- 人物（官方中文「名·姓」译法）---
+    breakingBad: '绝命毒师',
+    walterWhite: '沃尔特·怀特',
+    heisenberg: '海森堡',
+    jessePinkman: '杰西·平克曼',
+    skylerWhite: '斯凯勒·怀特',
+    hankSchrader: '汉克·施拉德',
+    marieSchrader: '玛丽·施拉德',
+    gustavoFring: '古斯塔沃·弗林',
+    gusFring: '古斯塔沃·弗林',
+    saulGoodman: '萨尔·古德曼',
+    mikeEhrmantraut: '迈克·厄门绍特',
+    betterCallSaul: '绝命律师',
+    // --- 组织 / 地点 / 专属物 ---
+    losPollosHermanos: '兄弟炸鸡店',
+    dea: '缉毒局',
+    albuquerque: '阿尔伯克基',
+    blueSky: '蓝天',
+    ricin: '蓖麻毒素',
+    meth: '冰毒',
+    carWash: '洗车店',
+  },
+
+  domainVocabulary: {
+    chemistry: '化学',
+    chemical: '化学的',
+    purity: '纯度',
+    formula: '配方',
+    laboratory: '实验室',
+    diagnose: '诊断',
+    diagnosis: '诊断',
+    terminal: '晚期的',
+    empire: '帝国',
+    dealer: '毒贩',
+    alias: '化名',
+    fortune: '财富',
+    profit: '利润',
+    launder: '洗钱',
+    disguise: '伪装',
+    betray: '背叛',
+    conspire: '密谋',
+    conspiracy: '阴谋',
+    hazard: '危险',
+    contaminate: '污染',
+    substance: '物质',
+    experiment: '实验',
+    conceal: '隐瞒',
+    witness: '证人',
+    interrogate: '审讯',
+    interrogation: '审讯',
+    residue: '残留',
+    vengeance: '复仇',
+    motive: '动机',
+    volatile: '易挥发的',
+    toxic: '有毒的',
+    dissolve: '溶解',
+    inherit: '继承',
+    legitimate: '合法的',
+    desperate: '绝望的',
+    revenue: '收入',
+    purify: '提纯',
+    compound: '化合物',
+    lethal: '致命的',
+    addict: '瘾君子',
+    smuggle: '走私',
+    corrupt: '腐败的',
+    // --- 化学过程 ---
+    acid: '酸',
+    crystal: '晶体',
+    extract: '提取',
+    refine: '精炼',
+    explosive: '爆炸物',
+    // --- 罪案 / 法律 ---
+    custody: '拘留',
+    verdict: '判决',
+    trial: '审判',
+    convict: '定罪',
+    testimony: '证词',
+    fugitive: '逃犯',
+    pursuit: '追捕',
+    bribe: '贿赂',
+    guilt: '罪责',
+    threat: '威胁',
+    gang: '团伙',
+    // --- 人物性格 / 处境 ---
+    ruthless: '冷酷无情的',
+    suspicious: '多疑的',
+    debt: '债务',
+    loyal: '忠诚的',
+    legitimate: '合法的',
+  },
+
+  excludedTerms: [
+    'dealing', 'dealers', 'witnessed', 'witnesses', 'profits', 'empires',
+    'formulas', 'aliases', 'substances', 'experiments',
+  ],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为《绝命毒师》（Breaking Bad）。以下为官方中文译名（来源：AMC 官方中文物料 / 索尼影视中文发行版），请严格遵守，不得自行翻译：
+人物：沃尔特·怀特(Walter White)、海森堡(Heisenberg)、杰西·平克曼(Jesse Pinkman)、斯凯勒·怀特(Skyler White)、汉克·施拉德(Hank Schrader)、玛丽·施拉德(Marie Schrader)、古斯塔沃·弗林(Gustavo Fring)、萨尔·古德曼(Saul Goodman)、迈克·厄门绍特(Mike Ehrmantraut)；
+组织与地点：缉毒局(DEA)、兄弟炸鸡店/炸鸡兄弟(Los Pollos Hermanos)、阿尔伯克基(Albuquerque)；
+专属物：冰毒(meth)、蓝天(Blue Sky)、蓖麻毒素(ricin)、洗车店(A1A Car Wash)。
+注意人名一律采用「名·姓」官方译法，不要只写姓，也不要音译成其他写法。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 领域 9：神探夏洛克 (Sherlock) —— 板块：影视
+ *  主题：伦敦雾蓝金
+ *  译名来源：BBC 官方中文字幕 / 柯南·道尔原著通行中文译名。
+ * ------------------------------------------------------------------------ */
+const SHERLOCK = {
+  id: 'sherlock',
+  name: '神探夏洛克',
+  category: DOMAIN_CATEGORY.FILM,
+  subtitle: 'Sherlock',
+  description: '演绎法、思维宫殿与贝克街221B——跟着夏洛克把六级词汇推理一遍。',
+  icon: 'brain',
+  theme: makeDomainTheme({
+    id: 'sherlock',
+    label: '伦敦雾蓝金',
+    bg: '#080b12',
+    bgGradient:
+      'radial-gradient(1160px 780px at 10% -12%, #1d3357 0%, transparent 58%), radial-gradient(940px 660px at 108% 6%, #4a3a12 0%, transparent 52%), radial-gradient(840px 820px at 50% 122%, #131a26 0%, transparent 60%), linear-gradient(180deg, #0b0f18 0%, #05070b 100%)',
+    primary: '#5b8dd6',
+    accent: '#c9a227',
+    text: '#eef2f9',
+    textSoft: '#a9b6c8',
+    textFaint: '#6d7a8c',
+    radius: '16px',
+  }),
+
+  domainTerms: {
+    // --- 人物 ---
+    sherlock: '夏洛克·福尔摩斯',
+    holmes: '福尔摩斯',
+    sherlockHolmes: '夏洛克·福尔摩斯',
+    johnWatson: '约翰·华生',
+    watson: '华生',
+    jimMoriarty: '吉姆·莫里亚蒂',
+    moriarty: '莫里亚蒂',
+    mycroft: '麦考夫·福尔摩斯',
+    mrsHudson: '哈德森太太',
+    lestrade: '雷斯垂德',
+    mollyHooper: '莫莉·琥珀',
+    ireneAdler: '艾琳·艾德勒',
+    maryMorstan: '玛丽·摩斯坦',
+    eurus: '欧洛丝·福尔摩斯',
+    // --- 地点 / 机构 / 概念 ---
+    bakerStreet: '贝克街',
+    scotlandYard: '苏格兰场',
+    mindPalace: '思维宫殿',
+    consultingDetective: '咨询侦探',
+    reichenbach: '莱辛巴赫',
+    barts: '圣巴塞洛缪医院',
+    // --- 剧集单元 ---
+    aStudyInPink: '粉色的研究',
+    theBlindBanker: '盲眼银行家',
+    theGreatGame: '致命游戏',
+  },
+
+  domainVocabulary: {
+    deduce: '演绎推理',
+    deduction: '演绎法',
+    investigate: '调查',
+    evidence: '证据',
+    suspect: '嫌疑人',
+    witness: '证人',
+    motive: '动机',
+    alibi: '不在场证明',
+    forensic: '法医的',
+    pathologist: '病理学家',
+    pathology: '病理学',
+    corpse: '尸体',
+    intellect: '智力',
+    intellectual: '智力的',
+    genius: '天才',
+    observation: '观察',
+    analyse: '分析',
+    analysis: '分析',
+    surveillance: '监视',
+    cipher: '密码',
+    encryption: '加密',
+    hypothesis: '假设',
+    clue: '线索',
+    vanish: '消失',
+    notorious: '臭名昭著的',
+    adversary: '对手',
+    accomplice: '共犯',
+    anonymous: '匿名的',
+    arrogance: '傲慢',
+    arrogant: '傲慢的',
+    logic: '逻辑',
+    logical: '合乎逻辑的',
+    mystery: '谜案',
+    interrogation: '审讯',
+    confront: '对质',
+    infer: '推断',
+    inference: '推论',
+    testimony: '证词',
+    forgery: '伪造',
+    credible: '可信的',
+    irrational: '非理性的',
+    chase: '追逐',
+    // --- 侦查 / 推理 ---
+    deductive: '演绎的',
+    detective: '侦探',
+    pursue: '追捕',
+    trap: '圈套',
+    disguise: '伪装',
+    decipher: '破译',
+    fraud: '诈骗',
+    rational: '理性的',
+    brilliant: '才华横溢的',
+    puzzle: '谜题',
+    reveal: '揭示',
+    // --- 罪案现场 ---
+    verdict: '判决',
+    trial: '审判',
+    custody: '拘留',
+    trace: '痕迹',
+    poison: '毒药',
+    fatal: '致命的',
+    victim: '受害者',
+    autopsy: '验尸',
+    confess: '供认',
+    guilt: '罪责',
+    scandal: '丑闻',
+    // --- 性格 / 细节 ---
+    eccentric: '古怪的',
+    peculiar: '奇特的',
+    recall: '回想',
+    inspect: '细查',
+    precise: '精确的',
+    coincide: '同时发生',
+    flaw: '破绽',
+    blunder: '失误',
+    hunch: '直觉',
+  },
+
+  excludedTerms: [
+    'investigated', 'investigating', 'investigation', 'deduced', 'deducing',
+    'observed', 'observations', 'suspected', 'suspects', 'suspectable',
+    'analysed', 'analysing', 'analyze', 'analytical', 'vanished', 'notoriety',
+    'geniuses',
+  ],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为《神探夏洛克》（Sherlock）。以下为官方中文译名（来源：BBC 官方中文字幕 / 柯南·道尔原著通行译名），请严格遵守，不得自行翻译：
+人物：夏洛克·福尔摩斯(Sherlock Holmes)、约翰·华生(John Watson)、吉姆·莫里亚蒂(Jim Moriarty)、麦考夫·福尔摩斯(Mycroft Holmes)、哈德森太太(Mrs Hudson)、雷斯垂德(Lestrade)、莫莉·琥珀(Molly Hooper)、艾琳·艾德勒(Irene Adler)、玛丽·摩斯坦(Mary Morstan)、欧洛丝·福尔摩斯(Eurus Holmes)；
+地点与概念：贝克街221B(221B Baker Street)、苏格兰场(Scotland Yard)、思维宫殿/记忆宫殿(mind palace)、咨询侦探(consulting detective)、莱辛巴赫(Reichenbach)、圣巴塞洛缪医院(St Bartholomew's)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 领域 10：经典电影 (Classic Movies) —— 板块：影视
+ *  主题：胶片金棕
+ *  片名来源：中国大陆公映发行译名（豆瓣电影条目核对）。
+ * ------------------------------------------------------------------------ */
+const CLASSIC_MOVIES = {
+  id: 'classic_movies',
+  name: '经典电影',
+  category: DOMAIN_CATEGORY.FILM,
+  subtitle: 'Classic Movies',
+  description: '救赎、引力与血仇——在影史名作的台词里记六级词汇。',
+  icon: 'play',
+  theme: makeDomainTheme({
+    id: 'classic_movies',
+    label: '胶片金棕',
+    bg: '#0d0a07',
+    bgGradient:
+      'radial-gradient(1140px 780px at 10% -12%, #5a4415 0%, transparent 56%), radial-gradient(920px 660px at 108% 4%, #2a3f52 0%, transparent 52%), radial-gradient(860px 820px at 50% 122%, #2f240f 0%, transparent 62%), linear-gradient(180deg, #120e09 0%, #070604 100%)',
+    primary: '#c9a227',
+    accent: '#7fb3d5',
+    text: '#f6f1e6',
+    textSoft: '#bcb098',
+    textFaint: '#7d7361',
+    radius: '14px',
+  }),
+
+  domainTerms: {
+    // --- 片名 ---
+    shawshank: '肖申克的救赎',
+    theShawshankRedemption: '肖申克的救赎',
+    theGodfather: '教父',
+    inception: '盗梦空间',
+    titanic: '泰坦尼克号',
+    forrestGump: '阿甘正传',
+    theMatrix: '黑客帝国',
+    interstellar: '星际穿越',
+    theLordOfTheRings: '指环王',
+    fightClub: '搏击俱乐部',
+    // --- 人物 ---
+    andyDufresne: '安迪·杜佛兰',
+    vitoCorleone: '维托·柯里昂',
+    michaelCorleone: '迈克尔·柯里昂',
+    corleone: '柯里昂',
+    cobb: '柯布',
+    neo: '尼奥',
+    morpheus: '墨菲斯',
+    cooper: '库珀',
+    // --- 专属概念 ---
+    totem: '图腾',
+    dreamer: '做梦者',
+    hobbit: '霍比特人',
+  },
+
+  domainVocabulary: {
+    redemption: '救赎',
+    redeem: '赎回',
+    institution: '体制',
+    institutionalise: '体制化',
+    architect: '造梦师',
+    architecture: '建筑学',
+    subconscious: '潜意识',
+    gravity: '引力',
+    dimension: '维度',
+    wormhole: '虫洞',
+    relativity: '相对论',
+    voyage: '航行',
+    iceberg: '冰山',
+    survival: '生存',
+    survive: '幸存',
+    destiny: '命运',
+    coincidence: '巧合',
+    illusion: '幻象',
+    simulation: '模拟',
+    reality: '现实',
+    liberation: '解放',
+    sacrifice: '牺牲',
+    perseverance: '毅力',
+    legacy: '遗产',
+    vendetta: '血仇',
+    loyalty: '忠诚',
+    ambition: '野心',
+    deceive: '欺骗',
+    deception: '欺骗',
+    revelation: '揭示',
+    epic: '史诗',
+    sequel: '续集',
+    protagonist: '主角',
+    antagonist: '反派',
+    plot: '情节',
+    climax: '高潮',
+    courage: '勇气',
+    epic: '史诗',
+    innocence: '清白',
+    farewell: '告别',
+    triumph: '胜利',
+    despair: '绝望',
+    justice: '正义',
+    eternal: '永恒的',
+    // --- 电影工业 ---
+    cinema: '电影',
+    screen: '银幕',
+    audience: '观众',
+    script: '剧本',
+    theme: '主题',
+    tension: '张力',
+    conflict: '冲突',
+    award: '奖项',
+    critic: '影评人',
+    masterpiece: '杰作',
+    classic: '经典作品',
+    profound: '深刻的',
+    // --- 剧情母题 ---
+    quest: '追寻',
+    comedy: '喜剧',
+    noble: '高尚的',
+    ruin: '毁灭',
+    drown: '溺亡',
+    rescue: '营救',
+    surrender: '投降',
+    immortal: '不朽的',
+    encounter: '相遇',
+    solitude: '孤独',
+    corruption: '腐化',
+    haunt: '萦绕',
+    crisis: '危机',
+    trial: '磨难',
+    sorrow: '悲伤',
+    legend: '传说',
+    myth: '神话',
+    symbol: '象征',
+    metaphor: '隐喻',
+    revenge: '复仇',
+    liberty: '自由',
+    rebellion: '反抗',
+
+    /* --- 扩充批次（第六轮）：与六级词库产生召回的影史术语 --- */
+    // 电影工业 / 制作
+    crew: '剧组',
+    frame: '画格，画面',
+    costume: '戏服',
+    budget: '制片预算',
+    revenue: '票房收入',
+    gross: '总票房',
+    release: '上映',
+    spectator: '观影者',
+    genre: '类型片',
+    franchise: '系列电影',
+    adaptation: '改编',
+    novel: '原著小说',
+    character: '角色',
+    heroine: '女主角',
+    twist: '剧情反转',
+    narrative: '叙事',
+    dialogue: '对白',
+    atmosphere: '氛围',
+    satire: '讽刺',
+    horror: '恐怖片',
+    documentary: '纪录片',
+    academy: '电影学院（奥斯卡主办方）',
+    ceremony: '颁奖礼',
+    acclaim: '影评好评',
+    // 创作 / 母题
+    genius: '天才',
+    inspiration: '灵感',
+    influence: '影响',
+    passion: '激情',
+    jealousy: '嫉妒',
+    morality: '道德',
+    guilt: '罪恶感',
+    melancholy: '忧郁',
+    mystery: '悬疑',
+    conspiracy: '阴谋',
+    fantasy: '奇幻',
+    fiction: '虚构',
+    folklore: '民间传说',
+    heritage: '传承',
+    innovation: '创新',
+    revolution: '变革',
+    evolution: '演变',
+    landscape: '风景镜头',
+    sentiment: '情感',
+    emotion: '情绪',
+    wit: '机智',
+    irony: '反讽',
+    portray: '刻画',
+    convey: '传达',
+    evoke: '唤起',
+    depict: '描绘',
+    commentary: '影评旁白',
+    allegory: '寓言',
+    // 视听风格
+    absurd: '荒诞',
+    sinister: '阴森',
+    bleak: '凄凉',
+    vivid: '生动',
+    subtle: '细腻',
+    elegant: '优雅',
+    graceful: '优美',
+    exquisite: '精致',
+    magnificent: '壮丽',
+    splendid: '华丽',
+    sublime: '崇高',
+    grotesque: '怪诞',
+    gloomy: '阴郁',
+    // 剧情母题
+    dilemma: '两难处境',
+    paradox: '悖论',
+    intrigue: '阴谋暗线',
+    scandal: '丑闻',
+    injustice: '不公',
+    dignity: '尊严',
+    humility: '谦逊',
+    vanity: '虚荣',
+    greed: '贪婪',
+    envy: '嫉妒',
+    mercy: '怜悯',
+    compassion: '同情心',
+    empathy: '共情',
+    sympathy: '同情',
+  },
+
+  excludedTerms: [
+    'institutions', 'institutional', 'institutionalised', 'architects',
+    'gravitational', 'dimensional', 'dimensions', 'survived', 'surviving',
+    'destined', 'coincidental', 'illusory', 'simulated', 'realities',
+    'sacrificed', 'sacrificial', 'ambitious', 'deceived', 'redeemed',
+    // 角色名 Cooper（库珀）会误伤 cooperation / cooperate 这类高频词
+    'cooperation', 'cooperative', 'cooperate', 'cooperating',
+  ],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「经典电影」（Classic Movies）。以下为官方中文片名（来源：中国大陆公映发行译名，豆瓣电影条目核对），请严格遵守，不得自行翻译：
+《肖申克的救赎》(The Shawshank Redemption)、《教父》(The Godfather)、《盗梦空间》(Inception)、《泰坦尼克号》(Titanic)、《阿甘正传》(Forrest Gump)、《黑客帝国》(The Matrix)、《星际穿越》(Interstellar)、《指环王》(The Lord of the Rings)、《搏击俱乐部》(Fight Club)；
+角色与概念：安迪·杜佛兰(Andy Dufresne)、维托·柯里昂(Vito Corleone)、迈克尔·柯里昂(Michael Corleone)、柯布(Cobb)、尼奥(Neo)、库珀(Cooper)、造梦师(Architect)、图腾(Totem)。
+注意：片名必须使用上述公映译名，不要使用港台译名或直译。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 领域 11：篮球 (Basketball) —— 板块：体育
+ *  主题：球场橙
+ *  译名来源：NBA 中国官网 nba.com/china / 中国篮协 CBA 官网 cbaleague.com
+ * ------------------------------------------------------------------------ */
+const BASKETBALL = {
+  id: 'basketball',
+  name: '篮球',
+  category: DOMAIN_CATEGORY.SPORTS,
+  // 体育项目不是「作品」，按中文排版规范不加书名号（详见 core/domainLabel.js）
+  titleQuoted: false,
+  subtitle: 'Basketball · NBA / CBA',
+  description: '挡拆、季后赛与总决赛——在 NBA 与 CBA 的赛程里背下六级词汇。',
+  icon: 'trophy',
+  theme: makeDomainTheme({
+    id: 'basketball',
+    label: '球场橙',
+    bg: '#0d0805',
+    bgGradient:
+      'radial-gradient(1140px 760px at 8% -14%, #6b3a12 0%, transparent 56%), radial-gradient(920px 660px at 108% 4%, #123047 0%, transparent 52%), radial-gradient(860px 800px at 50% 124%, #3a2408 0%, transparent 60%), linear-gradient(180deg, #120b06 0%, #070403 100%)',
+    primary: '#e2712b',
+    accent: '#f2c14e',
+    text: '#f8efe5',
+    textSoft: '#c3ac95',
+    textFaint: '#84725e',
+    radius: '15px',
+  }),
+
+  domainTerms: {
+    // --- 联赛 ---
+    nba: 'NBA（美国职业篮球联赛）',
+    cba: 'CBA（中国男子篮球职业联赛）',
+    // --- 赛制 / 奖项 ---
+    regularSeason: '常规赛',
+    playoff: '季后赛',
+    playoffs: '季后赛',
+    finals: '总决赛',
+    allStar: '全明星赛',
+    allStarGame: '全明星赛',
+    mvp: '最有价值球员',
+    // --- 球队（NBA 中国官网通行译名）---
+    losAngelesLakers: '洛杉矶湖人',
+    lakers: '洛杉矶湖人',
+    bostonCeltics: '波士顿凯尔特人',
+    celtics: '波士顿凯尔特人',
+    goldenStateWarriors: '金州勇士',
+    houstonRockets: '休斯顿火箭',
+    chicagoBulls: '芝加哥公牛',
+    sanAntonioSpurs: '圣安东尼奥马刺',
+    miamiHeat: '迈阿密热火',
+  },
+
+  domainVocabulary: {
+    // --- 比赛统计 ---
+    assist: '助攻',
+    dribble: '运球',
+    foul: '犯规',
+    penalty: '判罚，罚球',
+    rebound: '篮板球',
+    dunk: '扣篮',
+    block: '盖帽',
+    steal: '抢断',
+    timeout: '暂停',
+    squad: '球队阵容',
+    substitute: '替补',
+    finalist: '总决赛球队',
+    // --- 战术 ---
+    tactic: '战术',
+    formation: '阵型，站位',
+    defense: '防守',
+    defence: '防守',
+    offense: '进攻',
+    momentum: '势头',
+    morale: '士气',
+    decisive: '决定性的',
+    qualify: '取得资格，晋级',
+    eliminate: '淘汰',
+    elimination: '淘汰',
+    contest: '赛事',
+    contestant: '参赛者',
+    competitor: '竞争者',
+    compete: '竞争，比赛',
+    competition: '比赛',
+    competitive: '有竞争力的',
+    opponent: '对手',
+    rival: '宿敌',
+    rivalry: '宿敌对决',
+    champion: '冠军',
+    triumph: '胜利时刻',
+    hurdle: '难关',
+    // --- 身体 / 状态 ---
+    athlete: '运动员',
+    athletic: '运动的，健壮的',
+    endurance: '耐力',
+    agility: '敏捷',
+    dexterity: '灵巧',
+    muscle: '肌肉',
+    fitness: '体能',
+    fatigue: '疲劳',
+    exhaustion: '精疲力竭',
+    exhaust: '耗尽体力',
+    injury: '伤病',
+    recover: '康复',
+    strain: '拉伤',
+    stretch: '拉伸',
+    posture: '姿势',
+    balance: '平衡',
+    jump: '起跳',
+    leap: '跃起',
+    slam: '暴扣',
+    velocity: '速度',
+    swift: '迅捷的',
+    robust: '强健的',
+    vigorous: '精力充沛的',
+    energetic: '精力旺盛的',
+    intense: '激烈的',
+    intensity: '强度',
+    consistent: '稳定的',
+    consistency: '稳定性',
+    accuracy: '准确度',
+    accurate: '准确的',
+    coordinate: '协调',
+    flexible: '灵活的',
+    flexibility: '柔韧性',
+    // --- 场馆 / 运营 ---
+    coach: '教练',
+    referee: '裁判',
+    arena: '球馆，竞技场',
+    spectator: '观众',
+    broadcast: '转播',
+    sponsor: '赞助商',
+    jersey: '球衣',
+    uniform: '队服',
+    banner: '横幅',
+    chant: '助威声',
+    logo: '队徽',
+    draft: '选秀',
+    salary: '薪金',
+    contract: '合同',
+    transfer: '转会',
+    award: '奖项',
+    campaign: '赛季征程',
+    challenge: '挑战',
+    dominate: '统治，压制',
+    dominant: '占优势的',
+    overcome: '克服',
+    prevail: '获胜',
+    conquer: '战胜',
+    surpass: '超越',
+    excel: '出类拔萃',
+    pursue: '追赶',
+    pursuit: '追赶',
+    chase: '追逐',
+    clash: '碰撞，交锋',
+    combat: '搏斗',
+    tackle: '拼抢',
+    strenuous: '费力的',
+    swiftness: '敏捷',
+
+    /* --- 扩充批次（第六轮）：与六级词库产生召回的赛场术语 --- */
+    // 攻防动作
+    hoop: '篮筐',
+    pace: '场上节奏',
+    forward: '前锋',
+    reserve: '替补席',
+    bench: '板凳席（替补）',
+    intercept: '拦截传球',
+    dash: '冲刺',
+    surge: '发力冲击',
+    accelerate: '加速',
+    stride: '大步跑动',
+    spin: '转身过人',
+    fake: '假动作',
+    feint: '佯攻假动作',
+    dodge: '闪避',
+    evade: '摆脱防守',
+    defend: '防守',
+    counter: '反击',
+    hook: '勾手投篮',
+    // 战绩 / 赛制
+    rally: '追分高潮',
+    streak: '连续得分势头',
+    slump: '低迷期',
+    bracket: '季后赛对阵表',
+    franchise: '球队（特许经营）',
+    statistics: '数据统计',
+    ratio: '命中率比值',
+    margin: '分差',
+    deficit: '落后分差',
+    division: '分区',
+    conference: '联盟分区',
+    qualification: '晋级资格',
+    bonus: '奖金',
+    // 心理 / 团队
+    confidence: '信心',
+    composure: '沉着',
+    concentration: '专注力',
+    discipline: '纪律性',
+    dedication: '投入',
+    determination: '决心',
+    commitment: '承诺与付出',
+    aggression: '侵略性',
+    integrity: '正直品格',
+    cooperation: '配合',
+    inspiration: '激励',
+    aspiration: '抱负',
+    ambition: '雄心',
+    rhythm: '节奏',
+    unity: '团队凝聚',
+    cohesion: '凝聚力',
+    hostility: '敌对情绪',
+    elevation: '起跳高度',
+    // 身体 / 伤病
+    nutrition: '营养',
+    therapy: '理疗',
+    fracture: '骨折',
+    ligament: '韧带',
+    concussion: '脑震荡',
+    bruise: '淤伤',
+    bandage: '绷带',
+    cramp: '抽筋',
+    // 生涯 / 声望
+    amateur: '业余球员',
+    veteran: '老将',
+    legend: '传奇球员',
+    stress: '压力',
+    anxiety: '焦虑',
+    thrill: '激动',
+    enthusiasm: '热情',
+    passion: '热爱',
+    humility: '谦逊',
+    courtesy: '体育风度',
+    // 评价 / 场面
+    crucial: '关键的',
+    dramatic: '戏剧性的',
+    fierce: '激烈的',
+    brilliant: '出色的',
+    outstanding: '杰出的',
+    upset: '爆冷',
+    spectacle: '精彩场面',
+    sensation: '轰动新星',
+    legendary: '传奇的',
+    prestige: '声望',
+    tribute: '致敬',
+  },
+
+  /**
+   * 假阳性黑名单。
+   * 篮球的球队英文名多含通用词（heat / magic / jazz / thunder），
+   * 这些词在六级词库中首先意味着「热度 / 魔法 / 爵士乐 / 雷声」，
+   * 因此**一律不写入 domainTerms / domainVocabulary**，无需额外排除。
+   * 本轮未发现需要显式排除的词形，故留空。
+   */
+  excludedTerms: [],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「篮球」（Basketball，含 NBA 与 CBA）。以下为官方中文译名（来源：NBA 中国官网 / CBA 官网），请严格遵守，不得自行翻译：
+联赛：NBA（美国职业篮球联赛）、CBA（中国男子篮球职业联赛）；
+赛制：常规赛(regular season)、季后赛(playoffs)、总决赛(Finals)、全明星赛(All-Star Game)；
+奖项：最有价值球员(MVP)；
+球队：洛杉矶湖人(Los Angeles Lakers)、波士顿凯尔特人(Boston Celtics)、金州勇士(Golden State Warriors)、休斯顿火箭(Houston Rockets)、芝加哥公牛(Chicago Bulls)、圣安东尼奥马刺(San Antonio Spurs)、迈阿密热火(Miami Heat)。
+注意：球队名必须使用上述通行译名，不要使用港台译名或直译；不要把 heat / magic / jazz 这类通用词当作球队名。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 领域 12：羽毛球 (Badminton) —— 板块：体育
+ *  主题：羽场青绿
+ *  译名来源：中国羽毛球协会 / 世界羽联 BWF 中文赛事名称
+ * ------------------------------------------------------------------------ */
+const BADMINTON = {
+  id: 'badminton',
+  name: '羽毛球',
+  category: DOMAIN_CATEGORY.SPORTS,
+  // 体育项目不是「作品」，按中文排版规范不加书名号（详见 core/domainLabel.js）
+  titleQuoted: false,
+  subtitle: 'Badminton · 汤尤杯',
+  description: '汤姆斯杯、尤伯杯与多拍相持——在羽毛球场上记六级词汇。',
+  icon: 'target',
+  theme: makeDomainTheme({
+    id: 'badminton',
+    label: '羽场青绿',
+    bg: '#050d0a',
+    bgGradient:
+      'radial-gradient(1140px 760px at 8% -14%, #14503a 0%, transparent 56%), radial-gradient(920px 660px at 108% 4%, #123a52 0%, transparent 52%), radial-gradient(860px 800px at 50% 124%, #0d3327 0%, transparent 60%), linear-gradient(180deg, #07110d 0%, #030706 100%)',
+    primary: '#45b98a',
+    accent: '#dbeaf7',
+    text: '#eaf7f1',
+    textSoft: '#a3c3b7',
+    textFaint: '#6b8a7e',
+    radius: '15px',
+  }),
+
+  domainTerms: {
+    // --- 赛事 ---
+    thomasCup: '汤姆斯杯',
+    uberCup: '尤伯杯',
+    sudirmanCup: '苏迪曼杯',
+    thomasUberCup: '汤尤杯',
+    allEngland: '全英羽毛球公开赛',
+    worldChampionships: '世界羽毛球锦标赛',
+    bwf: '世界羽联（BWF）',
+    // --- 中国羽毛球队 ---
+    chinaBadmintonTeam: '中国羽毛球队',
+    linDan: '林丹',
+    chenLong: '谌龙',
+    // --- 场上称呼 ---
+    singles: '单打',
+    doubles: '双打',
+    mixedDoubles: '混合双打',
+    changeEnds: '交换场区',
+    interval: '间歇',
+    matchPoint: '赛点',
+    gamePoint: '局点',
+    deuce: '平分',
+  },
+
+  domainVocabulary: {
+    // --- 技术动作 ---
+    badminton: '羽毛球',
+    smash: '扣杀',
+    rally: '多拍相持',
+    grip: '握拍',
+    lunge: '弓步上网',
+    stroke: '击球方式',
+    swing: '挥拍',
+    racket: '球拍',
+    racquet: '球拍',
+    shuttlecock: '羽毛球',
+    serve: '发球',
+    service: '发球',
+    net: '球网',
+    netShot: '网前球',
+    dropShot: '吊球',
+    footwork: '步法',
+    // --- 身体 / 状态 ---
+    agility: '敏捷',
+    dexterity: '灵巧',
+    endurance: '耐力',
+    fatigue: '疲劳',
+    exhaustion: '力竭',
+    injury: '伤病',
+    recover: '恢复',
+    strain: '拉伤',
+    stretch: '拉伸',
+    posture: '姿势',
+    balance: '平衡',
+    kinetic: '运动的',
+    velocity: '速度',
+    swift: '迅捷的',
+    pace: '节奏，球速',
+    rhythm: '节奏',
+    speed: '速度',
+    // --- 竞技表现 ---
+    accuracy: '精准度',
+    accurate: '精准的',
+    consistent: '稳定的',
+    consistency: '稳定性',
+    intense: '激烈的',
+    intensity: '强度',
+    tactic: '战术',
+    strategy: '战术',
+    // --- 赛事 / 结果 ---
+    contest: '赛事',
+    competitor: '对手',
+    competition: '比赛',
+    entrant: '参赛者',
+    elimination: '淘汰',
+    finalist: '决赛选手',
+    hurdle: '难关',
+    triumph: '夺冠',
+    pursuit: '追赶',
+    coach: '教练',
+    referee: '裁判',
+    spectator: '观众',
+    tournament: '赛事',
+    championship: '锦标赛',
+    medal: '奖牌',
+    trophy: '奖杯',
+  },
+
+  /**
+   * 假阳性黑名单。
+   * 'clear'（清空）、'drive'（驱动）在六级词库中首先意味着通用义，
+   * 虽在羽毛球里分别是「高远球 / 平抽」，但强行命中会带来大量噪声，
+   * 因此不写入词汇表。本轮未发现需要显式排除的词形，故留空。
+   */
+  excludedTerms: [],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「羽毛球」（Badminton）。以下为官方中文赛事名称（来源：中国羽毛球协会 / 世界羽联 BWF），请严格遵守，不得自行翻译：
+赛事：汤姆斯杯(Thomas Cup，男子团体)、尤伯杯(Uber Cup，女子团体)、苏迪曼杯(Sudirman Cup，混合团体)、汤尤杯(Thomas & Uber Cup，合称)、全英羽毛球公开赛(All England Open)、世界羽毛球锦标赛(World Championships)；
+球员：林丹(Lin Dan)、谌龙(Chen Long)；
+赛制：单打(singles)、双打(doubles)、混合双打(mixed doubles)、赛点(match point)、局点(game point)。
+注意：赛事名必须使用上述官方通行中文名，不要直译成「托马斯杯」这类非通行写法。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 扩展批次一：游戏
+ * ------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------
+ * 第五人格 · Identity V
+ * 译名核验来源：网易官方中文（游戏内界面 / 官方微博 / 官方设定集）：
+ *   求生者 / 监管者 / 密码机 / 地窖 / 狂欢之椅 / 恐惧震慑 / 存在感 / 人格天赋；
+ *   早期角色：园丁、律师、医生、慈善家、魔术师、冒险家、空军、佣兵、前锋、盲女。
+ * ----------------------------------------------------------------------- */
+const IDENTITY_FIFTH = {
+  id: 'identity_fifth',
+  name: '第五人格',
+  category: DOMAIN_CATEGORY.GAME,
+  subtitle: 'Identity V',
+  description: '哥特风非对称对抗——在庄园里用英语破译密码机、逃脱狂欢之椅。',
+  icon: 'mask',
+  theme: {
+    id: 'identity_fifth',
+    label: '暗紫哥特',
+    bg: '#0c0814',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #2e1838 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #1a1133 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #1e1229 0%, transparent 60%), linear-gradient(180deg, #100b18 0%, #08050d 100%)',
+    surface: 'rgba(224, 184, 255, 0.055)',
+    surfaceStrong: 'rgba(224, 184, 255, 0.10)',
+    border: 'rgba(180, 130, 210, 0.22)',
+    borderStrong: 'rgba(200, 150, 230, 0.42)',
+    text: '#f2e9f8',
+    textSoft: '#c2a8d0',
+    textFaint: '#8a7298',
+    primary: '#9b59b6',
+    primarySoft: 'rgba(155, 89, 182, 0.18)',
+    accent: '#d6a3e0',
+    accentSoft: 'rgba(214, 163, 224, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(214, 163, 224, 0.13) 0%, rgba(80, 40, 100, 0.16) 48%, rgba(214, 163, 224, 0.07) 100%)',
+    cardGlow: 'rgba(155, 89, 182, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(255, 220, 255, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 游戏名 / 核心机制 ---
+    identityV: '第五人格',
+    identityFifth: '第五人格',
+    fifth: '第五人格',
+    survivor: '求生者',
+    hunter: '监管者',
+    cipher: '密码机',
+    cipherMachine: '密码机',
+    decoding: '破译',
+    decode: '破译',
+    dungeon: '地窖',
+    rocketChair: '狂欢之椅',
+    chair: '狂欢之椅',
+    presence: '存在感',
+    trait: '人格天赋',
+    persona: '人格',
+    terrorShock: '恐惧震慑',
+    blink: '闪现',
+    pallet: '木板',
+    window: '窗户',
+    kite: '牵制',
+    rescue: '救援',
+    tideTurner: '化险为夷',
+    borrowedTime: '回光返照',
+    willToSurvive: '求生意志',
+    kneeJerkReflex: '膝跳反射',
+    distress: '寒意',
+    brokenWindows: '破窗理论',
+    // --- 角色（求生者 / 监管者）---
+    gardener: '园丁',
+    lawyer: '律师',
+    doctor: '医生',
+    magician: '魔术师',
+    explorer: '冒险家',
+    coordinator: '空军',
+    mercenary: '佣兵',
+    forward: '前锋',
+    mindseye: '盲女',
+    mechanic: '机械师',
+    priestess: '祭司',
+    perfumer: '调香师',
+    seer: '先知',
+    embalmer: '入殓师',
+    prospector: '勘探员',
+    enchantress: '咒术师',
+    wildling: '野人',
+    femaleDancer: '舞女',
+    acrobat: '杂技演员',
+    postman: '邮差',
+    gravekeeper: '守墓人',
+    entomologist: '昆虫学者',
+    painter: '画家',
+    batter: '击球手',
+    toyMerchant: '玩具商',
+    patient: '病患',
+    psychologist: '心理学家',
+    novelist: '小说家',
+    weepingClown: '哭泣小丑',
+    theRipper: '开膛手杰克',
+    geisha: '红蝶',
+    feaster: '黄衣之主',
+    soulWeaver: '梦之女巫',
+    axeBoy: '爱哭鬼',
+    evilReptilian: '孽蜥',
+    photographer: '摄影师',
+    madEyes: '疯眼',
+    guard26: '26号守卫',
+    disciple: '信徒',
+    violinist: '小提琴家',
+    sculptor: '雕刻家',
+    undead: '博士',
+    nightmare: '噩梦',
+  },
+
+  domainVocabulary: {
+    // --- 动作 / 状态 ---
+    chase: '追逐',
+    escape: '逃脱',
+    flee: '逃跑',
+    hide: '隐藏',
+    lurk: '潜伏',
+    stalk: '追踪',
+    patrol: '巡逻',
+    pursue: '追击',
+    evade: '躲避',
+    avoid: '躲避',
+    dodge: '闪避',
+    sprint: '冲刺',
+    sprintBurst: '冲刺爆发',
+    struggle: '挣扎',
+    tremble: '颤抖',
+    panic: '恐慌',
+    dread: '恐惧',
+    terror: '恐惧',
+    horror: '恐怖',
+    nightmare: '噩梦',
+    haunted: '闹鬼的',
+    gloomy: '阴郁的',
+    sinister: '阴险的',
+    eerie: '怪异的',
+    mysterious: '神秘的',
+    obscure: '昏暗的',
+    shadow: '阴影',
+    mask: '面具',
+    disguise: '伪装',
+    costume: '时装',
+    // --- 场景 / 物品 ---
+    manor: '庄园',
+    mansion: '宅邸',
+    asylum: '疯人院',
+    church: '红教堂',
+    hospital: '圣心医院',
+    factory: '军工厂',
+    village: '湖景村',
+    park: '月亮河公园',
+    stadium: '永眠镇',
+    street: '唐人街',
+    gate: '大门',
+    exit: '出口',
+    lever: '拉杆',
+    // --- 策略 / 结果 ---
+    strategy: '策略',
+    tactic: '战术',
+    teamwork: '配合',
+    coordinate: '协作',
+    sacrifice: '牺牲',
+    bait: '诱饵',
+    decodeRush: '修机 rush',
+    win: '胜利',
+    defeat: '失败',
+    tie: '平局',
+    rank: '排位',
+    season: '赛季',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run', 'doctor'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「第五人格」（Identity V）。以下为官方中文术语参考（来源：网易官方中文），请严格遵守，不得自行翻译：
+阵营：求生者(Survivor)、监管者(Hunter)；
+核心机制：密码机(Cipher Machine)、地窖(Dungeon)、狂欢之椅(Rocket Chair)、存在感(Presence)、人格天赋(Persona Traits)、恐惧震慑(Terror Shock)、化险为夷(Tide Turner)、回光返照(Borrowed Time)、破窗理论(Broken Windows)；
+角色：园丁(Gardener)、律师(Lawyer)、医生(Doctor)、魔术师(Magician)、冒险家(Explorer)、空军(Coordinator)、佣兵(Mercenary)、前锋(Forward)、盲女(Mind's Eye)、机械师(Mechanic)、祭司(Priestess)、调香师(Perfumer)、先知(Seer)、入殓师(Embalmer)、勘探员(Prospector)、咒术师(Enchantress)、野人(Wildling)、舞女(Female Dancer)、杂技演员(Acrobat)、邮差(Postman)、守墓人(Grave Keeper)、昆虫学者(Entomologist)、画家(Painter)、击球手(Batter)、玩具商(Toy Merchant)、病患(Patient)、心理学家(Psychologist)、小说家(Novelist)、哭泣小丑(Weeping Clown)；
+监管者：开膛手杰克(The Ripper)、红蝶(Geisha)、黄衣之主(The Feaster)、梦之女巫(Dream Witch / Soul Weaver)、爱哭鬼(Axe Boy)、孽蜥(Evil Reptilian)、摄影师(Photographer)、疯眼(Mad Eyes)、26号守卫(Guard 26)、小提琴家(Violinist)、雕刻家(Sculptor)、博士(Undead)、噩梦(Nightmare)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* --------------------------------------------------------------------------
+ * 星露谷物语 · Stardew Valley
+ * 译名核验来源：ConcernedApe 官方中文与 Steam 简体中文界面：
+ *   星露谷 / 鹈鹕镇 / 农场 / 矿井 / 沙漠 / 姜岛 / 社区中心 / 温室 / 巴士；
+ *   季节：春、夏、秋、冬；活动：复活节、花舞节、夏威夷宴会、万灵节、冰雪节；
+ *   角色：刘易斯、阿比盖尔、塞巴斯蒂安、潘妮、山姆、海莉、艾利欧特等。
+ * ----------------------------------------------------------------------- */
+const STARDEW_VALLEY = {
+  id: 'stardew_valley',
+  name: '星露谷物语',
+  category: DOMAIN_CATEGORY.GAME,
+  subtitle: 'Stardew Valley',
+  description: '种田、钓鱼、挖矿、交友——在鹈鹕镇用英语过上另一种生活。',
+  icon: 'leaf',
+  theme: {
+    id: 'stardew_valley',
+    label: '田园绿意',
+    bg: '#0a1408',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #1d3a1a 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #1a3328 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #1e2a14 0%, transparent 60%), linear-gradient(180deg, #0d1209 0%, #060a05 100%)',
+    surface: 'rgba(184, 224, 160, 0.055)',
+    surfaceStrong: 'rgba(184, 224, 160, 0.10)',
+    border: 'rgba(130, 190, 110, 0.22)',
+    borderStrong: 'rgba(150, 210, 130, 0.42)',
+    text: '#f0f8e9',
+    textSoft: '#b8d6a8',
+    textFaint: '#7a9a6a',
+    primary: '#65a30d',
+    primarySoft: 'rgba(101, 163, 13, 0.18)',
+    accent: '#a3d977',
+    accentSoft: 'rgba(163, 217, 119, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(163, 217, 119, 0.13) 0%, rgba(60, 100, 40, 0.16) 48%, rgba(163, 217, 119, 0.07) 100%)',
+    cardGlow: 'rgba(101, 163, 13, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(230, 255, 210, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 地名 / 场景 ---
+    stardewValley: '星露谷',
+    pelicanTown: '鹈鹕镇',
+    farm: '农场',
+    greenhouse: '温室',
+    communityCenter: '社区中心',
+    mines: '矿井',
+    skullCavern: '骷髅洞穴',
+    desert: '沙漠',
+    gingerIsland: '姜岛',
+    volcanoDungeon: '火山地牢',
+    busStop: '巴士站',
+    railway: '铁路',
+    secretWoods: '秘密森林',
+    cindersapForest: '煤矿森林',
+    mountain: '山区',
+    beach: '海滩',
+    town: '小镇',
+    // --- 季节 / 节日 ---
+    spring: '春季',
+    summer: '夏季',
+    fall: '秋季',
+    winter: '冬季',
+    eggFestival: '复活节',
+    flowerDance: '花舞节',
+    luau: '夏威夷宴会',
+    spiritEve: '万灵节',
+    festivalOfIce: '冰雪节',
+    starlightWinter: '冬日星盛宴',
+    // --- 角色（官方中文译名）---
+    lewis: '刘易斯',
+    pierre: '皮埃尔',
+    abigail: '阿比盖尔',
+    sebastian: '塞巴斯蒂安',
+    sam: '山姆',
+    penny: '潘妮',
+    haley: '海莉',
+    elliott: '艾利欧特',
+    maru: '玛鲁',
+    harvey: '哈维',
+    emily: '艾米丽',
+    shane: '谢恩',
+    alex: '亚历克斯',
+    leah: '莉亚',
+    clint: '克林特',
+    robin: '罗宾',
+    marnie: '玛妮',
+    linus: '莱纳斯',
+    wizard: '法师',
+    krobus: '科罗布斯',
+    sandy: '桑迪',
+    // --- 系统 / 机制 ---
+    energy: '能量',
+    health: '生命值',
+    stamina: '体力',
+    inventory: '物品栏',
+    backpack: '背包',
+    crafting: '制造',
+    recipe: '配方',
+    bundle: '收集包',
+    quest: '任务',
+    skill: '技能',
+    levelUp: '升级',
+    friendship: '友谊',
+    relationship: '关系',
+    marriage: '结婚',
+    divorce: '离婚',
+    children: '孩子',
+    // --- 活动 ---
+    farming: '耕种',
+    fishing: '钓鱼',
+    mining: '采矿',
+    foraging: '采集',
+    combat: '战斗',
+    animalHusbandry: '畜牧',
+  },
+
+  domainVocabulary: {
+    // --- 农耕 / 自然 ---
+    crop: '作物',
+    harvest: '收获',
+    plant: '种植',
+    seed: '种子',
+    soil: '土壤',
+    farmland: '耕地',
+    irrigate: '灌溉',
+    cultivate: '耕作',
+    ripe: '成熟的',
+    wither: '枯萎',
+    orchard: '果园',
+    pasture: '牧场',
+    barn: '畜棚',
+    coop: '鸡舍',
+    silo: '筒仓',
+    stable: '马厩',
+    greenhouse: '温室',
+    sprinkler: '洒水器',
+    scythe: '镰刀',
+    hoe: '锄头',
+    axe: '斧头',
+    pickaxe: '镐',
+    wateringCan: '喷壶',
+    // --- 矿产 / 资源 ---
+    ore: '矿石',
+    mineral: '矿物',
+    gem: '宝石',
+    geode: '晶球',
+    coal: '煤',
+    copper: '铜',
+    iron: '铁',
+    gold: '金',
+    iridium: '铱',
+    crystal: '水晶',
+    stone: '石头',
+    rock: '岩石',
+    quarry: '采石场',
+    // --- 钓鱼 / 动物 ---
+    fish: '鱼',
+    fishingRod: '鱼竿',
+    bait: '鱼饵',
+    tackle: '鱼钩配件',
+    crabPot: '蟹笼',
+    livestock: '牲畜',
+    cattle: '牛',
+    chicken: '鸡',
+    duck: '鸭',
+    rabbit: '兔',
+    pig: '猪',
+    sheep: '羊',
+    goat: '山羊',
+    horse: '马',
+    pet: '宠物',
+    // --- 生活 / 社交 ---
+    villager: '村民',
+    neighbor: '邻居',
+    gift: '礼物',
+    birthday: '生日',
+    heart: '好感度',
+    conversation: '对话',
+    gossip: '闲话',
+    rumor: '传闻',
+    date: '约会',
+    wedding: '婚礼',
+    spouse: '配偶',
+    // --- 经济 / 时间 ---
+    gold: '金币',
+    profit: '利润',
+    income: '收入',
+    expense: '开销',
+    budget: '预算',
+    market: '市场',
+    shop: '商店',
+    calendar: '日历',
+    schedule: '日程',
+    season: '季节',
+    weather: '天气',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「星露谷物语」（Stardew Valley）。以下为官方中文参考（来源：ConcernedApe 官方中文 / Steam 简体中文），请严格遵守，不得自行翻译：
+地点：星露谷(Stardew Valley)、鹈鹕镇(Pelican Town)、农场(Farm)、社区中心(Community Center)、矿井(The Mines)、骷髅洞穴(Skull Cavern)、沙漠(Desert)、姜岛(Ginger Island)、巴士站(Bus Stop)、秘密森林(Secret Woods)、煤矿森林(Cindersap Forest)、山区(The Mountain)、海滩(The Beach)；
+季节与节日：春季/夏季/秋季/冬季(Spring/Summer/Fall/Winter)、复活节(Egg Festival)、花舞节(Flower Dance)、夏威夷宴会(Luau)、万灵节(Spirit's Eve)、冰雪节(Festival of Ice)、冬日星盛宴(Starlight Winter)；
+角色：刘易斯(Lewis)、皮埃尔(Pierre)、阿比盖尔(Abigail)、塞巴斯蒂安(Sebastian)、山姆(Sam)、潘妮(Penny)、海莉(Haley)、艾利欧特(Elliott)、玛鲁(Maru)、哈维(Harvey)、艾米丽(Emily)、谢恩(Shane)、亚历克斯(Alex)、莉亚(Leah)、克林特(Clint)、罗宾(Robin)、玛妮(Marnie)、莱纳斯(Linus)、法师(Wizard)、科罗布斯(Krobus)、桑迪(Sandy)；
+系统：能量(Energy)、生命值(Health)、体力(Stamina)、物品栏(Inventory)、背包(Backpack)、制造(Crafting)、配方(Recipe)、收集包(Bundle)、任务(Quest)、技能(Skill)、升级(Level Up)、友谊(Friendship)、结婚(Marriage)、耕种(Farming)、钓鱼(Fishing)、采矿(Mining)、采集(Foraging)、战斗(Combat)、畜牧(Animal Husbandry)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 扩展批次二：影视
+ * ------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------
+ * 瑞克和莫蒂 · Rick and Morty
+ * 译名核验来源：Adult Swim 官方中文物料与官方中文字幕：
+ *   瑞克·桑切斯 / 莫蒂·史密斯 / 贝丝 / 杰瑞 / 夏茉 / 传送门枪 / 多元宇宙；
+ *   常见外星名与装置名采用官方中文字幕通行写法。
+ * ----------------------------------------------------------------------- */
+const RICK_AND_MORTY = {
+  id: 'rick_and_morty',
+  name: '瑞克和莫蒂',
+  category: DOMAIN_CATEGORY.FILM,
+  subtitle: 'Rick and Morty',
+  description: '疯狂科学家的跨维度冒险——在多元宇宙里用英语理解荒诞与存在。',
+  icon: 'portal',
+  theme: {
+    id: 'rick_and_morty',
+    label: '霓虹绿酸橙',
+    bg: '#0a140a',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #1d4a18 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #1a331a 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #1e2a14 0%, transparent 60%), linear-gradient(180deg, #0d1209 0%, #060a05 100%)',
+    surface: 'rgba(184, 255, 160, 0.055)',
+    surfaceStrong: 'rgba(184, 255, 160, 0.10)',
+    border: 'rgba(130, 230, 110, 0.22)',
+    borderStrong: 'rgba(150, 255, 130, 0.42)',
+    text: '#f0ffe9',
+    textSoft: '#b8e8a8',
+    textFaint: '#7a9a6a',
+    primary: '#75d70d',
+    primarySoft: 'rgba(117, 215, 13, 0.18)',
+    accent: '#b3f977',
+    accentSoft: 'rgba(179, 249, 119, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(179, 249, 119, 0.13) 0%, rgba(60, 100, 40, 0.16) 48%, rgba(179, 249, 119, 0.07) 100%)',
+    cardGlow: 'rgba(117, 215, 13, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(230, 255, 210, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 作品 / 角色 ---
+    rickAndMorty: '瑞克和莫蒂',
+    rickSanchez: '瑞克·桑切斯',
+    mortySmith: '莫蒂·史密斯',
+    bethSmith: '贝丝·史密斯',
+    jerrySmith: '杰瑞·史密斯',
+    summerSmith: '夏茉·史密斯',
+    mrMeeseeks: '使命必达先生',
+    meeseeks: '使命必达先生',
+    birdperson: '鸟人',
+    squanchy: '屎瓜奇',
+    unity: '联合体',
+    evilMorty: '邪恶莫蒂',
+    presidentMorty: '总统莫蒂',
+    // --- 设定 / 道具 ---
+    portalGun: '传送门枪',
+    portalFluid: '传送门液',
+    spaceship: '飞船',
+    multiverse: '多元宇宙',
+    dimension: '维度',
+    universe: '宇宙',
+    citadel: '瑞城',
+    councilOfRicks: '瑞克委员会',
+    federation: '银河联邦',
+    gromflomites: '格洛弗虫族',
+    // --- 概念 ---
+    sciFi: '科幻',
+    parody: '戏仿',
+    satire: '讽刺',
+    nihilism: '虚无主义',
+    existentialism: '存在主义',
+    absurd: '荒诞',
+    genius: '天才',
+    madScientist: '疯狂科学家',
+    adventure: '冒险',
+    experiment: '实验',
+    clone: '克隆',
+    mutation: '突变',
+    alien: '外星人',
+    robot: '机器人',
+    cyborg: '生化人',
+  },
+
+  domainVocabulary: {
+    // --- 科学 / 宇宙 ---
+    portal: '传送门',
+    teleport: '传送',
+    travel: '穿梭',
+    warp: '空间扭曲',
+    galaxy: '星系',
+    planet: '星球',
+    spaceship: '飞船',
+    spacecraft: '航天器',
+    laboratory: '实验室',
+    lab: '实验室',
+    experiment: '实验',
+    invention: '发明',
+    gadget: '小装置',
+    device: '装置',
+    technology: '科技',
+    science: '科学',
+    scientific: '科学的',
+    theory: '理论',
+    equation: '方程',
+    quantum: '量子的',
+    atomic: '原子的',
+    molecular: '分子的',
+    clone: '克隆',
+    replicate: '复制',
+    mutate: '突变',
+    evolve: '进化',
+    dimension: '维度',
+    timeline: '时间线',
+    parallel: '平行的',
+    alternate: '交替的',
+    universe: '宇宙',
+    cosmos: '宇宙',
+    infinite: '无限的',
+    // --- 情绪 / 人物 ---
+    genius: '天才',
+    intellect: '智力',
+    intelligence: '智慧',
+    arrogance: '傲慢',
+    sarcasm: '讽刺',
+    cynicism: '愤世嫉俗',
+    nihilism: '虚无主义',
+    despair: '绝望',
+    absurdity: '荒诞',
+    irony: '反讽',
+    mock: '嘲弄',
+    taunt: '奚落',
+    reckless: '鲁莽的',
+    impulsive: '冲动的',
+    anxious: '焦虑的',
+    naive: '天真的',
+    insecure: '不安的',
+    adolescent: '青少年的',
+    // --- 冒险 / 情节 ---
+    adventure: '冒险',
+    mission: '任务',
+    quest: '探索',
+    escapade: '冒险行径',
+    misadventure: '不幸遭遇',
+    hijack: '劫持',
+    crash: '坠毁',
+    flee: '逃离',
+    escape: '逃脱',
+    chase: '追逐',
+    pursuit: '追击',
+    confrontation: '对峙',
+    conflict: '冲突',
+    chaos: '混乱',
+    disaster: '灾难',
+    catastrophe: '灾难',
+    dilemma: '困境',
+    paradox: '悖论',
+    twist: '反转',
+    absurd: '荒诞的',
+    bizarre: '怪异的',
+    weird: '诡异的',
+    gross: '恶心的',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「瑞克和莫蒂」（Rick and Morty）。以下为官方中文参考（来源：Adult Swim 官方中文字幕），请严格遵守，不得自行翻译：
+角色：瑞克·桑切斯(Rick Sanchez)、莫蒂·史密斯(Morty Smith)、贝丝·史密斯(Beth Smith)、杰瑞·史密斯(Jerry Smith)、夏茉·史密斯(Summer Smith)、使命必达先生(Mr. Meeseeks)、鸟人(Birdperson)、屎瓜奇(Squanchy)、联合体(Unity)、邪恶莫蒂(Evil Morty / President Morty)；
+设定：传送门枪(Portal Gun)、传送门液(Portal Fluid)、飞船(Spaceship)、多元宇宙(Multiverse)、维度(Dimension)、宇宙(Universe)、瑞城(Citadel of Ricks / Citadel)、瑞克委员会(Council of Ricks)、银河联邦(Galactic Federation)、格洛弗虫族(Gromflomites)；
+概念：科幻(Science Fiction)、戏仿(Parody)、讽刺(Satire)、虚无主义(Nihilism)、存在主义(Existentialism)、荒诞(Absurd)、天才(Genius)、疯狂科学家(Mad Scientist)、冒险(Adventure)、实验(Experiment)、克隆(Clone)、突变(Mutation)、外星人(Alien)、机器人(Robot)、生化人(Cyborg)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* --------------------------------------------------------------------------
+ * 日漫 · Japanese Animation
+ * 译名核验来源：中国大陆官方引进译名 / Bilibili 正版番剧译名 / 豆瓣条目；
+ *   行业术语以日本动画产业通用中文写法为准。
+ * ----------------------------------------------------------------------- */
+const ANIMATION = {
+  id: 'animation',
+  name: '日漫',
+  category: DOMAIN_CATEGORY.FILM,
+  subtitle: 'Japanese Animation',
+  description: '番剧、声优、原作与作画——在二次元里用英语读懂每一帧。',
+  icon: 'film',
+  theme: {
+    id: 'animation',
+    label: '樱粉电蓝',
+    bg: '#140810',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #4a1838 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #2a1a48 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #2a1429 0%, transparent 60%), linear-gradient(180deg, #12090d 0%, #08050a 100%)',
+    surface: 'rgba(255, 184, 220, 0.055)',
+    surfaceStrong: 'rgba(255, 184, 220, 0.10)',
+    border: 'rgba(230, 130, 190, 0.22)',
+    borderStrong: 'rgba(255, 150, 220, 0.42)',
+    text: '#ffe9f4',
+    textSoft: '#e0a8c8',
+    textFaint: '#9a7290',
+    primary: '#e056c8',
+    primarySoft: 'rgba(224, 86, 200, 0.18)',
+    accent: '#f0a3d6',
+    accentSoft: 'rgba(240, 163, 214, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(240, 163, 214, 0.13) 0%, rgba(80, 40, 80, 0.16) 48%, rgba(240, 163, 214, 0.07) 100%)',
+    cardGlow: 'rgba(224, 86, 200, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(255, 220, 240, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 行业术语 ---
+    anime: '日本动画',
+    manga: '日本漫画',
+    animation: '动画',
+    comic: '漫画',
+    lightNovel: '轻小说',
+    visualNovel: '视觉小说',
+    doujinshi: '同人志',
+    otaku: '御宅族',
+    fujoshi: '腐女',
+    cosplay: '角色扮演',
+    seiyuu: '声优',
+    voiceActor: '声优',
+    director: '监督',
+    animator: '原画师',
+    keyAnimation: '原画',
+    inBetween: '中间画',
+    storyboard: '分镜',
+    screenplay: '脚本',
+    episode: '集',
+    season: '季',
+    cour: '季度',
+    series: '系列',
+    arc: '篇章',
+    ova: 'OVA',
+    oad: 'OAD',
+    ona: 'ONA',
+    op: '片头曲',
+    ed: '片尾曲',
+    insertSong: '插入歌',
+    soundtrack: '原声带',
+    themeSong: '主题曲',
+    subtitle: '字幕',
+    dubbing: '配音',
+    simulcast: '同步播出',
+    broadcast: '播出',
+    rerun: '重播',
+    // --- 代表番剧（官方中文译名）---
+    attackOnTitan: '进击的巨人',
+    onePiece: '海贼王',
+    naruto: '火影忍者',
+    demonSlayer: '鬼灭之刃',
+    jujutsuKaisen: '咒术回战',
+    spyFamily: '间谍过家家',
+    chainsawMan: '电锯人',
+    myHeroAcademia: '我的英雄学院',
+    fullmetalAlchemist: '钢之炼金术师',
+    deathNote: '死亡笔记',
+    steinsGate: '命运石之门',
+    evangelion: '新世纪福音战士',
+    yourName: '你的名字。',
+    spiritedAway: '千与千寻',
+    totoro: '龙猫',
+  },
+
+  domainVocabulary: {
+    // --- 创作 / 制作 ---
+    animate: '使动起来',
+    draw: '绘制',
+    sketch: '草图',
+    frame: '帧',
+    scene: '场景',
+    shot: '镜头',
+    panel: '分格',
+    layout: '构图',
+    composition: '构图',
+    perspective: '透视',
+    proportion: '比例',
+    design: '设计',
+    style: '风格',
+    aesthetic: '美感',
+    visual: '视觉的',
+    illustration: '插画',
+    artwork: ' artwork',
+    character: '角色',
+    protagonist: '主角',
+    antagonist: '反派',
+    supporting: '配角的',
+    cast: '演员阵容',
+    crew: '制作团队',
+    staff: '制作人员',
+    studio: '动画工作室',
+    production: '制作',
+    publish: '出版',
+    serialize: '连载',
+    release: '发行',
+    debut: '出道',
+    premiere: '首映',
+    broadcast: '播出',
+    // --- 叙事 / 类型 ---
+    plot: '剧情',
+    story: '故事',
+    narrative: '叙事',
+    genre: '类型',
+    fantasy: '奇幻',
+    scienceFiction: '科幻',
+    romance: '恋爱',
+    comedy: '喜剧',
+    tragedy: '悲剧',
+    drama: '剧情',
+    action: '动作',
+    adventure: '冒险',
+    mystery: '悬疑',
+    horror: '恐怖',
+    supernatural: '超自然',
+    psychological: '心理的',
+    sliceOfLife: '日常',
+    fanService: '杀必死',
+    // --- 观众 / 社区 ---
+    fan: '粉丝',
+    fandom: '粉丝圈',
+    community: '社区',
+    forum: '论坛',
+    review: '评论',
+    rating: '评分',
+    popularity: '人气',
+    trend: '趋势',
+    meme: '梗',
+    spoiler: '剧透',
+    binge: '追番',
+    watchlist: '追番列表',
+    recommendation: '推荐',
+    merchandise: '周边',
+    figure: '手办',
+    collection: '收藏',
+    nostalgia: '怀旧',
+
+    /* --- 扩充批次（第六轮）：与六级词库产生召回的番剧术语 --- */
+    // 制作 / 播出
+    adaptation: '改编',
+    theme: '主题',
+    convention: '漫展',
+    poster: '海报',
+    volume: '单行本',
+    draft: '草稿',
+    outline: '大纲',
+    heroine: '女主角',
+    rival: '宿敌',
+    satire: '讽刺',
+    stereotype: '刻板印象',
+    critic: '评论家',
+    acclaim: '好评',
+    masterpiece: '神作',
+    legend: '传说',
+    illustrate: '绘制插画',
+    fiction: '虚构作品',
+    myth: '神话',
+    folklore: '民俗传说',
+    innovation: '创新',
+    revolution: '革新',
+    evolution: '演变',
+    franchise: '系列作品',
+    billboard: '广告牌',
+    stream: '在线播放',
+    audience: '观众',
+    spectator: '看客',
+    scenario: '剧本设定',
+    // 叙事 / 表达
+    depict: '描绘',
+    portray: '刻画',
+    convey: '传达',
+    evoke: '唤起',
+    puzzle: '谜题',
+    paradox: '悖论',
+    irony: '反讽',
+    allegory: '寓言',
+    metaphor: '隐喻',
+    symbol: '象征',
+    imagery: '意象',
+    fable: '寓言故事',
+    fairy: '妖精；童话',
+    ritual: '仪式',
+    custom: '习俗',
+    heritage: '传承',
+    wit: '机智',
+    epic: '史诗',
+    sentiment: '情感',
+    emotion: '情绪',
+    // 情绪 / 人物关系
+    melancholy: '忧郁',
+    solitude: '孤独',
+    inspiration: '灵感',
+    influence: '影响',
+    genius: '天才',
+    passion: '热情',
+    ambition: '野心',
+    despair: '绝望',
+    courage: '勇气',
+    disciple: '弟子',
+    quest: '追寻',
+    companionship: '同伴情谊',
+    solidarity: '羁绊',
+    loyalty: '忠诚',
+    dedication: '投入',
+    optimism: '乐观',
+    sorrow: '悲伤',
+    grief: '悲恸',
+    lament: '哀叹',
+    isolation: '孤立',
+    longing: '渴望',
+    craving: '渴求',
+    desire: '欲望',
+    tension: '张力',
+    climax: '高潮',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run', 'date', 'season'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「日漫」（Japanese Animation）。以下为官方中文参考（来源：中国大陆官方引进译名 / Bilibili 正版番剧 / 豆瓣条目 / 日本动画产业通用中文），请严格遵守，不得自行翻译：
+行业术语：日本动画(Anime)、日本漫画(Manga)、动画(Animation)、漫画(Comic)、轻小说(Light Novel)、视觉小说(Visual Novel)、同人志(Doujinshi)、御宅族(Otaku)、声优(Seiyuu / Voice Actor)、监督(Director)、原画师(Animator)、原画(Key Animation)、中间画(In-Between)、分镜(Storyboard)、脚本(Screenplay)、集(Episode)、季(Season / Cour)、系列(Series)、篇章(Arc)、OVA、OAD、ONA、片头曲(OP)、片尾曲(ED)、插入歌(Insert Song)、原声带(Soundtrack)、主题曲(Theme Song)、字幕(Subtitle)、配音(Dubbing)、同步播出(Simulcast)；
+代表番剧：进击的巨人(Attack on Titan)、海贼王(One Piece)、火影忍者(Naruto)、鬼灭之刃(Demon Slayer)、咒术回战(Jujutsu Kaisen)、间谍过家家(Spy × Family)、电锯人(Chainsaw Man)、我的英雄学院(My Hero Academia)、钢之炼金术师(Fullmetal Alchemist)、死亡笔记(Death Note)、命运石之门(Steins;Gate)、新世纪福音战士(Neon Genesis Evangelion)、你的名字。(Your Name.)、千与千寻(Spirited Away)、龙猫(My Neighbor Totoro)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 扩展批次三：体育
+ * ------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------
+ * 足球 · Football
+ * 译名核验来源：FIFA / UEFA / 中国足协 / 西甲联盟官方中文名称：
+ *   世界杯、西甲、欧冠、英超、意甲、德甲、中超；
+ *   点球、任意球、越位、红牌、黄牌、门将、前锋、中场、后卫。
+ * ----------------------------------------------------------------------- */
+const FOOTBALL = {
+  id: 'football',
+  name: '足球',
+  category: DOMAIN_CATEGORY.SPORTS,
+  subtitle: 'Football (World Cup / La Liga / Champions League)',
+  description: '绿茵场上的节奏与战术——用英语看懂世界杯、西甲与欧冠。',
+  icon: 'ball',
+  titleQuoted: false,
+  theme: {
+    id: 'football',
+    label: '绿茵草绿',
+    bg: '#08140a',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #1a3a18 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #1a2a18 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #1e2a14 0%, transparent 60%), linear-gradient(180deg, #09120a 0%, #050805 100%)',
+    surface: 'rgba(184, 255, 160, 0.055)',
+    surfaceStrong: 'rgba(184, 255, 160, 0.10)',
+    border: 'rgba(130, 210, 110, 0.22)',
+    borderStrong: 'rgba(150, 235, 130, 0.42)',
+    text: '#f0fff0',
+    textSoft: '#b8e0b0',
+    textFaint: '#7a9a72',
+    primary: '#2e9d4d',
+    primarySoft: 'rgba(46, 157, 77, 0.18)',
+    accent: '#7ee787',
+    accentSoft: 'rgba(126, 231, 135, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(126, 231, 135, 0.13) 0%, rgba(40, 100, 40, 0.16) 48%, rgba(126, 231, 135, 0.07) 100%)',
+    cardGlow: 'rgba(46, 157, 77, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(220, 255, 220, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 赛事 / 组织 ---
+    worldCup: '世界杯',
+    laLiga: '西甲',
+    championsLeague: '欧冠',
+    premierLeague: '英超',
+    serieA: '意甲',
+    bundesliga: '德甲',
+    ligue1: '法甲',
+    chineseSuperLeague: '中超',
+    faCup: '足总杯',
+    copaDelRey: '国王杯',
+    worldClubCup: '世俱杯',
+    uefa: '欧足联',
+    fifa: '国际足联',
+    afc: '亚足联',
+    cfa: '中国足协',
+    // --- 位置 / 角色 ---
+    goalkeeper: '门将',
+    defender: '后卫',
+    midfielder: '中场',
+    forward: '前锋',
+    striker: '前锋',
+    winger: '边锋',
+    fullback: '边后卫',
+    centerBack: '中后卫',
+    sweeper: '清道夫',
+    captain: '队长',
+    coach: '教练',
+    referee: '裁判',
+    linesman: '助理裁判',
+    substitute: '替补',
+    // --- 规则 / 动作 ---
+    penalty: '点球',
+    penaltyKick: '点球',
+    freeKick: '任意球',
+    corner: '角球',
+    goalKick: '球门球',
+    throwIn: '界外球',
+    offside: '越位',
+    foul: '犯规',
+    handball: '手球',
+    yellowCard: '黄牌',
+    redCard: '红牌',
+    suspension: '停赛',
+    injuryTime: '伤停补时',
+    extraTime: '加时赛',
+    penaltyShootout: '点球大战',
+    hatTrick: '帽子戏法',
+    ownGoal: '乌龙球',
+    // --- 场地 / 结果 ---
+    pitch: '球场',
+    goal: '球门',
+    net: '球网',
+    crossbar: '横梁',
+    post: '门柱',
+    sideline: '边线',
+    touchline: '边线',
+    halfTime: '中场休息',
+    fullTime: '全场结束',
+    draw: '平局',
+    victory: '胜利',
+    defeat: '失败',
+    promotion: '升级',
+    relegation: '降级',
+  },
+
+  domainVocabulary: {
+    // --- 技术动作 ---
+    kick: '踢',
+    pass: '传球',
+    shoot: '射门',
+    dribble: '盘带',
+    tackle: '铲球',
+    intercept: '拦截',
+    clear: '解围',
+    cross: '传中',
+    header: '头球',
+    volley: '凌空抽射',
+    chip: '挑射',
+    lob: '吊射',
+    save: '扑救',
+    block: '封堵',
+    mark: '盯人',
+    press: '逼抢',
+    possession: '控球',
+    counter: '反击',
+    attack: '进攻',
+    defense: '防守',
+    // --- 身体 / 体能 ---
+    stamina: '体能',
+    endurance: '耐力',
+    agility: '敏捷',
+    speed: '速度',
+    strength: '力量',
+    balance: '平衡',
+    coordination: '协调',
+    reflex: '反应',
+    reaction: '反应',
+    sprint: '冲刺',
+    leap: '跳跃',
+    stride: '步伐',
+    fatigue: '疲劳',
+    injury: '伤病',
+    cramp: '抽筋',
+    // --- 团队 / 战术 ---
+    team: '球队',
+    squad: '阵容',
+    lineup: '首发',
+    formation: '阵型',
+    tactic: '战术',
+    strategy: '策略',
+    style: '风格',
+    system: '体系',
+    pressing: '压迫',
+    offsideTrap: '越位陷阱',
+    buildup: '组织',
+    transition: '转换',
+    setPiece: '定位球',
+    teamwork: '配合',
+    chemistry: '化学反应',
+    morale: '士气',
+    discipline: '纪律',
+    // --- 竞技 / 评价 ---
+    match: '比赛',
+    game: '比赛',
+    fixture: '赛程',
+    tournament: '锦标赛',
+    competition: '赛事',
+    league: '联赛',
+    round: '轮次',
+    leg: '回合',
+    stage: '阶段',
+    group: '小组',
+    knockout: '淘汰赛',
+    final: '决赛',
+    semifinal: '半决赛',
+    quarterfinal: '四分之一决赛',
+    score: '比分',
+    point: '积分',
+    table: '积分榜',
+    standing: '排名',
+    champion: '冠军',
+    runnerUp: '亚军',
+    trophy: '奖杯',
+    medal: '奖牌',
+    record: '纪录',
+    performance: '表现',
+    brilliant: '精彩的',
+    outstanding: '出色的',
+    dominant: '统治级的',
+    crucial: '关键的',
+    decisive: '决定性的',
+    dramatic: '戏剧性的',
+    intense: '激烈的',
+    fierce: '激烈的',
+    // --- 球迷 / 转播 ---
+    fan: '球迷',
+    crowd: '观众',
+    stadium: '体育场',
+    arena: '球场',
+    broadcast: '转播',
+    live: '直播',
+    highlight: '集锦',
+    replay: '回放',
+    commentary: '解说',
+    analyst: '评论员',
+    legend: '传奇',
+    star: '球星',
+    rookie: '新秀',
+
+    /* --- 扩充批次（第六轮）：与六级词库产生召回的赛场术语 --- */
+    // 场上动作 / 防守
+    clearance: '解围',
+    pace: '比赛节奏',
+    acceleration: '带球加速',
+    jump: '起跳争顶',
+    accuracy: '传球精度',
+    composure: '沉稳',
+    confidence: '信心',
+    momentum: '势头',
+    courage: '勇气',
+    determination: '决心',
+    creative: '富有创造力的',
+    anchor: '后防中坚',
+    strain: '拉伤',
+    muscle: '肌肉',
+    flexibility: '柔韧性',
+    exhaustion: '体力透支',
+    // 战绩 / 赛制
+    streak: '连胜',
+    slump: '低迷',
+    schedule: '赛程',
+    transfer: '转会',
+    fee: '转会费',
+    sponsor: '赞助商',
+    expectation: '期望',
+    criticism: '批评',
+    achievement: '成就',
+    incentive: '激励',
+    reward: '回报',
+    reputation: '声誉',
+    // 精神 / 品质
+    aspiration: '抱负',
+    ambition: '雄心',
+    inspiration: '激励',
+    humility: '谦逊',
+    integrity: '正直',
+    unity: '团结',
+    cohesion: '凝聚力',
+    hostility: '敌意',
+    solidarity: '团结一致',
+    comrade: '队友',
+    harmony: '默契和谐',
+    bravery: '勇敢',
+    dignity: '尊严',
+    // 对抗 / 争议
+    feud: '积怨',
+    mock: '嘲讽',
+    provoke: '挑衅',
+    dispute: '争议判罚',
+    controversy: '争议',
+    reckless: '鲁莽的',
+    stubborn: '顽强的',
+    duel: '对决',
+    encounter: '交锋',
+    // 观赛文化
+    chant: '助威口号',
+    hooligan: '足球流氓',
+    hymn: '队歌',
+    banner: '横幅',
+    emblem: '队徽',
+    spectator: '观众',
+    ordeal: '苦战',
+    campaign: '赛季征程',
+    exploit: '壮举',
+    feat: '战绩',
+    // 评价 / 场面
+    upset: '爆冷',
+    spectacle: '精彩赛事',
+    sensation: '轰动',
+    legendary: '传奇的',
+    prestige: '声望',
+    tribute: '致敬',
+    epic: '史诗般的',
+    spectacular: '壮观的',
+    strategic: '战略性的',
+    aggressive: '有侵略性的',
+    initiative: '主动权',
+    intensity: '强度',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run', 'save'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「足球」（Football / Soccer）。以下为官方中文参考（来源：FIFA / UEFA / 中国足协 / 西甲联盟官方中文），请严格遵守，不得自行翻译：
+赛事：世界杯(FIFA World Cup)、西甲(La Liga)、欧冠(UEFA Champions League)、英超(Premier League)、意甲(Serie A)、德甲(Bundesliga)、法甲(Ligue 1)、中超(Chinese Super League)、足总杯(FA Cup)、国王杯(Copa del Rey)、世俱杯(FIFA Club World Cup)；
+位置：门将(Goalkeeper)、后卫(Defender / Fullback / Center Back)、中场(Midfielder)、前锋(Forward / Striker / Winger)、队长(Captain)、教练(Coach)、裁判(Referee)、助理裁判(Linesman)、替补(Substitute)；
+规则：点球(Penalty / Penalty Kick)、任意球(Free Kick)、角球(Corner)、球门球(Goal Kick)、界外球(Throw-In)、越位(Offside)、犯规(Foul)、手球(Handball)、黄牌(Yellow Card)、红牌(Red Card)、停赛(Suspension)、伤停补时(Injury Time)、加时赛(Extra Time)、点球大战(Penalty Shootout)、帽子戏法(Hat-Trick)、乌龙球(Own Goal)；
+场地：球场(Pitch)、球门(Goal)、球网(Net)、横梁(Crossbar)、门柱(Post)、边线(Sideline / Touchline)、中场休息(Half-Time)、全场结束(Full-Time)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* --------------------------------------------------------------------------
+ * 台球 · Billiards
+ * 译名核验来源：世界斯诺克巡回赛 WST / 中国台球协会官方中文名称：
+ *   斯诺克、世锦赛、大师赛、英锦赛、九球、中式八球；
+ *   术语：母球、目标球、红球、彩球、黑球、白球、球杆、杆法、清台、单杆破百。
+ * ----------------------------------------------------------------------- */
+const BILLIARD = {
+  id: 'billiard',
+  name: '台球',
+  category: DOMAIN_CATEGORY.SPORTS,
+  subtitle: 'Billiards (Snooker / World Championship / Nine-ball)',
+  description: '母球、目标球与杆法——在斯诺克与九球桌上用英语计算角度。',
+  icon: 'cue',
+  titleQuoted: false,
+  theme: {
+    id: 'billiard',
+    label: '桌球深绿',
+    bg: '#08140c',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #1a3a28 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #1a2a24 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #1e2a18 0%, transparent 60%), linear-gradient(180deg, #09120c 0%, #050805 100%)',
+    surface: 'rgba(184, 255, 200, 0.055)',
+    surfaceStrong: 'rgba(184, 255, 200, 0.10)',
+    border: 'rgba(130, 210, 150, 0.22)',
+    borderStrong: 'rgba(150, 235, 170, 0.42)',
+    text: '#f0fff4',
+    textSoft: '#b8e0c8',
+    textFaint: '#7a9a82',
+    primary: '#2e9d6d',
+    primarySoft: 'rgba(46, 157, 109, 0.18)',
+    accent: '#7ee7b3',
+    accentSoft: 'rgba(126, 231, 179, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(126, 231, 179, 0.13) 0%, rgba(40, 100, 60, 0.16) 48%, rgba(126, 231, 179, 0.07) 100%)',
+    cardGlow: 'rgba(46, 157, 109, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(220, 255, 235, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 赛事 / 组织 ---
+    snooker: '斯诺克',
+    worldChampionship: '世锦赛',
+    masters: '大师赛',
+    ukChampionship: '英锦赛',
+    nineBall: '九球',
+    chineseEightBall: '中式八球',
+    worldPoolMasters: '世界撞球大师赛',
+    wst: '世界斯诺克巡回赛',
+    wpbsa: '世界职业比利和斯诺克协会',
+    cbta: '中国台球协会',
+    // --- 球 / 桌 ---
+    cueBall: '母球',
+    objectBall: '目标球',
+    redBall: '红球',
+    colorBall: '彩球',
+    blackBall: '黑球',
+    pinkBall: '粉球',
+    blueBall: '蓝球',
+    brownBall: '棕球',
+    greenBall: '绿球',
+    yellowBall: '黄球',
+    whiteBall: '白球',
+    cue: '球杆',
+    tip: '杆头',
+    chalk: '巧粉',
+    table: '球桌',
+    cushion: '库边',
+    pocket: '袋口',
+    rack: '摆球架',
+    triangle: '三角框',
+    cloth: '台呢',
+    // --- 技术 / 动作 ---
+    break: '开球',
+    breakOff: '安全开球',
+    pot: '打进',
+    miss: '未打进',
+    foul: '犯规',
+    snooker2: '斯诺克（做障碍）',
+    safety: '安全球',
+    escape: '解球',
+    clearance: '清台',
+    century: '单杆破百',
+    maximum: '满分杆',
+    reSpot: '重摆',
+    // --- 角色 / 结果 ---
+    referee: '裁判',
+    marker: '记分员',
+    frame: '局',
+    match: '场比赛',
+    session: '阶段',
+    interval: '局间休息',
+    ranking: '排名',
+    seed: '种子',
+    champion: '冠军',
+    runnerUp: '亚军',
+    trophy: '奖杯',
+  },
+
+  domainVocabulary: {
+    // --- 技术动作 ---
+    aim: '瞄准',
+    stroke: '击球',
+    shot: '击球',
+    strike: '击打',
+    hit: '撞击',
+    tap: '轻推',
+    push: '推杆',
+    pull: '拉杆',
+    spin: '旋转',
+    side: '塞',
+    topSpin: '高杆',
+    backSpin: '低杆',
+    follow: '跟进',
+    draw: '缩杆',
+    drag: '拖杆',
+    jump: '跳球',
+    bank: '碰库',
+    kick: '踢（三库解球）',
+    carom: '连撞',
+    cannon: '双碰',
+    cushion: '库边反弹',
+    rebound: '反弹',
+    deflect: '偏转',
+    angle: '角度',
+    trajectory: '轨迹',
+    alignment: '站位',
+    stance: '站姿',
+    bridge: '手桥',
+    grip: '握杆',
+    cueAction: '出杆',
+    followThrough: '延伸',
+    // --- 球 / 物理 ---
+    ball: '球',
+    sphere: '球体',
+    pocket: '袋口',
+    rim: '袋口边缘',
+    cloth: '台呢',
+    slate: '石板',
+    bounce: '弹跳',
+    roll: '滚动',
+    friction: '摩擦',
+    spin: '旋转',
+    velocity: '速度',
+    momentum: '动量',
+    trajectory: '轨迹',
+    arc: '弧线',
+    // --- 竞技 / 心理 ---
+    concentration: '专注',
+    focus: '专注',
+    composure: '镇定',
+    pressure: '压力',
+    nerve: '胆量',
+    patience: '耐心',
+    discipline: '自律',
+    rhythm: '节奏',
+    tempo: '节奏',
+    momentum: '势头',
+    advantage: '优势',
+    opportunity: '机会',
+    mistake: '失误',
+    error: '错误',
+    fluke: '运气球',
+    safety: '安全',
+    risk: '风险',
+    gamble: '博',
+    strategy: '策略',
+    tactic: '战术',
+    calculation: '计算',
+    precision: '精确',
+    accuracy: '精准',
+    consistency: '稳定性',
+    control: '控制',
+    dominance: '统治力',
+    comeback: '逆转',
+    collapse: '崩盘',
+    // --- 赛事 / 评价 ---
+    tournament: '锦标赛',
+    championship: '锦标赛',
+    match: '比赛',
+    frame: '局',
+    game: '盘',
+    round: '轮',
+    final: '决赛',
+    semifinal: '半决赛',
+    quarterfinal: '四分之一决赛',
+    qualification: '资格赛',
+    seeding: '种子排位',
+    ranking: '排名',
+    points: '积分',
+    prize: '奖金',
+    venue: '场馆',
+    arena: '赛场',
+    spectator: '观众',
+    crowd: '人群',
+    atmosphere: '气氛',
+    tension: '紧张',
+    applause: '掌声',
+    silence: '寂静',
+    legend: '传奇',
+    master: '大师',
+    rookie: '新秀',
+    veteran: '老将',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run', 'table', 'break'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「台球」（Billiards / Snooker / Pool）。以下为官方中文参考（来源：世界斯诺克巡回赛 WST / 中国台球协会官方中文），请严格遵守，不得自行翻译：
+赛事：斯诺克(Snooker)、世锦赛(World Championship)、大师赛(The Masters)、英锦赛(UK Championship)、九球(Nine-ball)、中式八球(Chinese Eight-ball)、世界撞球大师赛(World Pool Masters)、世界斯诺克巡回赛(WST)、世界职业比利和斯诺克协会(WPBSA)、中国台球协会(CBTA)；
+球具：母球(Cue Ball)、目标球(Object Ball)、红球(Red)、彩球(Colour)、黑球(Black)、粉球(Pink)、蓝球(Blue)、棕球(Brown)、绿球(Green)、黄球(Yellow)、白球(White)、球杆(Cue)、杆头(Tip)、巧粉(Chalk)、球桌(Table)、库边(Cushion)、袋口(Pocket)、摆球架(Rack / Triangle)、台呢(Cloth)、石板(Slate)；
+术语：开球(Break)、安全开球(Break-off)、打进(Pot)、未打进(Miss)、犯规(Foul)、做斯诺克(Snooker)、安全球(Safety)、解球(Escape)、清台(Clearance)、单杆破百(Century)、满分杆(Maximum / 147)、重摆(Re-spot)、局(Frame)、场比赛(Match)、阶段(Session)、局间休息(Interval)、排名(Ranking)、种子(Seed)、冠军(Champion)、亚军(Runner-up)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* ---------------------------------------------------------------------------
+ * 扩展批次四：其他
+ * ------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------
+ * 航空航天 · Aviation & Aerospace
+ * 译名核验来源：中国航天局 CNSA / NASA / ESA / SpaceX 官方中文发布与权威航天术语表：
+ *   长征火箭、天宫空间站、嫦娥、祝融、神舟、北斗、低地球轨道、逃逸速度、再入大气层。
+ * ----------------------------------------------------------------------- */
+const AVIATION = {
+  id: 'aviation',
+  name: '航空航天',
+  category: DOMAIN_CATEGORY.OTHER,
+  subtitle: 'Aviation & Aerospace',
+  description: '从地球到深空——用英语读懂火箭、轨道、空间站与星际探索。',
+  icon: 'rocket',
+  theme: {
+    id: 'aviation',
+    label: '深空靛蓝',
+    bg: '#080a14',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #1a284a 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #1a1a3a 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #1e1a29 0%, transparent 60%), linear-gradient(180deg, #090a12 0%, #050508 100%)',
+    surface: 'rgba(184, 200, 255, 0.055)',
+    surfaceStrong: 'rgba(184, 200, 255, 0.10)',
+    border: 'rgba(130, 160, 230, 0.22)',
+    borderStrong: 'rgba(150, 180, 255, 0.42)',
+    text: '#e9f0ff',
+    textSoft: '#a8b8e0',
+    textFaint: '#727a9a',
+    primary: '#4d79e6',
+    primarySoft: 'rgba(77, 121, 230, 0.18)',
+    accent: '#7ea8ff',
+    accentSoft: 'rgba(126, 168, 255, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(126, 168, 255, 0.13) 0%, rgba(40, 60, 100, 0.16) 48%, rgba(126, 168, 255, 0.07) 100%)',
+    cardGlow: 'rgba(77, 121, 230, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(220, 235, 255, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 机构 / 企业 ---
+    nasa: '美国国家航空航天局',
+    esa: '欧洲空间局',
+    spacex: '太空探索技术公司',
+    blueOrigin: '蓝色起源',
+    cnsa: '中国国家航天局',
+    cast: '中国航天科技集团',
+    // --- 中国航天任务 / 器 ---
+    longMarch: '长征火箭',
+    tiangong: '天宫空间站',
+    shenzhou: '神舟飞船',
+    changE: '嫦娥',
+    zhurong: '祝融',
+    yutu: '玉兔',
+    beidou: '北斗',
+    gaofen: '高分',
+    tianwen: '天问',
+    wenchang: '文昌航天发射场',
+    xichang: '西昌卫星发射中心',
+    jiuquan: '酒泉卫星发射中心',
+    taiyuan: '太原卫星发射中心',
+    // --- 国际航天器 / 站 ---
+    iss: '国际空间站',
+    apollo: '阿波罗',
+    gemini: '双子座',
+    mercury: '水星计划',
+    skylab: '天空实验室',
+    spaceShuttle: '航天飞机',
+    soyuz: '联盟号',
+    progress: '进步号',
+    dragon: '龙飞船',
+    starship: '星舰',
+    falcon: '猎鹰',
+    hubble: '哈勃',
+    jamesWebb: '詹姆斯·韦伯',
+    voyager: '旅行者号',
+    curiosity: '好奇号',
+    perseverance: '毅力号',
+    ingenuity: '机智号',
+    // --- 飞行 / 轨道概念 ---
+    orbit: '轨道',
+    lowEarthOrbit: '低地球轨道',
+    geostationary: '地球同步轨道',
+    escapeVelocity: '逃逸速度',
+    atmosphere: '大气层',
+    reentry: '再入',
+    launch: '发射',
+    landing: '着陆',
+    propulsion: '推进',
+    thrust: '推力',
+    gravity: '重力',
+    microgravity: '微重力',
+    weightlessness: '失重',
+    vacuum: '真空',
+  },
+
+  domainVocabulary: {
+    // --- 航天器 / 航空器 ---
+    rocket: '火箭',
+    spacecraft: '航天器',
+    spaceship: '飞船',
+    satellite: '卫星',
+    spaceStation: '空间站',
+    capsule: '舱',
+    module: '舱段',
+    probe: '探测器',
+    rover: '巡视器',
+    lander: '着陆器',
+    orbiter: '轨道器',
+    booster: '助推器',
+    stage: '级',
+    fairing: '整流罩',
+    payload: '载荷',
+    cargo: '货物',
+    crew: '乘员',
+    astronaut: '宇航员',
+    cosmonaut: '航天员',
+    taikonaut: '中国航天员',
+    pilot: '飞行员',
+    aviator: '飞行员',
+    // --- 飞行 / 推进 ---
+    flight: '飞行',
+    fly: '飞',
+    launch: '发射',
+    liftoff: '起飞',
+    ascent: '上升',
+    descent: '下降',
+    landing: '着陆',
+    touchdown: '触地',
+    hover: '悬停',
+    glide: '滑翔',
+    cruise: '巡航',
+    navigate: '导航',
+    steer: '操控',
+    maneuver: '机动',
+    orbit: '绕轨道运行',
+    revolve: '公转',
+    rotate: '自转',
+    dock: '对接',
+    undock: '分离',
+    rendezvous: '交会对接',
+    deploy: '部署',
+    jettison: '抛弃',
+    abort: '中止',
+    ignite: '点火',
+    propel: '推进',
+    thrust: '推力',
+    engine: '发动机',
+    nozzle: '喷管',
+    turbine: '涡轮',
+    combustion: '燃烧',
+    fuel: '燃料',
+    oxidizer: '氧化剂',
+    propellant: '推进剂',
+    tank: '贮箱',
+    pressure: '压力',
+    // --- 物理 / 环境 ---
+    gravity: '重力',
+    gravitational: '引力的',
+    magnetic: '磁的',
+    radiation: '辐射',
+    solar: '太阳的',
+    cosmic: '宇宙的',
+    celestial: '天体的',
+    stellar: '恒星的',
+    planetary: '行星的',
+    lunar: '月球的',
+    martian: '火星的',
+    asteroid: '小行星',
+    comet: '彗星',
+    meteor: '流星',
+    meteorite: '陨石',
+    galaxy: '星系',
+    nebula: '星云',
+    constellation: '星座',
+    eclipse: '食',
+    trajectory: '轨迹',
+    velocity: '速度',
+    acceleration: '加速度',
+    altitude: '高度',
+    distance: '距离',
+    range: '射程',
+    scale: '尺度',
+    dimension: '维度',
+    // --- 任务 / 结果 ---
+    mission: '任务',
+    expedition: '远征',
+    exploration: '探索',
+    discovery: '发现',
+    research: '研究',
+    experiment: '实验',
+    observation: '观测',
+    survey: '勘测',
+    sample: '样品',
+    specimen: '标本',
+    data: '数据',
+    telemetry: '遥测',
+    communication: '通信',
+    signal: '信号',
+    transmission: '传输',
+    image: '图像',
+    photograph: '照片',
+    broadcast: '广播',
+    success: '成功',
+    failure: '失败',
+    anomaly: '异常',
+    contingency: '应急',
+    recovery: '回收',
+    rescue: '救援',
+    survival: '生存',
+    // --- 工程 / 管理 ---
+    design: '设计',
+    engineering: '工程',
+    manufacturing: '制造',
+    assembly: '装配',
+    integration: '集成',
+    testing: '测试',
+    qualification: '鉴定',
+    certification: '认证',
+    operation: '运行',
+    maintenance: '维护',
+    monitoring: '监控',
+    control: '控制',
+    command: '指挥',
+    center: '中心',
+    facility: '设施',
+    infrastructure: '基础设施',
+    budget: '预算',
+    funding: '资金',
+    schedule: '进度',
+    deadline: ' deadline',
+    milestone: '里程碑',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run', 'stage', 'data'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「航空航天」（Aviation & Aerospace）。以下为官方中文参考（来源：中国航天局 CNSA / NASA / ESA / SpaceX 官方中文发布与权威航天术语表），请严格遵守，不得自行翻译：
+机构：美国国家航空航天局(NASA)、欧洲空间局(ESA)、太空探索技术公司(SpaceX)、蓝色起源(Blue Origin)、中国国家航天局(CNSA)、中国航天科技集团(CASC / CAST)；
+中国航天：长征火箭(Long March)、天宫空间站(Tiangong)、神舟飞船(Shenzhou)、嫦娥(Chang'e)、祝融(Zhurong)、玉兔(Yutu)、北斗(BeiDou)、高分(Gaofen)、天问(Tianwen)、文昌航天发射场(Wenchang)、西昌卫星发射中心(Xichang)、酒泉卫星发射中心(Jiuquan)、太原卫星发射中心(Taiyuan)；
+国际航天器：国际空间站(ISS)、阿波罗(Apollo)、双子座(Gemini)、水星计划(Mercury)、天空实验室(Skylab)、航天飞机(Space Shuttle)、联盟号(Soyuz)、进步号(Progress)、龙飞船(Dragon)、星舰(Starship)、猎鹰(Falcon)、哈勃(Hubble)、詹姆斯·韦伯(James Webb)、旅行者号(Voyager)、好奇号(Curiosity)、毅力号(Perseverance)、机智号(Ingenuity)；
+术语：轨道(Orbit)、低地球轨道(LEO)、地球同步轨道(GEO)、逃逸速度(Escape Velocity)、大气层(Atmosphere)、再入(Reentry)、发射(Launch)、着陆(Landing)、推进(Propulsion)、推力(Thrust)、重力(Gravity)、微重力(Microgravity)、失重(Weightlessness)、真空(Vacuum)。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
+/* --------------------------------------------------------------------------
+ * 算法竞赛 · Competitive Programming
+ * 译名核验来源：ACM-ICPC / Codeforces / NOI / 信息学竞赛中文社区通行写法：
+ *   时间复杂度、空间复杂度、样例、提交、AC / WA / TLE / MLE、动态规划、贪心、图论。
+ * ----------------------------------------------------------------------- */
+const ALGORITHM = {
+  id: 'algorithm',
+  name: '算法竞赛',
+  category: DOMAIN_CATEGORY.OTHER,
+  subtitle: 'Competitive Programming',
+  description: '数据结构、复杂度与题解——用英语读懂每一行 AC 代码。',
+  icon: 'code',
+  theme: {
+    id: 'algorithm',
+    label: '终端青柠',
+    bg: '#08140a',
+    bgGradient:
+      'radial-gradient(1100px 760px at 10% -10%, #1a3a20 0%, transparent 58%), radial-gradient(900px 640px at 110% 4%, #1a2a18 0%, transparent 52%), radial-gradient(800px 800px at 50% 120%, #1e2a14 0%, transparent 60%), linear-gradient(180deg, #09120a 0%, #050805 100%)',
+    surface: 'rgba(184, 255, 170, 0.055)',
+    surfaceStrong: 'rgba(184, 255, 170, 0.10)',
+    border: 'rgba(130, 230, 110, 0.22)',
+    borderStrong: 'rgba(150, 255, 130, 0.42)',
+    text: '#f0fff0',
+    textSoft: '#b8e0b0',
+    textFaint: '#7a9a72',
+    primary: '#2e9d4d',
+    primarySoft: 'rgba(46, 157, 77, 0.18)',
+    accent: '#7ee787',
+    accentSoft: 'rgba(126, 231, 135, 0.16)',
+    cardGradient:
+      'linear-gradient(160deg, rgba(126, 231, 135, 0.13) 0%, rgba(40, 100, 40, 0.16) 48%, rgba(126, 231, 135, 0.07) 100%)',
+    cardGlow: 'rgba(46, 157, 77, 0.42)',
+    cardSheen: 'linear-gradient(115deg, transparent 32%, rgba(220, 255, 220, 0.20) 48%, transparent 64%)',
+    success: '#7fd4a2',
+    danger: '#ff7b7b',
+    fontDisplay: "'Cinzel', 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', Georgia, serif",
+    fontBody: "'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif",
+    radius: '16px',
+  },
+
+  domainTerms: {
+    // --- 竞赛 / 平台 ---
+    icpc: 'ACM-ICPC',
+    codeforces: 'Codeforces',
+    atcoder: 'AtCoder',
+    leetcode: 'LeetCode',
+    luogu: '洛谷',
+    noip: '全国青少年信息学奥林匹克联赛',
+    noi: '全国青少年信息学奥林匹克竞赛',
+    csp: 'CSP',
+    ccpc: 'CCPC',
+    googleCodeJam: 'Google Code Jam',
+    facebookHackerCup: 'Meta Hacker Cup',
+    topcoder: 'TopCoder',
+    // --- 算法范式 ---
+    bruteForce: '暴力',
+    greedy: '贪心',
+    dynamicProgramming: '动态规划',
+    divideAndConquer: '分治',
+    backtracking: '回溯',
+    recursion: '递归',
+    iteration: '迭代',
+    enumeration: '枚举',
+    simulation: '模拟',
+    // --- 数据结构 ---
+    array: '数组',
+    linkedList: '链表',
+    stack: '栈',
+    queue: '队列',
+    deque: '双端队列',
+    priorityQueue: '优先队列',
+    heap: '堆',
+    hashTable: '哈希表',
+    dictionary: '字典',
+    map: '映射',
+    set: '集合',
+    binarySearchTree: '二叉搜索树',
+    segmentTree: '线段树',
+    binaryIndexedTree: '树状数组',
+    trie: '字典树',
+    graph: '图',
+    tree: '树',
+    unionFind: '并查集',
+    disjointSet: '不相交集合',
+    // --- 图论 / 字符串 ---
+    shortestPath: '最短路',
+    minimumSpanningTree: '最小生成树',
+    topologicalSort: '拓扑排序',
+    stronglyConnectedComponent: '强连通分量',
+    bipartite: '二分图',
+    matching: '匹配',
+    networkFlow: '网络流',
+    string: '字符串',
+    substring: '子串',
+    prefix: '前缀',
+    suffix: '后缀',
+    kmp: 'KMP',
+    // --- 复杂度 / 结果 ---
+    timeComplexity: '时间复杂度',
+    spaceComplexity: '空间复杂度',
+    bigO: '大 O',
+    accepted: '通过',
+    wrongAnswer: '答案错误',
+    timeLimitExceeded: '超时',
+    memoryLimitExceeded: '内存超限',
+    runtimeError: '运行错误',
+    compileError: '编译错误',
+    presentationError: '格式错误',
+    submission: '提交',
+    testcase: '测试用例',
+    sample: '样例',
+    hack: 'Hack',
+  },
+
+  domainVocabulary: {
+    // --- 程序 / 代码 ---
+    program: '程序',
+    code: '代码',
+    algorithm: '算法',
+    function: '函数',
+    procedure: '过程',
+    method: '方法',
+    routine: '例程',
+    variable: '变量',
+    constant: '常量',
+    parameter: '参数',
+    argument: '参数',
+    return: '返回',
+    output: '输出',
+    input: '输入',
+    syntax: '语法',
+    semantic: '语义',
+    compile: '编译',
+    execute: '执行',
+    run: '运行',
+    debug: '调试',
+    test: '测试',
+    benchmark: '基准测试',
+    // --- 数据结构操作 ---
+    insert: '插入',
+    delete: '删除',
+    update: '更新',
+    query: '查询',
+    search: '查找',
+    sort: '排序',
+    merge: '合并',
+    split: '分裂',
+    reverse: '反转',
+    rotate: '旋转',
+    swap: '交换',
+    compare: '比较',
+    count: '计数',
+    sum: '求和',
+    max: '最大值',
+    min: '最小值',
+    average: '平均值',
+    median: '中位数',
+    prefix: '前缀',
+    suffix: '后缀',
+    subarray: '子数组',
+    subsequence: '子序列',
+    subset: '子集',
+    permutation: '排列',
+    combination: '组合',
+    // --- 算法概念 ---
+    complexity: '复杂度',
+    efficiency: '效率',
+    optimal: '最优的',
+    optimum: '最优',
+    feasible: '可行的',
+    valid: '合法的',
+    invalid: '非法的',
+    constraint: '限制',
+    boundary: '边界',
+    edge: '边界',
+    corner: '角',
+    invariant: '不变量',
+    monotone: '单调的',
+    recursive: '递归的',
+    iterative: '迭代的',
+    deterministic: '确定性的',
+    randomized: '随机化的',
+    heuristic: '启发式',
+    approximation: '近似',
+    amortized: '均摊的',
+    // --- 图论 ---
+    vertex: '顶点',
+    edge: '边',
+    node: '节点',
+    path: '路径',
+    cycle: '环',
+    connected: '连通的',
+    disconnected: '不连通的',
+    directed: '有向的',
+    undirected: '无向的',
+    weighted: '带权的',
+    unweighted: '无权',
+    adjacent: '相邻的',
+    neighbor: '邻居',
+    degree: '度',
+    diameter: '直径',
+    depth: '深度',
+    breadth: '宽度',
+    traversal: '遍历',
+    dfs: '深度优先搜索',
+    bfs: '广度优先搜索',
+    // --- 数学 / 逻辑 ---
+    integer: '整数',
+    prime: '质数',
+    composite: '合数',
+    modulo: '取模',
+    remainder: '余数',
+    divisor: '约数',
+    multiple: '倍数',
+    gcd: '最大公约数',
+    lcm: '最小公倍数',
+    factorial: '阶乘',
+    permutation: '排列',
+    probability: '概率',
+    expectation: '期望',
+    matrix: '矩阵',
+    vector: '向量',
+    geometry: '几何',
+    coordinate: '坐标',
+    equation: '方程',
+    inequality: '不等式',
+    function: '函数',
+    theorem: '定理',
+    lemma: '引理',
+    proof: '证明',
+    induction: '归纳',
+    contradiction: '反证',
+    // --- 竞赛 / 结果 ---
+    contest: '比赛',
+    problem: '题目',
+    statement: '题面',
+    solution: '题解',
+    editorial: '官方题解',
+    submit: '提交',
+    verdict: '评测结果',
+    score: '分数',
+    rank: '排名',
+    rating: '积分',
+    penalty: '罚时',
+    standing: '榜单',
+    upsolve: '补题',
+    practice: '练习',
+    virtual: '虚拟参赛',
+    hack: 'Hack',
+    challenge: '挑战',
+    difficulty: '难度',
+    trick: '技巧',
+    observation: '观察',
+    intuition: '直觉',
+    implementation: '实现',
+    bug: 'Bug',
+    fix: '修复',
+    optimize: '优化',
+    accelerate: '加速',
+    reduce: '减少',
+    improve: '提升',
+    correct: '正确的',
+    accepted: '通过的',
+    wrong: '错误的',
+    timeout: '超时',
+    overflow: '溢出',
+    precision: '精度',
+    error: '错误',
+  },
+
+  excludedTerms: ['current', 'order', 'flag', 'lead', 'map', 'rest', 'wind', 'bow', 'bark', 'sap', 'toll', 'pale', 'white', 'black', 'run', 'set', 'function', 'return', 'point'],
+
+  generationPrompt: `你是一个英语单词记忆助手。用户会给你一个单词和兴趣领域。你的任务是生成一段帮助记忆这个单词的材料。
+
+输出必须包含以下五个部分：
+1. 词根/派生说明：如果是派生词，先说明词根关系。如果不是，写“核心词”。
+2. 通用释义：该单词在标准英语中的中文意思。如果有多个义项，全部列出，并用简洁的方式标注词性（如 n. / v. / adj.）。
+3. 领域关联释义：该单词在用户兴趣领域中的对应物或场景。如果该单词在该领域中恰好是一个专有术语，必须使用官方中文译名，禁止自行翻译。如果找不到直接关联，写“无直接对应”。
+4. 微故事/场景联想：结合该领域，写一句不超过 50 字的中文场景联想，帮助记忆。
+5. 英文例句：用该单词写一句英文例句，语境最好与该领域相关。
+
+关于官方译名的硬性要求：
+- 如果单词在用户兴趣领域中对应某个专有术语，必须使用该领域的官方中文译名。
+- 如果无法确定官方译名，标注【译名待确认】，禁止自己编造。
+- 不要因为某个词在领域中常见，就强行把它包装成领域术语。
+
+领域为「算法竞赛」（Competitive Programming）。以下为官方中文参考（来源：ACM-ICPC / Codeforces / NOI / 信息学竞赛中文社区通行写法），请严格遵守，不得自行翻译：
+竞赛平台：ACM-ICPC、Codeforces、AtCoder、LeetCode、洛谷、NOIP、NOI、CSP、CCPC、Google Code Jam、Meta Hacker Cup、TopCoder；
+算法范式：暴力(Brute Force)、贪心(Greedy)、动态规划(Dynamic Programming)、分治(Divide and Conquer)、回溯(Backtracking)、递归(Recursion)、迭代(Iteration)、枚举(Enumeration)、模拟(Simulation)；
+数据结构：数组(Array)、链表(Linked List)、栈(Stack)、队列(Queue)、双端队列(Deque)、优先队列(Priority Queue)、堆(Heap)、哈希表(Hash Table)、字典(Dictionary / Map)、集合(Set)、二叉搜索树(Binary Search Tree)、线段树(Segment Tree)、树状数组(Binary Indexed Tree)、字典树(Trie)、图(Graph)、树(Tree)、并查集(Union-Find / Disjoint Set)；
+图论/字符串：最短路(Shortest Path)、最小生成树(Minimum Spanning Tree)、拓扑排序(Topological Sort)、强连通分量(Strongly Connected Component)、二分图(Bipartite Graph)、匹配(Matching)、网络流(Network Flow)、子串(Substring)、前缀(Prefix)、后缀(Suffix)、KMP；
+评测结果：通过(Accepted / AC)、答案错误(Wrong Answer / WA)、超时(Time Limit Exceeded / TLE)、内存超限(Memory Limit Exceeded / MLE)、运行错误(Runtime Error / RE)、编译错误(Compile Error / CE)、格式错误(Presentation Error / PE)、提交(Submission)、测试用例(Testcase)、样例(Sample)、Hack。
+
+请严格按以下 JSON 格式输出，不要输出任何额外文字或 markdown 代码块标记：
+{
+  "rootNote": "词根/派生说明",
+  "generalMeaning": "通用释义（含词性标注）",
+  "domainMeaning": "领域关联释义（使用官方译名）",
+  "story": "微故事/场景联想（≤50字）",
+  "example": "英文例句",
+  "exampleZh": "例句中文翻译",
+  "isDomainTerm": true 或 false,
+  "domainTermZh": "若为专有术语，此处填官方中文译名，否则为空字符串"
+}`,
+};
+
 export const INTEREST_DOMAINS = {
   [SLAY_THE_SPIRE.id]: SLAY_THE_SPIRE,
   [HOLLOW_KNIGHT.id]: HOLLOW_KNIGHT,
   [HONOR_OF_KINGS.id]: HONOR_OF_KINGS,
   [VALORANT.id]: VALORANT,
+  [SLAY_THE_SPIRE_2.id]: SLAY_THE_SPIRE_2,
+  [ARKNIGHTS.id]: ARKNIGHTS,
+  [GENSHIN_IMPACT.id]: GENSHIN_IMPACT,
+  [IDENTITY_FIFTH.id]: IDENTITY_FIFTH,
+  [STARDEW_VALLEY.id]: STARDEW_VALLEY,
+  [BREAKING_BAD.id]: BREAKING_BAD,
+  [SHERLOCK.id]: SHERLOCK,
+  [CLASSIC_MOVIES.id]: CLASSIC_MOVIES,
+  [RICK_AND_MORTY.id]: RICK_AND_MORTY,
+  [ANIMATION.id]: ANIMATION,
+  [BASKETBALL.id]: BASKETBALL,
+  [BADMINTON.id]: BADMINTON,
+  [FOOTBALL.id]: FOOTBALL,
+  [BILLIARD.id]: BILLIARD,
+  [AVIATION.id]: AVIATION,
+  [ALGORITHM.id]: ALGORITHM,
 };
 
 /** 领域展示顺序（用户自定义领域未来追加到末尾） */
@@ -4246,6 +8096,22 @@ export const DOMAIN_ORDER = [
   HOLLOW_KNIGHT.id,
   HONOR_OF_KINGS.id,
   VALORANT.id,
+  SLAY_THE_SPIRE_2.id,
+  ARKNIGHTS.id,
+  GENSHIN_IMPACT.id,
+  IDENTITY_FIFTH.id,
+  STARDEW_VALLEY.id,
+  BREAKING_BAD.id,
+  SHERLOCK.id,
+  CLASSIC_MOVIES.id,
+  RICK_AND_MORTY.id,
+  ANIMATION.id,
+  BASKETBALL.id,
+  BADMINTON.id,
+  FOOTBALL.id,
+  BILLIARD.id,
+  AVIATION.id,
+  ALGORITHM.id,
 ];
 
 /* ---------------------------------------------------------------------------
@@ -4284,6 +8150,18 @@ export function buildDomainIndex(domain) {
     if (!exact.has(k)) {
       vocab.set(k, zh);
       weight.set(k, resolveTermWeight(domain, key) * 0.6);
+    }
+  }
+  /* —— 场景泛化词层（所有领域共享）——
+   * 情感 / 行为 / 评价 / 叙事概念等「跨领域通用」的词，让 buildRelatedWords()
+   * 不再只依赖专有术语，从而整体抬高召回上限。
+   * 只进 vocab（不进 exact），因此卡片不会误标「官方认证」；
+   * 权重 0.35 低于领域自有词汇（0.6）与专有术语（1），排序时排在后面。 */
+  for (const [key, zh] of Object.entries(SCENARIO_VOCABULARY)) {
+    const k = key.toLowerCase();
+    if (!exact.has(k) && !vocab.has(k)) {
+      vocab.set(k, zh);
+      weight.set(k, 0.35);
     }
   }
   for (const t of domain.excludedTerms || []) {
@@ -4328,6 +8206,8 @@ export function normalizeTerm(s) {
 
 export default {
   DEFAULT_THEME,
+  DOMAIN_CATEGORY,
+  DOMAIN_CATEGORY_ORDER,
   INTEREST_DOMAINS,
   DOMAIN_ORDER,
   buildDomainIndex,

@@ -1,0 +1,68 @@
+{
+  "mode": "deepseek",
+  "model": "deepseek-chat",
+  "at": "2026-10-14T16:31:51.687Z",
+  "fixedEntries": 3,
+  "createdEntries": 0,
+  "fixedFields": 4,
+  "changes": [
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "hazard",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "别踩在自己人放的毒里——这是新手最常见的死法。",
+        "example": "He walked into his own hazard and lost half his health.",
+        "exampleZh": "他踩进了自己放的毒区，掉了一半血。"
+      },
+      "after": {
+        "story": "别踩在自己人放的毒里——新手十次里有八次，都是死在这条线上的。",
+        "example": "He walked into his own hazard and lost half his health.",
+        "exampleZh": "他踩进了自己放的毒区，掉了一半血。"
+      }
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "perimeter",
+      "fields": [
+        "story"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "真正的防守从据点外就开始，把对手挡在包点之外，比拆包容易得多。",
+        "example": "They set traps along the perimeter to catch early rotations.",
+        "exampleZh": "他们在外围设下陷阱，专门抓敌方前期的转点。"
+      },
+      "after": {
+        "story": "真正的防守从据点外就开始，把对手挡在包点之外，比拆包容易得多。",
+        "example": "They set traps along the perimeter to catch early rotations.",
+        "exampleZh": "他们在外围设下陷阱，专门抓敌方前期的转点。"
+      }
+    },
+    {
+      "domain": "无畏契约",
+      "file": "valorant.json",
+      "word": "defuse",
+      "fields": [
+        "example",
+        "exampleZh"
+      ],
+      "isNew": false,
+      "before": {
+        "story": "拆到一半被打断，就得从头再来——这就是无畏契约的残忍。",
+        "example": "He started to defuse the spike with only five seconds left on the timer.",
+        "exampleZh": "倒计时只剩五秒时，他才开始拆除爆能器。"
+      },
+      "after": {
+        "story": "拆到一半被打断，就得从头再来——这就是无畏契约的残忍。",
+        "example": "He started to defuse the spike with only five seconds left on the timer.",
+        "exampleZh": "倒计时只剩五秒时，他才开始拆除爆能器。"
+      }
+    }
+  ]
+}
